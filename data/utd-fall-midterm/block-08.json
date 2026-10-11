@@ -1,0 +1,2985 @@
+{
+  "schema_version": 1,
+  "block_id": "utd-fall-midterm-block-08",
+  "pillar_id": "utd-fall-midterm",
+  "block_title": "UTD 2026 Fall Midterm · Divisibility, bases, primes & GCDs",
+  "questions": [
+    {
+      "id": "utd-fall-midterm-351",
+      "topic": "Negative division and congruence 1",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What is a div m?",
+      "context": "Let a=-137, b=29, and modulus m=12. Canonical remainders satisfy 0≤r<m; div uses the floor quotient.",
+      "options": [
+        "-11",
+        "-13",
+        "-10",
+        "-12"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Choose q so that a=mq+r with a nonnegative remainder smaller than m.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Apply the division algorithm to negative integers and preserve residues under arithmetic.",
+        "correct_rationale": "-137=12·(-12)+7, with 0≤7<12. Truncation toward zero would give a negative remainder.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "-11 does not satisfy the stated computation. -137=12·(-12)+7, with 0≤7<12. Truncation toward zero would give a negative remainder."
+          },
+          {
+            "option_index": 1,
+            "rationale": "-13 does not satisfy the stated computation. -137=12·(-12)+7, with 0≤7<12. Truncation toward zero would give a negative remainder."
+          },
+          {
+            "option_index": 2,
+            "rationale": "-10 does not satisfy the stated computation. -137=12·(-12)+7, with 0≤7<12. Truncation toward zero would give a negative remainder."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §4.1, odd exercises 13, 17, 27, 29, 39. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "4.1",
+        "odd_exercises": [
+          13,
+          17,
+          27,
+          29,
+          39
+        ],
+        "workshop": "Negative division and congruence 1"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "modular",
+        "args": {
+          "a": -137,
+          "b": 29,
+          "m": 12,
+          "query": "quotient"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-352",
+      "topic": "Negative division and congruence 1",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What is a mod m?",
+      "context": "Let a=-137, b=29, and modulus m=12. Canonical remainders satisfy 0≤r<m; div uses the floor quotient.",
+      "options": [
+        "8",
+        "9",
+        "7",
+        "6"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Choose q so that a=mq+r with a nonnegative remainder smaller than m.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Apply the division algorithm to negative integers and preserve residues under arithmetic.",
+        "correct_rationale": "From -137=12·(-12)+7, the canonical remainder is 7.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "8 does not satisfy the stated computation. From -137=12·(-12)+7, the canonical remainder is 7."
+          },
+          {
+            "option_index": 1,
+            "rationale": "9 does not satisfy the stated computation. From -137=12·(-12)+7, the canonical remainder is 7."
+          },
+          {
+            "option_index": 3,
+            "rationale": "6 does not satisfy the stated computation. From -137=12·(-12)+7, the canonical remainder is 7."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §4.1, odd exercises 13, 17, 27, 29, 39. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "4.1",
+        "odd_exercises": [
+          13,
+          17,
+          27,
+          29,
+          39
+        ],
+        "workshop": "Negative division and congruence 1"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "modular",
+        "args": {
+          "a": -137,
+          "b": 29,
+          "m": 12,
+          "query": "remainder"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-353",
+      "topic": "Negative division and congruence 1",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What is (a+b) mod m?",
+      "context": "Let a=-137, b=29, and modulus m=12. Canonical remainders satisfy 0≤r<m; div uses the floor quotient.",
+      "options": [
+        "2",
+        "-1",
+        "0",
+        "1"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Choose q so that a=mq+r with a nonnegative remainder smaller than m.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Apply the division algorithm to negative integers and preserve residues under arithmetic.",
+        "correct_rationale": "Reduce each term: (7+5) mod 12=0.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "2 does not satisfy the stated computation. Reduce each term: (7+5) mod 12=0."
+          },
+          {
+            "option_index": 1,
+            "rationale": "-1 does not satisfy the stated computation. Reduce each term: (7+5) mod 12=0."
+          },
+          {
+            "option_index": 3,
+            "rationale": "1 does not satisfy the stated computation. Reduce each term: (7+5) mod 12=0."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §4.1, odd exercises 13, 17, 27, 29, 39. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "4.1",
+        "odd_exercises": [
+          13,
+          17,
+          27,
+          29,
+          39
+        ],
+        "workshop": "Negative division and congruence 1"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "modular",
+        "args": {
+          "a": -137,
+          "b": 29,
+          "m": 12,
+          "query": "sum"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-354",
+      "topic": "Negative division and congruence 1",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "What is ab mod m?",
+      "context": "Let a=-137, b=29, and modulus m=12. Canonical remainders satisfy 0≤r<m; div uses the floor quotient.",
+      "options": [
+        "10",
+        "13",
+        "11",
+        "12"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Choose q so that a=mq+r with a nonnegative remainder smaller than m.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Apply the division algorithm to negative integers and preserve residues under arithmetic.",
+        "correct_rationale": "Multiply reduced residues: (7·5) mod 12=11.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "10 does not satisfy the stated computation. Multiply reduced residues: (7·5) mod 12=11."
+          },
+          {
+            "option_index": 1,
+            "rationale": "13 does not satisfy the stated computation. Multiply reduced residues: (7·5) mod 12=11."
+          },
+          {
+            "option_index": 3,
+            "rationale": "12 does not satisfy the stated computation. Multiply reduced residues: (7·5) mod 12=11."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §4.1, odd exercises 13, 17, 27, 29, 39. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "4.1",
+        "odd_exercises": [
+          13,
+          17,
+          27,
+          29,
+          39
+        ],
+        "workshop": "Negative division and congruence 1"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "modular",
+        "args": {
+          "a": -137,
+          "b": 29,
+          "m": 12,
+          "query": "product"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-355",
+      "topic": "Negative division and congruence 1",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "What is (a²−b³) mod m?",
+      "context": "Let a=-137, b=29, and modulus m=12. Canonical remainders satisfy 0≤r<m; div uses the floor quotient.",
+      "options": [
+        "8",
+        "10",
+        "9",
+        "7"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Choose q so that a=mq+r with a nonnegative remainder smaller than m.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Apply the division algorithm to negative integers and preserve residues under arithmetic.",
+        "correct_rationale": "Use residues first: (7²−5³) mod 12=8. Reduce the final difference to the canonical interval.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "10 does not satisfy the stated computation. Use residues first: (7²−5³) mod 12=8. Reduce the final difference to the canonical interval."
+          },
+          {
+            "option_index": 2,
+            "rationale": "9 does not satisfy the stated computation. Use residues first: (7²−5³) mod 12=8. Reduce the final difference to the canonical interval."
+          },
+          {
+            "option_index": 3,
+            "rationale": "7 does not satisfy the stated computation. Use residues first: (7²−5³) mod 12=8. Reduce the final difference to the canonical interval."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §4.1, odd exercises 13, 17, 27, 29, 39. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "4.1",
+        "odd_exercises": [
+          13,
+          17,
+          27,
+          29,
+          39
+        ],
+        "workshop": "Negative division and congruence 1"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "modular",
+        "args": {
+          "a": -137,
+          "b": 29,
+          "m": 12,
+          "query": "powers"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-356",
+      "topic": "Negative division and congruence 2",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What is a div m?",
+      "context": "Let a=-221, b=43, and modulus m=17. Canonical remainders satisfy 0≤r<m; div uses the floor quotient.",
+      "options": [
+        "-14",
+        "-11",
+        "-12",
+        "-13"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Choose q so that a=mq+r with a nonnegative remainder smaller than m.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Apply the division algorithm to negative integers and preserve residues under arithmetic.",
+        "correct_rationale": "-221=17·(-13)+0, with 0≤0<17. Truncation toward zero would give a negative remainder.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "-14 does not satisfy the stated computation. -221=17·(-13)+0, with 0≤0<17. Truncation toward zero would give a negative remainder."
+          },
+          {
+            "option_index": 1,
+            "rationale": "-11 does not satisfy the stated computation. -221=17·(-13)+0, with 0≤0<17. Truncation toward zero would give a negative remainder."
+          },
+          {
+            "option_index": 2,
+            "rationale": "-12 does not satisfy the stated computation. -221=17·(-13)+0, with 0≤0<17. Truncation toward zero would give a negative remainder."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §4.1, odd exercises 13, 17, 27, 29, 39. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "4.1",
+        "odd_exercises": [
+          13,
+          17,
+          27,
+          29,
+          39
+        ],
+        "workshop": "Negative division and congruence 2"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "modular",
+        "args": {
+          "a": -221,
+          "b": 43,
+          "m": 17,
+          "query": "quotient"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-357",
+      "topic": "Negative division and congruence 2",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What is a mod m?",
+      "context": "Let a=-221, b=43, and modulus m=17. Canonical remainders satisfy 0≤r<m; div uses the floor quotient.",
+      "options": [
+        "1",
+        "2",
+        "-1",
+        "0"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Choose q so that a=mq+r with a nonnegative remainder smaller than m.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Apply the division algorithm to negative integers and preserve residues under arithmetic.",
+        "correct_rationale": "From -221=17·(-13)+0, the canonical remainder is 0.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "1 does not satisfy the stated computation. From -221=17·(-13)+0, the canonical remainder is 0."
+          },
+          {
+            "option_index": 1,
+            "rationale": "2 does not satisfy the stated computation. From -221=17·(-13)+0, the canonical remainder is 0."
+          },
+          {
+            "option_index": 2,
+            "rationale": "-1 does not satisfy the stated computation. From -221=17·(-13)+0, the canonical remainder is 0."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §4.1, odd exercises 13, 17, 27, 29, 39. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "4.1",
+        "odd_exercises": [
+          13,
+          17,
+          27,
+          29,
+          39
+        ],
+        "workshop": "Negative division and congruence 2"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "modular",
+        "args": {
+          "a": -221,
+          "b": 43,
+          "m": 17,
+          "query": "remainder"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-358",
+      "topic": "Negative division and congruence 2",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What is (a+b) mod m?",
+      "context": "Let a=-221, b=43, and modulus m=17. Canonical remainders satisfy 0≤r<m; div uses the floor quotient.",
+      "options": [
+        "9",
+        "11",
+        "10",
+        "8"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Choose q so that a=mq+r with a nonnegative remainder smaller than m.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Apply the division algorithm to negative integers and preserve residues under arithmetic.",
+        "correct_rationale": "Reduce each term: (0+9) mod 17=9.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "11 does not satisfy the stated computation. Reduce each term: (0+9) mod 17=9."
+          },
+          {
+            "option_index": 2,
+            "rationale": "10 does not satisfy the stated computation. Reduce each term: (0+9) mod 17=9."
+          },
+          {
+            "option_index": 3,
+            "rationale": "8 does not satisfy the stated computation. Reduce each term: (0+9) mod 17=9."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §4.1, odd exercises 13, 17, 27, 29, 39. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "4.1",
+        "odd_exercises": [
+          13,
+          17,
+          27,
+          29,
+          39
+        ],
+        "workshop": "Negative division and congruence 2"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "modular",
+        "args": {
+          "a": -221,
+          "b": 43,
+          "m": 17,
+          "query": "sum"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-359",
+      "topic": "Negative division and congruence 2",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "What is ab mod m?",
+      "context": "Let a=-221, b=43, and modulus m=17. Canonical remainders satisfy 0≤r<m; div uses the floor quotient.",
+      "options": [
+        "2",
+        "1",
+        "-1",
+        "0"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Choose q so that a=mq+r with a nonnegative remainder smaller than m.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Apply the division algorithm to negative integers and preserve residues under arithmetic.",
+        "correct_rationale": "Multiply reduced residues: (0·9) mod 17=0.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "2 does not satisfy the stated computation. Multiply reduced residues: (0·9) mod 17=0."
+          },
+          {
+            "option_index": 1,
+            "rationale": "1 does not satisfy the stated computation. Multiply reduced residues: (0·9) mod 17=0."
+          },
+          {
+            "option_index": 2,
+            "rationale": "-1 does not satisfy the stated computation. Multiply reduced residues: (0·9) mod 17=0."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §4.1, odd exercises 13, 17, 27, 29, 39. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "4.1",
+        "odd_exercises": [
+          13,
+          17,
+          27,
+          29,
+          39
+        ],
+        "workshop": "Negative division and congruence 2"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "modular",
+        "args": {
+          "a": -221,
+          "b": 43,
+          "m": 17,
+          "query": "product"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-360",
+      "topic": "Negative division and congruence 2",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "What is (a²−b³) mod m?",
+      "context": "Let a=-221, b=43, and modulus m=17. Canonical remainders satisfy 0≤r<m; div uses the floor quotient.",
+      "options": [
+        "2",
+        "3",
+        "1",
+        "4"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Choose q so that a=mq+r with a nonnegative remainder smaller than m.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Apply the division algorithm to negative integers and preserve residues under arithmetic.",
+        "correct_rationale": "Use residues first: (0²−9³) mod 17=2. Reduce the final difference to the canonical interval.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "3 does not satisfy the stated computation. Use residues first: (0²−9³) mod 17=2. Reduce the final difference to the canonical interval."
+          },
+          {
+            "option_index": 2,
+            "rationale": "1 does not satisfy the stated computation. Use residues first: (0²−9³) mod 17=2. Reduce the final difference to the canonical interval."
+          },
+          {
+            "option_index": 3,
+            "rationale": "4 does not satisfy the stated computation. Use residues first: (0²−9³) mod 17=2. Reduce the final difference to the canonical interval."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §4.1, odd exercises 13, 17, 27, 29, 39. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "4.1",
+        "odd_exercises": [
+          13,
+          17,
+          27,
+          29,
+          39
+        ],
+        "workshop": "Negative division and congruence 2"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "modular",
+        "args": {
+          "a": -221,
+          "b": 43,
+          "m": 17,
+          "query": "powers"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-361",
+      "topic": "Integer representation 1",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What is the base-2 representation of N?",
+      "context": "Use bases 2, 8, and 16 as indicated. In hexadecimal, A=10,…,F=15. The decimal integer N is 365. All representations are unsigned.",
+      "options": [
+        "101101110",
+        "101101100",
+        "1011011010",
+        "101101101"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Repeated-division remainders are read in reverse order; a base-b digit must be between 0 and b−1.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Convert bases by place value and repeated division, and reason about representation length.",
+        "correct_rationale": "Place values are powers of 2. The representation 101101101 evaluates to 365; its digits arise from successive division remainders read last to first.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. Place values are powers of 2. The representation 101101101 evaluates to 365; its digits arise from successive division remainders read last to first."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. Place values are powers of 2. The representation 101101101 evaluates to 365; its digits arise from successive division remainders read last to first."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. Place values are powers of 2. The representation 101101101 evaluates to 365; its digits arise from successive division remainders read last to first."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §4.2, odd exercises 1, 3, 5, 7, 11, 13, 21, 37. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "4.2",
+        "odd_exercises": [
+          1,
+          3,
+          5,
+          7,
+          11,
+          13,
+          21,
+          37
+        ],
+        "workshop": "Integer representation 1"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "base",
+        "args": {
+          "n": 365,
+          "b": 2,
+          "query": "encode"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-362",
+      "topic": "Integer representation 1",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What decimal integer is represented by (110100010) in base 2?",
+      "context": "Use bases 2, 8, and 16 as indicated. In hexadecimal, A=10,…,F=15. The decimal integer N is 365. All representations are unsigned.",
+      "options": [
+        "417",
+        "420",
+        "419",
+        "418"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Repeated-division remainders are read in reverse order; a base-b digit must be between 0 and b−1.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Convert bases by place value and repeated division, and reason about representation length.",
+        "correct_rationale": "Sum each digit times its positional power of 2. The total is 418.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "417 does not satisfy the stated computation. Sum each digit times its positional power of 2. The total is 418."
+          },
+          {
+            "option_index": 1,
+            "rationale": "420 does not satisfy the stated computation. Sum each digit times its positional power of 2. The total is 418."
+          },
+          {
+            "option_index": 2,
+            "rationale": "419 does not satisfy the stated computation. Sum each digit times its positional power of 2. The total is 418."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §4.2, odd exercises 1, 3, 5, 7, 11, 13, 21, 37. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "4.2",
+        "odd_exercises": [
+          1,
+          3,
+          5,
+          7,
+          11,
+          13,
+          21,
+          37
+        ],
+        "workshop": "Integer representation 1"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "base",
+        "args": {
+          "word": "110100010",
+          "b": 2,
+          "query": "decode"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-363",
+      "topic": "Integer representation 1",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What is the octal representation of N?",
+      "context": "Use bases 2, 8, and 16 as indicated. In hexadecimal, A=10,…,F=15. The decimal integer N is 365. All representations are unsigned.",
+      "options": [
+        "556",
+        "545",
+        "555",
+        "565"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Repeated-division remainders are read in reverse order; a base-b digit must be between 0 and b−1.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Convert bases by place value and repeated division, and reason about representation length.",
+        "correct_rationale": "Repeated division by 8 gives 555. Alternatively group a binary representation in threes from the right.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. Repeated division by 8 gives 555. Alternatively group a binary representation in threes from the right."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. Repeated division by 8 gives 555. Alternatively group a binary representation in threes from the right."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. Repeated division by 8 gives 555. Alternatively group a binary representation in threes from the right."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §4.2, odd exercises 1, 3, 5, 7, 11, 13, 21, 37. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "4.2",
+        "odd_exercises": [
+          1,
+          3,
+          5,
+          7,
+          11,
+          13,
+          21,
+          37
+        ],
+        "workshop": "Integer representation 1"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "base",
+        "args": {
+          "n": 365,
+          "b": 8,
+          "query": "encode"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-364",
+      "topic": "Integer representation 1",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "What is the binary representation of N+29 (where 29 is decimal)?",
+      "context": "Use bases 2, 8, and 16 as indicated. In hexadecimal, A=10,…,F=15. The decimal integer N is 365. All representations are unsigned.",
+      "options": [
+        "110001011",
+        "110001010",
+        "110001001",
+        "10100101011001"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Repeated-division remainders are read in reverse order; a base-b digit must be between 0 and b−1.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Convert bases by place value and repeated division, and reason about representation length.",
+        "correct_rationale": "The sum is 394 in decimal. Converting this sum or adding the two binary expansions with carries gives 110001010.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. The sum is 394 in decimal. Converting this sum or adding the two binary expansions with carries gives 110001010."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. The sum is 394 in decimal. Converting this sum or adding the two binary expansions with carries gives 110001010."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. The sum is 394 in decimal. Converting this sum or adding the two binary expansions with carries gives 110001010."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §4.2, odd exercises 1, 3, 5, 7, 11, 13, 21, 37. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "4.2",
+        "odd_exercises": [
+          1,
+          3,
+          5,
+          7,
+          11,
+          13,
+          21,
+          37
+        ],
+        "workshop": "Integer representation 1"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "base",
+        "args": {
+          "n": 394,
+          "b": 2,
+          "query": "encode"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-365",
+      "topic": "Integer representation 1",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "How many base-2 digits are needed to represent N² without leading zeros?",
+      "context": "Use bases 2, 8, and 16 as indicated. In hexadecimal, A=10,…,F=15. The decimal integer N is 365. All representations are unsigned.",
+      "options": [
+        "19",
+        "20",
+        "18",
+        "17"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Repeated-division remainders are read in reverse order; a base-b digit must be between 0 and b−1.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Convert bases by place value and repeated division, and reason about representation length.",
+        "correct_rationale": "N²=133225. Since 2^17≤133225<2^18, exactly 18 digits are required.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "19 does not satisfy the stated computation. N²=133225. Since 2^17≤133225<2^18, exactly 18 digits are required."
+          },
+          {
+            "option_index": 1,
+            "rationale": "20 does not satisfy the stated computation. N²=133225. Since 2^17≤133225<2^18, exactly 18 digits are required."
+          },
+          {
+            "option_index": 3,
+            "rationale": "17 does not satisfy the stated computation. N²=133225. Since 2^17≤133225<2^18, exactly 18 digits are required."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §4.2, odd exercises 1, 3, 5, 7, 11, 13, 21, 37. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "4.2",
+        "odd_exercises": [
+          1,
+          3,
+          5,
+          7,
+          11,
+          13,
+          21,
+          37
+        ],
+        "workshop": "Integer representation 1"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "base",
+        "args": {
+          "n": 133225,
+          "b": 2,
+          "query": "length"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-366",
+      "topic": "Integer representation 2",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What is the base-16 representation of N?",
+      "context": "Use bases 2, 8, and 16 as indicated. In hexadecimal, A=10,…,F=15. The decimal integer N is 746. All representations are unsigned.",
+      "options": [
+        "2E9",
+        "5D4",
+        "2EB",
+        "2EA"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Repeated-division remainders are read in reverse order; a base-b digit must be between 0 and b−1.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Convert bases by place value and repeated division, and reason about representation length.",
+        "correct_rationale": "Place values are powers of 16. The representation 2EA evaluates to 746; its digits arise from successive division remainders read last to first.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. Place values are powers of 16. The representation 2EA evaluates to 746; its digits arise from successive division remainders read last to first."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. Place values are powers of 16. The representation 2EA evaluates to 746; its digits arise from successive division remainders read last to first."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. Place values are powers of 16. The representation 2EA evaluates to 746; its digits arise from successive division remainders read last to first."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §4.2, odd exercises 1, 3, 5, 7, 11, 13, 21, 37. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "4.2",
+        "odd_exercises": [
+          1,
+          3,
+          5,
+          7,
+          11,
+          13,
+          21,
+          37
+        ],
+        "workshop": "Integer representation 2"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "base",
+        "args": {
+          "n": 746,
+          "b": 16,
+          "query": "encode"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-367",
+      "topic": "Integer representation 2",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What decimal integer is represented by (31F) in base 16?",
+      "context": "Use bases 2, 8, and 16 as indicated. In hexadecimal, A=10,…,F=15. The decimal integer N is 746. All representations are unsigned.",
+      "options": [
+        "800",
+        "801",
+        "798",
+        "799"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Repeated-division remainders are read in reverse order; a base-b digit must be between 0 and b−1.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Convert bases by place value and repeated division, and reason about representation length.",
+        "correct_rationale": "Sum each digit times its positional power of 16. The total is 799.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "800 does not satisfy the stated computation. Sum each digit times its positional power of 16. The total is 799."
+          },
+          {
+            "option_index": 1,
+            "rationale": "801 does not satisfy the stated computation. Sum each digit times its positional power of 16. The total is 799."
+          },
+          {
+            "option_index": 2,
+            "rationale": "798 does not satisfy the stated computation. Sum each digit times its positional power of 16. The total is 799."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §4.2, odd exercises 1, 3, 5, 7, 11, 13, 21, 37. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "4.2",
+        "odd_exercises": [
+          1,
+          3,
+          5,
+          7,
+          11,
+          13,
+          21,
+          37
+        ],
+        "workshop": "Integer representation 2"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "base",
+        "args": {
+          "word": "31F",
+          "b": 16,
+          "query": "decode"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-368",
+      "topic": "Integer representation 2",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What is the octal representation of N?",
+      "context": "Use bases 2, 8, and 16 as indicated. In hexadecimal, A=10,…,F=15. The decimal integer N is 746. All representations are unsigned.",
+      "options": [
+        "1342",
+        "1353",
+        "1362",
+        "1352"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Repeated-division remainders are read in reverse order; a base-b digit must be between 0 and b−1.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Convert bases by place value and repeated division, and reason about representation length.",
+        "correct_rationale": "Repeated division by 8 gives 1352. Alternatively group a binary representation in threes from the right.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. Repeated division by 8 gives 1352. Alternatively group a binary representation in threes from the right."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. Repeated division by 8 gives 1352. Alternatively group a binary representation in threes from the right."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. Repeated division by 8 gives 1352. Alternatively group a binary representation in threes from the right."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §4.2, odd exercises 1, 3, 5, 7, 11, 13, 21, 37. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "4.2",
+        "odd_exercises": [
+          1,
+          3,
+          5,
+          7,
+          11,
+          13,
+          21,
+          37
+        ],
+        "workshop": "Integer representation 2"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "base",
+        "args": {
+          "n": 746,
+          "b": 8,
+          "query": "encode"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-369",
+      "topic": "Integer representation 2",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "What is the binary representation of N+29 (where 29 is decimal)?",
+      "context": "Use bases 2, 8, and 16 as indicated. In hexadecimal, A=10,…,F=15. The decimal integer N is 746. All representations are unsigned.",
+      "options": [
+        "1100000110",
+        "1100000111",
+        "101010010000010",
+        "1100001000"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Repeated-division remainders are read in reverse order; a base-b digit must be between 0 and b−1.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Convert bases by place value and repeated division, and reason about representation length.",
+        "correct_rationale": "The sum is 775 in decimal. Converting this sum or adding the two binary expansions with carries gives 1100000111.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. The sum is 775 in decimal. Converting this sum or adding the two binary expansions with carries gives 1100000111."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. The sum is 775 in decimal. Converting this sum or adding the two binary expansions with carries gives 1100000111."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. The sum is 775 in decimal. Converting this sum or adding the two binary expansions with carries gives 1100000111."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §4.2, odd exercises 1, 3, 5, 7, 11, 13, 21, 37. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "4.2",
+        "odd_exercises": [
+          1,
+          3,
+          5,
+          7,
+          11,
+          13,
+          21,
+          37
+        ],
+        "workshop": "Integer representation 2"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "base",
+        "args": {
+          "n": 775,
+          "b": 2,
+          "query": "encode"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-370",
+      "topic": "Integer representation 2",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "How many base-16 digits are needed to represent N² without leading zeros?",
+      "context": "Use bases 2, 8, and 16 as indicated. In hexadecimal, A=10,…,F=15. The decimal integer N is 746. All representations are unsigned.",
+      "options": [
+        "6",
+        "4",
+        "5",
+        "7"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Repeated-division remainders are read in reverse order; a base-b digit must be between 0 and b−1.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Convert bases by place value and repeated division, and reason about representation length.",
+        "correct_rationale": "N²=556516. Since 16^4≤556516<16^5, exactly 5 digits are required.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "6 does not satisfy the stated computation. N²=556516. Since 16^4≤556516<16^5, exactly 5 digits are required."
+          },
+          {
+            "option_index": 1,
+            "rationale": "4 does not satisfy the stated computation. N²=556516. Since 16^4≤556516<16^5, exactly 5 digits are required."
+          },
+          {
+            "option_index": 3,
+            "rationale": "7 does not satisfy the stated computation. N²=556516. Since 16^4≤556516<16^5, exactly 5 digits are required."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §4.2, odd exercises 1, 3, 5, 7, 11, 13, 21, 37. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "4.2",
+        "odd_exercises": [
+          1,
+          3,
+          5,
+          7,
+          11,
+          13,
+          21,
+          37
+        ],
+        "workshop": "Integer representation 2"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "base",
+        "args": {
+          "n": 556516,
+          "b": 16,
+          "query": "length"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-371",
+      "topic": "Euclidean algorithm 1",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What is gcd(a,b)?",
+      "context": "Let a=252 and b=198. Count the final Euclidean division producing remainder 0 as one division.",
+      "options": [
+        "18",
+        "17",
+        "19",
+        "20"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "The last nonzero remainder is the gcd; each Euclidean step preserves the common divisors.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Connect Euclidean remainders, common divisors, least common multiples, and Bézout coefficients.",
+        "correct_rationale": "252=1·198+54; 198=3·54+36; 54=1·36+18; 36=2·18+0. The last nonzero remainder is 18.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "17 does not satisfy the stated computation. 252=1·198+54; 198=3·54+36; 54=1·36+18; 36=2·18+0. The last nonzero remainder is 18."
+          },
+          {
+            "option_index": 2,
+            "rationale": "19 does not satisfy the stated computation. 252=1·198+54; 198=3·54+36; 54=1·36+18; 36=2·18+0. The last nonzero remainder is 18."
+          },
+          {
+            "option_index": 3,
+            "rationale": "20 does not satisfy the stated computation. 252=1·198+54; 198=3·54+36; 54=1·36+18; 36=2·18+0. The last nonzero remainder is 18."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §4.3, odd exercises 25, 27, 29, 33, 35, 39. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "4.3",
+        "odd_exercises": [
+          25,
+          27,
+          29,
+          33,
+          35,
+          39
+        ],
+        "workshop": "Euclidean algorithm 1"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "gcd",
+        "args": {
+          "a": 252,
+          "b": 198,
+          "query": "gcd"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-372",
+      "topic": "Euclidean algorithm 1",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What is lcm(a,b)?",
+      "context": "Let a=252 and b=198. Count the final Euclidean division producing remainder 0 as one division.",
+      "options": [
+        "2772",
+        "2774",
+        "2771",
+        "2773"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "The last nonzero remainder is the gcd; each Euclidean step preserves the common divisors.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Connect Euclidean remainders, common divisors, least common multiples, and Bézout coefficients.",
+        "correct_rationale": "For positive a,b, lcm=ab/gcd=252·198/18=2772.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "2774 does not satisfy the stated computation. For positive a,b, lcm=ab/gcd=252·198/18=2772."
+          },
+          {
+            "option_index": 2,
+            "rationale": "2771 does not satisfy the stated computation. For positive a,b, lcm=ab/gcd=252·198/18=2772."
+          },
+          {
+            "option_index": 3,
+            "rationale": "2773 does not satisfy the stated computation. For positive a,b, lcm=ab/gcd=252·198/18=2772."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §4.3, odd exercises 25, 27, 29, 33, 35, 39. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "4.3",
+        "odd_exercises": [
+          25,
+          27,
+          29,
+          33,
+          35,
+          39
+        ],
+        "workshop": "Euclidean algorithm 1"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "gcd",
+        "args": {
+          "a": 252,
+          "b": 198,
+          "query": "lcm"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-373",
+      "topic": "Euclidean algorithm 1",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "How many positive common divisors do a and b have?",
+      "context": "Let a=252 and b=198. Count the final Euclidean division producing remainder 0 as one division.",
+      "options": [
+        "7",
+        "5",
+        "8",
+        "6"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "The last nonzero remainder is the gcd; each Euclidean step preserves the common divisors.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Connect Euclidean remainders, common divisors, least common multiples, and Bézout coefficients.",
+        "correct_rationale": "They are exactly the positive divisors of gcd=18: {1, 2, 3, 6, 9, 18}.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "7 does not satisfy the stated computation. They are exactly the positive divisors of gcd=18: {1, 2, 3, 6, 9, 18}."
+          },
+          {
+            "option_index": 1,
+            "rationale": "5 does not satisfy the stated computation. They are exactly the positive divisors of gcd=18: {1, 2, 3, 6, 9, 18}."
+          },
+          {
+            "option_index": 2,
+            "rationale": "8 does not satisfy the stated computation. They are exactly the positive divisors of gcd=18: {1, 2, 3, 6, 9, 18}."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §4.3, odd exercises 25, 27, 29, 33, 35, 39. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "4.3",
+        "odd_exercises": [
+          25,
+          27,
+          29,
+          33,
+          35,
+          39
+        ],
+        "workshop": "Euclidean algorithm 1"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "gcd",
+        "args": {
+          "a": 252,
+          "b": 198,
+          "query": "divisor-count"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-374",
+      "topic": "Euclidean algorithm 1",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "How many Euclidean divisions are performed?",
+      "context": "Let a=252 and b=198. Count the final Euclidean division producing remainder 0 as one division.",
+      "options": [
+        "5",
+        "4",
+        "3",
+        "6"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "The last nonzero remainder is the gcd; each Euclidean step preserves the common divisors.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Connect Euclidean remainders, common divisors, least common multiples, and Bézout coefficients.",
+        "correct_rationale": "252=1·198+54; 198=3·54+36; 54=1·36+18; 36=2·18+0. This is 4 divisions including the final zero remainder.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "5 does not satisfy the stated computation. 252=1·198+54; 198=3·54+36; 54=1·36+18; 36=2·18+0. This is 4 divisions including the final zero remainder."
+          },
+          {
+            "option_index": 2,
+            "rationale": "3 does not satisfy the stated computation. 252=1·198+54; 198=3·54+36; 54=1·36+18; 36=2·18+0. This is 4 divisions including the final zero remainder."
+          },
+          {
+            "option_index": 3,
+            "rationale": "6 does not satisfy the stated computation. 252=1·198+54; 198=3·54+36; 54=1·36+18; 36=2·18+0. This is 4 divisions including the final zero remainder."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §4.3, odd exercises 25, 27, 29, 33, 35, 39. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "4.3",
+        "odd_exercises": [
+          25,
+          27,
+          29,
+          33,
+          35,
+          39
+        ],
+        "workshop": "Euclidean algorithm 1"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "gcd",
+        "args": {
+          "a": 252,
+          "b": 198,
+          "query": "steps"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-375",
+      "topic": "Euclidean algorithm 1",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "If gcd(a,b)=(4)a+tb, what is integer t?",
+      "context": "Let a=252 and b=198. Count the final Euclidean division producing remainder 0 as one division.",
+      "options": [
+        "-6",
+        "-3",
+        "-5",
+        "-4"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "The last nonzero remainder is the gcd; each Euclidean step preserves the common divisors.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Connect Euclidean remainders, common divisors, least common multiples, and Bézout coefficients.",
+        "correct_rationale": "Solve 18=(4)·252+t·198, giving t=(18−(4)·252)/198=-5. Substitution verifies the Bézout identity.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "-6 does not satisfy the stated computation. Solve 18=(4)·252+t·198, giving t=(18−(4)·252)/198=-5. Substitution verifies the Bézout identity."
+          },
+          {
+            "option_index": 1,
+            "rationale": "-3 does not satisfy the stated computation. Solve 18=(4)·252+t·198, giving t=(18−(4)·252)/198=-5. Substitution verifies the Bézout identity."
+          },
+          {
+            "option_index": 3,
+            "rationale": "-4 does not satisfy the stated computation. Solve 18=(4)·252+t·198, giving t=(18−(4)·252)/198=-5. Substitution verifies the Bézout identity."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §4.3, odd exercises 25, 27, 29, 33, 35, 39. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "4.3",
+        "odd_exercises": [
+          25,
+          27,
+          29,
+          33,
+          35,
+          39
+        ],
+        "workshop": "Euclidean algorithm 1"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "gcd",
+        "args": {
+          "a": 252,
+          "b": 198,
+          "x": 4,
+          "query": "bezout"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-376",
+      "topic": "Euclidean algorithm 2",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What is gcd(a,b)?",
+      "context": "Let a=414 and b=180. Count the final Euclidean division producing remainder 0 as one division.",
+      "options": [
+        "18",
+        "17",
+        "20",
+        "19"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "The last nonzero remainder is the gcd; each Euclidean step preserves the common divisors.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Connect Euclidean remainders, common divisors, least common multiples, and Bézout coefficients.",
+        "correct_rationale": "414=2·180+54; 180=3·54+18; 54=3·18+0. The last nonzero remainder is 18.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "17 does not satisfy the stated computation. 414=2·180+54; 180=3·54+18; 54=3·18+0. The last nonzero remainder is 18."
+          },
+          {
+            "option_index": 2,
+            "rationale": "20 does not satisfy the stated computation. 414=2·180+54; 180=3·54+18; 54=3·18+0. The last nonzero remainder is 18."
+          },
+          {
+            "option_index": 3,
+            "rationale": "19 does not satisfy the stated computation. 414=2·180+54; 180=3·54+18; 54=3·18+0. The last nonzero remainder is 18."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §4.3, odd exercises 25, 27, 29, 33, 35, 39. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "4.3",
+        "odd_exercises": [
+          25,
+          27,
+          29,
+          33,
+          35,
+          39
+        ],
+        "workshop": "Euclidean algorithm 2"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "gcd",
+        "args": {
+          "a": 414,
+          "b": 180,
+          "query": "gcd"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-377",
+      "topic": "Euclidean algorithm 2",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What is lcm(a,b)?",
+      "context": "Let a=414 and b=180. Count the final Euclidean division producing remainder 0 as one division.",
+      "options": [
+        "4140",
+        "4139",
+        "4141",
+        "4142"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "The last nonzero remainder is the gcd; each Euclidean step preserves the common divisors.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Connect Euclidean remainders, common divisors, least common multiples, and Bézout coefficients.",
+        "correct_rationale": "For positive a,b, lcm=ab/gcd=414·180/18=4140.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "4139 does not satisfy the stated computation. For positive a,b, lcm=ab/gcd=414·180/18=4140."
+          },
+          {
+            "option_index": 2,
+            "rationale": "4141 does not satisfy the stated computation. For positive a,b, lcm=ab/gcd=414·180/18=4140."
+          },
+          {
+            "option_index": 3,
+            "rationale": "4142 does not satisfy the stated computation. For positive a,b, lcm=ab/gcd=414·180/18=4140."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §4.3, odd exercises 25, 27, 29, 33, 35, 39. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "4.3",
+        "odd_exercises": [
+          25,
+          27,
+          29,
+          33,
+          35,
+          39
+        ],
+        "workshop": "Euclidean algorithm 2"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "gcd",
+        "args": {
+          "a": 414,
+          "b": 180,
+          "query": "lcm"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-378",
+      "topic": "Euclidean algorithm 2",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "How many positive common divisors do a and b have?",
+      "context": "Let a=414 and b=180. Count the final Euclidean division producing remainder 0 as one division.",
+      "options": [
+        "8",
+        "6",
+        "5",
+        "7"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "The last nonzero remainder is the gcd; each Euclidean step preserves the common divisors.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Connect Euclidean remainders, common divisors, least common multiples, and Bézout coefficients.",
+        "correct_rationale": "They are exactly the positive divisors of gcd=18: {1, 2, 3, 6, 9, 18}.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "8 does not satisfy the stated computation. They are exactly the positive divisors of gcd=18: {1, 2, 3, 6, 9, 18}."
+          },
+          {
+            "option_index": 2,
+            "rationale": "5 does not satisfy the stated computation. They are exactly the positive divisors of gcd=18: {1, 2, 3, 6, 9, 18}."
+          },
+          {
+            "option_index": 3,
+            "rationale": "7 does not satisfy the stated computation. They are exactly the positive divisors of gcd=18: {1, 2, 3, 6, 9, 18}."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §4.3, odd exercises 25, 27, 29, 33, 35, 39. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "4.3",
+        "odd_exercises": [
+          25,
+          27,
+          29,
+          33,
+          35,
+          39
+        ],
+        "workshop": "Euclidean algorithm 2"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "gcd",
+        "args": {
+          "a": 414,
+          "b": 180,
+          "query": "divisor-count"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-379",
+      "topic": "Euclidean algorithm 2",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "How many Euclidean divisions are performed?",
+      "context": "Let a=414 and b=180. Count the final Euclidean division producing remainder 0 as one division.",
+      "options": [
+        "3",
+        "5",
+        "4",
+        "2"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "The last nonzero remainder is the gcd; each Euclidean step preserves the common divisors.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Connect Euclidean remainders, common divisors, least common multiples, and Bézout coefficients.",
+        "correct_rationale": "414=2·180+54; 180=3·54+18; 54=3·18+0. This is 3 divisions including the final zero remainder.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "5 does not satisfy the stated computation. 414=2·180+54; 180=3·54+18; 54=3·18+0. This is 3 divisions including the final zero remainder."
+          },
+          {
+            "option_index": 2,
+            "rationale": "4 does not satisfy the stated computation. 414=2·180+54; 180=3·54+18; 54=3·18+0. This is 3 divisions including the final zero remainder."
+          },
+          {
+            "option_index": 3,
+            "rationale": "2 does not satisfy the stated computation. 414=2·180+54; 180=3·54+18; 54=3·18+0. This is 3 divisions including the final zero remainder."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §4.3, odd exercises 25, 27, 29, 33, 35, 39. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "4.3",
+        "odd_exercises": [
+          25,
+          27,
+          29,
+          33,
+          35,
+          39
+        ],
+        "workshop": "Euclidean algorithm 2"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "gcd",
+        "args": {
+          "a": 414,
+          "b": 180,
+          "query": "steps"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-380",
+      "topic": "Euclidean algorithm 2",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "If gcd(a,b)=(-3)a+tb, what is integer t?",
+      "context": "Let a=414 and b=180. Count the final Euclidean division producing remainder 0 as one division.",
+      "options": [
+        "9",
+        "7",
+        "6",
+        "8"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "The last nonzero remainder is the gcd; each Euclidean step preserves the common divisors.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Connect Euclidean remainders, common divisors, least common multiples, and Bézout coefficients.",
+        "correct_rationale": "Solve 18=(-3)·414+t·180, giving t=(18−(-3)·414)/180=7. Substitution verifies the Bézout identity.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "9 does not satisfy the stated computation. Solve 18=(-3)·414+t·180, giving t=(18−(-3)·414)/180=7. Substitution verifies the Bézout identity."
+          },
+          {
+            "option_index": 2,
+            "rationale": "6 does not satisfy the stated computation. Solve 18=(-3)·414+t·180, giving t=(18−(-3)·414)/180=7. Substitution verifies the Bézout identity."
+          },
+          {
+            "option_index": 3,
+            "rationale": "8 does not satisfy the stated computation. Solve 18=(-3)·414+t·180, giving t=(18−(-3)·414)/180=7. Substitution verifies the Bézout identity."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §4.3, odd exercises 25, 27, 29, 33, 35, 39. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "4.3",
+        "odd_exercises": [
+          25,
+          27,
+          29,
+          33,
+          35,
+          39
+        ],
+        "workshop": "Euclidean algorithm 2"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "gcd",
+        "args": {
+          "a": 414,
+          "b": 180,
+          "x": -3,
+          "query": "bezout"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-381",
+      "topic": "Divisibility implications and counterexamples",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "If a|b and a|c, why does a|(5b−2c)?",
+      "context": "Unless a statement says otherwise, a,b,c are integers and every divisor in a|b is nonzero.",
+      "options": [
+        "Because divisibility applies to all real linear combinations.",
+        "Because a must be prime.",
+        "Because b=c.",
+        "Write b=au,c=av; then 5b−2c=a(5u−2v)."
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Write b=ak for a divisibility hypothesis; keep track of which factors are known to divide which terms.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Prove divisibility statements by integer witnesses and refute unsafe product cancellation.",
+        "correct_rationale": "The coefficient 5u−2v is an integer. Integer linear combinations preserve divisibility; arbitrary real coefficients do not.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. The coefficient 5u−2v is an integer. Integer linear combinations preserve divisibility; arbitrary real coefficients do not."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. The coefficient 5u−2v is an integer. Integer linear combinations preserve divisibility; arbitrary real coefficients do not."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. The coefficient 5u−2v is an integer. Integer linear combinations preserve divisibility; arbitrary real coefficients do not."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §4.1, odd exercises 3, 5, 7, 9, 11, 43. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "4.1",
+        "odd_exercises": [
+          3,
+          5,
+          7,
+          9,
+          11,
+          43
+        ],
+        "workshop": "Divisibility implications and counterexamples"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-382",
+      "topic": "Divisibility implications and counterexamples",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Which example refutes a|bc ⇒ a|b or a|c for general positive integers?",
+      "context": "Unless a statement says otherwise, a,b,c are integers and every divisor in a|b is nonzero.",
+      "options": [
+        "a=6,b=2,c=3",
+        "a=2,b=4,c=5",
+        "a=5,b=10,c=2",
+        "a=3,b=6,c=9"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Write b=ak for a divisibility hypothesis; keep track of which factors are known to divide which terms.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Prove divisibility statements by integer witnesses and refute unsafe product cancellation.",
+        "correct_rationale": "6 divides 2·3, but divides neither 2 nor 3. In the other examples at least one factor is divisible by a.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. 6 divides 2·3, but divides neither 2 nor 3. In the other examples at least one factor is divisible by a."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. 6 divides 2·3, but divides neither 2 nor 3. In the other examples at least one factor is divisible by a."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. 6 divides 2·3, but divides neither 2 nor 3. In the other examples at least one factor is divisible by a."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §4.1, odd exercises 3, 5, 7, 9, 11, 43. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "4.1",
+        "odd_exercises": [
+          3,
+          5,
+          7,
+          9,
+          11,
+          43
+        ],
+        "workshop": "Divisibility implications and counterexamples"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-383",
+      "topic": "Divisibility implications and counterexamples",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "If nonzero a|b and b|a, what must hold?",
+      "context": "Unless a statement says otherwise, a,b,c are integers and every divisor in a|b is nonzero.",
+      "options": [
+        "a and b are both prime",
+        "|a|=|b|",
+        "a=b always",
+        "a=−b always"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Write b=ak for a divisibility hypothesis; keep track of which factors are known to divide which terms.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Prove divisibility statements by integer witnesses and refute unsafe product cancellation.",
+        "correct_rationale": "Write b=ak and a=bℓ. Then kℓ=1, so k=ℓ=1 or k=ℓ=−1. Thus b=a or b=−a.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. Write b=ak and a=bℓ. Then kℓ=1, so k=ℓ=1 or k=ℓ=−1. Thus b=a or b=−a."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. Write b=ak and a=bℓ. Then kℓ=1, so k=ℓ=1 or k=ℓ=−1. Thus b=a or b=−a."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. Write b=ak and a=bℓ. Then kℓ=1, so k=ℓ=1 or k=ℓ=−1. Thus b=a or b=−a."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §4.1, odd exercises 3, 5, 7, 9, 11, 43. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "4.1",
+        "odd_exercises": [
+          3,
+          5,
+          7,
+          9,
+          11,
+          43
+        ],
+        "workshop": "Divisibility implications and counterexamples"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-384",
+      "topic": "Divisibility implications and counterexamples",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "Why is n²≡1 (mod 3) when 3 does not divide integer n?",
+      "context": "Unless a statement says otherwise, a,b,c are integers and every divisor in a|b is nonzero.",
+      "options": [
+        "The remaining residues are 1 and 2, whose squares are both 1 modulo 3.",
+        "All integers square to 1 modulo 3.",
+        "Only positive n have a remainder.",
+        "n must be prime."
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Write b=ak for a divisibility hypothesis; keep track of which factors are known to divide which terms.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Prove divisibility statements by integer witnesses and refute unsafe product cancellation.",
+        "correct_rationale": "The residue cases 0,1,2 cover every integer including negatives. Excluding 0 leaves two cases, both with square residue 1.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. The residue cases 0,1,2 cover every integer including negatives. Excluding 0 leaves two cases, both with square residue 1."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. The residue cases 0,1,2 cover every integer including negatives. Excluding 0 leaves two cases, both with square residue 1."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. The residue cases 0,1,2 cover every integer including negatives. Excluding 0 leaves two cases, both with square residue 1."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §4.1, odd exercises 3, 5, 7, 9, 11, 43. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "4.1",
+        "odd_exercises": [
+          3,
+          5,
+          7,
+          9,
+          11,
+          43
+        ],
+        "workshop": "Divisibility implications and counterexamples"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-385",
+      "topic": "Divisibility implications and counterexamples",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "Which cancellation is valid from ac≡bc (mod m), m≥2?",
+      "context": "Unless a statement says otherwise, a,b,c are integers and every divisor in a|b is nonzero.",
+      "options": [
+        "Cancel only when c is prime, regardless of m.",
+        "Conclude a=b as ordinary integers.",
+        "Conclude a≡b (mod m) if gcd(c,m)=1.",
+        "Cancel c for every integer c."
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Write b=ak for a divisibility hypothesis; keep track of which factors are known to divide which terms.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Prove divisibility statements by integer witnesses and refute unsafe product cancellation.",
+        "correct_rationale": "Coprimality ensures m|c(a−b) implies m|(a−b). Without it, e.g. 2·1≡2·4 mod 6 but 1≢4 mod 6. Congruence also need not mean integer equality.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. Coprimality ensures m|c(a−b) implies m|(a−b). Without it, e.g. 2·1≡2·4 mod 6 but 1≢4 mod 6. Congruence also need not mean integer equality."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. Coprimality ensures m|c(a−b) implies m|(a−b). Without it, e.g. 2·1≡2·4 mod 6 but 1≢4 mod 6. Congruence also need not mean integer equality."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. Coprimality ensures m|c(a−b) implies m|(a−b). Without it, e.g. 2·1≡2·4 mod 6 but 1≢4 mod 6. Congruence also need not mean integer equality."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §4.1, odd exercises 3, 5, 7, 9, 11, 43. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "4.1",
+        "odd_exercises": [
+          3,
+          5,
+          7,
+          9,
+          11,
+          43
+        ],
+        "workshop": "Divisibility implications and counterexamples"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-386",
+      "topic": "Prime testing and factorization",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Which statement about 1 is correct?",
+      "context": "A prime is an integer greater than 1 whose only positive divisors are 1 and itself. A composite is an integer greater than 1 that is not prime.",
+      "options": [
+        "It is composite because it is not prime.",
+        "It is neither prime nor composite.",
+        "It has two distinct positive divisors.",
+        "It is prime because it divides itself."
+      ],
+      "correct_index": 1,
+      "hints": [
+        "If n=ab is composite, at least one factor is at most √n, and that factor has a prime divisor.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Use the square-root divisor bound and factorization without misclassifying 0 or 1.",
+        "correct_rationale": "Both prime and composite classifications require n>1. The number 1 has just one positive divisor.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. Both prime and composite classifications require n>1. The number 1 has just one positive divisor."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. Both prime and composite classifications require n>1. The number 1 has just one positive divisor."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. Both prime and composite classifications require n>1. The number 1 has just one positive divisor."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §4.3, odd exercises 1, 3, 5, 7, 9, 19. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "4.3",
+        "odd_exercises": [
+          1,
+          3,
+          5,
+          7,
+          9,
+          19
+        ],
+        "workshop": "Prime testing and factorization"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-387",
+      "topic": "Prime testing and factorization",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Which prime trial divisors suffice to test 131 for primality?",
+      "context": "A prime is an integer greater than 1 whose only positive divisors are 1 and itself. A composite is an integer greater than 1 that is not prime.",
+      "options": [
+        "2,3,5,7 only",
+        "13 and 17 only",
+        "2,3,5,7,11",
+        "Every integer up to 131 is required"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "If n=ab is composite, at least one factor is at most √n, and that factor has a prime divisor.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Use the square-root divisor bound and factorization without misclassifying 0 or 1.",
+        "correct_rationale": "√131 is between 11 and 12. Test all primes up to 11; none divides 131, so it is prime.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. √131 is between 11 and 12. Test all primes up to 11; none divides 131, so it is prime."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. √131 is between 11 and 12. Test all primes up to 11; none divides 131, so it is prime."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. √131 is between 11 and 12. Test all primes up to 11; none divides 131, so it is prime."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §4.3, odd exercises 1, 3, 5, 7, 9, 19. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "4.3",
+        "odd_exercises": [
+          1,
+          3,
+          5,
+          7,
+          9,
+          19
+        ],
+        "workshop": "Prime testing and factorization"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-388",
+      "topic": "Prime testing and factorization",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What is the prime factorization of 1176?",
+      "context": "A prime is an integer greater than 1 whose only positive divisors are 1 and itself. A composite is an integer greater than 1 that is not prime.",
+      "options": [
+        "2³·3²·7",
+        "2²·3²·7²",
+        "2³·3·7",
+        "2³·3·7²"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "If n=ab is composite, at least one factor is at most √n, and that factor has a prime divisor.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Use the square-root divisor bound and factorization without misclassifying 0 or 1.",
+        "correct_rationale": "Divide by 8 to obtain 147=3·49. Thus 1176=8·3·49; the other products do not equal 1176.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. Divide by 8 to obtain 147=3·49. Thus 1176=8·3·49; the other products do not equal 1176."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. Divide by 8 to obtain 147=3·49. Thus 1176=8·3·49; the other products do not equal 1176."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. Divide by 8 to obtain 147=3·49. Thus 1176=8·3·49; the other products do not equal 1176."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §4.3, odd exercises 1, 3, 5, 7, 9, 19. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "4.3",
+        "odd_exercises": [
+          1,
+          3,
+          5,
+          7,
+          9,
+          19
+        ],
+        "workshop": "Prime testing and factorization"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-389",
+      "topic": "Prime testing and factorization",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "If p is prime and p|ab, what follows?",
+      "context": "A prime is an integer greater than 1 whose only positive divisors are 1 and itself. A composite is an integer greater than 1 that is not prime.",
+      "options": [
+        "Both a and b must be prime.",
+        "p|a or p|b",
+        "p=a or p=b necessarily.",
+        "p divides both factors."
+      ],
+      "correct_index": 1,
+      "hints": [
+        "If n=ab is composite, at least one factor is at most √n, and that factor has a prime divisor.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Use the square-root divisor bound and factorization without misclassifying 0 or 1.",
+        "correct_rationale": "Euclid’s lemma gives divisibility of at least one factor. If p∤a, gcd(p,a)=1 and a Bézout identity forces p|b.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. Euclid’s lemma gives divisibility of at least one factor. If p∤a, gcd(p,a)=1 and a Bézout identity forces p|b."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. Euclid’s lemma gives divisibility of at least one factor. If p∤a, gcd(p,a)=1 and a Bézout identity forces p|b."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. Euclid’s lemma gives divisibility of at least one factor. If p∤a, gcd(p,a)=1 and a Bézout identity forces p|b."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §4.3, odd exercises 1, 3, 5, 7, 9, 19. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "4.3",
+        "odd_exercises": [
+          1,
+          3,
+          5,
+          7,
+          9,
+          19
+        ],
+        "workshop": "Prime testing and factorization"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-390",
+      "topic": "Prime testing and factorization",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "Why is 2^15−1 composite without evaluating it?",
+      "context": "A prime is an integer greater than 1 whose only positive divisors are 1 and itself. A composite is an integer greater than 1 that is not prime.",
+      "options": [
+        "Every power of 2 minus 1 is prime.",
+        "Every odd number is composite.",
+        "2^15−1=(2⁵−1)(2¹⁰+2⁵+1), with both factors greater than 1.",
+        "15 is odd, so 2^15−1 is even."
+      ],
+      "correct_index": 2,
+      "hints": [
+        "If n=ab is composite, at least one factor is at most √n, and that factor has a prime divisor.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Use the square-root divisor bound and factorization without misclassifying 0 or 1.",
+        "correct_rationale": "Use t³−1=(t−1)(t²+t+1) with t=2⁵. A nontrivial factorization proves compositeness.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. Use t³−1=(t−1)(t²+t+1) with t=2⁵. A nontrivial factorization proves compositeness."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. Use t³−1=(t−1)(t²+t+1) with t=2⁵. A nontrivial factorization proves compositeness."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. Use t³−1=(t−1)(t²+t+1) with t=2⁵. A nontrivial factorization proves compositeness."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §4.3, odd exercises 1, 3, 5, 7, 9, 19. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "4.3",
+        "odd_exercises": [
+          1,
+          3,
+          5,
+          7,
+          9,
+          19
+        ],
+        "workshop": "Prime testing and factorization"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-391",
+      "topic": "Coprimality versus pairwise coprimality",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What is gcd(6,10,15)?",
+      "context": "Consider the positive integers 6,10,15. Pairwise relatively prime means every pair has gcd 1; gcd of an entire list is a different condition.",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "5"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Compute all pair gcds separately; one global gcd does not control every pair.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Distinguish pairwise coprimality from having no common divisor of the entire list.",
+        "correct_rationale": "gcd(6,10)=2 and gcd(2,15)=1. No prime divides all three.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. gcd(6,10)=2 and gcd(2,15)=1. No prime divides all three."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. gcd(6,10)=2 and gcd(2,15)=1. No prime divides all three."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. gcd(6,10)=2 and gcd(2,15)=1. No prime divides all three."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §4.3, odd exercises 15, 17, 25, 27, 31. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "4.3",
+        "odd_exercises": [
+          15,
+          17,
+          25,
+          27,
+          31
+        ],
+        "workshop": "Coprimality versus pairwise coprimality"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-392",
+      "topic": "Coprimality versus pairwise coprimality",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Are 6,10,15 pairwise relatively prime?",
+      "context": "Consider the positive integers 6,10,15. Pairwise relatively prime means every pair has gcd 1; gcd of an entire list is a different condition.",
+      "options": [
+        "Yes, because all three are distinct.",
+        "No: the pair gcds are 2,3,5.",
+        "Yes, because their overall gcd is 1.",
+        "No, because their overall gcd is 30."
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Compute all pair gcds separately; one global gcd does not control every pair.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Distinguish pairwise coprimality from having no common divisor of the entire list.",
+        "correct_rationale": "gcd(6,10)=2, gcd(6,15)=3, and gcd(10,15)=5. Pairwise coprimality requires each to be 1.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. gcd(6,10)=2, gcd(6,15)=3, and gcd(10,15)=5. Pairwise coprimality requires each to be 1."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. gcd(6,10)=2, gcd(6,15)=3, and gcd(10,15)=5. Pairwise coprimality requires each to be 1."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. gcd(6,10)=2, gcd(6,15)=3, and gcd(10,15)=5. Pairwise coprimality requires each to be 1."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §4.3, odd exercises 15, 17, 25, 27, 31. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "4.3",
+        "odd_exercises": [
+          15,
+          17,
+          25,
+          27,
+          31
+        ],
+        "workshop": "Coprimality versus pairwise coprimality"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-393",
+      "topic": "Coprimality versus pairwise coprimality",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What is lcm(6,10,15)?",
+      "context": "Consider the positive integers 6,10,15. Pairwise relatively prime means every pair has gcd 1; gcd of an entire list is a different condition.",
+      "options": [
+        "900",
+        "30",
+        "60",
+        "1"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Compute all pair gcds separately; one global gcd does not control every pair.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Distinguish pairwise coprimality from having no common divisor of the entire list.",
+        "correct_rationale": "The prime factorizations use 2,3,5 with maximum exponent one each, so the lcm is 2·3·5=30.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. The prime factorizations use 2,3,5 with maximum exponent one each, so the lcm is 2·3·5=30."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. The prime factorizations use 2,3,5 with maximum exponent one each, so the lcm is 2·3·5=30."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. The prime factorizations use 2,3,5 with maximum exponent one each, so the lcm is 2·3·5=30."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §4.3, odd exercises 15, 17, 25, 27, 31. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "4.3",
+        "odd_exercises": [
+          15,
+          17,
+          25,
+          27,
+          31
+        ],
+        "workshop": "Coprimality versus pairwise coprimality"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-394",
+      "topic": "Coprimality versus pairwise coprimality",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "What added condition is necessary when saying “two primes are relatively prime”?",
+      "context": "Consider the positive integers 6,10,15. Pairwise relatively prime means every pair has gcd 1; gcd of an entire list is a different condition.",
+      "options": [
+        "The two primes must be distinct.",
+        "Both primes must exceed 100.",
+        "One prime must divide the other.",
+        "Both primes must be odd."
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Compute all pair gcds separately; one global gcd does not control every pair.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Distinguish pairwise coprimality from having no common divisor of the entire list.",
+        "correct_rationale": "A prime p has gcd(p,p)=p, not 1. Distinct primes share no prime divisor; 2 is allowed.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. A prime p has gcd(p,p)=p, not 1. Distinct primes share no prime divisor; 2 is allowed."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. A prime p has gcd(p,p)=p, not 1. Distinct primes share no prime divisor; 2 is allowed."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. A prime p has gcd(p,p)=p, not 1. Distinct primes share no prime divisor; 2 is allowed."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §4.3, odd exercises 15, 17, 25, 27, 31. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "4.3",
+        "odd_exercises": [
+          15,
+          17,
+          25,
+          27,
+          31
+        ],
+        "workshop": "Coprimality versus pairwise coprimality"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-395",
+      "topic": "Coprimality versus pairwise coprimality",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "If gcd(a,b)=1 and gcd(a,c)=1, why is gcd(a,bc)=1?",
+      "context": "Consider the positive integers 6,10,15. Pairwise relatively prime means every pair has gcd 1; gcd of an entire list is a different condition.",
+      "options": [
+        "Because a must equal 1.",
+        "Because b and c must also be relatively prime.",
+        "Any prime common divisor of a and bc would divide b or c, contradicting one of the coprimality assumptions.",
+        "Because bc must be prime."
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Compute all pair gcds separately; one global gcd does not control every pair.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Distinguish pairwise coprimality from having no common divisor of the entire list.",
+        "correct_rationale": "Apply Euclid’s lemma to any alleged common prime divisor. The assumptions do not require b,c to be coprime to one another.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. Apply Euclid’s lemma to any alleged common prime divisor. The assumptions do not require b,c to be coprime to one another."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. Apply Euclid’s lemma to any alleged common prime divisor. The assumptions do not require b,c to be coprime to one another."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. Apply Euclid’s lemma to any alleged common prime divisor. The assumptions do not require b,c to be coprime to one another."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §4.3, odd exercises 15, 17, 25, 27, 31. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "4.3",
+        "odd_exercises": [
+          15,
+          17,
+          25,
+          27,
+          31
+        ],
+        "workshop": "Coprimality versus pairwise coprimality"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-396",
+      "topic": "Bézout identities and preserved gcds",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What follows from 1=5a−2b with integers a,b?",
+      "context": "Integers a,b are not both zero. Bézout’s theorem states gcd(a,b)=sa+tb for some integers s,t. The gcd is taken positive.",
+      "options": [
+        "a and b must both be prime",
+        "lcm(a,b)=1",
+        "gcd(a,b)=1",
+        "a=1 and b=2 necessarily"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Every common divisor divides every integer linear combination, including a displayed combination equal to 1.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Use linear combinations to prove coprimality and understand Euclidean invariance.",
+        "correct_rationale": "Every common positive divisor divides the right side and hence 1. This proves coprimality without requiring either input to be prime.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. Every common positive divisor divides the right side and hence 1. This proves coprimality without requiring either input to be prime."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. Every common positive divisor divides the right side and hence 1. This proves coprimality without requiring either input to be prime."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. Every common positive divisor divides the right side and hence 1. This proves coprimality without requiring either input to be prime."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §4.3, odd exercises 29, 31, 33, 39. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "4.3",
+        "odd_exercises": [
+          29,
+          31,
+          33,
+          39
+        ],
+        "workshop": "Bézout identities and preserved gcds"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-397",
+      "topic": "Bézout identities and preserved gcds",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Why is gcd(a,b)=gcd(b,a−3b)?",
+      "context": "Integers a,b are not both zero. Bézout’s theorem states gcd(a,b)=sa+tb for some integers s,t. The gcd is taken positive.",
+      "options": [
+        "Both gcds are automatically 1.",
+        "The two pairs have exactly the same common divisors.",
+        "Subtracting always leaves the value of each integer unchanged.",
+        "a−3b must be positive."
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Every common divisor divides every integer linear combination, including a displayed combination equal to 1.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Use linear combinations to prove coprimality and understand Euclidean invariance.",
+        "correct_rationale": "A common divisor of a,b divides a−3b; conversely a common divisor of b,a−3b divides (a−3b)+3b=a.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. A common divisor of a,b divides a−3b; conversely a common divisor of b,a−3b divides (a−3b)+3b=a."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. A common divisor of a,b divides a−3b; conversely a common divisor of b,a−3b divides (a−3b)+3b=a."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. A common divisor of a,b divides a−3b; conversely a common divisor of b,a−3b divides (a−3b)+3b=a."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §4.3, odd exercises 29, 31, 33, 39. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "4.3",
+        "odd_exercises": [
+          29,
+          31,
+          33,
+          39
+        ],
+        "workshop": "Bézout identities and preserved gcds"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-398",
+      "topic": "Bézout identities and preserved gcds",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What is gcd(−42,0)?",
+      "context": "Integers a,b are not both zero. Bézout’s theorem states gcd(a,b)=sa+tb for some integers s,t. The gcd is taken positive.",
+      "options": [
+        "0",
+        "−42",
+        "42",
+        "1"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Every common divisor divides every integer linear combination, including a displayed combination equal to 1.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Use linear combinations to prove coprimality and understand Euclidean invariance.",
+        "correct_rationale": "Positive common divisors of −42 and 0 are the positive divisors of 42, since every nonzero integer divides 0. The greatest is 42.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. Positive common divisors of −42 and 0 are the positive divisors of 42, since every nonzero integer divides 0. The greatest is 42."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. Positive common divisors of −42 and 0 are the positive divisors of 42, since every nonzero integer divides 0. The greatest is 42."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. Positive common divisors of −42 and 0 are the positive divisors of 42, since every nonzero integer divides 0. The greatest is 42."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §4.3, odd exercises 29, 31, 33, 39. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "4.3",
+        "odd_exercises": [
+          29,
+          31,
+          33,
+          39
+        ],
+        "workshop": "Bézout identities and preserved gcds"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-399",
+      "topic": "Bézout identities and preserved gcds",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "For nonzero integers a,b, what is the sign-correct gcd–lcm identity when lcm is positive?",
+      "context": "Integers a,b are not both zero. Bézout’s theorem states gcd(a,b)=sa+tb for some integers s,t. The gcd is taken positive.",
+      "options": [
+        "gcd(a,b)=lcm(a,b) always",
+        "gcd(a,b)·lcm(a,b)=|ab|",
+        "gcd(a,b)·lcm(a,b)=ab even when ab<0",
+        "gcd(a,b)+lcm(a,b)=|ab|"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Every common divisor divides every integer linear combination, including a displayed combination equal to 1.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Use linear combinations to prove coprimality and understand Euclidean invariance.",
+        "correct_rationale": "Both gcd and lcm are positive, so their product equals the absolute product. Prime-exponent minima and maxima add to the two original exponents.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. Both gcd and lcm are positive, so their product equals the absolute product. Prime-exponent minima and maxima add to the two original exponents."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. Both gcd and lcm are positive, so their product equals the absolute product. Prime-exponent minima and maxima add to the two original exponents."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. Both gcd and lcm are positive, so their product equals the absolute product. Prime-exponent minima and maxima add to the two original exponents."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §4.3, odd exercises 29, 31, 33, 39. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "4.3",
+        "odd_exercises": [
+          29,
+          31,
+          33,
+          39
+        ],
+        "workshop": "Bézout identities and preserved gcds"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-400",
+      "topic": "Bézout identities and preserved gcds",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "If a≡b (mod m), why is gcd(a,m)=gcd(b,m)?",
+      "context": "Integers a,b are not both zero. Bézout’s theorem states gcd(a,b)=sa+tb for some integers s,t. The gcd is taken positive.",
+      "options": [
+        "Congruent integers must be equal.",
+        "m must be prime for the claim to hold.",
+        "Every residue is coprime to m.",
+        "a=b+km, so a,m and b,m have exactly the same common divisors."
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Every common divisor divides every integer linear combination, including a displayed combination equal to 1.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Use linear combinations to prove coprimality and understand Euclidean invariance.",
+        "correct_rationale": "Adding an integer multiple of one input to the other preserves common divisors, exactly as in the Euclidean step. The modulus need not be prime.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. Adding an integer multiple of one input to the other preserves common divisors, exactly as in the Euclidean step. The modulus need not be prime."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. Adding an integer multiple of one input to the other preserves common divisors, exactly as in the Euclidean step. The modulus need not be prime."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. Adding an integer multiple of one input to the other preserves common divisors, exactly as in the Euclidean step. The modulus need not be prime."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §4.3, odd exercises 29, 31, 33, 39. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "4.3",
+        "odd_exercises": [
+          29,
+          31,
+          33,
+          39
+        ],
+        "workshop": "Bézout identities and preserved gcds"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    }
+  ]
+}

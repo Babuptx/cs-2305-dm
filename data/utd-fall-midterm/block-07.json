@@ -1,0 +1,2663 @@
+{
+  "schema_version": 1,
+  "block_id": "utd-fall-midterm-block-07",
+  "pillar_id": "utd-fall-midterm",
+  "block_title": "UTD 2026 Fall Midterm · Growth rates & operation counts",
+  "questions": [
+    {
+      "id": "utd-fall-midterm-301",
+      "topic": "Polynomial bounds with witnesses",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Which witnesses establish f(x)∈O(x³)?",
+      "context": "For real x≥1, let f(x)=4x³+7x²+2. Big-O uses positive C and a threshold k: |f(x)|≤C|g(x)| for all x>k.",
+      "options": [
+        "C=4, k=1",
+        "C=0, k=1",
+        "C=13, k=1",
+        "C=1, k=1"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "For x≥1, each lower power is at most the leading power; a lower bound comes from the leading positive term.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Give valid upper and lower bounds, and distinguish a valid bound from a tight one.",
+        "correct_rationale": "For x≥1, 7x²≤7x³ and 2≤2x³, so f(x)≤13x³. C=4 fails because both lower terms are positive; the smaller constants also fail.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. For x≥1, 7x²≤7x³ and 2≤2x³, so f(x)≤13x³. C=4 fails because both lower terms are positive; the smaller constants also fail."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. For x≥1, 7x²≤7x³ and 2≤2x³, so f(x)≤13x³. C=4 fails because both lower terms are positive; the smaller constants also fail."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. For x≥1, 7x²≤7x³ and 2≤2x³, so f(x)≤13x³. C=4 fails because both lower terms are positive; the smaller constants also fail."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §3.2, odd exercises 3, 7, 9, 29. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "3.2",
+        "odd_exercises": [
+          3,
+          7,
+          9,
+          29
+        ],
+        "workshop": "Polynomial bounds with witnesses"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-302",
+      "topic": "Polynomial bounds with witnesses",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Which lower bound holds for all x≥1?",
+      "context": "For real x≥1, let f(x)=4x³+7x²+2. Big-O uses positive C and a threshold k: |f(x)|≤C|g(x)| for all x>k.",
+      "options": [
+        "f(x)≥x⁴",
+        "f(x)≥4x³",
+        "f(x)≥2ˣ",
+        "f(x)≥14x³"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "For x≥1, each lower power is at most the leading power; a lower bound comes from the leading positive term.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Give valid upper and lower bounds, and distinguish a valid bound from a tight one.",
+        "correct_rationale": "The lower-order terms are nonnegative, so f≥4x³. The constant 14 already fails near x=1; x⁴ and 2ˣ eventually outgrow f.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. The lower-order terms are nonnegative, so f≥4x³. The constant 14 already fails near x=1; x⁴ and 2ˣ eventually outgrow f."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. The lower-order terms are nonnegative, so f≥4x³. The constant 14 already fails near x=1; x⁴ and 2ˣ eventually outgrow f."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. The lower-order terms are nonnegative, so f≥4x³. The constant 14 already fails near x=1; x⁴ and 2ˣ eventually outgrow f."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §3.2, odd exercises 3, 7, 9, 29. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "3.2",
+        "odd_exercises": [
+          3,
+          7,
+          9,
+          29
+        ],
+        "workshop": "Polynomial bounds with witnesses"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-303",
+      "topic": "Polynomial bounds with witnesses",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What is the tight asymptotic class of f?",
+      "context": "For real x≥1, let f(x)=4x³+7x²+2. Big-O uses positive C and a threshold k: |f(x)|≤C|g(x)| for all x>k.",
+      "options": [
+        "Θ(2ˣ)",
+        "Θ(x⁴)",
+        "Θ(x³)",
+        "Θ(x²)"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "For x≥1, each lower power is at most the leading power; a lower bound comes from the leading positive term.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Give valid upper and lower bounds, and distinguish a valid bound from a tight one.",
+        "correct_rationale": "Combining 4x³≤f(x)≤13x³ for x≥1 gives matching cubic lower and upper bounds.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. Combining 4x³≤f(x)≤13x³ for x≥1 gives matching cubic lower and upper bounds."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. Combining 4x³≤f(x)≤13x³ for x≥1 gives matching cubic lower and upper bounds."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. Combining 4x³≤f(x)≤13x³ for x≥1 gives matching cubic lower and upper bounds."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §3.2, odd exercises 3, 7, 9, 29. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "3.2",
+        "odd_exercises": [
+          3,
+          7,
+          9,
+          29
+        ],
+        "workshop": "Polynomial bounds with witnesses"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-304",
+      "topic": "Polynomial bounds with witnesses",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "Why is f not O(x²)?",
+      "context": "For real x≥1, let f(x)=4x³+7x²+2. Big-O uses positive C and a threshold k: |f(x)|≤C|g(x)| for all x>k.",
+      "options": [
+        "It has four terms.",
+        "Its value exceeds x² at one input.",
+        "f(x)/x²≥4x grows without bound.",
+        "Big-O never applies to polynomials."
+      ],
+      "correct_index": 2,
+      "hints": [
+        "For x≥1, each lower power is at most the leading power; a lower bound comes from the leading positive term.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Give valid upper and lower bounds, and distinguish a valid bound from a tight one.",
+        "correct_rationale": "No fixed constant C can bound the unbounded ratio for all sufficiently large x. One isolated comparison would not suffice.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. No fixed constant C can bound the unbounded ratio for all sufficiently large x. One isolated comparison would not suffice."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. No fixed constant C can bound the unbounded ratio for all sufficiently large x. One isolated comparison would not suffice."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. No fixed constant C can bound the unbounded ratio for all sufficiently large x. One isolated comparison would not suffice."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §3.2, odd exercises 3, 7, 9, 29. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "3.2",
+        "odd_exercises": [
+          3,
+          7,
+          9,
+          29
+        ],
+        "workshop": "Polynomial bounds with witnesses"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-305",
+      "topic": "Polynomial bounds with witnesses",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "Which statement about O(x⁴) is correct?",
+      "context": "For real x≥1, let f(x)=4x³+7x²+2. Big-O uses positive C and a threshold k: |f(x)|≤C|g(x)| for all x>k.",
+      "options": [
+        "O(x⁴) means exactly x⁴ operations at every input.",
+        "f∉O(x⁴) because its degree is 3.",
+        "f∈Θ(x⁴).",
+        "f∈O(x⁴), but this is a looser upper bound than Θ(x³)."
+      ],
+      "correct_index": 3,
+      "hints": [
+        "For x≥1, each lower power is at most the leading power; a lower bound comes from the leading positive term.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Give valid upper and lower bounds, and distinguish a valid bound from a tight one.",
+        "correct_rationale": "For x≥1, x³≤x⁴, so the cubic upper bound implies a quartic one. Big-O is an upper-bound relation, not necessarily a tight estimate.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. For x≥1, x³≤x⁴, so the cubic upper bound implies a quartic one. Big-O is an upper-bound relation, not necessarily a tight estimate."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. For x≥1, x³≤x⁴, so the cubic upper bound implies a quartic one. Big-O is an upper-bound relation, not necessarily a tight estimate."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. For x≥1, x³≤x⁴, so the cubic upper bound implies a quartic one. Big-O is an upper-bound relation, not necessarily a tight estimate."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §3.2, odd exercises 3, 7, 9, 29. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "3.2",
+        "odd_exercises": [
+          3,
+          7,
+          9,
+          29
+        ],
+        "workshop": "Polynomial bounds with witnesses"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-306",
+      "topic": "Rational functions and dominant terms",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Which bound is valid for the denominator on x≥1?",
+      "context": "For real x≥1, let f(x)=(2x⁴+3x)/(5x²+1). The denominator is positive.",
+      "options": [
+        "5x²≤5x²+1≤6x²",
+        "5x²+1≤5x²",
+        "5x²+1=x²",
+        "5x²+1≥6x² for all x≥1"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "For a quotient lower bound, bound the numerator below and denominator above; reverse those directions for an upper bound.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Bound numerator and denominator in the correct directions to prove a tight order.",
+        "correct_rationale": "Since 1≤x², adding it to 5x² produces at most 6x² and at least 5x².",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. Since 1≤x², adding it to 5x² produces at most 6x² and at least 5x²."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. Since 1≤x², adding it to 5x² produces at most 6x² and at least 5x²."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. Since 1≤x², adding it to 5x² produces at most 6x² and at least 5x²."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §3.2, odd exercises 5, 7, 25, 29. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "3.2",
+        "odd_exercises": [
+          5,
+          7,
+          25,
+          29
+        ],
+        "workshop": "Rational functions and dominant terms"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-307",
+      "topic": "Rational functions and dominant terms",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Which lower bound follows?",
+      "context": "For real x≥1, let f(x)=(2x⁴+3x)/(5x²+1). The denominator is positive.",
+      "options": [
+        "f(x)≥2ˣ",
+        "f(x)≥x⁴",
+        "f(x)≥3x²",
+        "f(x)≥x²/3"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "For a quotient lower bound, bound the numerator below and denominator above; reverse those directions for an upper bound.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Bound numerator and denominator in the correct directions to prove a tight order.",
+        "correct_rationale": "Use numerator≥2x⁴ and denominator≤6x² to obtain f≥(2x⁴)/(6x²)=x²/3.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. Use numerator≥2x⁴ and denominator≤6x² to obtain f≥(2x⁴)/(6x²)=x²/3."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. Use numerator≥2x⁴ and denominator≤6x² to obtain f≥(2x⁴)/(6x²)=x²/3."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. Use numerator≥2x⁴ and denominator≤6x² to obtain f≥(2x⁴)/(6x²)=x²/3."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §3.2, odd exercises 5, 7, 25, 29. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "3.2",
+        "odd_exercises": [
+          5,
+          7,
+          25,
+          29
+        ],
+        "workshop": "Rational functions and dominant terms"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-308",
+      "topic": "Rational functions and dominant terms",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Which upper bound follows for x≥1?",
+      "context": "For real x≥1, let f(x)=(2x⁴+3x)/(5x²+1). The denominator is positive.",
+      "options": [
+        "f(x)≤x²",
+        "f(x)≤x²/4",
+        "f(x)≤x",
+        "f(x)≤1"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "For a quotient lower bound, bound the numerator below and denominator above; reverse those directions for an upper bound.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Bound numerator and denominator in the correct directions to prove a tight order.",
+        "correct_rationale": "Because 3x≤3x⁴, the numerator≤5x⁴; denominator≥5x². Hence f≤x². The other bounds fail for large x.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. Because 3x≤3x⁴, the numerator≤5x⁴; denominator≥5x². Hence f≤x². The other bounds fail for large x."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. Because 3x≤3x⁴, the numerator≤5x⁴; denominator≥5x². Hence f≤x². The other bounds fail for large x."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. Because 3x≤3x⁴, the numerator≤5x⁴; denominator≥5x². Hence f≤x². The other bounds fail for large x."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §3.2, odd exercises 5, 7, 25, 29. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "3.2",
+        "odd_exercises": [
+          5,
+          7,
+          25,
+          29
+        ],
+        "workshop": "Rational functions and dominant terms"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-309",
+      "topic": "Rational functions and dominant terms",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "What is the tight growth rate?",
+      "context": "For real x≥1, let f(x)=(2x⁴+3x)/(5x²+1). The denominator is positive.",
+      "options": [
+        "Θ(x²)",
+        "Θ(x)",
+        "Θ(x⁴)",
+        "Θ(1)"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "For a quotient lower bound, bound the numerator below and denominator above; reverse those directions for an upper bound.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Bound numerator and denominator in the correct directions to prove a tight order.",
+        "correct_rationale": "The two-sided bounds x²/3≤f(x)≤x² establish quadratic growth without cancellation of unequal polynomial terms.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. The two-sided bounds x²/3≤f(x)≤x² establish quadratic growth without cancellation of unequal polynomial terms."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. The two-sided bounds x²/3≤f(x)≤x² establish quadratic growth without cancellation of unequal polynomial terms."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. The two-sided bounds x²/3≤f(x)≤x² establish quadratic growth without cancellation of unequal polynomial terms."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §3.2, odd exercises 5, 7, 25, 29. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "3.2",
+        "odd_exercises": [
+          5,
+          7,
+          25,
+          29
+        ],
+        "workshop": "Rational functions and dominant terms"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-310",
+      "topic": "Rational functions and dominant terms",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "Why is “drop the denominator because it is smaller than the numerator” invalid?",
+      "context": "For real x≥1, let f(x)=(2x⁴+3x)/(5x²+1). The denominator is positive.",
+      "options": [
+        "Dividing polynomials always gives a constant.",
+        "Only constant functions have denominators.",
+        "A growing denominator changes the growth rate; here its quadratic growth reduces degree four to degree two.",
+        "Big-O forbids rational functions."
+      ],
+      "correct_index": 2,
+      "hints": [
+        "For a quotient lower bound, bound the numerator below and denominator above; reverse those directions for an upper bound.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Bound numerator and denominator in the correct directions to prove a tight order.",
+        "correct_rationale": "Dominance is assessed within sums; a division must retain the denominator’s growth. Here x⁴/x² is x², not x⁴.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. Dominance is assessed within sums; a division must retain the denominator’s growth. Here x⁴/x² is x², not x⁴."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. Dominance is assessed within sums; a division must retain the denominator’s growth. Here x⁴/x² is x², not x⁴."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. Dominance is assessed within sums; a division must retain the denominator’s growth. Here x⁴/x² is x², not x⁴."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §3.2, odd exercises 5, 7, 25, 29. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "3.2",
+        "odd_exercises": [
+          5,
+          7,
+          25,
+          29
+        ],
+        "workshop": "Rational functions and dominant terms"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-311",
+      "topic": "Comparing exponential and logarithmic growth",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "How does 2^(n+5) compare with 2ⁿ?",
+      "context": "All logarithms have a fixed base greater than 1. The variable n tends through positive integers to infinity.",
+      "options": [
+        "It is Θ(n·2ⁿ).",
+        "It is Θ(2ⁿ) because it equals 32·2ⁿ.",
+        "It is O(n⁵).",
+        "It is Θ(4ⁿ)."
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Rewrite exponent shifts as constant factors and exponent scaling as a change of base.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Compare growth classes while distinguishing exponent changes from constant multipliers.",
+        "correct_rationale": "Adding a fixed constant to the exponent multiplies by a fixed constant, which does not change Θ.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. Adding a fixed constant to the exponent multiplies by a fixed constant, which does not change Θ."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. Adding a fixed constant to the exponent multiplies by a fixed constant, which does not change Θ."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. Adding a fixed constant to the exponent multiplies by a fixed constant, which does not change Θ."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §3.2, odd exercises 13, 19, 21. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "3.2",
+        "odd_exercises": [
+          13,
+          19,
+          21
+        ],
+        "workshop": "Comparing exponential and logarithmic growth"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-312",
+      "topic": "Comparing exponential and logarithmic growth",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Why is 2^(2n) not O(2ⁿ)?",
+      "context": "All logarithms have a fixed base greater than 1. The variable n tends through positive integers to infinity.",
+      "options": [
+        "Both functions have base 2, so they are equal.",
+        "The ratio is the constant 2.",
+        "The ratio 2^(2n)/2ⁿ=2ⁿ is unbounded.",
+        "It has a larger value at n=1 only."
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Rewrite exponent shifts as constant factors and exponent scaling as a change of base.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Compare growth classes while distinguishing exponent changes from constant multipliers.",
+        "correct_rationale": "Scaling the exponent yields 4ⁿ. The exponentially growing ratio prevents any fixed Big-O constant.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. Scaling the exponent yields 4ⁿ. The exponentially growing ratio prevents any fixed Big-O constant."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. Scaling the exponent yields 4ⁿ. The exponentially growing ratio prevents any fixed Big-O constant."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. Scaling the exponent yields 4ⁿ. The exponentially growing ratio prevents any fixed Big-O constant."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §3.2, odd exercises 13, 19, 21. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "3.2",
+        "odd_exercises": [
+          13,
+          19,
+          21
+        ],
+        "workshop": "Comparing exponential and logarithmic growth"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-313",
+      "topic": "Comparing exponential and logarithmic growth",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Which order is increasing asymptotically?",
+      "context": "All logarithms have a fixed base greater than 1. The variable n tends through positive integers to infinity.",
+      "options": [
+        "(log n)³, √n, n log n, n², 1.2ⁿ",
+        "√n, (log n)³, n², n log n, 1.2ⁿ",
+        "1.2ⁿ, n², n log n, √n, (log n)³",
+        "(log n)³, √n, 1.2ⁿ, n log n, n²"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Rewrite exponent shifts as constant factors and exponent scaling as a change of base.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Compare growth classes while distinguishing exponent changes from constant multipliers.",
+        "correct_rationale": "Fixed powers of log grow slower than positive powers of n; n log n is between n and n²; any fixed exponential base greater than 1 eventually beats polynomials.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. Fixed powers of log grow slower than positive powers of n; n log n is between n and n²; any fixed exponential base greater than 1 eventually beats polynomials."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. Fixed powers of log grow slower than positive powers of n; n log n is between n and n²; any fixed exponential base greater than 1 eventually beats polynomials."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. Fixed powers of log grow slower than positive powers of n; n log n is between n and n²; any fixed exponential base greater than 1 eventually beats polynomials."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §3.2, odd exercises 13, 19, 21. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "3.2",
+        "odd_exercises": [
+          13,
+          19,
+          21
+        ],
+        "workshop": "Comparing exponential and logarithmic growth"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-314",
+      "topic": "Comparing exponential and logarithmic growth",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "Why are log₂n and log₁₀n in the same Θ class?",
+      "context": "All logarithms have a fixed base greater than 1. The variable n tends through positive integers to infinity.",
+      "options": [
+        "Change of base multiplies by the fixed positive constant log₂10.",
+        "All logarithms are constant.",
+        "They are equal for every n.",
+        "The logarithm base can grow arbitrarily with n without changing Θ."
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Rewrite exponent shifts as constant factors and exponent scaling as a change of base.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Compare growth classes while distinguishing exponent changes from constant multipliers.",
+        "correct_rationale": "log₂n=(log₂10)·log₁₀n. This argument requires fixed bases; the base cannot silently depend on n.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. log₂n=(log₂10)·log₁₀n. This argument requires fixed bases; the base cannot silently depend on n."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. log₂n=(log₂10)·log₁₀n. This argument requires fixed bases; the base cannot silently depend on n."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. log₂n=(log₂10)·log₁₀n. This argument requires fixed bases; the base cannot silently depend on n."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §3.2, odd exercises 13, 19, 21. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "3.2",
+        "odd_exercises": [
+          13,
+          19,
+          21
+        ],
+        "workshop": "Comparing exponential and logarithmic growth"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-315",
+      "topic": "Comparing exponential and logarithmic growth",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "Which relation between n! and 2ⁿ is correct?",
+      "context": "All logarithms have a fixed base greater than 1. The variable n tends through positive integers to infinity.",
+      "options": [
+        "2ⁿ∉O(n!).",
+        "n!∈O(n²).",
+        "2ⁿ∈O(n!), but n!∉O(2ⁿ).",
+        "n!∈Θ(2ⁿ)."
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Rewrite exponent shifts as constant factors and exponent scaling as a change of base.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Compare growth classes while distinguishing exponent changes from constant multipliers.",
+        "correct_rationale": "For n≥4, at least roughly n/2 factors of n! are at least n/2; their product eventually dominates 2ⁿ by an unbounded factor. Factorials outgrow fixed-base exponentials.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. For n≥4, at least roughly n/2 factors of n! are at least n/2; their product eventually dominates 2ⁿ by an unbounded factor. Factorials outgrow fixed-base exponentials."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. For n≥4, at least roughly n/2 factors of n! are at least n/2; their product eventually dominates 2ⁿ by an unbounded factor. Factorials outgrow fixed-base exponentials."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. For n≥4, at least roughly n/2 factors of n! are at least n/2; their product eventually dominates 2ⁿ by an unbounded factor. Factorials outgrow fixed-base exponentials."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §3.2, odd exercises 13, 19, 21. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "3.2",
+        "odd_exercises": [
+          13,
+          19,
+          21
+        ],
+        "workshop": "Comparing exponential and logarithmic growth"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-316",
+      "topic": "Checking witness thresholds",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What inequality must hold for these proposed witnesses?",
+      "context": "Let f(x)=5x²+8 on real x>0. A proposed proof claims C=6 and k=2 witness f(x)∈O(x²).",
+      "options": [
+        "8≤x for every real x>2",
+        "8≤x² for every real x>2",
+        "5x²≤8",
+        "x≤2"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Reduce 5x²+8≤6x² to its simplest inequality and inspect values just above the threshold.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Check a claimed inequality over its full domain and repair a defective threshold.",
+        "correct_rationale": "Subtract 5x² from both sides. The definition requires all real inputs above k, not just integers or a few examples.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. Subtract 5x² from both sides. The definition requires all real inputs above k, not just integers or a few examples."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. Subtract 5x² from both sides. The definition requires all real inputs above k, not just integers or a few examples."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. Subtract 5x² from both sides. The definition requires all real inputs above k, not just integers or a few examples."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §3.2, odd exercises 1, 3, 9. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "3.2",
+        "odd_exercises": [
+          1,
+          3,
+          9
+        ],
+        "workshop": "Checking witness thresholds"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-317",
+      "topic": "Checking witness thresholds",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Which x refutes this specific witness pair?",
+      "context": "Let f(x)=5x²+8 on real x>0. A proposed proof claims C=6 and k=2 witness f(x)∈O(x²).",
+      "options": [
+        "x=4",
+        "x=3",
+        "x=5/2",
+        "x=10"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Reduce 5x²+8≤6x² to its simplest inequality and inspect values just above the threshold.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Check a claimed inequality over its full domain and repair a defective threshold.",
+        "correct_rationale": "At 2.5>2, x²=6.25<8. At 3,4,10 the required inequality holds.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. At 2.5>2, x²=6.25<8. At 3,4,10 the required inequality holds."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. At 2.5>2, x²=6.25<8. At 3,4,10 the required inequality holds."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. At 2.5>2, x²=6.25<8. At 3,4,10 the required inequality holds."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §3.2, odd exercises 1, 3, 9. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "3.2",
+        "odd_exercises": [
+          1,
+          3,
+          9
+        ],
+        "workshop": "Checking witness thresholds"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-318",
+      "topic": "Checking witness thresholds",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Which change repairs the proof while keeping C=6?",
+      "context": "Let f(x)=5x²+8 on real x>0. A proposed proof claims C=6 and k=2 witness f(x)∈O(x²).",
+      "options": [
+        "Use k=0.",
+        "Use k=3.",
+        "Use k=1.",
+        "Keep k=2 and ignore nonintegers."
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Reduce 5x²+8≤6x² to its simplest inequality and inspect values just above the threshold.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Check a claimed inequality over its full domain and repair a defective threshold.",
+        "correct_rationale": "For x>3, x²>9>8. Ignoring nonintegers changes the stated domain and is not a repair of this real-domain proof.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. For x>3, x²>9>8. Ignoring nonintegers changes the stated domain and is not a repair of this real-domain proof."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. For x>3, x²>9>8. Ignoring nonintegers changes the stated domain and is not a repair of this real-domain proof."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. For x>3, x²>9>8. Ignoring nonintegers changes the stated domain and is not a repair of this real-domain proof."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §3.2, odd exercises 1, 3, 9. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "3.2",
+        "odd_exercises": [
+          1,
+          3,
+          9
+        ],
+        "workshop": "Checking witness thresholds"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-319",
+      "topic": "Checking witness thresholds",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "What if the domain were positive integers instead?",
+      "context": "Let f(x)=5x²+8 on real x>0. A proposed proof claims C=6 and k=2 witness f(x)∈O(x²).",
+      "options": [
+        "The same pair still fails at x=2.5 in that domain.",
+        "A threshold must itself be an input.",
+        "C=6,k=2 would work because integer x>2 implies x≥3.",
+        "Big-O is undefined on integers."
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Reduce 5x²+8≤6x² to its simplest inequality and inspect values just above the threshold.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Check a claimed inequality over its full domain and repair a defective threshold.",
+        "correct_rationale": "The counterexample 2.5 is excluded. Every allowed integer beyond 2 meets x²≥9>8, illustrating why domains matter.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. The counterexample 2.5 is excluded. Every allowed integer beyond 2 meets x²≥9>8, illustrating why domains matter."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. The counterexample 2.5 is excluded. Every allowed integer beyond 2 meets x²≥9>8, illustrating why domains matter."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. The counterexample 2.5 is excluded. Every allowed integer beyond 2 meets x²≥9>8, illustrating why domains matter."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §3.2, odd exercises 1, 3, 9. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "3.2",
+        "odd_exercises": [
+          1,
+          3,
+          9
+        ],
+        "workshop": "Checking witness thresholds"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-320",
+      "topic": "Checking witness thresholds",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "Does failure of one witness pair disprove f∈O(x²)?",
+      "context": "Let f(x)=5x²+8 on real x>0. A proposed proof claims C=6 and k=2 witness f(x)∈O(x²).",
+      "options": [
+        "Yes; every possible witness pair must work.",
+        "Yes; Big-O forbids lower-order terms.",
+        "No; every function is O(x²).",
+        "No; a different positive constant and threshold may work."
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Reduce 5x²+8≤6x² to its simplest inequality and inspect values just above the threshold.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Check a claimed inequality over its full domain and repair a defective threshold.",
+        "correct_rationale": "Big-O asserts existence of suitable witnesses. C=6,k=3 repairs this pair, and C=13,k=1 is another valid choice.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. Big-O asserts existence of suitable witnesses. C=6,k=3 repairs this pair, and C=13,k=1 is another valid choice."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. Big-O asserts existence of suitable witnesses. C=6,k=3 repairs this pair, and C=13,k=1 is another valid choice."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. Big-O asserts existence of suitable witnesses. C=6,k=3 repairs this pair, and C=13,k=1 is another valid choice."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §3.2, odd exercises 1, 3, 9. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "3.2",
+        "odd_exercises": [
+          1,
+          3,
+          9
+        ],
+        "workshop": "Checking witness thresholds"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-321",
+      "topic": "Combining bounds carefully",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "If f∈O(n²) and g∈O(n³), which is guaranteed?",
+      "context": "Functions below are eventually nonnegative unless otherwise stated. O is an upper bound; Ω is a lower bound; Θ requires both.",
+      "options": [
+        "f+g∈O(n³)",
+        "f+g∈Θ(n³)",
+        "f+g∈O(n)",
+        "f+g∈Ω(n³)"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "An upper bound alone does not imply a matching lower bound, and subtraction can cancel leading terms.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Compose valid asymptotic bounds without inventing lower bounds or ignoring cancellation.",
+        "correct_rationale": "The sum is at most a constant times n²+n³, hence O(n³). Either function could be small, so a cubic lower bound is not guaranteed.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. The sum is at most a constant times n²+n³, hence O(n³). Either function could be small, so a cubic lower bound is not guaranteed."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. The sum is at most a constant times n²+n³, hence O(n³). Either function could be small, so a cubic lower bound is not guaranteed."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. The sum is at most a constant times n²+n³, hence O(n³). Either function could be small, so a cubic lower bound is not guaranteed."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §3.2, odd exercises 17, 25, 31, 39, 43, 45, 47. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "3.2",
+        "odd_exercises": [
+          17,
+          25,
+          31,
+          39,
+          43,
+          45,
+          47
+        ],
+        "workshop": "Combining bounds carefully"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-322",
+      "topic": "Combining bounds carefully",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "If f∈Θ(n²) and g∈Θ(n³), both eventually positive, what is fg?",
+      "context": "Functions below are eventually nonnegative unless otherwise stated. O is an upper bound; Ω is a lower bound; Θ requires both.",
+      "options": [
+        "Θ(n²)",
+        "Θ(n³)",
+        "Θ(n⁵)",
+        "Θ(n⁶)"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "An upper bound alone does not imply a matching lower bound, and subtraction can cancel leading terms.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Compose valid asymptotic bounds without inventing lower bounds or ignoring cancellation.",
+        "correct_rationale": "Multiply positive lower bounds and positive upper bounds: constant multiples of n²·n³=n⁵ sandwich the product.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. Multiply positive lower bounds and positive upper bounds: constant multiples of n²·n³=n⁵ sandwich the product."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. Multiply positive lower bounds and positive upper bounds: constant multiples of n²·n³=n⁵ sandwich the product."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. Multiply positive lower bounds and positive upper bounds: constant multiples of n²·n³=n⁵ sandwich the product."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §3.2, odd exercises 17, 25, 31, 39, 43, 45, 47. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "3.2",
+        "odd_exercises": [
+          17,
+          25,
+          31,
+          39,
+          43,
+          45,
+          47
+        ],
+        "workshop": "Combining bounds carefully"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-323",
+      "topic": "Combining bounds carefully",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Which condition is equivalent to f∈Θ(g)?",
+      "context": "Functions below are eventually nonnegative unless otherwise stated. O is an upper bound; Ω is a lower bound; Θ requires both.",
+      "options": [
+        "f∈O(g) only",
+        "f∈O(g) and f∈Ω(g)",
+        "f∈Ω(g) only",
+        "f∈O(g) or f∈Ω(g)"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "An upper bound alone does not imply a matching lower bound, and subtraction can cancel leading terms.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Compose valid asymptotic bounds without inventing lower bounds or ignoring cancellation.",
+        "correct_rationale": "A tight asymptotic bound needs both directions of eventual constant-factor control.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. A tight asymptotic bound needs both directions of eventual constant-factor control."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. A tight asymptotic bound needs both directions of eventual constant-factor control."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. A tight asymptotic bound needs both directions of eventual constant-factor control."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §3.2, odd exercises 17, 25, 31, 39, 43, 45, 47. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "3.2",
+        "odd_exercises": [
+          17,
+          25,
+          31,
+          39,
+          43,
+          45,
+          47
+        ],
+        "workshop": "Combining bounds carefully"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-324",
+      "topic": "Combining bounds carefully",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "If f=n³+n and g=n³, what is f−g?",
+      "context": "Functions below are eventually nonnegative unless otherwise stated. O is an upper bound; Ω is a lower bound; Θ requires both.",
+      "options": [
+        "Θ(n³)",
+        "Θ(n⁶)",
+        "Θ(1)",
+        "Θ(n)"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "An upper bound alone does not imply a matching lower bound, and subtraction can cancel leading terms.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Compose valid asymptotic bounds without inventing lower bounds or ignoring cancellation.",
+        "correct_rationale": "The cubic terms cancel exactly, leaving n. Applying a maximum-degree heuristic blindly to subtraction would miss this.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. The cubic terms cancel exactly, leaving n. Applying a maximum-degree heuristic blindly to subtraction would miss this."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. The cubic terms cancel exactly, leaving n. Applying a maximum-degree heuristic blindly to subtraction would miss this."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. The cubic terms cancel exactly, leaving n. Applying a maximum-degree heuristic blindly to subtraction would miss this."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §3.2, odd exercises 17, 25, 31, 39, 43, 45, 47. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "3.2",
+        "odd_exercises": [
+          17,
+          25,
+          31,
+          39,
+          43,
+          45,
+          47
+        ],
+        "workshop": "Combining bounds carefully"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-325",
+      "topic": "Combining bounds carefully",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "Why does f∈O(g) and g∉O(f) alone not define little-o for arbitrary oscillating positive functions?",
+      "context": "Functions below are eventually nonnegative unless otherwise stated. O is an upper bound; Ω is a lower bound; Θ requires both.",
+      "options": [
+        "Little-o allows a ratio tending to 1.",
+        "It need not force f(n)/g(n)→0.",
+        "Every Big-O relation is automatically little-o.",
+        "Positive functions cannot oscillate."
+      ],
+      "correct_index": 1,
+      "hints": [
+        "An upper bound alone does not imply a matching lower bound, and subtraction can cancel leading terms.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Compose valid asymptotic bounds without inventing lower bounds or ignoring cancellation.",
+        "correct_rationale": "For even n let f(n)=n, for odd n let f(n)=1, and let g(n)=n. Then f∈O(g), g∉O(f), but f/g equals 1 on even n and does not tend to 0.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. For even n let f(n)=n, for odd n let f(n)=1, and let g(n)=n. Then f∈O(g), g∉O(f), but f/g equals 1 on even n and does not tend to 0."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. For even n let f(n)=n, for odd n let f(n)=1, and let g(n)=n. Then f∈O(g), g∉O(f), but f/g equals 1 on even n and does not tend to 0."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. For even n let f(n)=n, for odd n let f(n)=1, and let g(n)=n. Then f∈O(g), g∉O(f), but f/g equals 1 on even n and does not tend to 0."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §3.2, odd exercises 17, 25, 31, 39, 43, 45, 47. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "3.2",
+        "odd_exercises": [
+          17,
+          25,
+          31,
+          39,
+          43,
+          45,
+          47
+        ],
+        "workshop": "Combining bounds carefully"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-326",
+      "topic": "Triangular nested loops",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "How many tick calls occur when n=12?",
+      "context": "For integer n≥1, execute:\nfor i=1,…,n:\n  for j=1,…,i:\n    tick()\nCount only calls to tick, not loop-control operations.",
+      "options": [
+        "80",
+        "78",
+        "79",
+        "77"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "The inner loop length changes with i; add the lengths instead of assuming n iterations every time.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Sum dependent loop bounds and prove matching asymptotic bounds.",
+        "correct_rationale": "The count is 1+2+…+12=12·13/2=78.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "80 does not satisfy the stated computation. The count is 1+2+…+12=12·13/2=78."
+          },
+          {
+            "option_index": 2,
+            "rationale": "79 does not satisfy the stated computation. The count is 1+2+…+12=12·13/2=78."
+          },
+          {
+            "option_index": 3,
+            "rationale": "77 does not satisfy the stated computation. The count is 1+2+…+12=12·13/2=78."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §3.3, odd exercises 1, 3, 9. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "3.3",
+        "odd_exercises": [
+          1,
+          3,
+          9
+        ],
+        "workshop": "Triangular nested loops"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "loop",
+        "args": {
+          "type": "triangle",
+          "n": 12
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-327",
+      "topic": "Triangular nested loops",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "How many additional tick calls occur when n changes from 12 to 24?",
+      "context": "For integer n≥1, execute:\nfor i=1,…,n:\n  for j=1,…,i:\n    tick()\nCount only calls to tick, not loop-control operations.",
+      "options": [
+        "223",
+        "224",
+        "221",
+        "222"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "The inner loop length changes with i; add the lengths instead of assuming n iterations every time.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Sum dependent loop bounds and prove matching asymptotic bounds.",
+        "correct_rationale": "T(24)−T(12)=24·25/2−78=300−78=222.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "223 does not satisfy the stated computation. T(24)−T(12)=24·25/2−78=300−78=222."
+          },
+          {
+            "option_index": 1,
+            "rationale": "224 does not satisfy the stated computation. T(24)−T(12)=24·25/2−78=300−78=222."
+          },
+          {
+            "option_index": 2,
+            "rationale": "221 does not satisfy the stated computation. T(24)−T(12)=24·25/2−78=300−78=222."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §3.3, odd exercises 1, 3, 9. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "3.3",
+        "odd_exercises": [
+          1,
+          3,
+          9
+        ],
+        "workshop": "Triangular nested loops"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "loop",
+        "args": {
+          "type": "triangle-difference",
+          "n": 12
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-328",
+      "topic": "Triangular nested loops",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What is the exact count T(n)?",
+      "context": "For integer n≥1, execute:\nfor i=1,…,n:\n  for j=1,…,i:\n    tick()\nCount only calls to tick, not loop-control operations.",
+      "options": [
+        "n(n−1)/2",
+        "n²",
+        "n(n+1)/2",
+        "n+1"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "The inner loop length changes with i; add the lengths instead of assuming n iterations every time.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Sum dependent loop bounds and prove matching asymptotic bounds.",
+        "correct_rationale": "There are i calls at outer index i, so T=Σᵢ₌₁ⁿi=n(n+1)/2.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. There are i calls at outer index i, so T=Σᵢ₌₁ⁿi=n(n+1)/2."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. There are i calls at outer index i, so T=Σᵢ₌₁ⁿi=n(n+1)/2."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. There are i calls at outer index i, so T=Σᵢ₌₁ⁿi=n(n+1)/2."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §3.3, odd exercises 1, 3, 9. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "3.3",
+        "odd_exercises": [
+          1,
+          3,
+          9
+        ],
+        "workshop": "Triangular nested loops"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-329",
+      "topic": "Triangular nested loops",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "Which argument establishes T(n)∈Θ(n²)?",
+      "context": "For integer n≥1, execute:\nfor i=1,…,n:\n  for j=1,…,i:\n    tick()\nCount only calls to tick, not loop-control operations.",
+      "options": [
+        "n²/2≤n(n+1)/2≤n² for n≥1.",
+        "Every nested loop is Θ(n²) regardless of its bounds.",
+        "T(n)≤n² alone establishes Θ.",
+        "T(12)=78 alone establishes Θ."
+      ],
+      "correct_index": 0,
+      "hints": [
+        "The inner loop length changes with i; add the lengths instead of assuming n iterations every time.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Sum dependent loop bounds and prove matching asymptotic bounds.",
+        "correct_rationale": "The displayed two-sided inequalities give positive quadratic lower and upper constants. An upper bound alone gives only Big-O.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. The displayed two-sided inequalities give positive quadratic lower and upper constants. An upper bound alone gives only Big-O."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. The displayed two-sided inequalities give positive quadratic lower and upper constants. An upper bound alone gives only Big-O."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. The displayed two-sided inequalities give positive quadratic lower and upper constants. An upper bound alone gives only Big-O."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §3.3, odd exercises 1, 3, 9. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "3.3",
+        "odd_exercises": [
+          1,
+          3,
+          9
+        ],
+        "workshop": "Triangular nested loops"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-330",
+      "topic": "Triangular nested loops",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "If the inner loop changes to j=i,…,n, what happens to the total?",
+      "context": "For integer n≥1, execute:\nfor i=1,…,n:\n  for j=1,…,i:\n    tick()\nCount only calls to tick, not loop-control operations.",
+      "options": [
+        "It becomes n².",
+        "It is unchanged: the lengths become n,n−1,…,1.",
+        "It doubles exactly.",
+        "It becomes n."
+      ],
+      "correct_index": 1,
+      "hints": [
+        "The inner loop length changes with i; add the lengths instead of assuming n iterations every time.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Sum dependent loop bounds and prove matching asymptotic bounds.",
+        "correct_rationale": "The lengths reverse order but still sum to n(n+1)/2. Endpoints are inclusive.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. The lengths reverse order but still sum to n(n+1)/2. Endpoints are inclusive."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. The lengths reverse order but still sum to n(n+1)/2. Endpoints are inclusive."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. The lengths reverse order but still sum to n(n+1)/2. Endpoints are inclusive."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §3.3, odd exercises 1, 3, 9. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "3.3",
+        "odd_exercises": [
+          1,
+          3,
+          9
+        ],
+        "workshop": "Triangular nested loops"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-331",
+      "topic": "Doubling-loop boundaries",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "How many tick calls occur for n=64?",
+      "context": "For integer n≥1, set j=1 and repeat tick(); j=2j while j≤n. Count only calls to tick.",
+      "options": [
+        "7",
+        "8",
+        "9",
+        "6"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "The visited values are 1,2,4,… up to the largest power of two not exceeding n.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Handle logarithmic loop boundaries and powers-of-two off-by-one errors.",
+        "correct_rationale": "Visited values are 1,2,4,8,16,32,64: seven calls.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "8 does not satisfy the stated computation. Visited values are 1,2,4,8,16,32,64: seven calls."
+          },
+          {
+            "option_index": 2,
+            "rationale": "9 does not satisfy the stated computation. Visited values are 1,2,4,8,16,32,64: seven calls."
+          },
+          {
+            "option_index": 3,
+            "rationale": "6 does not satisfy the stated computation. Visited values are 1,2,4,8,16,32,64: seven calls."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §3.3, odd exercises 1, 3. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "3.3",
+        "odd_exercises": [
+          1,
+          3
+        ],
+        "workshop": "Doubling-loop boundaries"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "loop",
+        "args": {
+          "type": "doubling",
+          "n": 64
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-332",
+      "topic": "Doubling-loop boundaries",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "How many tick calls occur for n=63?",
+      "context": "For integer n≥1, set j=1 and repeat tick(); j=2j while j≤n. Count only calls to tick.",
+      "options": [
+        "8",
+        "6",
+        "7",
+        "5"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "The visited values are 1,2,4,… up to the largest power of two not exceeding n.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Handle logarithmic loop boundaries and powers-of-two off-by-one errors.",
+        "correct_rationale": "The largest visited power is 32, so there are six calls; 64 exceeds the limit.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "8 does not satisfy the stated computation. The largest visited power is 32, so there are six calls; 64 exceeds the limit."
+          },
+          {
+            "option_index": 2,
+            "rationale": "7 does not satisfy the stated computation. The largest visited power is 32, so there are six calls; 64 exceeds the limit."
+          },
+          {
+            "option_index": 3,
+            "rationale": "5 does not satisfy the stated computation. The largest visited power is 32, so there are six calls; 64 exceeds the limit."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §3.3, odd exercises 1, 3. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "3.3",
+        "odd_exercises": [
+          1,
+          3
+        ],
+        "workshop": "Doubling-loop boundaries"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "loop",
+        "args": {
+          "type": "doubling",
+          "n": 63
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-333",
+      "topic": "Doubling-loop boundaries",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What is the exact call count for n≥1?",
+      "context": "For integer n≥1, set j=1 and repeat tick(); j=2j while j≤n. Count only calls to tick.",
+      "options": [
+        "⌈log₂n⌉",
+        "n",
+        "⌊log₂n⌋+1",
+        "2⌊log₂n⌋"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "The visited values are 1,2,4,… up to the largest power of two not exceeding n.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Handle logarithmic loop boundaries and powers-of-two off-by-one errors.",
+        "correct_rationale": "Visited exponents are 0 through ⌊log₂n⌋ inclusive; there is one call per exponent.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. Visited exponents are 0 through ⌊log₂n⌋ inclusive; there is one call per exponent."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. Visited exponents are 0 through ⌊log₂n⌋ inclusive; there is one call per exponent."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. Visited exponents are 0 through ⌊log₂n⌋ inclusive; there is one call per exponent."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §3.3, odd exercises 1, 3. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "3.3",
+        "odd_exercises": [
+          1,
+          3
+        ],
+        "workshop": "Doubling-loop boundaries"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-334",
+      "topic": "Doubling-loop boundaries",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "If j starts at 0 instead, what occurs for n≥1?",
+      "context": "For integer n≥1, set j=1 and repeat tick(); j=2j while j≤n. Count only calls to tick.",
+      "options": [
+        "It still takes Θ(log n) calls.",
+        "It makes one fewer call.",
+        "It skips the loop entirely.",
+        "The loop never terminates because doubling keeps j=0."
+      ],
+      "correct_index": 3,
+      "hints": [
+        "The visited values are 1,2,4,… up to the largest power of two not exceeding n.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Handle logarithmic loop boundaries and powers-of-two off-by-one errors.",
+        "correct_rationale": "The condition 0≤n stays true and j=2·0 remains 0. The positive initialization is essential to progress.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. The condition 0≤n stays true and j=2·0 remains 0. The positive initialization is essential to progress."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. The condition 0≤n stays true and j=2·0 remains 0. The positive initialization is essential to progress."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. The condition 0≤n stays true and j=2·0 remains 0. The positive initialization is essential to progress."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §3.3, odd exercises 1, 3. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "3.3",
+        "odd_exercises": [
+          1,
+          3
+        ],
+        "workshop": "Doubling-loop boundaries"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-335",
+      "topic": "Doubling-loop boundaries",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "If the loop is run once for each i=1,…,n with j reset to 1, what is the total asymptotic count?",
+      "context": "For integer n≥1, set j=1 and repeat tick(); j=2j while j≤n. Count only calls to tick.",
+      "options": [
+        "Θ(n)",
+        "Θ(log n)",
+        "Θ(n²)",
+        "Θ(n log n)"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "The visited values are 1,2,4,… up to the largest power of two not exceeding n.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Handle logarithmic loop boundaries and powers-of-two off-by-one errors.",
+        "correct_rationale": "Each of n independent outer iterations performs ⌊log₂n⌋+1 calls. Multiplying these gives Θ(n log n) as n grows.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. Each of n independent outer iterations performs ⌊log₂n⌋+1 calls. Multiplying these gives Θ(n log n) as n grows."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. Each of n independent outer iterations performs ⌊log₂n⌋+1 calls. Multiplying these gives Θ(n log n) as n grows."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. Each of n independent outer iterations performs ⌊log₂n⌋+1 calls. Multiplying these gives Θ(n log n) as n grows."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §3.3, odd exercises 1, 3. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "3.3",
+        "odd_exercises": [
+          1,
+          3
+        ],
+        "workshop": "Doubling-loop boundaries"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-336",
+      "topic": "Geometrically shrinking work",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "How many tick calls occur when n=32?",
+      "context": "Let n=2ᵏ, k≥0. Set m=n. While m≥1, execute tick exactly m times, then set m=m/2. Count only tick calls.",
+      "options": [
+        "63",
+        "65",
+        "64",
+        "62"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "List the work at successive levels: n,n/2,n/4,…,1.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Distinguish logarithmic depth from the sum of varying work at each level.",
+        "correct_rationale": "The work is 32+16+8+4+2+1=63.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "65 does not satisfy the stated computation. The work is 32+16+8+4+2+1=63."
+          },
+          {
+            "option_index": 2,
+            "rationale": "64 does not satisfy the stated computation. The work is 32+16+8+4+2+1=63."
+          },
+          {
+            "option_index": 3,
+            "rationale": "62 does not satisfy the stated computation. The work is 32+16+8+4+2+1=63."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §3.3, odd exercises 1, 3, 9. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "3.3",
+        "odd_exercises": [
+          1,
+          3,
+          9
+        ],
+        "workshop": "Geometrically shrinking work"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "loop",
+        "args": {
+          "type": "shrinking",
+          "n": 32
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-337",
+      "topic": "Geometrically shrinking work",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "How many outer iterations occur when n=32?",
+      "context": "Let n=2ᵏ, k≥0. Set m=n. While m≥1, execute tick exactly m times, then set m=m/2. Count only tick calls.",
+      "options": [
+        "7",
+        "5",
+        "6",
+        "8"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "List the work at successive levels: n,n/2,n/4,…,1.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Distinguish logarithmic depth from the sum of varying work at each level.",
+        "correct_rationale": "The outer m values are 32,16,8,4,2,1. After the sixth iteration m=1/2 and the condition fails.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "7 does not satisfy the stated computation. The outer m values are 32,16,8,4,2,1. After the sixth iteration m=1/2 and the condition fails."
+          },
+          {
+            "option_index": 1,
+            "rationale": "5 does not satisfy the stated computation. The outer m values are 32,16,8,4,2,1. After the sixth iteration m=1/2 and the condition fails."
+          },
+          {
+            "option_index": 3,
+            "rationale": "8 does not satisfy the stated computation. The outer m values are 32,16,8,4,2,1. After the sixth iteration m=1/2 and the condition fails."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §3.3, odd exercises 1, 3, 9. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "3.3",
+        "odd_exercises": [
+          1,
+          3,
+          9
+        ],
+        "workshop": "Geometrically shrinking work"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "loop",
+        "args": {
+          "type": "shrinking-levels",
+          "n": 32
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-338",
+      "topic": "Geometrically shrinking work",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What is the exact total for power-of-two n?",
+      "context": "Let n=2ᵏ, k≥0. Set m=n. While m≥1, execute tick exactly m times, then set m=m/2. Count only tick calls.",
+      "options": [
+        "log₂n+1",
+        "n log₂n",
+        "n²",
+        "2n−1"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "List the work at successive levels: n,n/2,n/4,…,1.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Distinguish logarithmic depth from the sum of varying work at each level.",
+        "correct_rationale": "The finite geometric series n+n/2+…+1 equals 2n−1.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. The finite geometric series n+n/2+…+1 equals 2n−1."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. The finite geometric series n+n/2+…+1 equals 2n−1."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. The finite geometric series n+n/2+…+1 equals 2n−1."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §3.3, odd exercises 1, 3, 9. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "3.3",
+        "odd_exercises": [
+          1,
+          3,
+          9
+        ],
+        "workshop": "Geometrically shrinking work"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-339",
+      "topic": "Geometrically shrinking work",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "Why is the total Θ(n), even though the outer loop has Θ(log n) iterations?",
+      "context": "Let n=2ᵏ, k≥0. Set m=n. While m≥1, execute tick exactly m times, then set m=m/2. Count only tick calls.",
+      "options": [
+        "Every logarithmic-depth loop is linear.",
+        "Nested loops cannot be logarithmic.",
+        "Only the final level counts.",
+        "The inner work shrinks geometrically instead of remaining n at each level."
+      ],
+      "correct_index": 3,
+      "hints": [
+        "List the work at successive levels: n,n/2,n/4,…,1.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Distinguish logarithmic depth from the sum of varying work at each level.",
+        "correct_rationale": "Summing the actual level costs yields 2n−1. Multiplying n by the number of levels gives a valid loose upper bound, not a tight count.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. Summing the actual level costs yields 2n−1. Multiplying n by the number of levels gives a valid loose upper bound, not a tight count."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. Summing the actual level costs yields 2n−1. Multiplying n by the number of levels gives a valid loose upper bound, not a tight count."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. Summing the actual level costs yields 2n−1. Multiplying n by the number of levels gives a valid loose upper bound, not a tight count."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §3.3, odd exercises 1, 3, 9. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "3.3",
+        "odd_exercises": [
+          1,
+          3,
+          9
+        ],
+        "workshop": "Geometrically shrinking work"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-340",
+      "topic": "Geometrically shrinking work",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "If every level instead executes exactly n tick calls, what is the total?",
+      "context": "Let n=2ᵏ, k≥0. Set m=n. While m≥1, execute tick exactly m times, then set m=m/2. Count only tick calls.",
+      "options": [
+        "n+log₂n",
+        "2n−1",
+        "log₂n+1",
+        "n(log₂n+1)"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "List the work at successive levels: n,n/2,n/4,…,1.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Distinguish logarithmic depth from the sum of varying work at each level.",
+        "correct_rationale": "There are log₂n+1 levels, each now with fixed cost n, so multiplication is appropriate for this changed program.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. There are log₂n+1 levels, each now with fixed cost n, so multiplication is appropriate for this changed program."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. There are log₂n+1 levels, each now with fixed cost n, so multiplication is appropriate for this changed program."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. There are log₂n+1 levels, each now with fixed cost n, so multiplication is appropriate for this changed program."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §3.3, odd exercises 1, 3, 9. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "3.3",
+        "odd_exercises": [
+          1,
+          3,
+          9
+        ],
+        "workshop": "Geometrically shrinking work"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-341",
+      "topic": "Search cost and averages",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "For n=15, what is the worst-case number of equality tests?",
+      "context": "Linear search checks positions 1 through n in order, stopping at the first match. Count one equality comparison per checked item. For average successful search, assume distinct items and each target position equally likely.",
+      "options": [
+        "15",
+        "16",
+        "17",
+        "14"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "A target at position i uses exactly i equality tests under this counting model.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Keep best, worst, and average costs distinct and state the probability assumption.",
+        "correct_rationale": "The target may be last or absent, requiring all fifteen entries to be checked.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "16 does not satisfy the stated computation. The target may be last or absent, requiring all fifteen entries to be checked."
+          },
+          {
+            "option_index": 2,
+            "rationale": "17 does not satisfy the stated computation. The target may be last or absent, requiring all fifteen entries to be checked."
+          },
+          {
+            "option_index": 3,
+            "rationale": "14 does not satisfy the stated computation. The target may be last or absent, requiring all fifteen entries to be checked."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §3.3, odd exercises 5, 7, 23, 25. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "3.3",
+        "odd_exercises": [
+          5,
+          7,
+          23,
+          25
+        ],
+        "workshop": "Search cost and averages"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "loop",
+        "args": {
+          "type": "linear-worst",
+          "n": 15
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-342",
+      "topic": "Search cost and averages",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "For n=15, what is the expected successful-search count under the stated distribution?",
+      "context": "Linear search checks positions 1 through n in order, stopping at the first match. Count one equality comparison per checked item. For average successful search, assume distinct items and each target position equally likely.",
+      "options": [
+        "8",
+        "9",
+        "10",
+        "7"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "A target at position i uses exactly i equality tests under this counting model.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Keep best, worst, and average costs distinct and state the probability assumption.",
+        "correct_rationale": "Average positions 1 through 15: (1+…+15)/15=16/2=8.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "9 does not satisfy the stated computation. Average positions 1 through 15: (1+…+15)/15=16/2=8."
+          },
+          {
+            "option_index": 2,
+            "rationale": "10 does not satisfy the stated computation. Average positions 1 through 15: (1+…+15)/15=16/2=8."
+          },
+          {
+            "option_index": 3,
+            "rationale": "7 does not satisfy the stated computation. Average positions 1 through 15: (1+…+15)/15=16/2=8."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §3.3, odd exercises 5, 7, 23, 25. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "3.3",
+        "odd_exercises": [
+          5,
+          7,
+          23,
+          25
+        ],
+        "workshop": "Search cost and averages"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "loop",
+        "args": {
+          "type": "linear-average",
+          "n": 15
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-343",
+      "topic": "Search cost and averages",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What is the best-case count for a nonempty list?",
+      "context": "Linear search checks positions 1 through n in order, stopping at the first match. Count one equality comparison per checked item. For average successful search, assume distinct items and each target position equally likely.",
+      "options": [
+        "0",
+        "1",
+        "⌊log₂n⌋",
+        "n"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "A target at position i uses exactly i equality tests under this counting model.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Keep best, worst, and average costs distinct and state the probability assumption.",
+        "correct_rationale": "A match at the first entry succeeds after one equality test. The model still requires that test.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. A match at the first entry succeeds after one equality test. The model still requires that test."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. A match at the first entry succeeds after one equality test. The model still requires that test."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. A match at the first entry succeeds after one equality test. The model still requires that test."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §3.3, odd exercises 5, 7, 23, 25. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "3.3",
+        "odd_exercises": [
+          5,
+          7,
+          23,
+          25
+        ],
+        "workshop": "Search cost and averages"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-344",
+      "topic": "Search cost and averages",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "If target positions are not uniformly distributed, what is the expected successful count?",
+      "context": "Linear search checks positions 1 through n in order, stopping at the first match. Count one equality comparison per checked item. For average successful search, assume distinct items and each target position equally likely.",
+      "options": [
+        "The maximum probability alone.",
+        "Σ from i=1 to n of i·Pr(target at i)",
+        "Always (n+1)/2 regardless of probabilities.",
+        "Always n."
+      ],
+      "correct_index": 1,
+      "hints": [
+        "A target at position i uses exactly i equality tests under this counting model.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Keep best, worst, and average costs distinct and state the probability assumption.",
+        "correct_rationale": "Expected cost is the probability-weighted sum of per-position costs. The familiar midpoint average assumes uniform probabilities.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. Expected cost is the probability-weighted sum of per-position costs. The familiar midpoint average assumes uniform probabilities."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. Expected cost is the probability-weighted sum of per-position costs. The familiar midpoint average assumes uniform probabilities."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. Expected cost is the probability-weighted sum of per-position costs. The familiar midpoint average assumes uniform probabilities."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §3.3, odd exercises 5, 7, 23, 25. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "3.3",
+        "odd_exercises": [
+          5,
+          7,
+          23,
+          25
+        ],
+        "workshop": "Search cost and averages"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-345",
+      "topic": "Search cost and averages",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "Why is it wrong to call every O(n) search algorithm “worst-case exactly n comparisons”?",
+      "context": "Linear search checks positions 1 through n in order, stopping at the first match. Count one equality comparison per checked item. For average successful search, assume distinct items and each target position equally likely.",
+      "options": [
+        "Any search requires n comparisons even on sorted data.",
+        "O(n) is always an average-case statement.",
+        "Big-O counts only memory.",
+        "O(n) permits different constants and smaller growth, and must be tied to a specified cost model."
+      ],
+      "correct_index": 3,
+      "hints": [
+        "A target at position i uses exactly i equality tests under this counting model.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Keep best, worst, and average costs distinct and state the probability assumption.",
+        "correct_rationale": "Big-O is an asymptotic upper bound, not an exact count or an automatic worst-case label. Binary search on sorted data has a smaller worst-case order.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. Big-O is an asymptotic upper bound, not an exact count or an automatic worst-case label. Binary search on sorted data has a smaller worst-case order."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. Big-O is an asymptotic upper bound, not an exact count or an automatic worst-case label. Binary search on sorted data has a smaller worst-case order."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. Big-O is an asymptotic upper bound, not an exact count or an automatic worst-case label. Binary search on sorted data has a smaller worst-case order."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §3.3, odd exercises 5, 7, 23, 25. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "3.3",
+        "odd_exercises": [
+          5,
+          7,
+          23,
+          25
+        ],
+        "workshop": "Search cost and averages"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-346",
+      "topic": "Matrix algorithm operation accounting",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "How many AND operations are used when n=4?",
+      "context": "To multiply two n×n zero-one matrices, compute each Boolean output as n AND terms joined by n−1 OR operations. Do not short-circuit, and count only these AND and OR operations.",
+      "options": [
+        "63",
+        "64",
+        "65",
+        "66"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Count operations per output entry, then multiply by the n² entries.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Derive exact counts from an explicitly specified implementation and distinguish them from asymptotic growth.",
+        "correct_rationale": "There are 4² output entries and 4 ANDs per entry, giving 16·4=64.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "63 does not satisfy the stated computation. There are 4² output entries and 4 ANDs per entry, giving 16·4=64."
+          },
+          {
+            "option_index": 2,
+            "rationale": "65 does not satisfy the stated computation. There are 4² output entries and 4 ANDs per entry, giving 16·4=64."
+          },
+          {
+            "option_index": 3,
+            "rationale": "66 does not satisfy the stated computation. There are 4² output entries and 4 ANDs per entry, giving 16·4=64."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §3.3, odd exercises 9, 11. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "3.3",
+        "odd_exercises": [
+          9,
+          11
+        ],
+        "workshop": "Matrix algorithm operation accounting"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "loop",
+        "args": {
+          "type": "matrix-and",
+          "n": 4
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-347",
+      "topic": "Matrix algorithm operation accounting",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "How many OR operations are used when n=4?",
+      "context": "To multiply two n×n zero-one matrices, compute each Boolean output as n AND terms joined by n−1 OR operations. Do not short-circuit, and count only these AND and OR operations.",
+      "options": [
+        "48",
+        "49",
+        "47",
+        "50"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Count operations per output entry, then multiply by the n² entries.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Derive exact counts from an explicitly specified implementation and distinguish them from asymptotic growth.",
+        "correct_rationale": "There are 4² entries and 4−1=3 ORs per entry, giving 16·3=48.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "49 does not satisfy the stated computation. There are 4² entries and 4−1=3 ORs per entry, giving 16·3=48."
+          },
+          {
+            "option_index": 2,
+            "rationale": "47 does not satisfy the stated computation. There are 4² entries and 4−1=3 ORs per entry, giving 16·3=48."
+          },
+          {
+            "option_index": 3,
+            "rationale": "50 does not satisfy the stated computation. There are 4² entries and 4−1=3 ORs per entry, giving 16·3=48."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §3.3, odd exercises 9, 11. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "3.3",
+        "odd_exercises": [
+          9,
+          11
+        ],
+        "workshop": "Matrix algorithm operation accounting"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "loop",
+        "args": {
+          "type": "matrix-or",
+          "n": 4
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-348",
+      "topic": "Matrix algorithm operation accounting",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What is the exact combined count?",
+      "context": "To multiply two n×n zero-one matrices, compute each Boolean output as n AND terms joined by n−1 OR operations. Do not short-circuit, and count only these AND and OR operations.",
+      "options": [
+        "n³−n²",
+        "2n³−n²",
+        "2n³",
+        "n²"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Count operations per output entry, then multiply by the n² entries.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Derive exact counts from an explicitly specified implementation and distinguish them from asymptotic growth.",
+        "correct_rationale": "Each output uses n+(n−1)=2n−1 operations. Multiply by n² to get 2n³−n². Initializing an accumulator and OR-ing n times would be a different implementation.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. Each output uses n+(n−1)=2n−1 operations. Multiply by n² to get 2n³−n². Initializing an accumulator and OR-ing n times would be a different implementation."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. Each output uses n+(n−1)=2n−1 operations. Multiply by n² to get 2n³−n². Initializing an accumulator and OR-ing n times would be a different implementation."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. Each output uses n+(n−1)=2n−1 operations. Multiply by n² to get 2n³−n². Initializing an accumulator and OR-ing n times would be a different implementation."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §3.3, odd exercises 9, 11. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "3.3",
+        "odd_exercises": [
+          9,
+          11
+        ],
+        "workshop": "Matrix algorithm operation accounting"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-349",
+      "topic": "Matrix algorithm operation accounting",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "What is the tight asymptotic cost?",
+      "context": "To multiply two n×n zero-one matrices, compute each Boolean output as n AND terms joined by n−1 OR operations. Do not short-circuit, and count only these AND and OR operations.",
+      "options": [
+        "Θ(n³)",
+        "Θ(n²)",
+        "Θ(2ⁿ)",
+        "Θ(n log n)"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Count operations per output entry, then multiply by the n² entries.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Derive exact counts from an explicitly specified implementation and distinguish them from asymptotic growth.",
+        "correct_rationale": "For n≥1, n³≤2n³−n²≤2n³, giving matching cubic bounds.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. For n≥1, n³≤2n³−n²≤2n³, giving matching cubic bounds."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. For n≥1, n³≤2n³−n²≤2n³, giving matching cubic bounds."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. For n≥1, n³≤2n³−n²≤2n³, giving matching cubic bounds."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §3.3, odd exercises 9, 11. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "3.3",
+        "odd_exercises": [
+          9,
+          11
+        ],
+        "workshop": "Matrix algorithm operation accounting"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-350",
+      "topic": "Matrix algorithm operation accounting",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "For an m×k matrix times a k×r matrix using the same model, what is the exact combined count?",
+      "context": "To multiply two n×n zero-one matrices, compute each Boolean output as n AND terms joined by n−1 OR operations. Do not short-circuit, and count only these AND and OR operations.",
+      "options": [
+        "2mkr always, with no lower-order correction",
+        "mkr−mr",
+        "mk(2r−1)",
+        "mr(2k−1)"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Count operations per output entry, then multiply by the n² entries.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Derive exact counts from an explicitly specified implementation and distinguish them from asymptotic growth.",
+        "correct_rationale": "There are mr output entries, each requiring k ANDs and k−1 ORs. The shared dimension k determines work per entry.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. There are mr output entries, each requiring k ANDs and k−1 ORs. The shared dimension k determines work per entry."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. There are mr output entries, each requiring k ANDs and k−1 ORs. The shared dimension k determines work per entry."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. There are mr output entries, each requiring k ANDs and k−1 ORs. The shared dimension k determines work per entry."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §3.3, odd exercises 9, 11. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "3.3",
+        "odd_exercises": [
+          9,
+          11
+        ],
+        "workshop": "Matrix algorithm operation accounting"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    }
+  ]
+}

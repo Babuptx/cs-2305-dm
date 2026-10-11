@@ -1,0 +1,3198 @@
+{
+  "schema_version": 1,
+  "block_id": "utd-fall-midterm-block-02",
+  "pillar_id": "utd-fall-midterm",
+  "block_title": "UTD 2026 Fall Midterm · Quantifiers & rules of inference",
+  "questions": [
+    {
+      "id": "utd-fall-midterm-051",
+      "topic": "Quantifier models 1",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "In order, what are the truth values of ∀x ∃y P(x,y); ∃y ∀x P(x,y); ∃x ∀y P(x,y); ∀y ∃x P(x,y)?",
+      "context": "Both domains are D = {1, 2, 3}. P(x,y) is true at the 1 entries of this table (rows x, columns y):\n1 0 0\n0 1 0\n0 0 1",
+      "options": [
+        "T, T, F, T",
+        "T, F, T, T",
+        "F, F, F, T",
+        "T, F, F, T"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "For ∀x∃y inspect every row; for ∃y∀x find one column that works in every row.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Track witness dependence, quantifier order, and counterexamples on a finite domain.",
+        "correct_rationale": "The four tests are: no empty row; an all-1 column; an all-1 row; no empty column. Applying these tests gives T, F, F, T.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. The four tests are: no empty row; an all-1 column; an all-1 row; no empty column. Applying these tests gives T, F, F, T."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. The four tests are: no empty row; an all-1 column; an all-1 row; no empty column. Applying these tests gives T, F, F, T."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. The four tests are: no empty row; an all-1 column; an all-1 row; no empty column. Applying these tests gives T, F, F, T."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §1.5, odd exercises 3, 27, 31, 45. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "1.5",
+        "odd_exercises": [
+          3,
+          27,
+          31,
+          45
+        ],
+        "workshop": "Quantifier models 1"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "quantifiers",
+        "args": {
+          "matrix": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ]
+          ],
+          "query": "truths"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-052",
+      "topic": "Quantifier models 1",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "How many values of y witness ∀x P(x,y)?",
+      "context": "Both domains are D = {1, 2, 3}. P(x,y) is true at the 1 entries of this table (rows x, columns y):\n1 0 0\n0 1 0\n0 0 1",
+      "options": [
+        "1",
+        "2",
+        "-1",
+        "0"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "For ∀x∃y inspect every row; for ∃y∀x find one column that works in every row.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Track witness dependence, quantifier order, and counterexamples on a finite domain.",
+        "correct_rationale": "A witness y needs an all-1 column. The qualifying columns are ∅.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "1 does not satisfy the stated computation. A witness y needs an all-1 column. The qualifying columns are ∅."
+          },
+          {
+            "option_index": 1,
+            "rationale": "2 does not satisfy the stated computation. A witness y needs an all-1 column. The qualifying columns are ∅."
+          },
+          {
+            "option_index": 2,
+            "rationale": "-1 does not satisfy the stated computation. A witness y needs an all-1 column. The qualifying columns are ∅."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §1.5, odd exercises 3, 27, 31, 45. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "1.5",
+        "odd_exercises": [
+          3,
+          27,
+          31,
+          45
+        ],
+        "workshop": "Quantifier models 1"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "quantifiers",
+        "args": {
+          "matrix": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ]
+          ],
+          "query": "common-witnesses"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-053",
+      "topic": "Quantifier models 1",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "For how many x is the negation ¬∀y P(x,y) true?",
+      "context": "Both domains are D = {1, 2, 3}. P(x,y) is true at the 1 entries of this table (rows x, columns y):\n1 0 0\n0 1 0\n0 0 1",
+      "options": [
+        "2",
+        "5",
+        "3",
+        "4"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "For ∀x∃y inspect every row; for ∃y∀x find one column that works in every row.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Track witness dependence, quantifier order, and counterexamples on a finite domain.",
+        "correct_rationale": "Negate ∀y to ∃y¬. Count rows containing at least one 0: {1, 2, 3}.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "2 does not satisfy the stated computation. Negate ∀y to ∃y¬. Count rows containing at least one 0: {1, 2, 3}."
+          },
+          {
+            "option_index": 1,
+            "rationale": "5 does not satisfy the stated computation. Negate ∀y to ∃y¬. Count rows containing at least one 0: {1, 2, 3}."
+          },
+          {
+            "option_index": 3,
+            "rationale": "4 does not satisfy the stated computation. Negate ∀y to ∃y¬. Count rows containing at least one 0: {1, 2, 3}."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §1.5, odd exercises 3, 27, 31, 45. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "1.5",
+        "odd_exercises": [
+          3,
+          27,
+          31,
+          45
+        ],
+        "workshop": "Quantifier models 1"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "quantifiers",
+        "args": {
+          "matrix": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ]
+          ],
+          "query": "not-all-rows"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-054",
+      "topic": "Quantifier models 1",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "What is the minimum number of 0 entries that must become 1 to make ∀x∃y P(x,y) true?",
+      "context": "Both domains are D = {1, 2, 3}. P(x,y) is true at the 1 entries of this table (rows x, columns y):\n1 0 0\n0 1 0\n0 0 1",
+      "options": [
+        "2",
+        "1",
+        "0",
+        "-1"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "For ∀x∃y inspect every row; for ∃y∀x find one column that works in every row.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Track witness dependence, quantifier order, and counterexamples on a finite domain.",
+        "correct_rationale": "Each empty row requires one new witness, and a change cannot repair two different rows. There are 0 empty rows, so this lower bound is achievable.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "2 does not satisfy the stated computation. Each empty row requires one new witness, and a change cannot repair two different rows. There are 0 empty rows, so this lower bound is achievable."
+          },
+          {
+            "option_index": 1,
+            "rationale": "1 does not satisfy the stated computation. Each empty row requires one new witness, and a change cannot repair two different rows. There are 0 empty rows, so this lower bound is achievable."
+          },
+          {
+            "option_index": 3,
+            "rationale": "-1 does not satisfy the stated computation. Each empty row requires one new witness, and a change cannot repair two different rows. There are 0 empty rows, so this lower bound is achievable."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §1.5, odd exercises 3, 27, 31, 45. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "1.5",
+        "odd_exercises": [
+          3,
+          27,
+          31,
+          45
+        ],
+        "workshop": "Quantifier models 1"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "quantifiers",
+        "args": {
+          "matrix": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ]
+          ],
+          "query": "repair-rows"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-055",
+      "topic": "Quantifier models 1",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "What is the minimum number of 0 entries that must become 1 to make ∃y∀x P(x,y) true?",
+      "context": "Both domains are D = {1, 2, 3}. P(x,y) is true at the 1 entries of this table (rows x, columns y):\n1 0 0\n0 1 0\n0 0 1",
+      "options": [
+        "4",
+        "2",
+        "1",
+        "3"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "For ∀x∃y inspect every row; for ∃y∀x find one column that works in every row.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Track witness dependence, quantifier order, and counterexamples on a finite domain.",
+        "correct_rationale": "Choose a single column and fill every zero in it. Column costs are [2, 2, 2]; their minimum is 2.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "4 does not satisfy the stated computation. Choose a single column and fill every zero in it. Column costs are [2, 2, 2]; their minimum is 2."
+          },
+          {
+            "option_index": 2,
+            "rationale": "1 does not satisfy the stated computation. Choose a single column and fill every zero in it. Column costs are [2, 2, 2]; their minimum is 2."
+          },
+          {
+            "option_index": 3,
+            "rationale": "3 does not satisfy the stated computation. Choose a single column and fill every zero in it. Column costs are [2, 2, 2]; their minimum is 2."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §1.5, odd exercises 3, 27, 31, 45. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "1.5",
+        "odd_exercises": [
+          3,
+          27,
+          31,
+          45
+        ],
+        "workshop": "Quantifier models 1"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "quantifiers",
+        "args": {
+          "matrix": [
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              0,
+              1
+            ]
+          ],
+          "query": "repair-column"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-056",
+      "topic": "Quantifier models 2",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "In order, what are the truth values of ∀x ∃y P(x,y); ∃y ∀x P(x,y); ∃x ∀y P(x,y); ∀y ∃x P(x,y)?",
+      "context": "Both domains are D = {1, 2, 3}. P(x,y) is true at the 1 entries of this table (rows x, columns y):\n1 0 1\n1 1 0\n1 0 0",
+      "options": [
+        "T, T, F, T",
+        "T, T, T, T",
+        "F, T, F, T",
+        "T, F, F, T"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "For ∀x∃y inspect every row; for ∃y∀x find one column that works in every row.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Track witness dependence, quantifier order, and counterexamples on a finite domain.",
+        "correct_rationale": "The four tests are: no empty row; an all-1 column; an all-1 row; no empty column. Applying these tests gives T, T, F, T.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. The four tests are: no empty row; an all-1 column; an all-1 row; no empty column. Applying these tests gives T, T, F, T."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. The four tests are: no empty row; an all-1 column; an all-1 row; no empty column. Applying these tests gives T, T, F, T."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. The four tests are: no empty row; an all-1 column; an all-1 row; no empty column. Applying these tests gives T, T, F, T."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §1.5, odd exercises 3, 27, 31, 45. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "1.5",
+        "odd_exercises": [
+          3,
+          27,
+          31,
+          45
+        ],
+        "workshop": "Quantifier models 2"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "quantifiers",
+        "args": {
+          "matrix": [
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ]
+          ],
+          "query": "truths"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-057",
+      "topic": "Quantifier models 2",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "How many values of y witness ∀x P(x,y)?",
+      "context": "Both domains are D = {1, 2, 3}. P(x,y) is true at the 1 entries of this table (rows x, columns y):\n1 0 1\n1 1 0\n1 0 0",
+      "options": [
+        "0",
+        "2",
+        "3",
+        "1"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "For ∀x∃y inspect every row; for ∃y∀x find one column that works in every row.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Track witness dependence, quantifier order, and counterexamples on a finite domain.",
+        "correct_rationale": "A witness y needs an all-1 column. The qualifying columns are {1}.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "0 does not satisfy the stated computation. A witness y needs an all-1 column. The qualifying columns are {1}."
+          },
+          {
+            "option_index": 1,
+            "rationale": "2 does not satisfy the stated computation. A witness y needs an all-1 column. The qualifying columns are {1}."
+          },
+          {
+            "option_index": 2,
+            "rationale": "3 does not satisfy the stated computation. A witness y needs an all-1 column. The qualifying columns are {1}."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §1.5, odd exercises 3, 27, 31, 45. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "1.5",
+        "odd_exercises": [
+          3,
+          27,
+          31,
+          45
+        ],
+        "workshop": "Quantifier models 2"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "quantifiers",
+        "args": {
+          "matrix": [
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ]
+          ],
+          "query": "common-witnesses"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-058",
+      "topic": "Quantifier models 2",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "For how many x is the negation ¬∀y P(x,y) true?",
+      "context": "Both domains are D = {1, 2, 3}. P(x,y) is true at the 1 entries of this table (rows x, columns y):\n1 0 1\n1 1 0\n1 0 0",
+      "options": [
+        "2",
+        "5",
+        "3",
+        "4"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "For ∀x∃y inspect every row; for ∃y∀x find one column that works in every row.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Track witness dependence, quantifier order, and counterexamples on a finite domain.",
+        "correct_rationale": "Negate ∀y to ∃y¬. Count rows containing at least one 0: {1, 2, 3}.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "2 does not satisfy the stated computation. Negate ∀y to ∃y¬. Count rows containing at least one 0: {1, 2, 3}."
+          },
+          {
+            "option_index": 1,
+            "rationale": "5 does not satisfy the stated computation. Negate ∀y to ∃y¬. Count rows containing at least one 0: {1, 2, 3}."
+          },
+          {
+            "option_index": 3,
+            "rationale": "4 does not satisfy the stated computation. Negate ∀y to ∃y¬. Count rows containing at least one 0: {1, 2, 3}."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §1.5, odd exercises 3, 27, 31, 45. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "1.5",
+        "odd_exercises": [
+          3,
+          27,
+          31,
+          45
+        ],
+        "workshop": "Quantifier models 2"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "quantifiers",
+        "args": {
+          "matrix": [
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ]
+          ],
+          "query": "not-all-rows"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-059",
+      "topic": "Quantifier models 2",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "What is the minimum number of 0 entries that must become 1 to make ∀x∃y P(x,y) true?",
+      "context": "Both domains are D = {1, 2, 3}. P(x,y) is true at the 1 entries of this table (rows x, columns y):\n1 0 1\n1 1 0\n1 0 0",
+      "options": [
+        "0",
+        "1",
+        "2",
+        "-1"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "For ∀x∃y inspect every row; for ∃y∀x find one column that works in every row.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Track witness dependence, quantifier order, and counterexamples on a finite domain.",
+        "correct_rationale": "Each empty row requires one new witness, and a change cannot repair two different rows. There are 0 empty rows, so this lower bound is achievable.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "1 does not satisfy the stated computation. Each empty row requires one new witness, and a change cannot repair two different rows. There are 0 empty rows, so this lower bound is achievable."
+          },
+          {
+            "option_index": 2,
+            "rationale": "2 does not satisfy the stated computation. Each empty row requires one new witness, and a change cannot repair two different rows. There are 0 empty rows, so this lower bound is achievable."
+          },
+          {
+            "option_index": 3,
+            "rationale": "-1 does not satisfy the stated computation. Each empty row requires one new witness, and a change cannot repair two different rows. There are 0 empty rows, so this lower bound is achievable."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §1.5, odd exercises 3, 27, 31, 45. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "1.5",
+        "odd_exercises": [
+          3,
+          27,
+          31,
+          45
+        ],
+        "workshop": "Quantifier models 2"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "quantifiers",
+        "args": {
+          "matrix": [
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ]
+          ],
+          "query": "repair-rows"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-060",
+      "topic": "Quantifier models 2",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "What is the minimum number of 0 entries that must become 1 to make ∃y∀x P(x,y) true?",
+      "context": "Both domains are D = {1, 2, 3}. P(x,y) is true at the 1 entries of this table (rows x, columns y):\n1 0 1\n1 1 0\n1 0 0",
+      "options": [
+        "0",
+        "-1",
+        "2",
+        "1"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "For ∀x∃y inspect every row; for ∃y∀x find one column that works in every row.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Track witness dependence, quantifier order, and counterexamples on a finite domain.",
+        "correct_rationale": "Choose a single column and fill every zero in it. Column costs are [0, 2, 2]; their minimum is 0.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "-1 does not satisfy the stated computation. Choose a single column and fill every zero in it. Column costs are [0, 2, 2]; their minimum is 0."
+          },
+          {
+            "option_index": 2,
+            "rationale": "2 does not satisfy the stated computation. Choose a single column and fill every zero in it. Column costs are [0, 2, 2]; their minimum is 0."
+          },
+          {
+            "option_index": 3,
+            "rationale": "1 does not satisfy the stated computation. Choose a single column and fill every zero in it. Column costs are [0, 2, 2]; their minimum is 0."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §1.5, odd exercises 3, 27, 31, 45. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "1.5",
+        "odd_exercises": [
+          3,
+          27,
+          31,
+          45
+        ],
+        "workshop": "Quantifier models 2"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "quantifiers",
+        "args": {
+          "matrix": [
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              0
+            ]
+          ],
+          "query": "repair-column"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-061",
+      "topic": "Quantifier models 3",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "In order, what are the truth values of ∀x ∃y P(x,y); ∃y ∀x P(x,y); ∃x ∀y P(x,y); ∀y ∃x P(x,y)?",
+      "context": "Both domains are D = {1, 2, 3}. P(x,y) is true at the 1 entries of this table (rows x, columns y):\n1 1 1\n0 0 0\n1 0 1",
+      "options": [
+        "F, F, T, T",
+        "T, F, T, T",
+        "F, T, T, T",
+        "F, F, F, T"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "For ∀x∃y inspect every row; for ∃y∀x find one column that works in every row.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Track witness dependence, quantifier order, and counterexamples on a finite domain.",
+        "correct_rationale": "The four tests are: no empty row; an all-1 column; an all-1 row; no empty column. Applying these tests gives F, F, T, T.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. The four tests are: no empty row; an all-1 column; an all-1 row; no empty column. Applying these tests gives F, F, T, T."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. The four tests are: no empty row; an all-1 column; an all-1 row; no empty column. Applying these tests gives F, F, T, T."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. The four tests are: no empty row; an all-1 column; an all-1 row; no empty column. Applying these tests gives F, F, T, T."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §1.5, odd exercises 3, 27, 31, 45. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "1.5",
+        "odd_exercises": [
+          3,
+          27,
+          31,
+          45
+        ],
+        "workshop": "Quantifier models 3"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "quantifiers",
+        "args": {
+          "matrix": [
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              1
+            ]
+          ],
+          "query": "truths"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-062",
+      "topic": "Quantifier models 3",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "How many values of y witness ∀x P(x,y)?",
+      "context": "Both domains are D = {1, 2, 3}. P(x,y) is true at the 1 entries of this table (rows x, columns y):\n1 1 1\n0 0 0\n1 0 1",
+      "options": [
+        "-1",
+        "0",
+        "2",
+        "1"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "For ∀x∃y inspect every row; for ∃y∀x find one column that works in every row.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Track witness dependence, quantifier order, and counterexamples on a finite domain.",
+        "correct_rationale": "A witness y needs an all-1 column. The qualifying columns are ∅.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "-1 does not satisfy the stated computation. A witness y needs an all-1 column. The qualifying columns are ∅."
+          },
+          {
+            "option_index": 2,
+            "rationale": "2 does not satisfy the stated computation. A witness y needs an all-1 column. The qualifying columns are ∅."
+          },
+          {
+            "option_index": 3,
+            "rationale": "1 does not satisfy the stated computation. A witness y needs an all-1 column. The qualifying columns are ∅."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §1.5, odd exercises 3, 27, 31, 45. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "1.5",
+        "odd_exercises": [
+          3,
+          27,
+          31,
+          45
+        ],
+        "workshop": "Quantifier models 3"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "quantifiers",
+        "args": {
+          "matrix": [
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              1
+            ]
+          ],
+          "query": "common-witnesses"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-063",
+      "topic": "Quantifier models 3",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "For how many x is the negation ¬∀y P(x,y) true?",
+      "context": "Both domains are D = {1, 2, 3}. P(x,y) is true at the 1 entries of this table (rows x, columns y):\n1 1 1\n0 0 0\n1 0 1",
+      "options": [
+        "3",
+        "2",
+        "1",
+        "4"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "For ∀x∃y inspect every row; for ∃y∀x find one column that works in every row.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Track witness dependence, quantifier order, and counterexamples on a finite domain.",
+        "correct_rationale": "Negate ∀y to ∃y¬. Count rows containing at least one 0: {2, 3}.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "3 does not satisfy the stated computation. Negate ∀y to ∃y¬. Count rows containing at least one 0: {2, 3}."
+          },
+          {
+            "option_index": 2,
+            "rationale": "1 does not satisfy the stated computation. Negate ∀y to ∃y¬. Count rows containing at least one 0: {2, 3}."
+          },
+          {
+            "option_index": 3,
+            "rationale": "4 does not satisfy the stated computation. Negate ∀y to ∃y¬. Count rows containing at least one 0: {2, 3}."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §1.5, odd exercises 3, 27, 31, 45. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "1.5",
+        "odd_exercises": [
+          3,
+          27,
+          31,
+          45
+        ],
+        "workshop": "Quantifier models 3"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "quantifiers",
+        "args": {
+          "matrix": [
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              1
+            ]
+          ],
+          "query": "not-all-rows"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-064",
+      "topic": "Quantifier models 3",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "What is the minimum number of 0 entries that must become 1 to make ∀x∃y P(x,y) true?",
+      "context": "Both domains are D = {1, 2, 3}. P(x,y) is true at the 1 entries of this table (rows x, columns y):\n1 1 1\n0 0 0\n1 0 1",
+      "options": [
+        "3",
+        "1",
+        "2",
+        "0"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "For ∀x∃y inspect every row; for ∃y∀x find one column that works in every row.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Track witness dependence, quantifier order, and counterexamples on a finite domain.",
+        "correct_rationale": "Each empty row requires one new witness, and a change cannot repair two different rows. There are 1 empty rows, so this lower bound is achievable.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "3 does not satisfy the stated computation. Each empty row requires one new witness, and a change cannot repair two different rows. There are 1 empty rows, so this lower bound is achievable."
+          },
+          {
+            "option_index": 2,
+            "rationale": "2 does not satisfy the stated computation. Each empty row requires one new witness, and a change cannot repair two different rows. There are 1 empty rows, so this lower bound is achievable."
+          },
+          {
+            "option_index": 3,
+            "rationale": "0 does not satisfy the stated computation. Each empty row requires one new witness, and a change cannot repair two different rows. There are 1 empty rows, so this lower bound is achievable."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §1.5, odd exercises 3, 27, 31, 45. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "1.5",
+        "odd_exercises": [
+          3,
+          27,
+          31,
+          45
+        ],
+        "workshop": "Quantifier models 3"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "quantifiers",
+        "args": {
+          "matrix": [
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              1
+            ]
+          ],
+          "query": "repair-rows"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-065",
+      "topic": "Quantifier models 3",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "What is the minimum number of 0 entries that must become 1 to make ∃y∀x P(x,y) true?",
+      "context": "Both domains are D = {1, 2, 3}. P(x,y) is true at the 1 entries of this table (rows x, columns y):\n1 1 1\n0 0 0\n1 0 1",
+      "options": [
+        "3",
+        "0",
+        "2",
+        "1"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "For ∀x∃y inspect every row; for ∃y∀x find one column that works in every row.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Track witness dependence, quantifier order, and counterexamples on a finite domain.",
+        "correct_rationale": "Choose a single column and fill every zero in it. Column costs are [1, 2, 1]; their minimum is 1.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "3 does not satisfy the stated computation. Choose a single column and fill every zero in it. Column costs are [1, 2, 1]; their minimum is 1."
+          },
+          {
+            "option_index": 1,
+            "rationale": "0 does not satisfy the stated computation. Choose a single column and fill every zero in it. Column costs are [1, 2, 1]; their minimum is 1."
+          },
+          {
+            "option_index": 2,
+            "rationale": "2 does not satisfy the stated computation. Choose a single column and fill every zero in it. Column costs are [1, 2, 1]; their minimum is 1."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §1.5, odd exercises 3, 27, 31, 45. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "1.5",
+        "odd_exercises": [
+          3,
+          27,
+          31,
+          45
+        ],
+        "workshop": "Quantifier models 3"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "quantifiers",
+        "args": {
+          "matrix": [
+            [
+              1,
+              1,
+              1
+            ],
+            [
+              0,
+              0,
+              0
+            ],
+            [
+              1,
+              0,
+              1
+            ]
+          ],
+          "query": "repair-column"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-066",
+      "topic": "Quantifier models 4",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "In order, what are the truth values of ∀x ∃y P(x,y); ∃y ∀x P(x,y); ∃x ∀y P(x,y); ∀y ∃x P(x,y)?",
+      "context": "Both domains are D = {1, 2, 3}. P(x,y) is true at the 1 entries of this table (rows x, columns y):\n0 1 0\n0 1 1\n1 0 0",
+      "options": [
+        "T, F, F, T",
+        "F, F, F, T",
+        "T, F, T, T",
+        "T, T, F, T"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "For ∀x∃y inspect every row; for ∃y∀x find one column that works in every row.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Track witness dependence, quantifier order, and counterexamples on a finite domain.",
+        "correct_rationale": "The four tests are: no empty row; an all-1 column; an all-1 row; no empty column. Applying these tests gives T, F, F, T.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. The four tests are: no empty row; an all-1 column; an all-1 row; no empty column. Applying these tests gives T, F, F, T."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. The four tests are: no empty row; an all-1 column; an all-1 row; no empty column. Applying these tests gives T, F, F, T."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. The four tests are: no empty row; an all-1 column; an all-1 row; no empty column. Applying these tests gives T, F, F, T."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §1.5, odd exercises 3, 27, 31, 45. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "1.5",
+        "odd_exercises": [
+          3,
+          27,
+          31,
+          45
+        ],
+        "workshop": "Quantifier models 4"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "quantifiers",
+        "args": {
+          "matrix": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              1,
+              0,
+              0
+            ]
+          ],
+          "query": "truths"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-067",
+      "topic": "Quantifier models 4",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "How many values of y witness ∀x P(x,y)?",
+      "context": "Both domains are D = {1, 2, 3}. P(x,y) is true at the 1 entries of this table (rows x, columns y):\n0 1 0\n0 1 1\n1 0 0",
+      "options": [
+        "1",
+        "-1",
+        "0",
+        "2"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "For ∀x∃y inspect every row; for ∃y∀x find one column that works in every row.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Track witness dependence, quantifier order, and counterexamples on a finite domain.",
+        "correct_rationale": "A witness y needs an all-1 column. The qualifying columns are ∅.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "1 does not satisfy the stated computation. A witness y needs an all-1 column. The qualifying columns are ∅."
+          },
+          {
+            "option_index": 1,
+            "rationale": "-1 does not satisfy the stated computation. A witness y needs an all-1 column. The qualifying columns are ∅."
+          },
+          {
+            "option_index": 3,
+            "rationale": "2 does not satisfy the stated computation. A witness y needs an all-1 column. The qualifying columns are ∅."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §1.5, odd exercises 3, 27, 31, 45. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "1.5",
+        "odd_exercises": [
+          3,
+          27,
+          31,
+          45
+        ],
+        "workshop": "Quantifier models 4"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "quantifiers",
+        "args": {
+          "matrix": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              1,
+              0,
+              0
+            ]
+          ],
+          "query": "common-witnesses"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-068",
+      "topic": "Quantifier models 4",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "For how many x is the negation ¬∀y P(x,y) true?",
+      "context": "Both domains are D = {1, 2, 3}. P(x,y) is true at the 1 entries of this table (rows x, columns y):\n0 1 0\n0 1 1\n1 0 0",
+      "options": [
+        "4",
+        "3",
+        "5",
+        "2"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "For ∀x∃y inspect every row; for ∃y∀x find one column that works in every row.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Track witness dependence, quantifier order, and counterexamples on a finite domain.",
+        "correct_rationale": "Negate ∀y to ∃y¬. Count rows containing at least one 0: {1, 2, 3}.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "4 does not satisfy the stated computation. Negate ∀y to ∃y¬. Count rows containing at least one 0: {1, 2, 3}."
+          },
+          {
+            "option_index": 2,
+            "rationale": "5 does not satisfy the stated computation. Negate ∀y to ∃y¬. Count rows containing at least one 0: {1, 2, 3}."
+          },
+          {
+            "option_index": 3,
+            "rationale": "2 does not satisfy the stated computation. Negate ∀y to ∃y¬. Count rows containing at least one 0: {1, 2, 3}."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §1.5, odd exercises 3, 27, 31, 45. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "1.5",
+        "odd_exercises": [
+          3,
+          27,
+          31,
+          45
+        ],
+        "workshop": "Quantifier models 4"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "quantifiers",
+        "args": {
+          "matrix": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              1,
+              0,
+              0
+            ]
+          ],
+          "query": "not-all-rows"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-069",
+      "topic": "Quantifier models 4",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "What is the minimum number of 0 entries that must become 1 to make ∀x∃y P(x,y) true?",
+      "context": "Both domains are D = {1, 2, 3}. P(x,y) is true at the 1 entries of this table (rows x, columns y):\n0 1 0\n0 1 1\n1 0 0",
+      "options": [
+        "0",
+        "2",
+        "-1",
+        "1"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "For ∀x∃y inspect every row; for ∃y∀x find one column that works in every row.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Track witness dependence, quantifier order, and counterexamples on a finite domain.",
+        "correct_rationale": "Each empty row requires one new witness, and a change cannot repair two different rows. There are 0 empty rows, so this lower bound is achievable.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "2 does not satisfy the stated computation. Each empty row requires one new witness, and a change cannot repair two different rows. There are 0 empty rows, so this lower bound is achievable."
+          },
+          {
+            "option_index": 2,
+            "rationale": "-1 does not satisfy the stated computation. Each empty row requires one new witness, and a change cannot repair two different rows. There are 0 empty rows, so this lower bound is achievable."
+          },
+          {
+            "option_index": 3,
+            "rationale": "1 does not satisfy the stated computation. Each empty row requires one new witness, and a change cannot repair two different rows. There are 0 empty rows, so this lower bound is achievable."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §1.5, odd exercises 3, 27, 31, 45. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "1.5",
+        "odd_exercises": [
+          3,
+          27,
+          31,
+          45
+        ],
+        "workshop": "Quantifier models 4"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "quantifiers",
+        "args": {
+          "matrix": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              1,
+              0,
+              0
+            ]
+          ],
+          "query": "repair-rows"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-070",
+      "topic": "Quantifier models 4",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "What is the minimum number of 0 entries that must become 1 to make ∃y∀x P(x,y) true?",
+      "context": "Both domains are D = {1, 2, 3}. P(x,y) is true at the 1 entries of this table (rows x, columns y):\n0 1 0\n0 1 1\n1 0 0",
+      "options": [
+        "2",
+        "0",
+        "3",
+        "1"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "For ∀x∃y inspect every row; for ∃y∀x find one column that works in every row.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Track witness dependence, quantifier order, and counterexamples on a finite domain.",
+        "correct_rationale": "Choose a single column and fill every zero in it. Column costs are [2, 1, 2]; their minimum is 1.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "2 does not satisfy the stated computation. Choose a single column and fill every zero in it. Column costs are [2, 1, 2]; their minimum is 1."
+          },
+          {
+            "option_index": 1,
+            "rationale": "0 does not satisfy the stated computation. Choose a single column and fill every zero in it. Column costs are [2, 1, 2]; their minimum is 1."
+          },
+          {
+            "option_index": 2,
+            "rationale": "3 does not satisfy the stated computation. Choose a single column and fill every zero in it. Column costs are [2, 1, 2]; their minimum is 1."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §1.5, odd exercises 3, 27, 31, 45. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "1.5",
+        "odd_exercises": [
+          3,
+          27,
+          31,
+          45
+        ],
+        "workshop": "Quantifier models 4"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "quantifiers",
+        "args": {
+          "matrix": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              1,
+              0,
+              0
+            ]
+          ],
+          "query": "repair-column"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-071",
+      "topic": "Quantifier models 5",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "In order, what are the truth values of ∀x ∃y P(x,y); ∃y ∀x P(x,y); ∃x ∀y P(x,y); ∀y ∃x P(x,y)?",
+      "context": "Both domains are D = {1, 2, 3}. P(x,y) is true at the 1 entries of this table (rows x, columns y):\n1 1 0\n1 0 1\n0 1 1",
+      "options": [
+        "T, T, F, T",
+        "T, F, T, T",
+        "T, F, F, T",
+        "F, F, F, T"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "For ∀x∃y inspect every row; for ∃y∀x find one column that works in every row.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Track witness dependence, quantifier order, and counterexamples on a finite domain.",
+        "correct_rationale": "The four tests are: no empty row; an all-1 column; an all-1 row; no empty column. Applying these tests gives T, F, F, T.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. The four tests are: no empty row; an all-1 column; an all-1 row; no empty column. Applying these tests gives T, F, F, T."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. The four tests are: no empty row; an all-1 column; an all-1 row; no empty column. Applying these tests gives T, F, F, T."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. The four tests are: no empty row; an all-1 column; an all-1 row; no empty column. Applying these tests gives T, F, F, T."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §1.5, odd exercises 3, 27, 31, 45. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "1.5",
+        "odd_exercises": [
+          3,
+          27,
+          31,
+          45
+        ],
+        "workshop": "Quantifier models 5"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "quantifiers",
+        "args": {
+          "matrix": [
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              0,
+              1,
+              1
+            ]
+          ],
+          "query": "truths"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-072",
+      "topic": "Quantifier models 5",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "How many values of y witness ∀x P(x,y)?",
+      "context": "Both domains are D = {1, 2, 3}. P(x,y) is true at the 1 entries of this table (rows x, columns y):\n1 1 0\n1 0 1\n0 1 1",
+      "options": [
+        "2",
+        "-1",
+        "0",
+        "1"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "For ∀x∃y inspect every row; for ∃y∀x find one column that works in every row.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Track witness dependence, quantifier order, and counterexamples on a finite domain.",
+        "correct_rationale": "A witness y needs an all-1 column. The qualifying columns are ∅.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "2 does not satisfy the stated computation. A witness y needs an all-1 column. The qualifying columns are ∅."
+          },
+          {
+            "option_index": 1,
+            "rationale": "-1 does not satisfy the stated computation. A witness y needs an all-1 column. The qualifying columns are ∅."
+          },
+          {
+            "option_index": 3,
+            "rationale": "1 does not satisfy the stated computation. A witness y needs an all-1 column. The qualifying columns are ∅."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §1.5, odd exercises 3, 27, 31, 45. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "1.5",
+        "odd_exercises": [
+          3,
+          27,
+          31,
+          45
+        ],
+        "workshop": "Quantifier models 5"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "quantifiers",
+        "args": {
+          "matrix": [
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              0,
+              1,
+              1
+            ]
+          ],
+          "query": "common-witnesses"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-073",
+      "topic": "Quantifier models 5",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "For how many x is the negation ¬∀y P(x,y) true?",
+      "context": "Both domains are D = {1, 2, 3}. P(x,y) is true at the 1 entries of this table (rows x, columns y):\n1 1 0\n1 0 1\n0 1 1",
+      "options": [
+        "2",
+        "3",
+        "5",
+        "4"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "For ∀x∃y inspect every row; for ∃y∀x find one column that works in every row.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Track witness dependence, quantifier order, and counterexamples on a finite domain.",
+        "correct_rationale": "Negate ∀y to ∃y¬. Count rows containing at least one 0: {1, 2, 3}.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "2 does not satisfy the stated computation. Negate ∀y to ∃y¬. Count rows containing at least one 0: {1, 2, 3}."
+          },
+          {
+            "option_index": 2,
+            "rationale": "5 does not satisfy the stated computation. Negate ∀y to ∃y¬. Count rows containing at least one 0: {1, 2, 3}."
+          },
+          {
+            "option_index": 3,
+            "rationale": "4 does not satisfy the stated computation. Negate ∀y to ∃y¬. Count rows containing at least one 0: {1, 2, 3}."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §1.5, odd exercises 3, 27, 31, 45. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "1.5",
+        "odd_exercises": [
+          3,
+          27,
+          31,
+          45
+        ],
+        "workshop": "Quantifier models 5"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "quantifiers",
+        "args": {
+          "matrix": [
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              0,
+              1,
+              1
+            ]
+          ],
+          "query": "not-all-rows"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-074",
+      "topic": "Quantifier models 5",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "What is the minimum number of 0 entries that must become 1 to make ∀x∃y P(x,y) true?",
+      "context": "Both domains are D = {1, 2, 3}. P(x,y) is true at the 1 entries of this table (rows x, columns y):\n1 1 0\n1 0 1\n0 1 1",
+      "options": [
+        "2",
+        "1",
+        "0",
+        "-1"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "For ∀x∃y inspect every row; for ∃y∀x find one column that works in every row.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Track witness dependence, quantifier order, and counterexamples on a finite domain.",
+        "correct_rationale": "Each empty row requires one new witness, and a change cannot repair two different rows. There are 0 empty rows, so this lower bound is achievable.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "2 does not satisfy the stated computation. Each empty row requires one new witness, and a change cannot repair two different rows. There are 0 empty rows, so this lower bound is achievable."
+          },
+          {
+            "option_index": 1,
+            "rationale": "1 does not satisfy the stated computation. Each empty row requires one new witness, and a change cannot repair two different rows. There are 0 empty rows, so this lower bound is achievable."
+          },
+          {
+            "option_index": 3,
+            "rationale": "-1 does not satisfy the stated computation. Each empty row requires one new witness, and a change cannot repair two different rows. There are 0 empty rows, so this lower bound is achievable."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §1.5, odd exercises 3, 27, 31, 45. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "1.5",
+        "odd_exercises": [
+          3,
+          27,
+          31,
+          45
+        ],
+        "workshop": "Quantifier models 5"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "quantifiers",
+        "args": {
+          "matrix": [
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              0,
+              1,
+              1
+            ]
+          ],
+          "query": "repair-rows"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-075",
+      "topic": "Quantifier models 5",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "What is the minimum number of 0 entries that must become 1 to make ∃y∀x P(x,y) true?",
+      "context": "Both domains are D = {1, 2, 3}. P(x,y) is true at the 1 entries of this table (rows x, columns y):\n1 1 0\n1 0 1\n0 1 1",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "0"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "For ∀x∃y inspect every row; for ∃y∀x find one column that works in every row.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Track witness dependence, quantifier order, and counterexamples on a finite domain.",
+        "correct_rationale": "Choose a single column and fill every zero in it. Column costs are [1, 1, 1]; their minimum is 1.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "2 does not satisfy the stated computation. Choose a single column and fill every zero in it. Column costs are [1, 1, 1]; their minimum is 1."
+          },
+          {
+            "option_index": 2,
+            "rationale": "3 does not satisfy the stated computation. Choose a single column and fill every zero in it. Column costs are [1, 1, 1]; their minimum is 1."
+          },
+          {
+            "option_index": 3,
+            "rationale": "0 does not satisfy the stated computation. Choose a single column and fill every zero in it. Column costs are [1, 1, 1]; their minimum is 1."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §1.5, odd exercises 3, 27, 31, 45. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "1.5",
+        "odd_exercises": [
+          3,
+          27,
+          31,
+          45
+        ],
+        "workshop": "Quantifier models 5"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "quantifiers",
+        "args": {
+          "matrix": [
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              0,
+              1,
+              1
+            ]
+          ],
+          "query": "repair-column"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-076",
+      "topic": "Quantifier order in systems",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Translate “Every device rejects at least one key.”",
+      "context": "D is a nonempty set of devices and K a nonempty set of keys. A(d,k) means device d accepts key k.",
+      "options": [
+        "∀d ∃k ¬A(d,k)",
+        "∃k ∀d ¬A(d,k)",
+        "∀d ∀k ¬A(d,k)",
+        "∃d ∀k A(d,k)"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Distinguish a common key from keys that may depend on the device.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Translate nested statements and negate them without changing witness scope.",
+        "correct_rationale": "For each device a rejected key must exist; that key may vary with d. A common rejected key or rejection of all keys is stronger.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. For each device a rejected key must exist; that key may vary with d. A common rejected key or rejection of all keys is stronger."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. For each device a rejected key must exist; that key may vary with d. A common rejected key or rejection of all keys is stronger."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. For each device a rejected key must exist; that key may vary with d. A common rejected key or rejection of all keys is stronger."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §1.5, odd exercises 11, 15, 17, 31. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "1.5",
+        "odd_exercises": [
+          11,
+          15,
+          17,
+          31
+        ],
+        "workshop": "Quantifier order in systems"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-077",
+      "topic": "Quantifier order in systems",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Negate “Some key is accepted by every device.”",
+      "context": "D is a nonempty set of devices and K a nonempty set of keys. A(d,k) means device d accepts key k.",
+      "options": [
+        "∃d ∀k ¬A(d,k)",
+        "∃k ∀d ¬A(d,k)",
+        "∀k ∃d ¬A(d,k)",
+        "∀d ∃k A(d,k)"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Distinguish a common key from keys that may depend on the device.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Translate nested statements and negate them without changing witness scope.",
+        "correct_rationale": "Negating ∃k∀d A flips both quantifiers and negates A. Each key has a rejecting device, possibly a different device.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. Negating ∃k∀d A flips both quantifiers and negates A. Each key has a rejecting device, possibly a different device."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. Negating ∃k∀d A flips both quantifiers and negates A. Each key has a rejecting device, possibly a different device."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. Negating ∃k∀d A flips both quantifiers and negates A. Each key has a rejecting device, possibly a different device."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §1.5, odd exercises 11, 15, 17, 31. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "1.5",
+        "odd_exercises": [
+          11,
+          15,
+          17,
+          31
+        ],
+        "workshop": "Quantifier order in systems"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-078",
+      "topic": "Quantifier order in systems",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Which condition is sufficient for ∀d∃k A(d,k)?",
+      "context": "D is a nonempty set of devices and K a nonempty set of keys. A(d,k) means device d accepts key k.",
+      "options": [
+        "∃d∀k A(d,k)",
+        "∀k∃d A(d,k)",
+        "∃d∃k A(d,k)",
+        "∃k∀d A(d,k)"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Distinguish a common key from keys that may depend on the device.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Translate nested statements and negate them without changing witness scope.",
+        "correct_rationale": "A universally accepted key supplies a witness for every device. The other options may leave a device accepting nothing.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. A universally accepted key supplies a witness for every device. The other options may leave a device accepting nothing."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. A universally accepted key supplies a witness for every device. The other options may leave a device accepting nothing."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. A universally accepted key supplies a witness for every device. The other options may leave a device accepting nothing."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §1.5, odd exercises 11, 15, 17, 31. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "1.5",
+        "odd_exercises": [
+          11,
+          15,
+          17,
+          31
+        ],
+        "workshop": "Quantifier order in systems"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-079",
+      "topic": "Quantifier order in systems",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "Which two-device, two-key acceptance pattern shows ∀d∃k A does not imply ∃k∀d A?",
+      "context": "D is a nonempty set of devices and K a nonempty set of keys. A(d,k) means device d accepts key k.",
+      "options": [
+        "Both devices accept only the first key.",
+        "Neither device accepts any key.",
+        "Both devices accept both keys.",
+        "Each device accepts only its own distinct key."
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Distinguish a common key from keys that may depend on the device.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Translate nested statements and negate them without changing witness scope.",
+        "correct_rationale": "The diagonal pattern gives each row a 1 but no column all 1. The first two have a common key; the last fails the premise.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. The diagonal pattern gives each row a 1 but no column all 1. The first two have a common key; the last fails the premise."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. The diagonal pattern gives each row a 1 but no column all 1. The first two have a common key; the last fails the premise."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. The diagonal pattern gives each row a 1 but no column all 1. The first two have a common key; the last fails the premise."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §1.5, odd exercises 11, 15, 17, 31. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "1.5",
+        "odd_exercises": [
+          11,
+          15,
+          17,
+          31
+        ],
+        "workshop": "Quantifier order in systems"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-080",
+      "topic": "Quantifier order in systems",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "How can ∀d∃!k A(d,k) hold while some key is accepted by multiple devices?",
+      "context": "D is a nonempty set of devices and K a nonempty set of keys. A(d,k) means device d accepts key k.",
+      "options": [
+        "The statement requires a single key accepted by every device.",
+        "Unique existence requires every key to be accepted.",
+        "Each device accepts exactly one key, and those keys need not be distinct.",
+        "Unique existence forces different devices to use different keys."
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Distinguish a common key from keys that may depend on the device.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Translate nested statements and negate them without changing witness scope.",
+        "correct_rationale": "Uniqueness is inside the scope for each d. It controls each row, not collisions between rows, unused columns, or a shared universal key.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. Uniqueness is inside the scope for each d. It controls each row, not collisions between rows, unused columns, or a shared universal key."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. Uniqueness is inside the scope for each d. It controls each row, not collisions between rows, unused columns, or a shared universal key."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. Uniqueness is inside the scope for each d. It controls each row, not collisions between rows, unused columns, or a shared universal key."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §1.5, odd exercises 11, 15, 17, 31. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "1.5",
+        "odd_exercises": [
+          11,
+          15,
+          17,
+          31
+        ],
+        "workshop": "Quantifier order in systems"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-081",
+      "topic": "Arithmetic quantifier domains",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Over Z, what establishes ∀x∃y (x+y=7)?",
+      "context": "Compare domains Z (integers), Z⁺ (positive integers), and R (real numbers).",
+      "options": [
+        "Choose y=x for every x.",
+        "For each x, choose y=7−x.",
+        "Choose x=0 and y=7 only.",
+        "Choose y=7 for every x."
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Try boundary values such as zero and a smallest positive integer before generalizing.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Use witnesses and counterexamples to distinguish domain-dependent truth.",
+        "correct_rationale": "The dependent witness 7−x is an integer and works for every integer x. One example does not prove a universal claim.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. The dependent witness 7−x is an integer and works for every integer x. One example does not prove a universal claim."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. The dependent witness 7−x is an integer and works for every integer x. One example does not prove a universal claim."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. The dependent witness 7−x is an integer and works for every integer x. One example does not prove a universal claim."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §1.4, odd exercises 13, 15, 21, 37. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "1.4",
+        "odd_exercises": [
+          13,
+          15,
+          21,
+          37
+        ],
+        "workshop": "Arithmetic quantifier domains"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-082",
+      "topic": "Arithmetic quantifier domains",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Why is ∀x∃y (x+y=7) false over Z⁺?",
+      "context": "Compare domains Z (integers), Z⁺ (positive integers), and R (real numbers).",
+      "options": [
+        "At x=1, y=6 is positive.",
+        "An existential witness must be independent of x.",
+        "At x=7, the only possible y is 0, outside Z⁺.",
+        "There are infinitely many x."
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Try boundary values such as zero and a smallest positive integer before generalizing.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Use witnesses and counterexamples to distinguish domain-dependent truth.",
+        "correct_rationale": "The universal claim fails at x=7. Infinitude is not an obstruction, and ∀x∃y permits dependence.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. The universal claim fails at x=7. Infinitude is not an obstruction, and ∀x∃y permits dependence."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. The universal claim fails at x=7. Infinitude is not an obstruction, and ∀x∃y permits dependence."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. The universal claim fails at x=7. Infinitude is not an obstruction, and ∀x∃y permits dependence."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §1.4, odd exercises 13, 15, 21, 37. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "1.4",
+        "odd_exercises": [
+          13,
+          15,
+          21,
+          37
+        ],
+        "workshop": "Arithmetic quantifier domains"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-083",
+      "topic": "Arithmetic quantifier domains",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Over R, which claim is true?",
+      "context": "Compare domains Z (integers), Z⁺ (positive integers), and R (real numbers).",
+      "options": [
+        "∃x∀y (y>x)",
+        "∃y∀x (y>x)",
+        "∀x∃y (y>x)",
+        "∀x∀y (y>x)"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Try boundary values such as zero and a smallest positive integer before generalizing.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Use witnesses and counterexamples to distinguish domain-dependent truth.",
+        "correct_rationale": "For any x take y=x+1. No single real exceeds all reals; equal values also refute the universal pair claim.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. For any x take y=x+1. No single real exceeds all reals; equal values also refute the universal pair claim."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. For any x take y=x+1. No single real exceeds all reals; equal values also refute the universal pair claim."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. For any x take y=x+1. No single real exceeds all reals; equal values also refute the universal pair claim."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §1.4, odd exercises 13, 15, 21, 37. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "1.4",
+        "odd_exercises": [
+          13,
+          15,
+          21,
+          37
+        ],
+        "workshop": "Arithmetic quantifier domains"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-084",
+      "topic": "Arithmetic quantifier domains",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "Over R, which is the negation of ∀x≠0 ∃y (xy=1)?",
+      "context": "Compare domains Z (integers), Z⁺ (positive integers), and R (real numbers).",
+      "options": [
+        "∃x (x≠0 ∧ ∀y (xy≠1))",
+        "∀x (x=0 ∨ ∃y (xy≠1))",
+        "∀x≠0 ∀y (xy≠1)",
+        "∃x∀y (xy=1)"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Try boundary values such as zero and a smallest positive integer before generalizing.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Use witnesses and counterexamples to distinguish domain-dependent truth.",
+        "correct_rationale": "Write the restriction as ∀x(x≠0 → ∃y xy=1). Negate the implication and both quantifiers. The counterexample must satisfy x≠0.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. Write the restriction as ∀x(x≠0 → ∃y xy=1). Negate the implication and both quantifiers. The counterexample must satisfy x≠0."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. Write the restriction as ∀x(x≠0 → ∃y xy=1). Negate the implication and both quantifiers. The counterexample must satisfy x≠0."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. Write the restriction as ∀x(x≠0 → ∃y xy=1). Negate the implication and both quantifiers. The counterexample must satisfy x≠0."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §1.4, odd exercises 13, 15, 21, 37. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "1.4",
+        "odd_exercises": [
+          13,
+          15,
+          21,
+          37
+        ],
+        "workshop": "Arithmetic quantifier domains"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-085",
+      "topic": "Arithmetic quantifier domains",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "Which statement holds over R but fails over Z?",
+      "context": "Compare domains Z (integers), Z⁺ (positive integers), and R (real numbers).",
+      "options": [
+        "∀x (x²≥0)",
+        "∃x (x²=4)",
+        "∀x∃y (2y=x)",
+        "∀x∃y (y=x+1)"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Try boundary values such as zero and a smallest positive integer before generalizing.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Use witnesses and counterexamples to distinguish domain-dependent truth.",
+        "correct_rationale": "In R take y=x/2. In Z the input x=1 has no integer half. The other three are true in both domains.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. In R take y=x/2. In Z the input x=1 has no integer half. The other three are true in both domains."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. In R take y=x/2. In Z the input x=1 has no integer half. The other three are true in both domains."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. In R take y=x/2. In Z the input x=1 has no integer half. The other three are true in both domains."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §1.4, odd exercises 13, 15, 21, 37. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "1.4",
+        "odd_exercises": [
+          13,
+          15,
+          21,
+          37
+        ],
+        "workshop": "Arithmetic quantifier domains"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-086",
+      "topic": "Chaining quantified inference",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Which conclusion follows?",
+      "context": "All audited services are logged. No logged service is anonymous. Some service is audited. The domain is all services.",
+      "options": [
+        "All services are audited.",
+        "Some service is logged and not anonymous.",
+        "No service is logged.",
+        "Some audited service is anonymous."
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Keep the same witness when applying universal premises to an existentially chosen object.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Apply instantiation, modus ponens, and existential generalization with a consistent witness.",
+        "correct_rationale": "Choose an audited witness a. Universal premises give logged(a) and not anonymous(a), then existentially generalize.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. Choose an audited witness a. Universal premises give logged(a) and not anonymous(a), then existentially generalize."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. Choose an audited witness a. Universal premises give logged(a) and not anonymous(a), then existentially generalize."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. Choose an audited witness a. Universal premises give logged(a) and not anonymous(a), then existentially generalize."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §1.6, odd exercises 5, 9, 13, 15. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "1.6",
+        "odd_exercises": [
+          5,
+          9,
+          13,
+          15
+        ],
+        "workshop": "Chaining quantified inference"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-087",
+      "topic": "Chaining quantified inference",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Which formula translates the second premise?",
+      "context": "All audited services are logged. No logged service is anonymous. Some service is audited. The domain is all services.",
+      "options": [
+        "∀x(N(x) → L(x))",
+        "∃x(L(x) ∧ ¬N(x))",
+        "∀x(¬L(x) → N(x))",
+        "∀x(L(x) → ¬N(x))"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Keep the same witness when applying universal premises to an existentially chosen object.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Apply instantiation, modus ponens, and existential generalization with a consistent witness.",
+        "correct_rationale": "“No logged service is anonymous” excludes L∧N for every x. An existential statement is weaker, and the other implications reverse or change the condition.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. “No logged service is anonymous” excludes L∧N for every x. An existential statement is weaker, and the other implications reverse or change the condition."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. “No logged service is anonymous” excludes L∧N for every x. An existential statement is weaker, and the other implications reverse or change the condition."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. “No logged service is anonymous” excludes L∧N for every x. An existential statement is weaker, and the other implications reverse or change the condition."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §1.6, odd exercises 5, 9, 13, 15. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "1.6",
+        "odd_exercises": [
+          5,
+          9,
+          13,
+          15
+        ],
+        "workshop": "Chaining quantified inference"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-088",
+      "topic": "Chaining quantified inference",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "After selecting an audited witness a, how is L(a) inferred?",
+      "context": "All audited services are logged. No logged service is anonymous. Some service is audited. The domain is all services.",
+      "options": [
+        "Universal generalization from one witness.",
+        "Affirming the consequent.",
+        "Universal instantiation followed by modus ponens.",
+        "Existential generalization alone."
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Keep the same witness when applying universal premises to an existentially chosen object.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Apply instantiation, modus ponens, and existential generalization with a consistent witness.",
+        "correct_rationale": "Instantiate A(x)→L(x) at a, then combine with A(a). No inference from a single witness to all services is justified.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. Instantiate A(x)→L(x) at a, then combine with A(a). No inference from a single witness to all services is justified."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. Instantiate A(x)→L(x) at a, then combine with A(a). No inference from a single witness to all services is justified."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. Instantiate A(x)→L(x) at a, then combine with A(a). No inference from a single witness to all services is justified."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §1.6, odd exercises 5, 9, 13, 15. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "1.6",
+        "odd_exercises": [
+          5,
+          9,
+          13,
+          15
+        ],
+        "workshop": "Chaining quantified inference"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-089",
+      "topic": "Chaining quantified inference",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "Remove the existential premise. What can still be concluded?",
+      "context": "All audited services are logged. No logged service is anonymous. Some service is audited. The domain is all services.",
+      "options": [
+        "Every audited service is not anonymous.",
+        "Some logged service exists.",
+        "Every service is audited.",
+        "An audited service exists."
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Keep the same witness when applying universal premises to an existentially chosen object.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Apply instantiation, modus ponens, and existential generalization with a consistent witness.",
+        "correct_rationale": "The implication A→¬N follows by chaining regardless of whether audited services exist. Universal statements alone need not supply a witness.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. The implication A→¬N follows by chaining regardless of whether audited services exist. Universal statements alone need not supply a witness."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. The implication A→¬N follows by chaining regardless of whether audited services exist. Universal statements alone need not supply a witness."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. The implication A→¬N follows by chaining regardless of whether audited services exist. Universal statements alone need not supply a witness."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §1.6, odd exercises 5, 9, 13, 15. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "1.6",
+        "odd_exercises": [
+          5,
+          9,
+          13,
+          15
+        ],
+        "workshop": "Chaining quantified inference"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-090",
+      "topic": "Chaining quantified inference",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "Which proposed extra inference is invalid?",
+      "context": "All audited services are logged. No logged service is anonymous. Some service is audited. The domain is all services.",
+      "options": [
+        "A service is audited, therefore it is logged.",
+        "A service is audited, therefore it is not anonymous.",
+        "A service is anonymous, therefore it is not logged.",
+        "A service is logged, therefore it is audited."
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Keep the same witness when applying universal premises to an existentially chosen object.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Apply instantiation, modus ponens, and existential generalization with a consistent witness.",
+        "correct_rationale": "The invalid converse affirms the consequent of A→L. A logged service may be unaudited. The other implications follow directly or by contraposition.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. The invalid converse affirms the consequent of A→L. A logged service may be unaudited. The other implications follow directly or by contraposition."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. The invalid converse affirms the consequent of A→L. A logged service may be unaudited. The other implications follow directly or by contraposition."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. The invalid converse affirms the consequent of A→L. A logged service may be unaudited. The other implications follow directly or by contraposition."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §1.6, odd exercises 5, 9, 13, 15. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "1.6",
+        "odd_exercises": [
+          5,
+          9,
+          13,
+          15
+        ],
+        "workshop": "Chaining quantified inference"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-091",
+      "topic": "Resolution and invalid converses",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What follows first from p→r and ¬r?",
+      "context": "Premises: p∨q, p→r, q→s, and ¬r. All premises are assumed true.",
+      "options": [
+        "r",
+        "¬p",
+        "p",
+        "¬q"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Use modus tollens before disjunctive syllogism, and do not infer the antecedent from a consequent.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Combine rules of inference and distinguish a conclusion from an unsupported converse.",
+        "correct_rationale": "Modus tollens derives ¬p. It says nothing directly about q.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. Modus tollens derives ¬p. It says nothing directly about q."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. Modus tollens derives ¬p. It says nothing directly about q."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. Modus tollens derives ¬p. It says nothing directly about q."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §1.6, odd exercises 3, 9, 11. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "1.6",
+        "odd_exercises": [
+          3,
+          9,
+          11
+        ],
+        "workshop": "Resolution and invalid converses"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-092",
+      "topic": "Resolution and invalid converses",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What follows from p∨q and the result ¬p?",
+      "context": "Premises: p∨q, p→r, q→s, and ¬r. All premises are assumed true.",
+      "options": [
+        "¬p∧¬q",
+        "q",
+        "p∧q",
+        "¬q"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Use modus tollens before disjunctive syllogism, and do not infer the antecedent from a consequent.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Combine rules of inference and distinguish a conclusion from an unsupported converse.",
+        "correct_rationale": "Disjunctive syllogism leaves q true when p is false.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. Disjunctive syllogism leaves q true when p is false."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. Disjunctive syllogism leaves q true when p is false."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. Disjunctive syllogism leaves q true when p is false."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §1.6, odd exercises 3, 9, 11. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "1.6",
+        "odd_exercises": [
+          3,
+          9,
+          11
+        ],
+        "workshop": "Resolution and invalid converses"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-093",
+      "topic": "Resolution and invalid converses",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Which assignment satisfies every premise?",
+      "context": "Premises: p∨q, p→r, q→s, and ¬r. All premises are assumed true.",
+      "options": [
+        "p=T, q=F, r=F, s=T",
+        "p=F, q=T, r=F, s=T",
+        "p=F, q=T, r=F, s=F",
+        "p=F, q=F, r=F, s=T"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Use modus tollens before disjunctive syllogism, and do not infer the antecedent from a consequent.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Combine rules of inference and distinguish a conclusion from an unsupported converse.",
+        "correct_rationale": "¬r forces r false; p→r forces p false; p∨q forces q true; q→s forces s true.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. ¬r forces r false; p→r forces p false; p∨q forces q true; q→s forces s true."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. ¬r forces r false; p→r forces p false; p∨q forces q true; q→s forces s true."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. ¬r forces r false; p→r forces p false; p∨q forces q true; q→s forces s true."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §1.6, odd exercises 3, 9, 11. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "1.6",
+        "odd_exercises": [
+          3,
+          9,
+          11
+        ],
+        "workshop": "Resolution and invalid converses"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-094",
+      "topic": "Resolution and invalid converses",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "Which added premise makes this system inconsistent?",
+      "context": "Premises: p∨q, p→r, q→s, and ¬r. All premises are assumed true.",
+      "options": [
+        "¬s",
+        "s∨r",
+        "q",
+        "¬p"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Use modus tollens before disjunctive syllogism, and do not infer the antecedent from a consequent.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Combine rules of inference and distinguish a conclusion from an unsupported converse.",
+        "correct_rationale": "The original premises entail s, so adding ¬s is contradictory. Each other option is true in the satisfying assignment.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. The original premises entail s, so adding ¬s is contradictory. Each other option is true in the satisfying assignment."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. The original premises entail s, so adding ¬s is contradictory. Each other option is true in the satisfying assignment."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. The original premises entail s, so adding ¬s is contradictory. Each other option is true in the satisfying assignment."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §1.6, odd exercises 3, 9, 11. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "1.6",
+        "odd_exercises": [
+          3,
+          9,
+          11
+        ],
+        "workshop": "Resolution and invalid converses"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-095",
+      "topic": "Resolution and invalid converses",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "What clause results by resolution from ¬p∨r and p∨q?",
+      "context": "Premises: p∨q, p→r, q→s, and ¬r. All premises are assumed true.",
+      "options": [
+        "q∧r",
+        "q∨r",
+        "¬q∨r",
+        "p∨r"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Use modus tollens before disjunctive syllogism, and do not infer the antecedent from a consequent.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Combine rules of inference and distinguish a conclusion from an unsupported converse.",
+        "correct_rationale": "Resolve the complementary literals p and ¬p; retain q and r. Resolution gives a disjunction, not two separately established facts.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. Resolve the complementary literals p and ¬p; retain q and r. Resolution gives a disjunction, not two separately established facts."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. Resolve the complementary literals p and ¬p; retain q and r. Resolution gives a disjunction, not two separately established facts."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. Resolve the complementary literals p and ¬p; retain q and r. Resolution gives a disjunction, not two separately established facts."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §1.6, odd exercises 3, 9, 11. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "1.6",
+        "odd_exercises": [
+          3,
+          9,
+          11
+        ],
+        "workshop": "Resolution and invalid converses"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-096",
+      "topic": "Witness discipline and proof scope",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "From ∃xP(x) and ∃xQ(x), what always follows?",
+      "context": "P and Q are predicates on a nonempty domain. No relationship between their truth sets is assumed.",
+      "options": [
+        "∀x(P(x)∨Q(x))",
+        "∀xP(x)",
+        "∃x(P(x)∧Q(x))",
+        "∃x∃y (P(x)∧Q(y))"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Two existential statements may be witnessed by different objects.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Diagnose invalid witness reuse and restricted universal generalization.",
+        "correct_rationale": "Name separate witnesses a and b. The first conclusion preserves that distinction; a common witness need not exist.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. Name separate witnesses a and b. The first conclusion preserves that distinction; a common witness need not exist."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. Name separate witnesses a and b. The first conclusion preserves that distinction; a common witness need not exist."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. Name separate witnesses a and b. The first conclusion preserves that distinction; a common witness need not exist."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §1.6, odd exercises 13, 15, 17. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "1.6",
+        "odd_exercises": [
+          13,
+          15,
+          17
+        ],
+        "workshop": "Witness discipline and proof scope"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-097",
+      "topic": "Witness discipline and proof scope",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Which two-element model refutes ∃xP(x)∧∃xQ(x) ⇒ ∃x(P(x)∧Q(x))?",
+      "context": "P and Q are predicates on a nonempty domain. No relationship between their truth sets is assumed.",
+      "options": [
+        "P and Q both hold only at 1.",
+        "P and Q both hold everywhere.",
+        "P holds nowhere; Q holds only at 2.",
+        "P holds only at 1; Q holds only at 2."
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Two existential statements may be witnessed by different objects.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Diagnose invalid witness reuse and restricted universal generalization.",
+        "correct_rationale": "The disjoint nonempty truth sets satisfy both premises but have empty intersection. The other models either satisfy the conclusion or fail a premise.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. The disjoint nonempty truth sets satisfy both premises but have empty intersection. The other models either satisfy the conclusion or fail a premise."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. The disjoint nonempty truth sets satisfy both premises but have empty intersection. The other models either satisfy the conclusion or fail a premise."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. The disjoint nonempty truth sets satisfy both premises but have empty intersection. The other models either satisfy the conclusion or fail a premise."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §1.6, odd exercises 13, 15, 17. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "1.6",
+        "odd_exercises": [
+          13,
+          15,
+          17
+        ],
+        "workshop": "Witness discipline and proof scope"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-098",
+      "topic": "Witness discipline and proof scope",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Which operation is always valid?",
+      "context": "P and Q are predicates on a nonempty domain. No relationship between their truth sets is assumed.",
+      "options": [
+        "From ∀xP(x), infer P(a) for a domain element a.",
+        "From P(a), infer ∀xP(x) for an arbitrary named a.",
+        "From ∃xP(x), infer P(a) for every preselected a.",
+        "From ∃xP(x), infer uniqueness of its witness."
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Two existential statements may be witnessed by different objects.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Diagnose invalid witness reuse and restricted universal generalization.",
+        "correct_rationale": "Universal instantiation applies to any element. Existence alone does not identify a preselected element or assert uniqueness.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. Universal instantiation applies to any element. Existence alone does not identify a preselected element or assert uniqueness."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. Universal instantiation applies to any element. Existence alone does not identify a preselected element or assert uniqueness."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. Universal instantiation applies to any element. Existence alone does not identify a preselected element or assert uniqueness."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §1.6, odd exercises 13, 15, 17. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "1.6",
+        "odd_exercises": [
+          13,
+          15,
+          17
+        ],
+        "workshop": "Witness discipline and proof scope"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-099",
+      "topic": "Witness discipline and proof scope",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "Why can an existentially chosen witness not automatically be universally generalized?",
+      "context": "P and Q are predicates on a nonempty domain. No relationship between their truth sets is assumed.",
+      "options": [
+        "Existential witnesses must always be unique.",
+        "The domain must be infinite for generalization.",
+        "Universal generalization is never valid.",
+        "It may have special properties not shared by an arbitrary domain element."
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Two existential statements may be witnessed by different objects.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Diagnose invalid witness reuse and restricted universal generalization.",
+        "correct_rationale": "A witness was selected because it satisfies a property. Universal generalization needs an arbitrary element without such a restrictive assumption.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. A witness was selected because it satisfies a property. Universal generalization needs an arbitrary element without such a restrictive assumption."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. A witness was selected because it satisfies a property. Universal generalization needs an arbitrary element without such a restrictive assumption."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. A witness was selected because it satisfies a property. Universal generalization needs an arbitrary element without such a restrictive assumption."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §1.6, odd exercises 13, 15, 17. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "1.6",
+        "odd_exercises": [
+          13,
+          15,
+          17
+        ],
+        "workshop": "Witness discipline and proof scope"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-100",
+      "topic": "Witness discipline and proof scope",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "Which implication is valid even when P and Q have disjoint truth sets?",
+      "context": "P and Q are predicates on a nonempty domain. No relationship between their truth sets is assumed.",
+      "options": [
+        "∃x(P(x)→Q(x)) → (∃xP(x)→∀xQ(x))",
+        "(∃xP(x)∧∃xQ(x)) → ∃x(P(x)∧Q(x))",
+        "∀x(P(x)∨Q(x)) → (∀xP(x)∨∀xQ(x))",
+        "∀x(P(x)∧Q(x)) → (∀xP(x)∧∀xQ(x))"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Two existential statements may be witnessed by different objects.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Diagnose invalid witness reuse and restricted universal generalization.",
+        "correct_rationale": "Universal quantification distributes over conjunction: instantiate at any element and simplify each conjunct. Existential conjunction and universal disjunction do not distribute in the proposed reverse directions.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. Universal quantification distributes over conjunction: instantiate at any element and simplify each conjunct. Existential conjunction and universal disjunction do not distribute in the proposed reverse directions."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. Universal quantification distributes over conjunction: instantiate at any element and simplify each conjunct. Existential conjunction and universal disjunction do not distribute in the proposed reverse directions."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. Universal quantification distributes over conjunction: instantiate at any element and simplify each conjunct. Existential conjunction and universal disjunction do not distribute in the proposed reverse directions."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §1.6, odd exercises 13, 15, 17. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "1.6",
+        "odd_exercises": [
+          13,
+          15,
+          17
+        ],
+        "workshop": "Witness discipline and proof scope"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    }
+  ]
+}

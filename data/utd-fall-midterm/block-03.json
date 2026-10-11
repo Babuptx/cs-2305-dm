@@ -1,0 +1,2548 @@
+{
+  "schema_version": 1,
+  "block_id": "utd-fall-midterm-block-03",
+  "pillar_id": "utd-fall-midterm",
+  "block_title": "UTD 2026 Fall Midterm · Proof construction & diagnosis",
+  "questions": [
+    {
+      "id": "utd-fall-midterm-101",
+      "topic": "Parity through algebra",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Which identity proves ab is odd?",
+      "context": "Let a and b be odd integers. Write a=2u+1 and b=2v+1 with u,v∈Z.",
+      "options": [
+        "ab=2(2uv+u+v)",
+        "ab=2(u+v)+1",
+        "ab=2(uv+u+v)+1",
+        "ab=2(2uv+u+v)+1"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "An even expression must be twice an integer; an odd expression must be twice an integer plus one.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Turn parity hypotheses into integer factorizations and identify invalid converses.",
+        "correct_rationale": "Expansion gives 4uv+2u+2v+1. The quantity 2uv+u+v is an integer, so the displayed correct identity is of the form 2k+1.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. Expansion gives 4uv+2u+2v+1. The quantity 2uv+u+v is an integer, so the displayed correct identity is of the form 2k+1."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. Expansion gives 4uv+2u+2v+1. The quantity 2uv+u+v is an integer, so the displayed correct identity is of the form 2k+1."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. Expansion gives 4uv+2u+2v+1. The quantity 2uv+u+v is an integer, so the displayed correct identity is of the form 2k+1."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §1.7, odd exercises 1, 3, 5, 19. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "1.7",
+        "odd_exercises": [
+          1,
+          3,
+          5,
+          19
+        ],
+        "workshop": "Parity through algebra"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-102",
+      "topic": "Parity through algebra",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Which factorization proves a²+b² is even?",
+      "context": "Let a and b be odd integers. Write a=2u+1 and b=2v+1 with u,v∈Z.",
+      "options": [
+        "a²+b²=4(u²+v²)+1",
+        "a²+b²=2(u+v)",
+        "a²+b²=2(u²+v²)+1",
+        "a²+b²=2(2u²+2u+2v²+2v+1)"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "An even expression must be twice an integer; an odd expression must be twice an integer plus one.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Turn parity hypotheses into integer factorizations and identify invalid converses.",
+        "correct_rationale": "Expand each odd square to 4u²+4u+1 and 4v²+4v+1. Their sum is twice the indicated integer.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. Expand each odd square to 4u²+4u+1 and 4v²+4v+1. Their sum is twice the indicated integer."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. Expand each odd square to 4u²+4u+1 and 4v²+4v+1. Their sum is twice the indicated integer."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. Expand each odd square to 4u²+4u+1 and 4v²+4v+1. Their sum is twice the indicated integer."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §1.7, odd exercises 1, 3, 5, 19. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "1.7",
+        "odd_exercises": [
+          1,
+          3,
+          5,
+          19
+        ],
+        "workshop": "Parity through algebra"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-103",
+      "topic": "Parity through algebra",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Which statement about a+b is justified?",
+      "context": "Let a and b be odd integers. Write a=2u+1 and b=2v+1 with u,v∈Z.",
+      "options": [
+        "It is always odd.",
+        "It is never divisible by 4.",
+        "It is always divisible by 4.",
+        "It is even, but it need not be divisible by 4."
+      ],
+      "correct_index": 3,
+      "hints": [
+        "An even expression must be twice an integer; an odd expression must be twice an integer plus one.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Turn parity hypotheses into integer factorizations and identify invalid converses.",
+        "correct_rationale": "a+b=2(u+v+1). For a=b=1 the sum is 2; for a=1,b=3 it is 4. These also distinguish “always” from “never.”",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. a+b=2(u+v+1). For a=b=1 the sum is 2; for a=1,b=3 it is 4. These also distinguish “always” from “never.”"
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. a+b=2(u+v+1). For a=b=1 the sum is 2; for a=1,b=3 it is 4. These also distinguish “always” from “never.”"
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. a+b=2(u+v+1). For a=b=1 the sum is 2; for a=1,b=3 it is 4. These also distinguish “always” from “never.”"
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §1.7, odd exercises 1, 3, 5, 19. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "1.7",
+        "odd_exercises": [
+          1,
+          3,
+          5,
+          19
+        ],
+        "workshop": "Parity through algebra"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-104",
+      "topic": "Parity through algebra",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "Drop the oddness assumptions. If a+b is even, what follows for integers a,b?",
+      "context": "Let a and b be odd integers. Write a=2u+1 and b=2v+1 with u,v∈Z.",
+      "options": [
+        "They have different parity.",
+        "They have the same parity.",
+        "They are both odd.",
+        "They are both even."
+      ],
+      "correct_index": 1,
+      "hints": [
+        "An even expression must be twice an integer; an odd expression must be twice an integer plus one.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Turn parity hypotheses into integer factorizations and identify invalid converses.",
+        "correct_rationale": "Modulo 2, a+b≡0 implies a≡b. Both even and both odd pairs work; mixed parity does not.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. Modulo 2, a+b≡0 implies a≡b. Both even and both odd pairs work; mixed parity does not."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. Modulo 2, a+b≡0 implies a≡b. Both even and both odd pairs work; mixed parity does not."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. Modulo 2, a+b≡0 implies a≡b. Both even and both odd pairs work; mixed parity does not."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §1.7, odd exercises 1, 3, 5, 19. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "1.7",
+        "odd_exercises": [
+          1,
+          3,
+          5,
+          19
+        ],
+        "workshop": "Parity through algebra"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-105",
+      "topic": "Parity through algebra",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "Why is “ab is even, therefore both a and b are even” invalid?",
+      "context": "Let a and b be odd integers. Write a=2u+1 and b=2v+1 with u,v∈Z.",
+      "options": [
+        "a=2,b=3 is a counterexample.",
+        "a=0,b=0 is a counterexample.",
+        "a=1,b=3 is a counterexample.",
+        "a=2,b=4 is a counterexample."
+      ],
+      "correct_index": 0,
+      "hints": [
+        "An even expression must be twice an integer; an odd expression must be twice an integer plus one.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Turn parity hypotheses into integer factorizations and identify invalid converses.",
+        "correct_rationale": "The pair (2,3) has even product but not two even factors. The other pairs either satisfy the conclusion or fail the premise.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. The pair (2,3) has even product but not two even factors. The other pairs either satisfy the conclusion or fail the premise."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. The pair (2,3) has even product but not two even factors. The other pairs either satisfy the conclusion or fail the premise."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. The pair (2,3) has even product but not two even factors. The other pairs either satisfy the conclusion or fail the premise."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §1.7, odd exercises 1, 3, 5, 19. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "1.7",
+        "odd_exercises": [
+          1,
+          3,
+          5,
+          19
+        ],
+        "workshop": "Parity through algebra"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-106",
+      "topic": "Rational and irrational closure",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Which assumption starts a contradiction proof that t+r is irrational?",
+      "context": "Let t be irrational and r a nonzero rational number. Rational numbers are ratios of integers with a nonzero denominator.",
+      "options": [
+        "Assume t+r is rational.",
+        "Assume t is rational.",
+        "Assume r is irrational.",
+        "Assume t+r is irrational."
+      ],
+      "correct_index": 0,
+      "hints": [
+        "If an alleged rational expression lets you solve for an irrational number using rational operations, seek a contradiction.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Use closure of rationals in contradiction proofs and keep nonzero assumptions.",
+        "correct_rationale": "Assume the negation of the conclusion while preserving the hypotheses. Then t=(t+r)−r would be rational by closure under subtraction.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. Assume the negation of the conclusion while preserving the hypotheses. Then t=(t+r)−r would be rational by closure under subtraction."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. Assume the negation of the conclusion while preserving the hypotheses. Then t=(t+r)−r would be rational by closure under subtraction."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. Assume the negation of the conclusion while preserving the hypotheses. Then t=(t+r)−r would be rational by closure under subtraction."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §1.7, odd exercises 9, 11, 13, 15. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "1.7",
+        "odd_exercises": [
+          9,
+          11,
+          13,
+          15
+        ],
+        "workshop": "Rational and irrational closure"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-107",
+      "topic": "Rational and irrational closure",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Which step proves rt cannot be rational?",
+      "context": "Let t be irrational and r a nonzero rational number. Rational numbers are ratios of integers with a nonzero denominator.",
+      "options": [
+        "If rt=s∈Q, then t=s/r∈Q because r≠0.",
+        "Multiplication always preserves irrationality, even by zero.",
+        "If rt=s∈Q, then t=s−r.",
+        "Every product of two irrationals is irrational."
+      ],
+      "correct_index": 0,
+      "hints": [
+        "If an alleged rational expression lets you solve for an irrational number using rational operations, seek a contradiction.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Use closure of rationals in contradiction proofs and keep nonzero assumptions.",
+        "correct_rationale": "Divide by the nonzero rational r; closure gives the contradiction. Zero would destroy the conclusion, and the displayed subtraction is not algebraically equivalent.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. Divide by the nonzero rational r; closure gives the contradiction. Zero would destroy the conclusion, and the displayed subtraction is not algebraically equivalent."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. Divide by the nonzero rational r; closure gives the contradiction. Zero would destroy the conclusion, and the displayed subtraction is not algebraically equivalent."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. Divide by the nonzero rational r; closure gives the contradiction. Zero would destroy the conclusion, and the displayed subtraction is not algebraically equivalent."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §1.7, odd exercises 9, 11, 13, 15. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "1.7",
+        "odd_exercises": [
+          9,
+          11,
+          13,
+          15
+        ],
+        "workshop": "Rational and irrational closure"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-108",
+      "topic": "Rational and irrational closure",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Which pair refutes “the product of two irrational numbers is irrational”?",
+      "context": "Let t be irrational and r a nonzero rational number. Rational numbers are ratios of integers with a nonzero denominator.",
+      "options": [
+        "0 and √5",
+        "2 and 3",
+        "√5 and √5",
+        "√5 and 2"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "If an alleged rational expression lets you solve for an irrational number using rational operations, seek a contradiction.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Use closure of rationals in contradiction proofs and keep nonzero assumptions.",
+        "correct_rationale": "Both √5 factors are irrational, but their product is 5. Each other pair includes a rational factor and therefore fails the hypothesis.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. Both √5 factors are irrational, but their product is 5. Each other pair includes a rational factor and therefore fails the hypothesis."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. Both √5 factors are irrational, but their product is 5. Each other pair includes a rational factor and therefore fails the hypothesis."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. Both √5 factors are irrational, but their product is 5. Each other pair includes a rational factor and therefore fails the hypothesis."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §1.7, odd exercises 9, 11, 13, 15. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "1.7",
+        "odd_exercises": [
+          9,
+          11,
+          13,
+          15
+        ],
+        "workshop": "Rational and irrational closure"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-109",
+      "topic": "Rational and irrational closure",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "Why is 1/t irrational?",
+      "context": "Let t be irrational and r a nonzero rational number. Rational numbers are ratios of integers with a nonzero denominator.",
+      "options": [
+        "Every nonzero real is irrational.",
+        "If 1/t were nonzero rational, taking its reciprocal would make t rational.",
+        "Because t might equal zero.",
+        "The reciprocal of every rational is irrational."
+      ],
+      "correct_index": 1,
+      "hints": [
+        "If an alleged rational expression lets you solve for an irrational number using rational operations, seek a contradiction.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Use closure of rationals in contradiction proofs and keep nonzero assumptions.",
+        "correct_rationale": "Irrational t is nonzero. A nonzero rational has a rational reciprocal, contradicting the hypothesis on t.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. Irrational t is nonzero. A nonzero rational has a rational reciprocal, contradicting the hypothesis on t."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. Irrational t is nonzero. A nonzero rational has a rational reciprocal, contradicting the hypothesis on t."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. Irrational t is nonzero. A nonzero rational has a rational reciprocal, contradicting the hypothesis on t."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §1.7, odd exercises 9, 11, 13, 15. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "1.7",
+        "odd_exercises": [
+          9,
+          11,
+          13,
+          15
+        ],
+        "workshop": "Rational and irrational closure"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-110",
+      "topic": "Rational and irrational closure",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "For irrational t>0, why is √t irrational?",
+      "context": "Let t be irrational and r a nonzero rational number. Rational numbers are ratios of integers with a nonzero denominator.",
+      "options": [
+        "Every positive number has an irrational square root.",
+        "The square of every irrational is irrational.",
+        "A rational square root would be negative.",
+        "A rational √t would have rational square t."
+      ],
+      "correct_index": 3,
+      "hints": [
+        "If an alleged rational expression lets you solve for an irrational number using rational operations, seek a contradiction.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Use closure of rationals in contradiction proofs and keep nonzero assumptions.",
+        "correct_rationale": "Rationals are closed under multiplication, so squaring a rational √t contradicts irrationality of t. The other universal claims are false.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. Rationals are closed under multiplication, so squaring a rational √t contradicts irrationality of t. The other universal claims are false."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. Rationals are closed under multiplication, so squaring a rational √t contradicts irrationality of t. The other universal claims are false."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. Rationals are closed under multiplication, so squaring a rational √t contradicts irrationality of t. The other universal claims are false."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §1.7, odd exercises 9, 11, 13, 15. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "1.7",
+        "odd_exercises": [
+          9,
+          11,
+          13,
+          15
+        ],
+        "workshop": "Rational and irrational closure"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-111",
+      "topic": "A lowest-terms contradiction",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What equation follows after squaring?",
+      "context": "Consider a proof that √7 is irrational. Assume √7=a/b in lowest terms, a,b∈Z and b≠0. Use the fact that prime 7 dividing a² implies 7 divides a.",
+      "options": [
+        "a²=7b²",
+        "7a²=b²",
+        "a²=49b²",
+        "a=7b"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "The contradiction must violate coprimality, not just show that a squared expression is divisible.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Connect lowest terms, prime divisibility, and the actual contradiction.",
+        "correct_rationale": "Squaring √7=a/b gives 7=a²/b², hence a²=7b².",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. Squaring √7=a/b gives 7=a²/b², hence a²=7b²."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. Squaring √7=a/b gives 7=a²/b², hence a²=7b²."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. Squaring √7=a/b gives 7=a²/b², hence a²=7b²."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §1.7, odd exercises 9, 15, 19. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "1.7",
+        "odd_exercises": [
+          9,
+          15,
+          19
+        ],
+        "workshop": "A lowest-terms contradiction"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-112",
+      "topic": "A lowest-terms contradiction",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "After setting a=7k, what relation follows?",
+      "context": "Consider a proof that √7 is irrational. Assume √7=a/b in lowest terms, a,b∈Z and b≠0. Use the fact that prime 7 dividing a² implies 7 divides a.",
+      "options": [
+        "b²=7k²",
+        "b²=k²",
+        "b²=49k²",
+        "b=7k²"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "The contradiction must violate coprimality, not just show that a squared expression is divisible.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Connect lowest terms, prime divisibility, and the actual contradiction.",
+        "correct_rationale": "Substitute a=7k into a²=7b²: 49k²=7b²; divide by 7.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. Substitute a=7k into a²=7b²: 49k²=7b²; divide by 7."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. Substitute a=7k into a²=7b²: 49k²=7b²; divide by 7."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. Substitute a=7k into a²=7b²: 49k²=7b²; divide by 7."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §1.7, odd exercises 9, 15, 19. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "1.7",
+        "odd_exercises": [
+          9,
+          15,
+          19
+        ],
+        "workshop": "A lowest-terms contradiction"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-113",
+      "topic": "A lowest-terms contradiction",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What is the contradiction at the end?",
+      "context": "Consider a proof that √7 is irrational. Assume √7=a/b in lowest terms, a,b∈Z and b≠0. Use the fact that prime 7 dividing a² implies 7 divides a.",
+      "options": [
+        "a and b are integers.",
+        "b is nonzero.",
+        "7 divides both a and b although gcd(a,b)=1.",
+        "a² and b² are nonnegative."
+      ],
+      "correct_index": 2,
+      "hints": [
+        "The contradiction must violate coprimality, not just show that a squared expression is divisible.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Connect lowest terms, prime divisibility, and the actual contradiction.",
+        "correct_rationale": "The prime-divides-square fact yields 7|b as well as 7|a. This contradicts the chosen lowest-terms representation.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. The prime-divides-square fact yields 7|b as well as 7|a. This contradicts the chosen lowest-terms representation."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. The prime-divides-square fact yields 7|b as well as 7|a. This contradicts the chosen lowest-terms representation."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. The prime-divides-square fact yields 7|b as well as 7|a. This contradicts the chosen lowest-terms representation."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §1.7, odd exercises 9, 15, 19. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "1.7",
+        "odd_exercises": [
+          9,
+          15,
+          19
+        ],
+        "workshop": "A lowest-terms contradiction"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-114",
+      "topic": "A lowest-terms contradiction",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "Why may the rational representation be chosen in lowest terms?",
+      "context": "Consider a proof that √7 is irrational. Assume √7=a/b in lowest terms, a,b∈Z and b≠0. Use the fact that prime 7 dividing a² implies 7 divides a.",
+      "options": [
+        "Every rational ratio can be reduced by the gcd of numerator and denominator.",
+        "Irrational numbers have lowest-terms fractions.",
+        "Every ratio of integers already has gcd 1.",
+        "A fraction can be reduced only when its denominator is prime."
+      ],
+      "correct_index": 0,
+      "hints": [
+        "The contradiction must violate coprimality, not just show that a squared expression is divisible.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Connect lowest terms, prime divisibility, and the actual contradiction.",
+        "correct_rationale": "If the rationality assumption is true, a reduced representation exists. Reducing does not assume the theorem or restrict rational numbers.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. If the rationality assumption is true, a reduced representation exists. Reducing does not assume the theorem or restrict rational numbers."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. If the rationality assumption is true, a reduced representation exists. Reducing does not assume the theorem or restrict rational numbers."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. If the rationality assumption is true, a reduced representation exists. Reducing does not assume the theorem or restrict rational numbers."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §1.7, odd exercises 9, 15, 19. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "1.7",
+        "odd_exercises": [
+          9,
+          15,
+          19
+        ],
+        "workshop": "A lowest-terms contradiction"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-115",
+      "topic": "A lowest-terms contradiction",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "Why does the same argument not establish that √9 is irrational?",
+      "context": "Consider a proof that √7 is irrational. Assume √7=a/b in lowest terms, a,b∈Z and b≠0. Use the fact that prime 7 dividing a² implies 7 divides a.",
+      "options": [
+        "9|a² does not force 9|a; a=3 disproves that step.",
+        "Squaring equal quantities is invalid.",
+        "No integer has a square divisible by 9.",
+        "The denominator of a rational number cannot be 1."
+      ],
+      "correct_index": 0,
+      "hints": [
+        "The contradiction must violate coprimality, not just show that a squared expression is divisible.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Connect lowest terms, prime divisibility, and the actual contradiction.",
+        "correct_rationale": "The prime-divides-square inference used with 7 cannot be replaced by 9. In fact √9=3/1 is rational.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. The prime-divides-square inference used with 7 cannot be replaced by 9. In fact √9=3/1 is rational."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. The prime-divides-square inference used with 7 cannot be replaced by 9. In fact √9=3/1 is rational."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. The prime-divides-square inference used with 7 cannot be replaced by 9. In fact √9=3/1 is rational."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §1.7, odd exercises 9, 15, 19. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "1.7",
+        "odd_exercises": [
+          9,
+          15,
+          19
+        ],
+        "workshop": "A lowest-terms contradiction"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-116",
+      "topic": "Contraposition and residues",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What is the contrapositive?",
+      "context": "For integer n consider the claim: if n² is divisible by 3, then n is divisible by 3.",
+      "options": [
+        "If 3 divides n², then 3 does not divide n.",
+        "If 3 does not divide n, then 3 does not divide n².",
+        "If 3 divides n, then 3 divides n².",
+        "If 3 does not divide n², then 3 does not divide n."
+      ],
+      "correct_index": 1,
+      "hints": [
+        "If 3 does not divide n, write n as 3k+1 or 3k+2.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Build a contrapositive by exhausting residue cases and distinguish converse from inverse.",
+        "correct_rationale": "For P→Q the contrapositive is ¬Q→¬P, with P meaning 3|n² and Q meaning 3|n.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. For P→Q the contrapositive is ¬Q→¬P, with P meaning 3|n² and Q meaning 3|n."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. For P→Q the contrapositive is ¬Q→¬P, with P meaning 3|n² and Q meaning 3|n."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. For P→Q the contrapositive is ¬Q→¬P, with P meaning 3|n² and Q meaning 3|n."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §1.7, odd exercises 17, 19. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "1.7",
+        "odd_exercises": [
+          17,
+          19
+        ],
+        "workshop": "Contraposition and residues"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-117",
+      "topic": "Contraposition and residues",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Which cases exhaust integers not divisible by 3?",
+      "context": "For integer n consider the claim: if n² is divisible by 3, then n is divisible by 3.",
+      "options": [
+        "n=3k+1 only",
+        "n=3k only",
+        "n=3k+1 or n=3k+2, k∈Z",
+        "n=2k or n=2k+1 only"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "If 3 does not divide n, write n as 3k+1 or 3k+2.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Build a contrapositive by exhausting residue cases and distinguish converse from inverse.",
+        "correct_rationale": "The division algorithm gives residues 0,1,2; exclude 0. Parity is exhaustive for integers but does not itself identify nonmultiples of 3.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. The division algorithm gives residues 0,1,2; exclude 0. Parity is exhaustive for integers but does not itself identify nonmultiples of 3."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. The division algorithm gives residues 0,1,2; exclude 0. Parity is exhaustive for integers but does not itself identify nonmultiples of 3."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. The division algorithm gives residues 0,1,2; exclude 0. Parity is exhaustive for integers but does not itself identify nonmultiples of 3."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §1.7, odd exercises 17, 19. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "1.7",
+        "odd_exercises": [
+          17,
+          19
+        ],
+        "workshop": "Contraposition and residues"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-118",
+      "topic": "Contraposition and residues",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What remainder does n² have when n=3k+2?",
+      "context": "For integer n consider the claim: if n² is divisible by 3, then n is divisible by 3.",
+      "options": [
+        "2 modulo 3",
+        "0 modulo 3",
+        "4 modulo 3 as a canonical remainder",
+        "1 modulo 3"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "If 3 does not divide n, write n as 3k+1 or 3k+2.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Build a contrapositive by exhausting residue cases and distinguish converse from inverse.",
+        "correct_rationale": "(3k+2)²=9k²+12k+4=3(3k²+4k+1)+1. The canonical remainder is 1.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. (3k+2)²=9k²+12k+4=3(3k²+4k+1)+1. The canonical remainder is 1."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. (3k+2)²=9k²+12k+4=3(3k²+4k+1)+1. The canonical remainder is 1."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. (3k+2)²=9k²+12k+4=3(3k²+4k+1)+1. The canonical remainder is 1."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §1.7, odd exercises 17, 19. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "1.7",
+        "odd_exercises": [
+          17,
+          19
+        ],
+        "workshop": "Contraposition and residues"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-119",
+      "topic": "Contraposition and residues",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "What completes the proof after both nonzero residue cases give square remainder 1?",
+      "context": "For integer n consider the claim: if n² is divisible by 3, then n is divisible by 3.",
+      "options": [
+        "The converse alone proves the original.",
+        "The contrapositive is true, so the original implication is true.",
+        "The original was assumed, so it is proved.",
+        "A single example proves all integers."
+      ],
+      "correct_index": 1,
+      "hints": [
+        "If 3 does not divide n, write n as 3k+1 or 3k+2.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Build a contrapositive by exhausting residue cases and distinguish converse from inverse.",
+        "correct_rationale": "Exhausting both possible residues proves the contrapositive for every eligible integer; logical equivalence then proves the claim.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. Exhausting both possible residues proves the contrapositive for every eligible integer; logical equivalence then proves the claim."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. Exhausting both possible residues proves the contrapositive for every eligible integer; logical equivalence then proves the claim."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. Exhausting both possible residues proves the contrapositive for every eligible integer; logical equivalence then proves the claim."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §1.7, odd exercises 17, 19. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "1.7",
+        "odd_exercises": [
+          17,
+          19
+        ],
+        "workshop": "Contraposition and residues"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-120",
+      "topic": "Contraposition and residues",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "Replacing 3 by 4 makes the original claim false. Which n is a counterexample?",
+      "context": "For integer n consider the claim: if n² is divisible by 3, then n is divisible by 3.",
+      "options": [
+        "n=5",
+        "n=2",
+        "n=3",
+        "n=4"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "If 3 does not divide n, write n as 3k+1 or 3k+2.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Build a contrapositive by exhausting residue cases and distinguish converse from inverse.",
+        "correct_rationale": "4 divides 2² but not 2. For 3 and 5 the premise fails; 4 satisfies the conclusion.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. 4 divides 2² but not 2. For 3 and 5 the premise fails; 4 satisfies the conclusion."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. 4 divides 2² but not 2. For 3 and 5 the premise fails; 4 satisfies the conclusion."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. 4 divides 2² but not 2. For 3 and 5 the premise fails; 4 satisfies the conclusion."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §1.7, odd exercises 17, 19. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "1.7",
+        "odd_exercises": [
+          17,
+          19
+        ],
+        "workshop": "Contraposition and residues"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-121",
+      "topic": "Existence versus uniqueness",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Which witness proves existence?",
+      "context": "Let c be any fixed real number. Consider the equation 5x+2=c with unknown x∈R.",
+      "options": [
+        "x=c/5",
+        "x=5c−2",
+        "x=(c+2)/5",
+        "x=(c−2)/5"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "First supply a witness; then start with two arbitrary solutions and compare them.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Separate construction of a solution from proof that no other solution exists.",
+        "correct_rationale": "Substitution gives 5((c−2)/5)+2=c. The other expressions do not solve the equation for arbitrary c.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. Substitution gives 5((c−2)/5)+2=c. The other expressions do not solve the equation for arbitrary c."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. Substitution gives 5((c−2)/5)+2=c. The other expressions do not solve the equation for arbitrary c."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. Substitution gives 5((c−2)/5)+2=c. The other expressions do not solve the equation for arbitrary c."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §1.8, odd exercises 13, 15, 17. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "1.8",
+        "odd_exercises": [
+          13,
+          15,
+          17
+        ],
+        "workshop": "Existence versus uniqueness"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-122",
+      "topic": "Existence versus uniqueness",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What is the appropriate uniqueness setup?",
+      "context": "Let c be any fixed real number. Consider the equation 5x+2=c with unknown x∈R.",
+      "options": [
+        "Assume no solution exists.",
+        "Choose one numerical c and inspect its solution.",
+        "Assume u and v both solve 5x+2=c.",
+        "Assume only the proposed solution works."
+      ],
+      "correct_index": 2,
+      "hints": [
+        "First supply a witness; then start with two arbitrary solutions and compare them.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Separate construction of a solution from proof that no other solution exists.",
+        "correct_rationale": "To prove at most one solution, compare arbitrary solutions u,v; do not assume the desired uniqueness.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. To prove at most one solution, compare arbitrary solutions u,v; do not assume the desired uniqueness."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. To prove at most one solution, compare arbitrary solutions u,v; do not assume the desired uniqueness."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. To prove at most one solution, compare arbitrary solutions u,v; do not assume the desired uniqueness."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §1.8, odd exercises 13, 15, 17. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "1.8",
+        "odd_exercises": [
+          13,
+          15,
+          17
+        ],
+        "workshop": "Existence versus uniqueness"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-123",
+      "topic": "Existence versus uniqueness",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Which step forces u=v?",
+      "context": "Let c be any fixed real number. Consider the equation 5x+2=c with unknown x∈R.",
+      "options": [
+        "Both are real, so they are equal.",
+        "Subtracting 5u+2=5v+2 gives 5(u−v)=0; divide by 5.",
+        "Subtracting gives u+v=0.",
+        "The existence of u excludes v."
+      ],
+      "correct_index": 1,
+      "hints": [
+        "First supply a witness; then start with two arbitrary solutions and compare them.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Separate construction of a solution from proof that no other solution exists.",
+        "correct_rationale": "The nonzero coefficient 5 allows cancellation. Being real or merely existing does not establish equality.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. The nonzero coefficient 5 allows cancellation. Being real or merely existing does not establish equality."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. The nonzero coefficient 5 allows cancellation. Being real or merely existing does not establish equality."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. The nonzero coefficient 5 allows cancellation. Being real or merely existing does not establish equality."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §1.8, odd exercises 13, 15, 17. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "1.8",
+        "odd_exercises": [
+          13,
+          15,
+          17
+        ],
+        "workshop": "Existence versus uniqueness"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-124",
+      "topic": "Existence versus uniqueness",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "If the unknown must be an integer and c=4, what changes?",
+      "context": "Let c be any fixed real number. Consider the equation 5x+2=c with unknown x∈R.",
+      "options": [
+        "x=0 is an integer solution.",
+        "There is no integer solution, although the real solution is unique.",
+        "There are two integer solutions.",
+        "Uniqueness over R guarantees existence over Z."
+      ],
+      "correct_index": 1,
+      "hints": [
+        "First supply a witness; then start with two arbitrary solutions and compare them.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Separate construction of a solution from proof that no other solution exists.",
+        "correct_rationale": "The unique real candidate is 2/5, not an integer. Restricting the domain can remove existence.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. The unique real candidate is 2/5, not an integer. Restricting the domain can remove existence."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. The unique real candidate is 2/5, not an integer. Restricting the domain can remove existence."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. The unique real candidate is 2/5, not an integer. Restricting the domain can remove existence."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §1.8, odd exercises 13, 15, 17. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "1.8",
+        "odd_exercises": [
+          13,
+          15,
+          17
+        ],
+        "workshop": "Existence versus uniqueness"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-125",
+      "topic": "Existence versus uniqueness",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "For ax+2=c over R, which condition guarantees exactly one solution for every c?",
+      "context": "Let c be any fixed real number. Consider the equation 5x+2=c with unknown x∈R.",
+      "options": [
+        "a=0",
+        "a and c have the same sign",
+        "a≠0",
+        "c=2 only, with arbitrary a"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "First supply a witness; then start with two arbitrary solutions and compare them.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Separate construction of a solution from proof that no other solution exists.",
+        "correct_rationale": "For a≠0 solve x=(c−2)/a uniquely. If a=0 then c=2 gives every real as a solution, and c≠2 gives none.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. For a≠0 solve x=(c−2)/a uniquely. If a=0 then c=2 gives every real as a solution, and c≠2 gives none."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. For a≠0 solve x=(c−2)/a uniquely. If a=0 then c=2 gives every real as a solution, and c≠2 gives none."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. For a≠0 solve x=(c−2)/a uniquely. If a=0 then c=2 gives every real as a solution, and c≠2 gives none."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §1.8, odd exercises 13, 15, 17. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "1.8",
+        "odd_exercises": [
+          13,
+          15,
+          17
+        ],
+        "workshop": "Existence versus uniqueness"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-126",
+      "topic": "Exhaustive cases and inequalities",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Which split suffices for the max/min identity?",
+      "context": "Let x,y∈R. Consider max(x,y)+min(x,y)=x+y and |x+y|≤|x|+|y|.",
+      "options": [
+        "x>y and x<y",
+        "x≥y and x<y",
+        "x>0 and y>0",
+        "x=y only"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "A proof by cases must cover equality as well as both strict orderings.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Choose exhaustive cases, use symmetry properly, and locate equality conditions.",
+        "correct_rationale": "The split x≥y or x<y is exhaustive and determines both min and max. Strict inequalities alone omit x=y.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. The split x≥y or x<y is exhaustive and determines both min and max. Strict inequalities alone omit x=y."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. The split x≥y or x<y is exhaustive and determines both min and max. Strict inequalities alone omit x=y."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. The split x≥y or x<y is exhaustive and determines both min and max. Strict inequalities alone omit x=y."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §1.8, odd exercises 5, 7, 9, 23. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "1.8",
+        "odd_exercises": [
+          5,
+          7,
+          9,
+          23
+        ],
+        "workshop": "Exhaustive cases and inequalities"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-127",
+      "topic": "Exhaustive cases and inequalities",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "In the case x≥y, what is max(x,y)−min(x,y)?",
+      "context": "Let x,y∈R. Consider max(x,y)+min(x,y)=x+y and |x+y|≤|x|+|y|.",
+      "options": [
+        "2x",
+        "y−x",
+        "x+y",
+        "x−y"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "A proof by cases must cover equality as well as both strict orderings.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Choose exhaustive cases, use symmetry properly, and locate equality conditions.",
+        "correct_rationale": "When x≥y, max=x and min=y, so their difference is x−y.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. When x≥y, max=x and min=y, so their difference is x−y."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. When x≥y, max=x and min=y, so their difference is x−y."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. When x≥y, max=x and min=y, so their difference is x−y."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §1.8, odd exercises 5, 7, 9, 23. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "1.8",
+        "odd_exercises": [
+          5,
+          7,
+          9,
+          23
+        ],
+        "workshop": "Exhaustive cases and inequalities"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-128",
+      "topic": "Exhaustive cases and inequalities",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Which calculation refutes the claimed identity |x+y|=|x|+|y| for all real x,y?",
+      "context": "Let x,y∈R. Consider max(x,y)+min(x,y)=x+y and |x+y|≤|x|+|y|.",
+      "options": [
+        "x=0,y=3 gives 3=3.",
+        "x=−3,y=−3 gives 6=6.",
+        "x=3,y=3 gives 6=6.",
+        "x=3,y=−3 gives 0≠6."
+      ],
+      "correct_index": 3,
+      "hints": [
+        "A proof by cases must cover equality as well as both strict orderings.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Choose exhaustive cases, use symmetry properly, and locate equality conditions.",
+        "correct_rationale": "Opposite nonzero signs can cause cancellation. The other pairs give equality and therefore are not counterexamples.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. Opposite nonzero signs can cause cancellation. The other pairs give equality and therefore are not counterexamples."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. Opposite nonzero signs can cause cancellation. The other pairs give equality and therefore are not counterexamples."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. Opposite nonzero signs can cause cancellation. The other pairs give equality and therefore are not counterexamples."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §1.8, odd exercises 5, 7, 9, 23. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "1.8",
+        "odd_exercises": [
+          5,
+          7,
+          9,
+          23
+        ],
+        "workshop": "Exhaustive cases and inequalities"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-129",
+      "topic": "Exhaustive cases and inequalities",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "Why may one assume x≥y without loss of generality for the max/min SUM identity?",
+      "context": "Let x,y∈R. Consider max(x,y)+min(x,y)=x+y and |x+y|≤|x|+|y|.",
+      "options": [
+        "All real pairs satisfy x≥y.",
+        "The case x<y is impossible.",
+        "Interchanging x and y leaves both sides unchanged.",
+        "An inequality assumption is always free to add."
+      ],
+      "correct_index": 2,
+      "hints": [
+        "A proof by cases must cover equality as well as both strict orderings.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Choose exhaustive cases, use symmetry properly, and locate equality conditions.",
+        "correct_rationale": "The expression is symmetric, so exchanging labels converts the omitted case into the proved one. WLOG needs that symmetry.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. The expression is symmetric, so exchanging labels converts the omitted case into the proved one. WLOG needs that symmetry."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. The expression is symmetric, so exchanging labels converts the omitted case into the proved one. WLOG needs that symmetry."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. The expression is symmetric, so exchanging labels converts the omitted case into the proved one. WLOG needs that symmetry."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §1.8, odd exercises 5, 7, 9, 23. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "1.8",
+        "odd_exercises": [
+          5,
+          7,
+          9,
+          23
+        ],
+        "workshop": "Exhaustive cases and inequalities"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-130",
+      "topic": "Exhaustive cases and inequalities",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "When does |x+y|=|x|+|y| hold for real x,y?",
+      "context": "Let x,y∈R. Consider max(x,y)+min(x,y)=x+y and |x+y|≤|x|+|y|.",
+      "options": [
+        "When xy≥0, including zero values.",
+        "Exactly when xy<0.",
+        "For every real pair.",
+        "Only when x=y."
+      ],
+      "correct_index": 0,
+      "hints": [
+        "A proof by cases must cover equality as well as both strict orderings.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Choose exhaustive cases, use symmetry properly, and locate equality conditions.",
+        "correct_rationale": "Same-sign terms or a zero give equality. Opposite nonzero signs give |x+y| strictly smaller than |x|+|y|.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. Same-sign terms or a zero give equality. Opposite nonzero signs give |x+y| strictly smaller than |x|+|y|."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. Same-sign terms or a zero give equality. Opposite nonzero signs give |x+y| strictly smaller than |x|+|y|."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. Same-sign terms or a zero give equality. Opposite nonzero signs give |x+y| strictly smaller than |x|+|y|."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §1.8, odd exercises 5, 7, 9, 23. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "1.8",
+        "odd_exercises": [
+          5,
+          7,
+          9,
+          23
+        ],
+        "workshop": "Exhaustive cases and inequalities"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-131",
+      "topic": "Counterexamples and quantifier burden",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Which pair refutes “If x²=y², then x=y”?",
+      "context": "Evaluate universal assertions about real numbers using counterexamples and direct algebra.",
+      "options": [
+        "x=4,y=4",
+        "x=2,y=3",
+        "x=0,y=0",
+        "x=−4,y=4"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "A counterexample must make the hypothesis true and the claimed conclusion false.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Refute universal claims with hypotheses satisfied and explain why tested examples do not prove them.",
+        "correct_rationale": "The first pair has equal squares but unequal entries. The second and fourth satisfy the conclusion, while the third fails the hypothesis.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. The first pair has equal squares but unequal entries. The second and fourth satisfy the conclusion, while the third fails the hypothesis."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. The first pair has equal squares but unequal entries. The second and fourth satisfy the conclusion, while the third fails the hypothesis."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. The first pair has equal squares but unequal entries. The second and fourth satisfy the conclusion, while the third fails the hypothesis."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §1.7, odd exercises 11, 17. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "1.7",
+        "odd_exercises": [
+          11,
+          17
+        ],
+        "workshop": "Counterexamples and quantifier burden"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-132",
+      "topic": "Counterexamples and quantifier burden",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Which added hypothesis makes x²=y² ⇒ x=y valid?",
+      "context": "Evaluate universal assertions about real numbers using counterexamples and direct algebra.",
+      "options": [
+        "x,y≠0",
+        "x and y are integers",
+        "x,y≥0",
+        "x,y≤4"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "A counterexample must make the hypothesis true and the claimed conclusion false.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Refute universal claims with hypotheses satisfied and explain why tested examples do not prove them.",
+        "correct_rationale": "Equal squares imply x=y or x=−y. Nonnegativity eliminates distinct opposites; the other restrictions still allow −4 and 4.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. Equal squares imply x=y or x=−y. Nonnegativity eliminates distinct opposites; the other restrictions still allow −4 and 4."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. Equal squares imply x=y or x=−y. Nonnegativity eliminates distinct opposites; the other restrictions still allow −4 and 4."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. Equal squares imply x=y or x=−y. Nonnegativity eliminates distinct opposites; the other restrictions still allow −4 and 4."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §1.7, odd exercises 11, 17. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "1.7",
+        "odd_exercises": [
+          11,
+          17
+        ],
+        "workshop": "Counterexamples and quantifier burden"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-133",
+      "topic": "Counterexamples and quantifier burden",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Which pair refutes “If x+y>0, then x>0 and y>0”?",
+      "context": "Evaluate universal assertions about real numbers using counterexamples and direct algebra.",
+      "options": [
+        "x=−2,y=5",
+        "x=2,y=5",
+        "x=−2,y=−5",
+        "x=0,y=0"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "A counterexample must make the hypothesis true and the claimed conclusion false.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Refute universal claims with hypotheses satisfied and explain why tested examples do not prove them.",
+        "correct_rationale": "The sum 3 is positive but x is not. Other options either satisfy the conclusion or fail the premise.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. The sum 3 is positive but x is not. Other options either satisfy the conclusion or fail the premise."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. The sum 3 is positive but x is not. Other options either satisfy the conclusion or fail the premise."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. The sum 3 is positive but x is not. Other options either satisfy the conclusion or fail the premise."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §1.7, odd exercises 11, 17. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "1.7",
+        "odd_exercises": [
+          11,
+          17
+        ],
+        "workshop": "Counterexamples and quantifier burden"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-134",
+      "topic": "Counterexamples and quantifier burden",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "What weaker conclusion is always valid when x+y>0?",
+      "context": "Evaluate universal assertions about real numbers using counterexamples and direct algebra.",
+      "options": [
+        "x=y",
+        "x>0 and y>0",
+        "x>0 or y>0",
+        "xy>0"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "A counterexample must make the hypothesis true and the claimed conclusion false.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Refute universal claims with hypotheses satisfied and explain why tested examples do not prove them.",
+        "correct_rationale": "If both x and y were ≤0 then their sum would be ≤0. Therefore at least one is positive; both need not be.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. If both x and y were ≤0 then their sum would be ≤0. Therefore at least one is positive; both need not be."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. If both x and y were ≤0 then their sum would be ≤0. Therefore at least one is positive; both need not be."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. If both x and y were ≤0 then their sum would be ≤0. Therefore at least one is positive; both need not be."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §1.7, odd exercises 11, 17. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "1.7",
+        "odd_exercises": [
+          11,
+          17
+        ],
+        "workshop": "Counterexamples and quantifier burden"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-135",
+      "topic": "Counterexamples and quantifier burden",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "Why do 1,000 successful numerical tests not prove a claim over all real pairs?",
+      "context": "Evaluate universal assertions about real numbers using counterexamples and direct algebra.",
+      "options": [
+        "They leave untested cases in an infinite domain.",
+        "Universal claims cannot be proved.",
+        "A claim becomes true after enough tests.",
+        "Testing any example invalidates a proof."
+      ],
+      "correct_index": 0,
+      "hints": [
+        "A counterexample must make the hypothesis true and the claimed conclusion false.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Refute universal claims with hypotheses satisfied and explain why tested examples do not prove them.",
+        "correct_rationale": "Finite testing can suggest a claim or find a counterexample, but universal proof requires an argument covering every allowed pair.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. Finite testing can suggest a claim or find a counterexample, but universal proof requires an argument covering every allowed pair."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. Finite testing can suggest a claim or find a counterexample, but universal proof requires an argument covering every allowed pair."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. Finite testing can suggest a claim or find a counterexample, but universal proof requires an argument covering every allowed pair."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §1.7, odd exercises 11, 17. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "1.7",
+        "odd_exercises": [
+          11,
+          17
+        ],
+        "workshop": "Counterexamples and quantifier burden"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-136",
+      "topic": "Constructive difference of squares",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Which construction works for every such n?",
+      "context": "Let n=2k+1 be any odd integer, with k∈Z. Seek integers u,v such that n=u²−v².",
+      "options": [
+        "u=2k+1, v=0",
+        "u=k, v=k+1",
+        "u=k+2, v=k",
+        "u=k+1, v=k"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Use u²−v²=(u−v)(u+v), and try two consecutive integers.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Construct witnesses algebraically and use residues to identify limitations.",
+        "correct_rationale": "(k+1)²−k²=2k+1=n. Reversing the pair gives −n; the other constructions do not work for all k.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. (k+1)²−k²=2k+1=n. Reversing the pair gives −n; the other constructions do not work for all k."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. (k+1)²−k²=2k+1=n. Reversing the pair gives −n; the other constructions do not work for all k."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. (k+1)²−k²=2k+1=n. Reversing the pair gives −n; the other constructions do not work for all k."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §1.7, odd exercises 7. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "1.7",
+        "odd_exercises": [
+          7
+        ],
+        "workshop": "Constructive difference of squares"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-137",
+      "topic": "Constructive difference of squares",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "For n=−9, which consecutive-integer witnesses follow from that construction?",
+      "context": "Let n=2k+1 be any odd integer, with k∈Z. Seek integers u,v such that n=u²−v².",
+      "options": [
+        "u=−4,v=−5",
+        "u=5,v=4",
+        "u=−5,v=−4",
+        "u=−9,v=0"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Use u²−v²=(u−v)(u+v), and try two consecutive integers.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Construct witnesses algebraically and use residues to identify limitations.",
+        "correct_rationale": "k=(−9−1)/2=−5. Then u=−4,v=−5 and 16−25=−9.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. k=(−9−1)/2=−5. Then u=−4,v=−5 and 16−25=−9."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. k=(−9−1)/2=−5. Then u=−4,v=−5 and 16−25=−9."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. k=(−9−1)/2=−5. Then u=−4,v=−5 and 16−25=−9."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §1.7, odd exercises 7. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "1.7",
+        "odd_exercises": [
+          7
+        ],
+        "workshop": "Constructive difference of squares"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-138",
+      "topic": "Constructive difference of squares",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Which kind of existence proof is this?",
+      "context": "Let n=2k+1 be any odd integer, with k∈Z. Seek integers u,v such that n=u²−v².",
+      "options": [
+        "Constructive, because formulas give actual integer witnesses.",
+        "Nonconstructive, because n varies.",
+        "Inductive, because k is an integer.",
+        "Circular, because it uses algebra."
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Use u²−v²=(u−v)(u+v), and try two consecutive integers.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Construct witnesses algebraically and use residues to identify limitations.",
+        "correct_rationale": "The explicit u and v are a construction valid for each n. A variable parameter does not turn it into a nonconstructive or inductive proof.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. The explicit u and v are a construction valid for each n. A variable parameter does not turn it into a nonconstructive or inductive proof."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. The explicit u and v are a construction valid for each n. A variable parameter does not turn it into a nonconstructive or inductive proof."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. The explicit u and v are a construction valid for each n. A variable parameter does not turn it into a nonconstructive or inductive proof."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §1.7, odd exercises 7. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "1.7",
+        "odd_exercises": [
+          7
+        ],
+        "workshop": "Constructive difference of squares"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-139",
+      "topic": "Constructive difference of squares",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "Which integer cannot be a difference of two integer squares?",
+      "context": "Let n=2k+1 be any odd integer, with k∈Z. Seek integers u,v such that n=u²−v².",
+      "options": [
+        "−9",
+        "15",
+        "16",
+        "14"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Use u²−v²=(u−v)(u+v), and try two consecutive integers.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Construct witnesses algebraically and use residues to identify limitations.",
+        "correct_rationale": "A square is 0 or 1 modulo 4, so their difference cannot be 2 modulo 4. The alternatives are 4²−1², 4²−0², and (−4)²−(−5)².",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. A square is 0 or 1 modulo 4, so their difference cannot be 2 modulo 4. The alternatives are 4²−1², 4²−0², and (−4)²−(−5)²."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. A square is 0 or 1 modulo 4, so their difference cannot be 2 modulo 4. The alternatives are 4²−1², 4²−0², and (−4)²−(−5)²."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. A square is 0 or 1 modulo 4, so their difference cannot be 2 modulo 4. The alternatives are 4²−1², 4²−0², and (−4)²−(−5)²."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §1.7, odd exercises 7. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "1.7",
+        "odd_exercises": [
+          7
+        ],
+        "workshop": "Constructive difference of squares"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-140",
+      "topic": "Constructive difference of squares",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "Which factorization constructs every multiple 4m as a difference of squares?",
+      "context": "Let n=2k+1 be any odd integer, with k∈Z. Seek integers u,v such that n=u²−v².",
+      "options": [
+        "4m=(m+1)²−m²",
+        "4m=(m+1)²−(m−1)²",
+        "4m=(2m)²",
+        "4m=m²−(m−1)²"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Use u²−v²=(u−v)(u+v), and try two consecutive integers.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Construct witnesses algebraically and use residues to identify limitations.",
+        "correct_rationale": "Expansion gives m²+2m+1−(m²−2m+1)=4m for all integers m. The other expressions are 2m+1, 2m−1, and 4m².",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. Expansion gives m²+2m+1−(m²−2m+1)=4m for all integers m. The other expressions are 2m+1, 2m−1, and 4m²."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. Expansion gives m²+2m+1−(m²−2m+1)=4m for all integers m. The other expressions are 2m+1, 2m−1, and 4m²."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. Expansion gives m²+2m+1−(m²−2m+1)=4m for all integers m. The other expressions are 2m+1, 2m−1, and 4m²."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §1.7, odd exercises 7. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "1.7",
+        "odd_exercises": [
+          7
+        ],
+        "workshop": "Constructive difference of squares"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-141",
+      "topic": "Constructing composite runs",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Why does 5 divide N+5?",
+      "context": "Let N=7!. Examine the six consecutive integers N+2, N+3, …, N+7.",
+      "options": [
+        "7! is prime.",
+        "N+5 ends in 5 for every possible factorial N.",
+        "5 divides both 7! and 5, so it divides their sum.",
+        "5 divides every sum of positive integers."
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Each small integer in the displayed range divides the factorial and its own offset.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Construct simultaneous witnesses and distinguish composite from merely divisible.",
+        "correct_rationale": "The sum property of divisibility applies: 5|7! and 5|5 imply 5|(7!+5). A general decimal-ending claim is unnecessary and false for small factorials.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. The sum property of divisibility applies: 5|7! and 5|5 imply 5|(7!+5). A general decimal-ending claim is unnecessary and false for small factorials."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. The sum property of divisibility applies: 5|7! and 5|5 imply 5|(7!+5). A general decimal-ending claim is unnecessary and false for small factorials."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. The sum property of divisibility applies: 5|7! and 5|5 imply 5|(7!+5). A general decimal-ending claim is unnecessary and false for small factorials."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §1.8, odd exercises 11, 13. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "1.8",
+        "odd_exercises": [
+          11,
+          13
+        ],
+        "workshop": "Constructing composite runs"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-142",
+      "topic": "Constructing composite runs",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What extra fact shows N+5 is composite, not just divisible by 5?",
+      "context": "Let N=7!. Examine the six consecutive integers N+2, N+3, …, N+7.",
+      "options": [
+        "5 is odd only.",
+        "1<5<N+5",
+        "N+5 is positive only.",
+        "Every multiple of 5 is composite, including 5."
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Each small integer in the displayed range divides the factorial and its own offset.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Construct simultaneous witnesses and distinguish composite from merely divisible.",
+        "correct_rationale": "A proper divisor strictly between 1 and the number proves compositeness. The prime number 5 itself is a multiple of 5.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. A proper divisor strictly between 1 and the number proves compositeness. The prime number 5 itself is a multiple of 5."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. A proper divisor strictly between 1 and the number proves compositeness. The prime number 5 itself is a multiple of 5."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. A proper divisor strictly between 1 and the number proves compositeness. The prime number 5 itself is a multiple of 5."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §1.8, odd exercises 11, 13. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "1.8",
+        "odd_exercises": [
+          11,
+          13
+        ],
+        "workshop": "Constructing composite runs"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-143",
+      "topic": "Constructing composite runs",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "How many consecutive composites are established by this displayed construction?",
+      "context": "Let N=7!. Examine the six consecutive integers N+2, N+3, …, N+7.",
+      "options": [
+        "7",
+        "5040",
+        "6",
+        "5"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Each small integer in the displayed range divides the factorial and its own offset.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Construct simultaneous witnesses and distinguish composite from merely divisible.",
+        "correct_rationale": "The offsets 2 through 7 contain 7−2+1=6 integers, each with its own proper divisor.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. The offsets 2 through 7 contain 7−2+1=6 integers, each with its own proper divisor."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. The offsets 2 through 7 contain 7−2+1=6 integers, each with its own proper divisor."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. The offsets 2 through 7 contain 7−2+1=6 integers, each with its own proper divisor."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §1.8, odd exercises 11, 13. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "1.8",
+        "odd_exercises": [
+          11,
+          13
+        ],
+        "workshop": "Constructing composite runs"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-144",
+      "topic": "Constructing composite runs",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "Which construction proves arbitrarily long finite runs of composites?",
+      "context": "Let N=7!. Examine the six consecutive integers N+2, N+3, …, N+7.",
+      "options": [
+        "Use the first L prime numbers.",
+        "Use L!+1 only.",
+        "For length L≥1, use (L+1)!+j for j=2,…,L+1.",
+        "Claim every integer after L! is composite."
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Each small integer in the displayed range divides the factorial and its own offset.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Construct simultaneous witnesses and distinguish composite from merely divisible.",
+        "correct_rationale": "There are L consecutive offsets; each j divides the factorial and its offset and lies strictly between 1 and the constructed number.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. There are L consecutive offsets; each j divides the factorial and its offset and lies strictly between 1 and the constructed number."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. There are L consecutive offsets; each j divides the factorial and its offset and lies strictly between 1 and the constructed number."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. There are L consecutive offsets; each j divides the factorial and its offset and lies strictly between 1 and the constructed number."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §1.8, odd exercises 11, 13. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "1.8",
+        "odd_exercises": [
+          11,
+          13
+        ],
+        "workshop": "Constructing composite runs"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-145",
+      "topic": "Constructing composite runs",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "What does this construction NOT establish?",
+      "context": "Let N=7!. Examine the six consecutive integers N+2, N+3, …, N+7.",
+      "options": [
+        "That a run of six composites exists.",
+        "That there are arbitrarily long finite composite runs.",
+        "That only finitely many primes exist.",
+        "That gaps between consecutive primes are unbounded."
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Each small integer in the displayed range divides the factorial and its own offset.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Construct simultaneous witnesses and distinguish composite from merely divisible.",
+        "correct_rationale": "Arbitrarily long gaps can coexist with infinitely many primes. The construction gives finite composite intervals of every requested length, not an eventually prime-free tail.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. Arbitrarily long gaps can coexist with infinitely many primes. The construction gives finite composite intervals of every requested length, not an eventually prime-free tail."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. Arbitrarily long gaps can coexist with infinitely many primes. The construction gives finite composite intervals of every requested length, not an eventually prime-free tail."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. Arbitrarily long gaps can coexist with infinitely many primes. The construction gives finite composite intervals of every requested length, not an eventually prime-free tail."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §1.8, odd exercises 11, 13. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "1.8",
+        "odd_exercises": [
+          11,
+          13
+        ],
+        "workshop": "Constructing composite runs"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-146",
+      "topic": "Proof errors and logical structure",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Assuming a=b, a purported proof cancels a−b. What is wrong?",
+      "context": "A valid proof must justify every step using the hypotheses and already established results.",
+      "options": [
+        "Every cancellation is invalid.",
+        "Variables cannot denote equal numbers.",
+        "Equality cannot be multiplied.",
+        "It divides by zero."
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Check denominators, the direction of implication, and whether a supposedly arbitrary object was specially selected.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Recognize circularity, unsafe cancellation, vacuity, and incomplete biconditionals.",
+        "correct_rationale": "The hypothesis implies a−b=0. Dividing by that factor is undefined; cancellation requires a nonzero factor.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. The hypothesis implies a−b=0. Dividing by that factor is undefined; cancellation requires a nonzero factor."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. The hypothesis implies a−b=0. Dividing by that factor is undefined; cancellation requires a nonzero factor."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. The hypothesis implies a−b=0. Dividing by that factor is undefined; cancellation requires a nonzero factor."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §1.8, odd exercises 17, 19, 21. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "1.8",
+        "odd_exercises": [
+          17,
+          19,
+          21
+        ],
+        "workshop": "Proof errors and logical structure"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-147",
+      "topic": "Proof errors and logical structure",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "To prove P iff Q, what is required?",
+      "context": "A valid proof must justify every step using the hypotheses and already established results.",
+      "options": [
+        "Prove P→Q and Q→P.",
+        "Prove only ¬Q→¬P.",
+        "Prove only P→Q.",
+        "Give one case in which both hold."
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Check denominators, the direction of implication, and whether a supposedly arbitrary object was specially selected.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Recognize circularity, unsafe cancellation, vacuity, and incomplete biconditionals.",
+        "correct_rationale": "A biconditional needs both directions. ¬Q→¬P is equivalent to the first direction and adds no converse.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. A biconditional needs both directions. ¬Q→¬P is equivalent to the first direction and adds no converse."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. A biconditional needs both directions. ¬Q→¬P is equivalent to the first direction and adds no converse."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. A biconditional needs both directions. ¬Q→¬P is equivalent to the first direction and adds no converse."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §1.8, odd exercises 17, 19, 21. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "1.8",
+        "odd_exercises": [
+          17,
+          19,
+          21
+        ],
+        "workshop": "Proof errors and logical structure"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-148",
+      "topic": "Proof errors and logical structure",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "If a conditional has a false hypothesis for every object in a specified domain, how is it true?",
+      "context": "A valid proof must justify every step using the hypotheses and already established results.",
+      "options": [
+        "It must be false because the hypothesis is false.",
+        "Vacuously; there is no counterexample with a true hypothesis.",
+        "Its conclusion has been proved for every object.",
+        "It is true only when the domain is empty."
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Check denominators, the direction of implication, and whether a supposedly arbitrary object was specially selected.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Recognize circularity, unsafe cancellation, vacuity, and incomplete biconditionals.",
+        "correct_rationale": "Material implication is false only when its hypothesis is true and its conclusion false. Vacuity can occur in a nonempty domain.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. Material implication is false only when its hypothesis is true and its conclusion false. Vacuity can occur in a nonempty domain."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. Material implication is false only when its hypothesis is true and its conclusion false. Vacuity can occur in a nonempty domain."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. Material implication is false only when its hypothesis is true and its conclusion false. Vacuity can occur in a nonempty domain."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §1.8, odd exercises 17, 19, 21. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "1.8",
+        "odd_exercises": [
+          17,
+          19,
+          21
+        ],
+        "workshop": "Proof errors and logical structure"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-149",
+      "topic": "Proof errors and logical structure",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "Which proof plan is circular for a previously unproved theorem T?",
+      "context": "A valid proof must justify every step using the hypotheses and already established results.",
+      "options": [
+        "Prove an equivalent claim independently.",
+        "Use T itself as an essential justification for T.",
+        "Prove all exhaustive cases using established facts.",
+        "Assume ¬T and derive a contradiction from established facts."
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Check denominators, the direction of implication, and whether a supposedly arbitrary object was specially selected.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Recognize circularity, unsafe cancellation, vacuity, and incomplete biconditionals.",
+        "correct_rationale": "Using T as a premise presupposes the result. Contradiction, independent equivalence, and exhaustive cases are valid methods.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. Using T as a premise presupposes the result. Contradiction, independent equivalence, and exhaustive cases are valid methods."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. Using T as a premise presupposes the result. Contradiction, independent equivalence, and exhaustive cases are valid methods."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. Using T as a premise presupposes the result. Contradiction, independent equivalence, and exhaustive cases are valid methods."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §1.8, odd exercises 17, 19, 21. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "1.8",
+        "odd_exercises": [
+          17,
+          19,
+          21
+        ],
+        "workshop": "Proof errors and logical structure"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-150",
+      "topic": "Proof errors and logical structure",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "Which statement correctly distinguishes a disproof from an incomplete proof?",
+      "context": "A valid proof must justify every step using the hypotheses and already established results.",
+      "options": [
+        "A counterexample may ignore the hypotheses.",
+        "A valid counterexample disproves a universal claim; a gap in one argument alone does not.",
+        "Any failed proof proves the claim false.",
+        "A true claim admits no flawed attempted proof."
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Check denominators, the direction of implication, and whether a supposedly arbitrary object was specially selected.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Recognize circularity, unsafe cancellation, vacuity, and incomplete biconditionals.",
+        "correct_rationale": "An argument may fail even when its conclusion is true. To disprove the universal statement, exhibit an allowed instance with a false conclusion.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. An argument may fail even when its conclusion is true. To disprove the universal statement, exhibit an allowed instance with a false conclusion."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. An argument may fail even when its conclusion is true. To disprove the universal statement, exhibit an allowed instance with a false conclusion."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. An argument may fail even when its conclusion is true. To disprove the universal statement, exhibit an allowed instance with a false conclusion."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §1.8, odd exercises 17, 19, 21. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "1.8",
+        "odd_exercises": [
+          17,
+          19,
+          21
+        ],
+        "workshop": "Proof errors and logical structure"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    }
+  ]
+}

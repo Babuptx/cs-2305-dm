@@ -1,0 +1,2751 @@
+{
+  "schema_version": 1,
+  "block_id": "utd-fall-midterm-block-05",
+  "pillar_id": "utd-fall-midterm",
+  "block_title": "UTD 2026 Fall Midterm · Sequences, sums & countability",
+  "questions": [
+    {
+      "id": "utd-fall-midterm-201",
+      "topic": "Arithmetic sequence with indexing",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What is a₈?",
+      "context": "Let a₀=7 and aₙ=aₙ₋₁+4 for integers n≥1.",
+      "options": [
+        "38",
+        "41",
+        "39",
+        "40"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Count the increments from index zero, and count both endpoints in a finite sum.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Unroll a first-order recurrence and handle inclusive summation limits.",
+        "correct_rationale": "Eight increments give 7+8·4=39.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "38 does not satisfy the stated computation. Eight increments give 7+8·4=39."
+          },
+          {
+            "option_index": 1,
+            "rationale": "41 does not satisfy the stated computation. Eight increments give 7+8·4=39."
+          },
+          {
+            "option_index": 3,
+            "rationale": "40 does not satisfy the stated computation. Eight increments give 7+8·4=39."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.4, odd exercises 1, 3, 17, 29, 35, 39. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.4",
+        "odd_exercises": [
+          1,
+          3,
+          17,
+          29,
+          35,
+          39
+        ],
+        "workshop": "Arithmetic sequence with indexing"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "sequence",
+        "args": {
+          "type": "arithmetic",
+          "query": "term"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-202",
+      "topic": "Arithmetic sequence with indexing",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What is Σ from k=0 to 8 of aₖ?",
+      "context": "Let a₀=7 and aₙ=aₙ₋₁+4 for integers n≥1.",
+      "options": [
+        "208",
+        "207",
+        "206",
+        "209"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Count the increments from index zero, and count both endpoints in a finite sum.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Unroll a first-order recurrence and handle inclusive summation limits.",
+        "correct_rationale": "There are 9 terms with first 7 and last 39. Their sum is 9(7+39)/2=207.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "208 does not satisfy the stated computation. There are 9 terms with first 7 and last 39. Their sum is 9(7+39)/2=207."
+          },
+          {
+            "option_index": 2,
+            "rationale": "206 does not satisfy the stated computation. There are 9 terms with first 7 and last 39. Their sum is 9(7+39)/2=207."
+          },
+          {
+            "option_index": 3,
+            "rationale": "209 does not satisfy the stated computation. There are 9 terms with first 7 and last 39. Their sum is 9(7+39)/2=207."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.4, odd exercises 1, 3, 17, 29, 35, 39. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.4",
+        "odd_exercises": [
+          1,
+          3,
+          17,
+          29,
+          35,
+          39
+        ],
+        "workshop": "Arithmetic sequence with indexing"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "sequence",
+        "args": {
+          "type": "arithmetic",
+          "query": "sum"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-203",
+      "topic": "Arithmetic sequence with indexing",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What is Σ from k=3 to 9 of aₖ?",
+      "context": "Let a₀=7 and aₙ=aₙ₋₁+4 for integers n≥1.",
+      "options": [
+        "217",
+        "218",
+        "219",
+        "216"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Count the increments from index zero, and count both endpoints in a finite sum.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Unroll a first-order recurrence and handle inclusive summation limits.",
+        "correct_rationale": "There are 7 terms from 19 to 43; sum 7(19+43)/2=217.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "218 does not satisfy the stated computation. There are 7 terms from 19 to 43; sum 7(19+43)/2=217."
+          },
+          {
+            "option_index": 2,
+            "rationale": "219 does not satisfy the stated computation. There are 7 terms from 19 to 43; sum 7(19+43)/2=217."
+          },
+          {
+            "option_index": 3,
+            "rationale": "216 does not satisfy the stated computation. There are 7 terms from 19 to 43; sum 7(19+43)/2=217."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.4, odd exercises 1, 3, 17, 29, 35, 39. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.4",
+        "odd_exercises": [
+          1,
+          3,
+          17,
+          29,
+          35,
+          39
+        ],
+        "workshop": "Arithmetic sequence with indexing"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "sequence",
+        "args": {
+          "type": "arithmetic",
+          "query": "slice"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-204",
+      "topic": "Arithmetic sequence with indexing",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "What is Σ from j=0 to 5 of a₂ⱼ?",
+      "context": "Let a₀=7 and aₙ=aₙ₋₁+4 for integers n≥1.",
+      "options": [
+        "164",
+        "162",
+        "163",
+        "161"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Count the increments from index zero, and count both endpoints in a finite sum.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Unroll a first-order recurrence and handle inclusive summation limits.",
+        "correct_rationale": "The even-indexed terms are 7,15,23,31,39,47. Their sum is 6(7+47)/2=162.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "164 does not satisfy the stated computation. The even-indexed terms are 7,15,23,31,39,47. Their sum is 6(7+47)/2=162."
+          },
+          {
+            "option_index": 2,
+            "rationale": "163 does not satisfy the stated computation. The even-indexed terms are 7,15,23,31,39,47. Their sum is 6(7+47)/2=162."
+          },
+          {
+            "option_index": 3,
+            "rationale": "161 does not satisfy the stated computation. The even-indexed terms are 7,15,23,31,39,47. Their sum is 6(7+47)/2=162."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.4, odd exercises 1, 3, 17, 29, 35, 39. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.4",
+        "odd_exercises": [
+          1,
+          3,
+          17,
+          29,
+          35,
+          39
+        ],
+        "workshop": "Arithmetic sequence with indexing"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "sequence",
+        "args": {
+          "type": "arithmetic",
+          "query": "even-sum"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-205",
+      "topic": "Arithmetic sequence with indexing",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "What is Σ from k=1 to 8 of (aₖ−aₖ₋₁)?",
+      "context": "Let a₀=7 and aₙ=aₙ₋₁+4 for integers n≥1.",
+      "options": [
+        "34",
+        "31",
+        "32",
+        "33"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Count the increments from index zero, and count both endpoints in a finite sum.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Unroll a first-order recurrence and handle inclusive summation limits.",
+        "correct_rationale": "All interior terms cancel, leaving a₈−a₀=39−7=32. Equivalently sum eight increments of 4.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "34 does not satisfy the stated computation. All interior terms cancel, leaving a₈−a₀=39−7=32. Equivalently sum eight increments of 4."
+          },
+          {
+            "option_index": 1,
+            "rationale": "31 does not satisfy the stated computation. All interior terms cancel, leaving a₈−a₀=39−7=32. Equivalently sum eight increments of 4."
+          },
+          {
+            "option_index": 3,
+            "rationale": "33 does not satisfy the stated computation. All interior terms cancel, leaving a₈−a₀=39−7=32. Equivalently sum eight increments of 4."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.4, odd exercises 1, 3, 17, 29, 35, 39. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.4",
+        "odd_exercises": [
+          1,
+          3,
+          17,
+          29,
+          35,
+          39
+        ],
+        "workshop": "Arithmetic sequence with indexing"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "sequence",
+        "args": {
+          "type": "arithmetic",
+          "query": "telescoping"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-206",
+      "topic": "Alternating geometric sequence",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What is b₆−b₅?",
+      "context": "Let bₙ=3(−2)ⁿ for n≥0.",
+      "options": [
+        "287",
+        "288",
+        "290",
+        "289"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Keep the ratio negative and use (1−r^(N+1))/(1−r) for indices zero through N.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Track signs and use finite geometric sums with shifted limits.",
+        "correct_rationale": "b₆=192 and b₅=−96; subtraction gives 288.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "287 does not satisfy the stated computation. b₆=192 and b₅=−96; subtraction gives 288."
+          },
+          {
+            "option_index": 2,
+            "rationale": "290 does not satisfy the stated computation. b₆=192 and b₅=−96; subtraction gives 288."
+          },
+          {
+            "option_index": 3,
+            "rationale": "289 does not satisfy the stated computation. b₆=192 and b₅=−96; subtraction gives 288."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.4, odd exercises 1, 3, 17, 29, 31. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.4",
+        "odd_exercises": [
+          1,
+          3,
+          17,
+          29,
+          31
+        ],
+        "workshop": "Alternating geometric sequence"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "sequence",
+        "args": {
+          "type": "geometric",
+          "query": "difference"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-207",
+      "topic": "Alternating geometric sequence",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What is Σ from k=0 to 5 of bₖ?",
+      "context": "Let bₙ=3(−2)ⁿ for n≥0.",
+      "options": [
+        "-63",
+        "-64",
+        "-62",
+        "-61"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Keep the ratio negative and use (1−r^(N+1))/(1−r) for indices zero through N.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Track signs and use finite geometric sums with shifted limits.",
+        "correct_rationale": "3(1−(−2)⁶)/(1−(−2))=1−64=−63.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "-64 does not satisfy the stated computation. 3(1−(−2)⁶)/(1−(−2))=1−64=−63."
+          },
+          {
+            "option_index": 2,
+            "rationale": "-62 does not satisfy the stated computation. 3(1−(−2)⁶)/(1−(−2))=1−64=−63."
+          },
+          {
+            "option_index": 3,
+            "rationale": "-61 does not satisfy the stated computation. 3(1−(−2)⁶)/(1−(−2))=1−64=−63."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.4, odd exercises 1, 3, 17, 29, 31. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.4",
+        "odd_exercises": [
+          1,
+          3,
+          17,
+          29,
+          31
+        ],
+        "workshop": "Alternating geometric sequence"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "sequence",
+        "args": {
+          "type": "geometric",
+          "query": "sum"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-208",
+      "topic": "Alternating geometric sequence",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What is Σ from k=3 to 7 of bₖ?",
+      "context": "Let bₙ=3(−2)ⁿ for n≥0.",
+      "options": [
+        "-265",
+        "-263",
+        "-264",
+        "-262"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Keep the ratio negative and use (1−r^(N+1))/(1−r) for indices zero through N.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Track signs and use finite geometric sums with shifted limits.",
+        "correct_rationale": "The sum through 7 is 1−256=−255; through 2 it is 1−(−8)=9. Subtract: −264.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "-265 does not satisfy the stated computation. The sum through 7 is 1−256=−255; through 2 it is 1−(−8)=9. Subtract: −264."
+          },
+          {
+            "option_index": 1,
+            "rationale": "-263 does not satisfy the stated computation. The sum through 7 is 1−256=−255; through 2 it is 1−(−8)=9. Subtract: −264."
+          },
+          {
+            "option_index": 3,
+            "rationale": "-262 does not satisfy the stated computation. The sum through 7 is 1−256=−255; through 2 it is 1−(−8)=9. Subtract: −264."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.4, odd exercises 1, 3, 17, 29, 31. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.4",
+        "odd_exercises": [
+          1,
+          3,
+          17,
+          29,
+          31
+        ],
+        "workshop": "Alternating geometric sequence"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "sequence",
+        "args": {
+          "type": "geometric",
+          "query": "slice"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-209",
+      "topic": "Alternating geometric sequence",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "What is Σ from j=0 to 3 of b₂ⱼ?",
+      "context": "Let bₙ=3(−2)ⁿ for n≥0.",
+      "options": [
+        "254",
+        "255",
+        "256",
+        "257"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Keep the ratio negative and use (1−r^(N+1))/(1−r) for indices zero through N.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Track signs and use finite geometric sums with shifted limits.",
+        "correct_rationale": "Even-indexed terms have ratio 4: 3+12+48+192=255.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "254 does not satisfy the stated computation. Even-indexed terms have ratio 4: 3+12+48+192=255."
+          },
+          {
+            "option_index": 2,
+            "rationale": "256 does not satisfy the stated computation. Even-indexed terms have ratio 4: 3+12+48+192=255."
+          },
+          {
+            "option_index": 3,
+            "rationale": "257 does not satisfy the stated computation. Even-indexed terms have ratio 4: 3+12+48+192=255."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.4, odd exercises 1, 3, 17, 29, 31. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.4",
+        "odd_exercises": [
+          1,
+          3,
+          17,
+          29,
+          31
+        ],
+        "workshop": "Alternating geometric sequence"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "sequence",
+        "args": {
+          "type": "geometric",
+          "query": "even-sum"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-210",
+      "topic": "Alternating geometric sequence",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "What is Σ from k=0 to 4 of (bₖ₊₁+2bₖ)?",
+      "context": "Let bₙ=3(−2)ⁿ for n≥0.",
+      "options": [
+        "1",
+        "2",
+        "-1",
+        "0"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Keep the ratio negative and use (1−r^(N+1))/(1−r) for indices zero through N.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Track signs and use finite geometric sums with shifted limits.",
+        "correct_rationale": "Each summand is zero because bₖ₊₁=−2bₖ, so the entire sum is zero.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "1 does not satisfy the stated computation. Each summand is zero because bₖ₊₁=−2bₖ, so the entire sum is zero."
+          },
+          {
+            "option_index": 1,
+            "rationale": "2 does not satisfy the stated computation. Each summand is zero because bₖ₊₁=−2bₖ, so the entire sum is zero."
+          },
+          {
+            "option_index": 2,
+            "rationale": "-1 does not satisfy the stated computation. Each summand is zero because bₖ₊₁=−2bₖ, so the entire sum is zero."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.4, odd exercises 1, 3, 17, 29, 31. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.4",
+        "odd_exercises": [
+          1,
+          3,
+          17,
+          29,
+          31
+        ],
+        "workshop": "Alternating geometric sequence"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "sequence",
+        "args": {
+          "type": "geometric",
+          "query": "recurrence"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-211",
+      "topic": "Unrolling an affine recurrence",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What is c₄?",
+      "context": "Let c₀=2 and cₙ=3cₙ₋₁+4 for n≥1. Only elementary iteration and substitution are needed.",
+      "options": [
+        "322",
+        "321",
+        "323",
+        "324"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Look for a constant shift that makes the nonhomogeneous addition disappear.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Shift a recurrence to a geometric sequence and verify an explicit rule.",
+        "correct_rationale": "The successive values are c₁=10, c₂=34, c₃=106, c₄=322.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "321 does not satisfy the stated computation. The successive values are c₁=10, c₂=34, c₃=106, c₄=322."
+          },
+          {
+            "option_index": 2,
+            "rationale": "323 does not satisfy the stated computation. The successive values are c₁=10, c₂=34, c₃=106, c₄=322."
+          },
+          {
+            "option_index": 3,
+            "rationale": "324 does not satisfy the stated computation. The successive values are c₁=10, c₂=34, c₃=106, c₄=322."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.4, odd exercises 9, 13, 15, 17. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.4",
+        "odd_exercises": [
+          9,
+          13,
+          15,
+          17
+        ],
+        "workshop": "Unrolling an affine recurrence"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "sequence",
+        "args": {
+          "type": "affine",
+          "query": "term"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-212",
+      "topic": "Unrolling an affine recurrence",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What is c₀+c₁+c₂+c₃?",
+      "context": "Let c₀=2 and cₙ=3cₙ₋₁+4 for n≥1. Only elementary iteration and substitution are needed.",
+      "options": [
+        "151",
+        "152",
+        "154",
+        "153"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Look for a constant shift that makes the nonhomogeneous addition disappear.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Shift a recurrence to a geometric sequence and verify an explicit rule.",
+        "correct_rationale": "The first four values are 2,10,34,106; their sum is 152.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "151 does not satisfy the stated computation. The first four values are 2,10,34,106; their sum is 152."
+          },
+          {
+            "option_index": 2,
+            "rationale": "154 does not satisfy the stated computation. The first four values are 2,10,34,106; their sum is 152."
+          },
+          {
+            "option_index": 3,
+            "rationale": "153 does not satisfy the stated computation. The first four values are 2,10,34,106; their sum is 152."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.4, odd exercises 9, 13, 15, 17. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.4",
+        "odd_exercises": [
+          9,
+          13,
+          15,
+          17
+        ],
+        "workshop": "Unrolling an affine recurrence"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "sequence",
+        "args": {
+          "type": "affine",
+          "query": "sum"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-213",
+      "topic": "Unrolling an affine recurrence",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Which transformation gives dₙ=3dₙ₋₁?",
+      "context": "Let c₀=2 and cₙ=3cₙ₋₁+4 for n≥1. Only elementary iteration and substitution are needed.",
+      "options": [
+        "dₙ=cₙ+4",
+        "dₙ=cₙ+2",
+        "dₙ=cₙ−2",
+        "dₙ=cₙ/3"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Look for a constant shift that makes the nonhomogeneous addition disappear.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Shift a recurrence to a geometric sequence and verify an explicit rule.",
+        "correct_rationale": "cₙ+2=3cₙ₋₁+6=3(cₙ₋₁+2). The required shift solves 4+s=3s, giving s=2.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. cₙ+2=3cₙ₋₁+6=3(cₙ₋₁+2). The required shift solves 4+s=3s, giving s=2."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. cₙ+2=3cₙ₋₁+6=3(cₙ₋₁+2). The required shift solves 4+s=3s, giving s=2."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. cₙ+2=3cₙ₋₁+6=3(cₙ₋₁+2). The required shift solves 4+s=3s, giving s=2."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.4, odd exercises 9, 13, 15, 17. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.4",
+        "odd_exercises": [
+          9,
+          13,
+          15,
+          17
+        ],
+        "workshop": "Unrolling an affine recurrence"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-214",
+      "topic": "Unrolling an affine recurrence",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "Which explicit formula satisfies the initial value and recurrence?",
+      "context": "Let c₀=2 and cₙ=3cₙ₋₁+4 for n≥1. Only elementary iteration and substitution are needed.",
+      "options": [
+        "cₙ=4·3ⁿ+2",
+        "cₙ=2·3ⁿ+4",
+        "cₙ=6n+2",
+        "cₙ=4·3ⁿ−2"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Look for a constant shift that makes the nonhomogeneous addition disappear.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Shift a recurrence to a geometric sequence and verify an explicit rule.",
+        "correct_rationale": "The shifted sequence starts d₀=4 and multiplies by 3, so cₙ=dₙ−2=4·3ⁿ−2. Substitution checks both the base and the step.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. The shifted sequence starts d₀=4 and multiplies by 3, so cₙ=dₙ−2=4·3ⁿ−2. Substitution checks both the base and the step."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. The shifted sequence starts d₀=4 and multiplies by 3, so cₙ=dₙ−2=4·3ⁿ−2. Substitution checks both the base and the step."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. The shifted sequence starts d₀=4 and multiplies by 3, so cₙ=dₙ−2=4·3ⁿ−2. Substitution checks both the base and the step."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.4, odd exercises 9, 13, 15, 17. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.4",
+        "odd_exercises": [
+          9,
+          13,
+          15,
+          17
+        ],
+        "workshop": "Unrolling an affine recurrence"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-215",
+      "topic": "Unrolling an affine recurrence",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "Why does merely checking the formula at n=0 and n=1 not prove it for every n?",
+      "context": "Let c₀=2 and cₙ=3cₙ₋₁+4 for n≥1. Only elementary iteration and substitution are needed.",
+      "options": [
+        "A recurrence cannot be checked algebraically.",
+        "Other formulas can agree at those two indices but fail the recurrence later.",
+        "Two matching terms always determine any sequence.",
+        "Initial conditions never matter."
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Look for a constant shift that makes the nonhomogeneous addition disappear.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Shift a recurrence to a geometric sequence and verify an explicit rule.",
+        "correct_rationale": "The proposed rule must satisfy cₙ=3cₙ₋₁+4 at a general index as well as the initial condition; two numerical matches alone are insufficient.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. The proposed rule must satisfy cₙ=3cₙ₋₁+4 at a general index as well as the initial condition; two numerical matches alone are insufficient."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. The proposed rule must satisfy cₙ=3cₙ₋₁+4 at a general index as well as the initial condition; two numerical matches alone are insufficient."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. The proposed rule must satisfy cₙ=3cₙ₋₁+4 at a general index as well as the initial condition; two numerical matches alone are insufficient."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.4, odd exercises 9, 13, 15, 17. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.4",
+        "odd_exercises": [
+          9,
+          13,
+          15,
+          17
+        ],
+        "workshop": "Unrolling an affine recurrence"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-216",
+      "topic": "Index shifts and double sums",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What is Σ from k=4 to 11 of (2k−1)?",
+      "context": "All sums below have integer indices and include both endpoints. An empty sum is zero.",
+      "options": [
+        "112",
+        "113",
+        "111",
+        "114"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Write a few terms at both ends before applying a closed summation formula.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Evaluate nested sums and preserve summands when shifting an index.",
+        "correct_rationale": "There are 8 odd terms, first 7 and last 21; 8(7+21)/2=112.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "113 does not satisfy the stated computation. There are 8 odd terms, first 7 and last 21; 8(7+21)/2=112."
+          },
+          {
+            "option_index": 2,
+            "rationale": "111 does not satisfy the stated computation. There are 8 odd terms, first 7 and last 21; 8(7+21)/2=112."
+          },
+          {
+            "option_index": 3,
+            "rationale": "114 does not satisfy the stated computation. There are 8 odd terms, first 7 and last 21; 8(7+21)/2=112."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.4, odd exercises 29, 33, 39, 41. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.4",
+        "odd_exercises": [
+          29,
+          33,
+          39,
+          41
+        ],
+        "workshop": "Index shifts and double sums"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "sum",
+        "args": {
+          "query": "odd-slice"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-217",
+      "topic": "Index shifts and double sums",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What is Σ from i=1 to 4 of Σ from j=1 to 3 of (i+j)?",
+      "context": "All sums below have integer indices and include both endpoints. An empty sum is zero.",
+      "options": [
+        "55",
+        "53",
+        "54",
+        "56"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Write a few terms at both ends before applying a closed summation formula.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Evaluate nested sums and preserve summands when shifting an index.",
+        "correct_rationale": "Each inner sum is 3i+6. Sum over i to get 3·10+4·6=54.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "55 does not satisfy the stated computation. Each inner sum is 3i+6. Sum over i to get 3·10+4·6=54."
+          },
+          {
+            "option_index": 1,
+            "rationale": "53 does not satisfy the stated computation. Each inner sum is 3i+6. Sum over i to get 3·10+4·6=54."
+          },
+          {
+            "option_index": 3,
+            "rationale": "56 does not satisfy the stated computation. Each inner sum is 3i+6. Sum over i to get 3·10+4·6=54."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.4, odd exercises 29, 33, 39, 41. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.4",
+        "odd_exercises": [
+          29,
+          33,
+          39,
+          41
+        ],
+        "workshop": "Index shifts and double sums"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "sum",
+        "args": {
+          "query": "double"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-218",
+      "topic": "Index shifts and double sums",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What is Σ from k=0 to 6 of (k+2)²?",
+      "context": "All sums below have integer indices and include both endpoints. An empty sum is zero.",
+      "options": [
+        "205",
+        "204",
+        "202",
+        "203"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Write a few terms at both ends before applying a closed summation formula.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Evaluate nested sums and preserve summands when shifting an index.",
+        "correct_rationale": "The squares are 2² through 8². The sum of 1² through 8² is 204; subtract 1 to get 203.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "205 does not satisfy the stated computation. The squares are 2² through 8². The sum of 1² through 8² is 204; subtract 1 to get 203."
+          },
+          {
+            "option_index": 1,
+            "rationale": "204 does not satisfy the stated computation. The squares are 2² through 8². The sum of 1² through 8² is 204; subtract 1 to get 203."
+          },
+          {
+            "option_index": 2,
+            "rationale": "202 does not satisfy the stated computation. The squares are 2² through 8². The sum of 1² through 8² is 204; subtract 1 to get 203."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.4, odd exercises 29, 33, 39, 41. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.4",
+        "odd_exercises": [
+          29,
+          33,
+          39,
+          41
+        ],
+        "workshop": "Index shifts and double sums"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "sum",
+        "args": {
+          "query": "squares"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-219",
+      "topic": "Index shifts and double sums",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "After setting j=k−3, which sum equals Σ from k=3 to n of (k+1), for n≥3?",
+      "context": "All sums below have integer indices and include both endpoints. An empty sum is zero.",
+      "options": [
+        "Σ from j=0 to n−3 of (j+4)",
+        "Σ from j=3 to n of (j+4)",
+        "Σ from j=0 to n−3 of (j+1)",
+        "Σ from j=0 to n of (j+4)"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Write a few terms at both ends before applying a closed summation formula.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Evaluate nested sums and preserve summands when shifting an index.",
+        "correct_rationale": "The new limits are 0 and n−3, while k+1 becomes j+4. Shift both bounds and the summand.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. The new limits are 0 and n−3, while k+1 becomes j+4. Shift both bounds and the summand."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. The new limits are 0 and n−3, while k+1 becomes j+4. Shift both bounds and the summand."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. The new limits are 0 and n−3, while k+1 becomes j+4. Shift both bounds and the summand."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.4, odd exercises 29, 33, 39, 41. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.4",
+        "odd_exercises": [
+          29,
+          33,
+          39,
+          41
+        ],
+        "workshop": "Index shifts and double sums"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-220",
+      "topic": "Index shifts and double sums",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "For n≥1, which formula equals Σ from i=1 to n of Σ from j=1 to i of 1?",
+      "context": "All sums below have integer indices and include both endpoints. An empty sum is zero.",
+      "options": [
+        "2n",
+        "n(n−1)/2",
+        "n²",
+        "n(n+1)/2"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Write a few terms at both ends before applying a closed summation formula.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Evaluate nested sums and preserve summands when shifting an index.",
+        "correct_rationale": "For a fixed i the inner sum is i, not n. Summing 1+2+…+n gives n(n+1)/2; the dependent upper bound matters.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. For a fixed i the inner sum is i, not n. Summing 1+2+…+n gives n(n+1)/2; the dependent upper bound matters."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. For a fixed i the inner sum is i, not n. Summing 1+2+…+n gives n(n+1)/2; the dependent upper bound matters."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. For a fixed i the inner sum is i, not n. Summing 1+2+…+n gives n(n+1)/2; the dependent upper bound matters."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.4, odd exercises 29, 33, 39, 41. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.4",
+        "odd_exercises": [
+          29,
+          33,
+          39,
+          41
+        ],
+        "workshop": "Index shifts and double sums"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-221",
+      "topic": "Telescoping and finite differences",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What is s₉?",
+      "context": "Let s₀=0 and sₙ=sₙ₋₁+(2n−1) for n≥1. Also consider sums of differences f(k+1)−f(k).",
+      "options": [
+        "80",
+        "82",
+        "81",
+        "83"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Pair each positive interior term with its negative copy; only endpoints remain.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Recognize telescoping cancellation and verify a sequence formula by its difference.",
+        "correct_rationale": "The first nine positive odd numbers sum to 9²=81; successive values 0,1,4,9,… agree with sₙ=n².",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "80 does not satisfy the stated computation. The first nine positive odd numbers sum to 9²=81; successive values 0,1,4,9,… agree with sₙ=n²."
+          },
+          {
+            "option_index": 1,
+            "rationale": "82 does not satisfy the stated computation. The first nine positive odd numbers sum to 9²=81; successive values 0,1,4,9,… agree with sₙ=n²."
+          },
+          {
+            "option_index": 3,
+            "rationale": "83 does not satisfy the stated computation. The first nine positive odd numbers sum to 9²=81; successive values 0,1,4,9,… agree with sₙ=n²."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.4, odd exercises 15, 17, 35, 37. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.4",
+        "odd_exercises": [
+          15,
+          17,
+          35,
+          37
+        ],
+        "workshop": "Telescoping and finite differences"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "sum",
+        "args": {
+          "query": "odd-total"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-222",
+      "topic": "Telescoping and finite differences",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What is Σ from k=2 to 8 of ((k+1)²−k²)?",
+      "context": "Let s₀=0 and sₙ=sₙ₋₁+(2n−1) for n≥1. Also consider sums of differences f(k+1)−f(k).",
+      "options": [
+        "76",
+        "77",
+        "78",
+        "79"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Pair each positive interior term with its negative copy; only endpoints remain.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Recognize telescoping cancellation and verify a sequence formula by its difference.",
+        "correct_rationale": "Cancellation leaves 9²−2²=81−4=77.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "76 does not satisfy the stated computation. Cancellation leaves 9²−2²=81−4=77."
+          },
+          {
+            "option_index": 2,
+            "rationale": "78 does not satisfy the stated computation. Cancellation leaves 9²−2²=81−4=77."
+          },
+          {
+            "option_index": 3,
+            "rationale": "79 does not satisfy the stated computation. Cancellation leaves 9²−2²=81−4=77."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.4, odd exercises 15, 17, 35, 37. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.4",
+        "odd_exercises": [
+          15,
+          17,
+          35,
+          37
+        ],
+        "workshop": "Telescoping and finite differences"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "sum",
+        "args": {
+          "query": "square-telescope"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-223",
+      "topic": "Telescoping and finite differences",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What is Σ from k=1 to 9 of (1/k−1/(k+1))?",
+      "context": "Let s₀=0 and sₙ=sₙ₋₁+(2n−1) for n≥1. Also consider sums of differences f(k+1)−f(k).",
+      "options": [
+        "9",
+        "1/10",
+        "1",
+        "9/10"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Pair each positive interior term with its negative copy; only endpoints remain.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Recognize telescoping cancellation and verify a sequence formula by its difference.",
+        "correct_rationale": "Write 1−1/2+1/2−1/3+…+1/9−1/10. The result is 1−1/10=9/10.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. Write 1−1/2+1/2−1/3+…+1/9−1/10. The result is 1−1/10=9/10."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. Write 1−1/2+1/2−1/3+…+1/9−1/10. The result is 1−1/10=9/10."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. Write 1−1/2+1/2−1/3+…+1/9−1/10. The result is 1−1/10=9/10."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.4, odd exercises 15, 17, 35, 37. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.4",
+        "odd_exercises": [
+          15,
+          17,
+          35,
+          37
+        ],
+        "workshop": "Telescoping and finite differences"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "sum",
+        "args": {
+          "query": "fraction-telescope"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-224",
+      "topic": "Telescoping and finite differences",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "Which identity verifies the transition for sₙ=n²?",
+      "context": "Let s₀=0 and sₙ=sₙ₋₁+(2n−1) for n≥1. Also consider sums of differences f(k+1)−f(k).",
+      "options": [
+        "n²=(n−1)²+1",
+        "n²−(n−1)²=2n−1",
+        "n²−(n−1)²=2n+1",
+        "n²−(n−1)²=n"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Pair each positive interior term with its negative copy; only endpoints remain.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Recognize telescoping cancellation and verify a sequence formula by its difference.",
+        "correct_rationale": "Expand the left side to n²−n²+2n−1. Together with s₀=0, it verifies the proposed formula against the recurrence.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. Expand the left side to n²−n²+2n−1. Together with s₀=0, it verifies the proposed formula against the recurrence."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. Expand the left side to n²−n²+2n−1. Together with s₀=0, it verifies the proposed formula against the recurrence."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. Expand the left side to n²−n²+2n−1. Together with s₀=0, it verifies the proposed formula against the recurrence."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.4, odd exercises 15, 17, 35, 37. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.4",
+        "odd_exercises": [
+          15,
+          17,
+          35,
+          37
+        ],
+        "workshop": "Telescoping and finite differences"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-225",
+      "topic": "Telescoping and finite differences",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "For n≥m≥1, what is Σ from k=m to n of 1/[k(k+1)]?",
+      "context": "Let s₀=0 and sₙ=sₙ₋₁+(2n−1) for n≥1. Also consider sums of differences f(k+1)−f(k).",
+      "options": [
+        "1/m−1/(n+1)",
+        "1/(m+1)−1/n",
+        "(n−m+1)/(n(n+1))",
+        "1/m−1/n"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Pair each positive interior term with its negative copy; only endpoints remain.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Recognize telescoping cancellation and verify a sequence formula by its difference.",
+        "correct_rationale": "Decompose 1/[k(k+1)]=1/k−1/(k+1). Interior fractions cancel, leaving exactly the lower and shifted upper endpoints.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. Decompose 1/[k(k+1)]=1/k−1/(k+1). Interior fractions cancel, leaving exactly the lower and shifted upper endpoints."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. Decompose 1/[k(k+1)]=1/k−1/(k+1). Interior fractions cancel, leaving exactly the lower and shifted upper endpoints."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. Decompose 1/[k(k+1)]=1/k−1/(k+1). Interior fractions cancel, leaving exactly the lower and shifted upper endpoints."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.4, odd exercises 15, 17, 35, 37. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.4",
+        "odd_exercises": [
+          15,
+          17,
+          35,
+          37
+        ],
+        "workshop": "Telescoping and finite differences"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-226",
+      "topic": "Bijections and infinite subsets",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Which is a bijection Z⁺→{integers greater than 20}?",
+      "context": "N={0,1,2,…}, Z⁺={1,2,3,…}. “Countable” includes finite sets as well as countably infinite sets.",
+      "options": [
+        "f(n)=n+20",
+        "f(n)=n+19",
+        "f(n)=n²+20",
+        "f(n)=20n"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Show both that every target has a preimage and that no two inputs collide.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Build bijections and avoid extending finite-cardinality intuitions to infinite sets.",
+        "correct_rationale": "Subtracting 20 gives a unique positive-integer preimage for every target. The alternatives miss targets or include 20.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. Subtracting 20 gives a unique positive-integer preimage for every target. The alternatives miss targets or include 20."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. Subtracting 20 gives a unique positive-integer preimage for every target. The alternatives miss targets or include 20."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. Subtracting 20 gives a unique positive-integer preimage for every target. The alternatives miss targets or include 20."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.5, odd exercises 1, 3, 13, 19. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.5",
+        "odd_exercises": [
+          1,
+          3,
+          13,
+          19
+        ],
+        "workshop": "Bijections and infinite subsets"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-227",
+      "topic": "Bijections and infinite subsets",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Why does the proper inclusion 2Z⊊Z not imply |2Z|<|Z|?",
+      "context": "N={0,1,2,…}, Z⁺={1,2,3,…}. “Countable” includes finite sets as well as countably infinite sets.",
+      "options": [
+        "Every subset has its parent’s cardinality.",
+        "2Z is finite.",
+        "The inclusion is actually equality.",
+        "n↦2n is a bijection Z→2Z."
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Show both that every target has a preimage and that no two inputs collide.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Build bijections and avoid extending finite-cardinality intuitions to infinite sets.",
+        "correct_rationale": "The explicit bijection proves equal cardinality despite proper inclusion. This behavior is possible for infinite sets, not all subsets.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. The explicit bijection proves equal cardinality despite proper inclusion. This behavior is possible for infinite sets, not all subsets."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. The explicit bijection proves equal cardinality despite proper inclusion. This behavior is possible for infinite sets, not all subsets."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. The explicit bijection proves equal cardinality despite proper inclusion. This behavior is possible for infinite sets, not all subsets."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.5, odd exercises 1, 3, 13, 19. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.5",
+        "odd_exercises": [
+          1,
+          3,
+          13,
+          19
+        ],
+        "workshop": "Bijections and infinite subsets"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-228",
+      "topic": "Bijections and infinite subsets",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Which classification applies to Z∖{−10,…,10}?",
+      "context": "N={0,1,2,…}, Z⁺={1,2,3,…}. “Countable” includes finite sets as well as countably infinite sets.",
+      "options": [
+        "Finite",
+        "Countably infinite",
+        "Empty",
+        "Uncountable"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Show both that every target has a preimage and that no two inputs collide.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Build bijections and avoid extending finite-cardinality intuitions to infinite sets.",
+        "correct_rationale": "It is an infinite subset of countable Z, and deleting finitely many integers leaves infinitely many integers.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. It is an infinite subset of countable Z, and deleting finitely many integers leaves infinitely many integers."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. It is an infinite subset of countable Z, and deleting finitely many integers leaves infinitely many integers."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. It is an infinite subset of countable Z, and deleting finitely many integers leaves infinitely many integers."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.5, odd exercises 1, 3, 13, 19. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.5",
+        "odd_exercises": [
+          1,
+          3,
+          13,
+          19
+        ],
+        "workshop": "Bijections and infinite subsets"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-229",
+      "topic": "Bijections and infinite subsets",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "Which fact suffices to show an infinite set S is countably infinite?",
+      "context": "N={0,1,2,…}, Z⁺={1,2,3,…}. “Countable” includes finite sets as well as countably infinite sets.",
+      "options": [
+        "There is an injection S→N.",
+        "S contains a copy of N only.",
+        "S is a subset of R only.",
+        "There is an injection N→S only."
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Show both that every target has a preimage and that no two inputs collide.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Build bijections and avoid extending finite-cardinality intuitions to infinite sets.",
+        "correct_rationale": "An injection into N shows S is at most countable; the stated infinitude excludes the finite case. An injection from N only gives a lower bound.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. An injection into N shows S is at most countable; the stated infinitude excludes the finite case. An injection from N only gives a lower bound."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. An injection into N shows S is at most countable; the stated infinitude excludes the finite case. An injection from N only gives a lower bound."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. An injection into N shows S is at most countable; the stated infinitude excludes the finite case. An injection from N only gives a lower bound."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.5, odd exercises 1, 3, 13, 19. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.5",
+        "odd_exercises": [
+          1,
+          3,
+          13,
+          19
+        ],
+        "workshop": "Bijections and infinite subsets"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-230",
+      "topic": "Bijections and infinite subsets",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "What does Schröder–Bernstein allow one to conclude from injections A→B and B→A?",
+      "context": "N={0,1,2,…}, Z⁺={1,2,3,…}. “Countable” includes finite sets as well as countably infinite sets.",
+      "options": [
+        "A and B are equal as sets.",
+        "A and B admit a bijection.",
+        "The two injections are inverses.",
+        "Both sets are finite."
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Show both that every target has a preimage and that no two inputs collide.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Build bijections and avoid extending finite-cardinality intuitions to infinite sets.",
+        "correct_rationale": "Injections in both directions establish equality of cardinalities, even for infinite or different sets. They need not be mutual inverses.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. Injections in both directions establish equality of cardinalities, even for infinite or different sets. They need not be mutual inverses."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. Injections in both directions establish equality of cardinalities, even for infinite or different sets. They need not be mutual inverses."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. Injections in both directions establish equality of cardinalities, even for infinite or different sets. They need not be mutual inverses."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.5, odd exercises 1, 3, 13, 19. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.5",
+        "odd_exercises": [
+          1,
+          3,
+          13,
+          19
+        ],
+        "workshop": "Bijections and infinite subsets"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-231",
+      "topic": "Rationals and finite descriptions",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "How is the set of all finite binary strings classified?",
+      "context": "A finite binary string has finitely many symbols. An infinite binary sequence has one bit at every positive integer index.",
+      "options": [
+        "Countably infinite",
+        "The same finite size as {0,1}",
+        "Uncountable",
+        "Finite"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "List finite objects by length, but do not treat an infinite sequence as a finite-length object.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Separate a countable union of finite descriptions from an uncountable set of infinite sequences.",
+        "correct_rationale": "List by increasing length, then lexicographically within each finite length. This gives an enumeration with infinitely many strings.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. List by increasing length, then lexicographically within each finite length. This gives an enumeration with infinitely many strings."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. List by increasing length, then lexicographically within each finite length. This gives an enumeration with infinitely many strings."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. List by increasing length, then lexicographically within each finite length. This gives an enumeration with infinitely many strings."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.5, odd exercises 1, 3, 25, 37. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.5",
+        "odd_exercises": [
+          1,
+          3,
+          25,
+          37
+        ],
+        "workshop": "Rationals and finite descriptions"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-232",
+      "topic": "Rationals and finite descriptions",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Why is Q countable even though each interval contains infinitely many rationals?",
+      "context": "A finite binary string has finitely many symbols. An infinite binary sequence has one bit at every positive integer index.",
+      "options": [
+        "Every rational has a finite decimal expansion.",
+        "Q contains only finitely many negative numbers.",
+        "Every dense set is countable.",
+        "Rational numbers can be encoded by reduced integer numerator/positive denominator pairs."
+      ],
+      "correct_index": 3,
+      "hints": [
+        "List finite objects by length, but do not treat an infinite sequence as a finite-length object.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Separate a countable union of finite descriptions from an uncountable set of infinite sequences.",
+        "correct_rationale": "Integer pairs can be enumerated diagonally; choosing a reduced fraction gives a unique encoding. Density and decimal termination are separate issues.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. Integer pairs can be enumerated diagonally; choosing a reduced fraction gives a unique encoding. Density and decimal termination are separate issues."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. Integer pairs can be enumerated diagonally; choosing a reduced fraction gives a unique encoding. Density and decimal termination are separate issues."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. Integer pairs can be enumerated diagonally; choosing a reduced fraction gives a unique encoding. Density and decimal termination are separate issues."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.5, odd exercises 1, 3, 25, 37. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.5",
+        "odd_exercises": [
+          1,
+          3,
+          25,
+          37
+        ],
+        "workshop": "Rationals and finite descriptions"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-233",
+      "topic": "Rationals and finite descriptions",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Which set is uncountable?",
+      "context": "A finite binary string has finitely many symbols. An infinite binary sequence has one bit at every positive integer index.",
+      "options": [
+        "All infinite binary sequences",
+        "All positive rational numbers",
+        "All ordered pairs of integers",
+        "All finite binary strings"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "List finite objects by length, but do not treat an infinite sequence as a finite-length object.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Separate a countable union of finite descriptions from an uncountable set of infinite sequences.",
+        "correct_rationale": "Diagonalization constructs a binary sequence different from the nth listed sequence at position n. The other three sets admit enumerations.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. Diagonalization constructs a binary sequence different from the nth listed sequence at position n. The other three sets admit enumerations."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. Diagonalization constructs a binary sequence different from the nth listed sequence at position n. The other three sets admit enumerations."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. Diagonalization constructs a binary sequence different from the nth listed sequence at position n. The other three sets admit enumerations."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.5, odd exercises 1, 3, 25, 37. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.5",
+        "odd_exercises": [
+          1,
+          3,
+          25,
+          37
+        ],
+        "workshop": "Rationals and finite descriptions"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-234",
+      "topic": "Rationals and finite descriptions",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "Why does listing real numbers by the length of their decimal representations fail?",
+      "context": "A finite binary string has finitely many symbols. An infinite binary sequence has one bit at every positive integer index.",
+      "options": [
+        "Most real numbers do not have a finite decimal representation.",
+        "Every real has exactly two decimal representations.",
+        "Finite strings cannot be enumerated.",
+        "Decimal digits form an uncountable alphabet."
+      ],
+      "correct_index": 0,
+      "hints": [
+        "List finite objects by length, but do not treat an infinite sequence as a finite-length object.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Separate a countable union of finite descriptions from an uncountable set of infinite sequences.",
+        "correct_rationale": "Length-by-length enumeration covers only finite descriptions, not arbitrary infinite expansions. The digit alphabet is finite, and only certain reals have two standard expansions.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. Length-by-length enumeration covers only finite descriptions, not arbitrary infinite expansions. The digit alphabet is finite, and only certain reals have two standard expansions."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. Length-by-length enumeration covers only finite descriptions, not arbitrary infinite expansions. The digit alphabet is finite, and only certain reals have two standard expansions."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. Length-by-length enumeration covers only finite descriptions, not arbitrary infinite expansions. The digit alphabet is finite, and only certain reals have two standard expansions."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.5, odd exercises 1, 3, 25, 37. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.5",
+        "odd_exercises": [
+          1,
+          3,
+          25,
+          37
+        ],
+        "workshop": "Rationals and finite descriptions"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-235",
+      "topic": "Rationals and finite descriptions",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "What follows about finite programs over a finite alphabet?",
+      "context": "A finite binary string has finitely many symbols. An infinite binary sequence has one bit at every positive integer index.",
+      "options": [
+        "There are countably many such programs.",
+        "Every function N→{0,1} is computable by a finite program.",
+        "There are uncountably many finite programs.",
+        "There are only finitely many possible lengths."
+      ],
+      "correct_index": 0,
+      "hints": [
+        "List finite objects by length, but do not treat an infinite sequence as a finite-length object.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Separate a countable union of finite descriptions from an uncountable set of infinite sequences.",
+        "correct_rationale": "Programs form a subset of countably many finite strings. Boolean-valued functions on N correspond to uncountably many infinite bit sequences, so finite programs cannot compute all of them.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. Programs form a subset of countably many finite strings. Boolean-valued functions on N correspond to uncountably many infinite bit sequences, so finite programs cannot compute all of them."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. Programs form a subset of countably many finite strings. Boolean-valued functions on N correspond to uncountably many infinite bit sequences, so finite programs cannot compute all of them."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. Programs form a subset of countably many finite strings. Boolean-valued functions on N correspond to uncountably many infinite bit sequences, so finite programs cannot compute all of them."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.5, odd exercises 1, 3, 25, 37. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.5",
+        "odd_exercises": [
+          1,
+          3,
+          25,
+          37
+        ],
+        "workshop": "Rationals and finite descriptions"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-236",
+      "topic": "Cantor diagonal construction",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Why is d different from s₆?",
+      "context": "Suppose infinite binary sequences are listed as s₁,s₂,…, with sᵢ(j) the jth bit of sequence i. Define d(i)=1−sᵢ(i).",
+      "options": [
+        "s₆ is finite.",
+        "They have different lengths.",
+        "d must contain only ones.",
+        "They differ at position 6."
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Compare the constructed sequence with the ith listed sequence at coordinate i.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Explain the exact contradiction in a diagonal argument and avoid digit-expansion ambiguity.",
+        "correct_rationale": "The definition gives d(6)=1−s₆(6), the opposite bit. Both sequences still have infinite length.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. The definition gives d(6)=1−s₆(6), the opposite bit. Both sequences still have infinite length."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. The definition gives d(6)=1−s₆(6), the opposite bit. Both sequences still have infinite length."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. The definition gives d(6)=1−s₆(6), the opposite bit. Both sequences still have infinite length."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.5, odd exercises 3, 35. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.5",
+        "odd_exercises": [
+          3,
+          35
+        ],
+        "workshop": "Cantor diagonal construction"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-237",
+      "topic": "Cantor diagonal construction",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What makes d a legitimate binary sequence?",
+      "context": "Suppose infinite binary sequences are listed as s₁,s₂,…, with sᵢ(j) the jth bit of sequence i. Define d(i)=1−sᵢ(i).",
+      "options": [
+        "d already has a position in the assumed list.",
+        "d has finitely many terms.",
+        "Every value 1−sᵢ(i) is either 0 or 1.",
+        "d is eventually zero by definition."
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Compare the constructed sequence with the ith listed sequence at coordinate i.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Explain the exact contradiction in a diagonal argument and avoid digit-expansion ambiguity.",
+        "correct_rationale": "Complementing a bit produces a bit, so d satisfies the object definition independently of the completeness of the alleged list.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. Complementing a bit produces a bit, so d satisfies the object definition independently of the completeness of the alleged list."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. Complementing a bit produces a bit, so d satisfies the object definition independently of the completeness of the alleged list."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. Complementing a bit produces a bit, so d satisfies the object definition independently of the completeness of the alleged list."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.5, odd exercises 3, 35. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.5",
+        "odd_exercises": [
+          3,
+          35
+        ],
+        "workshop": "Cantor diagonal construction"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-238",
+      "topic": "Cantor diagonal construction",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What assumption is contradicted?",
+      "context": "Suppose infinite binary sequences are listed as s₁,s₂,…, with sᵢ(j) the jth bit of sequence i. Define d(i)=1−sᵢ(i).",
+      "options": [
+        "The integers are countable.",
+        "Every sequence has a first bit.",
+        "The list includes every infinite binary sequence.",
+        "Binary digits exist."
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Compare the constructed sequence with the ith listed sequence at coordinate i.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Explain the exact contradiction in a diagonal argument and avoid digit-expansion ambiguity.",
+        "correct_rationale": "d is an infinite binary sequence omitted from the list. The contradiction concerns exhaustive enumeration.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. d is an infinite binary sequence omitted from the list. The contradiction concerns exhaustive enumeration."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. d is an infinite binary sequence omitted from the list. The contradiction concerns exhaustive enumeration."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. d is an infinite binary sequence omitted from the list. The contradiction concerns exhaustive enumeration."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.5, odd exercises 3, 35. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.5",
+        "odd_exercises": [
+          3,
+          35
+        ],
+        "workshop": "Cantor diagonal construction"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-239",
+      "topic": "Cantor diagonal construction",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "For decimal diagonalization, why can choosing only replacement digits 4 and 5 help?",
+      "context": "Suppose infinite binary sequences are listed as s₁,s₂,…, with sᵢ(j) the jth bit of sequence i. Define d(i)=1−sᵢ(i).",
+      "options": [
+        "It makes the constructed real rational.",
+        "4 and 5 are the only real decimal digits.",
+        "It ensures every digit is different from every digit in the list.",
+        "It avoids ambiguity from a terminating expansion versus an infinite tail of 9s."
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Compare the constructed sequence with the ith listed sequence at coordinate i.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Explain the exact contradiction in a diagonal argument and avoid digit-expansion ambiguity.",
+        "correct_rationale": "Choose 4 unless the diagonal digit is 4, otherwise 5. The new number differs at each diagonal coordinate and has no alternative tail-of-9 representation.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. Choose 4 unless the diagonal digit is 4, otherwise 5. The new number differs at each diagonal coordinate and has no alternative tail-of-9 representation."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. Choose 4 unless the diagonal digit is 4, otherwise 5. The new number differs at each diagonal coordinate and has no alternative tail-of-9 representation."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. Choose 4 unless the diagonal digit is 4, otherwise 5. The new number differs at each diagonal coordinate and has no alternative tail-of-9 representation."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.5, odd exercises 3, 35. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.5",
+        "odd_exercises": [
+          3,
+          35
+        ],
+        "workshop": "Cantor diagonal construction"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-240",
+      "topic": "Cantor diagonal construction",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "Why does this diagonal method not prove finite binary strings uncountable?",
+      "context": "Suppose infinite binary sequences are listed as s₁,s₂,…, with sᵢ(j) the jth bit of sequence i. Define d(i)=1−sᵢ(i).",
+      "options": [
+        "Every diagonal object is finite.",
+        "The natural numbers cannot index finite strings.",
+        "The constructed diagonal object can have infinite length and thus lie outside the finite-string set.",
+        "Finite strings have no digits."
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Compare the constructed sequence with the ith listed sequence at coordinate i.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Explain the exact contradiction in a diagonal argument and avoid digit-expansion ambiguity.",
+        "correct_rationale": "A contradiction requires the omitted object to belong to the set allegedly enumerated. An infinite sequence is not a finite string.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. A contradiction requires the omitted object to belong to the set allegedly enumerated. An infinite sequence is not a finite string."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. A contradiction requires the omitted object to belong to the set allegedly enumerated. An infinite sequence is not a finite string."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. A contradiction requires the omitted object to belong to the set allegedly enumerated. An infinite sequence is not a finite string."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.5, odd exercises 3, 35. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.5",
+        "odd_exercises": [
+          3,
+          35
+        ],
+        "workshop": "Cantor diagonal construction"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-241",
+      "topic": "Countable and uncountable set operations",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What must be true of U∖C?",
+      "context": "Let U be uncountable and C countable. A set may be finite, countably infinite, or uncountable.",
+      "options": [
+        "It is uncountable.",
+        "It is empty.",
+        "It is countably infinite.",
+        "It is finite."
+      ],
+      "correct_index": 0,
+      "hints": [
+        "If two countable pieces covered an uncountable set, their union would yield a contradiction.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Use closure of countable unions and build examples for unconstrained intersections and differences.",
+        "correct_rationale": "If U∖C were countable, then U=(U∖C)∪(U∩C) would be a union of two countable sets, contradicting uncountability.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. If U∖C were countable, then U=(U∖C)∪(U∩C) would be a union of two countable sets, contradicting uncountability."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. If U∖C were countable, then U=(U∖C)∪(U∩C) would be a union of two countable sets, contradicting uncountability."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. If U∖C were countable, then U=(U∖C)∪(U∩C) would be a union of two countable sets, contradicting uncountability."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.5, odd exercises 9, 11, 15, 17. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.5",
+        "odd_exercises": [
+          9,
+          11,
+          15,
+          17
+        ],
+        "workshop": "Countable and uncountable set operations"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-242",
+      "topic": "Countable and uncountable set operations",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What must be true of U∩C?",
+      "context": "Let U be uncountable and C countable. A set may be finite, countably infinite, or uncountable.",
+      "options": [
+        "It is necessarily infinite.",
+        "It is uncountable.",
+        "It equals C.",
+        "It is countable, possibly finite or empty."
+      ],
+      "correct_index": 3,
+      "hints": [
+        "If two countable pieces covered an uncountable set, their union would yield a contradiction.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Use closure of countable unions and build examples for unconstrained intersections and differences.",
+        "correct_rationale": "The intersection is a subset of countable C, so it is countable; U need not contain all or any of C.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. The intersection is a subset of countable C, so it is countable; U need not contain all or any of C."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. The intersection is a subset of countable C, so it is countable; U need not contain all or any of C."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. The intersection is a subset of countable C, so it is countable; U need not contain all or any of C."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.5, odd exercises 9, 11, 15, 17. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.5",
+        "odd_exercises": [
+          9,
+          11,
+          15,
+          17
+        ],
+        "workshop": "Countable and uncountable set operations"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-243",
+      "topic": "Countable and uncountable set operations",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Which two uncountable sets have empty intersection?",
+      "context": "Let U be uncountable and C countable. A set may be finite, countably infinite, or uncountable.",
+      "options": [
+        "(0,2) and (1,3)",
+        "R and Z",
+        "(0,1) and (2,3)",
+        "R and Q"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "If two countable pieces covered an uncountable set, their union would yield a contradiction.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Use closure of countable unions and build examples for unconstrained intersections and differences.",
+        "correct_rationale": "Both intervals are uncountable and disjoint. Q and Z are not uncountable, and the last intervals overlap.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. Both intervals are uncountable and disjoint. Q and Z are not uncountable, and the last intervals overlap."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. Both intervals are uncountable and disjoint. Q and Z are not uncountable, and the last intervals overlap."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. Both intervals are uncountable and disjoint. Q and Z are not uncountable, and the last intervals overlap."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.5, odd exercises 9, 11, 15, 17. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.5",
+        "odd_exercises": [
+          9,
+          11,
+          15,
+          17
+        ],
+        "workshop": "Countable and uncountable set operations"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-244",
+      "topic": "Countable and uncountable set operations",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "Can the difference of two uncountable sets be countably infinite?",
+      "context": "Let U be uncountable and C countable. A set may be finite, countably infinite, or uncountable.",
+      "options": [
+        "No: it must be uncountable.",
+        "Yes: R∖(R∖Z)=Z.",
+        "No: it must be empty.",
+        "Yes: R∖Q is countably infinite."
+      ],
+      "correct_index": 1,
+      "hints": [
+        "If two countable pieces covered an uncountable set, their union would yield a contradiction.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Use closure of countable unions and build examples for unconstrained intersections and differences.",
+        "correct_rationale": "Both R and R∖Z are uncountable, and their difference is exactly countably infinite Z. R∖Q is instead uncountable.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. Both R and R∖Z are uncountable, and their difference is exactly countably infinite Z. R∖Q is instead uncountable."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. Both R and R∖Z are uncountable, and their difference is exactly countably infinite Z. R∖Q is instead uncountable."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. Both R and R∖Z are uncountable, and their difference is exactly countably infinite Z. R∖Q is instead uncountable."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.5, odd exercises 9, 11, 15, 17. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.5",
+        "odd_exercises": [
+          9,
+          11,
+          15,
+          17
+        ],
+        "workshop": "Countable and uncountable set operations"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-245",
+      "topic": "Countable and uncountable set operations",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "Why are irrational numbers uncountable?",
+      "context": "Let U be uncountable and C countable. A set may be finite, countably infinite, or uncountable.",
+      "options": [
+        "Every irrational has a finite decimal expansion.",
+        "There are more irrational symbols than rational symbols.",
+        "Otherwise their union with countable Q would make R countable.",
+        "Removing any subset from R preserves its cardinality."
+      ],
+      "correct_index": 2,
+      "hints": [
+        "If two countable pieces covered an uncountable set, their union would yield a contradiction.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Use closure of countable unions and build examples for unconstrained intersections and differences.",
+        "correct_rationale": "R is the union of its rational and irrational parts. A union of two countable sets is countable, contradicting the uncountability of R.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. R is the union of its rational and irrational parts. A union of two countable sets is countable, contradicting the uncountability of R."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. R is the union of its rational and irrational parts. A union of two countable sets is countable, contradicting the uncountability of R."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. R is the union of its rational and irrational parts. A union of two countable sets is countable, contradicting the uncountability of R."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.5, odd exercises 9, 11, 15, 17. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.5",
+        "odd_exercises": [
+          9,
+          11,
+          15,
+          17
+        ],
+        "workshop": "Countable and uncountable set operations"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-246",
+      "topic": "Hilbert hotel and paired indices",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "How can 12 new guests be accommodated without evicting anyone?",
+      "context": "A hotel has rooms 1,2,3,… and every room is occupied. Guests and arrivals are indexed by positive integers.",
+      "options": [
+        "Move old guest n to n−12 for every n.",
+        "Move old guest n to n+12; use rooms 1 through 12 for arrivals.",
+        "Keep every old guest fixed and choose an already occupied room.",
+        "Put all arrivals into room 1."
+      ],
+      "correct_index": 1,
+      "hints": [
+        "A valid reassignment must avoid collisions and reserve enough rooms for every arrival.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Construct injective reassignment plans and enumerate products of countable sets.",
+        "correct_rationale": "The shift is injective, preserves positive room numbers, and leaves exactly the first twelve rooms free.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. The shift is injective, preserves positive room numbers, and leaves exactly the first twelve rooms free."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. The shift is injective, preserves positive room numbers, and leaves exactly the first twelve rooms free."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. The shift is injective, preserves positive room numbers, and leaves exactly the first twelve rooms free."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.5, odd exercises 5, 7, 19, 21. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.5",
+        "odd_exercises": [
+          5,
+          7,
+          19,
+          21
+        ],
+        "workshop": "Hilbert hotel and paired indices"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-247",
+      "topic": "Hilbert hotel and paired indices",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "How can countably many new guests be accommodated?",
+      "context": "A hotel has rooms 1,2,3,… and every room is occupied. Guests and arrivals are indexed by positive integers.",
+      "options": [
+        "Assign old and new guest n both to 2n.",
+        "Move old guest n to n+1 and place all new guests in room 1.",
+        "Use only room 1 for every old guest.",
+        "Move old guest n to 2n; put new guest k in 2k−1."
+      ],
+      "correct_index": 3,
+      "hints": [
+        "A valid reassignment must avoid collisions and reserve enough rooms for every arrival.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Construct injective reassignment plans and enumerate products of countable sets.",
+        "correct_rationale": "Even and odd positive integers partition the rooms, and each mapping is injective.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. Even and odd positive integers partition the rooms, and each mapping is injective."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. Even and odd positive integers partition the rooms, and each mapping is injective."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. Even and odd positive integers partition the rooms, and each mapping is injective."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.5, odd exercises 5, 7, 19, 21. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.5",
+        "odd_exercises": [
+          5,
+          7,
+          19,
+          21
+        ],
+        "workshop": "Hilbert hotel and paired indices"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-248",
+      "topic": "Hilbert hotel and paired indices",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Why is Z⁺×Z⁺ countable?",
+      "context": "A hotel has rooms 1,2,3,… and every room is occupied. Guests and arrivals are indexed by positive integers.",
+      "options": [
+        "Multiplying two infinite cardinalities always gives uncountability.",
+        "It is a finite set.",
+        "List pairs by increasing sum of coordinates, then within each finite diagonal.",
+        "List all pairs with first coordinate 1 before ever proceeding to 2."
+      ],
+      "correct_index": 2,
+      "hints": [
+        "A valid reassignment must avoid collisions and reserve enough rooms for every arrival.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Construct injective reassignment plans and enumerate products of countable sets.",
+        "correct_rationale": "Each diagonal i+j=s is finite and every pair belongs to one. Finishing an infinite first row before moving on never reaches later rows.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. Each diagonal i+j=s is finite and every pair belongs to one. Finishing an infinite first row before moving on never reaches later rows."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. Each diagonal i+j=s is finite and every pair belongs to one. Finishing an infinite first row before moving on never reaches later rows."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. Each diagonal i+j=s is finite and every pair belongs to one. Finishing an infinite first row before moving on never reaches later rows."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.5, odd exercises 5, 7, 19, 21. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.5",
+        "odd_exercises": [
+          5,
+          7,
+          19,
+          21
+        ],
+        "workshop": "Hilbert hotel and paired indices"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-249",
+      "topic": "Hilbert hotel and paired indices",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "What is wrong with moving guest n to ⌊n/2⌋?",
+      "context": "A hotel has rooms 1,2,3,… and every room is occupied. Guests and arrivals are indexed by positive integers.",
+      "options": [
+        "It only fails because infinitely many rooms exist.",
+        "It is injective but not onto.",
+        "Every guest keeps the same room.",
+        "It creates collisions and can assign room 0."
+      ],
+      "correct_index": 3,
+      "hints": [
+        "A valid reassignment must avoid collisions and reserve enough rooms for every arrival.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Construct injective reassignment plans and enumerate products of countable sets.",
+        "correct_rationale": "Guests 2 and 3 both go to room 1, while guest 1 goes to nonexistent room 0. A reassignment needs distinct valid rooms.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. Guests 2 and 3 both go to room 1, while guest 1 goes to nonexistent room 0. A reassignment needs distinct valid rooms."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. Guests 2 and 3 both go to room 1, while guest 1 goes to nonexistent room 0. A reassignment needs distinct valid rooms."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. Guests 2 and 3 both go to room 1, while guest 1 goes to nonexistent room 0. A reassignment needs distinct valid rooms."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.5, odd exercises 5, 7, 19, 21. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.5",
+        "odd_exercises": [
+          5,
+          7,
+          19,
+          21
+        ],
+        "workshop": "Hilbert hotel and paired indices"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-250",
+      "topic": "Hilbert hotel and paired indices",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "Why can a countable union of countable sets be enumerated in this setting?",
+      "context": "A hotel has rooms 1,2,3,… and every room is occupied. Guests and arrivals are indexed by positive integers.",
+      "options": [
+        "Every union contains only finitely many elements.",
+        "Every set must have exactly the same elements.",
+        "Index elements by a pair (set index, within-set index) and traverse diagonally, skipping repetitions.",
+        "List one infinite set completely before starting the next."
+      ],
+      "correct_index": 2,
+      "hints": [
+        "A valid reassignment must avoid collisions and reserve enough rooms for every arrival.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Construct injective reassignment plans and enumerate products of countable sets.",
+        "correct_rationale": "The double indexing reduces enumeration to countable pairs. Skipping repeats avoids listing the same element twice; exhausting one infinite row sequentially is ineffective.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. The double indexing reduces enumeration to countable pairs. Skipping repeats avoids listing the same element twice; exhausting one infinite row sequentially is ineffective."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. The double indexing reduces enumeration to countable pairs. Skipping repeats avoids listing the same element twice; exhausting one infinite row sequentially is ineffective."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. The double indexing reduces enumeration to countable pairs. Skipping repeats avoids listing the same element twice; exhausting one infinite row sequentially is ineffective."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.5, odd exercises 5, 7, 19, 21. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.5",
+        "odd_exercises": [
+          5,
+          7,
+          19,
+          21
+        ],
+        "workshop": "Hilbert hotel and paired indices"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    }
+  ]
+}

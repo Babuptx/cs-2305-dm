@@ -1,7 +1,7 @@
 {
   "version": 1,
   "title": "CS 2305 Discrete Mathematics for Computing I",
-  "total_questions": 600,
+  "total_questions": 1000,
   "pillars": [
     {
       "id": "logic",
@@ -113,6 +113,62 @@
           "id": "recurrences-block-02",
           "title": "Block 2",
           "path": "data/recurrences/block-02.json",
+          "count": 50
+        }
+      ]
+    },
+    {
+      "id": "utd-fall-midterm",
+      "title": "UTD 2026 Fall Midterm",
+      "course_dependent": false,
+      "description": "400 slide-scoped questions, with related odd-numbered Rosen exercise pointers and worked reasoning.",
+      "blocks": [
+        {
+          "id": "utd-fall-midterm-block-01",
+          "title": "1. Logic, equivalence & consistency",
+          "path": "data/utd-fall-midterm/block-01.json",
+          "count": 50
+        },
+        {
+          "id": "utd-fall-midterm-block-02",
+          "title": "2. Quantifiers & rules of inference",
+          "path": "data/utd-fall-midterm/block-02.json",
+          "count": 50
+        },
+        {
+          "id": "utd-fall-midterm-block-03",
+          "title": "3. Proof construction & diagnosis",
+          "path": "data/utd-fall-midterm/block-03.json",
+          "count": 50
+        },
+        {
+          "id": "utd-fall-midterm-block-04",
+          "title": "4. Sets, power sets & functions",
+          "path": "data/utd-fall-midterm/block-04.json",
+          "count": 50
+        },
+        {
+          "id": "utd-fall-midterm-block-05",
+          "title": "5. Sequences, sums & countability",
+          "path": "data/utd-fall-midterm/block-05.json",
+          "count": 50
+        },
+        {
+          "id": "utd-fall-midterm-block-06",
+          "title": "6. Matrices & algorithm reasoning",
+          "path": "data/utd-fall-midterm/block-06.json",
+          "count": 50
+        },
+        {
+          "id": "utd-fall-midterm-block-07",
+          "title": "7. Growth rates & operation counts",
+          "path": "data/utd-fall-midterm/block-07.json",
+          "count": 50
+        },
+        {
+          "id": "utd-fall-midterm-block-08",
+          "title": "8. Divisibility, bases, primes & GCDs",
+          "path": "data/utd-fall-midterm/block-08.json",
           "count": 50
         }
       ]

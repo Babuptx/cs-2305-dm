@@ -1,0 +1,30 @@
+{
+  "title": "UTD 2026 Fall Midterm",
+  "questions": 400,
+  "blocks": 8,
+  "intermediate": 240,
+  "advanced": 160,
+  "source_policy": "Original questions matched to classroom subject matter; related odd exercise pointers refer to the locally supplied Rosen eighth edition. Source PDFs and extracted text are excluded from version control and deployment.",
+  "scope": "Propositional logic, quantifiers, inference and elementary proofs; sets, functions, sequences, sums, countability and matrices; algorithms and growth; divisibility, integer representations, primes and gcds. No induction unit, advanced recurrence solving, graph theory or later counting unit.",
+  "sections": {
+    "1.1": 20,
+    "1.3": 30,
+    "1.4": 5,
+    "1.5": 30,
+    "1.6": 15,
+    "1.7": 30,
+    "1.8": 20,
+    "2.1": 5,
+    "2.2": 20,
+    "2.3": 25,
+    "2.4": 25,
+    "2.5": 25,
+    "2.6": 25,
+    "3.1": 25,
+    "3.2": 25,
+    "3.3": 25,
+    "4.1": 15,
+    "4.2": 10,
+    "4.3": 25
+  }
+}

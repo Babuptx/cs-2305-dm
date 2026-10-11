@@ -1,13 +1,19 @@
 {
-  "questions": 600,
-  "blocks": 12,
-  "pillars": 6,
-  "independent_oracle_items": 459,
+  "questions": 1000,
+  "blocks": 20,
+  "pillars": 7,
+  "independent_oracle_items": 647,
+  "midterm": {
+    "questions": 400,
+    "intermediate": 240,
+    "advanced": 160,
+    "independent_oracle_items": 188
+  },
   "key_positions": [
-    150,
-    150,
-    150,
-    150
+    250,
+    250,
+    250,
+    250
   ],
   "similar_context_prompt_pairs": [
     {
@@ -863,6 +869,566 @@
         "recurrences-092"
       ],
       "similarity": 0.833
+    },
+    {
+      "ids": [
+        "utd-fall-midterm-051",
+        "utd-fall-midterm-056"
+      ],
+      "similarity": 0.821
+    },
+    {
+      "ids": [
+        "utd-fall-midterm-051",
+        "utd-fall-midterm-061"
+      ],
+      "similarity": 0.907
+    },
+    {
+      "ids": [
+        "utd-fall-midterm-051",
+        "utd-fall-midterm-071"
+      ],
+      "similarity": 0.818
+    },
+    {
+      "ids": [
+        "utd-fall-midterm-052",
+        "utd-fall-midterm-062"
+      ],
+      "similarity": 0.889
+    },
+    {
+      "ids": [
+        "utd-fall-midterm-053",
+        "utd-fall-midterm-058"
+      ],
+      "similarity": 0.8
+    },
+    {
+      "ids": [
+        "utd-fall-midterm-053",
+        "utd-fall-midterm-063"
+      ],
+      "similarity": 0.896
+    },
+    {
+      "ids": [
+        "utd-fall-midterm-054",
+        "utd-fall-midterm-055"
+      ],
+      "similarity": 0.855
+    },
+    {
+      "ids": [
+        "utd-fall-midterm-054",
+        "utd-fall-midterm-059"
+      ],
+      "similarity": 0.825
+    },
+    {
+      "ids": [
+        "utd-fall-midterm-054",
+        "utd-fall-midterm-064"
+      ],
+      "similarity": 0.909
+    },
+    {
+      "ids": [
+        "utd-fall-midterm-054",
+        "utd-fall-midterm-074"
+      ],
+      "similarity": 0.821
+    },
+    {
+      "ids": [
+        "utd-fall-midterm-055",
+        "utd-fall-midterm-060"
+      ],
+      "similarity": 0.825
+    },
+    {
+      "ids": [
+        "utd-fall-midterm-055",
+        "utd-fall-midterm-065"
+      ],
+      "similarity": 0.909
+    },
+    {
+      "ids": [
+        "utd-fall-midterm-055",
+        "utd-fall-midterm-075"
+      ],
+      "similarity": 0.821
+    },
+    {
+      "ids": [
+        "utd-fall-midterm-056",
+        "utd-fall-midterm-061"
+      ],
+      "similarity": 0.842
+    },
+    {
+      "ids": [
+        "utd-fall-midterm-056",
+        "utd-fall-midterm-066"
+      ],
+      "similarity": 0.891
+    },
+    {
+      "ids": [
+        "utd-fall-midterm-056",
+        "utd-fall-midterm-071"
+      ],
+      "similarity": 0.855
+    },
+    {
+      "ids": [
+        "utd-fall-midterm-057",
+        "utd-fall-midterm-062"
+      ],
+      "similarity": 0.813
+    },
+    {
+      "ids": [
+        "utd-fall-midterm-057",
+        "utd-fall-midterm-067"
+      ],
+      "similarity": 0.87
+    },
+    {
+      "ids": [
+        "utd-fall-midterm-057",
+        "utd-fall-midterm-072"
+      ],
+      "similarity": 0.826
+    },
+    {
+      "ids": [
+        "utd-fall-midterm-058",
+        "utd-fall-midterm-063"
+      ],
+      "similarity": 0.824
+    },
+    {
+      "ids": [
+        "utd-fall-midterm-058",
+        "utd-fall-midterm-068"
+      ],
+      "similarity": 0.878
+    },
+    {
+      "ids": [
+        "utd-fall-midterm-058",
+        "utd-fall-midterm-073"
+      ],
+      "similarity": 0.837
+    },
+    {
+      "ids": [
+        "utd-fall-midterm-059",
+        "utd-fall-midterm-060"
+      ],
+      "similarity": 0.86
+    },
+    {
+      "ids": [
+        "utd-fall-midterm-059",
+        "utd-fall-midterm-064"
+      ],
+      "similarity": 0.845
+    },
+    {
+      "ids": [
+        "utd-fall-midterm-059",
+        "utd-fall-midterm-069"
+      ],
+      "similarity": 0.893
+    },
+    {
+      "ids": [
+        "utd-fall-midterm-059",
+        "utd-fall-midterm-074"
+      ],
+      "similarity": 0.857
+    },
+    {
+      "ids": [
+        "utd-fall-midterm-060",
+        "utd-fall-midterm-065"
+      ],
+      "similarity": 0.845
+    },
+    {
+      "ids": [
+        "utd-fall-midterm-060",
+        "utd-fall-midterm-070"
+      ],
+      "similarity": 0.893
+    },
+    {
+      "ids": [
+        "utd-fall-midterm-060",
+        "utd-fall-midterm-075"
+      ],
+      "similarity": 0.857
+    },
+    {
+      "ids": [
+        "utd-fall-midterm-061",
+        "utd-fall-midterm-066"
+      ],
+      "similarity": 0.81
+    },
+    {
+      "ids": [
+        "utd-fall-midterm-061",
+        "utd-fall-midterm-071"
+      ],
+      "similarity": 0.873
+    },
+    {
+      "ids": [
+        "utd-fall-midterm-062",
+        "utd-fall-midterm-072"
+      ],
+      "similarity": 0.848
+    },
+    {
+      "ids": [
+        "utd-fall-midterm-063",
+        "utd-fall-midterm-073"
+      ],
+      "similarity": 0.857
+    },
+    {
+      "ids": [
+        "utd-fall-midterm-064",
+        "utd-fall-midterm-065"
+      ],
+      "similarity": 0.862
+    },
+    {
+      "ids": [
+        "utd-fall-midterm-064",
+        "utd-fall-midterm-069"
+      ],
+      "similarity": 0.814
+    },
+    {
+      "ids": [
+        "utd-fall-midterm-064",
+        "utd-fall-midterm-074"
+      ],
+      "similarity": 0.875
+    },
+    {
+      "ids": [
+        "utd-fall-midterm-065",
+        "utd-fall-midterm-070"
+      ],
+      "similarity": 0.814
+    },
+    {
+      "ids": [
+        "utd-fall-midterm-065",
+        "utd-fall-midterm-075"
+      ],
+      "similarity": 0.875
+    },
+    {
+      "ids": [
+        "utd-fall-midterm-069",
+        "utd-fall-midterm-070"
+      ],
+      "similarity": 0.86
+    },
+    {
+      "ids": [
+        "utd-fall-midterm-074",
+        "utd-fall-midterm-075"
+      ],
+      "similarity": 0.855
+    },
+    {
+      "ids": [
+        "utd-fall-midterm-176",
+        "utd-fall-midterm-177"
+      ],
+      "similarity": 0.891
+    },
+    {
+      "ids": [
+        "utd-fall-midterm-180",
+        "utd-fall-midterm-190"
+      ],
+      "similarity": 0.822
+    },
+    {
+      "ids": [
+        "utd-fall-midterm-181",
+        "utd-fall-midterm-182"
+      ],
+      "similarity": 0.893
+    },
+    {
+      "ids": [
+        "utd-fall-midterm-186",
+        "utd-fall-midterm-187"
+      ],
+      "similarity": 0.889
+    },
+    {
+      "ids": [
+        "utd-fall-midterm-197",
+        "utd-fall-midterm-198"
+      ],
+      "similarity": 0.829
+    },
+    {
+      "ids": [
+        "utd-fall-midterm-241",
+        "utd-fall-midterm-242"
+      ],
+      "similarity": 1
+    },
+    {
+      "ids": [
+        "utd-fall-midterm-251",
+        "utd-fall-midterm-252"
+      ],
+      "similarity": 0.949
+    },
+    {
+      "ids": [
+        "utd-fall-midterm-254",
+        "utd-fall-midterm-255"
+      ],
+      "similarity": 0.949
+    },
+    {
+      "ids": [
+        "utd-fall-midterm-256",
+        "utd-fall-midterm-257"
+      ],
+      "similarity": 0.949
+    },
+    {
+      "ids": [
+        "utd-fall-midterm-259",
+        "utd-fall-midterm-260"
+      ],
+      "similarity": 0.949
+    },
+    {
+      "ids": [
+        "utd-fall-midterm-261",
+        "utd-fall-midterm-262"
+      ],
+      "similarity": 0.949
+    },
+    {
+      "ids": [
+        "utd-fall-midterm-264",
+        "utd-fall-midterm-265"
+      ],
+      "similarity": 0.949
+    },
+    {
+      "ids": [
+        "utd-fall-midterm-266",
+        "utd-fall-midterm-267"
+      ],
+      "similarity": 0.882
+    },
+    {
+      "ids": [
+        "utd-fall-midterm-266",
+        "utd-fall-midterm-268"
+      ],
+      "similarity": 0.9
+    },
+    {
+      "ids": [
+        "utd-fall-midterm-266",
+        "utd-fall-midterm-270"
+      ],
+      "similarity": 0.815
+    },
+    {
+      "ids": [
+        "utd-fall-midterm-267",
+        "utd-fall-midterm-268"
+      ],
+      "similarity": 0.9
+    },
+    {
+      "ids": [
+        "utd-fall-midterm-267",
+        "utd-fall-midterm-270"
+      ],
+      "similarity": 0.815
+    },
+    {
+      "ids": [
+        "utd-fall-midterm-268",
+        "utd-fall-midterm-270"
+      ],
+      "similarity": 0.83
+    },
+    {
+      "ids": [
+        "utd-fall-midterm-271",
+        "utd-fall-midterm-272"
+      ],
+      "similarity": 0.885
+    },
+    {
+      "ids": [
+        "utd-fall-midterm-271",
+        "utd-fall-midterm-273"
+      ],
+      "similarity": 0.902
+    },
+    {
+      "ids": [
+        "utd-fall-midterm-271",
+        "utd-fall-midterm-275"
+      ],
+      "similarity": 0.818
+    },
+    {
+      "ids": [
+        "utd-fall-midterm-272",
+        "utd-fall-midterm-273"
+      ],
+      "similarity": 0.902
+    },
+    {
+      "ids": [
+        "utd-fall-midterm-272",
+        "utd-fall-midterm-275"
+      ],
+      "similarity": 0.818
+    },
+    {
+      "ids": [
+        "utd-fall-midterm-273",
+        "utd-fall-midterm-275"
+      ],
+      "similarity": 0.833
+    },
+    {
+      "ids": [
+        "utd-fall-midterm-276",
+        "utd-fall-midterm-279"
+      ],
+      "similarity": 0.864
+    },
+    {
+      "ids": [
+        "utd-fall-midterm-276",
+        "utd-fall-midterm-280"
+      ],
+      "similarity": 0.81
+    },
+    {
+      "ids": [
+        "utd-fall-midterm-277",
+        "utd-fall-midterm-279"
+      ],
+      "similarity": 0.82
+    },
+    {
+      "ids": [
+        "utd-fall-midterm-278",
+        "utd-fall-midterm-279"
+      ],
+      "similarity": 0.82
+    },
+    {
+      "ids": [
+        "utd-fall-midterm-279",
+        "utd-fall-midterm-280"
+      ],
+      "similarity": 0.836
+    },
+    {
+      "ids": [
+        "utd-fall-midterm-281",
+        "utd-fall-midterm-283"
+      ],
+      "similarity": 0.918
+    },
+    {
+      "ids": [
+        "utd-fall-midterm-331",
+        "utd-fall-midterm-332"
+      ],
+      "similarity": 0.938
+    },
+    {
+      "ids": [
+        "utd-fall-midterm-346",
+        "utd-fall-midterm-347"
+      ],
+      "similarity": 0.87
+    },
+    {
+      "ids": [
+        "utd-fall-midterm-348",
+        "utd-fall-midterm-349"
+      ],
+      "similarity": 0.857
+    },
+    {
+      "ids": [
+        "utd-fall-midterm-351",
+        "utd-fall-midterm-352"
+      ],
+      "similarity": 0.857
+    },
+    {
+      "ids": [
+        "utd-fall-midterm-356",
+        "utd-fall-midterm-357"
+      ],
+      "similarity": 0.857
+    },
+    {
+      "ids": [
+        "utd-fall-midterm-361",
+        "utd-fall-midterm-363"
+      ],
+      "similarity": 0.8
+    },
+    {
+      "ids": [
+        "utd-fall-midterm-363",
+        "utd-fall-midterm-368"
+      ],
+      "similarity": 0.824
+    },
+    {
+      "ids": [
+        "utd-fall-midterm-364",
+        "utd-fall-midterm-369"
+      ],
+      "similarity": 0.857
+    },
+    {
+      "ids": [
+        "utd-fall-midterm-366",
+        "utd-fall-midterm-368"
+      ],
+      "similarity": 0.8
+    },
+    {
+      "ids": [
+        "utd-fall-midterm-391",
+        "utd-fall-midterm-393"
+      ],
+      "similarity": 0.818
     }
   ],
   "repeated_option_sets": [
@@ -878,7 +1444,14 @@
       "logic-008",
       "logic-012",
       "logic-016",
-      "logic-068"
+      "logic-068",
+      "utd-fall-midterm-022",
+      "utd-fall-midterm-032",
+      "utd-fall-midterm-037"
+    ],
+    [
+      "logic-020",
+      "utd-fall-midterm-002"
     ],
     [
       "logic-022",
@@ -896,7 +1469,10 @@
       "logic-062",
       "logic-064",
       "logic-074",
-      "logic-076"
+      "logic-076",
+      "utd-fall-midterm-007",
+      "utd-fall-midterm-012",
+      "utd-fall-midterm-027"
     ],
     [
       "logic-029",
@@ -919,7 +1495,9 @@
       "logic-036",
       "logic-052",
       "logic-056",
-      "logic-072"
+      "logic-072",
+      "utd-fall-midterm-017",
+      "utd-fall-midterm-047"
     ],
     [
       "logic-039",
@@ -950,7 +1528,11 @@
       "sets-021",
       "sets-025",
       "sets-029",
-      "sets-033"
+      "sets-033",
+      "utd-fall-midterm-178",
+      "utd-fall-midterm-183",
+      "utd-fall-midterm-188",
+      "utd-fall-midterm-191"
     ],
     [
       "sets-023",
@@ -1001,7 +1583,25 @@
       "graphs-number-018",
       "graphs-number-026",
       "graphs-number-030",
-      "recurrences-003"
+      "recurrences-003",
+      "utd-fall-midterm-009",
+      "utd-fall-midterm-013",
+      "utd-fall-midterm-024",
+      "utd-fall-midterm-028",
+      "utd-fall-midterm-029",
+      "utd-fall-midterm-034",
+      "utd-fall-midterm-055",
+      "utd-fall-midterm-063",
+      "utd-fall-midterm-158",
+      "utd-fall-midterm-163",
+      "utd-fall-midterm-182",
+      "utd-fall-midterm-185",
+      "utd-fall-midterm-187",
+      "utd-fall-midterm-190",
+      "utd-fall-midterm-262",
+      "utd-fall-midterm-264",
+      "utd-fall-midterm-287",
+      "utd-fall-midterm-360"
     ],
     [
       "sets-057",
@@ -1023,7 +1623,23 @@
       "graphs-number-076",
       "graphs-number-077",
       "graphs-number-079",
-      "graphs-number-096"
+      "graphs-number-096",
+      "utd-fall-midterm-008",
+      "utd-fall-midterm-014",
+      "utd-fall-midterm-023",
+      "utd-fall-midterm-053",
+      "utd-fall-midterm-058",
+      "utd-fall-midterm-068",
+      "utd-fall-midterm-073",
+      "utd-fall-midterm-151",
+      "utd-fall-midterm-153",
+      "utd-fall-midterm-156",
+      "utd-fall-midterm-161",
+      "utd-fall-midterm-181",
+      "utd-fall-midterm-186",
+      "utd-fall-midterm-259",
+      "utd-fall-midterm-288",
+      "utd-fall-midterm-379"
     ],
     [
       "sets-061",
@@ -1037,7 +1653,24 @@
       "graphs-number-065",
       "recurrences-007",
       "recurrences-030",
-      "recurrences-047"
+      "recurrences-047",
+      "utd-fall-midterm-004",
+      "utd-fall-midterm-018",
+      "utd-fall-midterm-019",
+      "utd-fall-midterm-038",
+      "utd-fall-midterm-039",
+      "utd-fall-midterm-048",
+      "utd-fall-midterm-049",
+      "utd-fall-midterm-057",
+      "utd-fall-midterm-064",
+      "utd-fall-midterm-065",
+      "utd-fall-midterm-070",
+      "utd-fall-midterm-075",
+      "utd-fall-midterm-177",
+      "utd-fall-midterm-267",
+      "utd-fall-midterm-269",
+      "utd-fall-midterm-272",
+      "utd-fall-midterm-274"
     ],
     [
       "sets-069",
@@ -1051,7 +1684,15 @@
       "graphs-number-014",
       "graphs-number-021",
       "graphs-number-025",
-      "graphs-number-038"
+      "graphs-number-038",
+      "utd-fall-midterm-033",
+      "utd-fall-midterm-043",
+      "utd-fall-midterm-044",
+      "utd-fall-midterm-152",
+      "utd-fall-midterm-155",
+      "utd-fall-midterm-176",
+      "utd-fall-midterm-189",
+      "utd-fall-midterm-374"
     ],
     [
       "sets-073",
@@ -1069,7 +1710,10 @@
     ],
     [
       "sets-078",
-      "graphs-number-041"
+      "graphs-number-041",
+      "utd-fall-midterm-184",
+      "utd-fall-midterm-252",
+      "utd-fall-midterm-263"
     ],
     [
       "sets-079",
@@ -1077,7 +1721,24 @@
       "counting-083",
       "graphs-number-009",
       "graphs-number-033",
-      "graphs-number-050"
+      "graphs-number-050",
+      "utd-fall-midterm-157",
+      "utd-fall-midterm-162",
+      "utd-fall-midterm-370"
+    ],
+    [
+      "sets-083",
+      "utd-fall-midterm-358"
+    ],
+    [
+      "sets-084",
+      "utd-fall-midterm-154",
+      "utd-fall-midterm-159",
+      "utd-fall-midterm-160",
+      "utd-fall-midterm-164",
+      "utd-fall-midterm-165",
+      "utd-fall-midterm-342",
+      "utd-fall-midterm-355"
     ],
     [
       "counting-002",
@@ -1110,14 +1771,31 @@
       "counting-099"
     ],
     [
+      "counting-043",
+      "utd-fall-midterm-205"
+    ],
+    [
       "counting-047",
       "counting-058",
       "graphs-number-013",
-      "graphs-number-017"
+      "graphs-number-017",
+      "utd-fall-midterm-179",
+      "utd-fall-midterm-261",
+      "utd-fall-midterm-265",
+      "utd-fall-midterm-332",
+      "utd-fall-midterm-337",
+      "utd-fall-midterm-373",
+      "utd-fall-midterm-378"
     ],
     [
       "counting-048",
-      "graphs-number-045"
+      "graphs-number-045",
+      "utd-fall-midterm-251",
+      "utd-fall-midterm-255",
+      "utd-fall-midterm-258",
+      "utd-fall-midterm-331",
+      "utd-fall-midterm-352",
+      "utd-fall-midterm-380"
     ],
     [
       "counting-050",
@@ -1126,6 +1804,10 @@
     [
       "counting-053",
       "counting-090"
+    ],
+    [
+      "counting-057",
+      "utd-fall-midterm-354"
     ],
     [
       "counting-082",
@@ -1156,6 +1838,10 @@
       "graphs-number-052"
     ],
     [
+      "graphs-number-049",
+      "utd-fall-midterm-341"
+    ],
+    [
       "graphs-number-057",
       "graphs-number-066",
       "graphs-number-070"
@@ -1164,11 +1850,14 @@
       "graphs-number-067",
       "graphs-number-078",
       "graphs-number-089",
-      "graphs-number-097"
+      "graphs-number-097",
+      "utd-fall-midterm-268",
+      "utd-fall-midterm-270"
     ],
     [
       "graphs-number-075",
-      "graphs-number-080"
+      "graphs-number-080",
+      "utd-fall-midterm-271"
     ],
     [
       "recurrences-009",
@@ -1212,7 +1901,51 @@
     [
       "recurrences-053",
       "recurrences-054"
+    ],
+    [
+      "recurrences-084",
+      "utd-fall-midterm-335"
+    ],
+    [
+      "utd-fall-midterm-003",
+      "utd-fall-midterm-052",
+      "utd-fall-midterm-054",
+      "utd-fall-midterm-059",
+      "utd-fall-midterm-060",
+      "utd-fall-midterm-062",
+      "utd-fall-midterm-067",
+      "utd-fall-midterm-069",
+      "utd-fall-midterm-072",
+      "utd-fall-midterm-074",
+      "utd-fall-midterm-180",
+      "utd-fall-midterm-210",
+      "utd-fall-midterm-353",
+      "utd-fall-midterm-357",
+      "utd-fall-midterm-359"
+    ],
+    [
+      "utd-fall-midterm-051",
+      "utd-fall-midterm-066",
+      "utd-fall-midterm-071"
+    ],
+    [
+      "utd-fall-midterm-253",
+      "utd-fall-midterm-254",
+      "utd-fall-midterm-375"
+    ],
+    [
+      "utd-fall-midterm-256",
+      "utd-fall-midterm-260"
+    ],
+    [
+      "utd-fall-midterm-273",
+      "utd-fall-midterm-275"
+    ],
+    [
+      "utd-fall-midterm-365",
+      "utd-fall-midterm-371",
+      "utd-fall-midterm-376"
     ]
   ],
-  "editorial_note": "Four distinct tasks share each case context. Similarity and repeated option sets are inspection flags, not proof of duplication. Conceptual and proof explanations still need human subject-matter review."
+  "editorial_note": "Related tasks share case contexts (four in the original pillars, five in the midterm pillar). Similarity and repeated option sets are inspection flags, not proof of duplication. Conceptual and proof explanations have author review, not independent human subject-matter review."
 }

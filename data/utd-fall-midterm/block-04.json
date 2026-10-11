@@ -1,0 +1,3429 @@
+{
+  "schema_version": 1,
+  "block_id": "utd-fall-midterm-block-04",
+  "pillar_id": "utd-fall-midterm",
+  "block_title": "UTD 2026 Fall Midterm · Sets, power sets & functions",
+  "questions": [
+    {
+      "id": "utd-fall-midterm-151",
+      "topic": "Finite-set synthesis 1",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "How many elements are in (A∪B)∖C?",
+      "context": "U={0, 1, 2, 3, 4, 5, 6, 7, 8, 9}, A={1, 2, 4, 7}, B={2, 3, 4, 8}, C={1, 4, 5, 8}. Complements are relative to U.",
+      "options": [
+        "3",
+        "2",
+        "5",
+        "4"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Translate each set operation into its membership condition before counting.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Combine set operations, complements, power sets, and exact membership conditions.",
+        "correct_rationale": "The relevant calculation is {2, 3, 7}. The resulting cardinality is 3.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "2 does not satisfy the stated computation. The relevant calculation is {2, 3, 7}. The resulting cardinality is 3."
+          },
+          {
+            "option_index": 2,
+            "rationale": "5 does not satisfy the stated computation. The relevant calculation is {2, 3, 7}. The resulting cardinality is 3."
+          },
+          {
+            "option_index": 3,
+            "rationale": "4 does not satisfy the stated computation. The relevant calculation is {2, 3, 7}. The resulting cardinality is 3."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.2, odd exercises 3, 27, 29, 41. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.2",
+        "odd_exercises": [
+          3,
+          27,
+          29,
+          41
+        ],
+        "workshop": "Finite-set synthesis 1"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "sets",
+        "args": {
+          "a": [
+            1,
+            2,
+            4,
+            7
+          ],
+          "b": [
+            2,
+            3,
+            4,
+            8
+          ],
+          "c": [
+            1,
+            4,
+            5,
+            8
+          ],
+          "u": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "query": "union-minus"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-152",
+      "topic": "Finite-set synthesis 1",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "How many elements belong to exactly one of A and B?",
+      "context": "U={0, 1, 2, 3, 4, 5, 6, 7, 8, 9}, A={1, 2, 4, 7}, B={2, 3, 4, 8}, C={1, 4, 5, 8}. Complements are relative to U.",
+      "options": [
+        "4",
+        "3",
+        "5",
+        "6"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Translate each set operation into its membership condition before counting.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Combine set operations, complements, power sets, and exact membership conditions.",
+        "correct_rationale": "The relevant calculation is {1, 3, 7, 8}. The resulting cardinality is 4.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "3 does not satisfy the stated computation. The relevant calculation is {1, 3, 7, 8}. The resulting cardinality is 4."
+          },
+          {
+            "option_index": 2,
+            "rationale": "5 does not satisfy the stated computation. The relevant calculation is {1, 3, 7, 8}. The resulting cardinality is 4."
+          },
+          {
+            "option_index": 3,
+            "rationale": "6 does not satisfy the stated computation. The relevant calculation is {1, 3, 7, 8}. The resulting cardinality is 4."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.2, odd exercises 3, 27, 29, 41. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.2",
+        "odd_exercises": [
+          3,
+          27,
+          29,
+          41
+        ],
+        "workshop": "Finite-set synthesis 1"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "sets",
+        "args": {
+          "a": [
+            1,
+            2,
+            4,
+            7
+          ],
+          "b": [
+            2,
+            3,
+            4,
+            8
+          ],
+          "c": [
+            1,
+            4,
+            5,
+            8
+          ],
+          "u": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "query": "xor"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-153",
+      "topic": "Finite-set synthesis 1",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What is |U∖(A∪B∪C)|?",
+      "context": "U={0, 1, 2, 3, 4, 5, 6, 7, 8, 9}, A={1, 2, 4, 7}, B={2, 3, 4, 8}, C={1, 4, 5, 8}. Complements are relative to U.",
+      "options": [
+        "2",
+        "4",
+        "3",
+        "5"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Translate each set operation into its membership condition before counting.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Combine set operations, complements, power sets, and exact membership conditions.",
+        "correct_rationale": "The relevant calculation is {0, 6, 9}. The resulting cardinality is 3.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "2 does not satisfy the stated computation. The relevant calculation is {0, 6, 9}. The resulting cardinality is 3."
+          },
+          {
+            "option_index": 1,
+            "rationale": "4 does not satisfy the stated computation. The relevant calculation is {0, 6, 9}. The resulting cardinality is 3."
+          },
+          {
+            "option_index": 3,
+            "rationale": "5 does not satisfy the stated computation. The relevant calculation is {0, 6, 9}. The resulting cardinality is 3."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.2, odd exercises 3, 27, 29, 41. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.2",
+        "odd_exercises": [
+          3,
+          27,
+          29,
+          41
+        ],
+        "workshop": "Finite-set synthesis 1"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "sets",
+        "args": {
+          "a": [
+            1,
+            2,
+            4,
+            7
+          ],
+          "b": [
+            2,
+            3,
+            4,
+            8
+          ],
+          "c": [
+            1,
+            4,
+            5,
+            8
+          ],
+          "u": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "query": "outside"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-154",
+      "topic": "Finite-set synthesis 1",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "What is |𝒫(A∩B) × (C∖A)|?",
+      "context": "U={0, 1, 2, 3, 4, 5, 6, 7, 8, 9}, A={1, 2, 4, 7}, B={2, 3, 4, 8}, C={1, 4, 5, 8}. Complements are relative to U.",
+      "options": [
+        "9",
+        "10",
+        "8",
+        "7"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Translate each set operation into its membership condition before counting.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Combine set operations, complements, power sets, and exact membership conditions.",
+        "correct_rationale": "The relevant calculation is 2^2 × 2. The resulting cardinality is 8.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "9 does not satisfy the stated computation. The relevant calculation is 2^2 × 2. The resulting cardinality is 8."
+          },
+          {
+            "option_index": 1,
+            "rationale": "10 does not satisfy the stated computation. The relevant calculation is 2^2 × 2. The resulting cardinality is 8."
+          },
+          {
+            "option_index": 3,
+            "rationale": "7 does not satisfy the stated computation. The relevant calculation is 2^2 × 2. The resulting cardinality is 8."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.2, odd exercises 3, 27, 29, 41. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.2",
+        "odd_exercises": [
+          3,
+          27,
+          29,
+          41
+        ],
+        "workshop": "Finite-set synthesis 1"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "sets",
+        "args": {
+          "a": [
+            1,
+            2,
+            4,
+            7
+          ],
+          "b": [
+            2,
+            3,
+            4,
+            8
+          ],
+          "c": [
+            1,
+            4,
+            5,
+            8
+          ],
+          "u": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "query": "power-product"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-155",
+      "topic": "Finite-set synthesis 1",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "How many subsets S of A satisfy A∩B ⊆ S?",
+      "context": "U={0, 1, 2, 3, 4, 5, 6, 7, 8, 9}, A={1, 2, 4, 7}, B={2, 3, 4, 8}, C={1, 4, 5, 8}. Complements are relative to U.",
+      "options": [
+        "4",
+        "3",
+        "6",
+        "5"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Translate each set operation into its membership condition before counting.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Combine set operations, complements, power sets, and exact membership conditions.",
+        "correct_rationale": "The relevant calculation is The 2 required elements are fixed; the 2 remaining elements are optional, giving 2^2. The resulting cardinality is 4.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "3 does not satisfy the stated computation. The relevant calculation is The 2 required elements are fixed; the 2 remaining elements are optional, giving 2^2. The resulting cardinality is 4."
+          },
+          {
+            "option_index": 2,
+            "rationale": "6 does not satisfy the stated computation. The relevant calculation is The 2 required elements are fixed; the 2 remaining elements are optional, giving 2^2. The resulting cardinality is 4."
+          },
+          {
+            "option_index": 3,
+            "rationale": "5 does not satisfy the stated computation. The relevant calculation is The 2 required elements are fixed; the 2 remaining elements are optional, giving 2^2. The resulting cardinality is 4."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.2, odd exercises 3, 27, 29, 41. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.2",
+        "odd_exercises": [
+          3,
+          27,
+          29,
+          41
+        ],
+        "workshop": "Finite-set synthesis 1"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "sets",
+        "args": {
+          "a": [
+            1,
+            2,
+            4,
+            7
+          ],
+          "b": [
+            2,
+            3,
+            4,
+            8
+          ],
+          "c": [
+            1,
+            4,
+            5,
+            8
+          ],
+          "u": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "query": "required-subsets"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-156",
+      "topic": "Finite-set synthesis 2",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "How many elements are in (A∪B)∖C?",
+      "context": "U={0, 1, 2, 3, 4, 5, 6, 7, 8, 9}, A={0, 2, 3, 5, 8}, B={1, 3, 5, 7}, C={0, 1, 5, 6, 8}. Complements are relative to U.",
+      "options": [
+        "3",
+        "5",
+        "2",
+        "4"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Translate each set operation into its membership condition before counting.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Combine set operations, complements, power sets, and exact membership conditions.",
+        "correct_rationale": "The relevant calculation is {2, 3, 7}. The resulting cardinality is 3.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "5 does not satisfy the stated computation. The relevant calculation is {2, 3, 7}. The resulting cardinality is 3."
+          },
+          {
+            "option_index": 2,
+            "rationale": "2 does not satisfy the stated computation. The relevant calculation is {2, 3, 7}. The resulting cardinality is 3."
+          },
+          {
+            "option_index": 3,
+            "rationale": "4 does not satisfy the stated computation. The relevant calculation is {2, 3, 7}. The resulting cardinality is 3."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.2, odd exercises 3, 27, 29, 41. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.2",
+        "odd_exercises": [
+          3,
+          27,
+          29,
+          41
+        ],
+        "workshop": "Finite-set synthesis 2"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "sets",
+        "args": {
+          "a": [
+            0,
+            2,
+            3,
+            5,
+            8
+          ],
+          "b": [
+            1,
+            3,
+            5,
+            7
+          ],
+          "c": [
+            0,
+            1,
+            5,
+            6,
+            8
+          ],
+          "u": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "query": "union-minus"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-157",
+      "topic": "Finite-set synthesis 2",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "How many elements belong to exactly one of A and B?",
+      "context": "U={0, 1, 2, 3, 4, 5, 6, 7, 8, 9}, A={0, 2, 3, 5, 8}, B={1, 3, 5, 7}, C={0, 1, 5, 6, 8}. Complements are relative to U.",
+      "options": [
+        "6",
+        "5",
+        "7",
+        "4"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Translate each set operation into its membership condition before counting.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Combine set operations, complements, power sets, and exact membership conditions.",
+        "correct_rationale": "The relevant calculation is {0, 1, 2, 7, 8}. The resulting cardinality is 5.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "6 does not satisfy the stated computation. The relevant calculation is {0, 1, 2, 7, 8}. The resulting cardinality is 5."
+          },
+          {
+            "option_index": 2,
+            "rationale": "7 does not satisfy the stated computation. The relevant calculation is {0, 1, 2, 7, 8}. The resulting cardinality is 5."
+          },
+          {
+            "option_index": 3,
+            "rationale": "4 does not satisfy the stated computation. The relevant calculation is {0, 1, 2, 7, 8}. The resulting cardinality is 5."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.2, odd exercises 3, 27, 29, 41. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.2",
+        "odd_exercises": [
+          3,
+          27,
+          29,
+          41
+        ],
+        "workshop": "Finite-set synthesis 2"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "sets",
+        "args": {
+          "a": [
+            0,
+            2,
+            3,
+            5,
+            8
+          ],
+          "b": [
+            1,
+            3,
+            5,
+            7
+          ],
+          "c": [
+            0,
+            1,
+            5,
+            6,
+            8
+          ],
+          "u": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "query": "xor"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-158",
+      "topic": "Finite-set synthesis 2",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What is |U∖(A∪B∪C)|?",
+      "context": "U={0, 1, 2, 3, 4, 5, 6, 7, 8, 9}, A={0, 2, 3, 5, 8}, B={1, 3, 5, 7}, C={0, 1, 5, 6, 8}. Complements are relative to U.",
+      "options": [
+        "2",
+        "3",
+        "1",
+        "4"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Translate each set operation into its membership condition before counting.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Combine set operations, complements, power sets, and exact membership conditions.",
+        "correct_rationale": "The relevant calculation is {4, 9}. The resulting cardinality is 2.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "3 does not satisfy the stated computation. The relevant calculation is {4, 9}. The resulting cardinality is 2."
+          },
+          {
+            "option_index": 2,
+            "rationale": "1 does not satisfy the stated computation. The relevant calculation is {4, 9}. The resulting cardinality is 2."
+          },
+          {
+            "option_index": 3,
+            "rationale": "4 does not satisfy the stated computation. The relevant calculation is {4, 9}. The resulting cardinality is 2."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.2, odd exercises 3, 27, 29, 41. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.2",
+        "odd_exercises": [
+          3,
+          27,
+          29,
+          41
+        ],
+        "workshop": "Finite-set synthesis 2"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "sets",
+        "args": {
+          "a": [
+            0,
+            2,
+            3,
+            5,
+            8
+          ],
+          "b": [
+            1,
+            3,
+            5,
+            7
+          ],
+          "c": [
+            0,
+            1,
+            5,
+            6,
+            8
+          ],
+          "u": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "query": "outside"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-159",
+      "topic": "Finite-set synthesis 2",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "What is |𝒫(A∩B) × (C∖A)|?",
+      "context": "U={0, 1, 2, 3, 4, 5, 6, 7, 8, 9}, A={0, 2, 3, 5, 8}, B={1, 3, 5, 7}, C={0, 1, 5, 6, 8}. Complements are relative to U.",
+      "options": [
+        "7",
+        "10",
+        "9",
+        "8"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Translate each set operation into its membership condition before counting.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Combine set operations, complements, power sets, and exact membership conditions.",
+        "correct_rationale": "The relevant calculation is 2^2 × 2. The resulting cardinality is 8.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "7 does not satisfy the stated computation. The relevant calculation is 2^2 × 2. The resulting cardinality is 8."
+          },
+          {
+            "option_index": 1,
+            "rationale": "10 does not satisfy the stated computation. The relevant calculation is 2^2 × 2. The resulting cardinality is 8."
+          },
+          {
+            "option_index": 2,
+            "rationale": "9 does not satisfy the stated computation. The relevant calculation is 2^2 × 2. The resulting cardinality is 8."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.2, odd exercises 3, 27, 29, 41. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.2",
+        "odd_exercises": [
+          3,
+          27,
+          29,
+          41
+        ],
+        "workshop": "Finite-set synthesis 2"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "sets",
+        "args": {
+          "a": [
+            0,
+            2,
+            3,
+            5,
+            8
+          ],
+          "b": [
+            1,
+            3,
+            5,
+            7
+          ],
+          "c": [
+            0,
+            1,
+            5,
+            6,
+            8
+          ],
+          "u": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "query": "power-product"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-160",
+      "topic": "Finite-set synthesis 2",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "How many subsets S of A satisfy A∩B ⊆ S?",
+      "context": "U={0, 1, 2, 3, 4, 5, 6, 7, 8, 9}, A={0, 2, 3, 5, 8}, B={1, 3, 5, 7}, C={0, 1, 5, 6, 8}. Complements are relative to U.",
+      "options": [
+        "10",
+        "9",
+        "7",
+        "8"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Translate each set operation into its membership condition before counting.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Combine set operations, complements, power sets, and exact membership conditions.",
+        "correct_rationale": "The relevant calculation is The 2 required elements are fixed; the 3 remaining elements are optional, giving 2^3. The resulting cardinality is 8.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "10 does not satisfy the stated computation. The relevant calculation is The 2 required elements are fixed; the 3 remaining elements are optional, giving 2^3. The resulting cardinality is 8."
+          },
+          {
+            "option_index": 1,
+            "rationale": "9 does not satisfy the stated computation. The relevant calculation is The 2 required elements are fixed; the 3 remaining elements are optional, giving 2^3. The resulting cardinality is 8."
+          },
+          {
+            "option_index": 2,
+            "rationale": "7 does not satisfy the stated computation. The relevant calculation is The 2 required elements are fixed; the 3 remaining elements are optional, giving 2^3. The resulting cardinality is 8."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.2, odd exercises 3, 27, 29, 41. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.2",
+        "odd_exercises": [
+          3,
+          27,
+          29,
+          41
+        ],
+        "workshop": "Finite-set synthesis 2"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "sets",
+        "args": {
+          "a": [
+            0,
+            2,
+            3,
+            5,
+            8
+          ],
+          "b": [
+            1,
+            3,
+            5,
+            7
+          ],
+          "c": [
+            0,
+            1,
+            5,
+            6,
+            8
+          ],
+          "u": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "query": "required-subsets"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-161",
+      "topic": "Finite-set synthesis 3",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "How many elements are in (A∪B)∖C?",
+      "context": "U={0, 1, 2, 3, 4, 5, 6, 7, 8, 9}, A={1, 3, 5, 7, 9}, B={2, 3, 5, 8}, C={3, 4, 7, 8, 9}. Complements are relative to U.",
+      "options": [
+        "5",
+        "2",
+        "3",
+        "4"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Translate each set operation into its membership condition before counting.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Combine set operations, complements, power sets, and exact membership conditions.",
+        "correct_rationale": "The relevant calculation is {1, 2, 5}. The resulting cardinality is 3.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "5 does not satisfy the stated computation. The relevant calculation is {1, 2, 5}. The resulting cardinality is 3."
+          },
+          {
+            "option_index": 1,
+            "rationale": "2 does not satisfy the stated computation. The relevant calculation is {1, 2, 5}. The resulting cardinality is 3."
+          },
+          {
+            "option_index": 3,
+            "rationale": "4 does not satisfy the stated computation. The relevant calculation is {1, 2, 5}. The resulting cardinality is 3."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.2, odd exercises 3, 27, 29, 41. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.2",
+        "odd_exercises": [
+          3,
+          27,
+          29,
+          41
+        ],
+        "workshop": "Finite-set synthesis 3"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "sets",
+        "args": {
+          "a": [
+            1,
+            3,
+            5,
+            7,
+            9
+          ],
+          "b": [
+            2,
+            3,
+            5,
+            8
+          ],
+          "c": [
+            3,
+            4,
+            7,
+            8,
+            9
+          ],
+          "u": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "query": "union-minus"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-162",
+      "topic": "Finite-set synthesis 3",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "How many elements belong to exactly one of A and B?",
+      "context": "U={0, 1, 2, 3, 4, 5, 6, 7, 8, 9}, A={1, 3, 5, 7, 9}, B={2, 3, 5, 8}, C={3, 4, 7, 8, 9}. Complements are relative to U.",
+      "options": [
+        "7",
+        "5",
+        "4",
+        "6"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Translate each set operation into its membership condition before counting.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Combine set operations, complements, power sets, and exact membership conditions.",
+        "correct_rationale": "The relevant calculation is {1, 2, 7, 8, 9}. The resulting cardinality is 5.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "7 does not satisfy the stated computation. The relevant calculation is {1, 2, 7, 8, 9}. The resulting cardinality is 5."
+          },
+          {
+            "option_index": 2,
+            "rationale": "4 does not satisfy the stated computation. The relevant calculation is {1, 2, 7, 8, 9}. The resulting cardinality is 5."
+          },
+          {
+            "option_index": 3,
+            "rationale": "6 does not satisfy the stated computation. The relevant calculation is {1, 2, 7, 8, 9}. The resulting cardinality is 5."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.2, odd exercises 3, 27, 29, 41. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.2",
+        "odd_exercises": [
+          3,
+          27,
+          29,
+          41
+        ],
+        "workshop": "Finite-set synthesis 3"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "sets",
+        "args": {
+          "a": [
+            1,
+            3,
+            5,
+            7,
+            9
+          ],
+          "b": [
+            2,
+            3,
+            5,
+            8
+          ],
+          "c": [
+            3,
+            4,
+            7,
+            8,
+            9
+          ],
+          "u": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "query": "xor"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-163",
+      "topic": "Finite-set synthesis 3",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What is |U∖(A∪B∪C)|?",
+      "context": "U={0, 1, 2, 3, 4, 5, 6, 7, 8, 9}, A={1, 3, 5, 7, 9}, B={2, 3, 5, 8}, C={3, 4, 7, 8, 9}. Complements are relative to U.",
+      "options": [
+        "3",
+        "4",
+        "1",
+        "2"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Translate each set operation into its membership condition before counting.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Combine set operations, complements, power sets, and exact membership conditions.",
+        "correct_rationale": "The relevant calculation is {0, 6}. The resulting cardinality is 2.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "3 does not satisfy the stated computation. The relevant calculation is {0, 6}. The resulting cardinality is 2."
+          },
+          {
+            "option_index": 1,
+            "rationale": "4 does not satisfy the stated computation. The relevant calculation is {0, 6}. The resulting cardinality is 2."
+          },
+          {
+            "option_index": 2,
+            "rationale": "1 does not satisfy the stated computation. The relevant calculation is {0, 6}. The resulting cardinality is 2."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.2, odd exercises 3, 27, 29, 41. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.2",
+        "odd_exercises": [
+          3,
+          27,
+          29,
+          41
+        ],
+        "workshop": "Finite-set synthesis 3"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "sets",
+        "args": {
+          "a": [
+            1,
+            3,
+            5,
+            7,
+            9
+          ],
+          "b": [
+            2,
+            3,
+            5,
+            8
+          ],
+          "c": [
+            3,
+            4,
+            7,
+            8,
+            9
+          ],
+          "u": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "query": "outside"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-164",
+      "topic": "Finite-set synthesis 3",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "What is |𝒫(A∩B) × (C∖A)|?",
+      "context": "U={0, 1, 2, 3, 4, 5, 6, 7, 8, 9}, A={1, 3, 5, 7, 9}, B={2, 3, 5, 8}, C={3, 4, 7, 8, 9}. Complements are relative to U.",
+      "options": [
+        "8",
+        "10",
+        "7",
+        "9"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Translate each set operation into its membership condition before counting.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Combine set operations, complements, power sets, and exact membership conditions.",
+        "correct_rationale": "The relevant calculation is 2^2 × 2. The resulting cardinality is 8.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "10 does not satisfy the stated computation. The relevant calculation is 2^2 × 2. The resulting cardinality is 8."
+          },
+          {
+            "option_index": 2,
+            "rationale": "7 does not satisfy the stated computation. The relevant calculation is 2^2 × 2. The resulting cardinality is 8."
+          },
+          {
+            "option_index": 3,
+            "rationale": "9 does not satisfy the stated computation. The relevant calculation is 2^2 × 2. The resulting cardinality is 8."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.2, odd exercises 3, 27, 29, 41. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.2",
+        "odd_exercises": [
+          3,
+          27,
+          29,
+          41
+        ],
+        "workshop": "Finite-set synthesis 3"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "sets",
+        "args": {
+          "a": [
+            1,
+            3,
+            5,
+            7,
+            9
+          ],
+          "b": [
+            2,
+            3,
+            5,
+            8
+          ],
+          "c": [
+            3,
+            4,
+            7,
+            8,
+            9
+          ],
+          "u": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "query": "power-product"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-165",
+      "topic": "Finite-set synthesis 3",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "How many subsets S of A satisfy A∩B ⊆ S?",
+      "context": "U={0, 1, 2, 3, 4, 5, 6, 7, 8, 9}, A={1, 3, 5, 7, 9}, B={2, 3, 5, 8}, C={3, 4, 7, 8, 9}. Complements are relative to U.",
+      "options": [
+        "9",
+        "8",
+        "7",
+        "10"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Translate each set operation into its membership condition before counting.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Combine set operations, complements, power sets, and exact membership conditions.",
+        "correct_rationale": "The relevant calculation is The 2 required elements are fixed; the 3 remaining elements are optional, giving 2^3. The resulting cardinality is 8.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "9 does not satisfy the stated computation. The relevant calculation is The 2 required elements are fixed; the 3 remaining elements are optional, giving 2^3. The resulting cardinality is 8."
+          },
+          {
+            "option_index": 2,
+            "rationale": "7 does not satisfy the stated computation. The relevant calculation is The 2 required elements are fixed; the 3 remaining elements are optional, giving 2^3. The resulting cardinality is 8."
+          },
+          {
+            "option_index": 3,
+            "rationale": "10 does not satisfy the stated computation. The relevant calculation is The 2 required elements are fixed; the 3 remaining elements are optional, giving 2^3. The resulting cardinality is 8."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.2, odd exercises 3, 27, 29, 41. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.2",
+        "odd_exercises": [
+          3,
+          27,
+          29,
+          41
+        ],
+        "workshop": "Finite-set synthesis 3"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "sets",
+        "args": {
+          "a": [
+            1,
+            3,
+            5,
+            7,
+            9
+          ],
+          "b": [
+            2,
+            3,
+            5,
+            8
+          ],
+          "c": [
+            3,
+            4,
+            7,
+            8,
+            9
+          ],
+          "u": [
+            0,
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9
+          ],
+          "query": "required-subsets"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-166",
+      "topic": "Elements versus subsets",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "How many elements does 𝒫(A) have?",
+      "context": "Let A={∅,{∅}}. The symbols ∈ and ⊆ have different meanings, and 𝒫 denotes the power set.",
+      "options": [
+        "4",
+        "3",
+        "2",
+        "0"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "List the elements of A first, then form all subsets as separate objects.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Distinguish an object, a singleton containing it, and a collection of subsets.",
+        "correct_rationale": "A has two distinct elements, ∅ and {∅}. Its power set has 2²=4 elements.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. A has two distinct elements, ∅ and {∅}. Its power set has 2²=4 elements."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. A has two distinct elements, ∅ and {∅}. Its power set has 2²=4 elements."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. A has two distinct elements, ∅ and {∅}. Its power set has 2²=4 elements."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.1, odd exercises 11, 13, 21, 23, 25. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.1",
+        "odd_exercises": [
+          11,
+          13,
+          21,
+          23,
+          25
+        ],
+        "workshop": "Elements versus subsets"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-167",
+      "topic": "Elements versus subsets",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Which is an element of 𝒫(A)?",
+      "context": "Let A={∅,{∅}}. The symbols ∈ and ⊆ have different meanings, and 𝒫 denotes the power set.",
+      "options": [
+        "{∅,1}",
+        "{{{∅}}}",
+        "{{∅}}",
+        "{1}"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "List the elements of A first, then form all subsets as separate objects.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Distinguish an object, a singleton containing it, and a collection of subsets.",
+        "correct_rationale": "{{∅}} is the singleton whose element {∅} belongs to A, so it is a subset of A. The other choices contain objects not in A.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. {{∅}} is the singleton whose element {∅} belongs to A, so it is a subset of A. The other choices contain objects not in A."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. {{∅}} is the singleton whose element {∅} belongs to A, so it is a subset of A. The other choices contain objects not in A."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. {{∅}} is the singleton whose element {∅} belongs to A, so it is a subset of A. The other choices contain objects not in A."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.1, odd exercises 11, 13, 21, 23, 25. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.1",
+        "odd_exercises": [
+          11,
+          13,
+          21,
+          23,
+          25
+        ],
+        "workshop": "Elements versus subsets"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-168",
+      "topic": "Elements versus subsets",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Which statement is false?",
+      "context": "Let A={∅,{∅}}. The symbols ∈ and ⊆ have different meanings, and 𝒫 denotes the power set.",
+      "options": [
+        "{∅}∈A",
+        "∅∈A",
+        "{{∅}}⊆A",
+        "{{∅}}∈A"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "List the elements of A first, then form all subsets as separate objects.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Distinguish an object, a singleton containing it, and a collection of subsets.",
+        "correct_rationale": "The elements of A are exactly ∅ and {∅}; {{∅}} is neither. But its only element {∅} lies in A, making it a subset.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. The elements of A are exactly ∅ and {∅}; {{∅}} is neither. But its only element {∅} lies in A, making it a subset."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. The elements of A are exactly ∅ and {∅}; {{∅}} is neither. But its only element {∅} lies in A, making it a subset."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. The elements of A are exactly ∅ and {∅}; {{∅}} is neither. But its only element {∅} lies in A, making it a subset."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.1, odd exercises 11, 13, 21, 23, 25. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.1",
+        "odd_exercises": [
+          11,
+          13,
+          21,
+          23,
+          25
+        ],
+        "workshop": "Elements versus subsets"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-169",
+      "topic": "Elements versus subsets",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "What is |𝒫(𝒫(A))|?",
+      "context": "Let A={∅,{∅}}. The symbols ∈ and ⊆ have different meanings, and 𝒫 denotes the power set.",
+      "options": [
+        "256",
+        "16",
+        "4",
+        "8"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "List the elements of A first, then form all subsets as separate objects.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Distinguish an object, a singleton containing it, and a collection of subsets.",
+        "correct_rationale": "First |A|=2, then |𝒫(A)|=4, then |𝒫(𝒫(A))|=2⁴=16. Apply exponentiation once at each power-set level.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. First |A|=2, then |𝒫(A)|=4, then |𝒫(𝒫(A))|=2⁴=16. Apply exponentiation once at each power-set level."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. First |A|=2, then |𝒫(A)|=4, then |𝒫(𝒫(A))|=2⁴=16. Apply exponentiation once at each power-set level."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. First |A|=2, then |𝒫(A)|=4, then |𝒫(𝒫(A))|=2⁴=16. Apply exponentiation once at each power-set level."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.1, odd exercises 11, 13, 21, 23, 25. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.1",
+        "odd_exercises": [
+          11,
+          13,
+          21,
+          23,
+          25
+        ],
+        "workshop": "Elements versus subsets"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-170",
+      "topic": "Elements versus subsets",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "If B={∅}, what is |A×B|?",
+      "context": "Let A={∅,{∅}}. The symbols ∈ and ⊆ have different meanings, and 𝒫 denotes the power set.",
+      "options": [
+        "1",
+        "0",
+        "4",
+        "2"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "List the elements of A first, then form all subsets as separate objects.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Distinguish an object, a singleton containing it, and a collection of subsets.",
+        "correct_rationale": "B is not empty: it has one element. The pairs are (∅,∅) and ({∅},∅), so |A×B|=2·1.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. B is not empty: it has one element. The pairs are (∅,∅) and ({∅},∅), so |A×B|=2·1."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. B is not empty: it has one element. The pairs are (∅,∅) and ({∅},∅), so |A×B|=2·1."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. B is not empty: it has one element. The pairs are (∅,∅) and ({∅},∅), so |A×B|=2·1."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.1, odd exercises 11, 13, 21, 23, 25. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.1",
+        "odd_exercises": [
+          11,
+          13,
+          21,
+          23,
+          25
+        ],
+        "workshop": "Elements versus subsets"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-171",
+      "topic": "Set identities by membership",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Which expression equals A∖(B∩C)?",
+      "context": "A,B,C are arbitrary subsets of a fixed universe U; Aᶜ means U∖A.",
+      "options": [
+        "A∩B∩C",
+        "(A∖B)∪(A∖C)",
+        "(B∖A)∪(C∖A)",
+        "(A∖B)∩(A∖C)"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Union behaves like OR, intersection like AND, and complement like negation.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Use membership logic to prove identities and detect invalid cancellation.",
+        "correct_rationale": "Membership is A∧¬(B∧C)=A∧(¬B∨¬C), which distributes to (A∧¬B)∨(A∧¬C).",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. Membership is A∧¬(B∧C)=A∧(¬B∨¬C), which distributes to (A∧¬B)∨(A∧¬C)."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. Membership is A∧¬(B∧C)=A∧(¬B∨¬C), which distributes to (A∧¬B)∨(A∧¬C)."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. Membership is A∧¬(B∧C)=A∧(¬B∨¬C), which distributes to (A∧¬B)∨(A∧¬C)."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.2, odd exercises 15, 17, 19, 25, 37. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.2",
+        "odd_exercises": [
+          15,
+          17,
+          19,
+          25,
+          37
+        ],
+        "workshop": "Set identities by membership"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-172",
+      "topic": "Set identities by membership",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Which condition is equivalent to A⊆B?",
+      "context": "A,B,C are arbitrary subsets of a fixed universe U; Aᶜ means U∖A.",
+      "options": [
+        "A∩B=∅",
+        "A∪B=U",
+        "B⊆A",
+        "A∩Bᶜ=∅"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Union behaves like OR, intersection like AND, and complement like negation.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Use membership logic to prove identities and detect invalid cancellation.",
+        "correct_rationale": "There must be no element of A outside B. The other conditions express covering the universe, disjointness, or the reversed inclusion.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. There must be no element of A outside B. The other conditions express covering the universe, disjointness, or the reversed inclusion."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. There must be no element of A outside B. The other conditions express covering the universe, disjointness, or the reversed inclusion."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. There must be no element of A outside B. The other conditions express covering the universe, disjointness, or the reversed inclusion."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.2, odd exercises 15, 17, 19, 25, 37. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.2",
+        "odd_exercises": [
+          15,
+          17,
+          19,
+          25,
+          37
+        ],
+        "workshop": "Set identities by membership"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-173",
+      "topic": "Set identities by membership",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Which identity is always true?",
+      "context": "A,B,C are arbitrary subsets of a fixed universe U; Aᶜ means U∖A.",
+      "options": [
+        "A∪B=A∩B",
+        "A∖B=B∖A",
+        "(A∪B)∩(A∪C)=A∪(B∩C)",
+        "A×B=B×A"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Union behaves like OR, intersection like AND, and complement like negation.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Use membership logic to prove identities and detect invalid cancellation.",
+        "correct_rationale": "The first is distributivity. Differences are directional, unions differ from intersections, and ordered Cartesian pairs need not commute.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. The first is distributivity. Differences are directional, unions differ from intersections, and ordered Cartesian pairs need not commute."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. The first is distributivity. Differences are directional, unions differ from intersections, and ordered Cartesian pairs need not commute."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. The first is distributivity. Differences are directional, unions differ from intersections, and ordered Cartesian pairs need not commute."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.2, odd exercises 15, 17, 19, 25, 37. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.2",
+        "odd_exercises": [
+          15,
+          17,
+          19,
+          25,
+          37
+        ],
+        "workshop": "Set identities by membership"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-174",
+      "topic": "Set identities by membership",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "Why does A∪B=A∪C not imply B=C?",
+      "context": "A,B,C are arbitrary subsets of a fixed universe U; Aᶜ means U∖A.",
+      "options": [
+        "A can hide differences between B and C.",
+        "Set equality is not symmetric.",
+        "Union is not associative.",
+        "The implication fails only for infinite sets."
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Union behaves like OR, intersection like AND, and complement like negation.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Use membership logic to prove identities and detect invalid cancellation.",
+        "correct_rationale": "For A={1}, B=∅, C={1}, both unions are {1}, but B≠C. This finite counterexample also identifies the invalid cancellation.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. For A={1}, B=∅, C={1}, both unions are {1}, but B≠C. This finite counterexample also identifies the invalid cancellation."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. For A={1}, B=∅, C={1}, both unions are {1}, but B≠C. This finite counterexample also identifies the invalid cancellation."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. For A={1}, B=∅, C={1}, both unions are {1}, but B≠C. This finite counterexample also identifies the invalid cancellation."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.2, odd exercises 15, 17, 19, 25, 37. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.2",
+        "odd_exercises": [
+          15,
+          17,
+          19,
+          25,
+          37
+        ],
+        "workshop": "Set identities by membership"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-175",
+      "topic": "Set identities by membership",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "If both A∪B=A∪C and A∩B=A∩C hold, what follows?",
+      "context": "A,B,C are arbitrary subsets of a fixed universe U; Aᶜ means U∖A.",
+      "options": [
+        "No relation between B and C follows.",
+        "B=C",
+        "B and C must be disjoint.",
+        "A must be empty."
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Union behaves like OR, intersection like AND, and complement like negation.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Use membership logic to prove identities and detect invalid cancellation.",
+        "correct_rationale": "For any x, if x∈A compare the intersections; if x∉A compare the unions. In each case x∈B iff x∈C, proving equality.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. For any x, if x∈A compare the intersections; if x∉A compare the unions. In each case x∈B iff x∈C, proving equality."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. For any x, if x∈A compare the intersections; if x∉A compare the unions. In each case x∈B iff x∈C, proving equality."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. For any x, if x∈A compare the intersections; if x∉A compare the unions. In each case x∈B iff x∈C, proving equality."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.2, odd exercises 15, 17, 19, 25, 37. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.2",
+        "odd_exercises": [
+          15,
+          17,
+          19,
+          25,
+          37
+        ],
+        "workshop": "Set identities by membership"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-176",
+      "topic": "Function table 1",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What is |f(D)|?",
+      "context": "f:D→B, D={0, 1, 2, 3}, B={0, 1, 2, 3}. The outputs f(0),f(1),f(2),f(3) are [2, 0, 3, 1]. Define g:B→Z by g(y)=2y−1.",
+      "options": [
+        "6",
+        "3",
+        "4",
+        "5"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Compare distinct outputs with the entire codomain; composition applies the rightmost function first.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Read image and preimage sets, classify maps, and compose in the correct order.",
+        "correct_rationale": "The distinct outputs are {0, 1, 2, 3}; repeated outputs count once.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "6 does not satisfy the stated computation. The distinct outputs are {0, 1, 2, 3}; repeated outputs count once."
+          },
+          {
+            "option_index": 1,
+            "rationale": "3 does not satisfy the stated computation. The distinct outputs are {0, 1, 2, 3}; repeated outputs count once."
+          },
+          {
+            "option_index": 3,
+            "rationale": "5 does not satisfy the stated computation. The distinct outputs are {0, 1, 2, 3}; repeated outputs count once."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.3, odd exercises 5, 11, 13, 31, 33. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.3",
+        "odd_exercises": [
+          5,
+          11,
+          13,
+          31,
+          33
+        ],
+        "workshop": "Function table 1"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "function",
+        "args": {
+          "mapping": [
+            2,
+            0,
+            3,
+            1
+          ],
+          "query": "image-count"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-177",
+      "topic": "Function table 1",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What is |f⁻¹({1})|?",
+      "context": "f:D→B, D={0, 1, 2, 3}, B={0, 1, 2, 3}. The outputs f(0),f(1),f(2),f(3) are [2, 0, 3, 1]. Define g:B→Z by g(y)=2y−1.",
+      "options": [
+        "0",
+        "3",
+        "1",
+        "2"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Compare distinct outputs with the entire codomain; composition applies the rightmost function first.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Read image and preimage sets, classify maps, and compose in the correct order.",
+        "correct_rationale": "The preimage is {3}. A preimage set is defined even when f has no inverse function.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "0 does not satisfy the stated computation. The preimage is {3}. A preimage set is defined even when f has no inverse function."
+          },
+          {
+            "option_index": 1,
+            "rationale": "3 does not satisfy the stated computation. The preimage is {3}. A preimage set is defined even when f has no inverse function."
+          },
+          {
+            "option_index": 3,
+            "rationale": "2 does not satisfy the stated computation. The preimage is {3}. A preimage set is defined even when f has no inverse function."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.3, odd exercises 5, 11, 13, 31, 33. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.3",
+        "odd_exercises": [
+          5,
+          11,
+          13,
+          31,
+          33
+        ],
+        "workshop": "Function table 1"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "function",
+        "args": {
+          "mapping": [
+            2,
+            0,
+            3,
+            1
+          ],
+          "target": 1,
+          "query": "preimage-count"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-178",
+      "topic": "Function table 1",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "How is f classified with the stated codomain?",
+      "context": "f:D→B, D={0, 1, 2, 3}, B={0, 1, 2, 3}. The outputs f(0),f(1),f(2),f(3) are [2, 0, 3, 1]. Define g:B→Z by g(y)=2y−1.",
+      "options": [
+        "Injective but not surjective",
+        "Bijective",
+        "Surjective but not injective",
+        "Neither injective nor surjective"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Compare distinct outputs with the entire codomain; composition applies the rightmost function first.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Read image and preimage sets, classify maps, and compose in the correct order.",
+        "correct_rationale": "There are 4 inputs and 4 distinct outputs, so injectivity is True. The image is {0, 1, 2, 3}, while the codomain is {0, 1, 2, 3}, so surjectivity is True.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. There are 4 inputs and 4 distinct outputs, so injectivity is True. The image is {0, 1, 2, 3}, while the codomain is {0, 1, 2, 3}, so surjectivity is True."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. There are 4 inputs and 4 distinct outputs, so injectivity is True. The image is {0, 1, 2, 3}, while the codomain is {0, 1, 2, 3}, so surjectivity is True."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. There are 4 inputs and 4 distinct outputs, so injectivity is True. The image is {0, 1, 2, 3}, while the codomain is {0, 1, 2, 3}, so surjectivity is True."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.3, odd exercises 5, 11, 13, 31, 33. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.3",
+        "odd_exercises": [
+          5,
+          11,
+          13,
+          31,
+          33
+        ],
+        "workshop": "Function table 1"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "function",
+        "args": {
+          "mapping": [
+            2,
+            0,
+            3,
+            1
+          ],
+          "codomain": [
+            0,
+            1,
+            2,
+            3
+          ],
+          "query": "classification"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-179",
+      "topic": "Function table 1",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "What is (g∘f)(2)+(g∘f)(3)?",
+      "context": "f:D→B, D={0, 1, 2, 3}, B={0, 1, 2, 3}. The outputs f(0),f(1),f(2),f(3) are [2, 0, 3, 1]. Define g:B→Z by g(y)=2y−1.",
+      "options": [
+        "5",
+        "8",
+        "7",
+        "6"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Compare distinct outputs with the entire codomain; composition applies the rightmost function first.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Read image and preimage sets, classify maps, and compose in the correct order.",
+        "correct_rationale": "First apply f: outputs 3 and 1. Apply g to each and add (2·3−1)+(2·1−1).",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "5 does not satisfy the stated computation. First apply f: outputs 3 and 1. Apply g to each and add (2·3−1)+(2·1−1)."
+          },
+          {
+            "option_index": 1,
+            "rationale": "8 does not satisfy the stated computation. First apply f: outputs 3 and 1. Apply g to each and add (2·3−1)+(2·1−1)."
+          },
+          {
+            "option_index": 2,
+            "rationale": "7 does not satisfy the stated computation. First apply f: outputs 3 and 1. Apply g to each and add (2·3−1)+(2·1−1)."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.3, odd exercises 5, 11, 13, 31, 33. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.3",
+        "odd_exercises": [
+          5,
+          11,
+          13,
+          31,
+          33
+        ],
+        "workshop": "Function table 1"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "function",
+        "args": {
+          "mapping": [
+            2,
+            0,
+            3,
+            1
+          ],
+          "query": "composition-sum"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-180",
+      "topic": "Function table 1",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "How many ordered pairs (a,b) with a≠b have f(a)=f(b)?",
+      "context": "f:D→B, D={0, 1, 2, 3}, B={0, 1, 2, 3}. The outputs f(0),f(1),f(2),f(3) are [2, 0, 3, 1]. Define g:B→Z by g(y)=2y−1.",
+      "options": [
+        "-1",
+        "1",
+        "2",
+        "0"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Compare distinct outputs with the entire codomain; composition applies the rightmost function first.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Read image and preimage sets, classify maps, and compose in the correct order.",
+        "correct_rationale": "Group inputs by output. A group of size t contributes t(t−1) ordered distinct-input pairs. Here the group sizes are [1, 1, 1, 1], giving 0.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "-1 does not satisfy the stated computation. Group inputs by output. A group of size t contributes t(t−1) ordered distinct-input pairs. Here the group sizes are [1, 1, 1, 1], giving 0."
+          },
+          {
+            "option_index": 1,
+            "rationale": "1 does not satisfy the stated computation. Group inputs by output. A group of size t contributes t(t−1) ordered distinct-input pairs. Here the group sizes are [1, 1, 1, 1], giving 0."
+          },
+          {
+            "option_index": 2,
+            "rationale": "2 does not satisfy the stated computation. Group inputs by output. A group of size t contributes t(t−1) ordered distinct-input pairs. Here the group sizes are [1, 1, 1, 1], giving 0."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.3, odd exercises 5, 11, 13, 31, 33. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.3",
+        "odd_exercises": [
+          5,
+          11,
+          13,
+          31,
+          33
+        ],
+        "workshop": "Function table 1"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "function",
+        "args": {
+          "mapping": [
+            2,
+            0,
+            3,
+            1
+          ],
+          "query": "collisions"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-181",
+      "topic": "Function table 2",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What is |f(D)|?",
+      "context": "f:D→B, D={0, 1, 2, 3}, B={0, 1, 2, 3, 4}. The outputs f(0),f(1),f(2),f(3) are [1, 1, 3, 4]. Define g:B→Z by g(y)=2y−1.",
+      "options": [
+        "4",
+        "5",
+        "3",
+        "2"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Compare distinct outputs with the entire codomain; composition applies the rightmost function first.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Read image and preimage sets, classify maps, and compose in the correct order.",
+        "correct_rationale": "The distinct outputs are {1, 3, 4}; repeated outputs count once.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "4 does not satisfy the stated computation. The distinct outputs are {1, 3, 4}; repeated outputs count once."
+          },
+          {
+            "option_index": 1,
+            "rationale": "5 does not satisfy the stated computation. The distinct outputs are {1, 3, 4}; repeated outputs count once."
+          },
+          {
+            "option_index": 3,
+            "rationale": "2 does not satisfy the stated computation. The distinct outputs are {1, 3, 4}; repeated outputs count once."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.3, odd exercises 5, 11, 13, 31, 33. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.3",
+        "odd_exercises": [
+          5,
+          11,
+          13,
+          31,
+          33
+        ],
+        "workshop": "Function table 2"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "function",
+        "args": {
+          "mapping": [
+            1,
+            1,
+            3,
+            4
+          ],
+          "query": "image-count"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-182",
+      "topic": "Function table 2",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What is |f⁻¹({1})|?",
+      "context": "f:D→B, D={0, 1, 2, 3}, B={0, 1, 2, 3, 4}. The outputs f(0),f(1),f(2),f(3) are [1, 1, 3, 4]. Define g:B→Z by g(y)=2y−1.",
+      "options": [
+        "3",
+        "2",
+        "1",
+        "4"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Compare distinct outputs with the entire codomain; composition applies the rightmost function first.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Read image and preimage sets, classify maps, and compose in the correct order.",
+        "correct_rationale": "The preimage is {0, 1}. A preimage set is defined even when f has no inverse function.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "3 does not satisfy the stated computation. The preimage is {0, 1}. A preimage set is defined even when f has no inverse function."
+          },
+          {
+            "option_index": 2,
+            "rationale": "1 does not satisfy the stated computation. The preimage is {0, 1}. A preimage set is defined even when f has no inverse function."
+          },
+          {
+            "option_index": 3,
+            "rationale": "4 does not satisfy the stated computation. The preimage is {0, 1}. A preimage set is defined even when f has no inverse function."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.3, odd exercises 5, 11, 13, 31, 33. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.3",
+        "odd_exercises": [
+          5,
+          11,
+          13,
+          31,
+          33
+        ],
+        "workshop": "Function table 2"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "function",
+        "args": {
+          "mapping": [
+            1,
+            1,
+            3,
+            4
+          ],
+          "target": 1,
+          "query": "preimage-count"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-183",
+      "topic": "Function table 2",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "How is f classified with the stated codomain?",
+      "context": "f:D→B, D={0, 1, 2, 3}, B={0, 1, 2, 3, 4}. The outputs f(0),f(1),f(2),f(3) are [1, 1, 3, 4]. Define g:B→Z by g(y)=2y−1.",
+      "options": [
+        "Injective but not surjective",
+        "Neither injective nor surjective",
+        "Surjective but not injective",
+        "Bijective"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Compare distinct outputs with the entire codomain; composition applies the rightmost function first.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Read image and preimage sets, classify maps, and compose in the correct order.",
+        "correct_rationale": "There are 4 inputs and 3 distinct outputs, so injectivity is False. The image is {1, 3, 4}, while the codomain is {0, 1, 2, 3, 4}, so surjectivity is False.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. There are 4 inputs and 3 distinct outputs, so injectivity is False. The image is {1, 3, 4}, while the codomain is {0, 1, 2, 3, 4}, so surjectivity is False."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. There are 4 inputs and 3 distinct outputs, so injectivity is False. The image is {1, 3, 4}, while the codomain is {0, 1, 2, 3, 4}, so surjectivity is False."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. There are 4 inputs and 3 distinct outputs, so injectivity is False. The image is {1, 3, 4}, while the codomain is {0, 1, 2, 3, 4}, so surjectivity is False."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.3, odd exercises 5, 11, 13, 31, 33. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.3",
+        "odd_exercises": [
+          5,
+          11,
+          13,
+          31,
+          33
+        ],
+        "workshop": "Function table 2"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "function",
+        "args": {
+          "mapping": [
+            1,
+            1,
+            3,
+            4
+          ],
+          "codomain": [
+            0,
+            1,
+            2,
+            3,
+            4
+          ],
+          "query": "classification"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-184",
+      "topic": "Function table 2",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "What is (g∘f)(2)+(g∘f)(3)?",
+      "context": "f:D→B, D={0, 1, 2, 3}, B={0, 1, 2, 3, 4}. The outputs f(0),f(1),f(2),f(3) are [1, 1, 3, 4]. Define g:B→Z by g(y)=2y−1.",
+      "options": [
+        "14",
+        "12",
+        "11",
+        "13"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Compare distinct outputs with the entire codomain; composition applies the rightmost function first.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Read image and preimage sets, classify maps, and compose in the correct order.",
+        "correct_rationale": "First apply f: outputs 3 and 4. Apply g to each and add (2·3−1)+(2·4−1).",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "14 does not satisfy the stated computation. First apply f: outputs 3 and 4. Apply g to each and add (2·3−1)+(2·4−1)."
+          },
+          {
+            "option_index": 2,
+            "rationale": "11 does not satisfy the stated computation. First apply f: outputs 3 and 4. Apply g to each and add (2·3−1)+(2·4−1)."
+          },
+          {
+            "option_index": 3,
+            "rationale": "13 does not satisfy the stated computation. First apply f: outputs 3 and 4. Apply g to each and add (2·3−1)+(2·4−1)."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.3, odd exercises 5, 11, 13, 31, 33. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.3",
+        "odd_exercises": [
+          5,
+          11,
+          13,
+          31,
+          33
+        ],
+        "workshop": "Function table 2"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "function",
+        "args": {
+          "mapping": [
+            1,
+            1,
+            3,
+            4
+          ],
+          "query": "composition-sum"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-185",
+      "topic": "Function table 2",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "How many ordered pairs (a,b) with a≠b have f(a)=f(b)?",
+      "context": "f:D→B, D={0, 1, 2, 3}, B={0, 1, 2, 3, 4}. The outputs f(0),f(1),f(2),f(3) are [1, 1, 3, 4]. Define g:B→Z by g(y)=2y−1.",
+      "options": [
+        "1",
+        "3",
+        "4",
+        "2"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Compare distinct outputs with the entire codomain; composition applies the rightmost function first.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Read image and preimage sets, classify maps, and compose in the correct order.",
+        "correct_rationale": "Group inputs by output. A group of size t contributes t(t−1) ordered distinct-input pairs. Here the group sizes are [2, 1, 1], giving 2.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "1 does not satisfy the stated computation. Group inputs by output. A group of size t contributes t(t−1) ordered distinct-input pairs. Here the group sizes are [2, 1, 1], giving 2."
+          },
+          {
+            "option_index": 1,
+            "rationale": "3 does not satisfy the stated computation. Group inputs by output. A group of size t contributes t(t−1) ordered distinct-input pairs. Here the group sizes are [2, 1, 1], giving 2."
+          },
+          {
+            "option_index": 2,
+            "rationale": "4 does not satisfy the stated computation. Group inputs by output. A group of size t contributes t(t−1) ordered distinct-input pairs. Here the group sizes are [2, 1, 1], giving 2."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.3, odd exercises 5, 11, 13, 31, 33. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.3",
+        "odd_exercises": [
+          5,
+          11,
+          13,
+          31,
+          33
+        ],
+        "workshop": "Function table 2"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "function",
+        "args": {
+          "mapping": [
+            1,
+            1,
+            3,
+            4
+          ],
+          "query": "collisions"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-186",
+      "topic": "Function table 3",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What is |f(D)|?",
+      "context": "f:D→B, D={0, 1, 2, 3}, B={0, 1, 2}. The outputs f(0),f(1),f(2),f(3) are [0, 1, 2, 1]. Define g:B→Z by g(y)=2y−1.",
+      "options": [
+        "3",
+        "2",
+        "4",
+        "5"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Compare distinct outputs with the entire codomain; composition applies the rightmost function first.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Read image and preimage sets, classify maps, and compose in the correct order.",
+        "correct_rationale": "The distinct outputs are {0, 1, 2}; repeated outputs count once.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "2 does not satisfy the stated computation. The distinct outputs are {0, 1, 2}; repeated outputs count once."
+          },
+          {
+            "option_index": 2,
+            "rationale": "4 does not satisfy the stated computation. The distinct outputs are {0, 1, 2}; repeated outputs count once."
+          },
+          {
+            "option_index": 3,
+            "rationale": "5 does not satisfy the stated computation. The distinct outputs are {0, 1, 2}; repeated outputs count once."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.3, odd exercises 5, 11, 13, 31, 33. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.3",
+        "odd_exercises": [
+          5,
+          11,
+          13,
+          31,
+          33
+        ],
+        "workshop": "Function table 3"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "function",
+        "args": {
+          "mapping": [
+            0,
+            1,
+            2,
+            1
+          ],
+          "query": "image-count"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-187",
+      "topic": "Function table 3",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What is |f⁻¹({1})|?",
+      "context": "f:D→B, D={0, 1, 2, 3}, B={0, 1, 2}. The outputs f(0),f(1),f(2),f(3) are [0, 1, 2, 1]. Define g:B→Z by g(y)=2y−1.",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Compare distinct outputs with the entire codomain; composition applies the rightmost function first.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Read image and preimage sets, classify maps, and compose in the correct order.",
+        "correct_rationale": "The preimage is {1, 3}. A preimage set is defined even when f has no inverse function.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "1 does not satisfy the stated computation. The preimage is {1, 3}. A preimage set is defined even when f has no inverse function."
+          },
+          {
+            "option_index": 2,
+            "rationale": "3 does not satisfy the stated computation. The preimage is {1, 3}. A preimage set is defined even when f has no inverse function."
+          },
+          {
+            "option_index": 3,
+            "rationale": "4 does not satisfy the stated computation. The preimage is {1, 3}. A preimage set is defined even when f has no inverse function."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.3, odd exercises 5, 11, 13, 31, 33. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.3",
+        "odd_exercises": [
+          5,
+          11,
+          13,
+          31,
+          33
+        ],
+        "workshop": "Function table 3"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "function",
+        "args": {
+          "mapping": [
+            0,
+            1,
+            2,
+            1
+          ],
+          "target": 1,
+          "query": "preimage-count"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-188",
+      "topic": "Function table 3",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "How is f classified with the stated codomain?",
+      "context": "f:D→B, D={0, 1, 2, 3}, B={0, 1, 2}. The outputs f(0),f(1),f(2),f(3) are [0, 1, 2, 1]. Define g:B→Z by g(y)=2y−1.",
+      "options": [
+        "Surjective but not injective",
+        "Bijective",
+        "Neither injective nor surjective",
+        "Injective but not surjective"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Compare distinct outputs with the entire codomain; composition applies the rightmost function first.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Read image and preimage sets, classify maps, and compose in the correct order.",
+        "correct_rationale": "There are 4 inputs and 3 distinct outputs, so injectivity is False. The image is {0, 1, 2}, while the codomain is {0, 1, 2}, so surjectivity is True.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. There are 4 inputs and 3 distinct outputs, so injectivity is False. The image is {0, 1, 2}, while the codomain is {0, 1, 2}, so surjectivity is True."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. There are 4 inputs and 3 distinct outputs, so injectivity is False. The image is {0, 1, 2}, while the codomain is {0, 1, 2}, so surjectivity is True."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. There are 4 inputs and 3 distinct outputs, so injectivity is False. The image is {0, 1, 2}, while the codomain is {0, 1, 2}, so surjectivity is True."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.3, odd exercises 5, 11, 13, 31, 33. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.3",
+        "odd_exercises": [
+          5,
+          11,
+          13,
+          31,
+          33
+        ],
+        "workshop": "Function table 3"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "function",
+        "args": {
+          "mapping": [
+            0,
+            1,
+            2,
+            1
+          ],
+          "codomain": [
+            0,
+            1,
+            2
+          ],
+          "query": "classification"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-189",
+      "topic": "Function table 3",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "What is (g∘f)(2)+(g∘f)(3)?",
+      "context": "f:D→B, D={0, 1, 2, 3}, B={0, 1, 2}. The outputs f(0),f(1),f(2),f(3) are [0, 1, 2, 1]. Define g:B→Z by g(y)=2y−1.",
+      "options": [
+        "5",
+        "6",
+        "4",
+        "3"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Compare distinct outputs with the entire codomain; composition applies the rightmost function first.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Read image and preimage sets, classify maps, and compose in the correct order.",
+        "correct_rationale": "First apply f: outputs 2 and 1. Apply g to each and add (2·2−1)+(2·1−1).",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "5 does not satisfy the stated computation. First apply f: outputs 2 and 1. Apply g to each and add (2·2−1)+(2·1−1)."
+          },
+          {
+            "option_index": 1,
+            "rationale": "6 does not satisfy the stated computation. First apply f: outputs 2 and 1. Apply g to each and add (2·2−1)+(2·1−1)."
+          },
+          {
+            "option_index": 3,
+            "rationale": "3 does not satisfy the stated computation. First apply f: outputs 2 and 1. Apply g to each and add (2·2−1)+(2·1−1)."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.3, odd exercises 5, 11, 13, 31, 33. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.3",
+        "odd_exercises": [
+          5,
+          11,
+          13,
+          31,
+          33
+        ],
+        "workshop": "Function table 3"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "function",
+        "args": {
+          "mapping": [
+            0,
+            1,
+            2,
+            1
+          ],
+          "query": "composition-sum"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-190",
+      "topic": "Function table 3",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "How many ordered pairs (a,b) with a≠b have f(a)=f(b)?",
+      "context": "f:D→B, D={0, 1, 2, 3}, B={0, 1, 2}. The outputs f(0),f(1),f(2),f(3) are [0, 1, 2, 1]. Define g:B→Z by g(y)=2y−1.",
+      "options": [
+        "2",
+        "1",
+        "4",
+        "3"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Compare distinct outputs with the entire codomain; composition applies the rightmost function first.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Read image and preimage sets, classify maps, and compose in the correct order.",
+        "correct_rationale": "Group inputs by output. A group of size t contributes t(t−1) ordered distinct-input pairs. Here the group sizes are [1, 2, 1], giving 2.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "1 does not satisfy the stated computation. Group inputs by output. A group of size t contributes t(t−1) ordered distinct-input pairs. Here the group sizes are [1, 2, 1], giving 2."
+          },
+          {
+            "option_index": 2,
+            "rationale": "4 does not satisfy the stated computation. Group inputs by output. A group of size t contributes t(t−1) ordered distinct-input pairs. Here the group sizes are [1, 2, 1], giving 2."
+          },
+          {
+            "option_index": 3,
+            "rationale": "3 does not satisfy the stated computation. Group inputs by output. A group of size t contributes t(t−1) ordered distinct-input pairs. Here the group sizes are [1, 2, 1], giving 2."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.3, odd exercises 5, 11, 13, 31, 33. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.3",
+        "odd_exercises": [
+          5,
+          11,
+          13,
+          31,
+          33
+        ],
+        "workshop": "Function table 3"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "function",
+        "args": {
+          "mapping": [
+            0,
+            1,
+            2,
+            1
+          ],
+          "query": "collisions"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-191",
+      "topic": "Domain and codomain matter",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "How is f:R→R classified?",
+      "context": "Consider f(x)=x² and h(x)=3x−2 with domains and codomains specified in each question.",
+      "options": [
+        "Bijective",
+        "Injective but not surjective",
+        "Surjective but not injective",
+        "Neither injective nor surjective"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "A formula alone does not determine whether a function is onto; inspect its codomain.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Prove function classifications using collisions, missing values, and algebraic inverses.",
+        "correct_rationale": "Inputs 1 and −1 collide, and negative real outputs are unattained.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. Inputs 1 and −1 collide, and negative real outputs are unattained."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. Inputs 1 and −1 collide, and negative real outputs are unattained."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. Inputs 1 and −1 collide, and negative real outputs are unattained."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.3, odd exercises 11, 13, 23, 29, 71. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.3",
+        "odd_exercises": [
+          11,
+          13,
+          23,
+          29,
+          71
+        ],
+        "workshop": "Domain and codomain matter"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-192",
+      "topic": "Domain and codomain matter",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Which restriction makes x² a bijection?",
+      "context": "Consider f(x)=x² and h(x)=3x−2 with domains and codomains specified in each question.",
+      "options": [
+        "R→[0,∞)",
+        "Z→Z",
+        "[0,∞)→[0,∞)",
+        "R→R"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "A formula alone does not determine whether a function is onto; inspect its codomain.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Prove function classifications using collisions, missing values, and algebraic inverses.",
+        "correct_rationale": "On nonnegative reals, squares are strictly increasing and every nonnegative y has unique preimage √y. Allowing both signs loses injectivity.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. On nonnegative reals, squares are strictly increasing and every nonnegative y has unique preimage √y. Allowing both signs loses injectivity."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. On nonnegative reals, squares are strictly increasing and every nonnegative y has unique preimage √y. Allowing both signs loses injectivity."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. On nonnegative reals, squares are strictly increasing and every nonnegative y has unique preimage √y. Allowing both signs loses injectivity."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.3, odd exercises 11, 13, 23, 29, 71. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.3",
+        "odd_exercises": [
+          11,
+          13,
+          23,
+          29,
+          71
+        ],
+        "workshop": "Domain and codomain matter"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-193",
+      "topic": "Domain and codomain matter",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What is the inverse of h:R→R?",
+      "context": "Consider f(x)=x² and h(x)=3x−2 with domains and codomains specified in each question.",
+      "options": [
+        "h⁻¹(y)=1/(3y−2)",
+        "h⁻¹(y)=3y+2",
+        "h⁻¹(y)=(y−2)/3",
+        "h⁻¹(y)=(y+2)/3"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "A formula alone does not determine whether a function is onto; inspect its codomain.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Prove function classifications using collisions, missing values, and algebraic inverses.",
+        "correct_rationale": "Solving y=3x−2 gives x=(y+2)/3. An inverse function reverses a map; it is not a reciprocal.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. Solving y=3x−2 gives x=(y+2)/3. An inverse function reverses a map; it is not a reciprocal."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. Solving y=3x−2 gives x=(y+2)/3. An inverse function reverses a map; it is not a reciprocal."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. Solving y=3x−2 gives x=(y+2)/3. An inverse function reverses a map; it is not a reciprocal."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.3, odd exercises 11, 13, 23, 29, 71. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.3",
+        "odd_exercises": [
+          11,
+          13,
+          23,
+          29,
+          71
+        ],
+        "workshop": "Domain and codomain matter"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-194",
+      "topic": "Domain and codomain matter",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "Why is h:Z→Z not surjective?",
+      "context": "Consider f(x)=x² and h(x)=3x−2 with domains and codomains specified in each question.",
+      "options": [
+        "The output is sometimes noninteger.",
+        "Two distinct integer inputs collide.",
+        "Only integers congruent to 1 modulo 3 occur.",
+        "Every integer is an output."
+      ],
+      "correct_index": 2,
+      "hints": [
+        "A formula alone does not determine whether a function is onto; inspect its codomain.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Prove function classifications using collisions, missing values, and algebraic inverses.",
+        "correct_rationale": "3x−2≡1 mod 3. For example 0 has no integer preimage, although the map is injective because its slope is nonzero.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. 3x−2≡1 mod 3. For example 0 has no integer preimage, although the map is injective because its slope is nonzero."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. 3x−2≡1 mod 3. For example 0 has no integer preimage, although the map is injective because its slope is nonzero."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. 3x−2≡1 mod 3. For example 0 has no integer preimage, although the map is injective because its slope is nonzero."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.3, odd exercises 11, 13, 23, 29, 71. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.3",
+        "odd_exercises": [
+          11,
+          13,
+          23,
+          29,
+          71
+        ],
+        "workshop": "Domain and codomain matter"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-195",
+      "topic": "Domain and codomain matter",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "If g∘f is injective, which conclusion always follows?",
+      "context": "Consider f(x)=x² and h(x)=3x−2 with domains and codomains specified in each question.",
+      "options": [
+        "g is injective on its entire domain.",
+        "f is surjective.",
+        "g is surjective.",
+        "f is injective."
+      ],
+      "correct_index": 3,
+      "hints": [
+        "A formula alone does not determine whether a function is onto; inspect its codomain.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Prove function classifications using collisions, missing values, and algebraic inverses.",
+        "correct_rationale": "If f(a)=f(b), applying g gives equal composite outputs, hence a=b. The composite only tests g on the image of f, not its full domain.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. If f(a)=f(b), applying g gives equal composite outputs, hence a=b. The composite only tests g on the image of f, not its full domain."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. If f(a)=f(b), applying g gives equal composite outputs, hence a=b. The composite only tests g on the image of f, not its full domain."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. If f(a)=f(b), applying g gives equal composite outputs, hence a=b. The composite only tests g on the image of f, not its full domain."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.3, odd exercises 11, 13, 23, 29, 71. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.3",
+        "odd_exercises": [
+          11,
+          13,
+          23,
+          29,
+          71
+        ],
+        "workshop": "Domain and codomain matter"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-196",
+      "topic": "Floors, ceilings and preimages",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What is f(−7/3)?",
+      "context": "Let f:R→Z be f(x)=⌊x⌋. By definition, ⌊x⌋ is the unique integer n with n≤x<n+1.",
+      "options": [
+        "−2",
+        "2",
+        "−3",
+        "3"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Floor rounds downward, not toward zero; the right endpoint of a floor interval is excluded.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Apply boundary inequalities accurately for negative inputs and preimage intervals.",
+        "correct_rationale": "−3≤−7/3<−2, so the floor is −3.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. −3≤−7/3<−2, so the floor is −3."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. −3≤−7/3<−2, so the floor is −3."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. −3≤−7/3<−2, so the floor is −3."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.3, odd exercises 9, 31, 45, 53. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.3",
+        "odd_exercises": [
+          9,
+          31,
+          45,
+          53
+        ],
+        "workshop": "Floors, ceilings and preimages"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-197",
+      "topic": "Floors, ceilings and preimages",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What is f⁻¹({−2})?",
+      "context": "Let f:R→Z be f(x)=⌊x⌋. By definition, ⌊x⌋ is the unique integer n with n≤x<n+1.",
+      "options": [
+        "{−2}",
+        "[−3,−2)",
+        "(−2,−1]",
+        "[−2,−1)"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Floor rounds downward, not toward zero; the right endpoint of a floor interval is excluded.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Apply boundary inequalities accurately for negative inputs and preimage intervals.",
+        "correct_rationale": "Exactly the reals −2≤x<−1 have floor −2. The preimage is an interval, not only the integer itself.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. Exactly the reals −2≤x<−1 have floor −2. The preimage is an interval, not only the integer itself."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. Exactly the reals −2≤x<−1 have floor −2. The preimage is an interval, not only the integer itself."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. Exactly the reals −2≤x<−1 have floor −2. The preimage is an interval, not only the integer itself."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.3, odd exercises 9, 31, 45, 53. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.3",
+        "odd_exercises": [
+          9,
+          31,
+          45,
+          53
+        ],
+        "workshop": "Floors, ceilings and preimages"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-198",
+      "topic": "Floors, ceilings and preimages",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What is f⁻¹({1,2})?",
+      "context": "Let f:R→Z be f(x)=⌊x⌋. By definition, ⌊x⌋ is the unique integer n with n≤x<n+1.",
+      "options": [
+        "[1,2]",
+        "(1,3]",
+        "[1,3)",
+        "{1,2}"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Floor rounds downward, not toward zero; the right endpoint of a floor interval is excluded.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Apply boundary inequalities accurately for negative inputs and preimage intervals.",
+        "correct_rationale": "Combine [1,2) and [2,3), retaining 1 and excluding 3.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. Combine [1,2) and [2,3), retaining 1 and excluding 3."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. Combine [1,2) and [2,3), retaining 1 and excluding 3."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. Combine [1,2) and [2,3), retaining 1 and excluding 3."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.3, odd exercises 9, 31, 45, 53. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.3",
+        "odd_exercises": [
+          9,
+          31,
+          45,
+          53
+        ],
+        "workshop": "Floors, ceilings and preimages"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-199",
+      "topic": "Floors, ceilings and preimages",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "Which identity holds for every real x?",
+      "context": "Let f:R→Z be f(x)=⌊x⌋. By definition, ⌊x⌋ is the unique integer n with n≤x<n+1.",
+      "options": [
+        "⌊x⌋=⌈x⌉",
+        "⌊−x⌋=−⌈x⌉",
+        "⌊−x⌋=−⌊x⌋",
+        "⌊2x⌋=2⌊x⌋"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Floor rounds downward, not toward zero; the right endpoint of a floor interval is excluded.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Apply boundary inequalities accurately for negative inputs and preimage intervals.",
+        "correct_rationale": "Negation reverses inequalities and exchanges floor with ceiling. For x=1.7, the other proposed identities already fail.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. Negation reverses inequalities and exchanges floor with ceiling. For x=1.7, the other proposed identities already fail."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. Negation reverses inequalities and exchanges floor with ceiling. For x=1.7, the other proposed identities already fail."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. Negation reverses inequalities and exchanges floor with ceiling. For x=1.7, the other proposed identities already fail."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.3, odd exercises 9, 31, 45, 53. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.3",
+        "odd_exercises": [
+          9,
+          31,
+          45,
+          53
+        ],
+        "workshop": "Floors, ceilings and preimages"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-200",
+      "topic": "Floors, ceilings and preimages",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "For integer n, which identity is valid for all real x?",
+      "context": "Let f:R→Z be f(x)=⌊x⌋. By definition, ⌊x⌋ is the unique integer n with n≤x<n+1.",
+      "options": [
+        "⌊x+n⌋=⌊x⌋+n",
+        "⌈x⌉=⌊x⌋+1",
+        "⌊nx⌋=n⌊x⌋",
+        "⌊x+n⌋=⌊x⌋·n"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Floor rounds downward, not toward zero; the right endpoint of a floor interval is excluded.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Apply boundary inequalities accurately for negative inputs and preimage intervals.",
+        "correct_rationale": "If k≤x<k+1, adding integer n gives k+n≤x+n<k+n+1. Scaling does not preserve floors in this way, and floor equals ceiling at integers.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. If k≤x<k+1, adding integer n gives k+n≤x+n<k+n+1. Scaling does not preserve floors in this way, and floor equals ceiling at integers."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. If k≤x<k+1, adding integer n gives k+n≤x+n<k+n+1. Scaling does not preserve floors in this way, and floor equals ceiling at integers."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. If k≤x<k+1, adding integer n gives k+n≤x+n<k+n+1. Scaling does not preserve floors in this way, and floor equals ceiling at integers."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.3, odd exercises 9, 31, 45, 53. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.3",
+        "odd_exercises": [
+          9,
+          31,
+          45,
+          53
+        ],
+        "workshop": "Floors, ceilings and preimages"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    }
+  ]
+}

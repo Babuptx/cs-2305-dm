@@ -1,8 +1,8 @@
 {
   "version": 1,
-  "requested_questions": 600,
-  "generated_questions": 600,
-  "validated_questions": 600,
+  "requested_questions": 1000,
+  "generated_questions": 1000,
+  "validated_questions": 1000,
   "pillars": [
     {
       "id": "logic",
@@ -118,6 +118,62 @@
         },
         {
           "id": "recurrences-block-02",
+          "planned": 50,
+          "generated": 50,
+          "validated": 50
+        }
+      ]
+    },
+    {
+      "id": "utd-fall-midterm",
+      "planned": 400,
+      "generated": 400,
+      "validated": 400,
+      "blocks": [
+        {
+          "id": "utd-fall-midterm-block-01",
+          "planned": 50,
+          "generated": 50,
+          "validated": 50
+        },
+        {
+          "id": "utd-fall-midterm-block-02",
+          "planned": 50,
+          "generated": 50,
+          "validated": 50
+        },
+        {
+          "id": "utd-fall-midterm-block-03",
+          "planned": 50,
+          "generated": 50,
+          "validated": 50
+        },
+        {
+          "id": "utd-fall-midterm-block-04",
+          "planned": 50,
+          "generated": 50,
+          "validated": 50
+        },
+        {
+          "id": "utd-fall-midterm-block-05",
+          "planned": 50,
+          "generated": 50,
+          "validated": 50
+        },
+        {
+          "id": "utd-fall-midterm-block-06",
+          "planned": 50,
+          "generated": 50,
+          "validated": 50
+        },
+        {
+          "id": "utd-fall-midterm-block-07",
+          "planned": 50,
+          "generated": 50,
+          "validated": 50
+        },
+        {
+          "id": "utd-fall-midterm-block-08",
           "planned": 50,
           "generated": 50,
           "validated": 50

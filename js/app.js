@@ -1,4 +1,5 @@
 import {QuizEngine, readStats, STATS_KEY, SESSION_KEY} from './engine.js';
+import {openReference} from './reference.js';
 const $ = id => document.getElementById(id);
 const make = (tag, value, className) => {const e = document.createElement(tag); if (value != null) e.textContent = value; if (className) e.className = className; return e;};
 let storage; try {storage = localStorage;} catch {}
@@ -68,6 +69,8 @@ function render(s) {
 function populateBlocks() {
   const p = manifest.pillars.find(p => p.id === $('pillar').value);
   $('block').replaceChildren(...p.blocks.map(b => {const o = make('option',`${b.title} · ${b.count} questions`); o.value = b.path; return o;}));
+  $('pillar-description').textContent=p.description||'';
+  $('pillar-description').hidden=!p.description;
 }
 async function start(resume = false) {
   if (busy) return;
@@ -100,7 +103,7 @@ $('reset').onclick = () => {if (!confirm('Clear all saved attempts and active pr
 function setTheme(theme) {document.documentElement.dataset.theme = theme; $('theme').textContent = theme === 'dark' ? 'Light theme' : 'Dark theme'; try {storage?.setItem('dm:theme:v1',theme);} catch {}}
 let theme; try {theme = storage?.getItem('dm:theme:v1');} catch {} setTheme(['light','dark'].includes(theme) ? theme : matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
 $('theme').onclick = () => setTheme(document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark');
-$('reference').onclick = () => $('reference-dialog').showModal(); $('close-reference').onclick = () => $('reference-dialog').close();
+$('reference').onclick = () => openReference($('pillar').value==='utd-fall-midterm'); $('close-reference').onclick = () => $('reference-dialog').close();
 document.addEventListener('keydown', e => {if (!engine.state || e.target.closest('input,select,textarea,dialog,button') || e.altKey || e.ctrlKey || e.metaKey) return; if (e.key === 'ArrowLeft') {e.preventDefault();engine.move(-1);} if (e.key === 'ArrowRight') {e.preventDefault();engine.move(1);}});
 addEventListener('pagehide', () => engine.destroy());
 addEventListener('pageshow', e => {if (e.persisted && engine.state?.phase === 'active' && engine.state.deadline !== null) {engine.timer = engine.setIntervalFn(() => engine.tick(),250);engine.tick();}});
@@ -112,5 +115,6 @@ try {
   $('pillar').disabled = $('block').disabled = $('start').disabled = false;
   try {const saved = JSON.parse(storage?.getItem(SESSION_KEY) || 'null'); $('resume').hidden = !(saved?.version === 1 && manifest.pillars.some(p => p.blocks.some(b => b.id === saved.blockId)));} catch {}
   status(`${manifest.total_questions} questions ready across ${manifest.pillars.length} pillars. Select your next challenge.`);
+  $('inventory-summary').textContent=`${manifest.total_questions.toLocaleString()} questions · ${manifest.pillars.length} pillars · ${manifest.pillars.reduce((n,p)=>n+p.blocks.length,0)} blocks.`;
 } catch (e) {status(`${e.message} Run the app through a local web server, then reload.`,true);}
 updateStats();

@@ -1,0 +1,3388 @@
+{
+  "schema_version": 1,
+  "block_id": "utd-fall-midterm-block-06",
+  "pillar_id": "utd-fall-midterm",
+  "block_title": "UTD 2026 Fall Midterm · Matrices & algorithm reasoning",
+  "questions": [
+    {
+      "id": "utd-fall-midterm-251",
+      "topic": "Matrix multiplication 1",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What is entry (1,2) of AB?",
+      "context": "Matrices are written as lists of rows. A=[[2, 1], [-1, 3]]; B=[[0, 4], [2, -1]]. Indices start at 1. Products in this workshop are ordinary arithmetic products.",
+      "options": [
+        "7",
+        "9",
+        "8",
+        "6"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "For entry (i,j), take row i from the left matrix and column j from the right matrix.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Apply row-column multiplication, distinguish AB from BA, and reverse order when transposing a product.",
+        "correct_rationale": "Row 1 of A dotted with column 2 of B gives 2·4+1·-1=7.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "9 does not satisfy the stated computation. Row 1 of A dotted with column 2 of B gives 2·4+1·-1=7."
+          },
+          {
+            "option_index": 2,
+            "rationale": "8 does not satisfy the stated computation. Row 1 of A dotted with column 2 of B gives 2·4+1·-1=7."
+          },
+          {
+            "option_index": 3,
+            "rationale": "6 does not satisfy the stated computation. Row 1 of A dotted with column 2 of B gives 2·4+1·-1=7."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.6, odd exercises 3, 11, 13, 17. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.6",
+        "odd_exercises": [
+          3,
+          11,
+          13,
+          17
+        ],
+        "workshop": "Matrix multiplication 1"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "matrix",
+        "args": {
+          "a": [
+            [
+              2,
+              1
+            ],
+            [
+              -1,
+              3
+            ]
+          ],
+          "b": [
+            [
+              0,
+              4
+            ],
+            [
+              2,
+              -1
+            ]
+          ],
+          "query": "ab12"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-252",
+      "topic": "Matrix multiplication 1",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What is entry (1,2) of BA?",
+      "context": "Matrices are written as lists of rows. A=[[2, 1], [-1, 3]]; B=[[0, 4], [2, -1]]. Indices start at 1. Products in this workshop are ordinary arithmetic products.",
+      "options": [
+        "14",
+        "12",
+        "13",
+        "11"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "For entry (i,j), take row i from the left matrix and column j from the right matrix.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Apply row-column multiplication, distinguish AB from BA, and reverse order when transposing a product.",
+        "correct_rationale": "Reverse the roles: 0·1+4·3=12. Matrix multiplication need not commute.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "14 does not satisfy the stated computation. Reverse the roles: 0·1+4·3=12. Matrix multiplication need not commute."
+          },
+          {
+            "option_index": 2,
+            "rationale": "13 does not satisfy the stated computation. Reverse the roles: 0·1+4·3=12. Matrix multiplication need not commute."
+          },
+          {
+            "option_index": 3,
+            "rationale": "11 does not satisfy the stated computation. Reverse the roles: 0·1+4·3=12. Matrix multiplication need not commute."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.6, odd exercises 3, 11, 13, 17. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.6",
+        "odd_exercises": [
+          3,
+          11,
+          13,
+          17
+        ],
+        "workshop": "Matrix multiplication 1"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "matrix",
+        "args": {
+          "a": [
+            [
+              2,
+              1
+            ],
+            [
+              -1,
+              3
+            ]
+          ],
+          "b": [
+            [
+              0,
+              4
+            ],
+            [
+              2,
+              -1
+            ]
+          ],
+          "query": "ba12"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-253",
+      "topic": "Matrix multiplication 1",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What is the sum of diagonal entries of AB?",
+      "context": "Matrices are written as lists of rows. A=[[2, 1], [-1, 3]]; B=[[0, 4], [2, -1]]. Indices start at 1. Products in this workshop are ordinary arithmetic products.",
+      "options": [
+        "-6",
+        "-5",
+        "-3",
+        "-4"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "For entry (i,j), take row i from the left matrix and column j from the right matrix.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Apply row-column multiplication, distinguish AB from BA, and reverse order when transposing a product.",
+        "correct_rationale": "AB=[[2, 7], [6, -7]]; add entries (1,1) and (2,2), obtaining 2+-7.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "-6 does not satisfy the stated computation. AB=[[2, 7], [6, -7]]; add entries (1,1) and (2,2), obtaining 2+-7."
+          },
+          {
+            "option_index": 2,
+            "rationale": "-3 does not satisfy the stated computation. AB=[[2, 7], [6, -7]]; add entries (1,1) and (2,2), obtaining 2+-7."
+          },
+          {
+            "option_index": 3,
+            "rationale": "-4 does not satisfy the stated computation. AB=[[2, 7], [6, -7]]; add entries (1,1) and (2,2), obtaining 2+-7."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.6, odd exercises 3, 11, 13, 17. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.6",
+        "odd_exercises": [
+          3,
+          11,
+          13,
+          17
+        ],
+        "workshop": "Matrix multiplication 1"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "matrix",
+        "args": {
+          "a": [
+            [
+              2,
+              1
+            ],
+            [
+              -1,
+              3
+            ]
+          ],
+          "b": [
+            [
+              0,
+              4
+            ],
+            [
+              2,
+              -1
+            ]
+          ],
+          "query": "diagonal"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-254",
+      "topic": "Matrix multiplication 1",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "What is entry (2,1) of A²?",
+      "context": "Matrices are written as lists of rows. A=[[2, 1], [-1, 3]]; B=[[0, 4], [2, -1]]. Indices start at 1. Products in this workshop are ordinary arithmetic products.",
+      "options": [
+        "-4",
+        "-5",
+        "-3",
+        "-6"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "For entry (i,j), take row i from the left matrix and column j from the right matrix.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Apply row-column multiplication, distinguish AB from BA, and reverse order when transposing a product.",
+        "correct_rationale": "A² means AA, not entrywise squaring. Entry (2,1) is -1·2+3·-1=-5.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "-4 does not satisfy the stated computation. A² means AA, not entrywise squaring. Entry (2,1) is -1·2+3·-1=-5."
+          },
+          {
+            "option_index": 2,
+            "rationale": "-3 does not satisfy the stated computation. A² means AA, not entrywise squaring. Entry (2,1) is -1·2+3·-1=-5."
+          },
+          {
+            "option_index": 3,
+            "rationale": "-6 does not satisfy the stated computation. A² means AA, not entrywise squaring. Entry (2,1) is -1·2+3·-1=-5."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.6, odd exercises 3, 11, 13, 17. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.6",
+        "odd_exercises": [
+          3,
+          11,
+          13,
+          17
+        ],
+        "workshop": "Matrix multiplication 1"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "matrix",
+        "args": {
+          "a": [
+            [
+              2,
+              1
+            ],
+            [
+              -1,
+              3
+            ]
+          ],
+          "b": [
+            [
+              0,
+              4
+            ],
+            [
+              2,
+              -1
+            ]
+          ],
+          "query": "square21"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-255",
+      "topic": "Matrix multiplication 1",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "What is entry (2,1) of BᵀAᵀ?",
+      "context": "Matrices are written as lists of rows. A=[[2, 1], [-1, 3]]; B=[[0, 4], [2, -1]]. Indices start at 1. Products in this workshop are ordinary arithmetic products.",
+      "options": [
+        "7",
+        "9",
+        "8",
+        "6"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "For entry (i,j), take row i from the left matrix and column j from the right matrix.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Apply row-column multiplication, distinguish AB from BA, and reverse order when transposing a product.",
+        "correct_rationale": "BᵀAᵀ=(AB)ᵀ, so its (2,1) entry is the (1,2) entry of AB, namely 7. Transposition reverses product order.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "9 does not satisfy the stated computation. BᵀAᵀ=(AB)ᵀ, so its (2,1) entry is the (1,2) entry of AB, namely 7. Transposition reverses product order."
+          },
+          {
+            "option_index": 2,
+            "rationale": "8 does not satisfy the stated computation. BᵀAᵀ=(AB)ᵀ, so its (2,1) entry is the (1,2) entry of AB, namely 7. Transposition reverses product order."
+          },
+          {
+            "option_index": 3,
+            "rationale": "6 does not satisfy the stated computation. BᵀAᵀ=(AB)ᵀ, so its (2,1) entry is the (1,2) entry of AB, namely 7. Transposition reverses product order."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.6, odd exercises 3, 11, 13, 17. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.6",
+        "odd_exercises": [
+          3,
+          11,
+          13,
+          17
+        ],
+        "workshop": "Matrix multiplication 1"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "matrix",
+        "args": {
+          "a": [
+            [
+              2,
+              1
+            ],
+            [
+              -1,
+              3
+            ]
+          ],
+          "b": [
+            [
+              0,
+              4
+            ],
+            [
+              2,
+              -1
+            ]
+          ],
+          "query": "transpose21"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-256",
+      "topic": "Matrix multiplication 2",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What is entry (1,2) of AB?",
+      "context": "Matrices are written as lists of rows. A=[[1, -2], [3, 0]]; B=[[2, 1], [-1, 4]]. Indices start at 1. Products in this workshop are ordinary arithmetic products.",
+      "options": [
+        "-5",
+        "-6",
+        "-7",
+        "-8"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "For entry (i,j), take row i from the left matrix and column j from the right matrix.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Apply row-column multiplication, distinguish AB from BA, and reverse order when transposing a product.",
+        "correct_rationale": "Row 1 of A dotted with column 2 of B gives 1·1+-2·4=-7.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "-5 does not satisfy the stated computation. Row 1 of A dotted with column 2 of B gives 1·1+-2·4=-7."
+          },
+          {
+            "option_index": 1,
+            "rationale": "-6 does not satisfy the stated computation. Row 1 of A dotted with column 2 of B gives 1·1+-2·4=-7."
+          },
+          {
+            "option_index": 3,
+            "rationale": "-8 does not satisfy the stated computation. Row 1 of A dotted with column 2 of B gives 1·1+-2·4=-7."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.6, odd exercises 3, 11, 13, 17. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.6",
+        "odd_exercises": [
+          3,
+          11,
+          13,
+          17
+        ],
+        "workshop": "Matrix multiplication 2"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "matrix",
+        "args": {
+          "a": [
+            [
+              1,
+              -2
+            ],
+            [
+              3,
+              0
+            ]
+          ],
+          "b": [
+            [
+              2,
+              1
+            ],
+            [
+              -1,
+              4
+            ]
+          ],
+          "query": "ab12"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-257",
+      "topic": "Matrix multiplication 2",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What is entry (1,2) of BA?",
+      "context": "Matrices are written as lists of rows. A=[[1, -2], [3, 0]]; B=[[2, 1], [-1, 4]]. Indices start at 1. Products in this workshop are ordinary arithmetic products.",
+      "options": [
+        "-4",
+        "-5",
+        "-2",
+        "-3"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "For entry (i,j), take row i from the left matrix and column j from the right matrix.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Apply row-column multiplication, distinguish AB from BA, and reverse order when transposing a product.",
+        "correct_rationale": "Reverse the roles: 2·-2+1·0=-4. Matrix multiplication need not commute.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "-5 does not satisfy the stated computation. Reverse the roles: 2·-2+1·0=-4. Matrix multiplication need not commute."
+          },
+          {
+            "option_index": 2,
+            "rationale": "-2 does not satisfy the stated computation. Reverse the roles: 2·-2+1·0=-4. Matrix multiplication need not commute."
+          },
+          {
+            "option_index": 3,
+            "rationale": "-3 does not satisfy the stated computation. Reverse the roles: 2·-2+1·0=-4. Matrix multiplication need not commute."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.6, odd exercises 3, 11, 13, 17. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.6",
+        "odd_exercises": [
+          3,
+          11,
+          13,
+          17
+        ],
+        "workshop": "Matrix multiplication 2"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "matrix",
+        "args": {
+          "a": [
+            [
+              1,
+              -2
+            ],
+            [
+              3,
+              0
+            ]
+          ],
+          "b": [
+            [
+              2,
+              1
+            ],
+            [
+              -1,
+              4
+            ]
+          ],
+          "query": "ba12"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-258",
+      "topic": "Matrix multiplication 2",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What is the sum of diagonal entries of AB?",
+      "context": "Matrices are written as lists of rows. A=[[1, -2], [3, 0]]; B=[[2, 1], [-1, 4]]. Indices start at 1. Products in this workshop are ordinary arithmetic products.",
+      "options": [
+        "9",
+        "7",
+        "6",
+        "8"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "For entry (i,j), take row i from the left matrix and column j from the right matrix.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Apply row-column multiplication, distinguish AB from BA, and reverse order when transposing a product.",
+        "correct_rationale": "AB=[[4, -7], [6, 3]]; add entries (1,1) and (2,2), obtaining 4+3.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "9 does not satisfy the stated computation. AB=[[4, -7], [6, 3]]; add entries (1,1) and (2,2), obtaining 4+3."
+          },
+          {
+            "option_index": 2,
+            "rationale": "6 does not satisfy the stated computation. AB=[[4, -7], [6, 3]]; add entries (1,1) and (2,2), obtaining 4+3."
+          },
+          {
+            "option_index": 3,
+            "rationale": "8 does not satisfy the stated computation. AB=[[4, -7], [6, 3]]; add entries (1,1) and (2,2), obtaining 4+3."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.6, odd exercises 3, 11, 13, 17. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.6",
+        "odd_exercises": [
+          3,
+          11,
+          13,
+          17
+        ],
+        "workshop": "Matrix multiplication 2"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "matrix",
+        "args": {
+          "a": [
+            [
+              1,
+              -2
+            ],
+            [
+              3,
+              0
+            ]
+          ],
+          "b": [
+            [
+              2,
+              1
+            ],
+            [
+              -1,
+              4
+            ]
+          ],
+          "query": "diagonal"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-259",
+      "topic": "Matrix multiplication 2",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "What is entry (2,1) of A²?",
+      "context": "Matrices are written as lists of rows. A=[[1, -2], [3, 0]]; B=[[2, 1], [-1, 4]]. Indices start at 1. Products in this workshop are ordinary arithmetic products.",
+      "options": [
+        "3",
+        "4",
+        "5",
+        "2"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "For entry (i,j), take row i from the left matrix and column j from the right matrix.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Apply row-column multiplication, distinguish AB from BA, and reverse order when transposing a product.",
+        "correct_rationale": "A² means AA, not entrywise squaring. Entry (2,1) is 3·1+0·3=3.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "4 does not satisfy the stated computation. A² means AA, not entrywise squaring. Entry (2,1) is 3·1+0·3=3."
+          },
+          {
+            "option_index": 2,
+            "rationale": "5 does not satisfy the stated computation. A² means AA, not entrywise squaring. Entry (2,1) is 3·1+0·3=3."
+          },
+          {
+            "option_index": 3,
+            "rationale": "2 does not satisfy the stated computation. A² means AA, not entrywise squaring. Entry (2,1) is 3·1+0·3=3."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.6, odd exercises 3, 11, 13, 17. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.6",
+        "odd_exercises": [
+          3,
+          11,
+          13,
+          17
+        ],
+        "workshop": "Matrix multiplication 2"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "matrix",
+        "args": {
+          "a": [
+            [
+              1,
+              -2
+            ],
+            [
+              3,
+              0
+            ]
+          ],
+          "b": [
+            [
+              2,
+              1
+            ],
+            [
+              -1,
+              4
+            ]
+          ],
+          "query": "square21"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-260",
+      "topic": "Matrix multiplication 2",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "What is entry (2,1) of BᵀAᵀ?",
+      "context": "Matrices are written as lists of rows. A=[[1, -2], [3, 0]]; B=[[2, 1], [-1, 4]]. Indices start at 1. Products in this workshop are ordinary arithmetic products.",
+      "options": [
+        "-7",
+        "-6",
+        "-8",
+        "-5"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "For entry (i,j), take row i from the left matrix and column j from the right matrix.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Apply row-column multiplication, distinguish AB from BA, and reverse order when transposing a product.",
+        "correct_rationale": "BᵀAᵀ=(AB)ᵀ, so its (2,1) entry is the (1,2) entry of AB, namely -7. Transposition reverses product order.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "-6 does not satisfy the stated computation. BᵀAᵀ=(AB)ᵀ, so its (2,1) entry is the (1,2) entry of AB, namely -7. Transposition reverses product order."
+          },
+          {
+            "option_index": 2,
+            "rationale": "-8 does not satisfy the stated computation. BᵀAᵀ=(AB)ᵀ, so its (2,1) entry is the (1,2) entry of AB, namely -7. Transposition reverses product order."
+          },
+          {
+            "option_index": 3,
+            "rationale": "-5 does not satisfy the stated computation. BᵀAᵀ=(AB)ᵀ, so its (2,1) entry is the (1,2) entry of AB, namely -7. Transposition reverses product order."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.6, odd exercises 3, 11, 13, 17. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.6",
+        "odd_exercises": [
+          3,
+          11,
+          13,
+          17
+        ],
+        "workshop": "Matrix multiplication 2"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "matrix",
+        "args": {
+          "a": [
+            [
+              1,
+              -2
+            ],
+            [
+              3,
+              0
+            ]
+          ],
+          "b": [
+            [
+              2,
+              1
+            ],
+            [
+              -1,
+              4
+            ]
+          ],
+          "query": "transpose21"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-261",
+      "topic": "Matrix multiplication 3",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What is entry (1,2) of AB?",
+      "context": "Matrices are written as lists of rows. A=[[0, 3], [2, 1]]; B=[[1, -1], [4, 2]]. Indices start at 1. Products in this workshop are ordinary arithmetic products.",
+      "options": [
+        "8",
+        "7",
+        "6",
+        "5"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "For entry (i,j), take row i from the left matrix and column j from the right matrix.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Apply row-column multiplication, distinguish AB from BA, and reverse order when transposing a product.",
+        "correct_rationale": "Row 1 of A dotted with column 2 of B gives 0·-1+3·2=6.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "8 does not satisfy the stated computation. Row 1 of A dotted with column 2 of B gives 0·-1+3·2=6."
+          },
+          {
+            "option_index": 1,
+            "rationale": "7 does not satisfy the stated computation. Row 1 of A dotted with column 2 of B gives 0·-1+3·2=6."
+          },
+          {
+            "option_index": 3,
+            "rationale": "5 does not satisfy the stated computation. Row 1 of A dotted with column 2 of B gives 0·-1+3·2=6."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.6, odd exercises 3, 11, 13, 17. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.6",
+        "odd_exercises": [
+          3,
+          11,
+          13,
+          17
+        ],
+        "workshop": "Matrix multiplication 3"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "matrix",
+        "args": {
+          "a": [
+            [
+              0,
+              3
+            ],
+            [
+              2,
+              1
+            ]
+          ],
+          "b": [
+            [
+              1,
+              -1
+            ],
+            [
+              4,
+              2
+            ]
+          ],
+          "query": "ab12"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-262",
+      "topic": "Matrix multiplication 3",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What is entry (1,2) of BA?",
+      "context": "Matrices are written as lists of rows. A=[[0, 3], [2, 1]]; B=[[1, -1], [4, 2]]. Indices start at 1. Products in this workshop are ordinary arithmetic products.",
+      "options": [
+        "1",
+        "3",
+        "2",
+        "4"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "For entry (i,j), take row i from the left matrix and column j from the right matrix.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Apply row-column multiplication, distinguish AB from BA, and reverse order when transposing a product.",
+        "correct_rationale": "Reverse the roles: 1·3+-1·1=2. Matrix multiplication need not commute.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "1 does not satisfy the stated computation. Reverse the roles: 1·3+-1·1=2. Matrix multiplication need not commute."
+          },
+          {
+            "option_index": 1,
+            "rationale": "3 does not satisfy the stated computation. Reverse the roles: 1·3+-1·1=2. Matrix multiplication need not commute."
+          },
+          {
+            "option_index": 3,
+            "rationale": "4 does not satisfy the stated computation. Reverse the roles: 1·3+-1·1=2. Matrix multiplication need not commute."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.6, odd exercises 3, 11, 13, 17. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.6",
+        "odd_exercises": [
+          3,
+          11,
+          13,
+          17
+        ],
+        "workshop": "Matrix multiplication 3"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "matrix",
+        "args": {
+          "a": [
+            [
+              0,
+              3
+            ],
+            [
+              2,
+              1
+            ]
+          ],
+          "b": [
+            [
+              1,
+              -1
+            ],
+            [
+              4,
+              2
+            ]
+          ],
+          "query": "ba12"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-263",
+      "topic": "Matrix multiplication 3",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What is the sum of diagonal entries of AB?",
+      "context": "Matrices are written as lists of rows. A=[[0, 3], [2, 1]]; B=[[1, -1], [4, 2]]. Indices start at 1. Products in this workshop are ordinary arithmetic products.",
+      "options": [
+        "13",
+        "11",
+        "12",
+        "14"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "For entry (i,j), take row i from the left matrix and column j from the right matrix.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Apply row-column multiplication, distinguish AB from BA, and reverse order when transposing a product.",
+        "correct_rationale": "AB=[[12, 6], [6, 0]]; add entries (1,1) and (2,2), obtaining 12+0.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "13 does not satisfy the stated computation. AB=[[12, 6], [6, 0]]; add entries (1,1) and (2,2), obtaining 12+0."
+          },
+          {
+            "option_index": 1,
+            "rationale": "11 does not satisfy the stated computation. AB=[[12, 6], [6, 0]]; add entries (1,1) and (2,2), obtaining 12+0."
+          },
+          {
+            "option_index": 3,
+            "rationale": "14 does not satisfy the stated computation. AB=[[12, 6], [6, 0]]; add entries (1,1) and (2,2), obtaining 12+0."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.6, odd exercises 3, 11, 13, 17. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.6",
+        "odd_exercises": [
+          3,
+          11,
+          13,
+          17
+        ],
+        "workshop": "Matrix multiplication 3"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "matrix",
+        "args": {
+          "a": [
+            [
+              0,
+              3
+            ],
+            [
+              2,
+              1
+            ]
+          ],
+          "b": [
+            [
+              1,
+              -1
+            ],
+            [
+              4,
+              2
+            ]
+          ],
+          "query": "diagonal"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-264",
+      "topic": "Matrix multiplication 3",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "What is entry (2,1) of A²?",
+      "context": "Matrices are written as lists of rows. A=[[0, 3], [2, 1]]; B=[[1, -1], [4, 2]]. Indices start at 1. Products in this workshop are ordinary arithmetic products.",
+      "options": [
+        "3",
+        "1",
+        "4",
+        "2"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "For entry (i,j), take row i from the left matrix and column j from the right matrix.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Apply row-column multiplication, distinguish AB from BA, and reverse order when transposing a product.",
+        "correct_rationale": "A² means AA, not entrywise squaring. Entry (2,1) is 2·0+1·2=2.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "3 does not satisfy the stated computation. A² means AA, not entrywise squaring. Entry (2,1) is 2·0+1·2=2."
+          },
+          {
+            "option_index": 1,
+            "rationale": "1 does not satisfy the stated computation. A² means AA, not entrywise squaring. Entry (2,1) is 2·0+1·2=2."
+          },
+          {
+            "option_index": 2,
+            "rationale": "4 does not satisfy the stated computation. A² means AA, not entrywise squaring. Entry (2,1) is 2·0+1·2=2."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.6, odd exercises 3, 11, 13, 17. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.6",
+        "odd_exercises": [
+          3,
+          11,
+          13,
+          17
+        ],
+        "workshop": "Matrix multiplication 3"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "matrix",
+        "args": {
+          "a": [
+            [
+              0,
+              3
+            ],
+            [
+              2,
+              1
+            ]
+          ],
+          "b": [
+            [
+              1,
+              -1
+            ],
+            [
+              4,
+              2
+            ]
+          ],
+          "query": "square21"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-265",
+      "topic": "Matrix multiplication 3",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "What is entry (2,1) of BᵀAᵀ?",
+      "context": "Matrices are written as lists of rows. A=[[0, 3], [2, 1]]; B=[[1, -1], [4, 2]]. Indices start at 1. Products in this workshop are ordinary arithmetic products.",
+      "options": [
+        "5",
+        "7",
+        "6",
+        "8"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "For entry (i,j), take row i from the left matrix and column j from the right matrix.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Apply row-column multiplication, distinguish AB from BA, and reverse order when transposing a product.",
+        "correct_rationale": "BᵀAᵀ=(AB)ᵀ, so its (2,1) entry is the (1,2) entry of AB, namely 6. Transposition reverses product order.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "5 does not satisfy the stated computation. BᵀAᵀ=(AB)ᵀ, so its (2,1) entry is the (1,2) entry of AB, namely 6. Transposition reverses product order."
+          },
+          {
+            "option_index": 1,
+            "rationale": "7 does not satisfy the stated computation. BᵀAᵀ=(AB)ᵀ, so its (2,1) entry is the (1,2) entry of AB, namely 6. Transposition reverses product order."
+          },
+          {
+            "option_index": 3,
+            "rationale": "8 does not satisfy the stated computation. BᵀAᵀ=(AB)ᵀ, so its (2,1) entry is the (1,2) entry of AB, namely 6. Transposition reverses product order."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.6, odd exercises 3, 11, 13, 17. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.6",
+        "odd_exercises": [
+          3,
+          11,
+          13,
+          17
+        ],
+        "workshop": "Matrix multiplication 3"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "matrix",
+        "args": {
+          "a": [
+            [
+              0,
+              3
+            ],
+            [
+              2,
+              1
+            ]
+          ],
+          "b": [
+            [
+              1,
+              -1
+            ],
+            [
+              4,
+              2
+            ]
+          ],
+          "query": "transpose21"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-266",
+      "topic": "Boolean matrices 1",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "How many 1 entries does A∨B have?",
+      "context": "A=[[1, 0, 1], [0, 1, 0], [1, 1, 0]]; B=[[0, 1, 0], [1, 0, 1], [0, 0, 1]], with each inner list a row. Join ∨ and meet ∧ act entrywise. Boolean product ⊙ uses AND for multiplication and OR for addition. Indices start at 1.",
+      "options": [
+        "9",
+        "1",
+        "2",
+        "0"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "A Boolean-product entry is 1 if at least one corresponding pair of factors is both 1.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Compute joins, meets and Boolean powers without substituting ordinary addition.",
+        "correct_rationale": "Apply OR in each of the nine positions and count once per position; there are 9 ones.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "1 does not satisfy the stated computation. Apply OR in each of the nine positions and count once per position; there are 9 ones."
+          },
+          {
+            "option_index": 2,
+            "rationale": "2 does not satisfy the stated computation. Apply OR in each of the nine positions and count once per position; there are 9 ones."
+          },
+          {
+            "option_index": 3,
+            "rationale": "0 does not satisfy the stated computation. Apply OR in each of the nine positions and count once per position; there are 9 ones."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.6, odd exercises 27, 29, 31, 35. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.6",
+        "odd_exercises": [
+          27,
+          29,
+          31,
+          35
+        ],
+        "workshop": "Boolean matrices 1"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "boolean-matrix",
+        "args": {
+          "a": [
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ]
+          ],
+          "b": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              1
+            ]
+          ],
+          "query": "join"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-267",
+      "topic": "Boolean matrices 1",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "How many 1 entries does A∧B have?",
+      "context": "A=[[1, 0, 1], [0, 1, 0], [1, 1, 0]]; B=[[0, 1, 0], [1, 0, 1], [0, 0, 1]], with each inner list a row. Join ∨ and meet ∧ act entrywise. Boolean product ⊙ uses AND for multiplication and OR for addition. Indices start at 1.",
+      "options": [
+        "3",
+        "1",
+        "2",
+        "0"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "A Boolean-product entry is 1 if at least one corresponding pair of factors is both 1.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Compute joins, meets and Boolean powers without substituting ordinary addition.",
+        "correct_rationale": "Only positions where both entries are 1 survive; there are 0 such positions.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "3 does not satisfy the stated computation. Only positions where both entries are 1 survive; there are 0 such positions."
+          },
+          {
+            "option_index": 1,
+            "rationale": "1 does not satisfy the stated computation. Only positions where both entries are 1 survive; there are 0 such positions."
+          },
+          {
+            "option_index": 2,
+            "rationale": "2 does not satisfy the stated computation. Only positions where both entries are 1 survive; there are 0 such positions."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.6, odd exercises 27, 29, 31, 35. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.6",
+        "odd_exercises": [
+          27,
+          29,
+          31,
+          35
+        ],
+        "workshop": "Boolean matrices 1"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "boolean-matrix",
+        "args": {
+          "a": [
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ]
+          ],
+          "b": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              1
+            ]
+          ],
+          "query": "meet"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-268",
+      "topic": "Boolean matrices 1",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "How many 1 entries does A⊙B have?",
+      "context": "A=[[1, 0, 1], [0, 1, 0], [1, 1, 0]]; B=[[0, 1, 0], [1, 0, 1], [0, 0, 1]], with each inner list a row. Join ∨ and meet ∧ act entrywise. Boolean product ⊙ uses AND for multiplication and OR for addition. Indices start at 1.",
+      "options": [
+        "0",
+        "1",
+        "7",
+        "2"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "A Boolean-product entry is 1 if at least one corresponding pair of factors is both 1.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Compute joins, meets and Boolean powers without substituting ordinary addition.",
+        "correct_rationale": "The Boolean product is [[0, 1, 1], [1, 0, 1], [1, 1, 1]]; count its 1 entries, not the number of successful intermediate witnesses.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "0 does not satisfy the stated computation. The Boolean product is [[0, 1, 1], [1, 0, 1], [1, 1, 1]]; count its 1 entries, not the number of successful intermediate witnesses."
+          },
+          {
+            "option_index": 1,
+            "rationale": "1 does not satisfy the stated computation. The Boolean product is [[0, 1, 1], [1, 0, 1], [1, 1, 1]]; count its 1 entries, not the number of successful intermediate witnesses."
+          },
+          {
+            "option_index": 3,
+            "rationale": "2 does not satisfy the stated computation. The Boolean product is [[0, 1, 1], [1, 0, 1], [1, 1, 1]]; count its 1 entries, not the number of successful intermediate witnesses."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.6, odd exercises 27, 29, 31, 35. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.6",
+        "odd_exercises": [
+          27,
+          29,
+          31,
+          35
+        ],
+        "workshop": "Boolean matrices 1"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "boolean-matrix",
+        "args": {
+          "a": [
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ]
+          ],
+          "b": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              1
+            ]
+          ],
+          "query": "product"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-269",
+      "topic": "Boolean matrices 1",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "What is entry (1,2) of A⊙A?",
+      "context": "A=[[1, 0, 1], [0, 1, 0], [1, 1, 0]]; B=[[0, 1, 0], [1, 0, 1], [0, 0, 1]], with each inner list a row. Join ∨ and meet ∧ act entrywise. Boolean product ⊙ uses AND for multiplication and OR for addition. Indices start at 1.",
+      "options": [
+        "3",
+        "2",
+        "0",
+        "1"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "A Boolean-product entry is 1 if at least one corresponding pair of factors is both 1.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Compute joins, meets and Boolean powers without substituting ordinary addition.",
+        "correct_rationale": "The Boolean square is [[1, 1, 1], [0, 1, 0], [1, 1, 1]]. Its first-row, second-column entry is 1.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "3 does not satisfy the stated computation. The Boolean square is [[1, 1, 1], [0, 1, 0], [1, 1, 1]]. Its first-row, second-column entry is 1."
+          },
+          {
+            "option_index": 1,
+            "rationale": "2 does not satisfy the stated computation. The Boolean square is [[1, 1, 1], [0, 1, 0], [1, 1, 1]]. Its first-row, second-column entry is 1."
+          },
+          {
+            "option_index": 2,
+            "rationale": "0 does not satisfy the stated computation. The Boolean square is [[1, 1, 1], [0, 1, 0], [1, 1, 1]]. Its first-row, second-column entry is 1."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.6, odd exercises 27, 29, 31, 35. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.6",
+        "odd_exercises": [
+          27,
+          29,
+          31,
+          35
+        ],
+        "workshop": "Boolean matrices 1"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "boolean-matrix",
+        "args": {
+          "a": [
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ]
+          ],
+          "b": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              1
+            ]
+          ],
+          "query": "square12"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-270",
+      "topic": "Boolean matrices 1",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "How many 1 entries does (A⊙A)⊙A have?",
+      "context": "A=[[1, 0, 1], [0, 1, 0], [1, 1, 0]]; B=[[0, 1, 0], [1, 0, 1], [0, 0, 1]], with each inner list a row. Join ∨ and meet ∧ act entrywise. Boolean product ⊙ uses AND for multiplication and OR for addition. Indices start at 1.",
+      "options": [
+        "0",
+        "2",
+        "7",
+        "1"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "A Boolean-product entry is 1 if at least one corresponding pair of factors is both 1.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Compute joins, meets and Boolean powers without substituting ordinary addition.",
+        "correct_rationale": "First A⊙A=[[1, 1, 1], [0, 1, 0], [1, 1, 1]]; then Boolean-multiply by A to obtain [[1, 1, 1], [0, 1, 0], [1, 1, 1]]. Count the ones in that matrix.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "0 does not satisfy the stated computation. First A⊙A=[[1, 1, 1], [0, 1, 0], [1, 1, 1]]; then Boolean-multiply by A to obtain [[1, 1, 1], [0, 1, 0], [1, 1, 1]]. Count the ones in that matrix."
+          },
+          {
+            "option_index": 1,
+            "rationale": "2 does not satisfy the stated computation. First A⊙A=[[1, 1, 1], [0, 1, 0], [1, 1, 1]]; then Boolean-multiply by A to obtain [[1, 1, 1], [0, 1, 0], [1, 1, 1]]. Count the ones in that matrix."
+          },
+          {
+            "option_index": 3,
+            "rationale": "1 does not satisfy the stated computation. First A⊙A=[[1, 1, 1], [0, 1, 0], [1, 1, 1]]; then Boolean-multiply by A to obtain [[1, 1, 1], [0, 1, 0], [1, 1, 1]]. Count the ones in that matrix."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.6, odd exercises 27, 29, 31, 35. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.6",
+        "odd_exercises": [
+          27,
+          29,
+          31,
+          35
+        ],
+        "workshop": "Boolean matrices 1"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "boolean-matrix",
+        "args": {
+          "a": [
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              1,
+              0
+            ]
+          ],
+          "b": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              1
+            ]
+          ],
+          "query": "cube"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-271",
+      "topic": "Boolean matrices 2",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "How many 1 entries does A∨B have?",
+      "context": "A=[[0, 1, 0], [1, 0, 1], [0, 0, 1]]; B=[[1, 0, 1], [0, 1, 1], [1, 0, 0]], with each inner list a row. Join ∨ and meet ∧ act entrywise. Boolean product ⊙ uses AND for multiplication and OR for addition. Indices start at 1.",
+      "options": [
+        "2",
+        "0",
+        "8",
+        "1"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "A Boolean-product entry is 1 if at least one corresponding pair of factors is both 1.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Compute joins, meets and Boolean powers without substituting ordinary addition.",
+        "correct_rationale": "Apply OR in each of the nine positions and count once per position; there are 8 ones.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "2 does not satisfy the stated computation. Apply OR in each of the nine positions and count once per position; there are 8 ones."
+          },
+          {
+            "option_index": 1,
+            "rationale": "0 does not satisfy the stated computation. Apply OR in each of the nine positions and count once per position; there are 8 ones."
+          },
+          {
+            "option_index": 3,
+            "rationale": "1 does not satisfy the stated computation. Apply OR in each of the nine positions and count once per position; there are 8 ones."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.6, odd exercises 27, 29, 31, 35. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.6",
+        "odd_exercises": [
+          27,
+          29,
+          31,
+          35
+        ],
+        "workshop": "Boolean matrices 2"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "boolean-matrix",
+        "args": {
+          "a": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              1
+            ]
+          ],
+          "b": [
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              1,
+              0,
+              0
+            ]
+          ],
+          "query": "join"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-272",
+      "topic": "Boolean matrices 2",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "How many 1 entries does A∧B have?",
+      "context": "A=[[0, 1, 0], [1, 0, 1], [0, 0, 1]]; B=[[1, 0, 1], [0, 1, 1], [1, 0, 0]], with each inner list a row. Join ∨ and meet ∧ act entrywise. Boolean product ⊙ uses AND for multiplication and OR for addition. Indices start at 1.",
+      "options": [
+        "1",
+        "3",
+        "0",
+        "2"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "A Boolean-product entry is 1 if at least one corresponding pair of factors is both 1.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Compute joins, meets and Boolean powers without substituting ordinary addition.",
+        "correct_rationale": "Only positions where both entries are 1 survive; there are 1 such positions.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "3 does not satisfy the stated computation. Only positions where both entries are 1 survive; there are 1 such positions."
+          },
+          {
+            "option_index": 2,
+            "rationale": "0 does not satisfy the stated computation. Only positions where both entries are 1 survive; there are 1 such positions."
+          },
+          {
+            "option_index": 3,
+            "rationale": "2 does not satisfy the stated computation. Only positions where both entries are 1 survive; there are 1 such positions."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.6, odd exercises 27, 29, 31, 35. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.6",
+        "odd_exercises": [
+          27,
+          29,
+          31,
+          35
+        ],
+        "workshop": "Boolean matrices 2"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "boolean-matrix",
+        "args": {
+          "a": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              1
+            ]
+          ],
+          "b": [
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              1,
+              0,
+              0
+            ]
+          ],
+          "query": "meet"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-273",
+      "topic": "Boolean matrices 2",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "How many 1 entries does A⊙B have?",
+      "context": "A=[[0, 1, 0], [1, 0, 1], [0, 0, 1]]; B=[[1, 0, 1], [0, 1, 1], [1, 0, 0]], with each inner list a row. Join ∨ and meet ∧ act entrywise. Boolean product ⊙ uses AND for multiplication and OR for addition. Indices start at 1.",
+      "options": [
+        "0",
+        "1",
+        "2",
+        "5"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "A Boolean-product entry is 1 if at least one corresponding pair of factors is both 1.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Compute joins, meets and Boolean powers without substituting ordinary addition.",
+        "correct_rationale": "The Boolean product is [[0, 1, 1], [1, 0, 1], [1, 0, 0]]; count its 1 entries, not the number of successful intermediate witnesses.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "0 does not satisfy the stated computation. The Boolean product is [[0, 1, 1], [1, 0, 1], [1, 0, 0]]; count its 1 entries, not the number of successful intermediate witnesses."
+          },
+          {
+            "option_index": 1,
+            "rationale": "1 does not satisfy the stated computation. The Boolean product is [[0, 1, 1], [1, 0, 1], [1, 0, 0]]; count its 1 entries, not the number of successful intermediate witnesses."
+          },
+          {
+            "option_index": 2,
+            "rationale": "2 does not satisfy the stated computation. The Boolean product is [[0, 1, 1], [1, 0, 1], [1, 0, 0]]; count its 1 entries, not the number of successful intermediate witnesses."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.6, odd exercises 27, 29, 31, 35. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.6",
+        "odd_exercises": [
+          27,
+          29,
+          31,
+          35
+        ],
+        "workshop": "Boolean matrices 2"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "boolean-matrix",
+        "args": {
+          "a": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              1
+            ]
+          ],
+          "b": [
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              1,
+              0,
+              0
+            ]
+          ],
+          "query": "product"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-274",
+      "topic": "Boolean matrices 2",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "What is entry (1,2) of A⊙A?",
+      "context": "A=[[0, 1, 0], [1, 0, 1], [0, 0, 1]]; B=[[1, 0, 1], [0, 1, 1], [1, 0, 0]], with each inner list a row. Join ∨ and meet ∧ act entrywise. Boolean product ⊙ uses AND for multiplication and OR for addition. Indices start at 1.",
+      "options": [
+        "3",
+        "2",
+        "0",
+        "1"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "A Boolean-product entry is 1 if at least one corresponding pair of factors is both 1.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Compute joins, meets and Boolean powers without substituting ordinary addition.",
+        "correct_rationale": "The Boolean square is [[1, 0, 1], [0, 1, 1], [0, 0, 1]]. Its first-row, second-column entry is 0.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "3 does not satisfy the stated computation. The Boolean square is [[1, 0, 1], [0, 1, 1], [0, 0, 1]]. Its first-row, second-column entry is 0."
+          },
+          {
+            "option_index": 1,
+            "rationale": "2 does not satisfy the stated computation. The Boolean square is [[1, 0, 1], [0, 1, 1], [0, 0, 1]]. Its first-row, second-column entry is 0."
+          },
+          {
+            "option_index": 3,
+            "rationale": "1 does not satisfy the stated computation. The Boolean square is [[1, 0, 1], [0, 1, 1], [0, 0, 1]]. Its first-row, second-column entry is 0."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.6, odd exercises 27, 29, 31, 35. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.6",
+        "odd_exercises": [
+          27,
+          29,
+          31,
+          35
+        ],
+        "workshop": "Boolean matrices 2"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "boolean-matrix",
+        "args": {
+          "a": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              1
+            ]
+          ],
+          "b": [
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              1,
+              0,
+              0
+            ]
+          ],
+          "query": "square12"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-275",
+      "topic": "Boolean matrices 2",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "How many 1 entries does (A⊙A)⊙A have?",
+      "context": "A=[[0, 1, 0], [1, 0, 1], [0, 0, 1]]; B=[[1, 0, 1], [0, 1, 1], [1, 0, 0]], with each inner list a row. Join ∨ and meet ∧ act entrywise. Boolean product ⊙ uses AND for multiplication and OR for addition. Indices start at 1.",
+      "options": [
+        "5",
+        "0",
+        "2",
+        "1"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "A Boolean-product entry is 1 if at least one corresponding pair of factors is both 1.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Compute joins, meets and Boolean powers without substituting ordinary addition.",
+        "correct_rationale": "First A⊙A=[[1, 0, 1], [0, 1, 1], [0, 0, 1]]; then Boolean-multiply by A to obtain [[0, 1, 1], [1, 0, 1], [0, 0, 1]]. Count the ones in that matrix.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "0 does not satisfy the stated computation. First A⊙A=[[1, 0, 1], [0, 1, 1], [0, 0, 1]]; then Boolean-multiply by A to obtain [[0, 1, 1], [1, 0, 1], [0, 0, 1]]. Count the ones in that matrix."
+          },
+          {
+            "option_index": 2,
+            "rationale": "2 does not satisfy the stated computation. First A⊙A=[[1, 0, 1], [0, 1, 1], [0, 0, 1]]; then Boolean-multiply by A to obtain [[0, 1, 1], [1, 0, 1], [0, 0, 1]]. Count the ones in that matrix."
+          },
+          {
+            "option_index": 3,
+            "rationale": "1 does not satisfy the stated computation. First A⊙A=[[1, 0, 1], [0, 1, 1], [0, 0, 1]]; then Boolean-multiply by A to obtain [[0, 1, 1], [1, 0, 1], [0, 0, 1]]. Count the ones in that matrix."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §2.6, odd exercises 27, 29, 31, 35. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "2.6",
+        "odd_exercises": [
+          27,
+          29,
+          31,
+          35
+        ],
+        "workshop": "Boolean matrices 2"
+      },
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "midterm",
+        "op": "boolean-matrix",
+        "args": {
+          "a": [
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              0,
+              0,
+              1
+            ]
+          ],
+          "b": [
+            [
+              1,
+              0,
+              1
+            ],
+            [
+              0,
+              1,
+              1
+            ],
+            [
+              1,
+              0,
+              0
+            ]
+          ],
+          "query": "cube"
+        }
+      }
+    },
+    {
+      "id": "utd-fall-midterm-276",
+      "topic": "Tracing binary search",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Which indices are examined in order?",
+      "context": "Search the increasing list [2,5,8,12,17,23,31,44,58] for 23. Use 1-based indices, low=1, high=9. At each step mid=⌊(low+high)/2⌋; compare the target with a[mid], stop if equal, otherwise discard mid and the impossible half.",
+      "options": [
+        "5, 3, 4",
+        "5, 6",
+        "4, 6",
+        "5, 7, 6"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Track low, high, and mid; the retained interval must still contain every possible target location.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Trace an explicitly specified search and state its invariant and precondition.",
+        "correct_rationale": "First mid=5 gives 17<23, so low=6. Next mid=7 gives 31>23, so high=6. Then mid=6 finds 23.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. First mid=5 gives 17<23, so low=6. Next mid=7 gives 31>23, so high=6. Then mid=6 finds 23."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. First mid=5 gives 17<23, so low=6. Next mid=7 gives 31>23, so high=6. Then mid=6 finds 23."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. First mid=5 gives 17<23, so low=6. Next mid=7 gives 31>23, so high=6. Then mid=6 finds 23."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §3.1, odd exercises 13, 27. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "3.1",
+        "odd_exercises": [
+          13,
+          27
+        ],
+        "workshop": "Tracing binary search"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-277",
+      "topic": "Tracing binary search",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "After the first iteration, which interval remains?",
+      "context": "Search the increasing list [2,5,8,12,17,23,31,44,58] for 23. Use 1-based indices, low=1, high=9. At each step mid=⌊(low+high)/2⌋; compare the target with a[mid], stop if equal, otherwise discard mid and the impossible half.",
+      "options": [
+        "[5,9]",
+        "[1,9]",
+        "[1,4]",
+        "[6,9]"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Track low, high, and mid; the retained interval must still contain every possible target location.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Trace an explicitly specified search and state its invariant and precondition.",
+        "correct_rationale": "The middle value 17 is smaller than 23, so indices 1 through 5 can be discarded. Low becomes mid+1=6.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. The middle value 17 is smaller than 23, so indices 1 through 5 can be discarded. Low becomes mid+1=6."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. The middle value 17 is smaller than 23, so indices 1 through 5 can be discarded. Low becomes mid+1=6."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. The middle value 17 is smaller than 23, so indices 1 through 5 can be discarded. Low becomes mid+1=6."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §3.1, odd exercises 13, 27. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "3.1",
+        "odd_exercises": [
+          13,
+          27
+        ],
+        "workshop": "Tracing binary search"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-278",
+      "topic": "Tracing binary search",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What precondition justifies discarding half the list?",
+      "context": "Search the increasing list [2,5,8,12,17,23,31,44,58] for 23. Use 1-based indices, low=1, high=9. At each step mid=⌊(low+high)/2⌋; compare the target with a[mid], stop if equal, otherwise discard mid and the impossible half.",
+      "options": [
+        "All values are positive.",
+        "The list is sorted in increasing order.",
+        "The target is at the original midpoint.",
+        "The list length is odd."
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Track low, high, and mid; the retained interval must still contain every possible target location.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Trace an explicitly specified search and state its invariant and precondition.",
+        "correct_rationale": "Sorted order ensures every value on the discarded side is too small or too large. Odd length and positivity are not required.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. Sorted order ensures every value on the discarded side is too small or too large. Odd length and positivity are not required."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. Sorted order ensures every value on the discarded side is too small or too large. Odd length and positivity are not required."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. Sorted order ensures every value on the discarded side is too small or too large. Odd length and positivity are not required."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §3.1, odd exercises 13, 27. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "3.1",
+        "odd_exercises": [
+          13,
+          27
+        ],
+        "workshop": "Tracing binary search"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-279",
+      "topic": "Tracing binary search",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "Which invariant supports correctness?",
+      "context": "Search the increasing list [2,5,8,12,17,23,31,44,58] for 23. Use 1-based indices, low=1, high=9. At each step mid=⌊(low+high)/2⌋; compare the target with a[mid], stop if equal, otherwise discard mid and the impossible half.",
+      "options": [
+        "The target is always exactly at mid.",
+        "Every discarded value equals the target.",
+        "The interval length stays constant.",
+        "If the target occurs, its index remains in [low,high] until found."
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Track low, high, and mid; the retained interval must still contain every possible target location.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Trace an explicitly specified search and state its invariant and precondition.",
+        "correct_rationale": "The comparison and sorted order preserve all feasible target positions in the retained interval. Its length decreases, rather than staying constant.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. The comparison and sorted order preserve all feasible target positions in the retained interval. Its length decreases, rather than staying constant."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. The comparison and sorted order preserve all feasible target positions in the retained interval. Its length decreases, rather than staying constant."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. The comparison and sorted order preserve all feasible target positions in the retained interval. Its length decreases, rather than staying constant."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §3.1, odd exercises 13, 27. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "3.1",
+        "odd_exercises": [
+          13,
+          27
+        ],
+        "workshop": "Tracing binary search"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-280",
+      "topic": "Tracing binary search",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "Which change can cause a nonterminating unsuccessful search?",
+      "context": "Search the increasing list [2,5,8,12,17,23,31,44,58] for 23. Use 1-based indices, low=1, high=9. At each step mid=⌊(low+high)/2⌋; compare the target with a[mid], stop if equal, otherwise discard mid and the impossible half.",
+      "options": [
+        "Stopping when low>high.",
+        "Using low=mid instead of mid+1 when a[mid]<target.",
+        "Stopping immediately on equality.",
+        "Using high=mid−1 when a[mid]>target."
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Track low, high, and mid; the retained interval must still contain every possible target location.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Trace an explicitly specified search and state its invariant and precondition.",
+        "correct_rationale": "With a one-element interval below the target, low=mid makes no progress. Discarding mid strictly shrinks the interval.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. With a one-element interval below the target, low=mid makes no progress. Discarding mid strictly shrinks the interval."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. With a one-element interval below the target, low=mid makes no progress. Discarding mid strictly shrinks the interval."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. With a one-element interval below the target, low=mid makes no progress. Discarding mid strictly shrinks the interval."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §3.1, odd exercises 13, 27. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "3.1",
+        "odd_exercises": [
+          13,
+          27
+        ],
+        "workshop": "Tracing binary search"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-281",
+      "topic": "Bubble-sort passes",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What is the list after the first full pass?",
+      "context": "Bubble sort [6,1,5,2,4] in ascending order. A pass compares adjacent pairs left to right, swapping when the left entry is larger. Pass 1 visits pairs (1,2),(2,3),(3,4),(4,5); each later pass omits the sorted suffix.",
+      "options": [
+        "[6,1,2,4,5]",
+        "[1,2,4,5,6]",
+        "[1,6,2,4,5]",
+        "[1,5,2,4,6]"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "A left-to-right pass pushes the largest remaining element to the right boundary.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Trace adjacent exchanges and identify the invariant of a completed pass.",
+        "correct_rationale": "The 6 swaps with 1,5,2,4 successively, producing [1,5,2,4,6]. One pass does not necessarily sort the entire list.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. The 6 swaps with 1,5,2,4 successively, producing [1,5,2,4,6]. One pass does not necessarily sort the entire list."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. The 6 swaps with 1,5,2,4 successively, producing [1,5,2,4,6]. One pass does not necessarily sort the entire list."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. The 6 swaps with 1,5,2,4 successively, producing [1,5,2,4,6]. One pass does not necessarily sort the entire list."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §3.1, odd exercises 37, 41. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "3.1",
+        "odd_exercises": [
+          37,
+          41
+        ],
+        "workshop": "Bubble-sort passes"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-282",
+      "topic": "Bubble-sort passes",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "How many swaps occur in the first pass?",
+      "context": "Bubble sort [6,1,5,2,4] in ascending order. A pass compares adjacent pairs left to right, swapping when the left entry is larger. Pass 1 visits pairs (1,2),(2,3),(3,4),(4,5); each later pass omits the sorted suffix.",
+      "options": [
+        "1",
+        "4",
+        "5",
+        "3"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "A left-to-right pass pushes the largest remaining element to the right boundary.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Trace adjacent exchanges and identify the invariant of a completed pass.",
+        "correct_rationale": "The initial maximum 6 moves across all four neighboring elements, requiring four swaps.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. The initial maximum 6 moves across all four neighboring elements, requiring four swaps."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. The initial maximum 6 moves across all four neighboring elements, requiring four swaps."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. The initial maximum 6 moves across all four neighboring elements, requiring four swaps."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §3.1, odd exercises 37, 41. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "3.1",
+        "odd_exercises": [
+          37,
+          41
+        ],
+        "workshop": "Bubble-sort passes"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-283",
+      "topic": "Bubble-sort passes",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What is the list after the second pass?",
+      "context": "Bubble sort [6,1,5,2,4] in ascending order. A pass compares adjacent pairs left to right, swapping when the left entry is larger. Pass 1 visits pairs (1,2),(2,3),(3,4),(4,5); each later pass omits the sorted suffix.",
+      "options": [
+        "[1,2,5,4,6]",
+        "[1,2,4,5,6]",
+        "[1,5,2,4,6]",
+        "[2,1,4,5,6]"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "A left-to-right pass pushes the largest remaining element to the right boundary.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Trace adjacent exchanges and identify the invariant of a completed pass.",
+        "correct_rationale": "Within the first four entries, 1≤5, then 5 swaps with 2 and 4, leaving 5 in position 4.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. Within the first four entries, 1≤5, then 5 swaps with 2 and 4, leaving 5 in position 4."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. Within the first four entries, 1≤5, then 5 swaps with 2 and 4, leaving 5 in position 4."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. Within the first four entries, 1≤5, then 5 swaps with 2 and 4, leaving 5 in position 4."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §3.1, odd exercises 37, 41. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "3.1",
+        "odd_exercises": [
+          37,
+          41
+        ],
+        "workshop": "Bubble-sort passes"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-284",
+      "topic": "Bubble-sort passes",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "Without early termination, how many adjacent comparisons do all passes use for n=5?",
+      "context": "Bubble sort [6,1,5,2,4] in ascending order. A pass compares adjacent pairs left to right, swapping when the left entry is larger. Pass 1 visits pairs (1,2),(2,3),(3,4),(4,5); each later pass omits the sorted suffix.",
+      "options": [
+        "5",
+        "9",
+        "20",
+        "10"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "A left-to-right pass pushes the largest remaining element to the right boundary.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Trace adjacent exchanges and identify the invariant of a completed pass.",
+        "correct_rationale": "The passes make 4+3+2+1=10 comparisons. Comparisons and swaps are different counts.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. The passes make 4+3+2+1=10 comparisons. Comparisons and swaps are different counts."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. The passes make 4+3+2+1=10 comparisons. Comparisons and swaps are different counts."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. The passes make 4+3+2+1=10 comparisons. Comparisons and swaps are different counts."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §3.1, odd exercises 37, 41. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "3.1",
+        "odd_exercises": [
+          37,
+          41
+        ],
+        "workshop": "Bubble-sort passes"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-285",
+      "topic": "Bubble-sort passes",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "Why may the final entry be excluded after the first pass?",
+      "context": "Bubble sort [6,1,5,2,4] in ascending order. A pass compares adjacent pairs left to right, swapping when the left entry is larger. Pass 1 visits pairs (1,2),(2,3),(3,4),(4,5); each later pass omits the sorted suffix.",
+      "options": [
+        "It is necessarily a minimum.",
+        "Bubble sort never compares the final entry.",
+        "It is a maximum of the original list and already in a valid final position.",
+        "Every entry is now sorted."
+      ],
+      "correct_index": 2,
+      "hints": [
+        "A left-to-right pass pushes the largest remaining element to the right boundary.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Trace adjacent exchanges and identify the invariant of a completed pass.",
+        "correct_rationale": "The pass compares and carries the running maximum to the last position; remaining work is confined to the prefix.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. The pass compares and carries the running maximum to the last position; remaining work is confined to the prefix."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. The pass compares and carries the running maximum to the last position; remaining work is confined to the prefix."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. The pass compares and carries the running maximum to the last position; remaining work is confined to the prefix."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §3.1, odd exercises 37, 41. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "3.1",
+        "odd_exercises": [
+          37,
+          41
+        ],
+        "workshop": "Bubble-sort passes"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-286",
+      "topic": "Insertion-sort reasoning",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What is the list immediately after inserting the third original element, 6?",
+      "context": "Insertion sort processes [7,3,6,2,5] left to right. To insert a key, shift larger entries in the sorted prefix one place right, then place the key. Count only comparisons of prefix values with the key, not index-bound checks.",
+      "options": [
+        "[6,3,7,2,5]",
+        "[3,6,7,2,5]",
+        "[3,7,6,2,5]",
+        "[2,3,5,6,7]"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "The prefix is sorted before each insertion; the untouched suffix need not be sorted.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Trace a growing sorted prefix and distinguish data movement from key comparisons.",
+        "correct_rationale": "First insert 3 before 7, obtaining [3,7,6,2,5]; then shift 7 and put 6 between 3 and 7.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. First insert 3 before 7, obtaining [3,7,6,2,5]; then shift 7 and put 6 between 3 and 7."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. First insert 3 before 7, obtaining [3,7,6,2,5]; then shift 7 and put 6 between 3 and 7."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. First insert 3 before 7, obtaining [3,7,6,2,5]; then shift 7 and put 6 between 3 and 7."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §3.1, odd exercises 41, 47, 53. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "3.1",
+        "odd_exercises": [
+          41,
+          47,
+          53
+        ],
+        "workshop": "Insertion-sort reasoning"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-287",
+      "topic": "Insertion-sort reasoning",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "How many prefix elements shift when key 2 is inserted?",
+      "context": "Insertion sort processes [7,3,6,2,5] left to right. To insert a key, shift larger entries in the sorted prefix one place right, then place the key. Count only comparisons of prefix values with the key, not index-bound checks.",
+      "options": [
+        "1",
+        "2",
+        "4",
+        "3"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "The prefix is sorted before each insertion; the untouched suffix need not be sorted.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Trace a growing sorted prefix and distinguish data movement from key comparisons.",
+        "correct_rationale": "The sorted prefix [3,6,7] has all three values larger than 2, so each shifts right.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. The sorted prefix [3,6,7] has all three values larger than 2, so each shifts right."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. The sorted prefix [3,6,7] has all three values larger than 2, so each shifts right."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. The sorted prefix [3,6,7] has all three values larger than 2, so each shifts right."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §3.1, odd exercises 41, 47, 53. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "3.1",
+        "odd_exercises": [
+          41,
+          47,
+          53
+        ],
+        "workshop": "Insertion-sort reasoning"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-288",
+      "topic": "Insertion-sort reasoning",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "When 5 is inserted into [2,3,6,7], how many key comparisons occur?",
+      "context": "Insertion sort processes [7,3,6,2,5] left to right. To insert a key, shift larger entries in the sorted prefix one place right, then place the key. Count only comparisons of prefix values with the key, not index-bound checks.",
+      "options": [
+        "2",
+        "5",
+        "3",
+        "4"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "The prefix is sorted before each insertion; the untouched suffix need not be sorted.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Trace a growing sorted prefix and distinguish data movement from key comparisons.",
+        "correct_rationale": "Compare 7>5 and 6>5 (shift both), then 3>5 is false (stop). The failed stopping comparison still counts.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. Compare 7>5 and 6>5 (shift both), then 3>5 is false (stop). The failed stopping comparison still counts."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. Compare 7>5 and 6>5 (shift both), then 3>5 is false (stop). The failed stopping comparison still counts."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. Compare 7>5 and 6>5 (shift both), then 3>5 is false (stop). The failed stopping comparison still counts."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §3.1, odd exercises 41, 47, 53. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "3.1",
+        "odd_exercises": [
+          41,
+          47,
+          53
+        ],
+        "workshop": "Insertion-sort reasoning"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-289",
+      "topic": "Insertion-sort reasoning",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "Which invariant explains correctness?",
+      "context": "Insertion sort processes [7,3,6,2,5] left to right. To insert a key, shift larger entries in the sorted prefix one place right, then place the key. Count only comparisons of prefix values with the key, not index-bound checks.",
+      "options": [
+        "Before each insertion, the processed prefix is sorted and contains precisely the processed original elements.",
+        "The suffix always contains the smallest values.",
+        "Every insertion shifts every previous value.",
+        "The entire list is sorted after each comparison."
+      ],
+      "correct_index": 0,
+      "hints": [
+        "The prefix is sorted before each insertion; the untouched suffix need not be sorted.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Trace a growing sorted prefix and distinguish data movement from key comparisons.",
+        "correct_rationale": "Inserting the next key into the correct location preserves sortedness and membership of the enlarged prefix.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. Inserting the next key into the correct location preserves sortedness and membership of the enlarged prefix."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. Inserting the next key into the correct location preserves sortedness and membership of the enlarged prefix."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. Inserting the next key into the correct location preserves sortedness and membership of the enlarged prefix."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §3.1, odd exercises 41, 47, 53. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "3.1",
+        "odd_exercises": [
+          41,
+          47,
+          53
+        ],
+        "workshop": "Insertion-sort reasoning"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-290",
+      "topic": "Insertion-sort reasoning",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "With distinct increasing input of length n, how many key comparisons are required?",
+      "context": "Insertion sort processes [7,3,6,2,5] left to right. To insert a key, shift larger entries in the sorted prefix one place right, then place the key. Count only comparisons of prefix values with the key, not index-bound checks.",
+      "options": [
+        "n−1",
+        "0",
+        "n(n−1)/2",
+        "n²"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "The prefix is sorted before each insertion; the untouched suffix need not be sorted.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Trace a growing sorted prefix and distinguish data movement from key comparisons.",
+        "correct_rationale": "Each of the n−1 insertions performs one failed comparison with its immediate predecessor and shifts nothing. This is a best-case linear count.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. Each of the n−1 insertions performs one failed comparison with its immediate predecessor and shifts nothing. This is a best-case linear count."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. Each of the n−1 insertions performs one failed comparison with its immediate predecessor and shifts nothing. This is a best-case linear count."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. Each of the n−1 insertions performs one failed comparison with its immediate predecessor and shifts nothing. This is a best-case linear count."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §3.1, odd exercises 41, 47, 53. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "3.1",
+        "odd_exercises": [
+          41,
+          47,
+          53
+        ],
+        "workshop": "Insertion-sort reasoning"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-291",
+      "topic": "Greedy choices versus optimality",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What does greedy choose for amount 8?",
+      "context": "Unlimited coins of values 1,4,6 are available. The greedy rule repeatedly takes the largest coin not exceeding the remainder. The objective is the fewest coins.",
+      "options": [
+        "4,4",
+        "6,1,1",
+        "6,4",
+        "1,1,1,1,1,1,1,1"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "A locally largest coin need not minimize the total number of later coins.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Trace a greedy rule and disprove its optimality with a valid feasible improvement.",
+        "correct_rationale": "Greedy first takes 6, leaving 2; only 1 fits, twice. The pair 4,4 is optimal but is not the greedy trace.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. Greedy first takes 6, leaving 2; only 1 fits, twice. The pair 4,4 is optimal but is not the greedy trace."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. Greedy first takes 6, leaving 2; only 1 fits, twice. The pair 4,4 is optimal but is not the greedy trace."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. Greedy first takes 6, leaving 2; only 1 fits, twice. The pair 4,4 is optimal but is not the greedy trace."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §3.1, odd exercises 57, 59. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "3.1",
+        "odd_exercises": [
+          57,
+          59
+        ],
+        "workshop": "Greedy choices versus optimality"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-292",
+      "topic": "Greedy choices versus optimality",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What is the minimum number of coins for amount 8?",
+      "context": "Unlimited coins of values 1,4,6 are available. The greedy rule repeatedly takes the largest coin not exceeding the remainder. The objective is the fewest coins.",
+      "options": [
+        "8",
+        "1",
+        "2",
+        "3"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "A locally largest coin need not minimize the total number of later coins.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Trace a greedy rule and disprove its optimality with a valid feasible improvement.",
+        "correct_rationale": "Two 4-coins suffice. One coin cannot, since 8 is not an available denomination; hence two is optimal.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. Two 4-coins suffice. One coin cannot, since 8 is not an available denomination; hence two is optimal."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. Two 4-coins suffice. One coin cannot, since 8 is not an available denomination; hence two is optimal."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. Two 4-coins suffice. One coin cannot, since 8 is not an available denomination; hence two is optimal."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §3.1, odd exercises 57, 59. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "3.1",
+        "odd_exercises": [
+          57,
+          59
+        ],
+        "workshop": "Greedy choices versus optimality"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-293",
+      "topic": "Greedy choices versus optimality",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What does the amount-8 example establish?",
+      "context": "Unlimited coins of values 1,4,6 are available. The greedy rule repeatedly takes the largest coin not exceeding the remainder. The objective is the fewest coins.",
+      "options": [
+        "The amount-8 greedy answer is infeasible.",
+        "This greedy rule is not optimal for every amount in this coin system.",
+        "No algorithm can make amount 8.",
+        "Greedy algorithms never solve any problem optimally."
+      ],
+      "correct_index": 1,
+      "hints": [
+        "A locally largest coin need not minimize the total number of later coins.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Trace a greedy rule and disprove its optimality with a valid feasible improvement.",
+        "correct_rationale": "The greedy answer is feasible but uses three coins instead of two. One counterexample refutes universal optimality for this system, not every greedy algorithm.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. The greedy answer is feasible but uses three coins instead of two. One counterexample refutes universal optimality for this system, not every greedy algorithm."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. The greedy answer is feasible but uses three coins instead of two. One counterexample refutes universal optimality for this system, not every greedy algorithm."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. The greedy answer is feasible but uses three coins instead of two. One counterexample refutes universal optimality for this system, not every greedy algorithm."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §3.1, odd exercises 57, 59. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "3.1",
+        "odd_exercises": [
+          57,
+          59
+        ],
+        "workshop": "Greedy choices versus optimality"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-294",
+      "topic": "Greedy choices versus optimality",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "What is the greedy decomposition of 12 and its optimal coin count?",
+      "context": "Unlimited coins of values 1,4,6 are available. The greedy rule repeatedly takes the largest coin not exceeding the remainder. The objective is the fewest coins.",
+      "options": [
+        "4+4+4; optimal count 3",
+        "6+6; optimal count 3",
+        "6+4+1+1; optimal count 4",
+        "6+6; optimal count 2"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "A locally largest coin need not minimize the total number of later coins.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Trace a greedy rule and disprove its optimality with a valid feasible improvement.",
+        "correct_rationale": "Greedy takes two 6s. Since the largest coin is 6, one coin cannot total 12, proving optimality in this instance.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. Greedy takes two 6s. Since the largest coin is 6, one coin cannot total 12, proving optimality in this instance."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. Greedy takes two 6s. Since the largest coin is 6, one coin cannot total 12, proving optimality in this instance."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. Greedy takes two 6s. Since the largest coin is 6, one coin cannot total 12, proving optimality in this instance."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §3.1, odd exercises 57, 59. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "3.1",
+        "odd_exercises": [
+          57,
+          59
+        ],
+        "workshop": "Greedy choices versus optimality"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-295",
+      "topic": "Greedy choices versus optimality",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "Why does the presence of a 1-coin ensure this rule terminates for a nonnegative integer amount?",
+      "context": "Unlimited coins of values 1,4,6 are available. The greedy rule repeatedly takes the largest coin not exceeding the remainder. The objective is the fewest coins.",
+      "options": [
+        "Each chosen coin decreases the nonnegative remainder, and any positive remainder admits a coin.",
+        "It proves the fewest-coin property.",
+        "It lets the remainder increase indefinitely.",
+        "It makes every choice unique across all algorithms."
+      ],
+      "correct_index": 0,
+      "hints": [
+        "A locally largest coin need not minimize the total number of later coins.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Trace a greedy rule and disprove its optimality with a valid feasible improvement.",
+        "correct_rationale": "A strictly decreasing nonnegative integer cannot decrease forever; the 1-coin prevents getting stuck above zero. Termination does not establish optimality.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. A strictly decreasing nonnegative integer cannot decrease forever; the 1-coin prevents getting stuck above zero. Termination does not establish optimality."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. A strictly decreasing nonnegative integer cannot decrease forever; the 1-coin prevents getting stuck above zero. Termination does not establish optimality."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. A strictly decreasing nonnegative integer cannot decrease forever; the 1-coin prevents getting stuck above zero. Termination does not establish optimality."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §3.1, odd exercises 57, 59. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "3.1",
+        "odd_exercises": [
+          57,
+          59
+        ],
+        "workshop": "Greedy choices versus optimality"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-296",
+      "topic": "Algorithm specification and correctness",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "To find the maximum of a nonempty list of arbitrary integers, why can initializing max=0 be wrong?",
+      "context": "An algorithm must solve its stated problem for every allowed input and terminate. Input assumptions and counted operations are part of the specification.",
+      "options": [
+        "Zero is not an integer.",
+        "The list must be sorted first.",
+        "All maxima are positive.",
+        "An all-negative list would incorrectly return 0."
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Try empty inputs, negative values, repeated values, and boundary indices against the stated domain.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Distinguish termination, correctness, invariants, and counterexamples to an implementation.",
+        "correct_rationale": "On [−5,−2], no value exceeds 0, so the algorithm returns a value not in the list. Initialize with the first element instead.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. On [−5,−2], no value exceeds 0, so the algorithm returns a value not in the list. Initialize with the first element instead."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. On [−5,−2], no value exceeds 0, so the algorithm returns a value not in the list. Initialize with the first element instead."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. On [−5,−2], no value exceeds 0, so the algorithm returns a value not in the list. Initialize with the first element instead."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §3.1, odd exercises 1, 3, 7, 9. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "3.1",
+        "odd_exercises": [
+          1,
+          3,
+          7,
+          9
+        ],
+        "workshop": "Algorithm specification and correctness"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-297",
+      "topic": "Algorithm specification and correctness",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Which invariant fits a correct maximum scan initialized from the first element?",
+      "context": "An algorithm must solve its stated problem for every allowed input and terminate. Input assumptions and counted operations are part of the specification.",
+      "options": [
+        "After processing i entries, max equals the maximum of those i entries.",
+        "The entire list becomes sorted.",
+        "max is always the last value read.",
+        "max decreases at every step."
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Try empty inputs, negative values, repeated values, and boundary indices against the stated domain.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Distinguish termination, correctness, invariants, and counterexamples to an implementation.",
+        "correct_rationale": "Updating max when a larger entry appears maintains exactly the maximum of the processed prefix.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. Updating max when a larger entry appears maintains exactly the maximum of the processed prefix."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. Updating max when a larger entry appears maintains exactly the maximum of the processed prefix."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. Updating max when a larger entry appears maintains exactly the maximum of the processed prefix."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §3.1, odd exercises 1, 3, 7, 9. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "3.1",
+        "odd_exercises": [
+          1,
+          3,
+          7,
+          9
+        ],
+        "workshop": "Algorithm specification and correctness"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-298",
+      "topic": "Algorithm specification and correctness",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "A loop starts n=1 and repeatedly sets n=2n while n>0 over mathematical integers. What fails?",
+      "context": "An algorithm must solve its stated problem for every allowed input and terminate. Input assumptions and counted operations are part of the specification.",
+      "options": [
+        "The multiplication operation is undefined.",
+        "Input is missing.",
+        "n becomes zero after finitely many steps.",
+        "Termination"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Try empty inputs, negative values, repeated values, and boundary indices against the stated domain.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Distinguish termination, correctness, invariants, and counterexamples to an implementation.",
+        "correct_rationale": "The values 1,2,4,8,… remain positive. Under mathematical integer arithmetic there is no overflow to end the loop.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. The values 1,2,4,8,… remain positive. Under mathematical integer arithmetic there is no overflow to end the loop."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. The values 1,2,4,8,… remain positive. Under mathematical integer arithmetic there is no overflow to end the loop."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. The values 1,2,4,8,… remain positive. Under mathematical integer arithmetic there is no overflow to end the loop."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §3.1, odd exercises 1, 3, 7, 9. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "3.1",
+        "odd_exercises": [
+          1,
+          3,
+          7,
+          9
+        ],
+        "workshop": "Algorithm specification and correctness"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-299",
+      "topic": "Algorithm specification and correctness",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "Why is a finite test suite not by itself a correctness proof for all integer lists?",
+      "context": "An algorithm must solve its stated problem for every allowed input and terminate. Input assumptions and counted operations are part of the specification.",
+      "options": [
+        "Testing is never useful.",
+        "Unseen allowed inputs may expose errors; a general invariant or argument is needed.",
+        "All integer lists are finite in number.",
+        "Any tested algorithm must be correct."
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Try empty inputs, negative values, repeated values, and boundary indices against the stated domain.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Distinguish termination, correctness, invariants, and counterexamples to an implementation.",
+        "correct_rationale": "The input domain contains arbitrarily many lists. Testing can find errors, while a proof accounts for all allowed inputs.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. The input domain contains arbitrarily many lists. Testing can find errors, while a proof accounts for all allowed inputs."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This alternative fails the required condition. The input domain contains arbitrarily many lists. Testing can find errors, while a proof accounts for all allowed inputs."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. The input domain contains arbitrarily many lists. Testing can find errors, while a proof accounts for all allowed inputs."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §3.1, odd exercises 1, 3, 7, 9. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "3.1",
+        "odd_exercises": [
+          1,
+          3,
+          7,
+          9
+        ],
+        "workshop": "Algorithm specification and correctness"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "utd-fall-midterm-300",
+      "topic": "Algorithm specification and correctness",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "How many symmetric character pairs need checking to recognize a palindrome of length n?",
+      "context": "An algorithm must solve its stated problem for every allowed input and terminate. Input assumptions and counted operations are part of the specification.",
+      "options": [
+        "n²",
+        "2n",
+        "⌊n/2⌋",
+        "n−1 for every n"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Try empty inputs, negative values, repeated values, and boundary indices against the stated domain.",
+        "State the domain and all hypotheses explicitly. Work out the result before comparing the four choices."
+      ],
+      "explanation": {
+        "learning_objective": "Distinguish termination, correctness, invariants, and counterexamples to an implementation.",
+        "correct_rationale": "Compare positions i and n+1−i until the middle. Each pair covers two positions, and an odd middle character matches itself automatically.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This alternative fails the required condition. Compare positions i and n+1−i until the middle. Each pair covers two positions, and an odd middle character matches itself automatically."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This alternative fails the required condition. Compare positions i and n+1−i until the middle. Each pair covers two positions, and an odd middle character matches itself automatically."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This alternative fails the required condition. Compare positions i and n+1−i until the middle. Each pair covers two positions, and an odd middle character matches itself automatically."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original slide-aligned practice. Related study: Rosen, uploaded eighth edition, §3.1, odd exercises 1, 3, 7, 9. These are study pointers; this item is not a reproduced textbook exercise."
+      ],
+      "curriculum": {
+        "section": "3.1",
+        "odd_exercises": [
+          1,
+          3,
+          7,
+          9
+        ],
+        "workshop": "Algorithm specification and correctness"
+      },
+      "has_exhibit": false,
+      "exhibit_url": ""
+    }
+  ]
+}

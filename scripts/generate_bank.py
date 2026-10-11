@@ -1051,3 +1051,7 @@ def write_bank():
 if __name__ == '__main__':
     for builder in [logic,proofs,sets,counting,graphs_number,recurrences]: builder()
     write_bank()
+
+    # Regeneration retains the seventh pillar in the complete inventory.
+    from generate_midterm import build as build_midterm
+    build_midterm()
