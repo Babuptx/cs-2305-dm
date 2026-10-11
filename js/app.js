@@ -1,5 +1,6 @@
 import {QuizEngine, readStats, STATS_KEY, SESSION_KEY} from './engine.js';
 import {openReference} from './reference.js';
+import {setupFlashcards} from './flashcards.js';
 const $ = id => document.getElementById(id);
 const make = (tag, value, className) => {const e = document.createElement(tag); if (value != null) e.textContent = value; if (className) e.className = className; return e;};
 let storage; try {storage = localStorage;} catch {}
@@ -104,6 +105,7 @@ function setTheme(theme) {document.documentElement.dataset.theme = theme; $('the
 let theme; try {theme = storage?.getItem('dm:theme:v1');} catch {} setTheme(['light','dark'].includes(theme) ? theme : matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
 $('theme').onclick = () => setTheme(document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark');
 $('reference').onclick = () => openReference($('pillar').value==='utd-fall-midterm'); $('close-reference').onclick = () => $('reference-dialog').close();
+setupFlashcards({isTimedQuizActive:()=>engine.state?.phase==='active'&&engine.state.deadline!==null});
 document.addEventListener('keydown', e => {if (!engine.state || e.target.closest('input,select,textarea,dialog,button') || e.altKey || e.ctrlKey || e.metaKey) return; if (e.key === 'ArrowLeft') {e.preventDefault();engine.move(-1);} if (e.key === 'ArrowRight') {e.preventDefault();engine.move(1);}});
 addEventListener('pagehide', () => engine.destroy());
 addEventListener('pageshow', e => {if (e.persisted && engine.state?.phase === 'active' && engine.state.deadline !== null) {engine.timer = engine.setIntervalFn(() => engine.tick(),250);engine.tick();}});

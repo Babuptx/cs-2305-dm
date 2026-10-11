@@ -55,6 +55,8 @@ $quizNode = (Get-ChildItem -LiteralPath "$env:LOCALAPPDATA\CodexQuizTools" -Filt
 
 ## Workflow and scoring
 
+The fifth dropdown opens **UTD Midterm Flashcards**: 40 original concept cards spanning the 19 midterm sections. Recall the front-side prompt, then click/tap the card or use Enter/Space to reveal an explanation, worked example, and takeaway. Previous/Next, arrow keys, and Shuffle deck support review. The viewer scrolls on small screens, preserves quiz progress, and leaves any active quiz timer running. Flashcards are separate from scored question totals.
+
 Select a pillar/block, study or exam mode, and an optional 30/50/75/90-minute limit. Answer/change selections, flag questions, and use the block map or Previous/Next. Left/Right keys navigate when focus is outside an interactive control. Shuffle preserves responses by stable question ID. A 50-question block is a practice grouping, not a claim about the real exam's question count.
 
 Study mode offers two hints and deliberate answer reveal. Revealing locks the selected response. Hints do not reduce scores. An unanswered reveal stays unanswered and scores zero. Exam mode withholds hints, keys, explanations, and source notes from its display until submission. Finish asks for confirmation; timer expiry submits once. Review shows score, correct/incorrect/unanswered counts, elapsed time, the correct option, your response, and every rationale.
@@ -87,6 +89,8 @@ Engine tests cover locks, ID-based shuffle grading, exam display restrictions, e
 index.html / styles.css         Learner interface
 js/app.js                      DOM rendering and controls
 js/engine.js                   State, grading, timers, persistence
+js/flashcards.js               Flashcard loading, validation, and viewer
+data/flashcards/utd-midterm.json Midterm concepts and worked examples
 data/manifest.json             Runtime pillar and block inventory
 data/<pillar>/block-01.json     Question banks
 data/question.schema.json      Block/item schema
