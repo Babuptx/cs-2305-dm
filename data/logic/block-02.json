@@ -1,0 +1,2250 @@
+{
+  "schema_version": 1,
+  "block_id": "logic-block-02",
+  "pillar_id": "logic",
+  "block_title": "Logic and mathematical reasoning · Block 2",
+  "questions": [
+    {
+      "id": "logic-051",
+      "topic": "Canonical disjunctive form",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Which sum of minterms is equivalent to ¬(p ↔ q) ∨ ¬r?",
+      "context": "p, q, r are propositions. → is material implication; ↔ is equivalence; ⊕ is exclusive OR. For parity XOR, associate left to right.",
+      "options": [
+        "p ∧ ¬p",
+        "(¬p ∧ ¬q ∧ ¬r) ∨ (¬p ∧ q ∧ ¬r) ∨ (¬p ∧ q ∧ r) ∨ (p ∧ ¬q ∧ ¬r) ∨ (p ∧ ¬q ∧ r) ∨ (p ∧ q ∧ ¬r)",
+        "p ∧ q ∧ r",
+        "(¬p ∧ ¬q ∧ r) ∨ (p ∧ q ∧ r)"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "A canonical disjunctive form includes one conjunction per true row, using a negated variable for a false input.",
+        "Track witness dependence in quantified statements; compare entire truth tables rather than a single row in propositional statements."
+      ],
+      "explanation": {
+        "learning_objective": "Apply canonical disjunctive form with explicit justification.",
+        "correct_rationale": "A minterm fixes all three truth values. Include precisely the true rows TFTTTTTF: (¬p ∧ ¬q ∧ ¬r) ∨ (¬p ∧ q ∧ ¬r) ∨ (¬p ∧ q ∧ r) ∨ (p ∧ ¬q ∧ ¬r) ∨ (p ∧ ¬q ∧ r) ∨ (p ∧ q ∧ ¬r). Each included term is true on one row and no others.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This contradiction is always false, but the given formula has a true row."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This single minterm does not describe the full set of satisfying assignments."
+          },
+          {
+            "option_index": 3,
+            "rationale": "These minterms describe the false rows, so this is the negation of the formula."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "dnf-equivalence",
+        "expression": "¬(p ↔ q) ∨ ¬r"
+      }
+    },
+    {
+      "id": "logic-052",
+      "topic": "Negation and model counting",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "How many assignments make ¬(¬(p ↔ q) ∨ ¬r) true?",
+      "context": "p, q, r are propositions. → is material implication; ↔ is equivalence; ⊕ is exclusive OR. For parity XOR, associate left to right.",
+      "options": [
+        "2",
+        "6",
+        "0",
+        "8"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "The truth sets of a proposition and its negation partition all assignments.",
+        "Track witness dependence in quantified statements; compare entire truth tables rather than a single row in propositional statements."
+      ],
+      "explanation": {
+        "learning_objective": "Apply negation and model counting with explicit justification.",
+        "correct_rationale": "Negation reverses every output of TFTTTTTF. Of eight assignments, 6 satisfy the original, so 8 − 6 = 2 satisfy its negation.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "The proposed result 6 fails the required computation: Negation reverses every output of TFTTTTTF. Of eight assignments, 6 satisfy the original, so 8 − 6 = 2 satisfy its negation."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The proposed result 0 fails the required computation: Negation reverses every output of TFTTTTTF. Of eight assignments, 6 satisfy the original, so 8 − 6 = 2 satisfy its negation."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The proposed result 8 fails the required computation: Negation reverses every output of TFTTTTTF. Of eight assignments, 6 satisfy the original, so 8 − 6 = 2 satisfy its negation."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "negated-truth-count",
+        "expression": "¬(p ↔ q) ∨ ¬r",
+        "expected": 2
+      }
+    },
+    {
+      "id": "logic-053",
+      "topic": "Truth-table evaluation",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "For F = (p → r) ↔ (q → r), which output column follows the input order FFF, FFT, FTF, FTT, TFF, TFT, TTF, TTT?",
+      "context": "p, q, r are propositions. → is material implication; ↔ is equivalence; ⊕ is exclusive OR. For parity XOR, associate left to right.",
+      "options": [
+        "TTFFFTTT",
+        "TTFTFTTT",
+        "FTFTFTTT",
+        "TTFTFTTF"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "For each row, evaluate parentheses first. An implication is false only when its antecedent is true and its consequent is false.",
+        "Track witness dependence in quantified statements; compare entire truth tables rather than a single row in propositional statements."
+      ],
+      "explanation": {
+        "learning_objective": "Apply truth-table evaluation with explicit justification.",
+        "correct_rationale": "Evaluate the connectives from the innermost parentheses. In order: (F, F, F): T; (F, F, T): T; (F, T, F): F; (F, T, T): T; (T, F, F): F; (T, F, T): T; (T, T, F): T; (T, T, T): T. Thus the column is TTFTFTTT.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This column changes a required row. The actual evaluation is (F, F, F): T; (F, F, T): T; (F, T, F): F; (F, T, T): T; (T, F, F): F; (T, F, T): T; (T, T, F): T; (T, T, T): T."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This column changes a required row. The actual evaluation is (F, F, F): T; (F, F, T): T; (F, T, F): F; (F, T, T): T; (T, F, F): F; (T, F, T): T; (T, T, F): T; (T, T, T): T."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This column changes a required row. The actual evaluation is (F, F, F): T; (F, F, T): T; (F, T, F): F; (F, T, T): T; (T, F, F): F; (T, F, T): T; (T, T, F): T; (T, T, T): T."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "truth-column",
+        "expression": "(p → r) ↔ (q → r)",
+        "expected": "TTFTFTTT"
+      }
+    },
+    {
+      "id": "logic-054",
+      "topic": "Satisfying valuations",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "How many assignments to p, q, r satisfy (p → r) ↔ (q → r)?",
+      "context": "p, q, r are propositions. → is material implication; ↔ is equivalence; ⊕ is exclusive OR. For parity XOR, associate left to right.",
+      "options": [
+        "8",
+        "6",
+        "4",
+        "2"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "List the eight assignments systematically; count only rows in which the entire formula is true.",
+        "Track witness dependence in quantified statements; compare entire truth tables rather than a single row in propositional statements."
+      ],
+      "explanation": {
+        "learning_objective": "Apply satisfying valuations with explicit justification.",
+        "correct_rationale": "There are 2³ = 8 assignments. The output column is TTFTFTTT; exactly 6 positions are T.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The proposed result 8 fails the required computation: There are 2³ = 8 assignments. The output column is TTFTFTTT; exactly 6 positions are T."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The proposed result 4 fails the required computation: There are 2³ = 8 assignments. The output column is TTFTFTTT; exactly 6 positions are T."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The proposed result 2 fails the required computation: There are 2³ = 8 assignments. The output column is TTFTFTTT; exactly 6 positions are T."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "truth-count",
+        "expression": "(p → r) ↔ (q → r)",
+        "expected": 6
+      }
+    },
+    {
+      "id": "logic-055",
+      "topic": "Canonical disjunctive form",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Which sum of minterms is equivalent to (p → r) ↔ (q → r)?",
+      "context": "p, q, r are propositions. → is material implication; ↔ is equivalence; ⊕ is exclusive OR. For parity XOR, associate left to right.",
+      "options": [
+        "(¬p ∧ q ∧ ¬r) ∨ (p ∧ ¬q ∧ ¬r)",
+        "(¬p ∧ ¬q ∧ ¬r) ∨ (¬p ∧ ¬q ∧ r) ∨ (¬p ∧ q ∧ r) ∨ (p ∧ ¬q ∧ r) ∨ (p ∧ q ∧ ¬r) ∨ (p ∧ q ∧ r)",
+        "p ∧ q ∧ r",
+        "p ∧ ¬p"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "A canonical disjunctive form includes one conjunction per true row, using a negated variable for a false input.",
+        "Track witness dependence in quantified statements; compare entire truth tables rather than a single row in propositional statements."
+      ],
+      "explanation": {
+        "learning_objective": "Apply canonical disjunctive form with explicit justification.",
+        "correct_rationale": "A minterm fixes all three truth values. Include precisely the true rows TTFTFTTT: (¬p ∧ ¬q ∧ ¬r) ∨ (¬p ∧ ¬q ∧ r) ∨ (¬p ∧ q ∧ r) ∨ (p ∧ ¬q ∧ r) ∨ (p ∧ q ∧ ¬r) ∨ (p ∧ q ∧ r). Each included term is true on one row and no others.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "These minterms describe the false rows, so this is the negation of the formula."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This single minterm does not describe the full set of satisfying assignments."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This contradiction is always false, but the given formula has a true row."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "dnf-equivalence",
+        "expression": "(p → r) ↔ (q → r)"
+      }
+    },
+    {
+      "id": "logic-056",
+      "topic": "Negation and model counting",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "How many assignments make ¬((p → r) ↔ (q → r)) true?",
+      "context": "p, q, r are propositions. → is material implication; ↔ is equivalence; ⊕ is exclusive OR. For parity XOR, associate left to right.",
+      "options": [
+        "0",
+        "8",
+        "2",
+        "6"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "The truth sets of a proposition and its negation partition all assignments.",
+        "Track witness dependence in quantified statements; compare entire truth tables rather than a single row in propositional statements."
+      ],
+      "explanation": {
+        "learning_objective": "Apply negation and model counting with explicit justification.",
+        "correct_rationale": "Negation reverses every output of TTFTFTTT. Of eight assignments, 6 satisfy the original, so 8 − 6 = 2 satisfy its negation.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The proposed result 0 fails the required computation: Negation reverses every output of TTFTFTTT. Of eight assignments, 6 satisfy the original, so 8 − 6 = 2 satisfy its negation."
+          },
+          {
+            "option_index": 1,
+            "rationale": "The proposed result 8 fails the required computation: Negation reverses every output of TTFTFTTT. Of eight assignments, 6 satisfy the original, so 8 − 6 = 2 satisfy its negation."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The proposed result 6 fails the required computation: Negation reverses every output of TTFTFTTT. Of eight assignments, 6 satisfy the original, so 8 − 6 = 2 satisfy its negation."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "negated-truth-count",
+        "expression": "(p → r) ↔ (q → r)",
+        "expected": 2
+      }
+    },
+    {
+      "id": "logic-057",
+      "topic": "Truth-table evaluation",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "For F = (p ∨ q) ↔ r, which output column follows the input order FFF, FFT, FTF, FTT, TFF, TFT, TTF, TTT?",
+      "context": "p, q, r are propositions. → is material implication; ↔ is equivalence; ⊕ is exclusive OR. For parity XOR, associate left to right.",
+      "options": [
+        "TFFTFTFF",
+        "TFFTFTFT",
+        "TFFFFTFT",
+        "FFFTFTFT"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "For each row, evaluate parentheses first. An implication is false only when its antecedent is true and its consequent is false.",
+        "Track witness dependence in quantified statements; compare entire truth tables rather than a single row in propositional statements."
+      ],
+      "explanation": {
+        "learning_objective": "Apply truth-table evaluation with explicit justification.",
+        "correct_rationale": "Evaluate the connectives from the innermost parentheses. In order: (F, F, F): T; (F, F, T): F; (F, T, F): F; (F, T, T): T; (T, F, F): F; (T, F, T): T; (T, T, F): F; (T, T, T): T. Thus the column is TFFTFTFT.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This column changes a required row. The actual evaluation is (F, F, F): T; (F, F, T): F; (F, T, F): F; (F, T, T): T; (T, F, F): F; (T, F, T): T; (T, T, F): F; (T, T, T): T."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This column changes a required row. The actual evaluation is (F, F, F): T; (F, F, T): F; (F, T, F): F; (F, T, T): T; (T, F, F): F; (T, F, T): T; (T, T, F): F; (T, T, T): T."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This column changes a required row. The actual evaluation is (F, F, F): T; (F, F, T): F; (F, T, F): F; (F, T, T): T; (T, F, F): F; (T, F, T): T; (T, T, F): F; (T, T, T): T."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "truth-column",
+        "expression": "(p ∨ q) ↔ r",
+        "expected": "TFFTFTFT"
+      }
+    },
+    {
+      "id": "logic-058",
+      "topic": "Satisfying valuations",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "How many assignments to p, q, r satisfy (p ∨ q) ↔ r?",
+      "context": "p, q, r are propositions. → is material implication; ↔ is equivalence; ⊕ is exclusive OR. For parity XOR, associate left to right.",
+      "options": [
+        "0",
+        "8",
+        "4",
+        "5"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "List the eight assignments systematically; count only rows in which the entire formula is true.",
+        "Track witness dependence in quantified statements; compare entire truth tables rather than a single row in propositional statements."
+      ],
+      "explanation": {
+        "learning_objective": "Apply satisfying valuations with explicit justification.",
+        "correct_rationale": "There are 2³ = 8 assignments. The output column is TFFTFTFT; exactly 4 positions are T.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The proposed result 0 fails the required computation: There are 2³ = 8 assignments. The output column is TFFTFTFT; exactly 4 positions are T."
+          },
+          {
+            "option_index": 1,
+            "rationale": "The proposed result 8 fails the required computation: There are 2³ = 8 assignments. The output column is TFFTFTFT; exactly 4 positions are T."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The proposed result 5 fails the required computation: There are 2³ = 8 assignments. The output column is TFFTFTFT; exactly 4 positions are T."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "truth-count",
+        "expression": "(p ∨ q) ↔ r",
+        "expected": 4
+      }
+    },
+    {
+      "id": "logic-059",
+      "topic": "Canonical disjunctive form",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Which sum of minterms is equivalent to (p ∨ q) ↔ r?",
+      "context": "p, q, r are propositions. → is material implication; ↔ is equivalence; ⊕ is exclusive OR. For parity XOR, associate left to right.",
+      "options": [
+        "(¬p ∧ ¬q ∧ r) ∨ (¬p ∧ q ∧ ¬r) ∨ (p ∧ ¬q ∧ ¬r) ∨ (p ∧ q ∧ ¬r)",
+        "p ∧ q ∧ r",
+        "p ∧ ¬p",
+        "(¬p ∧ ¬q ∧ ¬r) ∨ (¬p ∧ q ∧ r) ∨ (p ∧ ¬q ∧ r) ∨ (p ∧ q ∧ r)"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "A canonical disjunctive form includes one conjunction per true row, using a negated variable for a false input.",
+        "Track witness dependence in quantified statements; compare entire truth tables rather than a single row in propositional statements."
+      ],
+      "explanation": {
+        "learning_objective": "Apply canonical disjunctive form with explicit justification.",
+        "correct_rationale": "A minterm fixes all three truth values. Include precisely the true rows TFFTFTFT: (¬p ∧ ¬q ∧ ¬r) ∨ (¬p ∧ q ∧ r) ∨ (p ∧ ¬q ∧ r) ∨ (p ∧ q ∧ r). Each included term is true on one row and no others.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "These minterms describe the false rows, so this is the negation of the formula."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This single minterm does not describe the full set of satisfying assignments."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This contradiction is always false, but the given formula has a true row."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "dnf-equivalence",
+        "expression": "(p ∨ q) ↔ r"
+      }
+    },
+    {
+      "id": "logic-060",
+      "topic": "Negation and model counting",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "How many assignments make ¬((p ∨ q) ↔ r) true?",
+      "context": "p, q, r are propositions. → is material implication; ↔ is equivalence; ⊕ is exclusive OR. For parity XOR, associate left to right.",
+      "options": [
+        "5",
+        "0",
+        "4",
+        "8"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "The truth sets of a proposition and its negation partition all assignments.",
+        "Track witness dependence in quantified statements; compare entire truth tables rather than a single row in propositional statements."
+      ],
+      "explanation": {
+        "learning_objective": "Apply negation and model counting with explicit justification.",
+        "correct_rationale": "Negation reverses every output of TFFTFTFT. Of eight assignments, 4 satisfy the original, so 8 − 4 = 4 satisfy its negation.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The proposed result 5 fails the required computation: Negation reverses every output of TFFTFTFT. Of eight assignments, 4 satisfy the original, so 8 − 4 = 4 satisfy its negation."
+          },
+          {
+            "option_index": 1,
+            "rationale": "The proposed result 0 fails the required computation: Negation reverses every output of TFFTFTFT. Of eight assignments, 4 satisfy the original, so 8 − 4 = 4 satisfy its negation."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The proposed result 8 fails the required computation: Negation reverses every output of TFFTFTFT. Of eight assignments, 4 satisfy the original, so 8 − 4 = 4 satisfy its negation."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "negated-truth-count",
+        "expression": "(p ∨ q) ↔ r",
+        "expected": 4
+      }
+    },
+    {
+      "id": "logic-061",
+      "topic": "Truth-table evaluation",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "For F = p ⊕ q ⊕ r, which output column follows the input order FFF, FFT, FTF, FTT, TFF, TFT, TTF, TTT?",
+      "context": "p, q, r are propositions. → is material implication; ↔ is equivalence; ⊕ is exclusive OR. For parity XOR, associate left to right.",
+      "options": [
+        "FTTTTFFT",
+        "FTTFTFFF",
+        "FTTFTFFT",
+        "TTTFTFFT"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "For each row, evaluate parentheses first. An implication is false only when its antecedent is true and its consequent is false.",
+        "Track witness dependence in quantified statements; compare entire truth tables rather than a single row in propositional statements."
+      ],
+      "explanation": {
+        "learning_objective": "Apply truth-table evaluation with explicit justification.",
+        "correct_rationale": "Evaluate the connectives from the innermost parentheses. In order: (F, F, F): F; (F, F, T): T; (F, T, F): T; (F, T, T): F; (T, F, F): T; (T, F, T): F; (T, T, F): F; (T, T, T): T. Thus the column is FTTFTFFT.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This column changes a required row. The actual evaluation is (F, F, F): F; (F, F, T): T; (F, T, F): T; (F, T, T): F; (T, F, F): T; (T, F, T): F; (T, T, F): F; (T, T, T): T."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This column changes a required row. The actual evaluation is (F, F, F): F; (F, F, T): T; (F, T, F): T; (F, T, T): F; (T, F, F): T; (T, F, T): F; (T, T, F): F; (T, T, T): T."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This column changes a required row. The actual evaluation is (F, F, F): F; (F, F, T): T; (F, T, F): T; (F, T, T): F; (T, F, F): T; (T, F, T): F; (T, T, F): F; (T, T, T): T."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "truth-column",
+        "expression": "p ⊕ q ⊕ r",
+        "expected": "FTTFTFFT"
+      }
+    },
+    {
+      "id": "logic-062",
+      "topic": "Satisfying valuations",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "How many assignments to p, q, r satisfy p ⊕ q ⊕ r?",
+      "context": "p, q, r are propositions. → is material implication; ↔ is equivalence; ⊕ is exclusive OR. For parity XOR, associate left to right.",
+      "options": [
+        "0",
+        "8",
+        "4",
+        "5"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "List the eight assignments systematically; count only rows in which the entire formula is true.",
+        "Track witness dependence in quantified statements; compare entire truth tables rather than a single row in propositional statements."
+      ],
+      "explanation": {
+        "learning_objective": "Apply satisfying valuations with explicit justification.",
+        "correct_rationale": "There are 2³ = 8 assignments. The output column is FTTFTFFT; exactly 4 positions are T.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The proposed result 0 fails the required computation: There are 2³ = 8 assignments. The output column is FTTFTFFT; exactly 4 positions are T."
+          },
+          {
+            "option_index": 1,
+            "rationale": "The proposed result 8 fails the required computation: There are 2³ = 8 assignments. The output column is FTTFTFFT; exactly 4 positions are T."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The proposed result 5 fails the required computation: There are 2³ = 8 assignments. The output column is FTTFTFFT; exactly 4 positions are T."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "truth-count",
+        "expression": "p ⊕ q ⊕ r",
+        "expected": 4
+      }
+    },
+    {
+      "id": "logic-063",
+      "topic": "Canonical disjunctive form",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Which sum of minterms is equivalent to p ⊕ q ⊕ r?",
+      "context": "p, q, r are propositions. → is material implication; ↔ is equivalence; ⊕ is exclusive OR. For parity XOR, associate left to right.",
+      "options": [
+        "(¬p ∧ ¬q ∧ ¬r) ∨ (¬p ∧ q ∧ r) ∨ (p ∧ ¬q ∧ r) ∨ (p ∧ q ∧ ¬r)",
+        "p ∧ q ∧ r",
+        "p ∧ ¬p",
+        "(¬p ∧ ¬q ∧ r) ∨ (¬p ∧ q ∧ ¬r) ∨ (p ∧ ¬q ∧ ¬r) ∨ (p ∧ q ∧ r)"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "A canonical disjunctive form includes one conjunction per true row, using a negated variable for a false input.",
+        "Track witness dependence in quantified statements; compare entire truth tables rather than a single row in propositional statements."
+      ],
+      "explanation": {
+        "learning_objective": "Apply canonical disjunctive form with explicit justification.",
+        "correct_rationale": "A minterm fixes all three truth values. Include precisely the true rows FTTFTFFT: (¬p ∧ ¬q ∧ r) ∨ (¬p ∧ q ∧ ¬r) ∨ (p ∧ ¬q ∧ ¬r) ∨ (p ∧ q ∧ r). Each included term is true on one row and no others.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "These minterms describe the false rows, so this is the negation of the formula."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This single minterm does not describe the full set of satisfying assignments."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This contradiction is always false, but the given formula has a true row."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "dnf-equivalence",
+        "expression": "p ⊕ q ⊕ r"
+      }
+    },
+    {
+      "id": "logic-064",
+      "topic": "Negation and model counting",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "How many assignments make ¬(p ⊕ q ⊕ r) true?",
+      "context": "p, q, r are propositions. → is material implication; ↔ is equivalence; ⊕ is exclusive OR. For parity XOR, associate left to right.",
+      "options": [
+        "0",
+        "5",
+        "4",
+        "8"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "The truth sets of a proposition and its negation partition all assignments.",
+        "Track witness dependence in quantified statements; compare entire truth tables rather than a single row in propositional statements."
+      ],
+      "explanation": {
+        "learning_objective": "Apply negation and model counting with explicit justification.",
+        "correct_rationale": "Negation reverses every output of FTTFTFFT. Of eight assignments, 4 satisfy the original, so 8 − 4 = 4 satisfy its negation.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The proposed result 0 fails the required computation: Negation reverses every output of FTTFTFFT. Of eight assignments, 4 satisfy the original, so 8 − 4 = 4 satisfy its negation."
+          },
+          {
+            "option_index": 1,
+            "rationale": "The proposed result 5 fails the required computation: Negation reverses every output of FTTFTFFT. Of eight assignments, 4 satisfy the original, so 8 − 4 = 4 satisfy its negation."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The proposed result 8 fails the required computation: Negation reverses every output of FTTFTFFT. Of eight assignments, 4 satisfy the original, so 8 − 4 = 4 satisfy its negation."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "negated-truth-count",
+        "expression": "p ⊕ q ⊕ r",
+        "expected": 4
+      }
+    },
+    {
+      "id": "logic-065",
+      "topic": "Truth-table evaluation",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "For F = ¬p ∧ (q → r), which output column follows the input order FFF, FFT, FTF, FTT, TFF, TFT, TTF, TTT?",
+      "context": "p, q, r are propositions. → is material implication; ↔ is equivalence; ⊕ is exclusive OR. For parity XOR, associate left to right.",
+      "options": [
+        "TTFTFFFF",
+        "TTFTFFFT",
+        "TTFFFFFF",
+        "FTFTFFFF"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "For each row, evaluate parentheses first. An implication is false only when its antecedent is true and its consequent is false.",
+        "Track witness dependence in quantified statements; compare entire truth tables rather than a single row in propositional statements."
+      ],
+      "explanation": {
+        "learning_objective": "Apply truth-table evaluation with explicit justification.",
+        "correct_rationale": "Evaluate the connectives from the innermost parentheses. In order: (F, F, F): T; (F, F, T): T; (F, T, F): F; (F, T, T): T; (T, F, F): F; (T, F, T): F; (T, T, F): F; (T, T, T): F. Thus the column is TTFTFFFF.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "This column changes a required row. The actual evaluation is (F, F, F): T; (F, F, T): T; (F, T, F): F; (F, T, T): T; (T, F, F): F; (T, F, T): F; (T, T, F): F; (T, T, T): F."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This column changes a required row. The actual evaluation is (F, F, F): T; (F, F, T): T; (F, T, F): F; (F, T, T): T; (T, F, F): F; (T, F, T): F; (T, T, F): F; (T, T, T): F."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This column changes a required row. The actual evaluation is (F, F, F): T; (F, F, T): T; (F, T, F): F; (F, T, T): T; (T, F, F): F; (T, F, T): F; (T, T, F): F; (T, T, T): F."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "truth-column",
+        "expression": "¬p ∧ (q → r)",
+        "expected": "TTFTFFFF"
+      }
+    },
+    {
+      "id": "logic-066",
+      "topic": "Satisfying valuations",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "How many assignments to p, q, r satisfy ¬p ∧ (q → r)?",
+      "context": "p, q, r are propositions. → is material implication; ↔ is equivalence; ⊕ is exclusive OR. For parity XOR, associate left to right.",
+      "options": [
+        "8",
+        "5",
+        "3",
+        "4"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "List the eight assignments systematically; count only rows in which the entire formula is true.",
+        "Track witness dependence in quantified statements; compare entire truth tables rather than a single row in propositional statements."
+      ],
+      "explanation": {
+        "learning_objective": "Apply satisfying valuations with explicit justification.",
+        "correct_rationale": "There are 2³ = 8 assignments. The output column is TTFTFFFF; exactly 3 positions are T.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The proposed result 8 fails the required computation: There are 2³ = 8 assignments. The output column is TTFTFFFF; exactly 3 positions are T."
+          },
+          {
+            "option_index": 1,
+            "rationale": "The proposed result 5 fails the required computation: There are 2³ = 8 assignments. The output column is TTFTFFFF; exactly 3 positions are T."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The proposed result 4 fails the required computation: There are 2³ = 8 assignments. The output column is TTFTFFFF; exactly 3 positions are T."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "truth-count",
+        "expression": "¬p ∧ (q → r)",
+        "expected": 3
+      }
+    },
+    {
+      "id": "logic-067",
+      "topic": "Canonical disjunctive form",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Which sum of minterms is equivalent to ¬p ∧ (q → r)?",
+      "context": "p, q, r are propositions. → is material implication; ↔ is equivalence; ⊕ is exclusive OR. For parity XOR, associate left to right.",
+      "options": [
+        "p ∧ ¬p",
+        "(¬p ∧ q ∧ ¬r) ∨ (p ∧ ¬q ∧ ¬r) ∨ (p ∧ ¬q ∧ r) ∨ (p ∧ q ∧ ¬r) ∨ (p ∧ q ∧ r)",
+        "(¬p ∧ ¬q ∧ ¬r) ∨ (¬p ∧ ¬q ∧ r) ∨ (¬p ∧ q ∧ r)",
+        "p ∧ q ∧ r"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "A canonical disjunctive form includes one conjunction per true row, using a negated variable for a false input.",
+        "Track witness dependence in quantified statements; compare entire truth tables rather than a single row in propositional statements."
+      ],
+      "explanation": {
+        "learning_objective": "Apply canonical disjunctive form with explicit justification.",
+        "correct_rationale": "A minterm fixes all three truth values. Include precisely the true rows TTFTFFFF: (¬p ∧ ¬q ∧ ¬r) ∨ (¬p ∧ ¬q ∧ r) ∨ (¬p ∧ q ∧ r). Each included term is true on one row and no others.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This contradiction is always false, but the given formula has a true row."
+          },
+          {
+            "option_index": 1,
+            "rationale": "These minterms describe the false rows, so this is the negation of the formula."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This single minterm does not describe the full set of satisfying assignments."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "dnf-equivalence",
+        "expression": "¬p ∧ (q → r)"
+      }
+    },
+    {
+      "id": "logic-068",
+      "topic": "Negation and model counting",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "How many assignments make ¬(¬p ∧ (q → r)) true?",
+      "context": "p, q, r are propositions. → is material implication; ↔ is equivalence; ⊕ is exclusive OR. For parity XOR, associate left to right.",
+      "options": [
+        "8",
+        "3",
+        "0",
+        "5"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "The truth sets of a proposition and its negation partition all assignments.",
+        "Track witness dependence in quantified statements; compare entire truth tables rather than a single row in propositional statements."
+      ],
+      "explanation": {
+        "learning_objective": "Apply negation and model counting with explicit justification.",
+        "correct_rationale": "Negation reverses every output of TTFTFFFF. Of eight assignments, 3 satisfy the original, so 8 − 3 = 5 satisfy its negation.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The proposed result 8 fails the required computation: Negation reverses every output of TTFTFFFF. Of eight assignments, 3 satisfy the original, so 8 − 3 = 5 satisfy its negation."
+          },
+          {
+            "option_index": 1,
+            "rationale": "The proposed result 3 fails the required computation: Negation reverses every output of TTFTFFFF. Of eight assignments, 3 satisfy the original, so 8 − 3 = 5 satisfy its negation."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The proposed result 0 fails the required computation: Negation reverses every output of TTFTFFFF. Of eight assignments, 3 satisfy the original, so 8 − 3 = 5 satisfy its negation."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "negated-truth-count",
+        "expression": "¬p ∧ (q → r)",
+        "expected": 5
+      }
+    },
+    {
+      "id": "logic-069",
+      "topic": "Truth-table evaluation",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "For F = (p ↔ q) ∧ (q ↔ r), which output column follows the input order FFF, FFT, FTF, FTT, TFF, TFT, TTF, TTT?",
+      "context": "p, q, r are propositions. → is material implication; ↔ is equivalence; ⊕ is exclusive OR. For parity XOR, associate left to right.",
+      "options": [
+        "TFFFFFFT",
+        "TFFFFFFF",
+        "FFFFFFFT",
+        "TFFTFFFT"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "For each row, evaluate parentheses first. An implication is false only when its antecedent is true and its consequent is false.",
+        "Track witness dependence in quantified statements; compare entire truth tables rather than a single row in propositional statements."
+      ],
+      "explanation": {
+        "learning_objective": "Apply truth-table evaluation with explicit justification.",
+        "correct_rationale": "Evaluate the connectives from the innermost parentheses. In order: (F, F, F): T; (F, F, T): F; (F, T, F): F; (F, T, T): F; (T, F, F): F; (T, F, T): F; (T, T, F): F; (T, T, T): T. Thus the column is TFFFFFFT.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "This column changes a required row. The actual evaluation is (F, F, F): T; (F, F, T): F; (F, T, F): F; (F, T, T): F; (T, F, F): F; (T, F, T): F; (T, T, F): F; (T, T, T): T."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This column changes a required row. The actual evaluation is (F, F, F): T; (F, F, T): F; (F, T, F): F; (F, T, T): F; (T, F, F): F; (T, F, T): F; (T, T, F): F; (T, T, T): T."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This column changes a required row. The actual evaluation is (F, F, F): T; (F, F, T): F; (F, T, F): F; (F, T, T): F; (T, F, F): F; (T, F, T): F; (T, T, F): F; (T, T, T): T."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "truth-column",
+        "expression": "(p ↔ q) ∧ (q ↔ r)",
+        "expected": "TFFFFFFT"
+      }
+    },
+    {
+      "id": "logic-070",
+      "topic": "Satisfying valuations",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "How many assignments to p, q, r satisfy (p ↔ q) ∧ (q ↔ r)?",
+      "context": "p, q, r are propositions. → is material implication; ↔ is equivalence; ⊕ is exclusive OR. For parity XOR, associate left to right.",
+      "options": [
+        "8",
+        "4",
+        "2",
+        "6"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "List the eight assignments systematically; count only rows in which the entire formula is true.",
+        "Track witness dependence in quantified statements; compare entire truth tables rather than a single row in propositional statements."
+      ],
+      "explanation": {
+        "learning_objective": "Apply satisfying valuations with explicit justification.",
+        "correct_rationale": "There are 2³ = 8 assignments. The output column is TFFFFFFT; exactly 2 positions are T.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The proposed result 8 fails the required computation: There are 2³ = 8 assignments. The output column is TFFFFFFT; exactly 2 positions are T."
+          },
+          {
+            "option_index": 1,
+            "rationale": "The proposed result 4 fails the required computation: There are 2³ = 8 assignments. The output column is TFFFFFFT; exactly 2 positions are T."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The proposed result 6 fails the required computation: There are 2³ = 8 assignments. The output column is TFFFFFFT; exactly 2 positions are T."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "truth-count",
+        "expression": "(p ↔ q) ∧ (q ↔ r)",
+        "expected": 2
+      }
+    },
+    {
+      "id": "logic-071",
+      "topic": "Canonical disjunctive form",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Which sum of minterms is equivalent to (p ↔ q) ∧ (q ↔ r)?",
+      "context": "p, q, r are propositions. → is material implication; ↔ is equivalence; ⊕ is exclusive OR. For parity XOR, associate left to right.",
+      "options": [
+        "(¬p ∧ ¬q ∧ ¬r) ∨ (p ∧ q ∧ r)",
+        "p ∧ ¬p",
+        "(¬p ∧ ¬q ∧ r) ∨ (¬p ∧ q ∧ ¬r) ∨ (¬p ∧ q ∧ r) ∨ (p ∧ ¬q ∧ ¬r) ∨ (p ∧ ¬q ∧ r) ∨ (p ∧ q ∧ ¬r)",
+        "p ∧ q ∧ r"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "A canonical disjunctive form includes one conjunction per true row, using a negated variable for a false input.",
+        "Track witness dependence in quantified statements; compare entire truth tables rather than a single row in propositional statements."
+      ],
+      "explanation": {
+        "learning_objective": "Apply canonical disjunctive form with explicit justification.",
+        "correct_rationale": "A minterm fixes all three truth values. Include precisely the true rows TFFFFFFT: (¬p ∧ ¬q ∧ ¬r) ∨ (p ∧ q ∧ r). Each included term is true on one row and no others.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "This contradiction is always false, but the given formula has a true row."
+          },
+          {
+            "option_index": 2,
+            "rationale": "These minterms describe the false rows, so this is the negation of the formula."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This single minterm does not describe the full set of satisfying assignments."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "dnf-equivalence",
+        "expression": "(p ↔ q) ∧ (q ↔ r)"
+      }
+    },
+    {
+      "id": "logic-072",
+      "topic": "Negation and model counting",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "How many assignments make ¬((p ↔ q) ∧ (q ↔ r)) true?",
+      "context": "p, q, r are propositions. → is material implication; ↔ is equivalence; ⊕ is exclusive OR. For parity XOR, associate left to right.",
+      "options": [
+        "6",
+        "0",
+        "2",
+        "8"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "The truth sets of a proposition and its negation partition all assignments.",
+        "Track witness dependence in quantified statements; compare entire truth tables rather than a single row in propositional statements."
+      ],
+      "explanation": {
+        "learning_objective": "Apply negation and model counting with explicit justification.",
+        "correct_rationale": "Negation reverses every output of TFFFFFFT. Of eight assignments, 2 satisfy the original, so 8 − 2 = 6 satisfy its negation.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "The proposed result 0 fails the required computation: Negation reverses every output of TFFFFFFT. Of eight assignments, 2 satisfy the original, so 8 − 2 = 6 satisfy its negation."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The proposed result 2 fails the required computation: Negation reverses every output of TFFFFFFT. Of eight assignments, 2 satisfy the original, so 8 − 2 = 6 satisfy its negation."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The proposed result 8 fails the required computation: Negation reverses every output of TFFFFFFT. Of eight assignments, 2 satisfy the original, so 8 − 2 = 6 satisfy its negation."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "negated-truth-count",
+        "expression": "(p ↔ q) ∧ (q ↔ r)",
+        "expected": 6
+      }
+    },
+    {
+      "id": "logic-073",
+      "topic": "Truth-table evaluation",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "For F = (p ∧ ¬q) ∨ (q ∧ ¬r), which output column follows the input order FFF, FFT, FTF, FTT, TFF, TFT, TTF, TTT?",
+      "context": "p, q, r are propositions. → is material implication; ↔ is equivalence; ⊕ is exclusive OR. For parity XOR, associate left to right.",
+      "options": [
+        "FFTFTTTF",
+        "FFTTTTTF",
+        "FFTFTTTT",
+        "TFTFTTTF"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "For each row, evaluate parentheses first. An implication is false only when its antecedent is true and its consequent is false.",
+        "Track witness dependence in quantified statements; compare entire truth tables rather than a single row in propositional statements."
+      ],
+      "explanation": {
+        "learning_objective": "Apply truth-table evaluation with explicit justification.",
+        "correct_rationale": "Evaluate the connectives from the innermost parentheses. In order: (F, F, F): F; (F, F, T): F; (F, T, F): T; (F, T, T): F; (T, F, F): T; (T, F, T): T; (T, T, F): T; (T, T, T): F. Thus the column is FFTFTTTF.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "This column changes a required row. The actual evaluation is (F, F, F): F; (F, F, T): F; (F, T, F): T; (F, T, T): F; (T, F, F): T; (T, F, T): T; (T, T, F): T; (T, T, T): F."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This column changes a required row. The actual evaluation is (F, F, F): F; (F, F, T): F; (F, T, F): T; (F, T, T): F; (T, F, F): T; (T, F, T): T; (T, T, F): T; (T, T, T): F."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This column changes a required row. The actual evaluation is (F, F, F): F; (F, F, T): F; (F, T, F): T; (F, T, T): F; (T, F, F): T; (T, F, T): T; (T, T, F): T; (T, T, T): F."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "truth-column",
+        "expression": "(p ∧ ¬q) ∨ (q ∧ ¬r)",
+        "expected": "FFTFTTTF"
+      }
+    },
+    {
+      "id": "logic-074",
+      "topic": "Satisfying valuations",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "How many assignments to p, q, r satisfy (p ∧ ¬q) ∨ (q ∧ ¬r)?",
+      "context": "p, q, r are propositions. → is material implication; ↔ is equivalence; ⊕ is exclusive OR. For parity XOR, associate left to right.",
+      "options": [
+        "5",
+        "8",
+        "0",
+        "4"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "List the eight assignments systematically; count only rows in which the entire formula is true.",
+        "Track witness dependence in quantified statements; compare entire truth tables rather than a single row in propositional statements."
+      ],
+      "explanation": {
+        "learning_objective": "Apply satisfying valuations with explicit justification.",
+        "correct_rationale": "There are 2³ = 8 assignments. The output column is FFTFTTTF; exactly 4 positions are T.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The proposed result 5 fails the required computation: There are 2³ = 8 assignments. The output column is FFTFTTTF; exactly 4 positions are T."
+          },
+          {
+            "option_index": 1,
+            "rationale": "The proposed result 8 fails the required computation: There are 2³ = 8 assignments. The output column is FFTFTTTF; exactly 4 positions are T."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The proposed result 0 fails the required computation: There are 2³ = 8 assignments. The output column is FFTFTTTF; exactly 4 positions are T."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "truth-count",
+        "expression": "(p ∧ ¬q) ∨ (q ∧ ¬r)",
+        "expected": 4
+      }
+    },
+    {
+      "id": "logic-075",
+      "topic": "Canonical disjunctive form",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Which sum of minterms is equivalent to (p ∧ ¬q) ∨ (q ∧ ¬r)?",
+      "context": "p, q, r are propositions. → is material implication; ↔ is equivalence; ⊕ is exclusive OR. For parity XOR, associate left to right.",
+      "options": [
+        "(¬p ∧ q ∧ ¬r) ∨ (p ∧ ¬q ∧ ¬r) ∨ (p ∧ ¬q ∧ r) ∨ (p ∧ q ∧ ¬r)",
+        "p ∧ q ∧ r",
+        "(¬p ∧ ¬q ∧ ¬r) ∨ (¬p ∧ ¬q ∧ r) ∨ (¬p ∧ q ∧ r) ∨ (p ∧ q ∧ r)",
+        "p ∧ ¬p"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "A canonical disjunctive form includes one conjunction per true row, using a negated variable for a false input.",
+        "Track witness dependence in quantified statements; compare entire truth tables rather than a single row in propositional statements."
+      ],
+      "explanation": {
+        "learning_objective": "Apply canonical disjunctive form with explicit justification.",
+        "correct_rationale": "A minterm fixes all three truth values. Include precisely the true rows FFTFTTTF: (¬p ∧ q ∧ ¬r) ∨ (p ∧ ¬q ∧ ¬r) ∨ (p ∧ ¬q ∧ r) ∨ (p ∧ q ∧ ¬r). Each included term is true on one row and no others.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "This single minterm does not describe the full set of satisfying assignments."
+          },
+          {
+            "option_index": 2,
+            "rationale": "These minterms describe the false rows, so this is the negation of the formula."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This contradiction is always false, but the given formula has a true row."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "dnf-equivalence",
+        "expression": "(p ∧ ¬q) ∨ (q ∧ ¬r)"
+      }
+    },
+    {
+      "id": "logic-076",
+      "topic": "Negation and model counting",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "How many assignments make ¬((p ∧ ¬q) ∨ (q ∧ ¬r)) true?",
+      "context": "p, q, r are propositions. → is material implication; ↔ is equivalence; ⊕ is exclusive OR. For parity XOR, associate left to right.",
+      "options": [
+        "5",
+        "8",
+        "4",
+        "0"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "The truth sets of a proposition and its negation partition all assignments.",
+        "Track witness dependence in quantified statements; compare entire truth tables rather than a single row in propositional statements."
+      ],
+      "explanation": {
+        "learning_objective": "Apply negation and model counting with explicit justification.",
+        "correct_rationale": "Negation reverses every output of FFTFTTTF. Of eight assignments, 4 satisfy the original, so 8 − 4 = 4 satisfy its negation.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The proposed result 5 fails the required computation: Negation reverses every output of FFTFTTTF. Of eight assignments, 4 satisfy the original, so 8 − 4 = 4 satisfy its negation."
+          },
+          {
+            "option_index": 1,
+            "rationale": "The proposed result 8 fails the required computation: Negation reverses every output of FFTFTTTF. Of eight assignments, 4 satisfy the original, so 8 − 4 = 4 satisfy its negation."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The proposed result 0 fails the required computation: Negation reverses every output of FFTFTTTF. Of eight assignments, 4 satisfy the original, so 8 − 4 = 4 satisfy its negation."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "negated-truth-count",
+        "expression": "(p ∧ ¬q) ∨ (q ∧ ¬r)",
+        "expected": 4
+      }
+    },
+    {
+      "id": "logic-077",
+      "topic": "Truth-table evaluation",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "For F = ((p → q) ∧ p) → q, which output column follows the input order FFF, FFT, FTF, FTT, TFF, TFT, TTF, TTT?",
+      "context": "p, q, r are propositions. → is material implication; ↔ is equivalence; ⊕ is exclusive OR. For parity XOR, associate left to right.",
+      "options": [
+        "TTTFTTTT",
+        "TTTTTTTT",
+        "TTTTTTTF",
+        "FTTTTTTT"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "For each row, evaluate parentheses first. An implication is false only when its antecedent is true and its consequent is false.",
+        "Track witness dependence in quantified statements; compare entire truth tables rather than a single row in propositional statements."
+      ],
+      "explanation": {
+        "learning_objective": "Apply truth-table evaluation with explicit justification.",
+        "correct_rationale": "Evaluate the connectives from the innermost parentheses. In order: (F, F, F): T; (F, F, T): T; (F, T, F): T; (F, T, T): T; (T, F, F): T; (T, F, T): T; (T, T, F): T; (T, T, T): T. Thus the column is TTTTTTTT.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This column changes a required row. The actual evaluation is (F, F, F): T; (F, F, T): T; (F, T, F): T; (F, T, T): T; (T, F, F): T; (T, F, T): T; (T, T, F): T; (T, T, T): T."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This column changes a required row. The actual evaluation is (F, F, F): T; (F, F, T): T; (F, T, F): T; (F, T, T): T; (T, F, F): T; (T, F, T): T; (T, T, F): T; (T, T, T): T."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This column changes a required row. The actual evaluation is (F, F, F): T; (F, F, T): T; (F, T, F): T; (F, T, T): T; (T, F, F): T; (T, F, T): T; (T, T, F): T; (T, T, T): T."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "truth-column",
+        "expression": "((p → q) ∧ p) → q",
+        "expected": "TTTTTTTT"
+      }
+    },
+    {
+      "id": "logic-078",
+      "topic": "Satisfying valuations",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "How many assignments to p, q, r satisfy ((p → q) ∧ p) → q?",
+      "context": "p, q, r are propositions. → is material implication; ↔ is equivalence; ⊕ is exclusive OR. For parity XOR, associate left to right.",
+      "options": [
+        "8",
+        "0",
+        "4",
+        "7"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "List the eight assignments systematically; count only rows in which the entire formula is true.",
+        "Track witness dependence in quantified statements; compare entire truth tables rather than a single row in propositional statements."
+      ],
+      "explanation": {
+        "learning_objective": "Apply satisfying valuations with explicit justification.",
+        "correct_rationale": "There are 2³ = 8 assignments. The output column is TTTTTTTT; exactly 8 positions are T.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "The proposed result 0 fails the required computation: There are 2³ = 8 assignments. The output column is TTTTTTTT; exactly 8 positions are T."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The proposed result 4 fails the required computation: There are 2³ = 8 assignments. The output column is TTTTTTTT; exactly 8 positions are T."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The proposed result 7 fails the required computation: There are 2³ = 8 assignments. The output column is TTTTTTTT; exactly 8 positions are T."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "truth-count",
+        "expression": "((p → q) ∧ p) → q",
+        "expected": 8
+      }
+    },
+    {
+      "id": "logic-079",
+      "topic": "Canonical disjunctive form",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "Which sum of minterms is equivalent to ((p → q) ∧ p) → q?",
+      "context": "p, q, r are propositions. → is material implication; ↔ is equivalence; ⊕ is exclusive OR. For parity XOR, associate left to right.",
+      "options": [
+        "(¬p ∧ ¬q ∧ ¬r) ∨ (¬p ∧ ¬q ∧ r) ∨ (¬p ∧ q ∧ ¬r) ∨ (¬p ∧ q ∧ r) ∨ (p ∧ ¬q ∧ ¬r) ∨ (p ∧ ¬q ∧ r) ∨ (p ∧ q ∧ ¬r) ∨ (p ∧ q ∧ r)",
+        "p ∧ ¬p",
+        "False",
+        "p ∧ q ∧ r"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "A canonical disjunctive form includes one conjunction per true row, using a negated variable for a false input.",
+        "Track witness dependence in quantified statements; compare entire truth tables rather than a single row in propositional statements."
+      ],
+      "explanation": {
+        "learning_objective": "Apply canonical disjunctive form with explicit justification.",
+        "correct_rationale": "A minterm fixes all three truth values. Include precisely the true rows TTTTTTTT: (¬p ∧ ¬q ∧ ¬r) ∨ (¬p ∧ ¬q ∧ r) ∨ (¬p ∧ q ∧ ¬r) ∨ (¬p ∧ q ∧ r) ∨ (p ∧ ¬q ∧ ¬r) ∨ (p ∧ ¬q ∧ r) ∨ (p ∧ q ∧ ¬r) ∨ (p ∧ q ∧ r). Each included term is true on one row and no others.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "This contradiction is always false, but the given formula has a true row."
+          },
+          {
+            "option_index": 2,
+            "rationale": "These minterms describe the false rows, so this is the negation of the formula."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This single minterm does not describe the full set of satisfying assignments."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "dnf-equivalence",
+        "expression": "((p → q) ∧ p) → q"
+      }
+    },
+    {
+      "id": "logic-080",
+      "topic": "Negation and model counting",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "How many assignments make ¬(((p → q) ∧ p) → q) true?",
+      "context": "p, q, r are propositions. → is material implication; ↔ is equivalence; ⊕ is exclusive OR. For parity XOR, associate left to right.",
+      "options": [
+        "4",
+        "8",
+        "0",
+        "1"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "The truth sets of a proposition and its negation partition all assignments.",
+        "Track witness dependence in quantified statements; compare entire truth tables rather than a single row in propositional statements."
+      ],
+      "explanation": {
+        "learning_objective": "Apply negation and model counting with explicit justification.",
+        "correct_rationale": "Negation reverses every output of TTTTTTTT. Of eight assignments, 8 satisfy the original, so 8 − 8 = 0 satisfy its negation.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The proposed result 4 fails the required computation: Negation reverses every output of TTTTTTTT. Of eight assignments, 8 satisfy the original, so 8 − 8 = 0 satisfy its negation."
+          },
+          {
+            "option_index": 1,
+            "rationale": "The proposed result 8 fails the required computation: Negation reverses every output of TTTTTTTT. Of eight assignments, 8 satisfy the original, so 8 − 8 = 0 satisfy its negation."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The proposed result 1 fails the required computation: Negation reverses every output of TTTTTTTT. Of eight assignments, 8 satisfy the original, so 8 − 8 = 0 satisfy its negation."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "negated-truth-count",
+        "expression": "((p → q) ∧ p) → q",
+        "expected": 0
+      }
+    },
+    {
+      "id": "logic-081",
+      "topic": "Quantifier translation",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "Translate: “Every process has a resource it can access.”",
+      "context": "The process domain and resource domain are nonempty. A(p,r) means process p can access resource r.",
+      "options": [
+        "∀p ∃r A(p,r)",
+        "∃r ∀p A(p,r)",
+        "∃p ∃r A(p,r)",
+        "∃p ∀r ¬A(p,r)"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Identify whether the statement requires all objects or a witness in each domain.",
+        "Track witness dependence in quantified statements; compare entire truth tables rather than a single row in propositional statements."
+      ],
+      "explanation": {
+        "learning_objective": "Apply quantifier translation with explicit justification.",
+        "correct_rationale": "Every process has a resource it can access. A resource may depend on the process. The required quantifier order is ∀p ∃r A(p,r).",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "One resource works for every process; this is stronger."
+          },
+          {
+            "option_index": 2,
+            "rationale": "One successful access does not cover all processes."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This formula expresses the negation of the requested statement."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "logic-082",
+      "topic": "Negating quantified claims",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "Which formula is the negation of ∀p ∃r A(p,r)?",
+      "context": "The process domain and resource domain are nonempty. A(p,r) means process p can access resource r.",
+      "options": [
+        "∀p ∃r A(p,r)",
+        "∃p ∀r ¬A(p,r)",
+        "¬(∃p ∀r ¬A(p,r))",
+        "∃r ∀p A(p,r)"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Move the negation inward one quantifier at a time.",
+        "Track witness dependence in quantified statements; compare entire truth tables rather than a single row in propositional statements."
+      ],
+      "explanation": {
+        "learning_objective": "Apply negating quantified claims with explicit justification.",
+        "correct_rationale": "Use ¬∀ = ∃¬ and ¬∃ = ∀¬, keeping quantifier order. The result is ∃p ∀r ¬A(p,r).",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "Negate every quantifier and the final predicate. This proposed formula does not perform those changes in the required scope."
+          },
+          {
+            "option_index": 2,
+            "rationale": "Negate every quantifier and the final predicate. This proposed formula does not perform those changes in the required scope."
+          },
+          {
+            "option_index": 3,
+            "rationale": "Negate every quantifier and the final predicate. This proposed formula does not perform those changes in the required scope."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "logic-083",
+      "topic": "Witness dependence",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "What does the quantifier order in ∀p ∃r A(p,r) require?",
+      "context": "The process domain and resource domain are nonempty. A(p,r) means process p can access resource r.",
+      "options": [
+        "The order can always be reversed.",
+        "The statement describes exactly one successful access.",
+        "All quantified objects must be identical.",
+        "A resource may depend on the process."
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Check whether an existential choice is inside or outside a universal quantifier.",
+        "Track witness dependence in quantified statements; compare entire truth tables rather than a single row in propositional statements."
+      ],
+      "explanation": {
+        "learning_objective": "Apply witness dependence with explicit justification.",
+        "correct_rationale": "Interpret the quantifiers from left to right. A resource may depend on the process. This is the dependence encoded by ∀p ∃r A(p,r).",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "An existential choice inside a universal may depend on it; reversing their order changes that dependence."
+          },
+          {
+            "option_index": 1,
+            "rationale": "Existential quantifiers assert at least one, and universal quantifiers cover the domain; neither asserts exactly one."
+          },
+          {
+            "option_index": 2,
+            "rationale": "Distinct domains and quantification do not require identical objects."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "logic-084",
+      "topic": "Constructing quantified proofs",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "Which proof plan correctly establishes ∀p ∃r A(p,r)?",
+      "context": "The process domain and resource domain are nonempty. A(p,r) means process p can access resource r.",
+      "options": [
+        "Assume the target statement and restate it.",
+        "Choose a resource for each process separately.",
+        "Choose objects without establishing their access relation.",
+        "Check only the first object in each domain."
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Universal claims need an arbitrary object; existential claims need a justified witness.",
+        "Track witness dependence in quantified statements; compare entire truth tables rather than a single row in propositional statements."
+      ],
+      "explanation": {
+        "learning_objective": "Apply constructing quantified proofs with explicit justification.",
+        "correct_rationale": "The plan follows the quantifier order: Choose a resource for each process separately. Justify A or ¬A for the specified objects.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This is circular reasoning; no witnesses or universal conditions are justified."
+          },
+          {
+            "option_index": 2,
+            "rationale": "Picking objects alone does not prove A or ¬A for them, so the required predicate remains unproved."
+          },
+          {
+            "option_index": 3,
+            "rationale": "An arbitrary enumeration position gives no information about the other objects or required witnesses."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "logic-085",
+      "topic": "Quantifier translation",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "Translate: “Some resource is accessible to every process.”",
+      "context": "The process domain and resource domain are nonempty. A(p,r) means process p can access resource r.",
+      "options": [
+        "∀p ∀r A(p,r)",
+        "∀p ∃r A(p,r)",
+        "∀r ∃p ¬A(p,r)",
+        "∃r ∀p A(p,r)"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Identify whether the statement requires all objects or a witness in each domain.",
+        "Track witness dependence in quantified statements; compare entire truth tables rather than a single row in propositional statements."
+      ],
+      "explanation": {
+        "learning_objective": "Apply quantifier translation with explicit justification.",
+        "correct_rationale": "Some resource is accessible to every process. One resource must work for all processes. The required quantifier order is ∃r ∀p A(p,r).",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "Universal access to every resource is stronger than required."
+          },
+          {
+            "option_index": 1,
+            "rationale": "Individual resources for processes need not be a common resource."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This formula expresses the negation of the requested statement."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "logic-086",
+      "topic": "Negating quantified claims",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "Which formula is the negation of ∃r ∀p A(p,r)?",
+      "context": "The process domain and resource domain are nonempty. A(p,r) means process p can access resource r.",
+      "options": [
+        "∃r ∀p A(p,r)",
+        "∀r ∃p ¬A(p,r)",
+        "∀p ∃r A(p,r)",
+        "¬(∀r ∃p ¬A(p,r))"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Move the negation inward one quantifier at a time.",
+        "Track witness dependence in quantified statements; compare entire truth tables rather than a single row in propositional statements."
+      ],
+      "explanation": {
+        "learning_objective": "Apply negating quantified claims with explicit justification.",
+        "correct_rationale": "Use ¬∀ = ∃¬ and ¬∃ = ∀¬, keeping quantifier order. The result is ∀r ∃p ¬A(p,r).",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "Negate every quantifier and the final predicate. This proposed formula does not perform those changes in the required scope."
+          },
+          {
+            "option_index": 2,
+            "rationale": "Negate every quantifier and the final predicate. This proposed formula does not perform those changes in the required scope."
+          },
+          {
+            "option_index": 3,
+            "rationale": "Negate every quantifier and the final predicate. This proposed formula does not perform those changes in the required scope."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "logic-087",
+      "topic": "Witness dependence",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "What does the quantifier order in ∃r ∀p A(p,r) require?",
+      "context": "The process domain and resource domain are nonempty. A(p,r) means process p can access resource r.",
+      "options": [
+        "The statement describes exactly one successful access.",
+        "The order can always be reversed.",
+        "All quantified objects must be identical.",
+        "One resource must work for all processes."
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Check whether an existential choice is inside or outside a universal quantifier.",
+        "Track witness dependence in quantified statements; compare entire truth tables rather than a single row in propositional statements."
+      ],
+      "explanation": {
+        "learning_objective": "Apply witness dependence with explicit justification.",
+        "correct_rationale": "Interpret the quantifiers from left to right. One resource must work for all processes. This is the dependence encoded by ∃r ∀p A(p,r).",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "Existential quantifiers assert at least one, and universal quantifiers cover the domain; neither asserts exactly one."
+          },
+          {
+            "option_index": 1,
+            "rationale": "An existential choice inside a universal may depend on it; reversing their order changes that dependence."
+          },
+          {
+            "option_index": 2,
+            "rationale": "Distinct domains and quantification do not require identical objects."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "logic-088",
+      "topic": "Constructing quantified proofs",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "Which proof plan correctly establishes ∃r ∀p A(p,r)?",
+      "context": "The process domain and resource domain are nonempty. A(p,r) means process p can access resource r.",
+      "options": [
+        "Check only the first object in each domain.",
+        "Choose the resource before considering arbitrary processes.",
+        "Choose objects without establishing their access relation.",
+        "Assume the target statement and restate it."
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Universal claims need an arbitrary object; existential claims need a justified witness.",
+        "Track witness dependence in quantified statements; compare entire truth tables rather than a single row in propositional statements."
+      ],
+      "explanation": {
+        "learning_objective": "Apply constructing quantified proofs with explicit justification.",
+        "correct_rationale": "The plan follows the quantifier order: Choose the resource before considering arbitrary processes. Justify A or ¬A for the specified objects.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "An arbitrary enumeration position gives no information about the other objects or required witnesses."
+          },
+          {
+            "option_index": 2,
+            "rationale": "Picking objects alone does not prove A or ¬A for them, so the required predicate remains unproved."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This is circular reasoning; no witnesses or universal conditions are justified."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "logic-089",
+      "topic": "Quantifier translation",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "Translate: “No process accesses every resource.”",
+      "context": "The process domain and resource domain are nonempty. A(p,r) means process p can access resource r.",
+      "options": [
+        "∃r ∀p ¬A(p,r)",
+        "∀p ∃r ¬A(p,r)",
+        "∀p ∀r ¬A(p,r)",
+        "∃p ∀r A(p,r)"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Identify whether the statement requires all objects or a witness in each domain.",
+        "Track witness dependence in quantified statements; compare entire truth tables rather than a single row in propositional statements."
+      ],
+      "explanation": {
+        "learning_objective": "Apply quantifier translation with explicit justification.",
+        "correct_rationale": "No process accesses every resource. Each process misses at least one resource. The required quantifier order is ∀p ∃r ¬A(p,r).",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "A universally inaccessible resource is stronger than individual misses."
+          },
+          {
+            "option_index": 2,
+            "rationale": "No access at all is stronger than missing one resource."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This formula expresses the negation of the requested statement."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "logic-090",
+      "topic": "Negating quantified claims",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "Which formula is the negation of ∀p ∃r ¬A(p,r)?",
+      "context": "The process domain and resource domain are nonempty. A(p,r) means process p can access resource r.",
+      "options": [
+        "∃r ∀p ¬A(p,r)",
+        "∀p ∃r ¬A(p,r)",
+        "¬(∃p ∀r A(p,r))",
+        "∃p ∀r A(p,r)"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Move the negation inward one quantifier at a time.",
+        "Track witness dependence in quantified statements; compare entire truth tables rather than a single row in propositional statements."
+      ],
+      "explanation": {
+        "learning_objective": "Apply negating quantified claims with explicit justification.",
+        "correct_rationale": "Use ¬∀ = ∃¬ and ¬∃ = ∀¬, keeping quantifier order. The result is ∃p ∀r A(p,r).",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "Negate every quantifier and the final predicate. This proposed formula does not perform those changes in the required scope."
+          },
+          {
+            "option_index": 1,
+            "rationale": "Negate every quantifier and the final predicate. This proposed formula does not perform those changes in the required scope."
+          },
+          {
+            "option_index": 2,
+            "rationale": "Negate every quantifier and the final predicate. This proposed formula does not perform those changes in the required scope."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "logic-091",
+      "topic": "Witness dependence",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "What does the quantifier order in ∀p ∃r ¬A(p,r) require?",
+      "context": "The process domain and resource domain are nonempty. A(p,r) means process p can access resource r.",
+      "options": [
+        "All quantified objects must be identical.",
+        "The order can always be reversed.",
+        "The statement describes exactly one successful access.",
+        "Each process misses at least one resource."
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Check whether an existential choice is inside or outside a universal quantifier.",
+        "Track witness dependence in quantified statements; compare entire truth tables rather than a single row in propositional statements."
+      ],
+      "explanation": {
+        "learning_objective": "Apply witness dependence with explicit justification.",
+        "correct_rationale": "Interpret the quantifiers from left to right. Each process misses at least one resource. This is the dependence encoded by ∀p ∃r ¬A(p,r).",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "Distinct domains and quantification do not require identical objects."
+          },
+          {
+            "option_index": 1,
+            "rationale": "An existential choice inside a universal may depend on it; reversing their order changes that dependence."
+          },
+          {
+            "option_index": 2,
+            "rationale": "Existential quantifiers assert at least one, and universal quantifiers cover the domain; neither asserts exactly one."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "logic-092",
+      "topic": "Constructing quantified proofs",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "Which proof plan correctly establishes ∀p ∃r ¬A(p,r)?",
+      "context": "The process domain and resource domain are nonempty. A(p,r) means process p can access resource r.",
+      "options": [
+        "Assume the target statement and restate it.",
+        "For an arbitrary process, identify a resource it cannot access.",
+        "Check only the first object in each domain.",
+        "Choose objects without establishing their access relation."
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Universal claims need an arbitrary object; existential claims need a justified witness.",
+        "Track witness dependence in quantified statements; compare entire truth tables rather than a single row in propositional statements."
+      ],
+      "explanation": {
+        "learning_objective": "Apply constructing quantified proofs with explicit justification.",
+        "correct_rationale": "The plan follows the quantifier order: For an arbitrary process, identify a resource it cannot access. Justify A or ¬A for the specified objects.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This is circular reasoning; no witnesses or universal conditions are justified."
+          },
+          {
+            "option_index": 2,
+            "rationale": "An arbitrary enumeration position gives no information about the other objects or required witnesses."
+          },
+          {
+            "option_index": 3,
+            "rationale": "Picking objects alone does not prove A or ¬A for them, so the required predicate remains unproved."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "logic-093",
+      "topic": "Quantifier translation",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "Translate: “Every process accesses every resource.”",
+      "context": "The process domain and resource domain are nonempty. A(p,r) means process p can access resource r.",
+      "options": [
+        "∀p ∃r A(p,r)",
+        "∃p ∀r A(p,r)",
+        "∃p ∃r ¬A(p,r)",
+        "∀p ∀r A(p,r)"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Identify whether the statement requires all objects or a witness in each domain.",
+        "Track witness dependence in quantified statements; compare entire truth tables rather than a single row in propositional statements."
+      ],
+      "explanation": {
+        "learning_objective": "Apply quantifier translation with explicit justification.",
+        "correct_rationale": "Every process accesses every resource. All process–resource pairs must succeed. The required quantifier order is ∀p ∀r A(p,r).",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "Only one accessible resource per process is insufficient."
+          },
+          {
+            "option_index": 1,
+            "rationale": "A single process is insufficient."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This formula expresses the negation of the requested statement."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "logic-094",
+      "topic": "Negating quantified claims",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "Which formula is the negation of ∀p ∀r A(p,r)?",
+      "context": "The process domain and resource domain are nonempty. A(p,r) means process p can access resource r.",
+      "options": [
+        "¬(∃p ∃r ¬A(p,r))",
+        "∀p ∀r A(p,r)",
+        "∃p ∃r ¬A(p,r)",
+        "∃p ∀r A(p,r)"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Move the negation inward one quantifier at a time.",
+        "Track witness dependence in quantified statements; compare entire truth tables rather than a single row in propositional statements."
+      ],
+      "explanation": {
+        "learning_objective": "Apply negating quantified claims with explicit justification.",
+        "correct_rationale": "Use ¬∀ = ∃¬ and ¬∃ = ∀¬, keeping quantifier order. The result is ∃p ∃r ¬A(p,r).",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "Negate every quantifier and the final predicate. This proposed formula does not perform those changes in the required scope."
+          },
+          {
+            "option_index": 1,
+            "rationale": "Negate every quantifier and the final predicate. This proposed formula does not perform those changes in the required scope."
+          },
+          {
+            "option_index": 3,
+            "rationale": "Negate every quantifier and the final predicate. This proposed formula does not perform those changes in the required scope."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "logic-095",
+      "topic": "Witness dependence",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "What does the quantifier order in ∀p ∀r A(p,r) require?",
+      "context": "The process domain and resource domain are nonempty. A(p,r) means process p can access resource r.",
+      "options": [
+        "All process–resource pairs must succeed.",
+        "The statement describes exactly one successful access.",
+        "All quantified objects must be identical.",
+        "The order can always be reversed."
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Check whether an existential choice is inside or outside a universal quantifier.",
+        "Track witness dependence in quantified statements; compare entire truth tables rather than a single row in propositional statements."
+      ],
+      "explanation": {
+        "learning_objective": "Apply witness dependence with explicit justification.",
+        "correct_rationale": "Interpret the quantifiers from left to right. All process–resource pairs must succeed. This is the dependence encoded by ∀p ∀r A(p,r).",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "Existential quantifiers assert at least one, and universal quantifiers cover the domain; neither asserts exactly one."
+          },
+          {
+            "option_index": 2,
+            "rationale": "Distinct domains and quantification do not require identical objects."
+          },
+          {
+            "option_index": 3,
+            "rationale": "An existential choice inside a universal may depend on it; reversing their order changes that dependence."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "logic-096",
+      "topic": "Constructing quantified proofs",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "Which proof plan correctly establishes ∀p ∀r A(p,r)?",
+      "context": "The process domain and resource domain are nonempty. A(p,r) means process p can access resource r.",
+      "options": [
+        "Assume the target statement and restate it.",
+        "Choose objects without establishing their access relation.",
+        "Check only the first object in each domain.",
+        "Take an arbitrary process and an arbitrary resource."
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Universal claims need an arbitrary object; existential claims need a justified witness.",
+        "Track witness dependence in quantified statements; compare entire truth tables rather than a single row in propositional statements."
+      ],
+      "explanation": {
+        "learning_objective": "Apply constructing quantified proofs with explicit justification.",
+        "correct_rationale": "The plan follows the quantifier order: Take an arbitrary process and an arbitrary resource. Justify A or ¬A for the specified objects.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This is circular reasoning; no witnesses or universal conditions are justified."
+          },
+          {
+            "option_index": 1,
+            "rationale": "Picking objects alone does not prove A or ¬A for them, so the required predicate remains unproved."
+          },
+          {
+            "option_index": 2,
+            "rationale": "An arbitrary enumeration position gives no information about the other objects or required witnesses."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "logic-097",
+      "topic": "Quantifier translation",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "Translate: “At least one process accesses at least one resource.”",
+      "context": "The process domain and resource domain are nonempty. A(p,r) means process p can access resource r.",
+      "options": [
+        "∀p ∃r A(p,r)",
+        "∃p ∀r A(p,r)",
+        "∃p ∃r A(p,r)",
+        "∀p ∀r ¬A(p,r)"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Identify whether the statement requires all objects or a witness in each domain.",
+        "Track witness dependence in quantified statements; compare entire truth tables rather than a single row in propositional statements."
+      ],
+      "explanation": {
+        "learning_objective": "Apply quantifier translation with explicit justification.",
+        "correct_rationale": "At least one process accesses at least one resource. A single successful pair suffices. The required quantifier order is ∃p ∃r A(p,r).",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This requires coverage for all processes."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This requires one process with all resources."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This formula expresses the negation of the requested statement."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "logic-098",
+      "topic": "Negating quantified claims",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "Which formula is the negation of ∃p ∃r A(p,r)?",
+      "context": "The process domain and resource domain are nonempty. A(p,r) means process p can access resource r.",
+      "options": [
+        "∃p ∃r A(p,r)",
+        "¬(∀p ∀r ¬A(p,r))",
+        "∀p ∃r A(p,r)",
+        "∀p ∀r ¬A(p,r)"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Move the negation inward one quantifier at a time.",
+        "Track witness dependence in quantified statements; compare entire truth tables rather than a single row in propositional statements."
+      ],
+      "explanation": {
+        "learning_objective": "Apply negating quantified claims with explicit justification.",
+        "correct_rationale": "Use ¬∀ = ∃¬ and ¬∃ = ∀¬, keeping quantifier order. The result is ∀p ∀r ¬A(p,r).",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "Negate every quantifier and the final predicate. This proposed formula does not perform those changes in the required scope."
+          },
+          {
+            "option_index": 1,
+            "rationale": "Negate every quantifier and the final predicate. This proposed formula does not perform those changes in the required scope."
+          },
+          {
+            "option_index": 2,
+            "rationale": "Negate every quantifier and the final predicate. This proposed formula does not perform those changes in the required scope."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "logic-099",
+      "topic": "Witness dependence",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "What does the quantifier order in ∃p ∃r A(p,r) require?",
+      "context": "The process domain and resource domain are nonempty. A(p,r) means process p can access resource r.",
+      "options": [
+        "The statement describes exactly one successful access.",
+        "All quantified objects must be identical.",
+        "The order can always be reversed.",
+        "A single successful pair suffices."
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Check whether an existential choice is inside or outside a universal quantifier.",
+        "Track witness dependence in quantified statements; compare entire truth tables rather than a single row in propositional statements."
+      ],
+      "explanation": {
+        "learning_objective": "Apply witness dependence with explicit justification.",
+        "correct_rationale": "Interpret the quantifiers from left to right. A single successful pair suffices. This is the dependence encoded by ∃p ∃r A(p,r).",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "Existential quantifiers assert at least one, and universal quantifiers cover the domain; neither asserts exactly one."
+          },
+          {
+            "option_index": 1,
+            "rationale": "Distinct domains and quantification do not require identical objects."
+          },
+          {
+            "option_index": 2,
+            "rationale": "An existential choice inside a universal may depend on it; reversing their order changes that dependence."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "logic-100",
+      "topic": "Constructing quantified proofs",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "Which proof plan correctly establishes ∃p ∃r A(p,r)?",
+      "context": "The process domain and resource domain are nonempty. A(p,r) means process p can access resource r.",
+      "options": [
+        "Produce one process–resource pair with access.",
+        "Check only the first object in each domain.",
+        "Choose objects without establishing their access relation.",
+        "Assume the target statement and restate it."
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Universal claims need an arbitrary object; existential claims need a justified witness.",
+        "Track witness dependence in quantified statements; compare entire truth tables rather than a single row in propositional statements."
+      ],
+      "explanation": {
+        "learning_objective": "Apply constructing quantified proofs with explicit justification.",
+        "correct_rationale": "The plan follows the quantifier order: Produce one process–resource pair with access. Justify A or ¬A for the specified objects.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "An arbitrary enumeration position gives no information about the other objects or required witnesses."
+          },
+          {
+            "option_index": 2,
+            "rationale": "Picking objects alone does not prove A or ¬A for them, so the required predicate remains unproved."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This is circular reasoning; no witnesses or universal conditions are justified."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    }
+  ]
+}

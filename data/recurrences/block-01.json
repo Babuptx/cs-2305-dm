@@ -1,0 +1,2358 @@
+{
+  "schema_version": 1,
+  "block_id": "recurrences-block-01",
+  "pillar_id": "recurrences",
+  "block_title": "Recurrence relations · Block 1",
+  "questions": [
+    {
+      "id": "recurrences-001",
+      "topic": "Arithmetic sequence",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "What is a₄?",
+      "context": "a₀=4; aₙ=aₙ₋₁+3 for n≥1. Introductory recurrence solving and algorithm analysis may vary by course section.",
+      "options": [
+        "12",
+        "16",
+        "19",
+        "13"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Compute a few initial terms, then check a proposed rule at the base indices and in the recurrence.",
+        "A pattern must satisfy every initial value and the recurrence itself. Substitute the candidate at a general index to check the transition."
+      ],
+      "explanation": {
+        "learning_objective": "Apply arithmetic sequence with explicit justification.",
+        "correct_rationale": "Four increments of 3 give 4+4·3=16.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. Four increments of 3 give 4+4·3=16."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. Four increments of 3 give 4+4·3=16."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. Four increments of 3 give 4+4·3=16."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "recurrence-case",
+        "case": 0,
+        "query": 0
+      }
+    },
+    {
+      "id": "recurrences-002",
+      "topic": "Arithmetic sequence",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "Which closed form holds for n≥0?",
+      "context": "a₀=4; aₙ=aₙ₋₁+3 for n≥1. Introductory recurrence solving and algorithm analysis may vary by course section.",
+      "options": [
+        "aₙ=4+3(n−1)",
+        "aₙ=4·3ⁿ",
+        "aₙ=3n",
+        "aₙ=4+3n"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Compute a few initial terms, then check a proposed rule at the base indices and in the recurrence.",
+        "A pattern must satisfy every initial value and the recurrence itself. Substitute the candidate at a general index to check the transition."
+      ],
+      "explanation": {
+        "learning_objective": "Apply arithmetic sequence with explicit justification.",
+        "correct_rationale": "Unrolling adds 3 exactly n times to the initial value 4.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. Unrolling adds 3 exactly n times to the initial value 4."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. Unrolling adds 3 exactly n times to the initial value 4."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. Unrolling adds 3 exactly n times to the initial value 4."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "recurrence-case",
+        "case": 0,
+        "query": 1
+      }
+    },
+    {
+      "id": "recurrences-003",
+      "topic": "Arithmetic sequence",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "What is aₙ−aₙ₋₁?",
+      "context": "a₀=4; aₙ=aₙ₋₁+3 for n≥1. Introductory recurrence solving and algorithm analysis may vary by course section.",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Compute a few initial terms, then check a proposed rule at the base indices and in the recurrence.",
+        "A pattern must satisfy every initial value and the recurrence itself. Substitute the candidate at a general index to check the transition."
+      ],
+      "explanation": {
+        "learning_objective": "Apply arithmetic sequence with explicit justification.",
+        "correct_rationale": "The defining recurrence says the difference is the constant 3.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. The defining recurrence says the difference is the constant 3."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. The defining recurrence says the difference is the constant 3."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. The defining recurrence says the difference is the constant 3."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "recurrence-case",
+        "case": 0,
+        "query": 2
+      }
+    },
+    {
+      "id": "recurrences-004",
+      "topic": "Arithmetic sequence",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "Which equality verifies the induction step for the closed form?",
+      "context": "a₀=4; aₙ=aₙ₋₁+3 for n≥1. Introductory recurrence solving and algorithm analysis may vary by course section.",
+      "options": [
+        "4+3(n−1)+3=4+3n",
+        "4+3(n−1)+1=4+3n",
+        "4·3ⁿ=4+3n",
+        "4+3(n−1)=4+3n"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Compute a few initial terms, then check a proposed rule at the base indices and in the recurrence.",
+        "A pattern must satisfy every initial value and the recurrence itself. Substitute the candidate at a general index to check the transition."
+      ],
+      "explanation": {
+        "learning_objective": "Apply arithmetic sequence with explicit justification.",
+        "correct_rationale": "Substitute the formula for a_(n−1) and add 3.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. Substitute the formula for a_(n−1) and add 3."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. Substitute the formula for a_(n−1) and add 3."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. Substitute the formula for a_(n−1) and add 3."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "recurrence-case",
+        "case": 0,
+        "query": 3
+      }
+    },
+    {
+      "id": "recurrences-005",
+      "topic": "Geometric sequence",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "What is b₅?",
+      "context": "b₀=3; bₙ=2bₙ₋₁ for n≥1. Introductory recurrence solving and algorithm analysis may vary by course section.",
+      "options": [
+        "32",
+        "192",
+        "48",
+        "96"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Compute a few initial terms, then check a proposed rule at the base indices and in the recurrence.",
+        "A pattern must satisfy every initial value and the recurrence itself. Substitute the candidate at a general index to check the transition."
+      ],
+      "explanation": {
+        "learning_objective": "Apply geometric sequence with explicit justification.",
+        "correct_rationale": "Five doublings give 3·2⁵=96.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. Five doublings give 3·2⁵=96."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. Five doublings give 3·2⁵=96."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. Five doublings give 3·2⁵=96."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "recurrence-case",
+        "case": 1,
+        "query": 0
+      }
+    },
+    {
+      "id": "recurrences-006",
+      "topic": "Geometric sequence",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "Which closed form is correct?",
+      "context": "b₀=3; bₙ=2bₙ₋₁ for n≥1. Introductory recurrence solving and algorithm analysis may vary by course section.",
+      "options": [
+        "bₙ=2ⁿ",
+        "bₙ=3·2ⁿ",
+        "bₙ=3+2n",
+        "bₙ=3·2ⁿ⁻¹"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Compute a few initial terms, then check a proposed rule at the base indices and in the recurrence.",
+        "A pattern must satisfy every initial value and the recurrence itself. Substitute the candidate at a general index to check the transition."
+      ],
+      "explanation": {
+        "learning_objective": "Apply geometric sequence with explicit justification.",
+        "correct_rationale": "Each recurrence application contributes a factor of 2.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. Each recurrence application contributes a factor of 2."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. Each recurrence application contributes a factor of 2."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. Each recurrence application contributes a factor of 2."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "recurrence-case",
+        "case": 1,
+        "query": 1
+      }
+    },
+    {
+      "id": "recurrences-007",
+      "topic": "Geometric sequence",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "What is bₙ/bₙ₋₁?",
+      "context": "b₀=3; bₙ=2bₙ₋₁ for n≥1. Introductory recurrence solving and algorithm analysis may vary by course section.",
+      "options": [
+        "2",
+        "1",
+        "3",
+        "0"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Compute a few initial terms, then check a proposed rule at the base indices and in the recurrence.",
+        "A pattern must satisfy every initial value and the recurrence itself. Substitute the candidate at a general index to check the transition."
+      ],
+      "explanation": {
+        "learning_objective": "Apply geometric sequence with explicit justification.",
+        "correct_rationale": "All terms are positive, so division is defined and the recurrence gives ratio 2.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. All terms are positive, so division is defined and the recurrence gives ratio 2."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. All terms are positive, so division is defined and the recurrence gives ratio 2."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. All terms are positive, so division is defined and the recurrence gives ratio 2."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "recurrence-case",
+        "case": 1,
+        "query": 2
+      }
+    },
+    {
+      "id": "recurrences-008",
+      "topic": "Geometric sequence",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "Which change to the base term doubles every term?",
+      "context": "b₀=3; bₙ=2bₙ₋₁ for n≥1. Introductory recurrence solving and algorithm analysis may vary by course section.",
+      "options": [
+        "Replace multiplier 2 by 4 but keep b₀=3",
+        "Replace b₀=3 by b₀=4",
+        "Replace b₀=3 by b₀=6",
+        "Add 2 to each step but keep b₀=3"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Compute a few initial terms, then check a proposed rule at the base indices and in the recurrence.",
+        "A pattern must satisfy every initial value and the recurrence itself. Substitute the candidate at a general index to check the transition."
+      ],
+      "explanation": {
+        "learning_objective": "Apply geometric sequence with explicit justification.",
+        "correct_rationale": "The homogeneous recurrence scales all future terms by the same factor as its initial value.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. The homogeneous recurrence scales all future terms by the same factor as its initial value."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. The homogeneous recurrence scales all future terms by the same factor as its initial value."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. The homogeneous recurrence scales all future terms by the same factor as its initial value."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "recurrence-case",
+        "case": 1,
+        "query": 3
+      }
+    },
+    {
+      "id": "recurrences-009",
+      "topic": "Affine recurrence",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "What is c₄?",
+      "context": "c₀=0; cₙ=2cₙ₋₁+1 for n≥1. Introductory recurrence solving and algorithm analysis may vary by course section.",
+      "options": [
+        "16",
+        "8",
+        "15",
+        "14"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Compute a few initial terms, then check a proposed rule at the base indices and in the recurrence.",
+        "A pattern must satisfy every initial value and the recurrence itself. Substitute the candidate at a general index to check the transition."
+      ],
+      "explanation": {
+        "learning_objective": "Apply affine recurrence with explicit justification.",
+        "correct_rationale": "The terms are 0,1,3,7,15.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. The terms are 0,1,3,7,15."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. The terms are 0,1,3,7,15."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. The terms are 0,1,3,7,15."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "recurrence-case",
+        "case": 2,
+        "query": 0
+      }
+    },
+    {
+      "id": "recurrences-010",
+      "topic": "Affine recurrence",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "Which closed form is correct?",
+      "context": "c₀=0; cₙ=2cₙ₋₁+1 for n≥1. Introductory recurrence solving and algorithm analysis may vary by course section.",
+      "options": [
+        "cₙ=2ⁿ",
+        "cₙ=2ⁿ−1",
+        "cₙ=2n−1",
+        "cₙ=n"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Compute a few initial terms, then check a proposed rule at the base indices and in the recurrence.",
+        "A pattern must satisfy every initial value and the recurrence itself. Substitute the candidate at a general index to check the transition."
+      ],
+      "explanation": {
+        "learning_objective": "Apply affine recurrence with explicit justification.",
+        "correct_rationale": "Substituting gives 2(2^(n−1)−1)+1=2^n−1, and c₀=0.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. Substituting gives 2(2^(n−1)−1)+1=2^n−1, and c₀=0."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. Substituting gives 2(2^(n−1)−1)+1=2^n−1, and c₀=0."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. Substituting gives 2(2^(n−1)−1)+1=2^n−1, and c₀=0."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "recurrence-case",
+        "case": 2,
+        "query": 1
+      }
+    },
+    {
+      "id": "recurrences-011",
+      "topic": "Affine recurrence",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "Which shifted variable yields a homogeneous recurrence?",
+      "context": "c₀=0; cₙ=2cₙ₋₁+1 for n≥1. Introductory recurrence solving and algorithm analysis may vary by course section.",
+      "options": [
+        "dₙ=2cₙ",
+        "dₙ=cₙ²",
+        "dₙ=cₙ−1",
+        "dₙ=cₙ+1"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Compute a few initial terms, then check a proposed rule at the base indices and in the recurrence.",
+        "A pattern must satisfy every initial value and the recurrence itself. Substitute the candidate at a general index to check the transition."
+      ],
+      "explanation": {
+        "learning_objective": "Apply affine recurrence with explicit justification.",
+        "correct_rationale": "Then dₙ=2(cₙ₋₁+1)=2dₙ₋₁.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. Then dₙ=2(cₙ₋₁+1)=2dₙ₋₁."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. Then dₙ=2(cₙ₋₁+1)=2dₙ₋₁."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. Then dₙ=2(cₙ₋₁+1)=2dₙ₋₁."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "recurrence-case",
+        "case": 2,
+        "query": 2
+      }
+    },
+    {
+      "id": "recurrences-012",
+      "topic": "Affine recurrence",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "Which constant value is a fixed point of x↦2x+1?",
+      "context": "c₀=0; cₙ=2cₙ₋₁+1 for n≥1. Introductory recurrence solving and algorithm analysis may vary by course section.",
+      "options": [
+        "1",
+        "−1",
+        "0",
+        "−2"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Compute a few initial terms, then check a proposed rule at the base indices and in the recurrence.",
+        "A pattern must satisfy every initial value and the recurrence itself. Substitute the candidate at a general index to check the transition."
+      ],
+      "explanation": {
+        "learning_objective": "Apply affine recurrence with explicit justification.",
+        "correct_rationale": "Solve x=2x+1, giving x=−1; shifting away from this fixed point explains d=c+1.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. Solve x=2x+1, giving x=−1; shifting away from this fixed point explains d=c+1."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. Solve x=2x+1, giving x=−1; shifting away from this fixed point explains d=c+1."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. Solve x=2x+1, giving x=−1; shifting away from this fixed point explains d=c+1."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "recurrence-case",
+        "case": 2,
+        "query": 3
+      }
+    },
+    {
+      "id": "recurrences-013",
+      "topic": "Triangular accumulation",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "What is a₅?",
+      "context": "a₀=0; aₙ=aₙ₋₁+n for n≥1. Introductory recurrence solving and algorithm analysis may vary by course section.",
+      "options": [
+        "8",
+        "16",
+        "14",
+        "15"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Compute a few initial terms, then check a proposed rule at the base indices and in the recurrence.",
+        "A pattern must satisfy every initial value and the recurrence itself. Substitute the candidate at a general index to check the transition."
+      ],
+      "explanation": {
+        "learning_objective": "Apply triangular accumulation with explicit justification.",
+        "correct_rationale": "Accumulate 1+2+3+4+5=15.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. Accumulate 1+2+3+4+5=15."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. Accumulate 1+2+3+4+5=15."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. Accumulate 1+2+3+4+5=15."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "recurrence-case",
+        "case": 3,
+        "query": 0
+      }
+    },
+    {
+      "id": "recurrences-014",
+      "topic": "Triangular accumulation",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "Which closed form is correct?",
+      "context": "a₀=0; aₙ=aₙ₋₁+n for n≥1. Introductory recurrence solving and algorithm analysis may vary by course section.",
+      "options": [
+        "aₙ=n(n+1)/2",
+        "aₙ=2ⁿ",
+        "aₙ=n(n−1)/2",
+        "aₙ=n²"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Compute a few initial terms, then check a proposed rule at the base indices and in the recurrence.",
+        "A pattern must satisfy every initial value and the recurrence itself. Substitute the candidate at a general index to check the transition."
+      ],
+      "explanation": {
+        "learning_objective": "Apply triangular accumulation with explicit justification.",
+        "correct_rationale": "The recurrence is the sum of the first n positive integers.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. The recurrence is the sum of the first n positive integers."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. The recurrence is the sum of the first n positive integers."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. The recurrence is the sum of the first n positive integers."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "recurrence-case",
+        "case": 3,
+        "query": 1
+      }
+    },
+    {
+      "id": "recurrences-015",
+      "topic": "Triangular accumulation",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "What is the second finite difference aₙ−2aₙ₋₁+aₙ₋₂ for n≥2?",
+      "context": "a₀=0; aₙ=aₙ₋₁+n for n≥1. Introductory recurrence solving and algorithm analysis may vary by course section.",
+      "options": [
+        "1",
+        "2",
+        "−1",
+        "0"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Compute a few initial terms, then check a proposed rule at the base indices and in the recurrence.",
+        "A pattern must satisfy every initial value and the recurrence itself. Substitute the candidate at a general index to check the transition."
+      ],
+      "explanation": {
+        "learning_objective": "Apply triangular accumulation with explicit justification.",
+        "correct_rationale": "First differences are n and n−1; subtract to get 1.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. First differences are n and n−1; subtract to get 1."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. First differences are n and n−1; subtract to get 1."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. First differences are n and n−1; subtract to get 1."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "recurrence-case",
+        "case": 3,
+        "query": 2
+      }
+    },
+    {
+      "id": "recurrences-016",
+      "topic": "Triangular accumulation",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "Which summation is obtained by unrolling?",
+      "context": "a₀=0; aₙ=aₙ₋₁+n for n≥1. Introductory recurrence solving and algorithm analysis may vary by course section.",
+      "options": [
+        "Σᵢ₌₁ⁿ i",
+        "2ⁿ",
+        "n+n",
+        "Σᵢ₌₁ⁿ i²"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Compute a few initial terms, then check a proposed rule at the base indices and in the recurrence.",
+        "A pattern must satisfy every initial value and the recurrence itself. Substitute the candidate at a general index to check the transition."
+      ],
+      "explanation": {
+        "learning_objective": "Apply triangular accumulation with explicit justification.",
+        "correct_rationale": "At each step from 1 through n add that step’s index, starting from zero.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. At each step from 1 through n add that step’s index, starting from zero."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. At each step from 1 through n add that step’s index, starting from zero."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. At each step from 1 through n add that step’s index, starting from zero."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "recurrence-case",
+        "case": 3,
+        "query": 3
+      }
+    },
+    {
+      "id": "recurrences-017",
+      "topic": "Odd-number accumulation",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "What is a₆?",
+      "context": "a₀=0; aₙ=aₙ₋₁+(2n−1) for n≥1. Introductory recurrence solving and algorithm analysis may vary by course section.",
+      "options": [
+        "30",
+        "12",
+        "42",
+        "36"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Compute a few initial terms, then check a proposed rule at the base indices and in the recurrence.",
+        "A pattern must satisfy every initial value and the recurrence itself. Substitute the candidate at a general index to check the transition."
+      ],
+      "explanation": {
+        "learning_objective": "Apply odd-number accumulation with explicit justification.",
+        "correct_rationale": "The first six odd numbers sum to 6²=36.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. The first six odd numbers sum to 6²=36."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. The first six odd numbers sum to 6²=36."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. The first six odd numbers sum to 6²=36."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "recurrence-case",
+        "case": 4,
+        "query": 0
+      }
+    },
+    {
+      "id": "recurrences-018",
+      "topic": "Odd-number accumulation",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "Which closed form is correct?",
+      "context": "a₀=0; aₙ=aₙ₋₁+(2n−1) for n≥1. Introductory recurrence solving and algorithm analysis may vary by course section.",
+      "options": [
+        "aₙ=2n−1",
+        "aₙ=2ⁿ",
+        "aₙ=n²",
+        "aₙ=n(n+1)/2"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Compute a few initial terms, then check a proposed rule at the base indices and in the recurrence.",
+        "A pattern must satisfy every initial value and the recurrence itself. Substitute the candidate at a general index to check the transition."
+      ],
+      "explanation": {
+        "learning_objective": "Apply odd-number accumulation with explicit justification.",
+        "correct_rationale": "n²−(n−1)²=2n−1, matching the recurrence and zero base.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. n²−(n−1)²=2n−1, matching the recurrence and zero base."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. n²−(n−1)²=2n−1, matching the recurrence and zero base."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. n²−(n−1)²=2n−1, matching the recurrence and zero base."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "recurrence-case",
+        "case": 4,
+        "query": 1
+      }
+    },
+    {
+      "id": "recurrences-019",
+      "topic": "Odd-number accumulation",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "Which difference verifies the formula?",
+      "context": "a₀=0; aₙ=aₙ₋₁+(2n−1) for n≥1. Introductory recurrence solving and algorithm analysis may vary by course section.",
+      "options": [
+        "n²−(n−1)²=1",
+        "n²−(n−1)²=2n+1",
+        "n²−(n−1)²=2n−1",
+        "n²−(n−1)²=n"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Compute a few initial terms, then check a proposed rule at the base indices and in the recurrence.",
+        "A pattern must satisfy every initial value and the recurrence itself. Substitute the candidate at a general index to check the transition."
+      ],
+      "explanation": {
+        "learning_objective": "Apply odd-number accumulation with explicit justification.",
+        "correct_rationale": "Expand the square to obtain the recurrence’s increment.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. Expand the square to obtain the recurrence’s increment."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. Expand the square to obtain the recurrence’s increment."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. Expand the square to obtain the recurrence’s increment."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "recurrence-case",
+        "case": 4,
+        "query": 2
+      }
+    },
+    {
+      "id": "recurrences-020",
+      "topic": "Odd-number accumulation",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "What is the growth order?",
+      "context": "a₀=0; aₙ=aₙ₋₁+(2n−1) for n≥1. Introductory recurrence solving and algorithm analysis may vary by course section.",
+      "options": [
+        "Θ(2ⁿ)",
+        "Θ(log n)",
+        "Θ(n²)",
+        "Θ(n)"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Compute a few initial terms, then check a proposed rule at the base indices and in the recurrence.",
+        "A pattern must satisfy every initial value and the recurrence itself. Substitute the candidate at a general index to check the transition."
+      ],
+      "explanation": {
+        "learning_objective": "Apply odd-number accumulation with explicit justification.",
+        "correct_rationale": "The exact formula n² has quadratic growth.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. The exact formula n² has quadratic growth."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. The exact formula n² has quadratic growth."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. The exact formula n² has quadratic growth."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "recurrence-case",
+        "case": 4,
+        "query": 3
+      }
+    },
+    {
+      "id": "recurrences-021",
+      "topic": "Square accumulation",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "What is s₃?",
+      "context": "s₀=0; sₙ=sₙ₋₁+n² for n≥1. Introductory recurrence solving and algorithm analysis may vary by course section.",
+      "options": [
+        "15",
+        "14",
+        "12",
+        "9"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Compute a few initial terms, then check a proposed rule at the base indices and in the recurrence.",
+        "A pattern must satisfy every initial value and the recurrence itself. Substitute the candidate at a general index to check the transition."
+      ],
+      "explanation": {
+        "learning_objective": "Apply square accumulation with explicit justification.",
+        "correct_rationale": "1²+2²+3²=1+4+9=14.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. 1²+2²+3²=1+4+9=14."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. 1²+2²+3²=1+4+9=14."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. 1²+2²+3²=1+4+9=14."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "recurrence-case",
+        "case": 5,
+        "query": 0
+      }
+    },
+    {
+      "id": "recurrences-022",
+      "topic": "Square accumulation",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "Which expression represents sₙ by unrolling?",
+      "context": "s₀=0; sₙ=sₙ₋₁+n² for n≥1. Introductory recurrence solving and algorithm analysis may vary by course section.",
+      "options": [
+        "n²",
+        "Σᵢ₌₁ⁿ i²",
+        "(Σᵢ₌₁ⁿ i)²",
+        "Σᵢ₌₁ⁿ i"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Compute a few initial terms, then check a proposed rule at the base indices and in the recurrence.",
+        "A pattern must satisfy every initial value and the recurrence itself. Substitute the candidate at a general index to check the transition."
+      ],
+      "explanation": {
+        "learning_objective": "Apply square accumulation with explicit justification.",
+        "correct_rationale": "Each step adds the square of its index.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. Each step adds the square of its index."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. Each step adds the square of its index."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. Each step adds the square of its index."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "recurrence-case",
+        "case": 5,
+        "query": 1
+      }
+    },
+    {
+      "id": "recurrences-023",
+      "topic": "Square accumulation",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "Which closed form is correct?",
+      "context": "s₀=0; sₙ=sₙ₋₁+n² for n≥1. Introductory recurrence solving and algorithm analysis may vary by course section.",
+      "options": [
+        "n(n+1)(2n+1)/6",
+        "n²",
+        "n³",
+        "n(n+1)/2"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Compute a few initial terms, then check a proposed rule at the base indices and in the recurrence.",
+        "A pattern must satisfy every initial value and the recurrence itself. Substitute the candidate at a general index to check the transition."
+      ],
+      "explanation": {
+        "learning_objective": "Apply square accumulation with explicit justification.",
+        "correct_rationale": "This sum-of-squares formula has zero base and consecutive difference n².",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. This sum-of-squares formula has zero base and consecutive difference n²."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. This sum-of-squares formula has zero base and consecutive difference n²."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. This sum-of-squares formula has zero base and consecutive difference n²."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "recurrence-case",
+        "case": 5,
+        "query": 2
+      }
+    },
+    {
+      "id": "recurrences-024",
+      "topic": "Square accumulation",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "What is the growth order?",
+      "context": "s₀=0; sₙ=sₙ₋₁+n² for n≥1. Introductory recurrence solving and algorithm analysis may vary by course section.",
+      "options": [
+        "Θ(n⁴)",
+        "Θ(n²)",
+        "Θ(n³)",
+        "Θ(n)"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Compute a few initial terms, then check a proposed rule at the base indices and in the recurrence.",
+        "A pattern must satisfy every initial value and the recurrence itself. Substitute the candidate at a general index to check the transition."
+      ],
+      "explanation": {
+        "learning_objective": "Apply square accumulation with explicit justification.",
+        "correct_rationale": "The leading term of the closed form is n³/3.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. The leading term of the closed form is n³/3."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. The leading term of the closed form is n³/3."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. The leading term of the closed form is n³/3."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "recurrence-case",
+        "case": 5,
+        "query": 3
+      }
+    },
+    {
+      "id": "recurrences-025",
+      "topic": "Factorial recurrence",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "What is f₄?",
+      "context": "f₀=1; fₙ=n fₙ₋₁ for n≥1. Introductory recurrence solving and algorithm analysis may vary by course section.",
+      "options": [
+        "24",
+        "120",
+        "16",
+        "20"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Compute a few initial terms, then check a proposed rule at the base indices and in the recurrence.",
+        "A pattern must satisfy every initial value and the recurrence itself. Substitute the candidate at a general index to check the transition."
+      ],
+      "explanation": {
+        "learning_objective": "Apply factorial recurrence with explicit justification.",
+        "correct_rationale": "Multiply 1·2·3·4=24.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. Multiply 1·2·3·4=24."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. Multiply 1·2·3·4=24."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. Multiply 1·2·3·4=24."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "recurrence-case",
+        "case": 6,
+        "query": 0
+      }
+    },
+    {
+      "id": "recurrences-026",
+      "topic": "Factorial recurrence",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "Which closed form is correct?",
+      "context": "f₀=1; fₙ=n fₙ₋₁ for n≥1. Introductory recurrence solving and algorithm analysis may vary by course section.",
+      "options": [
+        "fₙ=n!",
+        "fₙ=n²",
+        "fₙ=2ⁿ",
+        "fₙ=n"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Compute a few initial terms, then check a proposed rule at the base indices and in the recurrence.",
+        "A pattern must satisfy every initial value and the recurrence itself. Substitute the candidate at a general index to check the transition."
+      ],
+      "explanation": {
+        "learning_objective": "Apply factorial recurrence with explicit justification.",
+        "correct_rationale": "The definition of factorial gives n!=n(n−1)! with 0!=1.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. The definition of factorial gives n!=n(n−1)! with 0!=1."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. The definition of factorial gives n!=n(n−1)! with 0!=1."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. The definition of factorial gives n!=n(n−1)! with 0!=1."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "recurrence-case",
+        "case": 6,
+        "query": 1
+      }
+    },
+    {
+      "id": "recurrences-027",
+      "topic": "Factorial recurrence",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "Why is the base f₀=1 important?",
+      "context": "f₀=1; fₙ=n fₙ₋₁ for n≥1. Introductory recurrence solving and algorithm analysis may vary by course section.",
+      "options": [
+        "Choosing 0 would leave positive factorials unchanged",
+        "All recurrences require base 1",
+        "It is the identity for addition",
+        "It is the identity for an empty product"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Compute a few initial terms, then check a proposed rule at the base indices and in the recurrence.",
+        "A pattern must satisfy every initial value and the recurrence itself. Substitute the candidate at a general index to check the transition."
+      ],
+      "explanation": {
+        "learning_objective": "Apply factorial recurrence with explicit justification.",
+        "correct_rationale": "Unrolling to n=0 leaves no factors; the empty product equals 1.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. Unrolling to n=0 leaves no factors; the empty product equals 1."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. Unrolling to n=0 leaves no factors; the empty product equals 1."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. Unrolling to n=0 leaves no factors; the empty product equals 1."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "recurrence-case",
+        "case": 6,
+        "query": 2
+      }
+    },
+    {
+      "id": "recurrences-028",
+      "topic": "Factorial recurrence",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "For n≥1, what is fₙ/fₙ₋₁?",
+      "context": "f₀=1; fₙ=n fₙ₋₁ for n≥1. Introductory recurrence solving and algorithm analysis may vary by course section.",
+      "options": [
+        "n²",
+        "2n",
+        "n",
+        "n−1"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Compute a few initial terms, then check a proposed rule at the base indices and in the recurrence.",
+        "A pattern must satisfy every initial value and the recurrence itself. Substitute the candidate at a general index to check the transition."
+      ],
+      "explanation": {
+        "learning_objective": "Apply factorial recurrence with explicit justification.",
+        "correct_rationale": "Every preceding factorial is nonzero; divide the recurrence by f_(n−1).",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. Every preceding factorial is nonzero; divide the recurrence by f_(n−1)."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. Every preceding factorial is nonzero; divide the recurrence by f_(n−1)."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. Every preceding factorial is nonzero; divide the recurrence by f_(n−1)."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "recurrence-case",
+        "case": 6,
+        "query": 3
+      }
+    },
+    {
+      "id": "recurrences-029",
+      "topic": "Fibonacci recurrence",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "What is F₇?",
+      "context": "F₀=0,F₁=1; Fₙ=Fₙ₋₁+Fₙ₋₂ for n≥2. Introductory recurrence solving and algorithm analysis may vary by course section.",
+      "options": [
+        "12",
+        "21",
+        "13",
+        "8"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Compute a few initial terms, then check a proposed rule at the base indices and in the recurrence.",
+        "A pattern must satisfy every initial value and the recurrence itself. Substitute the candidate at a general index to check the transition."
+      ],
+      "explanation": {
+        "learning_objective": "Apply fibonacci recurrence with explicit justification.",
+        "correct_rationale": "The sequence is 0,1,1,2,3,5,8,13.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. The sequence is 0,1,1,2,3,5,8,13."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. The sequence is 0,1,1,2,3,5,8,13."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. The sequence is 0,1,1,2,3,5,8,13."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "recurrence-case",
+        "case": 7,
+        "query": 0
+      }
+    },
+    {
+      "id": "recurrences-030",
+      "topic": "Fibonacci recurrence",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "How many initial values are needed?",
+      "context": "F₀=0,F₁=1; Fₙ=Fₙ₋₁+Fₙ₋₂ for n≥2. Introductory recurrence solving and algorithm analysis may vary by course section.",
+      "options": [
+        "0",
+        "1",
+        "3",
+        "2"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Compute a few initial terms, then check a proposed rule at the base indices and in the recurrence.",
+        "A pattern must satisfy every initial value and the recurrence itself. Substitute the candidate at a general index to check the transition."
+      ],
+      "explanation": {
+        "learning_objective": "Apply fibonacci recurrence with explicit justification.",
+        "correct_rationale": "The second-order recurrence references two previous indices.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. The second-order recurrence references two previous indices."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. The second-order recurrence references two previous indices."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. The second-order recurrence references two previous indices."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "recurrence-case",
+        "case": 7,
+        "query": 1
+      }
+    },
+    {
+      "id": "recurrences-031",
+      "topic": "Fibonacci recurrence",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "What is the characteristic equation?",
+      "context": "F₀=0,F₁=1; Fₙ=Fₙ₋₁+Fₙ₋₂ for n≥2. Introductory recurrence solving and algorithm analysis may vary by course section.",
+      "options": [
+        "r²−1=0",
+        "r²−r−1=0",
+        "r−2=0",
+        "r²+r+1=0"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Compute a few initial terms, then check a proposed rule at the base indices and in the recurrence.",
+        "A pattern must satisfy every initial value and the recurrence itself. Substitute the candidate at a general index to check the transition."
+      ],
+      "explanation": {
+        "learning_objective": "Apply fibonacci recurrence with explicit justification.",
+        "correct_rationale": "Substitute r^n=r^(n−1)+r^(n−2) and divide by r^(n−2).",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. Substitute r^n=r^(n−1)+r^(n−2) and divide by r^(n−2)."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. Substitute r^n=r^(n−1)+r^(n−2) and divide by r^(n−2)."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. Substitute r^n=r^(n−1)+r^(n−2) and divide by r^(n−2)."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "recurrence-case",
+        "case": 7,
+        "query": 2
+      }
+    },
+    {
+      "id": "recurrences-032",
+      "topic": "Fibonacci recurrence",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "Why is ordinary one-case substitution at n−1 insufficient for an induction proof?",
+      "context": "F₀=0,F₁=1; Fₙ=Fₙ₋₁+Fₙ₋₂ for n≥2. Introductory recurrence solving and algorithm analysis may vary by course section.",
+      "options": [
+        "The previous term must always be zero",
+        "The recurrence also uses n−2",
+        "The recurrence has no base cases",
+        "Induction cannot prove sequences"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Compute a few initial terms, then check a proposed rule at the base indices and in the recurrence.",
+        "A pattern must satisfy every initial value and the recurrence itself. Substitute the candidate at a general index to check the transition."
+      ],
+      "explanation": {
+        "learning_objective": "Apply fibonacci recurrence with explicit justification.",
+        "correct_rationale": "To evaluate F_n through the recurrence, the proof must know formulas at both prior indices; use two bases and a suitable hypothesis.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. To evaluate F_n through the recurrence, the proof must know formulas at both prior indices; use two bases and a suitable hypothesis."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. To evaluate F_n through the recurrence, the proof must know formulas at both prior indices; use two bases and a suitable hypothesis."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. To evaluate F_n through the recurrence, the proof must know formulas at both prior indices; use two bases and a suitable hypothesis."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "recurrence-case",
+        "case": 7,
+        "query": 3
+      }
+    },
+    {
+      "id": "recurrences-033",
+      "topic": "Pell-style recurrence",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What is p₄?",
+      "context": "p₀=0,p₁=1; pₙ=2pₙ₋₁+pₙ₋₂ for n≥2. Introductory recurrence solving and algorithm analysis may vary by course section.",
+      "options": [
+        "12",
+        "10",
+        "14",
+        "7"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Compute a few initial terms, then check a proposed rule at the base indices and in the recurrence.",
+        "A pattern must satisfy every initial value and the recurrence itself. Substitute the candidate at a general index to check the transition."
+      ],
+      "explanation": {
+        "learning_objective": "Apply pell-style recurrence with explicit justification.",
+        "correct_rationale": "Terms are 0,1,2,5,12.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. Terms are 0,1,2,5,12."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. Terms are 0,1,2,5,12."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. Terms are 0,1,2,5,12."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "recurrence-case",
+        "case": 8,
+        "query": 0
+      }
+    },
+    {
+      "id": "recurrences-034",
+      "topic": "Pell-style recurrence",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What is the characteristic equation?",
+      "context": "p₀=0,p₁=1; pₙ=2pₙ₋₁+pₙ₋₂ for n≥2. Introductory recurrence solving and algorithm analysis may vary by course section.",
+      "options": [
+        "r²−r−1=0",
+        "r²−2r−1=0",
+        "r²+2r+1=0",
+        "r²−2=0"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Compute a few initial terms, then check a proposed rule at the base indices and in the recurrence.",
+        "A pattern must satisfy every initial value and the recurrence itself. Substitute the candidate at a general index to check the transition."
+      ],
+      "explanation": {
+        "learning_objective": "Apply pell-style recurrence with explicit justification.",
+        "correct_rationale": "Substitute r^n=2r^(n−1)+r^(n−2).",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. Substitute r^n=2r^(n−1)+r^(n−2)."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. Substitute r^n=2r^(n−1)+r^(n−2)."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. Substitute r^n=2r^(n−1)+r^(n−2)."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "recurrence-case",
+        "case": 8,
+        "query": 1
+      }
+    },
+    {
+      "id": "recurrences-035",
+      "topic": "Pell-style recurrence",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What are its characteristic roots?",
+      "context": "p₀=0,p₁=1; pₙ=2pₙ₋₁+pₙ₋₂ for n≥2. Introductory recurrence solving and algorithm analysis may vary by course section.",
+      "options": [
+        "√2 and −√2",
+        "1 and 2",
+        "2 and −1",
+        "1+√2 and 1−√2"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Compute a few initial terms, then check a proposed rule at the base indices and in the recurrence.",
+        "A pattern must satisfy every initial value and the recurrence itself. Substitute the candidate at a general index to check the transition."
+      ],
+      "explanation": {
+        "learning_objective": "Apply pell-style recurrence with explicit justification.",
+        "correct_rationale": "The quadratic formula gives [2±√8]/2=1±√2.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. The quadratic formula gives [2±√8]/2=1±√2."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. The quadratic formula gives [2±√8]/2=1±√2."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. The quadratic formula gives [2±√8]/2=1±√2."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "recurrence-case",
+        "case": 8,
+        "query": 2
+      }
+    },
+    {
+      "id": "recurrences-036",
+      "topic": "Pell-style recurrence",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Which term follows 12?",
+      "context": "p₀=0,p₁=1; pₙ=2pₙ₋₁+pₙ₋₂ for n≥2. Introductory recurrence solving and algorithm analysis may vary by course section.",
+      "options": [
+        "24",
+        "27",
+        "34",
+        "29"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Compute a few initial terms, then check a proposed rule at the base indices and in the recurrence.",
+        "A pattern must satisfy every initial value and the recurrence itself. Substitute the candidate at a general index to check the transition."
+      ],
+      "explanation": {
+        "learning_objective": "Apply pell-style recurrence with explicit justification.",
+        "correct_rationale": "p₅=2p₄+p₃=2·12+5=29.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. p₅=2p₄+p₃=2·12+5=29."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. p₅=2p₄+p₃=2·12+5=29."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. p₅=2p₄+p₃=2·12+5=29."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "recurrence-case",
+        "case": 8,
+        "query": 3
+      }
+    },
+    {
+      "id": "recurrences-037",
+      "topic": "Repeated characteristic root",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What is a₅?",
+      "context": "a₀=0,a₁=1; aₙ=2aₙ₋₁−aₙ₋₂ for n≥2. Introductory recurrence solving and algorithm analysis may vary by course section.",
+      "options": [
+        "5",
+        "4",
+        "8",
+        "6"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Compute a few initial terms, then check a proposed rule at the base indices and in the recurrence.",
+        "A pattern must satisfy every initial value and the recurrence itself. Substitute the candidate at a general index to check the transition."
+      ],
+      "explanation": {
+        "learning_objective": "Apply repeated characteristic root with explicit justification.",
+        "correct_rationale": "The initial difference is 1 and the recurrence preserves that difference, so terms are 0,1,2,3,4,5.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. The initial difference is 1 and the recurrence preserves that difference, so terms are 0,1,2,3,4,5."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. The initial difference is 1 and the recurrence preserves that difference, so terms are 0,1,2,3,4,5."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. The initial difference is 1 and the recurrence preserves that difference, so terms are 0,1,2,3,4,5."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "recurrence-case",
+        "case": 9,
+        "query": 0
+      }
+    },
+    {
+      "id": "recurrences-038",
+      "topic": "Repeated characteristic root",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Which closed form is correct?",
+      "context": "a₀=0,a₁=1; aₙ=2aₙ₋₁−aₙ₋₂ for n≥2. Introductory recurrence solving and algorithm analysis may vary by course section.",
+      "options": [
+        "aₙ=2ⁿ",
+        "aₙ=1",
+        "aₙ=n",
+        "aₙ=n²"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Compute a few initial terms, then check a proposed rule at the base indices and in the recurrence.",
+        "A pattern must satisfy every initial value and the recurrence itself. Substitute the candidate at a general index to check the transition."
+      ],
+      "explanation": {
+        "learning_objective": "Apply repeated characteristic root with explicit justification.",
+        "correct_rationale": "Substituting 2(n−1)−(n−2)=n verifies the recurrence and the two bases.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. Substituting 2(n−1)−(n−2)=n verifies the recurrence and the two bases."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. Substituting 2(n−1)−(n−2)=n verifies the recurrence and the two bases."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. Substituting 2(n−1)−(n−2)=n verifies the recurrence and the two bases."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "recurrence-case",
+        "case": 9,
+        "query": 1
+      }
+    },
+    {
+      "id": "recurrences-039",
+      "topic": "Repeated characteristic root",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Which characteristic polynomial is correct?",
+      "context": "a₀=0,a₁=1; aₙ=2aₙ₋₁−aₙ₋₂ for n≥2. Introductory recurrence solving and algorithm analysis may vary by course section.",
+      "options": [
+        "(r+1)²",
+        "r−2",
+        "(r−1)²",
+        "r²−1"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Compute a few initial terms, then check a proposed rule at the base indices and in the recurrence.",
+        "A pattern must satisfy every initial value and the recurrence itself. Substitute the candidate at a general index to check the transition."
+      ],
+      "explanation": {
+        "learning_objective": "Apply repeated characteristic root with explicit justification.",
+        "correct_rationale": "r²−2r+1 factors as (r−1)².",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. r²−2r+1 factors as (r−1)²."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. r²−2r+1 factors as (r−1)²."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. r²−2r+1 factors as (r−1)²."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "recurrence-case",
+        "case": 9,
+        "query": 2
+      }
+    },
+    {
+      "id": "recurrences-040",
+      "topic": "Repeated characteristic root",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Which general solution form accommodates the repeated root?",
+      "context": "a₀=0,a₁=1; aₙ=2aₙ₋₁−aₙ₋₂ for n≥2. Introductory recurrence solving and algorithm analysis may vary by course section.",
+      "options": [
+        "A+Bn",
+        "A·2ⁿ+B",
+        "A·n²+B",
+        "A+B·(−1)ⁿ"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Compute a few initial terms, then check a proposed rule at the base indices and in the recurrence.",
+        "A pattern must satisfy every initial value and the recurrence itself. Substitute the candidate at a general index to check the transition."
+      ],
+      "explanation": {
+        "learning_objective": "Apply repeated characteristic root with explicit justification.",
+        "correct_rationale": "A root 1 of multiplicity two gives (A+Bn)1^n; two initial conditions determine A,B.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. A root 1 of multiplicity two gives (A+Bn)1^n; two initial conditions determine A,B."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. A root 1 of multiplicity two gives (A+Bn)1^n; two initial conditions determine A,B."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. A root 1 of multiplicity two gives (A+Bn)1^n; two initial conditions determine A,B."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "recurrence-case",
+        "case": 9,
+        "query": 3
+      }
+    },
+    {
+      "id": "recurrences-041",
+      "topic": "Distinct characteristic roots",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What is a₄?",
+      "context": "a₀=2,a₁=3; aₙ=3aₙ₋₁−2aₙ₋₂ for n≥2. Introductory recurrence solving and algorithm analysis may vary by course section.",
+      "options": [
+        "16",
+        "17",
+        "18",
+        "9"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Compute a few initial terms, then check a proposed rule at the base indices and in the recurrence.",
+        "A pattern must satisfy every initial value and the recurrence itself. Substitute the candidate at a general index to check the transition."
+      ],
+      "explanation": {
+        "learning_objective": "Apply distinct characteristic roots with explicit justification.",
+        "correct_rationale": "The terms are 2,3,5,9,17.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. The terms are 2,3,5,9,17."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. The terms are 2,3,5,9,17."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. The terms are 2,3,5,9,17."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "recurrence-case",
+        "case": 10,
+        "query": 0
+      }
+    },
+    {
+      "id": "recurrences-042",
+      "topic": "Distinct characteristic roots",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Which characteristic roots occur?",
+      "context": "a₀=2,a₁=3; aₙ=3aₙ₋₁−2aₙ₋₂ for n≥2. Introductory recurrence solving and algorithm analysis may vary by course section.",
+      "options": [
+        "2 and 3",
+        "1 and 2",
+        "−1 and −2",
+        "1 and 3"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Compute a few initial terms, then check a proposed rule at the base indices and in the recurrence.",
+        "A pattern must satisfy every initial value and the recurrence itself. Substitute the candidate at a general index to check the transition."
+      ],
+      "explanation": {
+        "learning_objective": "Apply distinct characteristic roots with explicit justification.",
+        "correct_rationale": "r²−3r+2=(r−1)(r−2).",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. r²−3r+2=(r−1)(r−2)."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. r²−3r+2=(r−1)(r−2)."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. r²−3r+2=(r−1)(r−2)."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "recurrence-case",
+        "case": 10,
+        "query": 1
+      }
+    },
+    {
+      "id": "recurrences-043",
+      "topic": "Distinct characteristic roots",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Which closed form satisfies the bases?",
+      "context": "a₀=2,a₁=3; aₙ=3aₙ₋₁−2aₙ₋₂ for n≥2. Introductory recurrence solving and algorithm analysis may vary by course section.",
+      "options": [
+        "aₙ=3ⁿ",
+        "aₙ=2+3n",
+        "aₙ=2ⁿ",
+        "aₙ=1+2ⁿ"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Compute a few initial terms, then check a proposed rule at the base indices and in the recurrence.",
+        "A pattern must satisfy every initial value and the recurrence itself. Substitute the candidate at a general index to check the transition."
+      ],
+      "explanation": {
+        "learning_objective": "Apply distinct characteristic roots with explicit justification.",
+        "correct_rationale": "At n=0 and 1 it gives 2 and 3; each root’s power satisfies the recurrence.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. At n=0 and 1 it gives 2 and 3; each root’s power satisfies the recurrence."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. At n=0 and 1 it gives 2 and 3; each root’s power satisfies the recurrence."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. At n=0 and 1 it gives 2 and 3; each root’s power satisfies the recurrence."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "recurrence-case",
+        "case": 10,
+        "query": 2
+      }
+    },
+    {
+      "id": "recurrences-044",
+      "topic": "Distinct characteristic roots",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What is its growth order?",
+      "context": "a₀=2,a₁=3; aₙ=3aₙ₋₁−2aₙ₋₂ for n≥2. Introductory recurrence solving and algorithm analysis may vary by course section.",
+      "options": [
+        "Θ(n²)",
+        "Θ(n)",
+        "Θ(log n)",
+        "Θ(2ⁿ)"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Compute a few initial terms, then check a proposed rule at the base indices and in the recurrence.",
+        "A pattern must satisfy every initial value and the recurrence itself. Substitute the candidate at a general index to check the transition."
+      ],
+      "explanation": {
+        "learning_objective": "Apply distinct characteristic roots with explicit justification.",
+        "correct_rationale": "The constant term 1 is dominated by 2^n.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. The constant term 1 is dominated by 2^n."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. The constant term 1 is dominated by 2^n."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. The constant term 1 is dominated by 2^n."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "recurrence-case",
+        "case": 10,
+        "query": 3
+      }
+    },
+    {
+      "id": "recurrences-045",
+      "topic": "Alternating signs",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What is a₇?",
+      "context": "a₀=1; aₙ=−aₙ₋₁ for n≥1. Introductory recurrence solving and algorithm analysis may vary by course section.",
+      "options": [
+        "−1",
+        "1",
+        "−2",
+        "0"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Compute a few initial terms, then check a proposed rule at the base indices and in the recurrence.",
+        "A pattern must satisfy every initial value and the recurrence itself. Substitute the candidate at a general index to check the transition."
+      ],
+      "explanation": {
+        "learning_objective": "Apply alternating signs with explicit justification.",
+        "correct_rationale": "Each step changes the sign; an odd index has value −1.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. Each step changes the sign; an odd index has value −1."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. Each step changes the sign; an odd index has value −1."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. Each step changes the sign; an odd index has value −1."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "recurrence-case",
+        "case": 11,
+        "query": 0
+      }
+    },
+    {
+      "id": "recurrences-046",
+      "topic": "Alternating signs",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Which closed form is correct?",
+      "context": "a₀=1; aₙ=−aₙ₋₁ for n≥1. Introductory recurrence solving and algorithm analysis may vary by course section.",
+      "options": [
+        "aₙ=(−2)ⁿ",
+        "aₙ=1",
+        "aₙ=−n",
+        "aₙ=(−1)ⁿ"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Compute a few initial terms, then check a proposed rule at the base indices and in the recurrence.",
+        "A pattern must satisfy every initial value and the recurrence itself. Substitute the candidate at a general index to check the transition."
+      ],
+      "explanation": {
+        "learning_objective": "Apply alternating signs with explicit justification.",
+        "correct_rationale": "A factor −1 is introduced at each of n steps.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. A factor −1 is introduced at each of n steps."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. A factor −1 is introduced at each of n steps."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. A factor −1 is introduced at each of n steps."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "recurrence-case",
+        "case": 11,
+        "query": 1
+      }
+    },
+    {
+      "id": "recurrences-047",
+      "topic": "Alternating signs",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What is the smallest positive period?",
+      "context": "a₀=1; aₙ=−aₙ₋₁ for n≥1. Introductory recurrence solving and algorithm analysis may vary by course section.",
+      "options": [
+        "2",
+        "3",
+        "1",
+        "0"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Compute a few initial terms, then check a proposed rule at the base indices and in the recurrence.",
+        "A pattern must satisfy every initial value and the recurrence itself. Substitute the candidate at a general index to check the transition."
+      ],
+      "explanation": {
+        "learning_objective": "Apply alternating signs with explicit justification.",
+        "correct_rationale": "The values repeat 1,−1 with period two, not one.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. The values repeat 1,−1 with period two, not one."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. The values repeat 1,−1 with period two, not one."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. The values repeat 1,−1 with period two, not one."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "recurrence-case",
+        "case": 11,
+        "query": 2
+      }
+    },
+    {
+      "id": "recurrences-048",
+      "topic": "Alternating signs",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Does this sequence converge over the reals?",
+      "context": "a₀=1; aₙ=−aₙ₋₁ for n≥1. Introductory recurrence solving and algorithm analysis may vary by course section.",
+      "options": [
+        "Yes, the limit is −1 because a₁=−1",
+        "Yes, the limit is 1 because a₀=1",
+        "No, its even and odd subsequences have different limits",
+        "Yes, the limit is 0 because the values cancel"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Compute a few initial terms, then check a proposed rule at the base indices and in the recurrence.",
+        "A pattern must satisfy every initial value and the recurrence itself. Substitute the candidate at a general index to check the transition."
+      ],
+      "explanation": {
+        "learning_objective": "Apply alternating signs with explicit justification.",
+        "correct_rationale": "Even indices are 1 and odd indices are −1, so no single limit exists.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. Even indices are 1 and odd indices are −1, so no single limit exists."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. Even indices are 1 and odd indices are −1, so no single limit exists."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. Even indices are 1 and odd indices are −1, so no single limit exists."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "recurrence-case",
+        "case": 11,
+        "query": 3
+      }
+    },
+    {
+      "id": "recurrences-049",
+      "topic": "Alternating increments",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What is a₄?",
+      "context": "a₀=0; aₙ=aₙ₋₁+(−1)ⁿ for n≥1. Introductory recurrence solving and algorithm analysis may vary by course section.",
+      "options": [
+        "2",
+        "0",
+        "−1",
+        "1"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Compute a few initial terms, then check a proposed rule at the base indices and in the recurrence.",
+        "A pattern must satisfy every initial value and the recurrence itself. Substitute the candidate at a general index to check the transition."
+      ],
+      "explanation": {
+        "learning_objective": "Apply alternating increments with explicit justification.",
+        "correct_rationale": "The increments −1,+1,−1,+1 cancel.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. The increments −1,+1,−1,+1 cancel."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. The increments −1,+1,−1,+1 cancel."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. The increments −1,+1,−1,+1 cancel."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "recurrence-case",
+        "case": 12,
+        "query": 0
+      }
+    },
+    {
+      "id": "recurrences-050",
+      "topic": "Alternating increments",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What is a₅?",
+      "context": "a₀=0; aₙ=aₙ₋₁+(−1)ⁿ for n≥1. Introductory recurrence solving and algorithm analysis may vary by course section.",
+      "options": [
+        "0",
+        "−1",
+        "−2",
+        "1"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Compute a few initial terms, then check a proposed rule at the base indices and in the recurrence.",
+        "A pattern must satisfy every initial value and the recurrence itself. Substitute the candidate at a general index to check the transition."
+      ],
+      "explanation": {
+        "learning_objective": "Apply alternating increments with explicit justification.",
+        "correct_rationale": "After a₄=0, the fifth increment is −1.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. After a₄=0, the fifth increment is −1."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. After a₄=0, the fifth increment is −1."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This does not match the recurrence, its initial values, or the requested reasoning. After a₄=0, the fifth increment is −1."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "recurrence-case",
+        "case": 12,
+        "query": 1
+      }
+    }
+  ]
+}

@@ -1,0 +1,3029 @@
+{
+  "schema_version": 1,
+  "block_id": "sets-block-01",
+  "pillar_id": "sets",
+  "block_title": "Sets, relations, and functions · Block 1",
+  "questions": [
+    {
+      "id": "sets-001",
+      "topic": "Predicate-defined sets",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "What is A∪B in this universe?",
+      "context": "U={1,…,8}; A consists of even elements and B of primes.",
+      "options": [
+        "{3, 5, 7}",
+        "{4, 6, 8}",
+        "{2}",
+        "{2, 3, 4, 5, 6, 7, 8}"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Translate the operation into a condition on one arbitrary element.",
+        "Test set membership element by element. For a relation or function, look for a missing pair, collision, or unattained output."
+      ],
+      "explanation": {
+        "learning_objective": "Apply predicate-defined sets with explicit justification.",
+        "correct_rationale": "A union contains elements in either set. From A={2, 4, 6, 8} and B={2, 3, 5, 7}, the result is {2, 3, 4, 5, 6, 7, 8}.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This set has different membership from the required result. A union contains elements in either set. From A={2, 4, 6, 8} and B={2, 3, 5, 7}, the result is {2, 3, 4, 5, 6, 7, 8}."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This set has different membership from the required result. A union contains elements in either set. From A={2, 4, 6, 8} and B={2, 3, 5, 7}, the result is {2, 3, 4, 5, 6, 7, 8}."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This set has different membership from the required result. A union contains elements in either set. From A={2, 4, 6, 8} and B={2, 3, 5, 7}, the result is {2, 3, 4, 5, 6, 7, 8}."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "set-operation",
+        "operation": "A∪B",
+        "a": [
+          2,
+          4,
+          6,
+          8
+        ],
+        "b": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "expected": [
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ]
+      }
+    },
+    {
+      "id": "sets-002",
+      "topic": "Predicate-defined sets",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "What is A∩B in this universe?",
+      "context": "U={1,…,8}; A consists of even elements and B of primes.",
+      "options": [
+        "{4, 6, 8}",
+        "{3, 5, 7}",
+        "{2, 3, 4, 5, 6, 7, 8}",
+        "{2}"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Translate the operation into a condition on one arbitrary element.",
+        "Test set membership element by element. For a relation or function, look for a missing pair, collision, or unattained output."
+      ],
+      "explanation": {
+        "learning_objective": "Apply predicate-defined sets with explicit justification.",
+        "correct_rationale": "An intersection contains only elements shared by both sets. From A={2, 4, 6, 8} and B={2, 3, 5, 7}, the result is {2}.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This set has different membership from the required result. An intersection contains only elements shared by both sets. From A={2, 4, 6, 8} and B={2, 3, 5, 7}, the result is {2}."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This set has different membership from the required result. An intersection contains only elements shared by both sets. From A={2, 4, 6, 8} and B={2, 3, 5, 7}, the result is {2}."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This set has different membership from the required result. An intersection contains only elements shared by both sets. From A={2, 4, 6, 8} and B={2, 3, 5, 7}, the result is {2}."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "set-operation",
+        "operation": "A∩B",
+        "a": [
+          2,
+          4,
+          6,
+          8
+        ],
+        "b": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "expected": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "sets-003",
+      "topic": "Predicate-defined sets",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "What is A\\B in this universe?",
+      "context": "U={1,…,8}; A consists of even elements and B of primes.",
+      "options": [
+        "{2}",
+        "{3, 5, 7}",
+        "{4, 6, 8}",
+        "{2, 3, 4, 5, 6, 7, 8}"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Translate the operation into a condition on one arbitrary element.",
+        "Test set membership element by element. For a relation or function, look for a missing pair, collision, or unattained output."
+      ],
+      "explanation": {
+        "learning_objective": "Apply predicate-defined sets with explicit justification.",
+        "correct_rationale": "A difference retains elements of A that are absent from B. From A={2, 4, 6, 8} and B={2, 3, 5, 7}, the result is {4, 6, 8}.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This set has different membership from the required result. A difference retains elements of A that are absent from B. From A={2, 4, 6, 8} and B={2, 3, 5, 7}, the result is {4, 6, 8}."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This set has different membership from the required result. A difference retains elements of A that are absent from B. From A={2, 4, 6, 8} and B={2, 3, 5, 7}, the result is {4, 6, 8}."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This set has different membership from the required result. A difference retains elements of A that are absent from B. From A={2, 4, 6, 8} and B={2, 3, 5, 7}, the result is {4, 6, 8}."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "set-operation",
+        "operation": "A\\B",
+        "a": [
+          2,
+          4,
+          6,
+          8
+        ],
+        "b": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "expected": [
+          4,
+          6,
+          8
+        ]
+      }
+    },
+    {
+      "id": "sets-004",
+      "topic": "Predicate-defined sets",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "What is A△B in this universe?",
+      "context": "U={1,…,8}; A consists of even elements and B of primes.",
+      "options": [
+        "{2, 3, 4, 5, 6, 7, 8}",
+        "{3, 4, 5, 6, 7, 8}",
+        "{2}",
+        "{4, 6, 8}"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Translate the operation into a condition on one arbitrary element.",
+        "Test set membership element by element. For a relation or function, look for a missing pair, collision, or unattained output."
+      ],
+      "explanation": {
+        "learning_objective": "Apply predicate-defined sets with explicit justification.",
+        "correct_rationale": "A symmetric difference contains elements in exactly one of the sets. From A={2, 4, 6, 8} and B={2, 3, 5, 7}, the result is {3, 4, 5, 6, 7, 8}.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This set has different membership from the required result. A symmetric difference contains elements in exactly one of the sets. From A={2, 4, 6, 8} and B={2, 3, 5, 7}, the result is {3, 4, 5, 6, 7, 8}."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This set has different membership from the required result. A symmetric difference contains elements in exactly one of the sets. From A={2, 4, 6, 8} and B={2, 3, 5, 7}, the result is {3, 4, 5, 6, 7, 8}."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This set has different membership from the required result. A symmetric difference contains elements in exactly one of the sets. From A={2, 4, 6, 8} and B={2, 3, 5, 7}, the result is {3, 4, 5, 6, 7, 8}."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "set-operation",
+        "operation": "A△B",
+        "a": [
+          2,
+          4,
+          6,
+          8
+        ],
+        "b": [
+          2,
+          3,
+          5,
+          7
+        ],
+        "expected": [
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ]
+      }
+    },
+    {
+      "id": "sets-005",
+      "topic": "Binary-word sets",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "What is A∪B in this universe?",
+      "context": "U is the set of two-bit words; A has leading bit 1, B has trailing bit 1.",
+      "options": [
+        "{01}",
+        "{01, 10, 11}",
+        "{10}",
+        "{11}"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Translate the operation into a condition on one arbitrary element.",
+        "Test set membership element by element. For a relation or function, look for a missing pair, collision, or unattained output."
+      ],
+      "explanation": {
+        "learning_objective": "Apply binary-word sets with explicit justification.",
+        "correct_rationale": "A union contains elements in either set. From A={10, 11} and B={01, 11}, the result is {01, 10, 11}.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This set has different membership from the required result. A union contains elements in either set. From A={10, 11} and B={01, 11}, the result is {01, 10, 11}."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This set has different membership from the required result. A union contains elements in either set. From A={10, 11} and B={01, 11}, the result is {01, 10, 11}."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This set has different membership from the required result. A union contains elements in either set. From A={10, 11} and B={01, 11}, the result is {01, 10, 11}."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "set-operation",
+        "operation": "A∪B",
+        "a": [
+          "10",
+          "11"
+        ],
+        "b": [
+          "01",
+          "11"
+        ],
+        "expected": [
+          "01",
+          "10",
+          "11"
+        ]
+      }
+    },
+    {
+      "id": "sets-006",
+      "topic": "Binary-word sets",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "What is A∩B in this universe?",
+      "context": "U is the set of two-bit words; A has leading bit 1, B has trailing bit 1.",
+      "options": [
+        "{11}",
+        "{01}",
+        "{10}",
+        "{01, 10, 11}"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Translate the operation into a condition on one arbitrary element.",
+        "Test set membership element by element. For a relation or function, look for a missing pair, collision, or unattained output."
+      ],
+      "explanation": {
+        "learning_objective": "Apply binary-word sets with explicit justification.",
+        "correct_rationale": "An intersection contains only elements shared by both sets. From A={10, 11} and B={01, 11}, the result is {11}.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "This set has different membership from the required result. An intersection contains only elements shared by both sets. From A={10, 11} and B={01, 11}, the result is {11}."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This set has different membership from the required result. An intersection contains only elements shared by both sets. From A={10, 11} and B={01, 11}, the result is {11}."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This set has different membership from the required result. An intersection contains only elements shared by both sets. From A={10, 11} and B={01, 11}, the result is {11}."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "set-operation",
+        "operation": "A∩B",
+        "a": [
+          "10",
+          "11"
+        ],
+        "b": [
+          "01",
+          "11"
+        ],
+        "expected": [
+          "11"
+        ]
+      }
+    },
+    {
+      "id": "sets-007",
+      "topic": "Binary-word sets",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "What is A\\B in this universe?",
+      "context": "U is the set of two-bit words; A has leading bit 1, B has trailing bit 1.",
+      "options": [
+        "{11}",
+        "{10}",
+        "{01}",
+        "{01, 10, 11}"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Translate the operation into a condition on one arbitrary element.",
+        "Test set membership element by element. For a relation or function, look for a missing pair, collision, or unattained output."
+      ],
+      "explanation": {
+        "learning_objective": "Apply binary-word sets with explicit justification.",
+        "correct_rationale": "A difference retains elements of A that are absent from B. From A={10, 11} and B={01, 11}, the result is {10}.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This set has different membership from the required result. A difference retains elements of A that are absent from B. From A={10, 11} and B={01, 11}, the result is {10}."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This set has different membership from the required result. A difference retains elements of A that are absent from B. From A={10, 11} and B={01, 11}, the result is {10}."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This set has different membership from the required result. A difference retains elements of A that are absent from B. From A={10, 11} and B={01, 11}, the result is {10}."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "set-operation",
+        "operation": "A\\B",
+        "a": [
+          "10",
+          "11"
+        ],
+        "b": [
+          "01",
+          "11"
+        ],
+        "expected": [
+          "10"
+        ]
+      }
+    },
+    {
+      "id": "sets-008",
+      "topic": "Binary-word sets",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "What is A△B in this universe?",
+      "context": "U is the set of two-bit words; A has leading bit 1, B has trailing bit 1.",
+      "options": [
+        "{11}",
+        "{01, 10}",
+        "{10}",
+        "{01, 10, 11}"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Translate the operation into a condition on one arbitrary element.",
+        "Test set membership element by element. For a relation or function, look for a missing pair, collision, or unattained output."
+      ],
+      "explanation": {
+        "learning_objective": "Apply binary-word sets with explicit justification.",
+        "correct_rationale": "A symmetric difference contains elements in exactly one of the sets. From A={10, 11} and B={01, 11}, the result is {01, 10}.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This set has different membership from the required result. A symmetric difference contains elements in exactly one of the sets. From A={10, 11} and B={01, 11}, the result is {01, 10}."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This set has different membership from the required result. A symmetric difference contains elements in exactly one of the sets. From A={10, 11} and B={01, 11}, the result is {01, 10}."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This set has different membership from the required result. A symmetric difference contains elements in exactly one of the sets. From A={10, 11} and B={01, 11}, the result is {01, 10}."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "set-operation",
+        "operation": "A△B",
+        "a": [
+          "10",
+          "11"
+        ],
+        "b": [
+          "01",
+          "11"
+        ],
+        "expected": [
+          "01",
+          "10"
+        ]
+      }
+    },
+    {
+      "id": "sets-009",
+      "topic": "Nested membership",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "What is A∪B in this universe?",
+      "context": "U={∅,{1},{2},{1,2}}; A={∅,{1}}, B={{1},{1,2}}. Each displayed element of U is itself a set.",
+      "options": [
+        "{{1,2}}",
+        "{∅}",
+        "{{1}}",
+        "{{1,2}, {1}, ∅}"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Translate the operation into a condition on one arbitrary element.",
+        "Test set membership element by element. For a relation or function, look for a missing pair, collision, or unattained output."
+      ],
+      "explanation": {
+        "learning_objective": "Apply nested membership with explicit justification.",
+        "correct_rationale": "A union contains elements in either set. From A={{1}, ∅} and B={{1,2}, {1}}, the result is {{1,2}, {1}, ∅}.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This set has different membership from the required result. A union contains elements in either set. From A={{1}, ∅} and B={{1,2}, {1}}, the result is {{1,2}, {1}, ∅}."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This set has different membership from the required result. A union contains elements in either set. From A={{1}, ∅} and B={{1,2}, {1}}, the result is {{1,2}, {1}, ∅}."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This set has different membership from the required result. A union contains elements in either set. From A={{1}, ∅} and B={{1,2}, {1}}, the result is {{1,2}, {1}, ∅}."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "set-operation",
+        "operation": "A∪B",
+        "a": [
+          "{1}",
+          "∅"
+        ],
+        "b": [
+          "{1,2}",
+          "{1}"
+        ],
+        "expected": [
+          "{1,2}",
+          "{1}",
+          "∅"
+        ]
+      }
+    },
+    {
+      "id": "sets-010",
+      "topic": "Nested membership",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "What is A∩B in this universe?",
+      "context": "U={∅,{1},{2},{1,2}}; A={∅,{1}}, B={{1},{1,2}}. Each displayed element of U is itself a set.",
+      "options": [
+        "{{1,2}}",
+        "{{1}}",
+        "{{1,2}, {1}, ∅}",
+        "{∅}"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Translate the operation into a condition on one arbitrary element.",
+        "Test set membership element by element. For a relation or function, look for a missing pair, collision, or unattained output."
+      ],
+      "explanation": {
+        "learning_objective": "Apply nested membership with explicit justification.",
+        "correct_rationale": "An intersection contains only elements shared by both sets. From A={{1}, ∅} and B={{1,2}, {1}}, the result is {{1}}.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This set has different membership from the required result. An intersection contains only elements shared by both sets. From A={{1}, ∅} and B={{1,2}, {1}}, the result is {{1}}."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This set has different membership from the required result. An intersection contains only elements shared by both sets. From A={{1}, ∅} and B={{1,2}, {1}}, the result is {{1}}."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This set has different membership from the required result. An intersection contains only elements shared by both sets. From A={{1}, ∅} and B={{1,2}, {1}}, the result is {{1}}."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "set-operation",
+        "operation": "A∩B",
+        "a": [
+          "{1}",
+          "∅"
+        ],
+        "b": [
+          "{1,2}",
+          "{1}"
+        ],
+        "expected": [
+          "{1}"
+        ]
+      }
+    },
+    {
+      "id": "sets-011",
+      "topic": "Nested membership",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "What is A\\B in this universe?",
+      "context": "U={∅,{1},{2},{1,2}}; A={∅,{1}}, B={{1},{1,2}}. Each displayed element of U is itself a set.",
+      "options": [
+        "{{1,2}, {1}, ∅}",
+        "{∅}",
+        "{{1,2}}",
+        "{{1}}"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Translate the operation into a condition on one arbitrary element.",
+        "Test set membership element by element. For a relation or function, look for a missing pair, collision, or unattained output."
+      ],
+      "explanation": {
+        "learning_objective": "Apply nested membership with explicit justification.",
+        "correct_rationale": "A difference retains elements of A that are absent from B. From A={{1}, ∅} and B={{1,2}, {1}}, the result is {∅}.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This set has different membership from the required result. A difference retains elements of A that are absent from B. From A={{1}, ∅} and B={{1,2}, {1}}, the result is {∅}."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This set has different membership from the required result. A difference retains elements of A that are absent from B. From A={{1}, ∅} and B={{1,2}, {1}}, the result is {∅}."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This set has different membership from the required result. A difference retains elements of A that are absent from B. From A={{1}, ∅} and B={{1,2}, {1}}, the result is {∅}."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "set-operation",
+        "operation": "A\\B",
+        "a": [
+          "{1}",
+          "∅"
+        ],
+        "b": [
+          "{1,2}",
+          "{1}"
+        ],
+        "expected": [
+          "∅"
+        ]
+      }
+    },
+    {
+      "id": "sets-012",
+      "topic": "Nested membership",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "What is A△B in this universe?",
+      "context": "U={∅,{1},{2},{1,2}}; A={∅,{1}}, B={{1},{1,2}}. Each displayed element of U is itself a set.",
+      "options": [
+        "{{1,2}, ∅}",
+        "{{1}}",
+        "{{1,2}, {1}, ∅}",
+        "{∅}"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Translate the operation into a condition on one arbitrary element.",
+        "Test set membership element by element. For a relation or function, look for a missing pair, collision, or unattained output."
+      ],
+      "explanation": {
+        "learning_objective": "Apply nested membership with explicit justification.",
+        "correct_rationale": "A symmetric difference contains elements in exactly one of the sets. From A={{1}, ∅} and B={{1,2}, {1}}, the result is {{1,2}, ∅}.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "This set has different membership from the required result. A symmetric difference contains elements in exactly one of the sets. From A={{1}, ∅} and B={{1,2}, {1}}, the result is {{1,2}, ∅}."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This set has different membership from the required result. A symmetric difference contains elements in exactly one of the sets. From A={{1}, ∅} and B={{1,2}, {1}}, the result is {{1,2}, ∅}."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This set has different membership from the required result. A symmetric difference contains elements in exactly one of the sets. From A={{1}, ∅} and B={{1,2}, {1}}, the result is {{1,2}, ∅}."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "set-operation",
+        "operation": "A△B",
+        "a": [
+          "{1}",
+          "∅"
+        ],
+        "b": [
+          "{1,2}",
+          "{1}"
+        ],
+        "expected": [
+          "{1,2}",
+          "∅"
+        ]
+      }
+    },
+    {
+      "id": "sets-013",
+      "topic": "Finite interval sets",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "What is A∪B in this universe?",
+      "context": "U={−3,…,3}; A={x∈U: |x|≤2}; B={x∈U: x≥0}.",
+      "options": [
+        "{0, 1, 2}",
+        "{-2, -1, 0, 1, 2, 3}",
+        "{-2, -1}",
+        "{3}"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Translate the operation into a condition on one arbitrary element.",
+        "Test set membership element by element. For a relation or function, look for a missing pair, collision, or unattained output."
+      ],
+      "explanation": {
+        "learning_objective": "Apply finite interval sets with explicit justification.",
+        "correct_rationale": "A union contains elements in either set. From A={-2, -1, 0, 1, 2} and B={0, 1, 2, 3}, the result is {-2, -1, 0, 1, 2, 3}.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This set has different membership from the required result. A union contains elements in either set. From A={-2, -1, 0, 1, 2} and B={0, 1, 2, 3}, the result is {-2, -1, 0, 1, 2, 3}."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This set has different membership from the required result. A union contains elements in either set. From A={-2, -1, 0, 1, 2} and B={0, 1, 2, 3}, the result is {-2, -1, 0, 1, 2, 3}."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This set has different membership from the required result. A union contains elements in either set. From A={-2, -1, 0, 1, 2} and B={0, 1, 2, 3}, the result is {-2, -1, 0, 1, 2, 3}."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "set-operation",
+        "operation": "A∪B",
+        "a": [
+          -2,
+          -1,
+          0,
+          1,
+          2
+        ],
+        "b": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "expected": [
+          -2,
+          -1,
+          0,
+          1,
+          2,
+          3
+        ]
+      }
+    },
+    {
+      "id": "sets-014",
+      "topic": "Finite interval sets",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "What is A∩B in this universe?",
+      "context": "U={−3,…,3}; A={x∈U: |x|≤2}; B={x∈U: x≥0}.",
+      "options": [
+        "{-2, -1}",
+        "{3}",
+        "{0, 1, 2}",
+        "{-2, -1, 0, 1, 2, 3}"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Translate the operation into a condition on one arbitrary element.",
+        "Test set membership element by element. For a relation or function, look for a missing pair, collision, or unattained output."
+      ],
+      "explanation": {
+        "learning_objective": "Apply finite interval sets with explicit justification.",
+        "correct_rationale": "An intersection contains only elements shared by both sets. From A={-2, -1, 0, 1, 2} and B={0, 1, 2, 3}, the result is {0, 1, 2}.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This set has different membership from the required result. An intersection contains only elements shared by both sets. From A={-2, -1, 0, 1, 2} and B={0, 1, 2, 3}, the result is {0, 1, 2}."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This set has different membership from the required result. An intersection contains only elements shared by both sets. From A={-2, -1, 0, 1, 2} and B={0, 1, 2, 3}, the result is {0, 1, 2}."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This set has different membership from the required result. An intersection contains only elements shared by both sets. From A={-2, -1, 0, 1, 2} and B={0, 1, 2, 3}, the result is {0, 1, 2}."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "set-operation",
+        "operation": "A∩B",
+        "a": [
+          -2,
+          -1,
+          0,
+          1,
+          2
+        ],
+        "b": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "expected": [
+          0,
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "sets-015",
+      "topic": "Finite interval sets",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "What is A\\B in this universe?",
+      "context": "U={−3,…,3}; A={x∈U: |x|≤2}; B={x∈U: x≥0}.",
+      "options": [
+        "{3}",
+        "{-2, -1, 0, 1, 2, 3}",
+        "{-2, -1}",
+        "{0, 1, 2}"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Translate the operation into a condition on one arbitrary element.",
+        "Test set membership element by element. For a relation or function, look for a missing pair, collision, or unattained output."
+      ],
+      "explanation": {
+        "learning_objective": "Apply finite interval sets with explicit justification.",
+        "correct_rationale": "A difference retains elements of A that are absent from B. From A={-2, -1, 0, 1, 2} and B={0, 1, 2, 3}, the result is {-2, -1}.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This set has different membership from the required result. A difference retains elements of A that are absent from B. From A={-2, -1, 0, 1, 2} and B={0, 1, 2, 3}, the result is {-2, -1}."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This set has different membership from the required result. A difference retains elements of A that are absent from B. From A={-2, -1, 0, 1, 2} and B={0, 1, 2, 3}, the result is {-2, -1}."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This set has different membership from the required result. A difference retains elements of A that are absent from B. From A={-2, -1, 0, 1, 2} and B={0, 1, 2, 3}, the result is {-2, -1}."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "set-operation",
+        "operation": "A\\B",
+        "a": [
+          -2,
+          -1,
+          0,
+          1,
+          2
+        ],
+        "b": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "expected": [
+          -2,
+          -1
+        ]
+      }
+    },
+    {
+      "id": "sets-016",
+      "topic": "Finite interval sets",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "What is A△B in this universe?",
+      "context": "U={−3,…,3}; A={x∈U: |x|≤2}; B={x∈U: x≥0}.",
+      "options": [
+        "{-2, -1}",
+        "{-2, -1, 3}",
+        "{0, 1, 2}",
+        "{-2, -1, 0, 1, 2, 3}"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Translate the operation into a condition on one arbitrary element.",
+        "Test set membership element by element. For a relation or function, look for a missing pair, collision, or unattained output."
+      ],
+      "explanation": {
+        "learning_objective": "Apply finite interval sets with explicit justification.",
+        "correct_rationale": "A symmetric difference contains elements in exactly one of the sets. From A={-2, -1, 0, 1, 2} and B={0, 1, 2, 3}, the result is {-2, -1, 3}.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This set has different membership from the required result. A symmetric difference contains elements in exactly one of the sets. From A={-2, -1, 0, 1, 2} and B={0, 1, 2, 3}, the result is {-2, -1, 3}."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This set has different membership from the required result. A symmetric difference contains elements in exactly one of the sets. From A={-2, -1, 0, 1, 2} and B={0, 1, 2, 3}, the result is {-2, -1, 3}."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This set has different membership from the required result. A symmetric difference contains elements in exactly one of the sets. From A={-2, -1, 0, 1, 2} and B={0, 1, 2, 3}, the result is {-2, -1, 3}."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "set-operation",
+        "operation": "A△B",
+        "a": [
+          -2,
+          -1,
+          0,
+          1,
+          2
+        ],
+        "b": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "expected": [
+          -2,
+          -1,
+          3
+        ]
+      }
+    },
+    {
+      "id": "sets-017",
+      "topic": "A finite bijection",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "Which classification fits f?",
+      "context": "Domain A={a, b, c}; codomain B={1, 2, 3}; f is specified by {'a': 2, 'b': 3, 'c': 1}.",
+      "options": [
+        "Bijective",
+        "Injective but not surjective",
+        "Neither injective nor surjective",
+        "Surjective but not injective"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Check collisions and unused codomain elements separately.",
+        "Test set membership element by element. For a relation or function, look for a missing pair, collision, or unattained output."
+      ],
+      "explanation": {
+        "learning_objective": "Apply a finite bijection with explicit justification.",
+        "correct_rationale": "The outputs are {1, 2, 3}. Distinct inputs have distinct outputs: True. Every codomain element is attained: True. Thus f is bijective.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "This classification conflicts with the table. The outputs are {1, 2, 3}. Distinct inputs have distinct outputs: True. Every codomain element is attained: True. Thus f is bijective."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This classification conflicts with the table. The outputs are {1, 2, 3}. Distinct inputs have distinct outputs: True. Every codomain element is attained: True. Thus f is bijective."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This classification conflicts with the table. The outputs are {1, 2, 3}. Distinct inputs have distinct outputs: True. Every codomain element is attained: True. Thus f is bijective."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "map-classification",
+        "domain": [
+          "a",
+          "b",
+          "c"
+        ],
+        "codomain": [
+          1,
+          2,
+          3
+        ],
+        "mapping": {
+          "a": 2,
+          "b": 3,
+          "c": 1
+        },
+        "expected": "Bijective"
+      }
+    },
+    {
+      "id": "sets-018",
+      "topic": "Images",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "What is f(A), the image of the entire domain?",
+      "context": "Domain A={a, b, c}; codomain B={1, 2, 3}; f is specified by {'a': 2, 'b': 3, 'c': 1}.",
+      "options": [
+        "{1, 2, 3}",
+        "{1}",
+        "∅",
+        "{3}"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Collect actual outputs, not all permitted outputs.",
+        "Test set membership element by element. For a relation or function, look for a missing pair, collision, or unattained output."
+      ],
+      "explanation": {
+        "learning_objective": "Apply images with explicit justification.",
+        "correct_rationale": "The image is precisely the outputs in the table, {1, 2, 3}. It need not equal the codomain.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "This set has different membership from the required result. The image is precisely the outputs in the table, {1, 2, 3}. It need not equal the codomain."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This set has different membership from the required result. The image is precisely the outputs in the table, {1, 2, 3}. It need not equal the codomain."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This set has different membership from the required result. The image is precisely the outputs in the table, {1, 2, 3}. It need not equal the codomain."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "map-image",
+        "mapping": {
+          "a": 2,
+          "b": 3,
+          "c": 1
+        },
+        "expected": [
+          1,
+          2,
+          3
+        ]
+      }
+    },
+    {
+      "id": "sets-019",
+      "topic": "Preimages",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "What is f⁻¹({1})? Here f⁻¹ denotes a preimage, not an assumed inverse function.",
+      "context": "Domain A={a, b, c}; codomain B={1, 2, 3}; f is specified by {'a': 2, 'b': 3, 'c': 1}.",
+      "options": [
+        "{a, b, c}",
+        "{a}",
+        "{c}",
+        "∅"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Read the table backward for this specific output.",
+        "Test set membership element by element. For a relation or function, look for a missing pair, collision, or unattained output."
+      ],
+      "explanation": {
+        "learning_objective": "Apply preimages with explicit justification.",
+        "correct_rationale": "Collect exactly the inputs whose output is 1: {c}. A preimage is defined even when f is not bijective.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This set has different membership from the required result. Collect exactly the inputs whose output is 1: {c}. A preimage is defined even when f is not bijective."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This set has different membership from the required result. Collect exactly the inputs whose output is 1: {c}. A preimage is defined even when f is not bijective."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This set has different membership from the required result. Collect exactly the inputs whose output is 1: {c}. A preimage is defined even when f is not bijective."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "map-preimage",
+        "mapping": {
+          "a": 2,
+          "b": 3,
+          "c": 1
+        },
+        "target": 1,
+        "expected": [
+          "c"
+        ]
+      }
+    },
+    {
+      "id": "sets-020",
+      "topic": "Inverse existence",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "Does f have a two-sided inverse B→A?",
+      "context": "Domain A={a, b, c}; codomain B={1, 2, 3}; f is specified by {'a': 2, 'b': 3, 'c': 1}.",
+      "options": [
+        "Yes: every function has a two-sided inverse",
+        "Yes: injectivity alone is sufficient",
+        "Yes: f is bijective",
+        "Yes: surjectivity alone is sufficient"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "An inverse must assign exactly one input to every codomain output.",
+        "Test set membership element by element. For a relation or function, look for a missing pair, collision, or unattained output."
+      ],
+      "explanation": {
+        "learning_objective": "Apply inverse existence with explicit justification.",
+        "correct_rationale": "A two-sided inverse exists exactly for bijections. Here the classification is bijective, so yes: f is bijective.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "An inverse on the whole codomain requires both existence and uniqueness of each preimage."
+          },
+          {
+            "option_index": 1,
+            "rationale": "Injectivity gives uniqueness but does not guarantee a preimage for every codomain element."
+          },
+          {
+            "option_index": 3,
+            "rationale": "Surjectivity gives existence but collisions can prevent a two-sided inverse."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "sets-021",
+      "topic": "An injection with unused codomain",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "Which classification fits f?",
+      "context": "Domain A={a, b}; codomain B={1, 2, 3}; f is specified by {'a': 1, 'b': 3}.",
+      "options": [
+        "Neither injective nor surjective",
+        "Injective but not surjective",
+        "Surjective but not injective",
+        "Bijective"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Check collisions and unused codomain elements separately.",
+        "Test set membership element by element. For a relation or function, look for a missing pair, collision, or unattained output."
+      ],
+      "explanation": {
+        "learning_objective": "Apply an injection with unused codomain with explicit justification.",
+        "correct_rationale": "The outputs are {1, 3}. Distinct inputs have distinct outputs: True. Every codomain element is attained: False. Thus f is injective but not surjective.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This classification conflicts with the table. The outputs are {1, 3}. Distinct inputs have distinct outputs: True. Every codomain element is attained: False. Thus f is injective but not surjective."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This classification conflicts with the table. The outputs are {1, 3}. Distinct inputs have distinct outputs: True. Every codomain element is attained: False. Thus f is injective but not surjective."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This classification conflicts with the table. The outputs are {1, 3}. Distinct inputs have distinct outputs: True. Every codomain element is attained: False. Thus f is injective but not surjective."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "map-classification",
+        "domain": [
+          "a",
+          "b"
+        ],
+        "codomain": [
+          1,
+          2,
+          3
+        ],
+        "mapping": {
+          "a": 1,
+          "b": 3
+        },
+        "expected": "Injective but not surjective"
+      }
+    },
+    {
+      "id": "sets-022",
+      "topic": "Images",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "What is f(A), the image of the entire domain?",
+      "context": "Domain A={a, b}; codomain B={1, 2, 3}; f is specified by {'a': 1, 'b': 3}.",
+      "options": [
+        "{1}",
+        "{1, 3}",
+        "{1, 2, 3}",
+        "∅"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Collect actual outputs, not all permitted outputs.",
+        "Test set membership element by element. For a relation or function, look for a missing pair, collision, or unattained output."
+      ],
+      "explanation": {
+        "learning_objective": "Apply images with explicit justification.",
+        "correct_rationale": "The image is precisely the outputs in the table, {1, 3}. It need not equal the codomain.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This set has different membership from the required result. The image is precisely the outputs in the table, {1, 3}. It need not equal the codomain."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This set has different membership from the required result. The image is precisely the outputs in the table, {1, 3}. It need not equal the codomain."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This set has different membership from the required result. The image is precisely the outputs in the table, {1, 3}. It need not equal the codomain."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "map-image",
+        "mapping": {
+          "a": 1,
+          "b": 3
+        },
+        "expected": [
+          1,
+          3
+        ]
+      }
+    },
+    {
+      "id": "sets-023",
+      "topic": "Preimages",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "What is f⁻¹({1})? Here f⁻¹ denotes a preimage, not an assumed inverse function.",
+      "context": "Domain A={a, b}; codomain B={1, 2, 3}; f is specified by {'a': 1, 'b': 3}.",
+      "options": [
+        "{b}",
+        "∅",
+        "{a, b}",
+        "{a}"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Read the table backward for this specific output.",
+        "Test set membership element by element. For a relation or function, look for a missing pair, collision, or unattained output."
+      ],
+      "explanation": {
+        "learning_objective": "Apply preimages with explicit justification.",
+        "correct_rationale": "Collect exactly the inputs whose output is 1: {a}. A preimage is defined even when f is not bijective.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This set has different membership from the required result. Collect exactly the inputs whose output is 1: {a}. A preimage is defined even when f is not bijective."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This set has different membership from the required result. Collect exactly the inputs whose output is 1: {a}. A preimage is defined even when f is not bijective."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This set has different membership from the required result. Collect exactly the inputs whose output is 1: {a}. A preimage is defined even when f is not bijective."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "map-preimage",
+        "mapping": {
+          "a": 1,
+          "b": 3
+        },
+        "target": 1,
+        "expected": [
+          "a"
+        ]
+      }
+    },
+    {
+      "id": "sets-024",
+      "topic": "Inverse existence",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "Does f have a two-sided inverse B→A?",
+      "context": "Domain A={a, b}; codomain B={1, 2, 3}; f is specified by {'a': 1, 'b': 3}.",
+      "options": [
+        "Yes: surjectivity alone is sufficient",
+        "Yes: every function has a two-sided inverse",
+        "No: f is not bijective",
+        "Yes: injectivity alone is sufficient"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "An inverse must assign exactly one input to every codomain output.",
+        "Test set membership element by element. For a relation or function, look for a missing pair, collision, or unattained output."
+      ],
+      "explanation": {
+        "learning_objective": "Apply inverse existence with explicit justification.",
+        "correct_rationale": "A two-sided inverse exists exactly for bijections. Here the classification is injective but not surjective, so no: f is not bijective.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "Surjectivity gives existence but collisions can prevent a two-sided inverse."
+          },
+          {
+            "option_index": 1,
+            "rationale": "An inverse on the whole codomain requires both existence and uniqueness of each preimage."
+          },
+          {
+            "option_index": 3,
+            "rationale": "Injectivity gives uniqueness but does not guarantee a preimage for every codomain element."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "sets-025",
+      "topic": "A surjection with a collision",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "Which classification fits f?",
+      "context": "Domain A={a, b, c}; codomain B={1, 2}; f is specified by {'a': 1, 'b': 2, 'c': 1}.",
+      "options": [
+        "Bijective",
+        "Surjective but not injective",
+        "Neither injective nor surjective",
+        "Injective but not surjective"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Check collisions and unused codomain elements separately.",
+        "Test set membership element by element. For a relation or function, look for a missing pair, collision, or unattained output."
+      ],
+      "explanation": {
+        "learning_objective": "Apply a surjection with a collision with explicit justification.",
+        "correct_rationale": "The outputs are {1, 1, 2}. Distinct inputs have distinct outputs: False. Every codomain element is attained: True. Thus f is surjective but not injective.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This classification conflicts with the table. The outputs are {1, 1, 2}. Distinct inputs have distinct outputs: False. Every codomain element is attained: True. Thus f is surjective but not injective."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This classification conflicts with the table. The outputs are {1, 1, 2}. Distinct inputs have distinct outputs: False. Every codomain element is attained: True. Thus f is surjective but not injective."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This classification conflicts with the table. The outputs are {1, 1, 2}. Distinct inputs have distinct outputs: False. Every codomain element is attained: True. Thus f is surjective but not injective."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "map-classification",
+        "domain": [
+          "a",
+          "b",
+          "c"
+        ],
+        "codomain": [
+          1,
+          2
+        ],
+        "mapping": {
+          "a": 1,
+          "b": 2,
+          "c": 1
+        },
+        "expected": "Surjective but not injective"
+      }
+    },
+    {
+      "id": "sets-026",
+      "topic": "Images",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "What is f(A), the image of the entire domain?",
+      "context": "Domain A={a, b, c}; codomain B={1, 2}; f is specified by {'a': 1, 'b': 2, 'c': 1}.",
+      "options": [
+        "{1}",
+        "{2}",
+        "∅",
+        "{1, 2}"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Collect actual outputs, not all permitted outputs.",
+        "Test set membership element by element. For a relation or function, look for a missing pair, collision, or unattained output."
+      ],
+      "explanation": {
+        "learning_objective": "Apply images with explicit justification.",
+        "correct_rationale": "The image is precisely the outputs in the table, {1, 2}. It need not equal the codomain.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This set has different membership from the required result. The image is precisely the outputs in the table, {1, 2}. It need not equal the codomain."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This set has different membership from the required result. The image is precisely the outputs in the table, {1, 2}. It need not equal the codomain."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This set has different membership from the required result. The image is precisely the outputs in the table, {1, 2}. It need not equal the codomain."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "map-image",
+        "mapping": {
+          "a": 1,
+          "b": 2,
+          "c": 1
+        },
+        "expected": [
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "sets-027",
+      "topic": "Preimages",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "What is f⁻¹({1})? Here f⁻¹ denotes a preimage, not an assumed inverse function.",
+      "context": "Domain A={a, b, c}; codomain B={1, 2}; f is specified by {'a': 1, 'b': 2, 'c': 1}.",
+      "options": [
+        "{a, c}",
+        "{a, b, c}",
+        "{a}",
+        "∅"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Read the table backward for this specific output.",
+        "Test set membership element by element. For a relation or function, look for a missing pair, collision, or unattained output."
+      ],
+      "explanation": {
+        "learning_objective": "Apply preimages with explicit justification.",
+        "correct_rationale": "Collect exactly the inputs whose output is 1: {a, c}. A preimage is defined even when f is not bijective.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "This set has different membership from the required result. Collect exactly the inputs whose output is 1: {a, c}. A preimage is defined even when f is not bijective."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This set has different membership from the required result. Collect exactly the inputs whose output is 1: {a, c}. A preimage is defined even when f is not bijective."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This set has different membership from the required result. Collect exactly the inputs whose output is 1: {a, c}. A preimage is defined even when f is not bijective."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "map-preimage",
+        "mapping": {
+          "a": 1,
+          "b": 2,
+          "c": 1
+        },
+        "target": 1,
+        "expected": [
+          "a",
+          "c"
+        ]
+      }
+    },
+    {
+      "id": "sets-028",
+      "topic": "Inverse existence",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "Does f have a two-sided inverse B→A?",
+      "context": "Domain A={a, b, c}; codomain B={1, 2}; f is specified by {'a': 1, 'b': 2, 'c': 1}.",
+      "options": [
+        "Yes: injectivity alone is sufficient",
+        "Yes: surjectivity alone is sufficient",
+        "Yes: every function has a two-sided inverse",
+        "No: f is not bijective"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "An inverse must assign exactly one input to every codomain output.",
+        "Test set membership element by element. For a relation or function, look for a missing pair, collision, or unattained output."
+      ],
+      "explanation": {
+        "learning_objective": "Apply inverse existence with explicit justification.",
+        "correct_rationale": "A two-sided inverse exists exactly for bijections. Here the classification is surjective but not injective, so no: f is not bijective.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "Injectivity gives uniqueness but does not guarantee a preimage for every codomain element."
+          },
+          {
+            "option_index": 1,
+            "rationale": "Surjectivity gives existence but collisions can prevent a two-sided inverse."
+          },
+          {
+            "option_index": 2,
+            "rationale": "An inverse on the whole codomain requires both existence and uniqueness of each preimage."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "sets-029",
+      "topic": "A map that is neither",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "Which classification fits f?",
+      "context": "Domain A={a, b, c}; codomain B={1, 2, 3}; f is specified by {'a': 1, 'b': 1, 'c': 2}.",
+      "options": [
+        "Injective but not surjective",
+        "Surjective but not injective",
+        "Bijective",
+        "Neither injective nor surjective"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Check collisions and unused codomain elements separately.",
+        "Test set membership element by element. For a relation or function, look for a missing pair, collision, or unattained output."
+      ],
+      "explanation": {
+        "learning_objective": "Apply a map that is neither with explicit justification.",
+        "correct_rationale": "The outputs are {1, 1, 2}. Distinct inputs have distinct outputs: False. Every codomain element is attained: False. Thus f is neither injective nor surjective.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This classification conflicts with the table. The outputs are {1, 1, 2}. Distinct inputs have distinct outputs: False. Every codomain element is attained: False. Thus f is neither injective nor surjective."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This classification conflicts with the table. The outputs are {1, 1, 2}. Distinct inputs have distinct outputs: False. Every codomain element is attained: False. Thus f is neither injective nor surjective."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This classification conflicts with the table. The outputs are {1, 1, 2}. Distinct inputs have distinct outputs: False. Every codomain element is attained: False. Thus f is neither injective nor surjective."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "map-classification",
+        "domain": [
+          "a",
+          "b",
+          "c"
+        ],
+        "codomain": [
+          1,
+          2,
+          3
+        ],
+        "mapping": {
+          "a": 1,
+          "b": 1,
+          "c": 2
+        },
+        "expected": "Neither injective nor surjective"
+      }
+    },
+    {
+      "id": "sets-030",
+      "topic": "Images",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "What is f(A), the image of the entire domain?",
+      "context": "Domain A={a, b, c}; codomain B={1, 2, 3}; f is specified by {'a': 1, 'b': 1, 'c': 2}.",
+      "options": [
+        "∅",
+        "{1, 2}",
+        "{1}",
+        "{1, 2, 3}"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Collect actual outputs, not all permitted outputs.",
+        "Test set membership element by element. For a relation or function, look for a missing pair, collision, or unattained output."
+      ],
+      "explanation": {
+        "learning_objective": "Apply images with explicit justification.",
+        "correct_rationale": "The image is precisely the outputs in the table, {1, 2}. It need not equal the codomain.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This set has different membership from the required result. The image is precisely the outputs in the table, {1, 2}. It need not equal the codomain."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This set has different membership from the required result. The image is precisely the outputs in the table, {1, 2}. It need not equal the codomain."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This set has different membership from the required result. The image is precisely the outputs in the table, {1, 2}. It need not equal the codomain."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "map-image",
+        "mapping": {
+          "a": 1,
+          "b": 1,
+          "c": 2
+        },
+        "expected": [
+          1,
+          2
+        ]
+      }
+    },
+    {
+      "id": "sets-031",
+      "topic": "Preimages",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "What is f⁻¹({1})? Here f⁻¹ denotes a preimage, not an assumed inverse function.",
+      "context": "Domain A={a, b, c}; codomain B={1, 2, 3}; f is specified by {'a': 1, 'b': 1, 'c': 2}.",
+      "options": [
+        "∅",
+        "{a}",
+        "{a, b, c}",
+        "{a, b}"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Read the table backward for this specific output.",
+        "Test set membership element by element. For a relation or function, look for a missing pair, collision, or unattained output."
+      ],
+      "explanation": {
+        "learning_objective": "Apply preimages with explicit justification.",
+        "correct_rationale": "Collect exactly the inputs whose output is 1: {a, b}. A preimage is defined even when f is not bijective.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This set has different membership from the required result. Collect exactly the inputs whose output is 1: {a, b}. A preimage is defined even when f is not bijective."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This set has different membership from the required result. Collect exactly the inputs whose output is 1: {a, b}. A preimage is defined even when f is not bijective."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This set has different membership from the required result. Collect exactly the inputs whose output is 1: {a, b}. A preimage is defined even when f is not bijective."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "map-preimage",
+        "mapping": {
+          "a": 1,
+          "b": 1,
+          "c": 2
+        },
+        "target": 1,
+        "expected": [
+          "a",
+          "b"
+        ]
+      }
+    },
+    {
+      "id": "sets-032",
+      "topic": "Inverse existence",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "Does f have a two-sided inverse B→A?",
+      "context": "Domain A={a, b, c}; codomain B={1, 2, 3}; f is specified by {'a': 1, 'b': 1, 'c': 2}.",
+      "options": [
+        "Yes: surjectivity alone is sufficient",
+        "Yes: injectivity alone is sufficient",
+        "No: f is not bijective",
+        "Yes: every function has a two-sided inverse"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "An inverse must assign exactly one input to every codomain output.",
+        "Test set membership element by element. For a relation or function, look for a missing pair, collision, or unattained output."
+      ],
+      "explanation": {
+        "learning_objective": "Apply inverse existence with explicit justification.",
+        "correct_rationale": "A two-sided inverse exists exactly for bijections. Here the classification is neither injective nor surjective, so no: f is not bijective.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "Surjectivity gives existence but collisions can prevent a two-sided inverse."
+          },
+          {
+            "option_index": 1,
+            "rationale": "Injectivity gives uniqueness but does not guarantee a preimage for every codomain element."
+          },
+          {
+            "option_index": 3,
+            "rationale": "An inverse on the whole codomain requires both existence and uniqueness of each preimage."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "sets-033",
+      "topic": "The empty-domain function",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Which classification fits f?",
+      "context": "Domain A=∅; codomain B={1, 2}; f is specified by the empty table.",
+      "options": [
+        "Injective but not surjective",
+        "Surjective but not injective",
+        "Neither injective nor surjective",
+        "Bijective"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Check collisions and unused codomain elements separately.",
+        "Test set membership element by element. For a relation or function, look for a missing pair, collision, or unattained output."
+      ],
+      "explanation": {
+        "learning_objective": "Apply the empty-domain function with explicit justification.",
+        "correct_rationale": "The outputs are ∅. Distinct inputs have distinct outputs: True. Every codomain element is attained: False. Thus f is injective but not surjective.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "This classification conflicts with the table. The outputs are ∅. Distinct inputs have distinct outputs: True. Every codomain element is attained: False. Thus f is injective but not surjective."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This classification conflicts with the table. The outputs are ∅. Distinct inputs have distinct outputs: True. Every codomain element is attained: False. Thus f is injective but not surjective."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This classification conflicts with the table. The outputs are ∅. Distinct inputs have distinct outputs: True. Every codomain element is attained: False. Thus f is injective but not surjective."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "map-classification",
+        "domain": [],
+        "codomain": [
+          1,
+          2
+        ],
+        "mapping": {},
+        "expected": "Injective but not surjective"
+      }
+    },
+    {
+      "id": "sets-034",
+      "topic": "Images",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What is f(A), the image of the entire domain?",
+      "context": "Domain A=∅; codomain B={1, 2}; f is specified by the empty table.",
+      "options": [
+        "∅",
+        "{2}",
+        "{1}",
+        "{1, 2}"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Collect actual outputs, not all permitted outputs.",
+        "Test set membership element by element. For a relation or function, look for a missing pair, collision, or unattained output."
+      ],
+      "explanation": {
+        "learning_objective": "Apply images with explicit justification.",
+        "correct_rationale": "The image is precisely the outputs in the table, ∅. It need not equal the codomain.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "This set has different membership from the required result. The image is precisely the outputs in the table, ∅. It need not equal the codomain."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This set has different membership from the required result. The image is precisely the outputs in the table, ∅. It need not equal the codomain."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This set has different membership from the required result. The image is precisely the outputs in the table, ∅. It need not equal the codomain."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "map-image",
+        "mapping": {},
+        "expected": []
+      }
+    },
+    {
+      "id": "sets-035",
+      "topic": "Preimages",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What is f⁻¹({1})? Here f⁻¹ denotes a preimage, not an assumed inverse function.",
+      "context": "Domain A=∅; codomain B={1, 2}; f is specified by the empty table.",
+      "options": [
+        "{b}",
+        "{a}",
+        "{a, b}",
+        "∅"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Read the table backward for this specific output.",
+        "Test set membership element by element. For a relation or function, look for a missing pair, collision, or unattained output."
+      ],
+      "explanation": {
+        "learning_objective": "Apply preimages with explicit justification.",
+        "correct_rationale": "Collect exactly the inputs whose output is 1: ∅. A preimage is defined even when f is not bijective.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This set has different membership from the required result. Collect exactly the inputs whose output is 1: ∅. A preimage is defined even when f is not bijective."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This set has different membership from the required result. Collect exactly the inputs whose output is 1: ∅. A preimage is defined even when f is not bijective."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This set has different membership from the required result. Collect exactly the inputs whose output is 1: ∅. A preimage is defined even when f is not bijective."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "map-preimage",
+        "mapping": {},
+        "target": 1,
+        "expected": []
+      }
+    },
+    {
+      "id": "sets-036",
+      "topic": "Inverse existence",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Does f have a two-sided inverse B→A?",
+      "context": "Domain A=∅; codomain B={1, 2}; f is specified by the empty table.",
+      "options": [
+        "No: f is not bijective",
+        "Yes: every function has a two-sided inverse",
+        "Yes: injectivity alone is sufficient",
+        "Yes: surjectivity alone is sufficient"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "An inverse must assign exactly one input to every codomain output.",
+        "Test set membership element by element. For a relation or function, look for a missing pair, collision, or unattained output."
+      ],
+      "explanation": {
+        "learning_objective": "Apply inverse existence with explicit justification.",
+        "correct_rationale": "A two-sided inverse exists exactly for bijections. Here the classification is injective but not surjective, so no: f is not bijective.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "An inverse on the whole codomain requires both existence and uniqueness of each preimage."
+          },
+          {
+            "option_index": 2,
+            "rationale": "Injectivity gives uniqueness but does not guarantee a preimage for every codomain element."
+          },
+          {
+            "option_index": 3,
+            "rationale": "Surjectivity gives existence but collisions can prevent a two-sided inverse."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "sets-037",
+      "topic": "Equality relation: reflexive",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Is R reflexive?",
+      "context": "U={0, 1, 2}; R=[(0, 0), (1, 1), (2, 2)]. Ordered pairs specify the entire relation.",
+      "options": [
+        "Yes: every finite relation has this property",
+        "Yes: all diagonal pairs occur",
+        "No: nonempty relations never have this property",
+        "It cannot be determined from the full pair list"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Use the definition: Every (x,x) must be present.",
+        "Test set membership element by element. For a relation or function, look for a missing pair, collision, or unattained output."
+      ],
+      "explanation": {
+        "learning_objective": "Apply equality relation: reflexive with explicit justification.",
+        "correct_rationale": "Every (x,x) must be present. In this pair list, all diagonal pairs occur. Therefore the answer is yes.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "Finiteness alone implies none of the four standard relation properties."
+          },
+          {
+            "option_index": 2,
+            "rationale": "Nonemptiness is not an obstruction to this property."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The complete finite relation is given, so its defining property can be checked."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "relation-property",
+        "universe": [
+          0,
+          1,
+          2
+        ],
+        "pairs": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "property": "reflexive",
+        "expected": true
+      }
+    },
+    {
+      "id": "sets-038",
+      "topic": "Equality relation: symmetric",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Is R symmetric?",
+      "context": "U={0, 1, 2}; R=[(0, 0), (1, 1), (2, 2)]. Ordered pairs specify the entire relation.",
+      "options": [
+        "No: nonempty relations never have this property",
+        "Yes: every finite relation has this property",
+        "Yes: every pair has its reverse",
+        "It cannot be determined from the full pair list"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Use the definition: Every pair must have its reversed pair.",
+        "Test set membership element by element. For a relation or function, look for a missing pair, collision, or unattained output."
+      ],
+      "explanation": {
+        "learning_objective": "Apply equality relation: symmetric with explicit justification.",
+        "correct_rationale": "Every pair must have its reversed pair. In this pair list, every pair has its reverse. Therefore the answer is yes.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "Nonemptiness is not an obstruction to this property."
+          },
+          {
+            "option_index": 1,
+            "rationale": "Finiteness alone implies none of the four standard relation properties."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The complete finite relation is given, so its defining property can be checked."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "relation-property",
+        "universe": [
+          0,
+          1,
+          2
+        ],
+        "pairs": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "property": "symmetric",
+        "expected": true
+      }
+    },
+    {
+      "id": "sets-039",
+      "topic": "Equality relation: transitive",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Is R transitive?",
+      "context": "U={0, 1, 2}; R=[(0, 0), (1, 1), (2, 2)]. Ordered pairs specify the entire relation.",
+      "options": [
+        "No: nonempty relations never have this property",
+        "Yes: every finite relation has this property",
+        "Yes: every two-step chain has its shortcut",
+        "It cannot be determined from the full pair list"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Use the definition: Every two-step chain must have its shortcut.",
+        "Test set membership element by element. For a relation or function, look for a missing pair, collision, or unattained output."
+      ],
+      "explanation": {
+        "learning_objective": "Apply equality relation: transitive with explicit justification.",
+        "correct_rationale": "Every two-step chain must have its shortcut. In this pair list, every two-step chain has its shortcut. Therefore the answer is yes.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "Nonemptiness is not an obstruction to this property."
+          },
+          {
+            "option_index": 1,
+            "rationale": "Finiteness alone implies none of the four standard relation properties."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The complete finite relation is given, so its defining property can be checked."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "relation-property",
+        "universe": [
+          0,
+          1,
+          2
+        ],
+        "pairs": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "property": "transitive",
+        "expected": true
+      }
+    },
+    {
+      "id": "sets-040",
+      "topic": "Equivalence relations",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Is this equality relation an equivalence relation?",
+      "context": "U={0, 1, 2}; R=[(0, 0), (1, 1), (2, 2)]. Ordered pairs specify the entire relation.",
+      "options": [
+        "No: antisymmetry forbids equivalence",
+        "No: equivalence requires nonreflexivity",
+        "Yes: it is reflexive, symmetric, and transitive",
+        "Yes: finiteness alone makes it an equivalence relation"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "An equivalence relation must satisfy three separate properties.",
+        "Test set membership element by element. For a relation or function, look for a missing pair, collision, or unattained output."
+      ],
+      "explanation": {
+        "learning_objective": "Apply equivalence relations with explicit justification.",
+        "correct_rationale": "Every (x,x) occurs; reversing an equality preserves it; and x=y,y=z imply x=z. These are exactly reflexivity, symmetry, and transitivity.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "Equality is both antisymmetric and an equivalence relation; the properties are compatible."
+          },
+          {
+            "option_index": 1,
+            "rationale": "Equivalence requires reflexivity, not its failure."
+          },
+          {
+            "option_index": 3,
+            "rationale": "Finiteness does not imply the three required properties."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "relation-equivalence",
+        "universe": [
+          0,
+          1,
+          2
+        ],
+        "pairs": [
+          [
+            0,
+            0
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "expected": true
+      }
+    },
+    {
+      "id": "sets-041",
+      "topic": "Strict order: reflexive",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Is R reflexive?",
+      "context": "U={0, 1, 2}; R=[(0, 1), (0, 2), (1, 2)]. Ordered pairs specify the entire relation.",
+      "options": [
+        "No: (0,0) is missing",
+        "No: nonempty relations never have this property",
+        "Yes: every finite relation has this property",
+        "It cannot be determined from the full pair list"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Use the definition: Every (x,x) must be present.",
+        "Test set membership element by element. For a relation or function, look for a missing pair, collision, or unattained output."
+      ],
+      "explanation": {
+        "learning_objective": "Apply strict order: reflexive with explicit justification.",
+        "correct_rationale": "Every (x,x) must be present. In this pair list, (0,0) is missing. Therefore the answer is no.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "Nonemptiness is not an obstruction to this property."
+          },
+          {
+            "option_index": 2,
+            "rationale": "Finiteness alone implies none of the four standard relation properties."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The complete finite relation is given, so its defining property can be checked."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "relation-property",
+        "universe": [
+          0,
+          1,
+          2
+        ],
+        "pairs": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "property": "reflexive",
+        "expected": false
+      }
+    },
+    {
+      "id": "sets-042",
+      "topic": "Strict order: symmetric",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Is R symmetric?",
+      "context": "U={0, 1, 2}; R=[(0, 1), (0, 2), (1, 2)]. Ordered pairs specify the entire relation.",
+      "options": [
+        "No: nonempty relations never have this property",
+        "Yes: every finite relation has this property",
+        "It cannot be determined from the full pair list",
+        "No: (0,1) occurs but (1,0) does not"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Use the definition: Every pair must have its reversed pair.",
+        "Test set membership element by element. For a relation or function, look for a missing pair, collision, or unattained output."
+      ],
+      "explanation": {
+        "learning_objective": "Apply strict order: symmetric with explicit justification.",
+        "correct_rationale": "Every pair must have its reversed pair. In this pair list, (0,1) occurs but (1,0) does not. Therefore the answer is no.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "Nonemptiness is not an obstruction to this property."
+          },
+          {
+            "option_index": 1,
+            "rationale": "Finiteness alone implies none of the four standard relation properties."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The complete finite relation is given, so its defining property can be checked."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "relation-property",
+        "universe": [
+          0,
+          1,
+          2
+        ],
+        "pairs": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "property": "symmetric",
+        "expected": false
+      }
+    },
+    {
+      "id": "sets-043",
+      "topic": "Strict order: transitive",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Is R transitive?",
+      "context": "U={0, 1, 2}; R=[(0, 1), (0, 2), (1, 2)]. Ordered pairs specify the entire relation.",
+      "options": [
+        "Yes: every two-step chain has its shortcut",
+        "It cannot be determined from the full pair list",
+        "Yes: every finite relation has this property",
+        "No: nonempty relations never have this property"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Use the definition: Every two-step chain must have its shortcut.",
+        "Test set membership element by element. For a relation or function, look for a missing pair, collision, or unattained output."
+      ],
+      "explanation": {
+        "learning_objective": "Apply strict order: transitive with explicit justification.",
+        "correct_rationale": "Every two-step chain must have its shortcut. In this pair list, every two-step chain has its shortcut. Therefore the answer is yes.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "The complete finite relation is given, so its defining property can be checked."
+          },
+          {
+            "option_index": 2,
+            "rationale": "Finiteness alone implies none of the four standard relation properties."
+          },
+          {
+            "option_index": 3,
+            "rationale": "Nonemptiness is not an obstruction to this property."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "relation-property",
+        "universe": [
+          0,
+          1,
+          2
+        ],
+        "pairs": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "property": "transitive",
+        "expected": true
+      }
+    },
+    {
+      "id": "sets-044",
+      "topic": "Strict order: antisymmetric",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Is R antisymmetric?",
+      "context": "U={0, 1, 2}; R=[(0, 1), (0, 2), (1, 2)]. Ordered pairs specify the entire relation.",
+      "options": [
+        "Yes: no distinct elements have pairs in both directions",
+        "It cannot be determined from the full pair list",
+        "Yes: every finite relation has this property",
+        "No: nonempty relations never have this property"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Use the definition: Two-way pairs between distinct elements are forbidden.",
+        "Test set membership element by element. For a relation or function, look for a missing pair, collision, or unattained output."
+      ],
+      "explanation": {
+        "learning_objective": "Apply strict order: antisymmetric with explicit justification.",
+        "correct_rationale": "Two-way pairs between distinct elements are forbidden. In this pair list, no distinct elements have pairs in both directions. Therefore the answer is yes.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "The complete finite relation is given, so its defining property can be checked."
+          },
+          {
+            "option_index": 2,
+            "rationale": "Finiteness alone implies none of the four standard relation properties."
+          },
+          {
+            "option_index": 3,
+            "rationale": "Nonemptiness is not an obstruction to this property."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "relation-property",
+        "universe": [
+          0,
+          1,
+          2
+        ],
+        "pairs": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            2
+          ]
+        ],
+        "property": "antisymmetric",
+        "expected": true
+      }
+    },
+    {
+      "id": "sets-045",
+      "topic": "Non-strict order: reflexive",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Is R reflexive?",
+      "context": "U={0, 1, 2}; R=[(0, 0), (0, 1), (0, 2), (1, 1), (1, 2), (2, 2)]. Ordered pairs specify the entire relation.",
+      "options": [
+        "Yes: every finite relation has this property",
+        "No: nonempty relations never have this property",
+        "It cannot be determined from the full pair list",
+        "Yes: all diagonal pairs occur"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Use the definition: Every (x,x) must be present.",
+        "Test set membership element by element. For a relation or function, look for a missing pair, collision, or unattained output."
+      ],
+      "explanation": {
+        "learning_objective": "Apply non-strict order: reflexive with explicit justification.",
+        "correct_rationale": "Every (x,x) must be present. In this pair list, all diagonal pairs occur. Therefore the answer is yes.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "Finiteness alone implies none of the four standard relation properties."
+          },
+          {
+            "option_index": 1,
+            "rationale": "Nonemptiness is not an obstruction to this property."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The complete finite relation is given, so its defining property can be checked."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "relation-property",
+        "universe": [
+          0,
+          1,
+          2
+        ],
+        "pairs": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "property": "reflexive",
+        "expected": true
+      }
+    },
+    {
+      "id": "sets-046",
+      "topic": "Non-strict order: symmetric",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Is R symmetric?",
+      "context": "U={0, 1, 2}; R=[(0, 0), (0, 1), (0, 2), (1, 1), (1, 2), (2, 2)]. Ordered pairs specify the entire relation.",
+      "options": [
+        "No: (0,1) occurs but (1,0) does not",
+        "No: nonempty relations never have this property",
+        "It cannot be determined from the full pair list",
+        "Yes: every finite relation has this property"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Use the definition: Every pair must have its reversed pair.",
+        "Test set membership element by element. For a relation or function, look for a missing pair, collision, or unattained output."
+      ],
+      "explanation": {
+        "learning_objective": "Apply non-strict order: symmetric with explicit justification.",
+        "correct_rationale": "Every pair must have its reversed pair. In this pair list, (0,1) occurs but (1,0) does not. Therefore the answer is no.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "Nonemptiness is not an obstruction to this property."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The complete finite relation is given, so its defining property can be checked."
+          },
+          {
+            "option_index": 3,
+            "rationale": "Finiteness alone implies none of the four standard relation properties."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "relation-property",
+        "universe": [
+          0,
+          1,
+          2
+        ],
+        "pairs": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "property": "symmetric",
+        "expected": false
+      }
+    },
+    {
+      "id": "sets-047",
+      "topic": "Non-strict order: transitive",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Is R transitive?",
+      "context": "U={0, 1, 2}; R=[(0, 0), (0, 1), (0, 2), (1, 1), (1, 2), (2, 2)]. Ordered pairs specify the entire relation.",
+      "options": [
+        "Yes: every two-step chain has its shortcut",
+        "It cannot be determined from the full pair list",
+        "Yes: every finite relation has this property",
+        "No: nonempty relations never have this property"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Use the definition: Every two-step chain must have its shortcut.",
+        "Test set membership element by element. For a relation or function, look for a missing pair, collision, or unattained output."
+      ],
+      "explanation": {
+        "learning_objective": "Apply non-strict order: transitive with explicit justification.",
+        "correct_rationale": "Every two-step chain must have its shortcut. In this pair list, every two-step chain has its shortcut. Therefore the answer is yes.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "The complete finite relation is given, so its defining property can be checked."
+          },
+          {
+            "option_index": 2,
+            "rationale": "Finiteness alone implies none of the four standard relation properties."
+          },
+          {
+            "option_index": 3,
+            "rationale": "Nonemptiness is not an obstruction to this property."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "relation-property",
+        "universe": [
+          0,
+          1,
+          2
+        ],
+        "pairs": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "property": "transitive",
+        "expected": true
+      }
+    },
+    {
+      "id": "sets-048",
+      "topic": "Non-strict order: antisymmetric",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Is R antisymmetric?",
+      "context": "U={0, 1, 2}; R=[(0, 0), (0, 1), (0, 2), (1, 1), (1, 2), (2, 2)]. Ordered pairs specify the entire relation.",
+      "options": [
+        "Yes: every finite relation has this property",
+        "It cannot be determined from the full pair list",
+        "No: nonempty relations never have this property",
+        "Yes: no distinct elements have pairs in both directions"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Use the definition: Two-way pairs between distinct elements are forbidden.",
+        "Test set membership element by element. For a relation or function, look for a missing pair, collision, or unattained output."
+      ],
+      "explanation": {
+        "learning_objective": "Apply non-strict order: antisymmetric with explicit justification.",
+        "correct_rationale": "Two-way pairs between distinct elements are forbidden. In this pair list, no distinct elements have pairs in both directions. Therefore the answer is yes.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "Finiteness alone implies none of the four standard relation properties."
+          },
+          {
+            "option_index": 1,
+            "rationale": "The complete finite relation is given, so its defining property can be checked."
+          },
+          {
+            "option_index": 2,
+            "rationale": "Nonemptiness is not an obstruction to this property."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "relation-property",
+        "universe": [
+          0,
+          1,
+          2
+        ],
+        "pairs": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            2
+          ]
+        ],
+        "property": "antisymmetric",
+        "expected": true
+      }
+    },
+    {
+      "id": "sets-049",
+      "topic": "Same parity: reflexive",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Is R reflexive?",
+      "context": "U={0, 1, 2, 3}; R=[(0, 0), (0, 2), (1, 1), (1, 3), (2, 0), (2, 2), (3, 1), (3, 3)]. Ordered pairs specify the entire relation.",
+      "options": [
+        "No: nonempty relations never have this property",
+        "It cannot be determined from the full pair list",
+        "Yes: all diagonal pairs occur",
+        "Yes: every finite relation has this property"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Use the definition: Every (x,x) must be present.",
+        "Test set membership element by element. For a relation or function, look for a missing pair, collision, or unattained output."
+      ],
+      "explanation": {
+        "learning_objective": "Apply same parity: reflexive with explicit justification.",
+        "correct_rationale": "Every (x,x) must be present. In this pair list, all diagonal pairs occur. Therefore the answer is yes.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "Nonemptiness is not an obstruction to this property."
+          },
+          {
+            "option_index": 1,
+            "rationale": "The complete finite relation is given, so its defining property can be checked."
+          },
+          {
+            "option_index": 3,
+            "rationale": "Finiteness alone implies none of the four standard relation properties."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "relation-property",
+        "universe": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "pairs": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            3,
+            3
+          ]
+        ],
+        "property": "reflexive",
+        "expected": true
+      }
+    },
+    {
+      "id": "sets-050",
+      "topic": "Same parity: symmetric",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Is R symmetric?",
+      "context": "U={0, 1, 2, 3}; R=[(0, 0), (0, 2), (1, 1), (1, 3), (2, 0), (2, 2), (3, 1), (3, 3)]. Ordered pairs specify the entire relation.",
+      "options": [
+        "Yes: every finite relation has this property",
+        "No: nonempty relations never have this property",
+        "Yes: every pair has its reverse",
+        "It cannot be determined from the full pair list"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Use the definition: Every pair must have its reversed pair.",
+        "Test set membership element by element. For a relation or function, look for a missing pair, collision, or unattained output."
+      ],
+      "explanation": {
+        "learning_objective": "Apply same parity: symmetric with explicit justification.",
+        "correct_rationale": "Every pair must have its reversed pair. In this pair list, every pair has its reverse. Therefore the answer is yes.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "Finiteness alone implies none of the four standard relation properties."
+          },
+          {
+            "option_index": 1,
+            "rationale": "Nonemptiness is not an obstruction to this property."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The complete finite relation is given, so its defining property can be checked."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "relation-property",
+        "universe": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "pairs": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            3,
+            3
+          ]
+        ],
+        "property": "symmetric",
+        "expected": true
+      }
+    }
+  ]
+}

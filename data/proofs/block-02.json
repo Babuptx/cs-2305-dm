@@ -1,0 +1,2108 @@
+{
+  "schema_version": 1,
+  "block_id": "proofs-block-02",
+  "pillar_id": "proofs",
+  "block_title": "Proof techniques · Block 2",
+  "questions": [
+    {
+      "id": "proofs-051",
+      "topic": "Induction: factorial bound",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Why does the induction hypothesis imply the next inequality?",
+      "context": "Proof workshop: For n≥4, n!>2ⁿ. Induction coverage may vary by course section.",
+      "options": [
+        "k+1>2, so (k+1)2ᵏ>2ᵏ⁺¹",
+        "k+1=2 for k≥4",
+        "Factorials add instead of multiply",
+        "2ᵏ⁺¹=2ᵏ+1"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Separate the hypothesis, the exact target, and the definition or theorem that connects them.",
+        "Check that each claimed step uses only hypotheses already established. For induction, distinguish the assumed case from the case being proved."
+      ],
+      "explanation": {
+        "learning_objective": "Apply induction: factorial bound with explicit justification.",
+        "correct_rationale": "For k≥4, k+1≥5>2. Multiply k!>2^k by k+1 and compare to 2·2^k.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "This does not satisfy the stated proof obligation. For k≥4, k+1≥5>2. Multiply k!>2^k by k+1 and compare to 2·2^k."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This does not satisfy the stated proof obligation. For k≥4, k+1≥5>2. Multiply k!>2^k by k+1 and compare to 2·2^k."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This does not satisfy the stated proof obligation. For k≥4, k+1≥5>2. Multiply k!>2^k by k+1 and compare to 2·2^k."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "proofs-052",
+      "topic": "Induction: factorial bound",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Why is replacing n≥4 by n≥1 wrong?",
+      "context": "Proof workshop: For n≥4, n!>2ⁿ. Induction coverage may vary by course section.",
+      "options": [
+        "The statement fails at n=1,2,3",
+        "The induction step always fails",
+        "2ⁿ is never positive",
+        "4! is not defined"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Separate the hypothesis, the exact target, and the definition or theorem that connects them.",
+        "Check that each claimed step uses only hypotheses already established. For induction, distinguish the assumed case from the case being proved."
+      ],
+      "explanation": {
+        "learning_objective": "Apply induction: factorial bound with explicit justification.",
+        "correct_rationale": "The proposed stronger statement includes 1!≤2, 2!≤4, and 3!≤8.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "This does not satisfy the stated proof obligation. The proposed stronger statement includes 1!≤2, 2!≤4, and 3!≤8."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This does not satisfy the stated proof obligation. The proposed stronger statement includes 1!≤2, 2!≤4, and 3!≤8."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This does not satisfy the stated proof obligation. The proposed stronger statement includes 1!≤2, 2!≤4, and 3!≤8."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "proofs-053",
+      "topic": "Strong induction: factorization",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What is the smallest base case?",
+      "context": "Proof workshop: Every integer n≥2 is a product of primes. Induction coverage may vary by course section.",
+      "options": [
+        "0 is prime",
+        "1 is prime",
+        "2 is prime",
+        "−1 is prime"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Separate the hypothesis, the exact target, and the definition or theorem that connects them.",
+        "Check that each claimed step uses only hypotheses already established. For induction, distinguish the assumed case from the case being proved."
+      ],
+      "explanation": {
+        "learning_objective": "Apply strong induction: factorization with explicit justification.",
+        "correct_rationale": "2 itself is a one-factor product of primes.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This does not satisfy the stated proof obligation. 2 itself is a one-factor product of primes."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This does not satisfy the stated proof obligation. 2 itself is a one-factor product of primes."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This does not satisfy the stated proof obligation. 2 itself is a one-factor product of primes."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "proofs-054",
+      "topic": "Strong induction: factorization",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Which hypothesis is suited to composite n?",
+      "context": "Proof workshop: Every integer n≥2 is a product of primes. Induction coverage may vary by course section.",
+      "options": [
+        "n already has a factorization",
+        "Only n−1 has a factorization",
+        "All integers m with 2≤m<n have prime factorizations",
+        "All real numbers are prime"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Separate the hypothesis, the exact target, and the definition or theorem that connects them.",
+        "Check that each claimed step uses only hypotheses already established. For induction, distinguish the assumed case from the case being proved."
+      ],
+      "explanation": {
+        "learning_objective": "Apply strong induction: factorization with explicit justification.",
+        "correct_rationale": "For n=ab, both factors a,b lie below n but need not equal n−1.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This does not satisfy the stated proof obligation. For n=ab, both factors a,b lie below n but need not equal n−1."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This does not satisfy the stated proof obligation. For n=ab, both factors a,b lie below n but need not equal n−1."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This does not satisfy the stated proof obligation. For n=ab, both factors a,b lie below n but need not equal n−1."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "proofs-055",
+      "topic": "Strong induction: factorization",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What must be shown for n=ab composite?",
+      "context": "Proof workshop: Every integer n≥2 is a product of primes. Induction coverage may vary by course section.",
+      "options": [
+        "2≤a,b<n",
+        "a=1",
+        "a and b are already prime",
+        "b=n"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Separate the hypothesis, the exact target, and the definition or theorem that connects them.",
+        "Check that each claimed step uses only hypotheses already established. For induction, distinguish the assumed case from the case being proved."
+      ],
+      "explanation": {
+        "learning_objective": "Apply strong induction: factorization with explicit justification.",
+        "correct_rationale": "A nontrivial factorization of a positive composite n uses factors at least 2 and strictly less than n.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "This does not satisfy the stated proof obligation. A nontrivial factorization of a positive composite n uses factors at least 2 and strictly less than n."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This does not satisfy the stated proof obligation. A nontrivial factorization of a positive composite n uses factors at least 2 and strictly less than n."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This does not satisfy the stated proof obligation. A nontrivial factorization of a positive composite n uses factors at least 2 and strictly less than n."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "proofs-056",
+      "topic": "Strong induction: factorization",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "How are the two smaller factorizations used?",
+      "context": "Proof workshop: Every integer n≥2 is a product of primes. Induction coverage may vary by course section.",
+      "options": [
+        "Subtract one factorization from the other",
+        "Concatenate their prime factors to obtain n",
+        "Add their prime factors",
+        "Discard all repeated prime factors"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Separate the hypothesis, the exact target, and the definition or theorem that connects them.",
+        "Check that each claimed step uses only hypotheses already established. For induction, distinguish the assumed case from the case being proved."
+      ],
+      "explanation": {
+        "learning_objective": "Apply strong induction: factorization with explicit justification.",
+        "correct_rationale": "If a=∏pᵢ and b=∏qⱼ, then ab is the product of both lists, including multiplicities.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This does not satisfy the stated proof obligation. If a=∏pᵢ and b=∏qⱼ, then ab is the product of both lists, including multiplicities."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This does not satisfy the stated proof obligation. If a=∏pᵢ and b=∏qⱼ, then ab is the product of both lists, including multiplicities."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This does not satisfy the stated proof obligation. If a=∏pᵢ and b=∏qⱼ, then ab is the product of both lists, including multiplicities."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "proofs-057",
+      "topic": "Strong induction: stamps",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Which consecutive base cases support adding 4?",
+      "context": "Proof workshop: Every amount n≥12 can be made with 4-unit and 5-unit stamps. Induction coverage may vary by course section.",
+      "options": [
+        "12 only",
+        "12 and 16 only",
+        "0 and 1",
+        "12,13,14,15"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Separate the hypothesis, the exact target, and the definition or theorem that connects them.",
+        "Check that each claimed step uses only hypotheses already established. For induction, distinguish the assumed case from the case being proved."
+      ],
+      "explanation": {
+        "learning_objective": "Apply strong induction: stamps with explicit justification.",
+        "correct_rationale": "Every residue class modulo 4 needs a starting reachable amount: 12=3·4, 13=2·4+5, 14=4+2·5, 15=3·5.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This does not satisfy the stated proof obligation. Every residue class modulo 4 needs a starting reachable amount: 12=3·4, 13=2·4+5, 14=4+2·5, 15=3·5."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This does not satisfy the stated proof obligation. Every residue class modulo 4 needs a starting reachable amount: 12=3·4, 13=2·4+5, 14=4+2·5, 15=3·5."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This does not satisfy the stated proof obligation. Every residue class modulo 4 needs a starting reachable amount: 12=3·4, 13=2·4+5, 14=4+2·5, 15=3·5."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "proofs-058",
+      "topic": "Strong induction: stamps",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "For n≥16, which smaller amount is used?",
+      "context": "Proof workshop: Every amount n≥12 can be made with 4-unit and 5-unit stamps. Induction coverage may vary by course section.",
+      "options": [
+        "n/4",
+        "n+4",
+        "n−4",
+        "n−5 only for n=16"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Separate the hypothesis, the exact target, and the definition or theorem that connects them.",
+        "Check that each claimed step uses only hypotheses already established. For induction, distinguish the assumed case from the case being proved."
+      ],
+      "explanation": {
+        "learning_objective": "Apply strong induction: stamps with explicit justification.",
+        "correct_rationale": "n−4≥12 and n−4<n, so the strong hypothesis covers it.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This does not satisfy the stated proof obligation. n−4≥12 and n−4<n, so the strong hypothesis covers it."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This does not satisfy the stated proof obligation. n−4≥12 and n−4<n, so the strong hypothesis covers it."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This does not satisfy the stated proof obligation. n−4≥12 and n−4<n, so the strong hypothesis covers it."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "proofs-059",
+      "topic": "Strong induction: stamps",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What operation constructs n from the smaller amount?",
+      "context": "Proof workshop: Every amount n≥12 can be made with 4-unit and 5-unit stamps. Induction coverage may vary by course section.",
+      "options": [
+        "Multiply the stamp count by n",
+        "Add one 4-unit stamp",
+        "Remove one 5-unit stamp",
+        "Add one 1-unit stamp"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Separate the hypothesis, the exact target, and the definition or theorem that connects them.",
+        "Check that each claimed step uses only hypotheses already established. For induction, distinguish the assumed case from the case being proved."
+      ],
+      "explanation": {
+        "learning_objective": "Apply strong induction: stamps with explicit justification.",
+        "correct_rationale": "A representation of n−4 plus one 4-unit stamp totals n.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This does not satisfy the stated proof obligation. A representation of n−4 plus one 4-unit stamp totals n."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This does not satisfy the stated proof obligation. A representation of n−4 plus one 4-unit stamp totals n."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This does not satisfy the stated proof obligation. A representation of n−4 plus one 4-unit stamp totals n."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "proofs-060",
+      "topic": "Strong induction: stamps",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Which attempted earlier starting point is disproved?",
+      "context": "Proof workshop: Every amount n≥12 can be made with 4-unit and 5-unit stamps. Induction coverage may vary by course section.",
+      "options": [
+        "16 is representable",
+        "13 is representable",
+        "Every n≥11 is representable",
+        "Every n≥12 is representable"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Separate the hypothesis, the exact target, and the definition or theorem that connects them.",
+        "Check that each claimed step uses only hypotheses already established. For induction, distinguish the assumed case from the case being proved."
+      ],
+      "explanation": {
+        "learning_objective": "Apply strong induction: stamps with explicit justification.",
+        "correct_rationale": "11 cannot equal 4a+5b for nonnegative integers: b=0,1,2 leaves 11,6,1, none divisible by 4.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This does not satisfy the stated proof obligation. 11 cannot equal 4a+5b for nonnegative integers: b=0,1,2 leaves 11,6,1, none divisible by 4."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This does not satisfy the stated proof obligation. 11 cannot equal 4a+5b for nonnegative integers: b=0,1,2 leaves 11,6,1, none divisible by 4."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This does not satisfy the stated proof obligation. 11 cannot equal 4a+5b for nonnegative integers: b=0,1,2 leaves 11,6,1, none divisible by 4."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "proofs-061",
+      "topic": "Well-ordering",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Which set satisfies the theorem’s domain?",
+      "context": "Proof workshop: Every nonempty subset of nonnegative integers has a least element. Induction coverage may vary by course section.",
+      "options": [
+        "The empty set",
+        "All negative integers",
+        "Positive real numbers",
+        "{7,11,20}"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Separate the hypothesis, the exact target, and the definition or theorem that connects them.",
+        "Check that each claimed step uses only hypotheses already established. For induction, distinguish the assumed case from the case being proved."
+      ],
+      "explanation": {
+        "learning_objective": "Apply well-ordering with explicit justification.",
+        "correct_rationale": "{7,11,20} is a nonempty subset of nonnegative integers; the other sets lack the required domain or nonemptiness.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This does not satisfy the stated proof obligation. {7,11,20} is a nonempty subset of nonnegative integers; the other sets lack the required domain or nonemptiness."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This does not satisfy the stated proof obligation. {7,11,20} is a nonempty subset of nonnegative integers; the other sets lack the required domain or nonemptiness."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This does not satisfy the stated proof obligation. {7,11,20} is a nonempty subset of nonnegative integers; the other sets lack the required domain or nonemptiness."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "proofs-062",
+      "topic": "Well-ordering",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Why is nonemptiness necessary?",
+      "context": "Proof workshop: Every nonempty subset of nonnegative integers has a least element. Induction coverage may vary by course section.",
+      "options": [
+        "Nonemptiness is never required",
+        "The empty set has infinitely many least elements",
+        "Every empty set has least element 0",
+        "An empty set has no element to be least"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Separate the hypothesis, the exact target, and the definition or theorem that connects them.",
+        "Check that each claimed step uses only hypotheses already established. For induction, distinguish the assumed case from the case being proved."
+      ],
+      "explanation": {
+        "learning_objective": "Apply well-ordering with explicit justification.",
+        "correct_rationale": "A least element must belong to the set, impossible if there are no elements.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This does not satisfy the stated proof obligation. A least element must belong to the set, impossible if there are no elements."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This does not satisfy the stated proof obligation. A least element must belong to the set, impossible if there are no elements."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This does not satisfy the stated proof obligation. A least element must belong to the set, impossible if there are no elements."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "proofs-063",
+      "topic": "Well-ordering",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Why does the analogous claim for positive real numbers fail?",
+      "context": "Proof workshop: Every nonempty subset of nonnegative integers has a least element. Induction coverage may vary by course section.",
+      "options": [
+        "All positive real numbers are integers",
+        "The number 1 is least",
+        "For every x>0, x/2 is smaller and still positive",
+        "0 belongs to the positive reals"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Separate the hypothesis, the exact target, and the definition or theorem that connects them.",
+        "Check that each claimed step uses only hypotheses already established. For induction, distinguish the assumed case from the case being proved."
+      ],
+      "explanation": {
+        "learning_objective": "Apply well-ordering with explicit justification.",
+        "correct_rationale": "No positive real is least because halving gives a smaller positive real.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This does not satisfy the stated proof obligation. No positive real is least because halving gives a smaller positive real."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This does not satisfy the stated proof obligation. No positive real is least because halving gives a smaller positive real."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This does not satisfy the stated proof obligation. No positive real is least because halving gives a smaller positive real."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "proofs-064",
+      "topic": "Well-ordering",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What role does a least counterexample play in an induction-style proof?",
+      "context": "Proof workshop: Every nonempty subset of nonnegative integers has a least element. Induction coverage may vary by course section.",
+      "options": [
+        "All later cases are false",
+        "All earlier permitted cases are true",
+        "The counterexample must be 0",
+        "The least case is automatically true"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Separate the hypothesis, the exact target, and the definition or theorem that connects them.",
+        "Check that each claimed step uses only hypotheses already established. For induction, distinguish the assumed case from the case being proved."
+      ],
+      "explanation": {
+        "learning_objective": "Apply well-ordering with explicit justification.",
+        "correct_rationale": "Minimality rules out earlier counterexamples; use their truth to contradict failure at the least one.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This does not satisfy the stated proof obligation. Minimality rules out earlier counterexamples; use their truth to contradict failure at the least one."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This does not satisfy the stated proof obligation. Minimality rules out earlier counterexamples; use their truth to contradict failure at the least one."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This does not satisfy the stated proof obligation. Minimality rules out earlier counterexamples; use their truth to contradict failure at the least one."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "proofs-065",
+      "topic": "Uniqueness",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "How should a uniqueness proof begin?",
+      "context": "Proof workshop: An additive identity is unique. Induction coverage may vary by course section.",
+      "options": [
+        "Assume no identity exists",
+        "Assume e≠f and stop",
+        "Check only one identity",
+        "Assume e and f are both additive identities"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Separate the hypothesis, the exact target, and the definition or theorem that connects them.",
+        "Check that each claimed step uses only hypotheses already established. For induction, distinguish the assumed case from the case being proved."
+      ],
+      "explanation": {
+        "learning_objective": "Apply uniqueness with explicit justification.",
+        "correct_rationale": "To prove at most one, take two candidates satisfying the defining property and show equality.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This does not satisfy the stated proof obligation. To prove at most one, take two candidates satisfying the defining property and show equality."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This does not satisfy the stated proof obligation. To prove at most one, take two candidates satisfying the defining property and show equality."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This does not satisfy the stated proof obligation. To prove at most one, take two candidates satisfying the defining property and show equality."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "proofs-066",
+      "topic": "Uniqueness",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Which equality follows using both identity properties?",
+      "context": "Proof workshop: An additive identity is unique. Induction coverage may vary by course section.",
+      "options": [
+        "e+f=0 without definitions",
+        "e=e+f=f",
+        "e=f+1",
+        "e+f=e−f"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Separate the hypothesis, the exact target, and the definition or theorem that connects them.",
+        "Check that each claimed step uses only hypotheses already established. For induction, distinguish the assumed case from the case being proved."
+      ],
+      "explanation": {
+        "learning_objective": "Apply uniqueness with explicit justification.",
+        "correct_rationale": "Since f is an identity, e+f=e; since e is an identity, e+f=f. Therefore e=f.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This does not satisfy the stated proof obligation. Since f is an identity, e+f=e; since e is an identity, e+f=f. Therefore e=f."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This does not satisfy the stated proof obligation. Since f is an identity, e+f=e; since e is an identity, e+f=f. Therefore e=f."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This does not satisfy the stated proof obligation. Since f is an identity, e+f=e; since e is an identity, e+f=f. Therefore e=f."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "proofs-067",
+      "topic": "Uniqueness",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What is proved by showing any two candidates equal?",
+      "context": "Proof workshop: An additive identity is unique. Induction coverage may vary by course section.",
+      "options": [
+        "There are exactly two identities",
+        "At most one identity exists",
+        "An identity necessarily exists",
+        "Every element is an identity"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Separate the hypothesis, the exact target, and the definition or theorem that connects them.",
+        "Check that each claimed step uses only hypotheses already established. For induction, distinguish the assumed case from the case being proved."
+      ],
+      "explanation": {
+        "learning_objective": "Apply uniqueness with explicit justification.",
+        "correct_rationale": "Uniqueness alone proves at most one; existence is a separate obligation.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This does not satisfy the stated proof obligation. Uniqueness alone proves at most one; existence is a separate obligation."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This does not satisfy the stated proof obligation. Uniqueness alone proves at most one; existence is a separate obligation."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This does not satisfy the stated proof obligation. Uniqueness alone proves at most one; existence is a separate obligation."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "proofs-068",
+      "topic": "Uniqueness",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What extra fact yields existence and uniqueness for integers?",
+      "context": "Proof workshop: An additive identity is unique. Induction coverage may vary by course section.",
+      "options": [
+        "Addition lacks closure",
+        "Every integer is prime",
+        "1 is an additive identity",
+        "0 is an additive identity"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Separate the hypothesis, the exact target, and the definition or theorem that connects them.",
+        "Check that each claimed step uses only hypotheses already established. For induction, distinguish the assumed case from the case being proved."
+      ],
+      "explanation": {
+        "learning_objective": "Apply uniqueness with explicit justification.",
+        "correct_rationale": "Verify n+0=0+n=n; combined with at-most-one, this proves exactly one identity.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This does not satisfy the stated proof obligation. Verify n+0=0+n=n; combined with at-most-one, this proves exactly one identity."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This does not satisfy the stated proof obligation. Verify n+0=0+n=n; combined with at-most-one, this proves exactly one identity."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This does not satisfy the stated proof obligation. Verify n+0=0+n=n; combined with at-most-one, this proves exactly one identity."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "proofs-069",
+      "topic": "Existence: constructive proof",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Which witness proves existence?",
+      "context": "Proof workshop: There exists an integer n with n²−n=6. Induction coverage may vary by course section.",
+      "options": [
+        "n=1",
+        "n=2",
+        "n=3",
+        "n=0"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Separate the hypothesis, the exact target, and the definition or theorem that connects them.",
+        "Check that each claimed step uses only hypotheses already established. For induction, distinguish the assumed case from the case being proved."
+      ],
+      "explanation": {
+        "learning_objective": "Apply existence: constructive proof with explicit justification.",
+        "correct_rationale": "3²−3=9−3=6, so 3 is an explicit witness.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This does not satisfy the stated proof obligation. 3²−3=9−3=6, so 3 is an explicit witness."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This does not satisfy the stated proof obligation. 3²−3=9−3=6, so 3 is an explicit witness."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This does not satisfy the stated proof obligation. 3²−3=9−3=6, so 3 is an explicit witness."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "proofs-070",
+      "topic": "Existence: constructive proof",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What additional integer is also a witness?",
+      "context": "Proof workshop: There exists an integer n with n²−n=6. Induction coverage may vary by course section.",
+      "options": [
+        "n=−3",
+        "n=4",
+        "n=−2",
+        "n=−1"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Separate the hypothesis, the exact target, and the definition or theorem that connects them.",
+        "Check that each claimed step uses only hypotheses already established. For induction, distinguish the assumed case from the case being proved."
+      ],
+      "explanation": {
+        "learning_objective": "Apply existence: constructive proof with explicit justification.",
+        "correct_rationale": "(−2)²−(−2)=4+2=6.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This does not satisfy the stated proof obligation. (−2)²−(−2)=4+2=6."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This does not satisfy the stated proof obligation. (−2)²−(−2)=4+2=6."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This does not satisfy the stated proof obligation. (−2)²−(−2)=4+2=6."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "proofs-071",
+      "topic": "Existence: constructive proof",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Which factorization describes all solutions?",
+      "context": "Proof workshop: There exists an integer n with n²−n=6. Induction coverage may vary by course section.",
+      "options": [
+        "(n−3)(n−2)=0",
+        "(n+3)(n+2)=0",
+        "(n−3)(n+2)=0",
+        "(n−2)(n+3)=0"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Separate the hypothesis, the exact target, and the definition or theorem that connects them.",
+        "Check that each claimed step uses only hypotheses already established. For induction, distinguish the assumed case from the case being proved."
+      ],
+      "explanation": {
+        "learning_objective": "Apply existence: constructive proof with explicit justification.",
+        "correct_rationale": "n²−n−6 factors as (n−3)(n+2).",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This does not satisfy the stated proof obligation. n²−n−6 factors as (n−3)(n+2)."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This does not satisfy the stated proof obligation. n²−n−6 factors as (n−3)(n+2)."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This does not satisfy the stated proof obligation. n²−n−6 factors as (n−3)(n+2)."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "proofs-072",
+      "topic": "Existence: constructive proof",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Which conclusion is not justified?",
+      "context": "Proof workshop: There exists an integer n with n²−n=6. Induction coverage may vary by course section.",
+      "options": [
+        "There is at least one integer solution",
+        "3 is a solution",
+        "There are two integer solutions",
+        "There is exactly one integer solution"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Separate the hypothesis, the exact target, and the definition or theorem that connects them.",
+        "Check that each claimed step uses only hypotheses already established. For induction, distinguish the assumed case from the case being proved."
+      ],
+      "explanation": {
+        "learning_objective": "Apply existence: constructive proof with explicit justification.",
+        "correct_rationale": "The roots 3 and −2 show that uniqueness is false.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This does not satisfy the stated proof obligation. The roots 3 and −2 show that uniqueness is false."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This does not satisfy the stated proof obligation. The roots 3 and −2 show that uniqueness is false."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This does not satisfy the stated proof obligation. The roots 3 and −2 show that uniqueness is false."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "proofs-073",
+      "topic": "Cases: absolute values",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Which cases exhaust the domain?",
+      "context": "Proof workshop: For real x, |x|≥x. Induction coverage may vary by course section.",
+      "options": [
+        "x=1 and x=−1",
+        "x≥0 and x<0",
+        "x>0 and x<0",
+        "x is an integer or prime"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Separate the hypothesis, the exact target, and the definition or theorem that connects them.",
+        "Check that each claimed step uses only hypotheses already established. For induction, distinguish the assumed case from the case being proved."
+      ],
+      "explanation": {
+        "learning_objective": "Apply cases: absolute values with explicit justification.",
+        "correct_rationale": "The first partition includes zero and all real signs; the second misses zero.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This does not satisfy the stated proof obligation. The first partition includes zero and all real signs; the second misses zero."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This does not satisfy the stated proof obligation. The first partition includes zero and all real signs; the second misses zero."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This does not satisfy the stated proof obligation. The first partition includes zero and all real signs; the second misses zero."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "proofs-074",
+      "topic": "Cases: absolute values",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What is |x| in the nonnegative case?",
+      "context": "Proof workshop: For real x, |x|≥x. Induction coverage may vary by course section.",
+      "options": [
+        "1",
+        "x²",
+        "−x always",
+        "x"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Separate the hypothesis, the exact target, and the definition or theorem that connects them.",
+        "Check that each claimed step uses only hypotheses already established. For induction, distinguish the assumed case from the case being proved."
+      ],
+      "explanation": {
+        "learning_objective": "Apply cases: absolute values with explicit justification.",
+        "correct_rationale": "By definition, |x|=x when x≥0, giving equality.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This does not satisfy the stated proof obligation. By definition, |x|=x when x≥0, giving equality."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This does not satisfy the stated proof obligation. By definition, |x|=x when x≥0, giving equality."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This does not satisfy the stated proof obligation. By definition, |x|=x when x≥0, giving equality."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "proofs-075",
+      "topic": "Cases: absolute values",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What establishes the negative case?",
+      "context": "Proof workshop: For real x, |x|≥x. Induction coverage may vary by course section.",
+      "options": [
+        "−x>x when x<0",
+        "−x<x when x<0",
+        "x²=x",
+        "|x|=x<0"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Separate the hypothesis, the exact target, and the definition or theorem that connects them.",
+        "Check that each claimed step uses only hypotheses already established. For induction, distinguish the assumed case from the case being proved."
+      ],
+      "explanation": {
+        "learning_objective": "Apply cases: absolute values with explicit justification.",
+        "correct_rationale": "If x<0, then −x>0>x, and |x|=−x.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "This does not satisfy the stated proof obligation. If x<0, then −x>0>x, and |x|=−x."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This does not satisfy the stated proof obligation. If x<0, then −x>0>x, and |x|=−x."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This does not satisfy the stated proof obligation. If x<0, then −x>0>x, and |x|=−x."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "proofs-076",
+      "topic": "Cases: absolute values",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "When is equality attained?",
+      "context": "Proof workshop: For real x, |x|≥x. Induction coverage may vary by course section.",
+      "options": [
+        "Exactly when x≥0",
+        "Exactly when x<0",
+        "Only when x=1",
+        "For no real x"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Separate the hypothesis, the exact target, and the definition or theorem that connects them.",
+        "Check that each claimed step uses only hypotheses already established. For induction, distinguish the assumed case from the case being proved."
+      ],
+      "explanation": {
+        "learning_objective": "Apply cases: absolute values with explicit justification.",
+        "correct_rationale": "For x≥0, |x|=x; for x<0, |x|=−x>x.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "This does not satisfy the stated proof obligation. For x≥0, |x|=x; for x<0, |x|=−x>x."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This does not satisfy the stated proof obligation. For x≥0, |x|=x; for x<0, |x|=−x>x."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This does not satisfy the stated proof obligation. For x≥0, |x|=x; for x<0, |x|=−x>x."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "proofs-077",
+      "topic": "Proof errors: cancellation",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "Why is dividing a²−ab by a−b invalid?",
+      "context": "Proof workshop: Inspect a supposed proof that 1=2 from a=b≠0. Induction coverage may vary by course section.",
+      "options": [
+        "a−b=0 under the premise",
+        "Multiplication is invalid",
+        "a and b are positive",
+        "Squaring is always invalid"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Separate the hypothesis, the exact target, and the definition or theorem that connects them.",
+        "Check that each claimed step uses only hypotheses already established. For induction, distinguish the assumed case from the case being proved."
+      ],
+      "explanation": {
+        "learning_objective": "Apply proof errors: cancellation with explicit justification.",
+        "correct_rationale": "Since a=b, the cancelled factor a−b equals zero, and division by zero is undefined.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "This does not satisfy the stated proof obligation. Since a=b, the cancelled factor a−b equals zero, and division by zero is undefined."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This does not satisfy the stated proof obligation. Since a=b, the cancelled factor a−b equals zero, and division by zero is undefined."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This does not satisfy the stated proof obligation. Since a=b, the cancelled factor a−b equals zero, and division by zero is undefined."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "proofs-078",
+      "topic": "Proof errors: cancellation",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "Which step remains valid before cancellation?",
+      "context": "Proof workshop: Inspect a supposed proof that 1=2 from a=b≠0. Induction coverage may vary by course section.",
+      "options": [
+        "a²−b²=ab−b²",
+        "(a+b)=b after division",
+        "2=1",
+        "a−b is nonzero"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Separate the hypothesis, the exact target, and the definition or theorem that connects them.",
+        "Check that each claimed step uses only hypotheses already established. For induction, distinguish the assumed case from the case being proved."
+      ],
+      "explanation": {
+        "learning_objective": "Apply proof errors: cancellation with explicit justification.",
+        "correct_rationale": "Multiplying a=b by a and subtracting b² gives the equality; only subsequent zero cancellation fails.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "This does not satisfy the stated proof obligation. Multiplying a=b by a and subtracting b² gives the equality; only subsequent zero cancellation fails."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This does not satisfy the stated proof obligation. Multiplying a=b by a and subtracting b² gives the equality; only subsequent zero cancellation fails."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This does not satisfy the stated proof obligation. Multiplying a=b by a and subtracting b² gives the equality; only subsequent zero cancellation fails."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "proofs-079",
+      "topic": "Proof errors: cancellation",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "Under which condition is cancelling a factor c valid over the reals?",
+      "context": "Proof workshop: Inspect a supposed proof that 1=2 from a=b≠0. Induction coverage may vary by course section.",
+      "options": [
+        "c must equal 1",
+        "c=0",
+        "c is arbitrary without restriction",
+        "c≠0"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Separate the hypothesis, the exact target, and the definition or theorem that connects them.",
+        "Check that each claimed step uses only hypotheses already established. For induction, distinguish the assumed case from the case being proved."
+      ],
+      "explanation": {
+        "learning_objective": "Apply proof errors: cancellation with explicit justification.",
+        "correct_rationale": "If c≠0, its multiplicative inverse exists; dividing by c preserves equality.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This does not satisfy the stated proof obligation. If c≠0, its multiplicative inverse exists; dividing by c preserves equality."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This does not satisfy the stated proof obligation. If c≠0, its multiplicative inverse exists; dividing by c preserves equality."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This does not satisfy the stated proof obligation. If c≠0, its multiplicative inverse exists; dividing by c preserves equality."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "proofs-080",
+      "topic": "Proof errors: cancellation",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "What lesson generalizes to proof construction?",
+      "context": "Proof workshop: Inspect a supposed proof that 1=2 from a=b≠0. Induction coverage may vary by course section.",
+      "options": [
+        "Contradictions prove every calculation valid",
+        "Equalities can never be factored",
+        "A numeric example proves all identities",
+        "Check every operation’s preconditions"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Separate the hypothesis, the exact target, and the definition or theorem that connects them.",
+        "Check that each claimed step uses only hypotheses already established. For induction, distinguish the assumed case from the case being proved."
+      ],
+      "explanation": {
+        "learning_objective": "Apply proof errors: cancellation with explicit justification.",
+        "correct_rationale": "Domain restrictions such as nonzero denominators are part of a valid argument, not optional details.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This does not satisfy the stated proof obligation. Domain restrictions such as nonzero denominators are part of a valid argument, not optional details."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This does not satisfy the stated proof obligation. Domain restrictions such as nonzero denominators are part of a valid argument, not optional details."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This does not satisfy the stated proof obligation. Domain restrictions such as nonzero denominators are part of a valid argument, not optional details."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "proofs-081",
+      "topic": "Proof errors: induction",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "Where does the overlapping-subsets induction fail?",
+      "context": "Proof workshop: The false claim says every finite group of horses has one color. Induction coverage may vary by course section.",
+      "options": [
+        "The step from one horse to two",
+        "Every step from three onward",
+        "The base case with one horse",
+        "The meaning of a finite set"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Separate the hypothesis, the exact target, and the definition or theorem that connects them.",
+        "Check that each claimed step uses only hypotheses already established. For induction, distinguish the assumed case from the case being proved."
+      ],
+      "explanation": {
+        "learning_objective": "Apply proof errors: induction with explicit justification.",
+        "correct_rationale": "Two one-horse subsets have no shared horse, so their colors cannot be linked.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "This does not satisfy the stated proof obligation. Two one-horse subsets have no shared horse, so their colors cannot be linked."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This does not satisfy the stated proof obligation. Two one-horse subsets have no shared horse, so their colors cannot be linked."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This does not satisfy the stated proof obligation. Two one-horse subsets have no shared horse, so their colors cannot be linked."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "proofs-082",
+      "topic": "Proof errors: induction",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "What is needed to link the colors of two subsets?",
+      "context": "Proof workshop: The false claim says every finite group of horses has one color. Induction coverage may vary by course section.",
+      "options": [
+        "A common horse in both subsets",
+        "Only equal subset sizes",
+        "An empty intersection",
+        "Distinct horses in both"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Separate the hypothesis, the exact target, and the definition or theorem that connects them.",
+        "Check that each claimed step uses only hypotheses already established. For induction, distinguish the assumed case from the case being proved."
+      ],
+      "explanation": {
+        "learning_objective": "Apply proof errors: induction with explicit justification.",
+        "correct_rationale": "A shared element provides a color that both uniform subsets must have.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "This does not satisfy the stated proof obligation. A shared element provides a color that both uniform subsets must have."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This does not satisfy the stated proof obligation. A shared element provides a color that both uniform subsets must have."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This does not satisfy the stated proof obligation. A shared element provides a color that both uniform subsets must have."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "proofs-083",
+      "topic": "Proof errors: induction",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "Why does checking the base case not rescue the proof?",
+      "context": "Proof workshop: The false claim says every finite group of horses has one color. Induction coverage may vary by course section.",
+      "options": [
+        "The base must be false",
+        "Every required induction step must also be valid",
+        "A true base implies all claims",
+        "The theorem can ignore size two"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Separate the hypothesis, the exact target, and the definition or theorem that connects them.",
+        "Check that each claimed step uses only hypotheses already established. For induction, distinguish the assumed case from the case being proved."
+      ],
+      "explanation": {
+        "learning_objective": "Apply proof errors: induction with explicit justification.",
+        "correct_rationale": "A chain breaks at the first invalid transition, even with a true starting case.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This does not satisfy the stated proof obligation. A chain breaks at the first invalid transition, even with a true starting case."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This does not satisfy the stated proof obligation. A chain breaks at the first invalid transition, even with a true starting case."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This does not satisfy the stated proof obligation. A chain breaks at the first invalid transition, even with a true starting case."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "proofs-084",
+      "topic": "Proof errors: induction",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "Which observation disproves the universal claim?",
+      "context": "Proof workshop: The false claim says every finite group of horses has one color. Induction coverage may vary by course section.",
+      "options": [
+        "One horse has one color",
+        "A three-horse set has three elements",
+        "Two horses can have different colors",
+        "A finite set can be empty"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Separate the hypothesis, the exact target, and the definition or theorem that connects them.",
+        "Check that each claimed step uses only hypotheses already established. For induction, distinguish the assumed case from the case being proved."
+      ],
+      "explanation": {
+        "learning_objective": "Apply proof errors: induction with explicit justification.",
+        "correct_rationale": "An instance of two differently colored horses satisfies the domain but violates the conclusion.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This does not satisfy the stated proof obligation. An instance of two differently colored horses satisfies the domain but violates the conclusion."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This does not satisfy the stated proof obligation. An instance of two differently colored horses satisfies the domain but violates the conclusion."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This does not satisfy the stated proof obligation. An instance of two differently colored horses satisfies the domain but violates the conclusion."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "proofs-085",
+      "topic": "Contrapositive versus converse",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "Which implication is equivalent to the claim?",
+      "context": "Proof workshop: If an integer is divisible by 6, it is divisible by 3. Induction coverage may vary by course section.",
+      "options": [
+        "If 3 divides n, then 6 divides n",
+        "If 3 does not divide n, then 6 does not divide n",
+        "If 6 does not divide n, then 3 does not divide n",
+        "If 6 divides n, then 3 does not divide n"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Separate the hypothesis, the exact target, and the definition or theorem that connects them.",
+        "Check that each claimed step uses only hypotheses already established. For induction, distinguish the assumed case from the case being proved."
+      ],
+      "explanation": {
+        "learning_objective": "Apply contrapositive versus converse with explicit justification.",
+        "correct_rationale": "Only the contrapositive is logically equivalent to an implication.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This does not satisfy the stated proof obligation. Only the contrapositive is logically equivalent to an implication."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This does not satisfy the stated proof obligation. Only the contrapositive is logically equivalent to an implication."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This does not satisfy the stated proof obligation. Only the contrapositive is logically equivalent to an implication."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "proofs-086",
+      "topic": "Contrapositive versus converse",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "Which integer refutes the converse?",
+      "context": "Proof workshop: If an integer is divisible by 6, it is divisible by 3. Induction coverage may vary by course section.",
+      "options": [
+        "18",
+        "12",
+        "6",
+        "3"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Separate the hypothesis, the exact target, and the definition or theorem that connects them.",
+        "Check that each claimed step uses only hypotheses already established. For induction, distinguish the assumed case from the case being proved."
+      ],
+      "explanation": {
+        "learning_objective": "Apply contrapositive versus converse with explicit justification.",
+        "correct_rationale": "3 is divisible by 3 but not by 6.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This does not satisfy the stated proof obligation. 3 is divisible by 3 but not by 6."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This does not satisfy the stated proof obligation. 3 is divisible by 3 but not by 6."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This does not satisfy the stated proof obligation. 3 is divisible by 3 but not by 6."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "proofs-087",
+      "topic": "Contrapositive versus converse",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "Which integer witness proves the direct claim?",
+      "context": "Proof workshop: If an integer is divisible by 6, it is divisible by 3. Induction coverage may vary by course section.",
+      "options": [
+        "n=3(2+k)",
+        "n=6+k",
+        "n=6k=3(2k)",
+        "n=3k=6k"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Separate the hypothesis, the exact target, and the definition or theorem that connects them.",
+        "Check that each claimed step uses only hypotheses already established. For induction, distinguish the assumed case from the case being proved."
+      ],
+      "explanation": {
+        "learning_objective": "Apply contrapositive versus converse with explicit justification.",
+        "correct_rationale": "If n=6k with integer k, then 2k is an integer witness for divisibility by 3.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This does not satisfy the stated proof obligation. If n=6k with integer k, then 2k is an integer witness for divisibility by 3."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This does not satisfy the stated proof obligation. If n=6k with integer k, then 2k is an integer witness for divisibility by 3."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This does not satisfy the stated proof obligation. If n=6k with integer k, then 2k is an integer witness for divisibility by 3."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "proofs-088",
+      "topic": "Contrapositive versus converse",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "What changes the implication into a biconditional?",
+      "context": "Proof workshop: If an integer is divisible by 6, it is divisible by 3. Induction coverage may vary by course section.",
+      "options": [
+        "Require n to be nonzero",
+        "Require both divisibility by 2 and divisibility by 3",
+        "Only require divisibility by 3",
+        "Require n to be odd"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Separate the hypothesis, the exact target, and the definition or theorem that connects them.",
+        "Check that each claimed step uses only hypotheses already established. For induction, distinguish the assumed case from the case being proved."
+      ],
+      "explanation": {
+        "learning_objective": "Apply contrapositive versus converse with explicit justification.",
+        "correct_rationale": "Since 2 and 3 are coprime, n is divisible by 6 iff it is divisible by both 2 and 3.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This does not satisfy the stated proof obligation. Since 2 and 3 are coprime, n is divisible by 6 iff it is divisible by both 2 and 3."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This does not satisfy the stated proof obligation. Since 2 and 3 are coprime, n is divisible by 6 iff it is divisible by both 2 and 3."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This does not satisfy the stated proof obligation. Since 2 and 3 are coprime, n is divisible by 6 iff it is divisible by both 2 and 3."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "proofs-089",
+      "topic": "Proof of a set identity",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "Which proof method directly establishes equality?",
+      "context": "Proof workshop: A∩(B∪C)=(A∩B)∪(A∩C). Induction coverage may vary by course section.",
+      "options": [
+        "Count elements without assumptions",
+        "Show both inclusions using arbitrary elements",
+        "Check only empty sets",
+        "Show only one inclusion"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Separate the hypothesis, the exact target, and the definition or theorem that connects them.",
+        "Check that each claimed step uses only hypotheses already established. For induction, distinguish the assumed case from the case being proved."
+      ],
+      "explanation": {
+        "learning_objective": "Apply proof of a set identity with explicit justification.",
+        "correct_rationale": "Two sets are equal iff each is a subset of the other.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This does not satisfy the stated proof obligation. Two sets are equal iff each is a subset of the other."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This does not satisfy the stated proof obligation. Two sets are equal iff each is a subset of the other."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This does not satisfy the stated proof obligation. Two sets are equal iff each is a subset of the other."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "proofs-090",
+      "topic": "Proof of a set identity",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "Which membership statement matches the left side?",
+      "context": "Proof workshop: A∩(B∪C)=(A∩B)∪(A∩C). Induction coverage may vary by course section.",
+      "options": [
+        "x∈A or (x∈B and x∈C)",
+        "x∈A and (x∈B or x∈C)",
+        "x∈A and x∈B and x∈C",
+        "x∈B or x∈C only"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Separate the hypothesis, the exact target, and the definition or theorem that connects them.",
+        "Check that each claimed step uses only hypotheses already established. For induction, distinguish the assumed case from the case being proved."
+      ],
+      "explanation": {
+        "learning_objective": "Apply proof of a set identity with explicit justification.",
+        "correct_rationale": "Intersection means and; union means or, with parentheses preserving scope.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This does not satisfy the stated proof obligation. Intersection means and; union means or, with parentheses preserving scope."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This does not satisfy the stated proof obligation. Intersection means and; union means or, with parentheses preserving scope."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This does not satisfy the stated proof obligation. Intersection means and; union means or, with parentheses preserving scope."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "proofs-091",
+      "topic": "Proof of a set identity",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "Which logical equivalence drives the proof?",
+      "context": "Proof workshop: A∩(B∪C)=(A∩B)∪(A∩C). Induction coverage may vary by course section.",
+      "options": [
+        "p∧(q∨r) ≡ (p∧q)∨(p∧r)",
+        "p∧(q∨r) ≡ p∨q∨r",
+        "p∧(q∨r) ≡ ¬p",
+        "p∧(q∨r) ≡ p∧q∧r"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Separate the hypothesis, the exact target, and the definition or theorem that connects them.",
+        "Check that each claimed step uses only hypotheses already established. For induction, distinguish the assumed case from the case being proved."
+      ],
+      "explanation": {
+        "learning_objective": "Apply proof of a set identity with explicit justification.",
+        "correct_rationale": "Distributivity of conjunction over disjunction translates exactly to the set identity.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "This does not satisfy the stated proof obligation. Distributivity of conjunction over disjunction translates exactly to the set identity."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This does not satisfy the stated proof obligation. Distributivity of conjunction over disjunction translates exactly to the set identity."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This does not satisfy the stated proof obligation. Distributivity of conjunction over disjunction translates exactly to the set identity."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "proofs-092",
+      "topic": "Proof of a set identity",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "Why does checking one finite example not prove the identity?",
+      "context": "Proof workshop: A∩(B∪C)=(A∩B)∪(A∩C). Induction coverage may vary by course section.",
+      "options": [
+        "The claim ranges over arbitrary sets",
+        "Examples never provide insight",
+        "The identity is false",
+        "Finite sets cannot satisfy it"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Separate the hypothesis, the exact target, and the definition or theorem that connects them.",
+        "Check that each claimed step uses only hypotheses already established. For induction, distinguish the assumed case from the case being proved."
+      ],
+      "explanation": {
+        "learning_objective": "Apply proof of a set identity with explicit justification.",
+        "correct_rationale": "An example illustrates the identity, but elementwise equivalence covers all possible sets.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "This does not satisfy the stated proof obligation. An example illustrates the identity, but elementwise equivalence covers all possible sets."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This does not satisfy the stated proof obligation. An example illustrates the identity, but elementwise equivalence covers all possible sets."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This does not satisfy the stated proof obligation. An example illustrates the identity, but elementwise equivalence covers all possible sets."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "proofs-093",
+      "topic": "Invariant reasoning",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "Which property is invariant?",
+      "context": "Proof workshop: Starting at 0, each move adds or subtracts 2. Induction coverage may vary by course section.",
+      "options": [
+        "The current value is prime",
+        "The current value is even",
+        "The current value increases",
+        "The current value is positive"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Separate the hypothesis, the exact target, and the definition or theorem that connects them.",
+        "Check that each claimed step uses only hypotheses already established. For induction, distinguish the assumed case from the case being proved."
+      ],
+      "explanation": {
+        "learning_objective": "Apply invariant reasoning with explicit justification.",
+        "correct_rationale": "0 is even, and adding or subtracting 2 preserves evenness.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This does not satisfy the stated proof obligation. 0 is even, and adding or subtracting 2 preserves evenness."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This does not satisfy the stated proof obligation. 0 is even, and adding or subtracting 2 preserves evenness."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This does not satisfy the stated proof obligation. 0 is even, and adding or subtracting 2 preserves evenness."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "proofs-094",
+      "topic": "Invariant reasoning",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "Which target is unreachable?",
+      "context": "Proof workshop: Starting at 0, each move adds or subtracts 2. Induction coverage may vary by course section.",
+      "options": [
+        "7",
+        "10",
+        "−4",
+        "0"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Separate the hypothesis, the exact target, and the definition or theorem that connects them.",
+        "Check that each claimed step uses only hypotheses already established. For induction, distinguish the assumed case from the case being proved."
+      ],
+      "explanation": {
+        "learning_objective": "Apply invariant reasoning with explicit justification.",
+        "correct_rationale": "Every reached value is even, whereas 7 is odd; the other values can be reached with repeated moves.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "This does not satisfy the stated proof obligation. Every reached value is even, whereas 7 is odd; the other values can be reached with repeated moves."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This does not satisfy the stated proof obligation. Every reached value is even, whereas 7 is odd; the other values can be reached with repeated moves."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This does not satisfy the stated proof obligation. Every reached value is even, whereas 7 is odd; the other values can be reached with repeated moves."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "proofs-095",
+      "topic": "Invariant reasoning",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "What inductive step proves preservation?",
+      "context": "Proof workshop: Starting at 0, each move adds or subtracts 2. Induction coverage may vary by course section.",
+      "options": [
+        "Every reached value is odd",
+        "2k±2 is always positive",
+        "2k±2=2(k±1)",
+        "2k+2=2k+1"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Separate the hypothesis, the exact target, and the definition or theorem that connects them.",
+        "Check that each claimed step uses only hypotheses already established. For induction, distinguish the assumed case from the case being proved."
+      ],
+      "explanation": {
+        "learning_objective": "Apply invariant reasoning with explicit justification.",
+        "correct_rationale": "An even state has form 2k; either move produces another integer multiple of 2.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This does not satisfy the stated proof obligation. An even state has form 2k; either move produces another integer multiple of 2."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This does not satisfy the stated proof obligation. An even state has form 2k; either move produces another integer multiple of 2."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This does not satisfy the stated proof obligation. An even state has form 2k; either move produces another integer multiple of 2."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "proofs-096",
+      "topic": "Invariant reasoning",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "What is the distinction between necessary and sufficient conditions here?",
+      "context": "Proof workshop: Starting at 0, each move adds or subtracts 2. Induction coverage may vary by course section.",
+      "options": [
+        "A necessary condition guarantees reachability in all systems",
+        "Oddness is sufficient",
+        "Evenness is necessary and, for these moves, sufficient",
+        "Every invariant is always sufficient"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Separate the hypothesis, the exact target, and the definition or theorem that connects them.",
+        "Check that each claimed step uses only hypotheses already established. For induction, distinguish the assumed case from the case being proved."
+      ],
+      "explanation": {
+        "learning_objective": "Apply invariant reasoning with explicit justification.",
+        "correct_rationale": "The invariant rules out odd targets. Separately, k positive or negative moves reach every even integer 2k.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This does not satisfy the stated proof obligation. The invariant rules out odd targets. Separately, k positive or negative moves reach every even integer 2k."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This does not satisfy the stated proof obligation. The invariant rules out odd targets. Separately, k positive or negative moves reach every even integer 2k."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This does not satisfy the stated proof obligation. The invariant rules out odd targets. Separately, k positive or negative moves reach every even integer 2k."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "proofs-097",
+      "topic": "Pigeonhole proof",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "What are the boxes in the pigeonhole argument?",
+      "context": "Proof workshop: Among 6 integers, two have the same remainder modulo 5. Induction coverage may vary by course section.",
+      "options": [
+        "Only the class of even integers",
+        "All real numbers",
+        "The six input integers",
+        "The five remainder classes 0,1,2,3,4"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Separate the hypothesis, the exact target, and the definition or theorem that connects them.",
+        "Check that each claimed step uses only hypotheses already established. For induction, distinguish the assumed case from the case being proved."
+      ],
+      "explanation": {
+        "learning_objective": "Apply pigeonhole proof with explicit justification.",
+        "correct_rationale": "Each integer is assigned to exactly one of five remainders modulo 5.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This does not satisfy the stated proof obligation. Each integer is assigned to exactly one of five remainders modulo 5."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This does not satisfy the stated proof obligation. Each integer is assigned to exactly one of five remainders modulo 5."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This does not satisfy the stated proof obligation. Each integer is assigned to exactly one of five remainders modulo 5."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "proofs-098",
+      "topic": "Pigeonhole proof",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "Which count forces a collision?",
+      "context": "Proof workshop: Among 6 integers, two have the same remainder modulo 5. Induction coverage may vary by course section.",
+      "options": [
+        "5 objects in 6 boxes",
+        "1 object in 5 boxes",
+        "5 objects in 5 boxes",
+        "6 objects in 5 boxes"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Separate the hypothesis, the exact target, and the definition or theorem that connects them.",
+        "Check that each claimed step uses only hypotheses already established. For induction, distinguish the assumed case from the case being proved."
+      ],
+      "explanation": {
+        "learning_objective": "Apply pigeonhole proof with explicit justification.",
+        "correct_rationale": "If every box held at most one integer, five boxes could hold only five integers.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This does not satisfy the stated proof obligation. If every box held at most one integer, five boxes could hold only five integers."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This does not satisfy the stated proof obligation. If every box held at most one integer, five boxes could hold only five integers."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This does not satisfy the stated proof obligation. If every box held at most one integer, five boxes could hold only five integers."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "proofs-099",
+      "topic": "Pigeonhole proof",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "What follows for the two integers a,b?",
+      "context": "Proof workshop: Among 6 integers, two have the same remainder modulo 5. Induction coverage may vary by course section.",
+      "options": [
+        "5 divides a+b always",
+        "a=b always",
+        "5 divides a−b",
+        "Both integers are divisible by 5"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Separate the hypothesis, the exact target, and the definition or theorem that connects them.",
+        "Check that each claimed step uses only hypotheses already established. For induction, distinguish the assumed case from the case being proved."
+      ],
+      "explanation": {
+        "learning_objective": "Apply pigeonhole proof with explicit justification.",
+        "correct_rationale": "Equal remainders imply a≡b mod 5, equivalent to 5|(a−b).",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This does not satisfy the stated proof obligation. Equal remainders imply a≡b mod 5, equivalent to 5|(a−b)."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This does not satisfy the stated proof obligation. Equal remainders imply a≡b mod 5, equivalent to 5|(a−b)."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This does not satisfy the stated proof obligation. Equal remainders imply a≡b mod 5, equivalent to 5|(a−b)."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "proofs-100",
+      "topic": "Pigeonhole proof",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "Why can the claim fail with only 5 integers?",
+      "context": "Proof workshop: Among 6 integers, two have the same remainder modulo 5. Induction coverage may vary by course section.",
+      "options": [
+        "All five must be equal",
+        "There are only four remainder classes",
+        "Five integers cannot be distinct",
+        "0,1,2,3,4 have distinct remainders"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Separate the hypothesis, the exact target, and the definition or theorem that connects them.",
+        "Check that each claimed step uses only hypotheses already established. For induction, distinguish the assumed case from the case being proved."
+      ],
+      "explanation": {
+        "learning_objective": "Apply pigeonhole proof with explicit justification.",
+        "correct_rationale": "The explicit set 0 through 4 uses each remainder once, so no collision is forced.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This does not satisfy the stated proof obligation. The explicit set 0 through 4 uses each remainder once, so no collision is forced."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This does not satisfy the stated proof obligation. The explicit set 0 through 4 uses each remainder once, so no collision is forced."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This does not satisfy the stated proof obligation. The explicit set 0 through 4 uses each remainder once, so no collision is forced."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    }
+  ]
+}

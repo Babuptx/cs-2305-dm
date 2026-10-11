@@ -1,0 +1,2358 @@
+{
+  "schema_version": 1,
+  "block_id": "counting-block-01",
+  "pillar_id": "counting",
+  "block_title": "Counting and combinatorics · Block 1",
+  "questions": [
+    {
+      "id": "counting-001",
+      "topic": "Bit strings",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "How many strings are possible?",
+      "context": "Consider binary strings of length 8.",
+      "options": [
+        "128",
+        "512",
+        "16",
+        "256"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Decide what is ordered, what is distinguishable, and which restrictions can be counted directly or by a complement.",
+        "Count disjoint alternatives by addition and independent successive choices by multiplication. A complement may simplify an at-least-one condition."
+      ],
+      "explanation": {
+        "learning_objective": "Apply bit strings with explicit justification.",
+        "correct_rationale": "Each of eight ordered positions has two independent choices. Therefore 2**8 = 256.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The proposed result 128 fails the required computation: Each of eight ordered positions has two independent choices. Therefore 2**8 = 256."
+          },
+          {
+            "option_index": 1,
+            "rationale": "The proposed result 512 fails the required computation: Each of eight ordered positions has two independent choices. Therefore 2**8 = 256."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The proposed result 16 fails the required computation: Each of eight ordered positions has two independent choices. Therefore 2**8 = 256."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "count-expression",
+        "expression": "2**8",
+        "expected": 256
+      }
+    },
+    {
+      "id": "counting-002",
+      "topic": "Bit strings",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "How many have exactly three 1s?",
+      "context": "Consider binary strings of length 8.",
+      "options": [
+        "336",
+        "56",
+        "57",
+        "55"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Decide what is ordered, what is distinguishable, and which restrictions can be counted directly or by a complement.",
+        "Count disjoint alternatives by addition and independent successive choices by multiplication. A complement may simplify an at-least-one condition."
+      ],
+      "explanation": {
+        "learning_objective": "Apply bit strings with explicit justification.",
+        "correct_rationale": "Choose the three positions occupied by 1; all remaining bits are fixed. Therefore C(8,3) = 56.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The proposed result 336 fails the required computation: Choose the three positions occupied by 1; all remaining bits are fixed. Therefore C(8,3) = 56."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The proposed result 57 fails the required computation: Choose the three positions occupied by 1; all remaining bits are fixed. Therefore C(8,3) = 56."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The proposed result 55 fails the required computation: Choose the three positions occupied by 1; all remaining bits are fixed. Therefore C(8,3) = 56."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "count-expression",
+        "expression": "C(8,3)",
+        "expected": 56
+      }
+    },
+    {
+      "id": "counting-003",
+      "topic": "Bit strings",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "How many have at least one 1?",
+      "context": "Consider binary strings of length 8.",
+      "options": [
+        "255",
+        "15",
+        "127",
+        "511"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Decide what is ordered, what is distinguishable, and which restrictions can be counted directly or by a complement.",
+        "Count disjoint alternatives by addition and independent successive choices by multiplication. A complement may simplify an at-least-one condition."
+      ],
+      "explanation": {
+        "learning_objective": "Apply bit strings with explicit justification.",
+        "correct_rationale": "Subtract the sole all-zero string from all binary strings. Therefore 2**8-1 = 255.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "The proposed result 15 fails the required computation: Subtract the sole all-zero string from all binary strings. Therefore 2**8-1 = 255."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The proposed result 127 fails the required computation: Subtract the sole all-zero string from all binary strings. Therefore 2**8-1 = 255."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The proposed result 511 fails the required computation: Subtract the sole all-zero string from all binary strings. Therefore 2**8-1 = 255."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "count-expression",
+        "expression": "2**8-1",
+        "expected": 255
+      }
+    },
+    {
+      "id": "counting-004",
+      "topic": "Bit strings",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "How many are palindromes?",
+      "context": "Consider binary strings of length 8.",
+      "options": [
+        "32",
+        "17",
+        "16",
+        "8"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Decide what is ordered, what is distinguishable, and which restrictions can be counted directly or by a complement.",
+        "Count disjoint alternatives by addition and independent successive choices by multiplication. A complement may simplify an at-least-one condition."
+      ],
+      "explanation": {
+        "learning_objective": "Apply bit strings with explicit justification.",
+        "correct_rationale": "The first four bits determine the mirrored last four bits. Therefore 2**4 = 16.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The proposed result 32 fails the required computation: The first four bits determine the mirrored last four bits. Therefore 2**4 = 16."
+          },
+          {
+            "option_index": 1,
+            "rationale": "The proposed result 17 fails the required computation: The first four bits determine the mirrored last four bits. Therefore 2**4 = 16."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The proposed result 8 fails the required computation: The first four bits determine the mirrored last four bits. Therefore 2**4 = 16."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "count-expression",
+        "expression": "2**4",
+        "expected": 16
+      }
+    },
+    {
+      "id": "counting-005",
+      "topic": "Digit codes",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "How many unrestricted codes exist?",
+      "context": "A code has four digits from 0 through 9; leading zeros are allowed.",
+      "options": [
+        "100000",
+        "1000",
+        "40",
+        "10000"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Decide what is ordered, what is distinguishable, and which restrictions can be counted directly or by a complement.",
+        "Count disjoint alternatives by addition and independent successive choices by multiplication. A complement may simplify an at-least-one condition."
+      ],
+      "explanation": {
+        "learning_objective": "Apply digit codes with explicit justification.",
+        "correct_rationale": "Each of four ordered positions has ten choices. Therefore 10**4 = 10000.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The proposed result 100000 fails the required computation: Each of four ordered positions has ten choices. Therefore 10**4 = 10000."
+          },
+          {
+            "option_index": 1,
+            "rationale": "The proposed result 1000 fails the required computation: Each of four ordered positions has ten choices. Therefore 10**4 = 10000."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The proposed result 40 fails the required computation: Each of four ordered positions has ten choices. Therefore 10**4 = 10000."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "count-expression",
+        "expression": "10**4",
+        "expected": 10000
+      }
+    },
+    {
+      "id": "counting-006",
+      "topic": "Digit codes",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "How many codes have no repeated digit?",
+      "context": "A code has four digits from 0 through 9; leading zeros are allowed.",
+      "options": [
+        "5039",
+        "210",
+        "5041",
+        "5040"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Decide what is ordered, what is distinguishable, and which restrictions can be counted directly or by a complement.",
+        "Count disjoint alternatives by addition and independent successive choices by multiplication. A complement may simplify an at-least-one condition."
+      ],
+      "explanation": {
+        "learning_objective": "Apply digit codes with explicit justification.",
+        "correct_rationale": "Choose four distinct digits in order: 10·9·8·7. Therefore P(10,4) = 5040.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The proposed result 5039 fails the required computation: Choose four distinct digits in order: 10·9·8·7. Therefore P(10,4) = 5040."
+          },
+          {
+            "option_index": 1,
+            "rationale": "The proposed result 210 fails the required computation: Choose four distinct digits in order: 10·9·8·7. Therefore P(10,4) = 5040."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The proposed result 5041 fails the required computation: Choose four distinct digits in order: 10·9·8·7. Therefore P(10,4) = 5040."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "count-expression",
+        "expression": "P(10,4)",
+        "expected": 5040
+      }
+    },
+    {
+      "id": "counting-007",
+      "topic": "Digit codes",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "How many end in an even digit?",
+      "context": "A code has four digits from 0 through 9; leading zeros are allowed.",
+      "options": [
+        "150",
+        "5000",
+        "500",
+        "50000"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Decide what is ordered, what is distinguishable, and which restrictions can be counted directly or by a complement.",
+        "Count disjoint alternatives by addition and independent successive choices by multiplication. A complement may simplify an at-least-one condition."
+      ],
+      "explanation": {
+        "learning_objective": "Apply digit codes with explicit justification.",
+        "correct_rationale": "The last digit has five even choices; each earlier digit has ten choices. Therefore 10**3*5 = 5000.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The proposed result 150 fails the required computation: The last digit has five even choices; each earlier digit has ten choices. Therefore 10**3*5 = 5000."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The proposed result 500 fails the required computation: The last digit has five even choices; each earlier digit has ten choices. Therefore 10**3*5 = 5000."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The proposed result 50000 fails the required computation: The last digit has five even choices; each earlier digit has ten choices. Therefore 10**3*5 = 5000."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "count-expression",
+        "expression": "10**3*5",
+        "expected": 5000
+      }
+    },
+    {
+      "id": "counting-008",
+      "topic": "Digit codes",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "How many contain exactly one zero?",
+      "context": "A code has four digits from 0 through 9; leading zeros are allowed.",
+      "options": [
+        "2916",
+        "26244",
+        "108",
+        "324"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Decide what is ordered, what is distinguishable, and which restrictions can be counted directly or by a complement.",
+        "Count disjoint alternatives by addition and independent successive choices by multiplication. A complement may simplify an at-least-one condition."
+      ],
+      "explanation": {
+        "learning_objective": "Apply digit codes with explicit justification.",
+        "correct_rationale": "Choose the zero’s position, then fill the other three positions with nonzero digits. Therefore 4*9**3 = 2916.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "The proposed result 26244 fails the required computation: Choose the zero’s position, then fill the other three positions with nonzero digits. Therefore 4*9**3 = 2916."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The proposed result 108 fails the required computation: Choose the zero’s position, then fill the other three positions with nonzero digits. Therefore 4*9**3 = 2916."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The proposed result 324 fails the required computation: Choose the zero’s position, then fill the other three positions with nonzero digits. Therefore 4*9**3 = 2916."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "count-expression",
+        "expression": "4*9**3",
+        "expected": 2916
+      }
+    },
+    {
+      "id": "counting-009",
+      "topic": "Ordered roles",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "How many assignments use three different people?",
+      "context": "Seven distinct volunteers can hold president, secretary, and treasurer roles.",
+      "options": [
+        "210",
+        "209",
+        "35",
+        "211"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Decide what is ordered, what is distinguishable, and which restrictions can be counted directly or by a complement.",
+        "Count disjoint alternatives by addition and independent successive choices by multiplication. A complement may simplify an at-least-one condition."
+      ],
+      "explanation": {
+        "learning_objective": "Apply ordered roles with explicit justification.",
+        "correct_rationale": "Roles are distinct: choose president, then secretary, then treasurer without repetition. Therefore P(7,3) = 210.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "The proposed result 209 fails the required computation: Roles are distinct: choose president, then secretary, then treasurer without repetition. Therefore P(7,3) = 210."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The proposed result 35 fails the required computation: Roles are distinct: choose president, then secretary, then treasurer without repetition. Therefore P(7,3) = 210."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The proposed result 211 fails the required computation: Roles are distinct: choose president, then secretary, then treasurer without repetition. Therefore P(7,3) = 210."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "count-expression",
+        "expression": "P(7,3)",
+        "expected": 210
+      }
+    },
+    {
+      "id": "counting-010",
+      "topic": "Ordered roles",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "How many assignments have Ada as president?",
+      "context": "Seven distinct volunteers can hold president, secretary, and treasurer roles.",
+      "options": [
+        "31",
+        "29",
+        "30",
+        "15"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Decide what is ordered, what is distinguishable, and which restrictions can be counted directly or by a complement.",
+        "Count disjoint alternatives by addition and independent successive choices by multiplication. A complement may simplify an at-least-one condition."
+      ],
+      "explanation": {
+        "learning_objective": "Apply ordered roles with explicit justification.",
+        "correct_rationale": "The president is fixed; assign two different people from the other six to the other roles. Therefore P(6,2) = 30.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The proposed result 31 fails the required computation: The president is fixed; assign two different people from the other six to the other roles. Therefore P(6,2) = 30."
+          },
+          {
+            "option_index": 1,
+            "rationale": "The proposed result 29 fails the required computation: The president is fixed; assign two different people from the other six to the other roles. Therefore P(6,2) = 30."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The proposed result 15 fails the required computation: The president is fixed; assign two different people from the other six to the other roles. Therefore P(6,2) = 30."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "count-expression",
+        "expression": "P(6,2)",
+        "expected": 30
+      }
+    },
+    {
+      "id": "counting-011",
+      "topic": "Ordered roles",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "How many assignments exclude Ada entirely?",
+      "context": "Seven distinct volunteers can hold president, secretary, and treasurer roles.",
+      "options": [
+        "20",
+        "120",
+        "121",
+        "119"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Decide what is ordered, what is distinguishable, and which restrictions can be counted directly or by a complement.",
+        "Count disjoint alternatives by addition and independent successive choices by multiplication. A complement may simplify an at-least-one condition."
+      ],
+      "explanation": {
+        "learning_objective": "Apply ordered roles with explicit justification.",
+        "correct_rationale": "Assign three distinct roles using only six eligible people. Therefore P(6,3) = 120.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The proposed result 20 fails the required computation: Assign three distinct roles using only six eligible people. Therefore P(6,3) = 120."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The proposed result 121 fails the required computation: Assign three distinct roles using only six eligible people. Therefore P(6,3) = 120."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The proposed result 119 fails the required computation: Assign three distinct roles using only six eligible people. Therefore P(6,3) = 120."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "count-expression",
+        "expression": "P(6,3)",
+        "expected": 120
+      }
+    },
+    {
+      "id": "counting-012",
+      "topic": "Ordered roles",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "How many assignments include Ada in some role?",
+      "context": "Seven distinct volunteers can hold president, secretary, and treasurer roles.",
+      "options": [
+        "89",
+        "15",
+        "91",
+        "90"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Decide what is ordered, what is distinguishable, and which restrictions can be counted directly or by a complement.",
+        "Count disjoint alternatives by addition and independent successive choices by multiplication. A complement may simplify an at-least-one condition."
+      ],
+      "explanation": {
+        "learning_objective": "Apply ordered roles with explicit justification.",
+        "correct_rationale": "Subtract assignments avoiding Ada from all assignments. Therefore P(7,3)-P(6,3) = 90.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The proposed result 89 fails the required computation: Subtract assignments avoiding Ada from all assignments. Therefore P(7,3)-P(6,3) = 90."
+          },
+          {
+            "option_index": 1,
+            "rationale": "The proposed result 15 fails the required computation: Subtract assignments avoiding Ada from all assignments. Therefore P(7,3)-P(6,3) = 90."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The proposed result 91 fails the required computation: Subtract assignments avoiding Ada from all assignments. Therefore P(7,3)-P(6,3) = 90."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "count-expression",
+        "expression": "P(7,3)-P(6,3)",
+        "expected": 90
+      }
+    },
+    {
+      "id": "counting-013",
+      "topic": "Unordered committees",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "How many committees are possible?",
+      "context": "A three-person committee is chosen from five engineers and four designers, all distinct.",
+      "options": [
+        "85",
+        "83",
+        "84",
+        "504"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Decide what is ordered, what is distinguishable, and which restrictions can be counted directly or by a complement.",
+        "Count disjoint alternatives by addition and independent successive choices by multiplication. A complement may simplify an at-least-one condition."
+      ],
+      "explanation": {
+        "learning_objective": "Apply unordered committees with explicit justification.",
+        "correct_rationale": "A committee has no role order, so choose three from nine. Therefore C(9,3) = 84.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The proposed result 85 fails the required computation: A committee has no role order, so choose three from nine. Therefore C(9,3) = 84."
+          },
+          {
+            "option_index": 1,
+            "rationale": "The proposed result 83 fails the required computation: A committee has no role order, so choose three from nine. Therefore C(9,3) = 84."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The proposed result 504 fails the required computation: A committee has no role order, so choose three from nine. Therefore C(9,3) = 84."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "count-expression",
+        "expression": "C(9,3)",
+        "expected": 84
+      }
+    },
+    {
+      "id": "counting-014",
+      "topic": "Unordered committees",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "How many have exactly two engineers?",
+      "context": "A three-person committee is chosen from five engineers and four designers, all distinct.",
+      "options": [
+        "39",
+        "80",
+        "40",
+        "41"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Decide what is ordered, what is distinguishable, and which restrictions can be counted directly or by a complement.",
+        "Count disjoint alternatives by addition and independent successive choices by multiplication. A complement may simplify an at-least-one condition."
+      ],
+      "explanation": {
+        "learning_objective": "Apply unordered committees with explicit justification.",
+        "correct_rationale": "Choose two engineers and one designer independently. Therefore C(5,2)*C(4,1) = 40.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The proposed result 39 fails the required computation: Choose two engineers and one designer independently. Therefore C(5,2)*C(4,1) = 40."
+          },
+          {
+            "option_index": 1,
+            "rationale": "The proposed result 80 fails the required computation: Choose two engineers and one designer independently. Therefore C(5,2)*C(4,1) = 40."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The proposed result 41 fails the required computation: Choose two engineers and one designer independently. Therefore C(5,2)*C(4,1) = 40."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "count-expression",
+        "expression": "C(5,2)*C(4,1)",
+        "expected": 40
+      }
+    },
+    {
+      "id": "counting-015",
+      "topic": "Unordered committees",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "How many have at least one designer?",
+      "context": "A three-person committee is chosen from five engineers and four designers, all distinct.",
+      "options": [
+        "75",
+        "444",
+        "73",
+        "74"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Decide what is ordered, what is distinguishable, and which restrictions can be counted directly or by a complement.",
+        "Count disjoint alternatives by addition and independent successive choices by multiplication. A complement may simplify an at-least-one condition."
+      ],
+      "explanation": {
+        "learning_objective": "Apply unordered committees with explicit justification.",
+        "correct_rationale": "Subtract the all-engineer committees. Therefore C(9,3)-C(5,3) = 74.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The proposed result 75 fails the required computation: Subtract the all-engineer committees. Therefore C(9,3)-C(5,3) = 74."
+          },
+          {
+            "option_index": 1,
+            "rationale": "The proposed result 444 fails the required computation: Subtract the all-engineer committees. Therefore C(9,3)-C(5,3) = 74."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The proposed result 73 fails the required computation: Subtract the all-engineer committees. Therefore C(9,3)-C(5,3) = 74."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "count-expression",
+        "expression": "C(9,3)-C(5,3)",
+        "expected": 74
+      }
+    },
+    {
+      "id": "counting-016",
+      "topic": "Unordered committees",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "How many have members of both categories?",
+      "context": "A three-person committee is chosen from five engineers and four designers, all distinct.",
+      "options": [
+        "420",
+        "70",
+        "71",
+        "69"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Decide what is ordered, what is distinguishable, and which restrictions can be counted directly or by a complement.",
+        "Count disjoint alternatives by addition and independent successive choices by multiplication. A complement may simplify an at-least-one condition."
+      ],
+      "explanation": {
+        "learning_objective": "Apply unordered committees with explicit justification.",
+        "correct_rationale": "Subtract the disjoint all-engineer and all-designer cases. Therefore C(9,3)-C(5,3)-C(4,3) = 70.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The proposed result 420 fails the required computation: Subtract the disjoint all-engineer and all-designer cases. Therefore C(9,3)-C(5,3)-C(4,3) = 70."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The proposed result 71 fails the required computation: Subtract the disjoint all-engineer and all-designer cases. Therefore C(9,3)-C(5,3)-C(4,3) = 70."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The proposed result 69 fails the required computation: Subtract the disjoint all-engineer and all-designer cases. Therefore C(9,3)-C(5,3)-C(4,3) = 70."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "count-expression",
+        "expression": "C(9,3)-C(5,3)-C(4,3)",
+        "expected": 70
+      }
+    },
+    {
+      "id": "counting-017",
+      "topic": "Distinct-book arrangements",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "How many unrestricted arrangements exist?",
+      "context": "Five distinct mathematics books and three distinct computing books are placed on a shelf.",
+      "options": [
+        "8",
+        "40321",
+        "40320",
+        "40319"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Decide what is ordered, what is distinguishable, and which restrictions can be counted directly or by a complement.",
+        "Count disjoint alternatives by addition and independent successive choices by multiplication. A complement may simplify an at-least-one condition."
+      ],
+      "explanation": {
+        "learning_objective": "Apply distinct-book arrangements with explicit justification.",
+        "correct_rationale": "Arrange all eight distinct books in a linear order. Therefore fact(8) = 40320.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The proposed result 8 fails the required computation: Arrange all eight distinct books in a linear order. Therefore fact(8) = 40320."
+          },
+          {
+            "option_index": 1,
+            "rationale": "The proposed result 40321 fails the required computation: Arrange all eight distinct books in a linear order. Therefore fact(8) = 40320."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The proposed result 40319 fails the required computation: Arrange all eight distinct books in a linear order. Therefore fact(8) = 40320."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "count-expression",
+        "expression": "fact(8)",
+        "expected": 40320
+      }
+    },
+    {
+      "id": "counting-018",
+      "topic": "Distinct-book arrangements",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "How many keep all three computing books consecutive?",
+      "context": "Five distinct mathematics books and three distinct computing books are placed on a shelf.",
+      "options": [
+        "4319",
+        "4321",
+        "4320",
+        "18"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Decide what is ordered, what is distinguishable, and which restrictions can be counted directly or by a complement.",
+        "Count disjoint alternatives by addition and independent successive choices by multiplication. A complement may simplify an at-least-one condition."
+      ],
+      "explanation": {
+        "learning_objective": "Apply distinct-book arrangements with explicit justification.",
+        "correct_rationale": "Treat the computing books as one block among six units, then arrange within the block. Therefore fact(6)*fact(3) = 4320.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The proposed result 4319 fails the required computation: Treat the computing books as one block among six units, then arrange within the block. Therefore fact(6)*fact(3) = 4320."
+          },
+          {
+            "option_index": 1,
+            "rationale": "The proposed result 4321 fails the required computation: Treat the computing books as one block among six units, then arrange within the block. Therefore fact(6)*fact(3) = 4320."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The proposed result 18 fails the required computation: Treat the computing books as one block among six units, then arrange within the block. Therefore fact(6)*fact(3) = 4320."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "count-expression",
+        "expression": "fact(6)*fact(3)",
+        "expected": 4320
+      }
+    },
+    {
+      "id": "counting-019",
+      "topic": "Distinct-book arrangements",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "How many put all mathematics books before all computing books?",
+      "context": "Five distinct mathematics books and three distinct computing books are placed on a shelf.",
+      "options": [
+        "721",
+        "719",
+        "720",
+        "15"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Decide what is ordered, what is distinguishable, and which restrictions can be counted directly or by a complement.",
+        "Count disjoint alternatives by addition and independent successive choices by multiplication. A complement may simplify an at-least-one condition."
+      ],
+      "explanation": {
+        "learning_objective": "Apply distinct-book arrangements with explicit justification.",
+        "correct_rationale": "Category order is fixed; permute independently within each category. Therefore fact(5)*fact(3) = 720.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The proposed result 721 fails the required computation: Category order is fixed; permute independently within each category. Therefore fact(5)*fact(3) = 720."
+          },
+          {
+            "option_index": 1,
+            "rationale": "The proposed result 719 fails the required computation: Category order is fixed; permute independently within each category. Therefore fact(5)*fact(3) = 720."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The proposed result 15 fails the required computation: Category order is fixed; permute independently within each category. Therefore fact(5)*fact(3) = 720."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "count-expression",
+        "expression": "fact(5)*fact(3)",
+        "expected": 720
+      }
+    },
+    {
+      "id": "counting-020",
+      "topic": "Distinct-book arrangements",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "How many keep both categories as separate consecutive blocks?",
+      "context": "Five distinct mathematics books and three distinct computing books are placed on a shelf.",
+      "options": [
+        "30",
+        "1441",
+        "1440",
+        "1439"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Decide what is ordered, what is distinguishable, and which restrictions can be counted directly or by a complement.",
+        "Count disjoint alternatives by addition and independent successive choices by multiplication. A complement may simplify an at-least-one condition."
+      ],
+      "explanation": {
+        "learning_objective": "Apply distinct-book arrangements with explicit justification.",
+        "correct_rationale": "Choose which category block comes first, then permute books within both blocks. Therefore 2*fact(5)*fact(3) = 1440.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The proposed result 30 fails the required computation: Choose which category block comes first, then permute books within both blocks. Therefore 2*fact(5)*fact(3) = 1440."
+          },
+          {
+            "option_index": 1,
+            "rationale": "The proposed result 1441 fails the required computation: Choose which category block comes first, then permute books within both blocks. Therefore 2*fact(5)*fact(3) = 1440."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The proposed result 1439 fails the required computation: Choose which category block comes first, then permute books within both blocks. Therefore 2*fact(5)*fact(3) = 1440."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "count-expression",
+        "expression": "2*fact(5)*fact(3)",
+        "expected": 1440
+      }
+    },
+    {
+      "id": "counting-021",
+      "topic": "Circular seating",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "How many circular arrangements exist?",
+      "context": "Six distinct people sit around an unmarked circular table. Rotations coincide; reflections differ.",
+      "options": [
+        "120",
+        "119",
+        "121",
+        "5"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Decide what is ordered, what is distinguishable, and which restrictions can be counted directly or by a complement.",
+        "Count disjoint alternatives by addition and independent successive choices by multiplication. A complement may simplify an at-least-one condition."
+      ],
+      "explanation": {
+        "learning_objective": "Apply circular seating with explicit justification.",
+        "correct_rationale": "Fix one person to remove rotational symmetry, then arrange the other five. Therefore fact(5) = 120.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "The proposed result 119 fails the required computation: Fix one person to remove rotational symmetry, then arrange the other five. Therefore fact(5) = 120."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The proposed result 121 fails the required computation: Fix one person to remove rotational symmetry, then arrange the other five. Therefore fact(5) = 120."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The proposed result 5 fails the required computation: Fix one person to remove rotational symmetry, then arrange the other five. Therefore fact(5) = 120."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "count-expression",
+        "expression": "fact(5)",
+        "expected": 120
+      }
+    },
+    {
+      "id": "counting-022",
+      "topic": "Circular seating",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "How many have Ada and Ben adjacent?",
+      "context": "Six distinct people sit around an unmarked circular table. Rotations coincide; reflections differ.",
+      "options": [
+        "48",
+        "49",
+        "8",
+        "47"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Decide what is ordered, what is distinguishable, and which restrictions can be counted directly or by a complement.",
+        "Count disjoint alternatives by addition and independent successive choices by multiplication. A complement may simplify an at-least-one condition."
+      ],
+      "explanation": {
+        "learning_objective": "Apply circular seating with explicit justification.",
+        "correct_rationale": "Treat them as a block: five circular units give 4! arrangements, with two internal orders. Therefore 2*fact(4) = 48.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "The proposed result 49 fails the required computation: Treat them as a block: five circular units give 4! arrangements, with two internal orders. Therefore 2*fact(4) = 48."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The proposed result 8 fails the required computation: Treat them as a block: five circular units give 4! arrangements, with two internal orders. Therefore 2*fact(4) = 48."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The proposed result 47 fails the required computation: Treat them as a block: five circular units give 4! arrangements, with two internal orders. Therefore 2*fact(4) = 48."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "count-expression",
+        "expression": "2*fact(4)",
+        "expected": 48
+      }
+    },
+    {
+      "id": "counting-023",
+      "topic": "Circular seating",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "How many have Ada and Ben nonadjacent?",
+      "context": "Six distinct people sit around an unmarked circular table. Rotations coincide; reflections differ.",
+      "options": [
+        "72",
+        "73",
+        "71",
+        "74"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Decide what is ordered, what is distinguishable, and which restrictions can be counted directly or by a complement.",
+        "Count disjoint alternatives by addition and independent successive choices by multiplication. A complement may simplify an at-least-one condition."
+      ],
+      "explanation": {
+        "learning_objective": "Apply circular seating with explicit justification.",
+        "correct_rationale": "Subtract adjacent arrangements from all circular arrangements. Therefore fact(5)-2*fact(4) = 72.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "The proposed result 73 fails the required computation: Subtract adjacent arrangements from all circular arrangements. Therefore fact(5)-2*fact(4) = 72."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The proposed result 71 fails the required computation: Subtract adjacent arrangements from all circular arrangements. Therefore fact(5)-2*fact(4) = 72."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The proposed result 74 fails the required computation: Subtract adjacent arrangements from all circular arrangements. Therefore fact(5)-2*fact(4) = 72."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "count-expression",
+        "expression": "fact(5)-2*fact(4)",
+        "expected": 72
+      }
+    },
+    {
+      "id": "counting-024",
+      "topic": "Circular seating",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "With six marked seats instead, how many seatings exist?",
+      "context": "Six distinct people sit around an unmarked circular table. Rotations coincide; reflections differ.",
+      "options": [
+        "721",
+        "6",
+        "719",
+        "720"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Decide what is ordered, what is distinguishable, and which restrictions can be counted directly or by a complement.",
+        "Count disjoint alternatives by addition and independent successive choices by multiplication. A complement may simplify an at-least-one condition."
+      ],
+      "explanation": {
+        "learning_objective": "Apply circular seating with explicit justification.",
+        "correct_rationale": "Marked seats distinguish rotations, so all six people are ordered into seats. Therefore fact(6) = 720.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The proposed result 721 fails the required computation: Marked seats distinguish rotations, so all six people are ordered into seats. Therefore fact(6) = 720."
+          },
+          {
+            "option_index": 1,
+            "rationale": "The proposed result 6 fails the required computation: Marked seats distinguish rotations, so all six people are ordered into seats. Therefore fact(6) = 720."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The proposed result 719 fails the required computation: Marked seats distinguish rotations, so all six people are ordered into seats. Therefore fact(6) = 720."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "count-expression",
+        "expression": "fact(6)",
+        "expected": 720
+      }
+    },
+    {
+      "id": "counting-025",
+      "topic": "Repeated letters",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "How many distinct arrangements exist?",
+      "context": "Arrange all letters of BANANA, treating identical copies as indistinguishable.",
+      "options": [
+        "61",
+        "59",
+        "1",
+        "60"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Decide what is ordered, what is distinguishable, and which restrictions can be counted directly or by a complement.",
+        "Count disjoint alternatives by addition and independent successive choices by multiplication. A complement may simplify an at-least-one condition."
+      ],
+      "explanation": {
+        "learning_objective": "Apply repeated letters with explicit justification.",
+        "correct_rationale": "There are three A copies, two N copies, and one B. Divide 6! by 3!2!. Therefore fact(6)/(fact(3)*fact(2)) = 60.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The proposed result 61 fails the required computation: There are three A copies, two N copies, and one B. Divide 6! by 3!2!. Therefore fact(6)/(fact(3)*fact(2)) = 60."
+          },
+          {
+            "option_index": 1,
+            "rationale": "The proposed result 59 fails the required computation: There are three A copies, two N copies, and one B. Divide 6! by 3!2!. Therefore fact(6)/(fact(3)*fact(2)) = 60."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The proposed result 1 fails the required computation: There are three A copies, two N copies, and one B. Divide 6! by 3!2!. Therefore fact(6)/(fact(3)*fact(2)) = 60."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "count-expression",
+        "expression": "fact(6)/(fact(3)*fact(2))",
+        "expected": 60
+      }
+    },
+    {
+      "id": "counting-026",
+      "topic": "Repeated letters",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "How many arrangements begin with B?",
+      "context": "Arrange all letters of BANANA, treating identical copies as indistinguishable.",
+      "options": [
+        "10",
+        "9",
+        "11",
+        "12"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Decide what is ordered, what is distinguishable, and which restrictions can be counted directly or by a complement.",
+        "Count disjoint alternatives by addition and independent successive choices by multiplication. A complement may simplify an at-least-one condition."
+      ],
+      "explanation": {
+        "learning_objective": "Apply repeated letters with explicit justification.",
+        "correct_rationale": "Fix B; arrange three A copies and two N copies. Therefore fact(5)/(fact(3)*fact(2)) = 10.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "The proposed result 9 fails the required computation: Fix B; arrange three A copies and two N copies. Therefore fact(5)/(fact(3)*fact(2)) = 10."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The proposed result 11 fails the required computation: Fix B; arrange three A copies and two N copies. Therefore fact(5)/(fact(3)*fact(2)) = 10."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The proposed result 12 fails the required computation: Fix B; arrange three A copies and two N copies. Therefore fact(5)/(fact(3)*fact(2)) = 10."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "count-expression",
+        "expression": "fact(5)/(fact(3)*fact(2))",
+        "expected": 10
+      }
+    },
+    {
+      "id": "counting-027",
+      "topic": "Repeated letters",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "How many arrangements end with A?",
+      "context": "Arrange all letters of BANANA, treating identical copies as indistinguishable.",
+      "options": [
+        "31",
+        "30",
+        "32",
+        "29"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Decide what is ordered, what is distinguishable, and which restrictions can be counted directly or by a complement.",
+        "Count disjoint alternatives by addition and independent successive choices by multiplication. A complement may simplify an at-least-one condition."
+      ],
+      "explanation": {
+        "learning_objective": "Apply repeated letters with explicit justification.",
+        "correct_rationale": "Fix one A at the end, leaving two A, two N, and one B. Therefore fact(5)/(fact(2)*fact(2)) = 30.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The proposed result 31 fails the required computation: Fix one A at the end, leaving two A, two N, and one B. Therefore fact(5)/(fact(2)*fact(2)) = 30."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The proposed result 32 fails the required computation: Fix one A at the end, leaving two A, two N, and one B. Therefore fact(5)/(fact(2)*fact(2)) = 30."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The proposed result 29 fails the required computation: Fix one A at the end, leaving two A, two N, and one B. Therefore fact(5)/(fact(2)*fact(2)) = 30."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "count-expression",
+        "expression": "fact(5)/(fact(2)*fact(2))",
+        "expected": 30
+      }
+    },
+    {
+      "id": "counting-028",
+      "topic": "Repeated letters",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "How many keep the three A copies consecutive?",
+      "context": "Arrange all letters of BANANA, treating identical copies as indistinguishable.",
+      "options": [
+        "11",
+        "12",
+        "13",
+        "2"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Decide what is ordered, what is distinguishable, and which restrictions can be counted directly or by a complement.",
+        "Count disjoint alternatives by addition and independent successive choices by multiplication. A complement may simplify an at-least-one condition."
+      ],
+      "explanation": {
+        "learning_objective": "Apply repeated letters with explicit justification.",
+        "correct_rationale": "Treat AAA as one unit with B,N,N; divide 4! by 2! for the identical Ns. Therefore fact(4)/fact(2) = 12.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The proposed result 11 fails the required computation: Treat AAA as one unit with B,N,N; divide 4! by 2! for the identical Ns. Therefore fact(4)/fact(2) = 12."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The proposed result 13 fails the required computation: Treat AAA as one unit with B,N,N; divide 4! by 2! for the identical Ns. Therefore fact(4)/fact(2) = 12."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The proposed result 2 fails the required computation: Treat AAA as one unit with B,N,N; divide 4! by 2! for the identical Ns. Therefore fact(4)/fact(2) = 12."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "count-expression",
+        "expression": "fact(4)/fact(2)",
+        "expected": 12
+      }
+    },
+    {
+      "id": "counting-029",
+      "topic": "Stars and bars",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "How many distributions allow empty containers?",
+      "context": "Distribute nine identical tokens among four labeled containers.",
+      "options": [
+        "221",
+        "220",
+        "219",
+        "1320"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Decide what is ordered, what is distinguishable, and which restrictions can be counted directly or by a complement.",
+        "Count disjoint alternatives by addition and independent successive choices by multiplication. A complement may simplify an at-least-one condition."
+      ],
+      "explanation": {
+        "learning_objective": "Apply stars and bars with explicit justification.",
+        "correct_rationale": "Nonnegative solutions x₁+⋯+x₄=9 are counted by C(9+4−1,4−1). Therefore C(12,3) = 220.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The proposed result 221 fails the required computation: Nonnegative solutions x₁+⋯+x₄=9 are counted by C(9+4−1,4−1). Therefore C(12,3) = 220."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The proposed result 219 fails the required computation: Nonnegative solutions x₁+⋯+x₄=9 are counted by C(9+4−1,4−1). Therefore C(12,3) = 220."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The proposed result 1320 fails the required computation: Nonnegative solutions x₁+⋯+x₄=9 are counted by C(9+4−1,4−1). Therefore C(12,3) = 220."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "count-expression",
+        "expression": "C(12,3)",
+        "expected": 220
+      }
+    },
+    {
+      "id": "counting-030",
+      "topic": "Stars and bars",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "How many distributions put at least one in each container?",
+      "context": "Distribute nine identical tokens among four labeled containers.",
+      "options": [
+        "57",
+        "56",
+        "55",
+        "336"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Decide what is ordered, what is distinguishable, and which restrictions can be counted directly or by a complement.",
+        "Count disjoint alternatives by addition and independent successive choices by multiplication. A complement may simplify an at-least-one condition."
+      ],
+      "explanation": {
+        "learning_objective": "Apply stars and bars with explicit justification.",
+        "correct_rationale": "Give one to each first; distribute the remaining five nonnegatively: C(8,3). Therefore C(8,3) = 56.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The proposed result 57 fails the required computation: Give one to each first; distribute the remaining five nonnegatively: C(8,3). Therefore C(8,3) = 56."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The proposed result 55 fails the required computation: Give one to each first; distribute the remaining five nonnegatively: C(8,3). Therefore C(8,3) = 56."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The proposed result 336 fails the required computation: Give one to each first; distribute the remaining five nonnegatively: C(8,3). Therefore C(8,3) = 56."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "count-expression",
+        "expression": "C(8,3)",
+        "expected": 56
+      }
+    },
+    {
+      "id": "counting-031",
+      "topic": "Stars and bars",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "How many distributions leave container 1 empty?",
+      "context": "Distribute nine identical tokens among four labeled containers.",
+      "options": [
+        "54",
+        "55",
+        "110",
+        "56"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Decide what is ordered, what is distinguishable, and which restrictions can be counted directly or by a complement.",
+        "Count disjoint alternatives by addition and independent successive choices by multiplication. A complement may simplify an at-least-one condition."
+      ],
+      "explanation": {
+        "learning_objective": "Apply stars and bars with explicit justification.",
+        "correct_rationale": "Distribute nine among the remaining three labeled containers. Therefore C(11,2) = 55.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The proposed result 54 fails the required computation: Distribute nine among the remaining three labeled containers. Therefore C(11,2) = 55."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The proposed result 110 fails the required computation: Distribute nine among the remaining three labeled containers. Therefore C(11,2) = 55."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The proposed result 56 fails the required computation: Distribute nine among the remaining three labeled containers. Therefore C(11,2) = 55."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "count-expression",
+        "expression": "C(11,2)",
+        "expected": 55
+      }
+    },
+    {
+      "id": "counting-032",
+      "topic": "Stars and bars",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "How many distributions put at least two in container 1?",
+      "context": "Distribute nine identical tokens among four labeled containers.",
+      "options": [
+        "119",
+        "720",
+        "121",
+        "120"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Decide what is ordered, what is distinguishable, and which restrictions can be counted directly or by a complement.",
+        "Count disjoint alternatives by addition and independent successive choices by multiplication. A complement may simplify an at-least-one condition."
+      ],
+      "explanation": {
+        "learning_objective": "Apply stars and bars with explicit justification.",
+        "correct_rationale": "Reserve two in the first container, then distribute the remaining seven among all four. Therefore C(10,3) = 120.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The proposed result 119 fails the required computation: Reserve two in the first container, then distribute the remaining seven among all four. Therefore C(10,3) = 120."
+          },
+          {
+            "option_index": 1,
+            "rationale": "The proposed result 720 fails the required computation: Reserve two in the first container, then distribute the remaining seven among all four. Therefore C(10,3) = 120."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The proposed result 121 fails the required computation: Reserve two in the first container, then distribute the remaining seven among all four. Therefore C(10,3) = 120."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "count-expression",
+        "expression": "C(10,3)",
+        "expected": 120
+      }
+    },
+    {
+      "id": "counting-033",
+      "topic": "Bounded allocations",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "How many triples exist?",
+      "context": "Choose nonnegative integer x,y,z with x+y+z=7.",
+      "options": [
+        "37",
+        "72",
+        "35",
+        "36"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Decide what is ordered, what is distinguishable, and which restrictions can be counted directly or by a complement.",
+        "Count disjoint alternatives by addition and independent successive choices by multiplication. A complement may simplify an at-least-one condition."
+      ],
+      "explanation": {
+        "learning_objective": "Apply bounded allocations with explicit justification.",
+        "correct_rationale": "Stars and bars gives C(7+3−1,3−1). Therefore C(9,2) = 36.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The proposed result 37 fails the required computation: Stars and bars gives C(7+3−1,3−1). Therefore C(9,2) = 36."
+          },
+          {
+            "option_index": 1,
+            "rationale": "The proposed result 72 fails the required computation: Stars and bars gives C(7+3−1,3−1). Therefore C(9,2) = 36."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The proposed result 35 fails the required computation: Stars and bars gives C(7+3−1,3−1). Therefore C(9,2) = 36."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "count-expression",
+        "expression": "C(9,2)",
+        "expected": 36
+      }
+    },
+    {
+      "id": "counting-034",
+      "topic": "Bounded allocations",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "How many have x≤3?",
+      "context": "Choose nonnegative integer x,y,z with x+y+z=7.",
+      "options": [
+        "27",
+        "52",
+        "26",
+        "25"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Decide what is ordered, what is distinguishable, and which restrictions can be counted directly or by a complement.",
+        "Count disjoint alternatives by addition and independent successive choices by multiplication. A complement may simplify an at-least-one condition."
+      ],
+      "explanation": {
+        "learning_objective": "Apply bounded allocations with explicit justification.",
+        "correct_rationale": "Subtract x≥4 cases; set x′=x−4 and distribute the remaining three. Therefore C(9,2)-C(5,2) = 26.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The proposed result 27 fails the required computation: Subtract x≥4 cases; set x′=x−4 and distribute the remaining three. Therefore C(9,2)-C(5,2) = 26."
+          },
+          {
+            "option_index": 1,
+            "rationale": "The proposed result 52 fails the required computation: Subtract x≥4 cases; set x′=x−4 and distribute the remaining three. Therefore C(9,2)-C(5,2) = 26."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The proposed result 25 fails the required computation: Subtract x≥4 cases; set x′=x−4 and distribute the remaining three. Therefore C(9,2)-C(5,2) = 26."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "count-expression",
+        "expression": "C(9,2)-C(5,2)",
+        "expected": 26
+      }
+    },
+    {
+      "id": "counting-035",
+      "topic": "Bounded allocations",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "How many have x=3?",
+      "context": "Choose nonnegative integer x,y,z with x+y+z=7.",
+      "options": [
+        "4",
+        "7",
+        "6",
+        "5"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Decide what is ordered, what is distinguishable, and which restrictions can be counted directly or by a complement.",
+        "Count disjoint alternatives by addition and independent successive choices by multiplication. A complement may simplify an at-least-one condition."
+      ],
+      "explanation": {
+        "learning_objective": "Apply bounded allocations with explicit justification.",
+        "correct_rationale": "Then y+z=4, with y=0,1,2,3,4 and a determined z. Therefore 5 = 5.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The proposed result 4 fails the required computation: Then y+z=4, with y=0,1,2,3,4 and a determined z. Therefore 5 = 5."
+          },
+          {
+            "option_index": 1,
+            "rationale": "The proposed result 7 fails the required computation: Then y+z=4, with y=0,1,2,3,4 and a determined z. Therefore 5 = 5."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The proposed result 6 fails the required computation: Then y+z=4, with y=0,1,2,3,4 and a determined z. Therefore 5 = 5."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "count-expression",
+        "expression": "5",
+        "expected": 5
+      }
+    },
+    {
+      "id": "counting-036",
+      "topic": "Bounded allocations",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "How many have x≤3 and y≤3?",
+      "context": "Choose nonnegative integer x,y,z with x+y+z=7.",
+      "options": [
+        "15",
+        "32",
+        "16",
+        "17"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Decide what is ordered, what is distinguishable, and which restrictions can be counted directly or by a complement.",
+        "Count disjoint alternatives by addition and independent successive choices by multiplication. A complement may simplify an at-least-one condition."
+      ],
+      "explanation": {
+        "learning_objective": "Apply bounded allocations with explicit justification.",
+        "correct_rationale": "Subtract x≥4 and y≥4. Their intersection is empty because x+y would be at least 8. Therefore C(9,2)-2*C(5,2) = 16.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The proposed result 15 fails the required computation: Subtract x≥4 and y≥4. Their intersection is empty because x+y would be at least 8. Therefore C(9,2)-2*C(5,2) = 16."
+          },
+          {
+            "option_index": 1,
+            "rationale": "The proposed result 32 fails the required computation: Subtract x≥4 and y≥4. Their intersection is empty because x+y would be at least 8. Therefore C(9,2)-2*C(5,2) = 16."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The proposed result 17 fails the required computation: Subtract x≥4 and y≥4. Their intersection is empty because x+y would be at least 8. Therefore C(9,2)-2*C(5,2) = 16."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "count-expression",
+        "expression": "C(9,2)-2*C(5,2)",
+        "expected": 16
+      }
+    },
+    {
+      "id": "counting-037",
+      "topic": "Grid routes",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "How many shortest routes exist?",
+      "context": "A shortest route goes from (0,0) to (4,3) using only right and up moves.",
+      "options": [
+        "35",
+        "36",
+        "34",
+        "210"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Decide what is ordered, what is distinguishable, and which restrictions can be counted directly or by a complement.",
+        "Count disjoint alternatives by addition and independent successive choices by multiplication. A complement may simplify an at-least-one condition."
+      ],
+      "explanation": {
+        "learning_objective": "Apply grid routes with explicit justification.",
+        "correct_rationale": "Choose positions of three up moves among seven moves. Therefore C(7,3) = 35.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "The proposed result 36 fails the required computation: Choose positions of three up moves among seven moves. Therefore C(7,3) = 35."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The proposed result 34 fails the required computation: Choose positions of three up moves among seven moves. Therefore C(7,3) = 35."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The proposed result 210 fails the required computation: Choose positions of three up moves among seven moves. Therefore C(7,3) = 35."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "count-expression",
+        "expression": "C(7,3)",
+        "expected": 35
+      }
+    },
+    {
+      "id": "counting-038",
+      "topic": "Grid routes",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "How many pass through (2,1)?",
+      "context": "A shortest route goes from (0,0) to (4,3) using only right and up moves.",
+      "options": [
+        "19",
+        "36",
+        "18",
+        "17"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Decide what is ordered, what is distinguishable, and which restrictions can be counted directly or by a complement.",
+        "Count disjoint alternatives by addition and independent successive choices by multiplication. A complement may simplify an at-least-one condition."
+      ],
+      "explanation": {
+        "learning_objective": "Apply grid routes with explicit justification.",
+        "correct_rationale": "Multiply routes to (2,1) by routes from there to (4,3). Therefore C(3,1)*C(4,2) = 18.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The proposed result 19 fails the required computation: Multiply routes to (2,1) by routes from there to (4,3). Therefore C(3,1)*C(4,2) = 18."
+          },
+          {
+            "option_index": 1,
+            "rationale": "The proposed result 36 fails the required computation: Multiply routes to (2,1) by routes from there to (4,3). Therefore C(3,1)*C(4,2) = 18."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The proposed result 17 fails the required computation: Multiply routes to (2,1) by routes from there to (4,3). Therefore C(3,1)*C(4,2) = 18."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "count-expression",
+        "expression": "C(3,1)*C(4,2)",
+        "expected": 18
+      }
+    },
+    {
+      "id": "counting-039",
+      "topic": "Grid routes",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "How many avoid (2,1)?",
+      "context": "A shortest route goes from (0,0) to (4,3) using only right and up moves.",
+      "options": [
+        "174",
+        "18",
+        "16",
+        "17"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Decide what is ordered, what is distinguishable, and which restrictions can be counted directly or by a complement.",
+        "Count disjoint alternatives by addition and independent successive choices by multiplication. A complement may simplify an at-least-one condition."
+      ],
+      "explanation": {
+        "learning_objective": "Apply grid routes with explicit justification.",
+        "correct_rationale": "Subtract the routes through the forbidden point. Therefore C(7,3)-C(3,1)*C(4,2) = 17.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The proposed result 174 fails the required computation: Subtract the routes through the forbidden point. Therefore C(7,3)-C(3,1)*C(4,2) = 17."
+          },
+          {
+            "option_index": 1,
+            "rationale": "The proposed result 18 fails the required computation: Subtract the routes through the forbidden point. Therefore C(7,3)-C(3,1)*C(4,2) = 17."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The proposed result 16 fails the required computation: Subtract the routes through the forbidden point. Therefore C(7,3)-C(3,1)*C(4,2) = 17."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "count-expression",
+        "expression": "C(7,3)-C(3,1)*C(4,2)",
+        "expected": 17
+      }
+    },
+    {
+      "id": "counting-040",
+      "topic": "Grid routes",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "How many begin with an up move?",
+      "context": "A shortest route goes from (0,0) to (4,3) using only right and up moves.",
+      "options": [
+        "15",
+        "30",
+        "14",
+        "16"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Decide what is ordered, what is distinguishable, and which restrictions can be counted directly or by a complement.",
+        "Count disjoint alternatives by addition and independent successive choices by multiplication. A complement may simplify an at-least-one condition."
+      ],
+      "explanation": {
+        "learning_objective": "Apply grid routes with explicit justification.",
+        "correct_rationale": "Fix the first up move; choose positions of the remaining two ups among six moves. Therefore C(6,2) = 15.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "The proposed result 30 fails the required computation: Fix the first up move; choose positions of the remaining two ups among six moves. Therefore C(6,2) = 15."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The proposed result 14 fails the required computation: Fix the first up move; choose positions of the remaining two ups among six moves. Therefore C(6,2) = 15."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The proposed result 16 fails the required computation: Fix the first up move; choose positions of the remaining two ups among six moves. Therefore C(6,2) = 15."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "count-expression",
+        "expression": "C(6,2)",
+        "expected": 15
+      }
+    },
+    {
+      "id": "counting-041",
+      "topic": "Inclusion–exclusion: divisibility",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "How many are divisible by 3?",
+      "context": "Consider integers from 1 through 60.",
+      "options": [
+        "20",
+        "19",
+        "21",
+        "22"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Decide what is ordered, what is distinguishable, and which restrictions can be counted directly or by a complement.",
+        "Count disjoint alternatives by addition and independent successive choices by multiplication. A complement may simplify an at-least-one condition."
+      ],
+      "explanation": {
+        "learning_objective": "Apply inclusion–exclusion: divisibility with explicit justification.",
+        "correct_rationale": "The list 3,6,…,60 contains 60/3 terms. Therefore 20 = 20.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "The proposed result 19 fails the required computation: The list 3,6,…,60 contains 60/3 terms. Therefore 20 = 20."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The proposed result 21 fails the required computation: The list 3,6,…,60 contains 60/3 terms. Therefore 20 = 20."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The proposed result 22 fails the required computation: The list 3,6,…,60 contains 60/3 terms. Therefore 20 = 20."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "count-expression",
+        "expression": "20",
+        "expected": 20
+      }
+    },
+    {
+      "id": "counting-042",
+      "topic": "Inclusion–exclusion: divisibility",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "How many are divisible by 3 or 5?",
+      "context": "Consider integers from 1 through 60.",
+      "options": [
+        "28",
+        "30",
+        "29",
+        "27"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Decide what is ordered, what is distinguishable, and which restrictions can be counted directly or by a complement.",
+        "Count disjoint alternatives by addition and independent successive choices by multiplication. A complement may simplify an at-least-one condition."
+      ],
+      "explanation": {
+        "learning_objective": "Apply inclusion–exclusion: divisibility with explicit justification.",
+        "correct_rationale": "Add counts for 3 and 5, subtract the four multiples of lcm(3,5)=15. Therefore 20+12-4 = 28.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "The proposed result 30 fails the required computation: Add counts for 3 and 5, subtract the four multiples of lcm(3,5)=15. Therefore 20+12-4 = 28."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The proposed result 29 fails the required computation: Add counts for 3 and 5, subtract the four multiples of lcm(3,5)=15. Therefore 20+12-4 = 28."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The proposed result 27 fails the required computation: Add counts for 3 and 5, subtract the four multiples of lcm(3,5)=15. Therefore 20+12-4 = 28."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "count-expression",
+        "expression": "20+12-4",
+        "expected": 28
+      }
+    },
+    {
+      "id": "counting-043",
+      "topic": "Inclusion–exclusion: divisibility",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "How many are divisible by neither 3 nor 5?",
+      "context": "Consider integers from 1 through 60.",
+      "options": [
+        "34",
+        "32",
+        "33",
+        "31"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Decide what is ordered, what is distinguishable, and which restrictions can be counted directly or by a complement.",
+        "Count disjoint alternatives by addition and independent successive choices by multiplication. A complement may simplify an at-least-one condition."
+      ],
+      "explanation": {
+        "learning_objective": "Apply inclusion–exclusion: divisibility with explicit justification.",
+        "correct_rationale": "Subtract the union count from the universe size. Therefore 60-(20+12-4) = 32.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The proposed result 34 fails the required computation: Subtract the union count from the universe size. Therefore 60-(20+12-4) = 32."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The proposed result 33 fails the required computation: Subtract the union count from the universe size. Therefore 60-(20+12-4) = 32."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The proposed result 31 fails the required computation: Subtract the union count from the universe size. Therefore 60-(20+12-4) = 32."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "count-expression",
+        "expression": "60-(20+12-4)",
+        "expected": 32
+      }
+    },
+    {
+      "id": "counting-044",
+      "topic": "Inclusion–exclusion: divisibility",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "How many are divisible by exactly one of 3 and 5?",
+      "context": "Consider integers from 1 through 60.",
+      "options": [
+        "23",
+        "24",
+        "25",
+        "26"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Decide what is ordered, what is distinguishable, and which restrictions can be counted directly or by a complement.",
+        "Count disjoint alternatives by addition and independent successive choices by multiplication. A complement may simplify an at-least-one condition."
+      ],
+      "explanation": {
+        "learning_objective": "Apply inclusion–exclusion: divisibility with explicit justification.",
+        "correct_rationale": "Subtract the overlap twice so each common multiple is excluded from both exclusive regions. Therefore 20+12-2*4 = 24.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The proposed result 23 fails the required computation: Subtract the overlap twice so each common multiple is excluded from both exclusive regions. Therefore 20+12-2*4 = 24."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The proposed result 25 fails the required computation: Subtract the overlap twice so each common multiple is excluded from both exclusive regions. Therefore 20+12-2*4 = 24."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The proposed result 26 fails the required computation: Subtract the overlap twice so each common multiple is excluded from both exclusive regions. Therefore 20+12-2*4 = 24."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "count-expression",
+        "expression": "20+12-2*4",
+        "expected": 24
+      }
+    },
+    {
+      "id": "counting-045",
+      "topic": "Three-set overlap",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "How many are in A∪B∪C?",
+      "context": "In a group of 30, |A|=14, |B|=12, |C|=10, pair intersections have sizes 5,4,3, and |A∩B∩C|=2.",
+      "options": [
+        "26",
+        "25",
+        "27",
+        "28"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Decide what is ordered, what is distinguishable, and which restrictions can be counted directly or by a complement.",
+        "Count disjoint alternatives by addition and independent successive choices by multiplication. A complement may simplify an at-least-one condition."
+      ],
+      "explanation": {
+        "learning_objective": "Apply three-set overlap with explicit justification.",
+        "correct_rationale": "Three-set inclusion–exclusion adds single counts, subtracts pair counts, and adds the triple back. Therefore 14+12+10-5-4-3+2 = 26.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "The proposed result 25 fails the required computation: Three-set inclusion–exclusion adds single counts, subtracts pair counts, and adds the triple back. Therefore 14+12+10-5-4-3+2 = 26."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The proposed result 27 fails the required computation: Three-set inclusion–exclusion adds single counts, subtracts pair counts, and adds the triple back. Therefore 14+12+10-5-4-3+2 = 26."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The proposed result 28 fails the required computation: Three-set inclusion–exclusion adds single counts, subtracts pair counts, and adds the triple back. Therefore 14+12+10-5-4-3+2 = 26."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "count-expression",
+        "expression": "14+12+10-5-4-3+2",
+        "expected": 26
+      }
+    },
+    {
+      "id": "counting-046",
+      "topic": "Three-set overlap",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "How many are in none of the three sets?",
+      "context": "In a group of 30, |A|=14, |B|=12, |C|=10, pair intersections have sizes 5,4,3, and |A∩B∩C|=2.",
+      "options": [
+        "4",
+        "5",
+        "3",
+        "6"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Decide what is ordered, what is distinguishable, and which restrictions can be counted directly or by a complement.",
+        "Count disjoint alternatives by addition and independent successive choices by multiplication. A complement may simplify an at-least-one condition."
+      ],
+      "explanation": {
+        "learning_objective": "Apply three-set overlap with explicit justification.",
+        "correct_rationale": "Subtract the union size from 30. Therefore 30-(14+12+10-5-4-3+2) = 4.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "The proposed result 5 fails the required computation: Subtract the union size from 30. Therefore 30-(14+12+10-5-4-3+2) = 4."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The proposed result 3 fails the required computation: Subtract the union size from 30. Therefore 30-(14+12+10-5-4-3+2) = 4."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The proposed result 6 fails the required computation: Subtract the union size from 30. Therefore 30-(14+12+10-5-4-3+2) = 4."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "count-expression",
+        "expression": "30-(14+12+10-5-4-3+2)",
+        "expected": 4
+      }
+    },
+    {
+      "id": "counting-047",
+      "topic": "Three-set overlap",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "How many are in exactly two of the sets?",
+      "context": "In a group of 30, |A|=14, |B|=12, |C|=10, pair intersections have sizes 5,4,3, and |A∩B∩C|=2.",
+      "options": [
+        "7",
+        "8",
+        "5",
+        "6"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Decide what is ordered, what is distinguishable, and which restrictions can be counted directly or by a complement.",
+        "Count disjoint alternatives by addition and independent successive choices by multiplication. A complement may simplify an at-least-one condition."
+      ],
+      "explanation": {
+        "learning_objective": "Apply three-set overlap with explicit justification.",
+        "correct_rationale": "Each triple-member appears in three pair intersections but should not count as exactly two. Therefore 5+4+3-3*2 = 6.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The proposed result 7 fails the required computation: Each triple-member appears in three pair intersections but should not count as exactly two. Therefore 5+4+3-3*2 = 6."
+          },
+          {
+            "option_index": 1,
+            "rationale": "The proposed result 8 fails the required computation: Each triple-member appears in three pair intersections but should not count as exactly two. Therefore 5+4+3-3*2 = 6."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The proposed result 5 fails the required computation: Each triple-member appears in three pair intersections but should not count as exactly two. Therefore 5+4+3-3*2 = 6."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "count-expression",
+        "expression": "5+4+3-3*2",
+        "expected": 6
+      }
+    },
+    {
+      "id": "counting-048",
+      "topic": "Three-set overlap",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "How many are in A only?",
+      "context": "In a group of 30, |A|=14, |B|=12, |C|=10, pair intersections have sizes 5,4,3, and |A∩B∩C|=2.",
+      "options": [
+        "8",
+        "9",
+        "7",
+        "6"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Decide what is ordered, what is distinguishable, and which restrictions can be counted directly or by a complement.",
+        "Count disjoint alternatives by addition and independent successive choices by multiplication. A complement may simplify an at-least-one condition."
+      ],
+      "explanation": {
+        "learning_objective": "Apply three-set overlap with explicit justification.",
+        "correct_rationale": "Remove A∩B and A∩C from A, then restore the twice-removed triple intersection. Therefore 14-5-4+2 = 7.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The proposed result 8 fails the required computation: Remove A∩B and A∩C from A, then restore the twice-removed triple intersection. Therefore 14-5-4+2 = 7."
+          },
+          {
+            "option_index": 1,
+            "rationale": "The proposed result 9 fails the required computation: Remove A∩B and A∩C from A, then restore the twice-removed triple intersection. Therefore 14-5-4+2 = 7."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The proposed result 6 fails the required computation: Remove A∩B and A∩C from A, then restore the twice-removed triple intersection. Therefore 14-5-4+2 = 7."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "count-expression",
+        "expression": "14-5-4+2",
+        "expected": 7
+      }
+    },
+    {
+      "id": "counting-049",
+      "topic": "Subset constraints",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "How many subsets contain a?",
+      "context": "The set S has eight elements, including distinct elements a and b.",
+      "options": [
+        "14",
+        "128",
+        "64",
+        "256"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Decide what is ordered, what is distinguishable, and which restrictions can be counted directly or by a complement.",
+        "Count disjoint alternatives by addition and independent successive choices by multiplication. A complement may simplify an at-least-one condition."
+      ],
+      "explanation": {
+        "learning_objective": "Apply subset constraints with explicit justification.",
+        "correct_rationale": "Fix inclusion of a; each other element is free. Therefore 2**7 = 128.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The proposed result 14 fails the required computation: Fix inclusion of a; each other element is free. Therefore 2**7 = 128."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The proposed result 64 fails the required computation: Fix inclusion of a; each other element is free. Therefore 2**7 = 128."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The proposed result 256 fails the required computation: Fix inclusion of a; each other element is free. Therefore 2**7 = 128."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "count-expression",
+        "expression": "2**7",
+        "expected": 128
+      }
+    },
+    {
+      "id": "counting-050",
+      "topic": "Subset constraints",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "How many subsets contain both a and b?",
+      "context": "The set S has eight elements, including distinct elements a and b.",
+      "options": [
+        "12",
+        "64",
+        "128",
+        "32"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Decide what is ordered, what is distinguishable, and which restrictions can be counted directly or by a complement.",
+        "Count disjoint alternatives by addition and independent successive choices by multiplication. A complement may simplify an at-least-one condition."
+      ],
+      "explanation": {
+        "learning_objective": "Apply subset constraints with explicit justification.",
+        "correct_rationale": "Fix two inclusions; the remaining six elements are free. Therefore 2**6 = 64.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The proposed result 12 fails the required computation: Fix two inclusions; the remaining six elements are free. Therefore 2**6 = 64."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The proposed result 128 fails the required computation: Fix two inclusions; the remaining six elements are free. Therefore 2**6 = 64."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The proposed result 32 fails the required computation: Fix two inclusions; the remaining six elements are free. Therefore 2**6 = 64."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "count-expression",
+        "expression": "2**6",
+        "expected": 64
+      }
+    }
+  ]
+}

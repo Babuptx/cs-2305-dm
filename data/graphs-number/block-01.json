@@ -1,0 +1,3724 @@
+{
+  "schema_version": 1,
+  "block_id": "graphs-number-block-01",
+  "pillar_id": "graphs-number",
+  "block_title": "Graph theory and number theory · Block 1",
+  "questions": [
+    {
+      "id": "graphs-number-001",
+      "topic": "Handshaking lemma",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "How many edges does this graph have, using its degree sum?",
+      "context": "Path P₅. A finite simple undirected graph has vertices 0,…,4 and exactly these edges: (0,1), (1,2), (2,3), (3,4).",
+      "options": [
+        "6",
+        "4",
+        "3",
+        "5"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Compute each vertex degree and divide the total by two.",
+        "Check graph claims against the full edge list. Check arithmetic claims by substituting the proposed quotient, residue, divisor, or inverse."
+      ],
+      "explanation": {
+        "learning_objective": "Apply handshaking lemma with explicit justification.",
+        "correct_rationale": "The vertex degrees in label order are [1, 2, 2, 2, 1], summing to 8. Each undirected edge contributes twice, so |E|=8/2=4.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The proposed result 6 fails the required computation: The vertex degrees in label order are [1, 2, 2, 2, 1], summing to 8. Each undirected edge contributes twice, so |E|=8/2=4."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The proposed result 3 fails the required computation: The vertex degrees in label order are [1, 2, 2, 2, 1], summing to 8. Each undirected edge contributes twice, so |E|=8/2=4."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The proposed result 5 fails the required computation: The vertex degrees in label order are [1, 2, 2, 2, 1], summing to 8. Each undirected edge contributes twice, so |E|=8/2=4."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "graph-query",
+        "n": 5,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "query": "edges",
+        "expected": 4
+      }
+    },
+    {
+      "id": "graphs-number-002",
+      "topic": "Path P₅",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "What is the diameter (maximum shortest-path distance)?",
+      "context": "Path P₅. A finite simple undirected graph has vertices 0,…,4 and exactly these edges: (0,1), (1,2), (2,3), (3,4).",
+      "options": [
+        "4",
+        "6",
+        "5",
+        "3"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Use the displayed edges to test the defining property; names alone are not a substitute for the graph.",
+        "Check graph claims against the full edge list. Check arithmetic claims by substituting the proposed quotient, residue, divisor, or inverse."
+      ],
+      "explanation": {
+        "learning_objective": "Apply path p₅ with explicit justification.",
+        "correct_rationale": "The endpoints 0 and 4 are four edges apart, and no pair is farther.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "The proposed result 6 fails the required computation: The endpoints 0 and 4 are four edges apart, and no pair is farther."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The proposed result 5 fails the required computation: The endpoints 0 and 4 are four edges apart, and no pair is farther."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The proposed result 3 fails the required computation: The endpoints 0 and 4 are four edges apart, and no pair is farther."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "graph-query",
+        "n": 5,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "query": "diameter",
+        "expected": 4
+      }
+    },
+    {
+      "id": "graphs-number-003",
+      "topic": "Euler trails",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "Which statement about traversing every edge exactly once is correct?",
+      "context": "Path P₅. A finite simple undirected graph has vertices 0,…,4 and exactly these edges: (0,1), (1,2), (2,3), (3,4).",
+      "options": [
+        "A closed Euler trail exists",
+        "No trail uses every edge exactly once",
+        "An open Euler trail exists, but no closed one",
+        "Every simple graph automatically has a closed Euler trail"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Check connectivity among vertices incident to edges, then count odd degrees.",
+        "Check graph claims against the full edge list. Check arithmetic claims by substituting the proposed quotient, residue, divisor, or inverse."
+      ],
+      "explanation": {
+        "learning_objective": "Apply euler trails with explicit justification.",
+        "correct_rationale": "The odd-degree vertices are [0, 4]; the edge-containing component count is 1. An Euler trail requires edge connectivity and zero or two odd vertices. Zero gives a closed trail; two gives an open one. Thus: an open euler trail exists, but no closed one.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The Euler conditions rule out this statement. The odd-degree vertices are [0, 4]; the edge-containing component count is 1. An Euler trail requires edge connectivity and zero or two odd vertices. Zero gives a closed trail; two gives an open one. Thus: an open euler trail exists, but no closed one."
+          },
+          {
+            "option_index": 1,
+            "rationale": "The Euler conditions rule out this statement. The odd-degree vertices are [0, 4]; the edge-containing component count is 1. An Euler trail requires edge connectivity and zero or two odd vertices. Zero gives a closed trail; two gives an open one. Thus: an open euler trail exists, but no closed one."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The Euler conditions rule out this statement. The odd-degree vertices are [0, 4]; the edge-containing component count is 1. An Euler trail requires edge connectivity and zero or two odd vertices. Zero gives a closed trail; two gives an open one. Thus: an open euler trail exists, but no closed one."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "graph-euler",
+        "n": 5,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "expected": "An open Euler trail exists, but no closed one"
+      }
+    },
+    {
+      "id": "graphs-number-004",
+      "topic": "Bipartite graphs",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "Is this graph bipartite?",
+      "context": "Path P₅. A finite simple undirected graph has vertices 0,…,4 and exactly these edges: (0,1), (1,2), (2,3), (3,4).",
+      "options": [
+        "Yes: any graph with an even number of edges is bipartite",
+        "No: only disconnected graphs are bipartite",
+        "Yes: a valid partition is [0, 2, 4] and [1, 3]",
+        "It depends on the order in which vertices are labeled"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Try alternating two colors along edges; a same-color edge witnesses a conflict.",
+        "Check graph claims against the full edge list. Check arithmetic claims by substituting the proposed quotient, residue, divisor, or inverse."
+      ],
+      "explanation": {
+        "learning_objective": "Apply bipartite graphs with explicit justification.",
+        "correct_rationale": "Color the vertices in two classes [0, 2, 4] and [1, 3]. Every displayed edge crosses the partition, so the graph is bipartite.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "Edge-count parity does not imply a two-coloring."
+          },
+          {
+            "option_index": 1,
+            "rationale": "Connected graphs such as paths can be bipartite."
+          },
+          {
+            "option_index": 3,
+            "rationale": "Bipartiteness is invariant under relabeling."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "graph-bipartite",
+        "n": 5,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "expected": true
+      }
+    },
+    {
+      "id": "graphs-number-005",
+      "topic": "Handshaking lemma",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "How many edges does this graph have, using its degree sum?",
+      "context": "Cycle C₄. A finite simple undirected graph has vertices 0,…,3 and exactly these edges: (0,1), (1,2), (2,3), (3,0).",
+      "options": [
+        "3",
+        "5",
+        "6",
+        "4"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Compute each vertex degree and divide the total by two.",
+        "Check graph claims against the full edge list. Check arithmetic claims by substituting the proposed quotient, residue, divisor, or inverse."
+      ],
+      "explanation": {
+        "learning_objective": "Apply handshaking lemma with explicit justification.",
+        "correct_rationale": "The vertex degrees in label order are [2, 2, 2, 2], summing to 8. Each undirected edge contributes twice, so |E|=8/2=4.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The proposed result 3 fails the required computation: The vertex degrees in label order are [2, 2, 2, 2], summing to 8. Each undirected edge contributes twice, so |E|=8/2=4."
+          },
+          {
+            "option_index": 1,
+            "rationale": "The proposed result 5 fails the required computation: The vertex degrees in label order are [2, 2, 2, 2], summing to 8. Each undirected edge contributes twice, so |E|=8/2=4."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The proposed result 6 fails the required computation: The vertex degrees in label order are [2, 2, 2, 2], summing to 8. Each undirected edge contributes twice, so |E|=8/2=4."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "graph-query",
+        "n": 4,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            0
+          ]
+        ],
+        "query": "edges",
+        "expected": 4
+      }
+    },
+    {
+      "id": "graphs-number-006",
+      "topic": "Cycle C₄",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "How many spanning trees does this cycle have?",
+      "context": "Cycle C₄. A finite simple undirected graph has vertices 0,…,3 and exactly these edges: (0,1), (1,2), (2,3), (3,0).",
+      "options": [
+        "5",
+        "4",
+        "3",
+        "6"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Use the displayed edges to test the defining property; names alone are not a substitute for the graph.",
+        "Check graph claims against the full edge list. Check arithmetic claims by substituting the proposed quotient, residue, divisor, or inverse."
+      ],
+      "explanation": {
+        "learning_objective": "Apply cycle c₄ with explicit justification.",
+        "correct_rationale": "Delete any one of the four edges. Each deletion gives a different spanning tree.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The proposed result 5 fails the required computation: Delete any one of the four edges. Each deletion gives a different spanning tree."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The proposed result 3 fails the required computation: Delete any one of the four edges. Each deletion gives a different spanning tree."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The proposed result 6 fails the required computation: Delete any one of the four edges. Each deletion gives a different spanning tree."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "graph-query",
+        "n": 4,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            0
+          ]
+        ],
+        "query": "spanning-trees",
+        "expected": 4
+      }
+    },
+    {
+      "id": "graphs-number-007",
+      "topic": "Euler trails",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "Which statement about traversing every edge exactly once is correct?",
+      "context": "Cycle C₄. A finite simple undirected graph has vertices 0,…,3 and exactly these edges: (0,1), (1,2), (2,3), (3,0).",
+      "options": [
+        "No trail uses every edge exactly once",
+        "Every simple graph automatically has a closed Euler trail",
+        "A closed Euler trail exists",
+        "An open Euler trail exists, but no closed one"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Check connectivity among vertices incident to edges, then count odd degrees.",
+        "Check graph claims against the full edge list. Check arithmetic claims by substituting the proposed quotient, residue, divisor, or inverse."
+      ],
+      "explanation": {
+        "learning_objective": "Apply euler trails with explicit justification.",
+        "correct_rationale": "The odd-degree vertices are []; the edge-containing component count is 1. An Euler trail requires edge connectivity and zero or two odd vertices. Zero gives a closed trail; two gives an open one. Thus: a closed euler trail exists.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The Euler conditions rule out this statement. The odd-degree vertices are []; the edge-containing component count is 1. An Euler trail requires edge connectivity and zero or two odd vertices. Zero gives a closed trail; two gives an open one. Thus: a closed euler trail exists."
+          },
+          {
+            "option_index": 1,
+            "rationale": "The Euler conditions rule out this statement. The odd-degree vertices are []; the edge-containing component count is 1. An Euler trail requires edge connectivity and zero or two odd vertices. Zero gives a closed trail; two gives an open one. Thus: a closed euler trail exists."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The Euler conditions rule out this statement. The odd-degree vertices are []; the edge-containing component count is 1. An Euler trail requires edge connectivity and zero or two odd vertices. Zero gives a closed trail; two gives an open one. Thus: a closed euler trail exists."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "graph-euler",
+        "n": 4,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            0
+          ]
+        ],
+        "expected": "A closed Euler trail exists"
+      }
+    },
+    {
+      "id": "graphs-number-008",
+      "topic": "Bipartite graphs",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "Is this graph bipartite?",
+      "context": "Cycle C₄. A finite simple undirected graph has vertices 0,…,3 and exactly these edges: (0,1), (1,2), (2,3), (3,0).",
+      "options": [
+        "No: only disconnected graphs are bipartite",
+        "Yes: a valid partition is [0, 2] and [1, 3]",
+        "It depends on the order in which vertices are labeled",
+        "Yes: any graph with an even number of edges is bipartite"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Try alternating two colors along edges; a same-color edge witnesses a conflict.",
+        "Check graph claims against the full edge list. Check arithmetic claims by substituting the proposed quotient, residue, divisor, or inverse."
+      ],
+      "explanation": {
+        "learning_objective": "Apply bipartite graphs with explicit justification.",
+        "correct_rationale": "Color the vertices in two classes [0, 2] and [1, 3]. Every displayed edge crosses the partition, so the graph is bipartite.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "Connected graphs such as paths can be bipartite."
+          },
+          {
+            "option_index": 2,
+            "rationale": "Bipartiteness is invariant under relabeling."
+          },
+          {
+            "option_index": 3,
+            "rationale": "Edge-count parity does not imply a two-coloring."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "graph-bipartite",
+        "n": 4,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            0
+          ]
+        ],
+        "expected": true
+      }
+    },
+    {
+      "id": "graphs-number-009",
+      "topic": "Handshaking lemma",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "How many edges does this graph have, using its degree sum?",
+      "context": "Cycle C₅. A finite simple undirected graph has vertices 0,…,4 and exactly these edges: (0,1), (1,2), (2,3), (3,4), (4,0).",
+      "options": [
+        "4",
+        "7",
+        "5",
+        "6"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Compute each vertex degree and divide the total by two.",
+        "Check graph claims against the full edge list. Check arithmetic claims by substituting the proposed quotient, residue, divisor, or inverse."
+      ],
+      "explanation": {
+        "learning_objective": "Apply handshaking lemma with explicit justification.",
+        "correct_rationale": "The vertex degrees in label order are [2, 2, 2, 2, 2], summing to 10. Each undirected edge contributes twice, so |E|=10/2=5.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The proposed result 4 fails the required computation: The vertex degrees in label order are [2, 2, 2, 2, 2], summing to 10. Each undirected edge contributes twice, so |E|=10/2=5."
+          },
+          {
+            "option_index": 1,
+            "rationale": "The proposed result 7 fails the required computation: The vertex degrees in label order are [2, 2, 2, 2, 2], summing to 10. Each undirected edge contributes twice, so |E|=10/2=5."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The proposed result 6 fails the required computation: The vertex degrees in label order are [2, 2, 2, 2, 2], summing to 10. Each undirected edge contributes twice, so |E|=10/2=5."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "graph-query",
+        "n": 5,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            0
+          ]
+        ],
+        "query": "edges",
+        "expected": 5
+      }
+    },
+    {
+      "id": "graphs-number-010",
+      "topic": "Cycle C₅",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "What is its chromatic number?",
+      "context": "Cycle C₅. A finite simple undirected graph has vertices 0,…,4 and exactly these edges: (0,1), (1,2), (2,3), (3,4), (4,0).",
+      "options": [
+        "4",
+        "5",
+        "3",
+        "2"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Use the displayed edges to test the defining property; names alone are not a substitute for the graph.",
+        "Check graph claims against the full edge list. Check arithmetic claims by substituting the proposed quotient, residue, divisor, or inverse."
+      ],
+      "explanation": {
+        "learning_objective": "Apply cycle c₅ with explicit justification.",
+        "correct_rationale": "An odd cycle cannot be two-colored. Three colors suffice by alternating two on a path and using a third for the final vertex.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The proposed result 4 fails the required computation: An odd cycle cannot be two-colored. Three colors suffice by alternating two on a path and using a third for the final vertex."
+          },
+          {
+            "option_index": 1,
+            "rationale": "The proposed result 5 fails the required computation: An odd cycle cannot be two-colored. Three colors suffice by alternating two on a path and using a third for the final vertex."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The proposed result 2 fails the required computation: An odd cycle cannot be two-colored. Three colors suffice by alternating two on a path and using a third for the final vertex."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "graph-query",
+        "n": 5,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            0
+          ]
+        ],
+        "query": "chromatic",
+        "expected": 3
+      }
+    },
+    {
+      "id": "graphs-number-011",
+      "topic": "Euler trails",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "Which statement about traversing every edge exactly once is correct?",
+      "context": "Cycle C₅. A finite simple undirected graph has vertices 0,…,4 and exactly these edges: (0,1), (1,2), (2,3), (3,4), (4,0).",
+      "options": [
+        "No trail uses every edge exactly once",
+        "An open Euler trail exists, but no closed one",
+        "Every simple graph automatically has a closed Euler trail",
+        "A closed Euler trail exists"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Check connectivity among vertices incident to edges, then count odd degrees.",
+        "Check graph claims against the full edge list. Check arithmetic claims by substituting the proposed quotient, residue, divisor, or inverse."
+      ],
+      "explanation": {
+        "learning_objective": "Apply euler trails with explicit justification.",
+        "correct_rationale": "The odd-degree vertices are []; the edge-containing component count is 1. An Euler trail requires edge connectivity and zero or two odd vertices. Zero gives a closed trail; two gives an open one. Thus: a closed euler trail exists.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The Euler conditions rule out this statement. The odd-degree vertices are []; the edge-containing component count is 1. An Euler trail requires edge connectivity and zero or two odd vertices. Zero gives a closed trail; two gives an open one. Thus: a closed euler trail exists."
+          },
+          {
+            "option_index": 1,
+            "rationale": "The Euler conditions rule out this statement. The odd-degree vertices are []; the edge-containing component count is 1. An Euler trail requires edge connectivity and zero or two odd vertices. Zero gives a closed trail; two gives an open one. Thus: a closed euler trail exists."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The Euler conditions rule out this statement. The odd-degree vertices are []; the edge-containing component count is 1. An Euler trail requires edge connectivity and zero or two odd vertices. Zero gives a closed trail; two gives an open one. Thus: a closed euler trail exists."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "graph-euler",
+        "n": 5,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            0
+          ]
+        ],
+        "expected": "A closed Euler trail exists"
+      }
+    },
+    {
+      "id": "graphs-number-012",
+      "topic": "Bipartite graphs",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "Is this graph bipartite?",
+      "context": "Cycle C₅. A finite simple undirected graph has vertices 0,…,4 and exactly these edges: (0,1), (1,2), (2,3), (3,4), (4,0).",
+      "options": [
+        "Yes: any graph with an even number of edges is bipartite",
+        "No: only disconnected graphs are bipartite",
+        "It depends on the order in which vertices are labeled",
+        "No: it contains an odd cycle"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Try alternating two colors along edges; a same-color edge witnesses a conflict.",
+        "Check graph claims against the full edge list. Check arithmetic claims by substituting the proposed quotient, residue, divisor, or inverse."
+      ],
+      "explanation": {
+        "learning_objective": "Apply bipartite graphs with explicit justification.",
+        "correct_rationale": "Two-color propagation produces the same color at endpoints (3, 2) of an edge. Equivalently, an odd cycle obstructs bipartiteness. The graph therefore is not bipartite.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "Edge-count parity does not imply a two-coloring."
+          },
+          {
+            "option_index": 1,
+            "rationale": "Connected graphs such as paths can be bipartite."
+          },
+          {
+            "option_index": 2,
+            "rationale": "Bipartiteness is invariant under relabeling."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "graph-bipartite",
+        "n": 5,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            0
+          ]
+        ],
+        "expected": false
+      }
+    },
+    {
+      "id": "graphs-number-013",
+      "topic": "Handshaking lemma",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "How many edges does this graph have, using its degree sum?",
+      "context": "Complete graph K₄. A finite simple undirected graph has vertices 0,…,3 and exactly these edges: (0,1), (0,2), (0,3), (1,2), (1,3), (2,3).",
+      "options": [
+        "6",
+        "5",
+        "7",
+        "8"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Compute each vertex degree and divide the total by two.",
+        "Check graph claims against the full edge list. Check arithmetic claims by substituting the proposed quotient, residue, divisor, or inverse."
+      ],
+      "explanation": {
+        "learning_objective": "Apply handshaking lemma with explicit justification.",
+        "correct_rationale": "The vertex degrees in label order are [3, 3, 3, 3], summing to 12. Each undirected edge contributes twice, so |E|=12/2=6.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "The proposed result 5 fails the required computation: The vertex degrees in label order are [3, 3, 3, 3], summing to 12. Each undirected edge contributes twice, so |E|=12/2=6."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The proposed result 7 fails the required computation: The vertex degrees in label order are [3, 3, 3, 3], summing to 12. Each undirected edge contributes twice, so |E|=12/2=6."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The proposed result 8 fails the required computation: The vertex degrees in label order are [3, 3, 3, 3], summing to 12. Each undirected edge contributes twice, so |E|=12/2=6."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "graph-query",
+        "n": 4,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "query": "edges",
+        "expected": 6
+      }
+    },
+    {
+      "id": "graphs-number-014",
+      "topic": "Complete graph K₄",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "How many triangles does it contain?",
+      "context": "Complete graph K₄. A finite simple undirected graph has vertices 0,…,3 and exactly these edges: (0,1), (0,2), (0,3), (1,2), (1,3), (2,3).",
+      "options": [
+        "6",
+        "4",
+        "5",
+        "3"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Use the displayed edges to test the defining property; names alone are not a substitute for the graph.",
+        "Check graph claims against the full edge list. Check arithmetic claims by substituting the proposed quotient, residue, divisor, or inverse."
+      ],
+      "explanation": {
+        "learning_objective": "Apply complete graph k₄ with explicit justification.",
+        "correct_rationale": "Every three-vertex subset is a triangle, so C(4,3)=4.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The proposed result 6 fails the required computation: Every three-vertex subset is a triangle, so C(4,3)=4."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The proposed result 5 fails the required computation: Every three-vertex subset is a triangle, so C(4,3)=4."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The proposed result 3 fails the required computation: Every three-vertex subset is a triangle, so C(4,3)=4."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "graph-query",
+        "n": 4,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "query": "triangles",
+        "expected": 4
+      }
+    },
+    {
+      "id": "graphs-number-015",
+      "topic": "Euler trails",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "Which statement about traversing every edge exactly once is correct?",
+      "context": "Complete graph K₄. A finite simple undirected graph has vertices 0,…,3 and exactly these edges: (0,1), (0,2), (0,3), (1,2), (1,3), (2,3).",
+      "options": [
+        "Every simple graph automatically has a closed Euler trail",
+        "An open Euler trail exists, but no closed one",
+        "A closed Euler trail exists",
+        "No trail uses every edge exactly once"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Check connectivity among vertices incident to edges, then count odd degrees.",
+        "Check graph claims against the full edge list. Check arithmetic claims by substituting the proposed quotient, residue, divisor, or inverse."
+      ],
+      "explanation": {
+        "learning_objective": "Apply euler trails with explicit justification.",
+        "correct_rationale": "The odd-degree vertices are [0, 1, 2, 3]; the edge-containing component count is 1. An Euler trail requires edge connectivity and zero or two odd vertices. Zero gives a closed trail; two gives an open one. Thus: no trail uses every edge exactly once.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The Euler conditions rule out this statement. The odd-degree vertices are [0, 1, 2, 3]; the edge-containing component count is 1. An Euler trail requires edge connectivity and zero or two odd vertices. Zero gives a closed trail; two gives an open one. Thus: no trail uses every edge exactly once."
+          },
+          {
+            "option_index": 1,
+            "rationale": "The Euler conditions rule out this statement. The odd-degree vertices are [0, 1, 2, 3]; the edge-containing component count is 1. An Euler trail requires edge connectivity and zero or two odd vertices. Zero gives a closed trail; two gives an open one. Thus: no trail uses every edge exactly once."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The Euler conditions rule out this statement. The odd-degree vertices are [0, 1, 2, 3]; the edge-containing component count is 1. An Euler trail requires edge connectivity and zero or two odd vertices. Zero gives a closed trail; two gives an open one. Thus: no trail uses every edge exactly once."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "graph-euler",
+        "n": 4,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "expected": "No trail uses every edge exactly once"
+      }
+    },
+    {
+      "id": "graphs-number-016",
+      "topic": "Bipartite graphs",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "Is this graph bipartite?",
+      "context": "Complete graph K₄. A finite simple undirected graph has vertices 0,…,3 and exactly these edges: (0,1), (0,2), (0,3), (1,2), (1,3), (2,3).",
+      "options": [
+        "Yes: any graph with an even number of edges is bipartite",
+        "No: it contains an odd cycle",
+        "It depends on the order in which vertices are labeled",
+        "No: only disconnected graphs are bipartite"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Try alternating two colors along edges; a same-color edge witnesses a conflict.",
+        "Check graph claims against the full edge list. Check arithmetic claims by substituting the proposed quotient, residue, divisor, or inverse."
+      ],
+      "explanation": {
+        "learning_objective": "Apply bipartite graphs with explicit justification.",
+        "correct_rationale": "Two-color propagation produces the same color at endpoints (3, 2) of an edge. Equivalently, an odd cycle obstructs bipartiteness. The graph therefore is not bipartite.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "Edge-count parity does not imply a two-coloring."
+          },
+          {
+            "option_index": 2,
+            "rationale": "Bipartiteness is invariant under relabeling."
+          },
+          {
+            "option_index": 3,
+            "rationale": "Connected graphs such as paths can be bipartite."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "graph-bipartite",
+        "n": 4,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "expected": false
+      }
+    },
+    {
+      "id": "graphs-number-017",
+      "topic": "Handshaking lemma",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "How many edges does this graph have, using its degree sum?",
+      "context": "Complete bipartite K₂,₃. A finite simple undirected graph has vertices 0,…,4 and exactly these edges: (0,2), (0,3), (0,4), (1,2), (1,3), (1,4).",
+      "options": [
+        "5",
+        "7",
+        "6",
+        "8"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Compute each vertex degree and divide the total by two.",
+        "Check graph claims against the full edge list. Check arithmetic claims by substituting the proposed quotient, residue, divisor, or inverse."
+      ],
+      "explanation": {
+        "learning_objective": "Apply handshaking lemma with explicit justification.",
+        "correct_rationale": "The vertex degrees in label order are [3, 3, 2, 2, 2], summing to 12. Each undirected edge contributes twice, so |E|=12/2=6.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The proposed result 5 fails the required computation: The vertex degrees in label order are [3, 3, 2, 2, 2], summing to 12. Each undirected edge contributes twice, so |E|=12/2=6."
+          },
+          {
+            "option_index": 1,
+            "rationale": "The proposed result 7 fails the required computation: The vertex degrees in label order are [3, 3, 2, 2, 2], summing to 12. Each undirected edge contributes twice, so |E|=12/2=6."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The proposed result 8 fails the required computation: The vertex degrees in label order are [3, 3, 2, 2, 2], summing to 12. Each undirected edge contributes twice, so |E|=12/2=6."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "graph-query",
+        "n": 5,
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ]
+        ],
+        "query": "edges",
+        "expected": 6
+      }
+    },
+    {
+      "id": "graphs-number-018",
+      "topic": "Complete bipartite K₂,₃",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "What is the maximum matching size?",
+      "context": "Complete bipartite K₂,₃. A finite simple undirected graph has vertices 0,…,4 and exactly these edges: (0,2), (0,3), (0,4), (1,2), (1,3), (1,4).",
+      "options": [
+        "1",
+        "2",
+        "4",
+        "3"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Use the displayed edges to test the defining property; names alone are not a substitute for the graph.",
+        "Check graph claims against the full edge list. Check arithmetic claims by substituting the proposed quotient, residue, divisor, or inverse."
+      ],
+      "explanation": {
+        "learning_objective": "Apply complete bipartite k₂,₃ with explicit justification.",
+        "correct_rationale": "A matching uses at most two vertices on the smaller side. Edges (0,2),(1,3) attain size two.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The proposed result 1 fails the required computation: A matching uses at most two vertices on the smaller side. Edges (0,2),(1,3) attain size two."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The proposed result 4 fails the required computation: A matching uses at most two vertices on the smaller side. Edges (0,2),(1,3) attain size two."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The proposed result 3 fails the required computation: A matching uses at most two vertices on the smaller side. Edges (0,2),(1,3) attain size two."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "graph-query",
+        "n": 5,
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ]
+        ],
+        "query": "matching",
+        "expected": 2
+      }
+    },
+    {
+      "id": "graphs-number-019",
+      "topic": "Euler trails",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "Which statement about traversing every edge exactly once is correct?",
+      "context": "Complete bipartite K₂,₃. A finite simple undirected graph has vertices 0,…,4 and exactly these edges: (0,2), (0,3), (0,4), (1,2), (1,3), (1,4).",
+      "options": [
+        "No trail uses every edge exactly once",
+        "A closed Euler trail exists",
+        "Every simple graph automatically has a closed Euler trail",
+        "An open Euler trail exists, but no closed one"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Check connectivity among vertices incident to edges, then count odd degrees.",
+        "Check graph claims against the full edge list. Check arithmetic claims by substituting the proposed quotient, residue, divisor, or inverse."
+      ],
+      "explanation": {
+        "learning_objective": "Apply euler trails with explicit justification.",
+        "correct_rationale": "The odd-degree vertices are [0, 1]; the edge-containing component count is 1. An Euler trail requires edge connectivity and zero or two odd vertices. Zero gives a closed trail; two gives an open one. Thus: an open euler trail exists, but no closed one.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The Euler conditions rule out this statement. The odd-degree vertices are [0, 1]; the edge-containing component count is 1. An Euler trail requires edge connectivity and zero or two odd vertices. Zero gives a closed trail; two gives an open one. Thus: an open euler trail exists, but no closed one."
+          },
+          {
+            "option_index": 1,
+            "rationale": "The Euler conditions rule out this statement. The odd-degree vertices are [0, 1]; the edge-containing component count is 1. An Euler trail requires edge connectivity and zero or two odd vertices. Zero gives a closed trail; two gives an open one. Thus: an open euler trail exists, but no closed one."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The Euler conditions rule out this statement. The odd-degree vertices are [0, 1]; the edge-containing component count is 1. An Euler trail requires edge connectivity and zero or two odd vertices. Zero gives a closed trail; two gives an open one. Thus: an open euler trail exists, but no closed one."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "graph-euler",
+        "n": 5,
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ]
+        ],
+        "expected": "An open Euler trail exists, but no closed one"
+      }
+    },
+    {
+      "id": "graphs-number-020",
+      "topic": "Bipartite graphs",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "Is this graph bipartite?",
+      "context": "Complete bipartite K₂,₃. A finite simple undirected graph has vertices 0,…,4 and exactly these edges: (0,2), (0,3), (0,4), (1,2), (1,3), (1,4).",
+      "options": [
+        "No: only disconnected graphs are bipartite",
+        "Yes: a valid partition is [0, 1] and [2, 3, 4]",
+        "Yes: any graph with an even number of edges is bipartite",
+        "It depends on the order in which vertices are labeled"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Try alternating two colors along edges; a same-color edge witnesses a conflict.",
+        "Check graph claims against the full edge list. Check arithmetic claims by substituting the proposed quotient, residue, divisor, or inverse."
+      ],
+      "explanation": {
+        "learning_objective": "Apply bipartite graphs with explicit justification.",
+        "correct_rationale": "Color the vertices in two classes [0, 1] and [2, 3, 4]. Every displayed edge crosses the partition, so the graph is bipartite.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "Connected graphs such as paths can be bipartite."
+          },
+          {
+            "option_index": 2,
+            "rationale": "Edge-count parity does not imply a two-coloring."
+          },
+          {
+            "option_index": 3,
+            "rationale": "Bipartiteness is invariant under relabeling."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "graph-bipartite",
+        "n": 5,
+        "edges": [
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ]
+        ],
+        "expected": true
+      }
+    },
+    {
+      "id": "graphs-number-021",
+      "topic": "Handshaking lemma",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "How many edges does this graph have, using its degree sum?",
+      "context": "Star K₁,₄. A finite simple undirected graph has vertices 0,…,4 and exactly these edges: (0,1), (0,2), (0,3), (0,4).",
+      "options": [
+        "3",
+        "4",
+        "5",
+        "6"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Compute each vertex degree and divide the total by two.",
+        "Check graph claims against the full edge list. Check arithmetic claims by substituting the proposed quotient, residue, divisor, or inverse."
+      ],
+      "explanation": {
+        "learning_objective": "Apply handshaking lemma with explicit justification.",
+        "correct_rationale": "The vertex degrees in label order are [4, 1, 1, 1, 1], summing to 8. Each undirected edge contributes twice, so |E|=8/2=4.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The proposed result 3 fails the required computation: The vertex degrees in label order are [4, 1, 1, 1, 1], summing to 8. Each undirected edge contributes twice, so |E|=8/2=4."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The proposed result 5 fails the required computation: The vertex degrees in label order are [4, 1, 1, 1, 1], summing to 8. Each undirected edge contributes twice, so |E|=8/2=4."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The proposed result 6 fails the required computation: The vertex degrees in label order are [4, 1, 1, 1, 1], summing to 8. Each undirected edge contributes twice, so |E|=8/2=4."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "graph-query",
+        "n": 5,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ]
+        ],
+        "query": "edges",
+        "expected": 4
+      }
+    },
+    {
+      "id": "graphs-number-022",
+      "topic": "Star K₁,₄",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "What is the minimum vertex-cover size?",
+      "context": "Star K₁,₄. A finite simple undirected graph has vertices 0,…,4 and exactly these edges: (0,1), (0,2), (0,3), (0,4).",
+      "options": [
+        "1",
+        "2",
+        "0",
+        "3"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Use the displayed edges to test the defining property; names alone are not a substitute for the graph.",
+        "Check graph claims against the full edge list. Check arithmetic claims by substituting the proposed quotient, residue, divisor, or inverse."
+      ],
+      "explanation": {
+        "learning_objective": "Apply star k₁,₄ with explicit justification.",
+        "correct_rationale": "The center 0 meets every edge, and at least one vertex is needed because edges exist.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "The proposed result 2 fails the required computation: The center 0 meets every edge, and at least one vertex is needed because edges exist."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The proposed result 0 fails the required computation: The center 0 meets every edge, and at least one vertex is needed because edges exist."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The proposed result 3 fails the required computation: The center 0 meets every edge, and at least one vertex is needed because edges exist."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "graph-query",
+        "n": 5,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ]
+        ],
+        "query": "vertex-cover",
+        "expected": 1
+      }
+    },
+    {
+      "id": "graphs-number-023",
+      "topic": "Euler trails",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "Which statement about traversing every edge exactly once is correct?",
+      "context": "Star K₁,₄. A finite simple undirected graph has vertices 0,…,4 and exactly these edges: (0,1), (0,2), (0,3), (0,4).",
+      "options": [
+        "Every simple graph automatically has a closed Euler trail",
+        "A closed Euler trail exists",
+        "No trail uses every edge exactly once",
+        "An open Euler trail exists, but no closed one"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Check connectivity among vertices incident to edges, then count odd degrees.",
+        "Check graph claims against the full edge list. Check arithmetic claims by substituting the proposed quotient, residue, divisor, or inverse."
+      ],
+      "explanation": {
+        "learning_objective": "Apply euler trails with explicit justification.",
+        "correct_rationale": "The odd-degree vertices are [1, 2, 3, 4]; the edge-containing component count is 1. An Euler trail requires edge connectivity and zero or two odd vertices. Zero gives a closed trail; two gives an open one. Thus: no trail uses every edge exactly once.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The Euler conditions rule out this statement. The odd-degree vertices are [1, 2, 3, 4]; the edge-containing component count is 1. An Euler trail requires edge connectivity and zero or two odd vertices. Zero gives a closed trail; two gives an open one. Thus: no trail uses every edge exactly once."
+          },
+          {
+            "option_index": 1,
+            "rationale": "The Euler conditions rule out this statement. The odd-degree vertices are [1, 2, 3, 4]; the edge-containing component count is 1. An Euler trail requires edge connectivity and zero or two odd vertices. Zero gives a closed trail; two gives an open one. Thus: no trail uses every edge exactly once."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The Euler conditions rule out this statement. The odd-degree vertices are [1, 2, 3, 4]; the edge-containing component count is 1. An Euler trail requires edge connectivity and zero or two odd vertices. Zero gives a closed trail; two gives an open one. Thus: no trail uses every edge exactly once."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "graph-euler",
+        "n": 5,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ]
+        ],
+        "expected": "No trail uses every edge exactly once"
+      }
+    },
+    {
+      "id": "graphs-number-024",
+      "topic": "Bipartite graphs",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "Is this graph bipartite?",
+      "context": "Star K₁,₄. A finite simple undirected graph has vertices 0,…,4 and exactly these edges: (0,1), (0,2), (0,3), (0,4).",
+      "options": [
+        "Yes: a valid partition is [0] and [1, 2, 3, 4]",
+        "Yes: any graph with an even number of edges is bipartite",
+        "No: only disconnected graphs are bipartite",
+        "It depends on the order in which vertices are labeled"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Try alternating two colors along edges; a same-color edge witnesses a conflict.",
+        "Check graph claims against the full edge list. Check arithmetic claims by substituting the proposed quotient, residue, divisor, or inverse."
+      ],
+      "explanation": {
+        "learning_objective": "Apply bipartite graphs with explicit justification.",
+        "correct_rationale": "Color the vertices in two classes [0] and [1, 2, 3, 4]. Every displayed edge crosses the partition, so the graph is bipartite.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "Edge-count parity does not imply a two-coloring."
+          },
+          {
+            "option_index": 2,
+            "rationale": "Connected graphs such as paths can be bipartite."
+          },
+          {
+            "option_index": 3,
+            "rationale": "Bipartiteness is invariant under relabeling."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "graph-bipartite",
+        "n": 5,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            0,
+            4
+          ]
+        ],
+        "expected": true
+      }
+    },
+    {
+      "id": "graphs-number-025",
+      "topic": "Handshaking lemma",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "How many edges does this graph have, using its degree sum?",
+      "context": "Triangle plus separate edge. A finite simple undirected graph has vertices 0,…,4 and exactly these edges: (0,1), (1,2), (2,0), (3,4).",
+      "options": [
+        "4",
+        "5",
+        "6",
+        "3"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Compute each vertex degree and divide the total by two.",
+        "Check graph claims against the full edge list. Check arithmetic claims by substituting the proposed quotient, residue, divisor, or inverse."
+      ],
+      "explanation": {
+        "learning_objective": "Apply handshaking lemma with explicit justification.",
+        "correct_rationale": "The vertex degrees in label order are [2, 2, 2, 1, 1], summing to 8. Each undirected edge contributes twice, so |E|=8/2=4.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "The proposed result 5 fails the required computation: The vertex degrees in label order are [2, 2, 2, 1, 1], summing to 8. Each undirected edge contributes twice, so |E|=8/2=4."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The proposed result 6 fails the required computation: The vertex degrees in label order are [2, 2, 2, 1, 1], summing to 8. Each undirected edge contributes twice, so |E|=8/2=4."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The proposed result 3 fails the required computation: The vertex degrees in label order are [2, 2, 2, 1, 1], summing to 8. Each undirected edge contributes twice, so |E|=8/2=4."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "graph-query",
+        "n": 5,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "query": "edges",
+        "expected": 4
+      }
+    },
+    {
+      "id": "graphs-number-026",
+      "topic": "Triangle plus separate edge",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "How many connected components are there?",
+      "context": "Triangle plus separate edge. A finite simple undirected graph has vertices 0,…,4 and exactly these edges: (0,1), (1,2), (2,0), (3,4).",
+      "options": [
+        "3",
+        "1",
+        "2",
+        "4"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Use the displayed edges to test the defining property; names alone are not a substitute for the graph.",
+        "Check graph claims against the full edge list. Check arithmetic claims by substituting the proposed quotient, residue, divisor, or inverse."
+      ],
+      "explanation": {
+        "learning_objective": "Apply triangle plus separate edge with explicit justification.",
+        "correct_rationale": "Vertices {0,1,2} form one component; {3,4} form another.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The proposed result 3 fails the required computation: Vertices {0,1,2} form one component; {3,4} form another."
+          },
+          {
+            "option_index": 1,
+            "rationale": "The proposed result 1 fails the required computation: Vertices {0,1,2} form one component; {3,4} form another."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The proposed result 4 fails the required computation: Vertices {0,1,2} form one component; {3,4} form another."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "graph-query",
+        "n": 5,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "query": "components",
+        "expected": 2
+      }
+    },
+    {
+      "id": "graphs-number-027",
+      "topic": "Euler trails",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "Which statement about traversing every edge exactly once is correct?",
+      "context": "Triangle plus separate edge. A finite simple undirected graph has vertices 0,…,4 and exactly these edges: (0,1), (1,2), (2,0), (3,4).",
+      "options": [
+        "A closed Euler trail exists",
+        "No trail uses every edge exactly once",
+        "Every simple graph automatically has a closed Euler trail",
+        "An open Euler trail exists, but no closed one"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Check connectivity among vertices incident to edges, then count odd degrees.",
+        "Check graph claims against the full edge list. Check arithmetic claims by substituting the proposed quotient, residue, divisor, or inverse."
+      ],
+      "explanation": {
+        "learning_objective": "Apply euler trails with explicit justification.",
+        "correct_rationale": "The odd-degree vertices are [3, 4]; the edge-containing component count is 2. An Euler trail requires edge connectivity and zero or two odd vertices. Zero gives a closed trail; two gives an open one. Thus: no trail uses every edge exactly once.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The Euler conditions rule out this statement. The odd-degree vertices are [3, 4]; the edge-containing component count is 2. An Euler trail requires edge connectivity and zero or two odd vertices. Zero gives a closed trail; two gives an open one. Thus: no trail uses every edge exactly once."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The Euler conditions rule out this statement. The odd-degree vertices are [3, 4]; the edge-containing component count is 2. An Euler trail requires edge connectivity and zero or two odd vertices. Zero gives a closed trail; two gives an open one. Thus: no trail uses every edge exactly once."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The Euler conditions rule out this statement. The odd-degree vertices are [3, 4]; the edge-containing component count is 2. An Euler trail requires edge connectivity and zero or two odd vertices. Zero gives a closed trail; two gives an open one. Thus: no trail uses every edge exactly once."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "graph-euler",
+        "n": 5,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "expected": "No trail uses every edge exactly once"
+      }
+    },
+    {
+      "id": "graphs-number-028",
+      "topic": "Bipartite graphs",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "Is this graph bipartite?",
+      "context": "Triangle plus separate edge. A finite simple undirected graph has vertices 0,…,4 and exactly these edges: (0,1), (1,2), (2,0), (3,4).",
+      "options": [
+        "Yes: any graph with an even number of edges is bipartite",
+        "It depends on the order in which vertices are labeled",
+        "No: only disconnected graphs are bipartite",
+        "No: it contains an odd cycle"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Try alternating two colors along edges; a same-color edge witnesses a conflict.",
+        "Check graph claims against the full edge list. Check arithmetic claims by substituting the proposed quotient, residue, divisor, or inverse."
+      ],
+      "explanation": {
+        "learning_objective": "Apply bipartite graphs with explicit justification.",
+        "correct_rationale": "Two-color propagation produces the same color at endpoints (2, 1) of an edge. Equivalently, an odd cycle obstructs bipartiteness. The graph therefore is not bipartite.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "Edge-count parity does not imply a two-coloring."
+          },
+          {
+            "option_index": 1,
+            "rationale": "Bipartiteness is invariant under relabeling."
+          },
+          {
+            "option_index": 2,
+            "rationale": "Connected graphs such as paths can be bipartite."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "graph-bipartite",
+        "n": 5,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            3,
+            4
+          ]
+        ],
+        "expected": false
+      }
+    },
+    {
+      "id": "graphs-number-029",
+      "topic": "Handshaking lemma",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "How many edges does this graph have, using its degree sum?",
+      "context": "Three-edge matching. A finite simple undirected graph has vertices 0,…,5 and exactly these edges: (0,1), (2,3), (4,5).",
+      "options": [
+        "2",
+        "3",
+        "5",
+        "4"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Compute each vertex degree and divide the total by two.",
+        "Check graph claims against the full edge list. Check arithmetic claims by substituting the proposed quotient, residue, divisor, or inverse."
+      ],
+      "explanation": {
+        "learning_objective": "Apply handshaking lemma with explicit justification.",
+        "correct_rationale": "The vertex degrees in label order are [1, 1, 1, 1, 1, 1], summing to 6. Each undirected edge contributes twice, so |E|=6/2=3.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The proposed result 2 fails the required computation: The vertex degrees in label order are [1, 1, 1, 1, 1, 1], summing to 6. Each undirected edge contributes twice, so |E|=6/2=3."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The proposed result 5 fails the required computation: The vertex degrees in label order are [1, 1, 1, 1, 1, 1], summing to 6. Each undirected edge contributes twice, so |E|=6/2=3."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The proposed result 4 fails the required computation: The vertex degrees in label order are [1, 1, 1, 1, 1, 1], summing to 6. Each undirected edge contributes twice, so |E|=6/2=3."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "graph-query",
+        "n": 6,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            4,
+            5
+          ]
+        ],
+        "query": "edges",
+        "expected": 3
+      }
+    },
+    {
+      "id": "graphs-number-030",
+      "topic": "Three-edge matching",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "How many vertices are in the largest connected component?",
+      "context": "Three-edge matching. A finite simple undirected graph has vertices 0,…,5 and exactly these edges: (0,1), (2,3), (4,5).",
+      "options": [
+        "2",
+        "3",
+        "1",
+        "4"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Use the displayed edges to test the defining property; names alone are not a substitute for the graph.",
+        "Check graph claims against the full edge list. Check arithmetic claims by substituting the proposed quotient, residue, divisor, or inverse."
+      ],
+      "explanation": {
+        "learning_objective": "Apply three-edge matching with explicit justification.",
+        "correct_rationale": "Every component consists of exactly one edge and its two endpoints.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "The proposed result 3 fails the required computation: Every component consists of exactly one edge and its two endpoints."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The proposed result 1 fails the required computation: Every component consists of exactly one edge and its two endpoints."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The proposed result 4 fails the required computation: Every component consists of exactly one edge and its two endpoints."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "graph-query",
+        "n": 6,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            4,
+            5
+          ]
+        ],
+        "query": "largest-component",
+        "expected": 2
+      }
+    },
+    {
+      "id": "graphs-number-031",
+      "topic": "Euler trails",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "Which statement about traversing every edge exactly once is correct?",
+      "context": "Three-edge matching. A finite simple undirected graph has vertices 0,…,5 and exactly these edges: (0,1), (2,3), (4,5).",
+      "options": [
+        "No trail uses every edge exactly once",
+        "An open Euler trail exists, but no closed one",
+        "Every simple graph automatically has a closed Euler trail",
+        "A closed Euler trail exists"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Check connectivity among vertices incident to edges, then count odd degrees.",
+        "Check graph claims against the full edge list. Check arithmetic claims by substituting the proposed quotient, residue, divisor, or inverse."
+      ],
+      "explanation": {
+        "learning_objective": "Apply euler trails with explicit justification.",
+        "correct_rationale": "The odd-degree vertices are [0, 1, 2, 3, 4, 5]; the edge-containing component count is 3. An Euler trail requires edge connectivity and zero or two odd vertices. Zero gives a closed trail; two gives an open one. Thus: no trail uses every edge exactly once.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "The Euler conditions rule out this statement. The odd-degree vertices are [0, 1, 2, 3, 4, 5]; the edge-containing component count is 3. An Euler trail requires edge connectivity and zero or two odd vertices. Zero gives a closed trail; two gives an open one. Thus: no trail uses every edge exactly once."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The Euler conditions rule out this statement. The odd-degree vertices are [0, 1, 2, 3, 4, 5]; the edge-containing component count is 3. An Euler trail requires edge connectivity and zero or two odd vertices. Zero gives a closed trail; two gives an open one. Thus: no trail uses every edge exactly once."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The Euler conditions rule out this statement. The odd-degree vertices are [0, 1, 2, 3, 4, 5]; the edge-containing component count is 3. An Euler trail requires edge connectivity and zero or two odd vertices. Zero gives a closed trail; two gives an open one. Thus: no trail uses every edge exactly once."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "graph-euler",
+        "n": 6,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            4,
+            5
+          ]
+        ],
+        "expected": "No trail uses every edge exactly once"
+      }
+    },
+    {
+      "id": "graphs-number-032",
+      "topic": "Bipartite graphs",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "Is this graph bipartite?",
+      "context": "Three-edge matching. A finite simple undirected graph has vertices 0,…,5 and exactly these edges: (0,1), (2,3), (4,5).",
+      "options": [
+        "Yes: any graph with an even number of edges is bipartite",
+        "No: only disconnected graphs are bipartite",
+        "Yes: a valid partition is [0, 2, 4] and [1, 3, 5]",
+        "It depends on the order in which vertices are labeled"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Try alternating two colors along edges; a same-color edge witnesses a conflict.",
+        "Check graph claims against the full edge list. Check arithmetic claims by substituting the proposed quotient, residue, divisor, or inverse."
+      ],
+      "explanation": {
+        "learning_objective": "Apply bipartite graphs with explicit justification.",
+        "correct_rationale": "Color the vertices in two classes [0, 2, 4] and [1, 3, 5]. Every displayed edge crosses the partition, so the graph is bipartite.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "Edge-count parity does not imply a two-coloring."
+          },
+          {
+            "option_index": 1,
+            "rationale": "Connected graphs such as paths can be bipartite."
+          },
+          {
+            "option_index": 3,
+            "rationale": "Bipartiteness is invariant under relabeling."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "graph-bipartite",
+        "n": 6,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            4,
+            5
+          ]
+        ],
+        "expected": true
+      }
+    },
+    {
+      "id": "graphs-number-033",
+      "topic": "Handshaking lemma",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "How many edges does this graph have, using its degree sum?",
+      "context": "Diamond: K₄ minus one edge. A finite simple undirected graph has vertices 0,…,3 and exactly these edges: (0,1), (0,2), (0,3), (1,2), (2,3).",
+      "options": [
+        "5",
+        "6",
+        "4",
+        "7"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Compute each vertex degree and divide the total by two.",
+        "Check graph claims against the full edge list. Check arithmetic claims by substituting the proposed quotient, residue, divisor, or inverse."
+      ],
+      "explanation": {
+        "learning_objective": "Apply handshaking lemma with explicit justification.",
+        "correct_rationale": "The vertex degrees in label order are [3, 2, 3, 2], summing to 10. Each undirected edge contributes twice, so |E|=10/2=5.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "The proposed result 6 fails the required computation: The vertex degrees in label order are [3, 2, 3, 2], summing to 10. Each undirected edge contributes twice, so |E|=10/2=5."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The proposed result 4 fails the required computation: The vertex degrees in label order are [3, 2, 3, 2], summing to 10. Each undirected edge contributes twice, so |E|=10/2=5."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The proposed result 7 fails the required computation: The vertex degrees in label order are [3, 2, 3, 2], summing to 10. Each undirected edge contributes twice, so |E|=10/2=5."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "graph-query",
+        "n": 4,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "query": "edges",
+        "expected": 5
+      }
+    },
+    {
+      "id": "graphs-number-034",
+      "topic": "Diamond: K₄ minus one edge",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What is the sum of all vertex degrees?",
+      "context": "Diamond: K₄ minus one edge. A finite simple undirected graph has vertices 0,…,3 and exactly these edges: (0,1), (0,2), (0,3), (1,2), (2,3).",
+      "options": [
+        "11",
+        "12",
+        "10",
+        "9"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Use the displayed edges to test the defining property; names alone are not a substitute for the graph.",
+        "Check graph claims against the full edge list. Check arithmetic claims by substituting the proposed quotient, residue, divisor, or inverse."
+      ],
+      "explanation": {
+        "learning_objective": "Apply diamond: k₄ minus one edge with explicit justification.",
+        "correct_rationale": "The degrees are 3,2,3,2; their sum is 10, equal to twice the five edges.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The proposed result 11 fails the required computation: The degrees are 3,2,3,2; their sum is 10, equal to twice the five edges."
+          },
+          {
+            "option_index": 1,
+            "rationale": "The proposed result 12 fails the required computation: The degrees are 3,2,3,2; their sum is 10, equal to twice the five edges."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The proposed result 9 fails the required computation: The degrees are 3,2,3,2; their sum is 10, equal to twice the five edges."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "graph-query",
+        "n": 4,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "query": "degree-sum",
+        "expected": 10
+      }
+    },
+    {
+      "id": "graphs-number-035",
+      "topic": "Euler trails",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Which statement about traversing every edge exactly once is correct?",
+      "context": "Diamond: K₄ minus one edge. A finite simple undirected graph has vertices 0,…,3 and exactly these edges: (0,1), (0,2), (0,3), (1,2), (2,3).",
+      "options": [
+        "Every simple graph automatically has a closed Euler trail",
+        "An open Euler trail exists, but no closed one",
+        "No trail uses every edge exactly once",
+        "A closed Euler trail exists"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Check connectivity among vertices incident to edges, then count odd degrees.",
+        "Check graph claims against the full edge list. Check arithmetic claims by substituting the proposed quotient, residue, divisor, or inverse."
+      ],
+      "explanation": {
+        "learning_objective": "Apply euler trails with explicit justification.",
+        "correct_rationale": "The odd-degree vertices are [0, 2]; the edge-containing component count is 1. An Euler trail requires edge connectivity and zero or two odd vertices. Zero gives a closed trail; two gives an open one. Thus: an open euler trail exists, but no closed one.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The Euler conditions rule out this statement. The odd-degree vertices are [0, 2]; the edge-containing component count is 1. An Euler trail requires edge connectivity and zero or two odd vertices. Zero gives a closed trail; two gives an open one. Thus: an open euler trail exists, but no closed one."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The Euler conditions rule out this statement. The odd-degree vertices are [0, 2]; the edge-containing component count is 1. An Euler trail requires edge connectivity and zero or two odd vertices. Zero gives a closed trail; two gives an open one. Thus: an open euler trail exists, but no closed one."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The Euler conditions rule out this statement. The odd-degree vertices are [0, 2]; the edge-containing component count is 1. An Euler trail requires edge connectivity and zero or two odd vertices. Zero gives a closed trail; two gives an open one. Thus: an open euler trail exists, but no closed one."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "graph-euler",
+        "n": 4,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "expected": "An open Euler trail exists, but no closed one"
+      }
+    },
+    {
+      "id": "graphs-number-036",
+      "topic": "Bipartite graphs",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Is this graph bipartite?",
+      "context": "Diamond: K₄ minus one edge. A finite simple undirected graph has vertices 0,…,3 and exactly these edges: (0,1), (0,2), (0,3), (1,2), (2,3).",
+      "options": [
+        "No: only disconnected graphs are bipartite",
+        "It depends on the order in which vertices are labeled",
+        "Yes: any graph with an even number of edges is bipartite",
+        "No: it contains an odd cycle"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Try alternating two colors along edges; a same-color edge witnesses a conflict.",
+        "Check graph claims against the full edge list. Check arithmetic claims by substituting the proposed quotient, residue, divisor, or inverse."
+      ],
+      "explanation": {
+        "learning_objective": "Apply bipartite graphs with explicit justification.",
+        "correct_rationale": "Two-color propagation produces the same color at endpoints (3, 2) of an edge. Equivalently, an odd cycle obstructs bipartiteness. The graph therefore is not bipartite.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "Connected graphs such as paths can be bipartite."
+          },
+          {
+            "option_index": 1,
+            "rationale": "Bipartiteness is invariant under relabeling."
+          },
+          {
+            "option_index": 2,
+            "rationale": "Edge-count parity does not imply a two-coloring."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "graph-bipartite",
+        "n": 4,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            3
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "expected": false
+      }
+    },
+    {
+      "id": "graphs-number-037",
+      "topic": "Handshaking lemma",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "How many edges does this graph have, using its degree sum?",
+      "context": "Wheel with a five-cycle rim. A finite simple undirected graph has vertices 0,…,5 and exactly these edges: (0,1), (1,2), (2,3), (3,4), (4,0), (5,0), (5,1), (5,2), (5,3), (5,4).",
+      "options": [
+        "12",
+        "9",
+        "11",
+        "10"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Compute each vertex degree and divide the total by two.",
+        "Check graph claims against the full edge list. Check arithmetic claims by substituting the proposed quotient, residue, divisor, or inverse."
+      ],
+      "explanation": {
+        "learning_objective": "Apply handshaking lemma with explicit justification.",
+        "correct_rationale": "The vertex degrees in label order are [3, 3, 3, 3, 3, 5], summing to 20. Each undirected edge contributes twice, so |E|=20/2=10.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The proposed result 12 fails the required computation: The vertex degrees in label order are [3, 3, 3, 3, 3, 5], summing to 20. Each undirected edge contributes twice, so |E|=20/2=10."
+          },
+          {
+            "option_index": 1,
+            "rationale": "The proposed result 9 fails the required computation: The vertex degrees in label order are [3, 3, 3, 3, 3, 5], summing to 20. Each undirected edge contributes twice, so |E|=20/2=10."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The proposed result 11 fails the required computation: The vertex degrees in label order are [3, 3, 3, 3, 3, 5], summing to 20. Each undirected edge contributes twice, so |E|=20/2=10."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "graph-query",
+        "n": 6,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            5,
+            0
+          ],
+          [
+            5,
+            1
+          ],
+          [
+            5,
+            2
+          ],
+          [
+            5,
+            3
+          ],
+          [
+            5,
+            4
+          ]
+        ],
+        "query": "edges",
+        "expected": 10
+      }
+    },
+    {
+      "id": "graphs-number-038",
+      "topic": "Wheel with a five-cycle rim",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What is the chromatic number?",
+      "context": "Wheel with a five-cycle rim. A finite simple undirected graph has vertices 0,…,5 and exactly these edges: (0,1), (1,2), (2,3), (3,4), (4,0), (5,0), (5,1), (5,2), (5,3), (5,4).",
+      "options": [
+        "3",
+        "4",
+        "6",
+        "5"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Use the displayed edges to test the defining property; names alone are not a substitute for the graph.",
+        "Check graph claims against the full edge list. Check arithmetic claims by substituting the proposed quotient, residue, divisor, or inverse."
+      ],
+      "explanation": {
+        "learning_objective": "Apply wheel with a five-cycle rim with explicit justification.",
+        "correct_rationale": "The odd rim requires three colors; the hub is adjacent to every rim vertex and needs a fourth.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The proposed result 3 fails the required computation: The odd rim requires three colors; the hub is adjacent to every rim vertex and needs a fourth."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The proposed result 6 fails the required computation: The odd rim requires three colors; the hub is adjacent to every rim vertex and needs a fourth."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The proposed result 5 fails the required computation: The odd rim requires three colors; the hub is adjacent to every rim vertex and needs a fourth."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "graph-query",
+        "n": 6,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            5,
+            0
+          ],
+          [
+            5,
+            1
+          ],
+          [
+            5,
+            2
+          ],
+          [
+            5,
+            3
+          ],
+          [
+            5,
+            4
+          ]
+        ],
+        "query": "chromatic",
+        "expected": 4
+      }
+    },
+    {
+      "id": "graphs-number-039",
+      "topic": "Euler trails",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Which statement about traversing every edge exactly once is correct?",
+      "context": "Wheel with a five-cycle rim. A finite simple undirected graph has vertices 0,…,5 and exactly these edges: (0,1), (1,2), (2,3), (3,4), (4,0), (5,0), (5,1), (5,2), (5,3), (5,4).",
+      "options": [
+        "No trail uses every edge exactly once",
+        "A closed Euler trail exists",
+        "An open Euler trail exists, but no closed one",
+        "Every simple graph automatically has a closed Euler trail"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Check connectivity among vertices incident to edges, then count odd degrees.",
+        "Check graph claims against the full edge list. Check arithmetic claims by substituting the proposed quotient, residue, divisor, or inverse."
+      ],
+      "explanation": {
+        "learning_objective": "Apply euler trails with explicit justification.",
+        "correct_rationale": "The odd-degree vertices are [0, 1, 2, 3, 4, 5]; the edge-containing component count is 1. An Euler trail requires edge connectivity and zero or two odd vertices. Zero gives a closed trail; two gives an open one. Thus: no trail uses every edge exactly once.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "The Euler conditions rule out this statement. The odd-degree vertices are [0, 1, 2, 3, 4, 5]; the edge-containing component count is 1. An Euler trail requires edge connectivity and zero or two odd vertices. Zero gives a closed trail; two gives an open one. Thus: no trail uses every edge exactly once."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The Euler conditions rule out this statement. The odd-degree vertices are [0, 1, 2, 3, 4, 5]; the edge-containing component count is 1. An Euler trail requires edge connectivity and zero or two odd vertices. Zero gives a closed trail; two gives an open one. Thus: no trail uses every edge exactly once."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The Euler conditions rule out this statement. The odd-degree vertices are [0, 1, 2, 3, 4, 5]; the edge-containing component count is 1. An Euler trail requires edge connectivity and zero or two odd vertices. Zero gives a closed trail; two gives an open one. Thus: no trail uses every edge exactly once."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "graph-euler",
+        "n": 6,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            5,
+            0
+          ],
+          [
+            5,
+            1
+          ],
+          [
+            5,
+            2
+          ],
+          [
+            5,
+            3
+          ],
+          [
+            5,
+            4
+          ]
+        ],
+        "expected": "No trail uses every edge exactly once"
+      }
+    },
+    {
+      "id": "graphs-number-040",
+      "topic": "Bipartite graphs",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Is this graph bipartite?",
+      "context": "Wheel with a five-cycle rim. A finite simple undirected graph has vertices 0,…,5 and exactly these edges: (0,1), (1,2), (2,3), (3,4), (4,0), (5,0), (5,1), (5,2), (5,3), (5,4).",
+      "options": [
+        "No: only disconnected graphs are bipartite",
+        "It depends on the order in which vertices are labeled",
+        "No: it contains an odd cycle",
+        "Yes: any graph with an even number of edges is bipartite"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Try alternating two colors along edges; a same-color edge witnesses a conflict.",
+        "Check graph claims against the full edge list. Check arithmetic claims by substituting the proposed quotient, residue, divisor, or inverse."
+      ],
+      "explanation": {
+        "learning_objective": "Apply bipartite graphs with explicit justification.",
+        "correct_rationale": "Two-color propagation produces the same color at endpoints (3, 2) of an edge. Equivalently, an odd cycle obstructs bipartiteness. The graph therefore is not bipartite.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "Connected graphs such as paths can be bipartite."
+          },
+          {
+            "option_index": 1,
+            "rationale": "Bipartiteness is invariant under relabeling."
+          },
+          {
+            "option_index": 3,
+            "rationale": "Edge-count parity does not imply a two-coloring."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "graph-bipartite",
+        "n": 6,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            5,
+            0
+          ],
+          [
+            5,
+            1
+          ],
+          [
+            5,
+            2
+          ],
+          [
+            5,
+            3
+          ],
+          [
+            5,
+            4
+          ]
+        ],
+        "expected": false
+      }
+    },
+    {
+      "id": "graphs-number-041",
+      "topic": "Handshaking lemma",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "How many edges does this graph have, using its degree sum?",
+      "context": "Cube graph. A finite simple undirected graph has vertices 0,…,7 and exactly these edges: (0,1), (0,2), (0,4), (1,3), (1,5), (2,3), (2,6), (3,7), (4,5), (4,6), (5,7), (6,7).",
+      "options": [
+        "11",
+        "12",
+        "13",
+        "14"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Compute each vertex degree and divide the total by two.",
+        "Check graph claims against the full edge list. Check arithmetic claims by substituting the proposed quotient, residue, divisor, or inverse."
+      ],
+      "explanation": {
+        "learning_objective": "Apply handshaking lemma with explicit justification.",
+        "correct_rationale": "The vertex degrees in label order are [3, 3, 3, 3, 3, 3, 3, 3], summing to 24. Each undirected edge contributes twice, so |E|=24/2=12.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The proposed result 11 fails the required computation: The vertex degrees in label order are [3, 3, 3, 3, 3, 3, 3, 3], summing to 24. Each undirected edge contributes twice, so |E|=24/2=12."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The proposed result 13 fails the required computation: The vertex degrees in label order are [3, 3, 3, 3, 3, 3, 3, 3], summing to 24. Each undirected edge contributes twice, so |E|=24/2=12."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The proposed result 14 fails the required computation: The vertex degrees in label order are [3, 3, 3, 3, 3, 3, 3, 3], summing to 24. Each undirected edge contributes twice, so |E|=24/2=12."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "graph-query",
+        "n": 8,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            6,
+            7
+          ]
+        ],
+        "query": "edges",
+        "expected": 12
+      }
+    },
+    {
+      "id": "graphs-number-042",
+      "topic": "Cube graph",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What is the shortest-path distance from vertex 0 to vertex 7?",
+      "context": "Cube graph. A finite simple undirected graph has vertices 0,…,7 and exactly these edges: (0,1), (0,2), (0,4), (1,3), (1,5), (2,3), (2,6), (3,7), (4,5), (4,6), (5,7), (6,7).",
+      "options": [
+        "3",
+        "5",
+        "2",
+        "4"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Use the displayed edges to test the defining property; names alone are not a substitute for the graph.",
+        "Check graph claims against the full edge list. Check arithmetic claims by substituting the proposed quotient, residue, divisor, or inverse."
+      ],
+      "explanation": {
+        "learning_objective": "Apply cube graph with explicit justification.",
+        "correct_rationale": "The binary labels 000 and 111 differ in three bits. Each edge changes one bit, and changing those three bits gives a three-edge path.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "The proposed result 5 fails the required computation: The binary labels 000 and 111 differ in three bits. Each edge changes one bit, and changing those three bits gives a three-edge path."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The proposed result 2 fails the required computation: The binary labels 000 and 111 differ in three bits. Each edge changes one bit, and changing those three bits gives a three-edge path."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The proposed result 4 fails the required computation: The binary labels 000 and 111 differ in three bits. Each edge changes one bit, and changing those three bits gives a three-edge path."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "graph-query",
+        "n": 8,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            6,
+            7
+          ]
+        ],
+        "query": "distance-0-last",
+        "expected": 3
+      }
+    },
+    {
+      "id": "graphs-number-043",
+      "topic": "Euler trails",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Which statement about traversing every edge exactly once is correct?",
+      "context": "Cube graph. A finite simple undirected graph has vertices 0,…,7 and exactly these edges: (0,1), (0,2), (0,4), (1,3), (1,5), (2,3), (2,6), (3,7), (4,5), (4,6), (5,7), (6,7).",
+      "options": [
+        "An open Euler trail exists, but no closed one",
+        "A closed Euler trail exists",
+        "Every simple graph automatically has a closed Euler trail",
+        "No trail uses every edge exactly once"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Check connectivity among vertices incident to edges, then count odd degrees.",
+        "Check graph claims against the full edge list. Check arithmetic claims by substituting the proposed quotient, residue, divisor, or inverse."
+      ],
+      "explanation": {
+        "learning_objective": "Apply euler trails with explicit justification.",
+        "correct_rationale": "The odd-degree vertices are [0, 1, 2, 3, 4, 5, 6, 7]; the edge-containing component count is 1. An Euler trail requires edge connectivity and zero or two odd vertices. Zero gives a closed trail; two gives an open one. Thus: no trail uses every edge exactly once.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The Euler conditions rule out this statement. The odd-degree vertices are [0, 1, 2, 3, 4, 5, 6, 7]; the edge-containing component count is 1. An Euler trail requires edge connectivity and zero or two odd vertices. Zero gives a closed trail; two gives an open one. Thus: no trail uses every edge exactly once."
+          },
+          {
+            "option_index": 1,
+            "rationale": "The Euler conditions rule out this statement. The odd-degree vertices are [0, 1, 2, 3, 4, 5, 6, 7]; the edge-containing component count is 1. An Euler trail requires edge connectivity and zero or two odd vertices. Zero gives a closed trail; two gives an open one. Thus: no trail uses every edge exactly once."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The Euler conditions rule out this statement. The odd-degree vertices are [0, 1, 2, 3, 4, 5, 6, 7]; the edge-containing component count is 1. An Euler trail requires edge connectivity and zero or two odd vertices. Zero gives a closed trail; two gives an open one. Thus: no trail uses every edge exactly once."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "graph-euler",
+        "n": 8,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            6,
+            7
+          ]
+        ],
+        "expected": "No trail uses every edge exactly once"
+      }
+    },
+    {
+      "id": "graphs-number-044",
+      "topic": "Bipartite graphs",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Is this graph bipartite?",
+      "context": "Cube graph. A finite simple undirected graph has vertices 0,…,7 and exactly these edges: (0,1), (0,2), (0,4), (1,3), (1,5), (2,3), (2,6), (3,7), (4,5), (4,6), (5,7), (6,7).",
+      "options": [
+        "No: only disconnected graphs are bipartite",
+        "It depends on the order in which vertices are labeled",
+        "Yes: any graph with an even number of edges is bipartite",
+        "Yes: a valid partition is [0, 3, 5, 6] and [1, 2, 4, 7]"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Try alternating two colors along edges; a same-color edge witnesses a conflict.",
+        "Check graph claims against the full edge list. Check arithmetic claims by substituting the proposed quotient, residue, divisor, or inverse."
+      ],
+      "explanation": {
+        "learning_objective": "Apply bipartite graphs with explicit justification.",
+        "correct_rationale": "Color the vertices in two classes [0, 3, 5, 6] and [1, 2, 4, 7]. Every displayed edge crosses the partition, so the graph is bipartite.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "Connected graphs such as paths can be bipartite."
+          },
+          {
+            "option_index": 1,
+            "rationale": "Bipartiteness is invariant under relabeling."
+          },
+          {
+            "option_index": 2,
+            "rationale": "Edge-count parity does not imply a two-coloring."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "graph-bipartite",
+        "n": 8,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            0,
+            4
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            5
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            2,
+            6
+          ],
+          [
+            3,
+            7
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            4,
+            6
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            6,
+            7
+          ]
+        ],
+        "expected": true
+      }
+    },
+    {
+      "id": "graphs-number-045",
+      "topic": "Handshaking lemma",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "How many edges does this graph have, using its degree sum?",
+      "context": "Two triangles joined by a bridge. A finite simple undirected graph has vertices 0,…,5 and exactly these edges: (0,1), (1,2), (2,0), (3,4), (4,5), (5,3), (2,3).",
+      "options": [
+        "8",
+        "6",
+        "9",
+        "7"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Compute each vertex degree and divide the total by two.",
+        "Check graph claims against the full edge list. Check arithmetic claims by substituting the proposed quotient, residue, divisor, or inverse."
+      ],
+      "explanation": {
+        "learning_objective": "Apply handshaking lemma with explicit justification.",
+        "correct_rationale": "The vertex degrees in label order are [2, 2, 3, 3, 2, 2], summing to 14. Each undirected edge contributes twice, so |E|=14/2=7.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The proposed result 8 fails the required computation: The vertex degrees in label order are [2, 2, 3, 3, 2, 2], summing to 14. Each undirected edge contributes twice, so |E|=14/2=7."
+          },
+          {
+            "option_index": 1,
+            "rationale": "The proposed result 6 fails the required computation: The vertex degrees in label order are [2, 2, 3, 3, 2, 2], summing to 14. Each undirected edge contributes twice, so |E|=14/2=7."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The proposed result 9 fails the required computation: The vertex degrees in label order are [2, 2, 3, 3, 2, 2], summing to 14. Each undirected edge contributes twice, so |E|=14/2=7."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "graph-query",
+        "n": 6,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            5,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "query": "edges",
+        "expected": 7
+      }
+    },
+    {
+      "id": "graphs-number-046",
+      "topic": "Two triangles joined by a bridge",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "How many bridges (edges whose deletion increases the component count) exist?",
+      "context": "Two triangles joined by a bridge. A finite simple undirected graph has vertices 0,…,5 and exactly these edges: (0,1), (1,2), (2,0), (3,4), (4,5), (5,3), (2,3).",
+      "options": [
+        "2",
+        "3",
+        "0",
+        "1"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Use the displayed edges to test the defining property; names alone are not a substitute for the graph.",
+        "Check graph claims against the full edge list. Check arithmetic claims by substituting the proposed quotient, residue, divisor, or inverse."
+      ],
+      "explanation": {
+        "learning_objective": "Apply two triangles joined by a bridge with explicit justification.",
+        "correct_rationale": "Only (2,3) links the triangles. Edges inside a triangle have an alternate two-edge route.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The proposed result 2 fails the required computation: Only (2,3) links the triangles. Edges inside a triangle have an alternate two-edge route."
+          },
+          {
+            "option_index": 1,
+            "rationale": "The proposed result 3 fails the required computation: Only (2,3) links the triangles. Edges inside a triangle have an alternate two-edge route."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The proposed result 0 fails the required computation: Only (2,3) links the triangles. Edges inside a triangle have an alternate two-edge route."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "graph-query",
+        "n": 6,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            5,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "query": "bridges",
+        "expected": 1
+      }
+    },
+    {
+      "id": "graphs-number-047",
+      "topic": "Euler trails",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Which statement about traversing every edge exactly once is correct?",
+      "context": "Two triangles joined by a bridge. A finite simple undirected graph has vertices 0,…,5 and exactly these edges: (0,1), (1,2), (2,0), (3,4), (4,5), (5,3), (2,3).",
+      "options": [
+        "An open Euler trail exists, but no closed one",
+        "No trail uses every edge exactly once",
+        "A closed Euler trail exists",
+        "Every simple graph automatically has a closed Euler trail"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Check connectivity among vertices incident to edges, then count odd degrees.",
+        "Check graph claims against the full edge list. Check arithmetic claims by substituting the proposed quotient, residue, divisor, or inverse."
+      ],
+      "explanation": {
+        "learning_objective": "Apply euler trails with explicit justification.",
+        "correct_rationale": "The odd-degree vertices are [2, 3]; the edge-containing component count is 1. An Euler trail requires edge connectivity and zero or two odd vertices. Zero gives a closed trail; two gives an open one. Thus: an open euler trail exists, but no closed one.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "The Euler conditions rule out this statement. The odd-degree vertices are [2, 3]; the edge-containing component count is 1. An Euler trail requires edge connectivity and zero or two odd vertices. Zero gives a closed trail; two gives an open one. Thus: an open euler trail exists, but no closed one."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The Euler conditions rule out this statement. The odd-degree vertices are [2, 3]; the edge-containing component count is 1. An Euler trail requires edge connectivity and zero or two odd vertices. Zero gives a closed trail; two gives an open one. Thus: an open euler trail exists, but no closed one."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The Euler conditions rule out this statement. The odd-degree vertices are [2, 3]; the edge-containing component count is 1. An Euler trail requires edge connectivity and zero or two odd vertices. Zero gives a closed trail; two gives an open one. Thus: an open euler trail exists, but no closed one."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "graph-euler",
+        "n": 6,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            5,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "expected": "An open Euler trail exists, but no closed one"
+      }
+    },
+    {
+      "id": "graphs-number-048",
+      "topic": "Bipartite graphs",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Is this graph bipartite?",
+      "context": "Two triangles joined by a bridge. A finite simple undirected graph has vertices 0,…,5 and exactly these edges: (0,1), (1,2), (2,0), (3,4), (4,5), (5,3), (2,3).",
+      "options": [
+        "No: it contains an odd cycle",
+        "It depends on the order in which vertices are labeled",
+        "Yes: any graph with an even number of edges is bipartite",
+        "No: only disconnected graphs are bipartite"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Try alternating two colors along edges; a same-color edge witnesses a conflict.",
+        "Check graph claims against the full edge list. Check arithmetic claims by substituting the proposed quotient, residue, divisor, or inverse."
+      ],
+      "explanation": {
+        "learning_objective": "Apply bipartite graphs with explicit justification.",
+        "correct_rationale": "Two-color propagation produces the same color at endpoints (5, 4) of an edge. Equivalently, an odd cycle obstructs bipartiteness. The graph therefore is not bipartite.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "Bipartiteness is invariant under relabeling."
+          },
+          {
+            "option_index": 2,
+            "rationale": "Edge-count parity does not imply a two-coloring."
+          },
+          {
+            "option_index": 3,
+            "rationale": "Connected graphs such as paths can be bipartite."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "graph-bipartite",
+        "n": 6,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            5
+          ],
+          [
+            5,
+            3
+          ],
+          [
+            2,
+            3
+          ]
+        ],
+        "expected": false
+      }
+    },
+    {
+      "id": "graphs-number-049",
+      "topic": "Handshaking lemma",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "How many edges does this graph have, using its degree sum?",
+      "context": "Petersen graph. A finite simple undirected graph has vertices 0,…,9 and exactly these edges: (0,1), (1,2), (2,3), (3,4), (4,0), (0,5), (1,6), (2,7), (3,8), (4,9), (5,7), (6,8), (7,9), (8,5), (9,6).",
+      "options": [
+        "15",
+        "16",
+        "14",
+        "17"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Compute each vertex degree and divide the total by two.",
+        "Check graph claims against the full edge list. Check arithmetic claims by substituting the proposed quotient, residue, divisor, or inverse."
+      ],
+      "explanation": {
+        "learning_objective": "Apply handshaking lemma with explicit justification.",
+        "correct_rationale": "The vertex degrees in label order are [3, 3, 3, 3, 3, 3, 3, 3, 3, 3], summing to 30. Each undirected edge contributes twice, so |E|=30/2=15.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "The proposed result 16 fails the required computation: The vertex degrees in label order are [3, 3, 3, 3, 3, 3, 3, 3, 3, 3], summing to 30. Each undirected edge contributes twice, so |E|=30/2=15."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The proposed result 14 fails the required computation: The vertex degrees in label order are [3, 3, 3, 3, 3, 3, 3, 3, 3, 3], summing to 30. Each undirected edge contributes twice, so |E|=30/2=15."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The proposed result 17 fails the required computation: The vertex degrees in label order are [3, 3, 3, 3, 3, 3, 3, 3, 3, 3], summing to 30. Each undirected edge contributes twice, so |E|=30/2=15."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "graph-query",
+        "n": 10,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            8,
+            5
+          ],
+          [
+            9,
+            6
+          ]
+        ],
+        "query": "edges",
+        "expected": 15
+      }
+    },
+    {
+      "id": "graphs-number-050",
+      "topic": "Petersen graph",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What is the girth (length of a shortest cycle)?",
+      "context": "Petersen graph. A finite simple undirected graph has vertices 0,…,9 and exactly these edges: (0,1), (1,2), (2,3), (3,4), (4,0), (0,5), (1,6), (2,7), (3,8), (4,9), (5,7), (6,8), (7,9), (8,5), (9,6).",
+      "options": [
+        "6",
+        "7",
+        "5",
+        "4"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Use the displayed edges to test the defining property; names alone are not a substitute for the graph.",
+        "Check graph claims against the full edge list. Check arithmetic claims by substituting the proposed quotient, residue, divisor, or inverse."
+      ],
+      "explanation": {
+        "learning_objective": "Apply petersen graph with explicit justification.",
+        "correct_rationale": "The outer rim is a 5-cycle. From the edge list, adjacent vertices have no common neighbor, ruling out triangles. No two vertices have two common neighbors, ruling out 4-cycles. Thus the shortest cycle has length 5.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The proposed result 6 fails the required computation: The outer rim is a 5-cycle. From the edge list, adjacent vertices have no common neighbor, ruling out triangles. No two vertices have two common neighbors, ruling out 4-cycles. Thus the shortest cycle has length 5."
+          },
+          {
+            "option_index": 1,
+            "rationale": "The proposed result 7 fails the required computation: The outer rim is a 5-cycle. From the edge list, adjacent vertices have no common neighbor, ruling out triangles. No two vertices have two common neighbors, ruling out 4-cycles. Thus the shortest cycle has length 5."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The proposed result 4 fails the required computation: The outer rim is a 5-cycle. From the edge list, adjacent vertices have no common neighbor, ruling out triangles. No two vertices have two common neighbors, ruling out 4-cycles. Thus the shortest cycle has length 5."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "graph-query",
+        "n": 10,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            8,
+            5
+          ],
+          [
+            9,
+            6
+          ]
+        ],
+        "query": "girth",
+        "expected": 5
+      }
+    }
+  ]
+}

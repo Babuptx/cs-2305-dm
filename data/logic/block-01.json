@@ -1,0 +1,2346 @@
+{
+  "schema_version": 1,
+  "block_id": "logic-block-01",
+  "pillar_id": "logic",
+  "block_title": "Logic and mathematical reasoning · Block 1",
+  "questions": [
+    {
+      "id": "logic-001",
+      "topic": "Truth-table evaluation",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "For F = p ∧ (q ∨ r), which output column follows the input order FFF, FFT, FTF, FTT, TFF, TFT, TTF, TTT?",
+      "context": "p, q, r are propositions. → is material implication; ↔ is equivalence; ⊕ is exclusive OR. For parity XOR, associate left to right.",
+      "options": [
+        "FFFFFTTF",
+        "FFFFFTTT",
+        "FFFTFTTT",
+        "TFFFFTTT"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "For each row, evaluate parentheses first. An implication is false only when its antecedent is true and its consequent is false.",
+        "Track witness dependence in quantified statements; compare entire truth tables rather than a single row in propositional statements."
+      ],
+      "explanation": {
+        "learning_objective": "Apply truth-table evaluation with explicit justification.",
+        "correct_rationale": "Evaluate the connectives from the innermost parentheses. In order: (F, F, F): F; (F, F, T): F; (F, T, F): F; (F, T, T): F; (T, F, F): F; (T, F, T): T; (T, T, F): T; (T, T, T): T. Thus the column is FFFFFTTT.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This column changes a required row. The actual evaluation is (F, F, F): F; (F, F, T): F; (F, T, F): F; (F, T, T): F; (T, F, F): F; (T, F, T): T; (T, T, F): T; (T, T, T): T."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This column changes a required row. The actual evaluation is (F, F, F): F; (F, F, T): F; (F, T, F): F; (F, T, T): F; (T, F, F): F; (T, F, T): T; (T, T, F): T; (T, T, T): T."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This column changes a required row. The actual evaluation is (F, F, F): F; (F, F, T): F; (F, T, F): F; (F, T, T): F; (T, F, F): F; (T, F, T): T; (T, T, F): T; (T, T, T): T."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "truth-column",
+        "expression": "p ∧ (q ∨ r)",
+        "expected": "FFFFFTTT"
+      }
+    },
+    {
+      "id": "logic-002",
+      "topic": "Satisfying valuations",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "How many assignments to p, q, r satisfy p ∧ (q ∨ r)?",
+      "context": "p, q, r are propositions. → is material implication; ↔ is equivalence; ⊕ is exclusive OR. For parity XOR, associate left to right.",
+      "options": [
+        "4",
+        "5",
+        "3",
+        "8"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "List the eight assignments systematically; count only rows in which the entire formula is true.",
+        "Track witness dependence in quantified statements; compare entire truth tables rather than a single row in propositional statements."
+      ],
+      "explanation": {
+        "learning_objective": "Apply satisfying valuations with explicit justification.",
+        "correct_rationale": "There are 2³ = 8 assignments. The output column is FFFFFTTT; exactly 3 positions are T.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The proposed result 4 fails the required computation: There are 2³ = 8 assignments. The output column is FFFFFTTT; exactly 3 positions are T."
+          },
+          {
+            "option_index": 1,
+            "rationale": "The proposed result 5 fails the required computation: There are 2³ = 8 assignments. The output column is FFFFFTTT; exactly 3 positions are T."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The proposed result 8 fails the required computation: There are 2³ = 8 assignments. The output column is FFFFFTTT; exactly 3 positions are T."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "truth-count",
+        "expression": "p ∧ (q ∨ r)",
+        "expected": 3
+      }
+    },
+    {
+      "id": "logic-003",
+      "topic": "Canonical disjunctive form",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "Which sum of minterms is equivalent to p ∧ (q ∨ r)?",
+      "context": "p, q, r are propositions. → is material implication; ↔ is equivalence; ⊕ is exclusive OR. For parity XOR, associate left to right.",
+      "options": [
+        "(p ∧ ¬q ∧ r) ∨ (p ∧ q ∧ ¬r) ∨ (p ∧ q ∧ r)",
+        "p ∧ ¬p",
+        "(¬p ∧ ¬q ∧ ¬r) ∨ (¬p ∧ ¬q ∧ r) ∨ (¬p ∧ q ∧ ¬r) ∨ (¬p ∧ q ∧ r) ∨ (p ∧ ¬q ∧ ¬r)",
+        "p ∧ q ∧ r"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "A canonical disjunctive form includes one conjunction per true row, using a negated variable for a false input.",
+        "Track witness dependence in quantified statements; compare entire truth tables rather than a single row in propositional statements."
+      ],
+      "explanation": {
+        "learning_objective": "Apply canonical disjunctive form with explicit justification.",
+        "correct_rationale": "A minterm fixes all three truth values. Include precisely the true rows FFFFFTTT: (p ∧ ¬q ∧ r) ∨ (p ∧ q ∧ ¬r) ∨ (p ∧ q ∧ r). Each included term is true on one row and no others.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "This contradiction is always false, but the given formula has a true row."
+          },
+          {
+            "option_index": 2,
+            "rationale": "These minterms describe the false rows, so this is the negation of the formula."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This single minterm does not describe the full set of satisfying assignments."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "dnf-equivalence",
+        "expression": "p ∧ (q ∨ r)"
+      }
+    },
+    {
+      "id": "logic-004",
+      "topic": "Negation and model counting",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "How many assignments make ¬(p ∧ (q ∨ r)) true?",
+      "context": "p, q, r are propositions. → is material implication; ↔ is equivalence; ⊕ is exclusive OR. For parity XOR, associate left to right.",
+      "options": [
+        "0",
+        "8",
+        "5",
+        "3"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "The truth sets of a proposition and its negation partition all assignments.",
+        "Track witness dependence in quantified statements; compare entire truth tables rather than a single row in propositional statements."
+      ],
+      "explanation": {
+        "learning_objective": "Apply negation and model counting with explicit justification.",
+        "correct_rationale": "Negation reverses every output of FFFFFTTT. Of eight assignments, 3 satisfy the original, so 8 − 3 = 5 satisfy its negation.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The proposed result 0 fails the required computation: Negation reverses every output of FFFFFTTT. Of eight assignments, 3 satisfy the original, so 8 − 3 = 5 satisfy its negation."
+          },
+          {
+            "option_index": 1,
+            "rationale": "The proposed result 8 fails the required computation: Negation reverses every output of FFFFFTTT. Of eight assignments, 3 satisfy the original, so 8 − 3 = 5 satisfy its negation."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The proposed result 3 fails the required computation: Negation reverses every output of FFFFFTTT. Of eight assignments, 3 satisfy the original, so 8 − 3 = 5 satisfy its negation."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "negated-truth-count",
+        "expression": "p ∧ (q ∨ r)",
+        "expected": 5
+      }
+    },
+    {
+      "id": "logic-005",
+      "topic": "Truth-table evaluation",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "For F = p ∨ (q ∧ r), which output column follows the input order FFF, FFT, FTF, FTT, TFF, TFT, TTF, TTT?",
+      "context": "p, q, r are propositions. → is material implication; ↔ is equivalence; ⊕ is exclusive OR. For parity XOR, associate left to right.",
+      "options": [
+        "FFFTTTTF",
+        "FFFTTTTT",
+        "FFFFTTTT",
+        "TFFTTTTT"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "For each row, evaluate parentheses first. An implication is false only when its antecedent is true and its consequent is false.",
+        "Track witness dependence in quantified statements; compare entire truth tables rather than a single row in propositional statements."
+      ],
+      "explanation": {
+        "learning_objective": "Apply truth-table evaluation with explicit justification.",
+        "correct_rationale": "Evaluate the connectives from the innermost parentheses. In order: (F, F, F): F; (F, F, T): F; (F, T, F): F; (F, T, T): T; (T, F, F): T; (T, F, T): T; (T, T, F): T; (T, T, T): T. Thus the column is FFFTTTTT.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This column changes a required row. The actual evaluation is (F, F, F): F; (F, F, T): F; (F, T, F): F; (F, T, T): T; (T, F, F): T; (T, F, T): T; (T, T, F): T; (T, T, T): T."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This column changes a required row. The actual evaluation is (F, F, F): F; (F, F, T): F; (F, T, F): F; (F, T, T): T; (T, F, F): T; (T, F, T): T; (T, T, F): T; (T, T, T): T."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This column changes a required row. The actual evaluation is (F, F, F): F; (F, F, T): F; (F, T, F): F; (F, T, T): T; (T, F, F): T; (T, F, T): T; (T, T, F): T; (T, T, T): T."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "truth-column",
+        "expression": "p ∨ (q ∧ r)",
+        "expected": "FFFTTTTT"
+      }
+    },
+    {
+      "id": "logic-006",
+      "topic": "Satisfying valuations",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "How many assignments to p, q, r satisfy p ∨ (q ∧ r)?",
+      "context": "p, q, r are propositions. → is material implication; ↔ is equivalence; ⊕ is exclusive OR. For parity XOR, associate left to right.",
+      "options": [
+        "4",
+        "3",
+        "8",
+        "5"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "List the eight assignments systematically; count only rows in which the entire formula is true.",
+        "Track witness dependence in quantified statements; compare entire truth tables rather than a single row in propositional statements."
+      ],
+      "explanation": {
+        "learning_objective": "Apply satisfying valuations with explicit justification.",
+        "correct_rationale": "There are 2³ = 8 assignments. The output column is FFFTTTTT; exactly 5 positions are T.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The proposed result 4 fails the required computation: There are 2³ = 8 assignments. The output column is FFFTTTTT; exactly 5 positions are T."
+          },
+          {
+            "option_index": 1,
+            "rationale": "The proposed result 3 fails the required computation: There are 2³ = 8 assignments. The output column is FFFTTTTT; exactly 5 positions are T."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The proposed result 8 fails the required computation: There are 2³ = 8 assignments. The output column is FFFTTTTT; exactly 5 positions are T."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "truth-count",
+        "expression": "p ∨ (q ∧ r)",
+        "expected": 5
+      }
+    },
+    {
+      "id": "logic-007",
+      "topic": "Canonical disjunctive form",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "Which sum of minterms is equivalent to p ∨ (q ∧ r)?",
+      "context": "p, q, r are propositions. → is material implication; ↔ is equivalence; ⊕ is exclusive OR. For parity XOR, associate left to right.",
+      "options": [
+        "(¬p ∧ q ∧ r) ∨ (p ∧ ¬q ∧ ¬r) ∨ (p ∧ ¬q ∧ r) ∨ (p ∧ q ∧ ¬r) ∨ (p ∧ q ∧ r)",
+        "(¬p ∧ ¬q ∧ ¬r) ∨ (¬p ∧ ¬q ∧ r) ∨ (¬p ∧ q ∧ ¬r)",
+        "p ∧ ¬p",
+        "p ∧ q ∧ r"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "A canonical disjunctive form includes one conjunction per true row, using a negated variable for a false input.",
+        "Track witness dependence in quantified statements; compare entire truth tables rather than a single row in propositional statements."
+      ],
+      "explanation": {
+        "learning_objective": "Apply canonical disjunctive form with explicit justification.",
+        "correct_rationale": "A minterm fixes all three truth values. Include precisely the true rows FFFTTTTT: (¬p ∧ q ∧ r) ∨ (p ∧ ¬q ∧ ¬r) ∨ (p ∧ ¬q ∧ r) ∨ (p ∧ q ∧ ¬r) ∨ (p ∧ q ∧ r). Each included term is true on one row and no others.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "These minterms describe the false rows, so this is the negation of the formula."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This contradiction is always false, but the given formula has a true row."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This single minterm does not describe the full set of satisfying assignments."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "dnf-equivalence",
+        "expression": "p ∨ (q ∧ r)"
+      }
+    },
+    {
+      "id": "logic-008",
+      "topic": "Negation and model counting",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "How many assignments make ¬(p ∨ (q ∧ r)) true?",
+      "context": "p, q, r are propositions. → is material implication; ↔ is equivalence; ⊕ is exclusive OR. For parity XOR, associate left to right.",
+      "options": [
+        "5",
+        "8",
+        "3",
+        "0"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "The truth sets of a proposition and its negation partition all assignments.",
+        "Track witness dependence in quantified statements; compare entire truth tables rather than a single row in propositional statements."
+      ],
+      "explanation": {
+        "learning_objective": "Apply negation and model counting with explicit justification.",
+        "correct_rationale": "Negation reverses every output of FFFTTTTT. Of eight assignments, 5 satisfy the original, so 8 − 5 = 3 satisfy its negation.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The proposed result 5 fails the required computation: Negation reverses every output of FFFTTTTT. Of eight assignments, 5 satisfy the original, so 8 − 5 = 3 satisfy its negation."
+          },
+          {
+            "option_index": 1,
+            "rationale": "The proposed result 8 fails the required computation: Negation reverses every output of FFFTTTTT. Of eight assignments, 5 satisfy the original, so 8 − 5 = 3 satisfy its negation."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The proposed result 0 fails the required computation: Negation reverses every output of FFFTTTTT. Of eight assignments, 5 satisfy the original, so 8 − 5 = 3 satisfy its negation."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "negated-truth-count",
+        "expression": "p ∨ (q ∧ r)",
+        "expected": 3
+      }
+    },
+    {
+      "id": "logic-009",
+      "topic": "Truth-table evaluation",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "For F = (p → q) ∧ r, which output column follows the input order FFF, FFT, FTF, FTT, TFF, TFT, TTF, TTT?",
+      "context": "p, q, r are propositions. → is material implication; ↔ is equivalence; ⊕ is exclusive OR. For parity XOR, associate left to right.",
+      "options": [
+        "FTFTFFFT",
+        "TTFTFFFT",
+        "FTFTFFFF",
+        "FTFFFFFT"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "For each row, evaluate parentheses first. An implication is false only when its antecedent is true and its consequent is false.",
+        "Track witness dependence in quantified statements; compare entire truth tables rather than a single row in propositional statements."
+      ],
+      "explanation": {
+        "learning_objective": "Apply truth-table evaluation with explicit justification.",
+        "correct_rationale": "Evaluate the connectives from the innermost parentheses. In order: (F, F, F): F; (F, F, T): T; (F, T, F): F; (F, T, T): T; (T, F, F): F; (T, F, T): F; (T, T, F): F; (T, T, T): T. Thus the column is FTFTFFFT.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "This column changes a required row. The actual evaluation is (F, F, F): F; (F, F, T): T; (F, T, F): F; (F, T, T): T; (T, F, F): F; (T, F, T): F; (T, T, F): F; (T, T, T): T."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This column changes a required row. The actual evaluation is (F, F, F): F; (F, F, T): T; (F, T, F): F; (F, T, T): T; (T, F, F): F; (T, F, T): F; (T, T, F): F; (T, T, T): T."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This column changes a required row. The actual evaluation is (F, F, F): F; (F, F, T): T; (F, T, F): F; (F, T, T): T; (T, F, F): F; (T, F, T): F; (T, T, F): F; (T, T, T): T."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "truth-column",
+        "expression": "(p → q) ∧ r",
+        "expected": "FTFTFFFT"
+      }
+    },
+    {
+      "id": "logic-010",
+      "topic": "Satisfying valuations",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "How many assignments to p, q, r satisfy (p → q) ∧ r?",
+      "context": "p, q, r are propositions. → is material implication; ↔ is equivalence; ⊕ is exclusive OR. For parity XOR, associate left to right.",
+      "options": [
+        "5",
+        "3",
+        "4",
+        "8"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "List the eight assignments systematically; count only rows in which the entire formula is true.",
+        "Track witness dependence in quantified statements; compare entire truth tables rather than a single row in propositional statements."
+      ],
+      "explanation": {
+        "learning_objective": "Apply satisfying valuations with explicit justification.",
+        "correct_rationale": "There are 2³ = 8 assignments. The output column is FTFTFFFT; exactly 3 positions are T.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The proposed result 5 fails the required computation: There are 2³ = 8 assignments. The output column is FTFTFFFT; exactly 3 positions are T."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The proposed result 4 fails the required computation: There are 2³ = 8 assignments. The output column is FTFTFFFT; exactly 3 positions are T."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The proposed result 8 fails the required computation: There are 2³ = 8 assignments. The output column is FTFTFFFT; exactly 3 positions are T."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "truth-count",
+        "expression": "(p → q) ∧ r",
+        "expected": 3
+      }
+    },
+    {
+      "id": "logic-011",
+      "topic": "Canonical disjunctive form",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "Which sum of minterms is equivalent to (p → q) ∧ r?",
+      "context": "p, q, r are propositions. → is material implication; ↔ is equivalence; ⊕ is exclusive OR. For parity XOR, associate left to right.",
+      "options": [
+        "(¬p ∧ ¬q ∧ ¬r) ∨ (¬p ∧ q ∧ ¬r) ∨ (p ∧ ¬q ∧ ¬r) ∨ (p ∧ ¬q ∧ r) ∨ (p ∧ q ∧ ¬r)",
+        "p ∧ ¬p",
+        "p ∧ q ∧ r",
+        "(¬p ∧ ¬q ∧ r) ∨ (¬p ∧ q ∧ r) ∨ (p ∧ q ∧ r)"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "A canonical disjunctive form includes one conjunction per true row, using a negated variable for a false input.",
+        "Track witness dependence in quantified statements; compare entire truth tables rather than a single row in propositional statements."
+      ],
+      "explanation": {
+        "learning_objective": "Apply canonical disjunctive form with explicit justification.",
+        "correct_rationale": "A minterm fixes all three truth values. Include precisely the true rows FTFTFFFT: (¬p ∧ ¬q ∧ r) ∨ (¬p ∧ q ∧ r) ∨ (p ∧ q ∧ r). Each included term is true on one row and no others.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "These minterms describe the false rows, so this is the negation of the formula."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This contradiction is always false, but the given formula has a true row."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This single minterm does not describe the full set of satisfying assignments."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "dnf-equivalence",
+        "expression": "(p → q) ∧ r"
+      }
+    },
+    {
+      "id": "logic-012",
+      "topic": "Negation and model counting",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "How many assignments make ¬((p → q) ∧ r) true?",
+      "context": "p, q, r are propositions. → is material implication; ↔ is equivalence; ⊕ is exclusive OR. For parity XOR, associate left to right.",
+      "options": [
+        "3",
+        "5",
+        "0",
+        "8"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "The truth sets of a proposition and its negation partition all assignments.",
+        "Track witness dependence in quantified statements; compare entire truth tables rather than a single row in propositional statements."
+      ],
+      "explanation": {
+        "learning_objective": "Apply negation and model counting with explicit justification.",
+        "correct_rationale": "Negation reverses every output of FTFTFFFT. Of eight assignments, 3 satisfy the original, so 8 − 3 = 5 satisfy its negation.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The proposed result 3 fails the required computation: Negation reverses every output of FTFTFFFT. Of eight assignments, 3 satisfy the original, so 8 − 3 = 5 satisfy its negation."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The proposed result 0 fails the required computation: Negation reverses every output of FTFTFFFT. Of eight assignments, 3 satisfy the original, so 8 − 3 = 5 satisfy its negation."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The proposed result 8 fails the required computation: Negation reverses every output of FTFTFFFT. Of eight assignments, 3 satisfy the original, so 8 − 3 = 5 satisfy its negation."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "negated-truth-count",
+        "expression": "(p → q) ∧ r",
+        "expected": 5
+      }
+    },
+    {
+      "id": "logic-013",
+      "topic": "Truth-table evaluation",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "For F = p → (q ∧ r), which output column follows the input order FFF, FFT, FTF, FTT, TFF, TFT, TTF, TTT?",
+      "context": "p, q, r are propositions. → is material implication; ↔ is equivalence; ⊕ is exclusive OR. For parity XOR, associate left to right.",
+      "options": [
+        "FTTTFFFT",
+        "TTTTFFFT",
+        "TTTTFFFF",
+        "TTTFFFFT"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "For each row, evaluate parentheses first. An implication is false only when its antecedent is true and its consequent is false.",
+        "Track witness dependence in quantified statements; compare entire truth tables rather than a single row in propositional statements."
+      ],
+      "explanation": {
+        "learning_objective": "Apply truth-table evaluation with explicit justification.",
+        "correct_rationale": "Evaluate the connectives from the innermost parentheses. In order: (F, F, F): T; (F, F, T): T; (F, T, F): T; (F, T, T): T; (T, F, F): F; (T, F, T): F; (T, T, F): F; (T, T, T): T. Thus the column is TTTTFFFT.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This column changes a required row. The actual evaluation is (F, F, F): T; (F, F, T): T; (F, T, F): T; (F, T, T): T; (T, F, F): F; (T, F, T): F; (T, T, F): F; (T, T, T): T."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This column changes a required row. The actual evaluation is (F, F, F): T; (F, F, T): T; (F, T, F): T; (F, T, T): T; (T, F, F): F; (T, F, T): F; (T, T, F): F; (T, T, T): T."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This column changes a required row. The actual evaluation is (F, F, F): T; (F, F, T): T; (F, T, F): T; (F, T, T): T; (T, F, F): F; (T, F, T): F; (T, T, F): F; (T, T, T): T."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "truth-column",
+        "expression": "p → (q ∧ r)",
+        "expected": "TTTTFFFT"
+      }
+    },
+    {
+      "id": "logic-014",
+      "topic": "Satisfying valuations",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "How many assignments to p, q, r satisfy p → (q ∧ r)?",
+      "context": "p, q, r are propositions. → is material implication; ↔ is equivalence; ⊕ is exclusive OR. For parity XOR, associate left to right.",
+      "options": [
+        "4",
+        "8",
+        "5",
+        "3"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "List the eight assignments systematically; count only rows in which the entire formula is true.",
+        "Track witness dependence in quantified statements; compare entire truth tables rather than a single row in propositional statements."
+      ],
+      "explanation": {
+        "learning_objective": "Apply satisfying valuations with explicit justification.",
+        "correct_rationale": "There are 2³ = 8 assignments. The output column is TTTTFFFT; exactly 5 positions are T.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The proposed result 4 fails the required computation: There are 2³ = 8 assignments. The output column is TTTTFFFT; exactly 5 positions are T."
+          },
+          {
+            "option_index": 1,
+            "rationale": "The proposed result 8 fails the required computation: There are 2³ = 8 assignments. The output column is TTTTFFFT; exactly 5 positions are T."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The proposed result 3 fails the required computation: There are 2³ = 8 assignments. The output column is TTTTFFFT; exactly 5 positions are T."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "truth-count",
+        "expression": "p → (q ∧ r)",
+        "expected": 5
+      }
+    },
+    {
+      "id": "logic-015",
+      "topic": "Canonical disjunctive form",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "Which sum of minterms is equivalent to p → (q ∧ r)?",
+      "context": "p, q, r are propositions. → is material implication; ↔ is equivalence; ⊕ is exclusive OR. For parity XOR, associate left to right.",
+      "options": [
+        "p ∧ q ∧ r",
+        "(¬p ∧ ¬q ∧ ¬r) ∨ (¬p ∧ ¬q ∧ r) ∨ (¬p ∧ q ∧ ¬r) ∨ (¬p ∧ q ∧ r) ∨ (p ∧ q ∧ r)",
+        "p ∧ ¬p",
+        "(p ∧ ¬q ∧ ¬r) ∨ (p ∧ ¬q ∧ r) ∨ (p ∧ q ∧ ¬r)"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "A canonical disjunctive form includes one conjunction per true row, using a negated variable for a false input.",
+        "Track witness dependence in quantified statements; compare entire truth tables rather than a single row in propositional statements."
+      ],
+      "explanation": {
+        "learning_objective": "Apply canonical disjunctive form with explicit justification.",
+        "correct_rationale": "A minterm fixes all three truth values. Include precisely the true rows TTTTFFFT: (¬p ∧ ¬q ∧ ¬r) ∨ (¬p ∧ ¬q ∧ r) ∨ (¬p ∧ q ∧ ¬r) ∨ (¬p ∧ q ∧ r) ∨ (p ∧ q ∧ r). Each included term is true on one row and no others.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This single minterm does not describe the full set of satisfying assignments."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This contradiction is always false, but the given formula has a true row."
+          },
+          {
+            "option_index": 3,
+            "rationale": "These minterms describe the false rows, so this is the negation of the formula."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "dnf-equivalence",
+        "expression": "p → (q ∧ r)"
+      }
+    },
+    {
+      "id": "logic-016",
+      "topic": "Negation and model counting",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "How many assignments make ¬(p → (q ∧ r)) true?",
+      "context": "p, q, r are propositions. → is material implication; ↔ is equivalence; ⊕ is exclusive OR. For parity XOR, associate left to right.",
+      "options": [
+        "0",
+        "8",
+        "3",
+        "5"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "The truth sets of a proposition and its negation partition all assignments.",
+        "Track witness dependence in quantified statements; compare entire truth tables rather than a single row in propositional statements."
+      ],
+      "explanation": {
+        "learning_objective": "Apply negation and model counting with explicit justification.",
+        "correct_rationale": "Negation reverses every output of TTTTFFFT. Of eight assignments, 5 satisfy the original, so 8 − 5 = 3 satisfy its negation.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The proposed result 0 fails the required computation: Negation reverses every output of TTTTFFFT. Of eight assignments, 5 satisfy the original, so 8 − 5 = 3 satisfy its negation."
+          },
+          {
+            "option_index": 1,
+            "rationale": "The proposed result 8 fails the required computation: Negation reverses every output of TTTTFFFT. Of eight assignments, 5 satisfy the original, so 8 − 5 = 3 satisfy its negation."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The proposed result 5 fails the required computation: Negation reverses every output of TTTTFFFT. Of eight assignments, 5 satisfy the original, so 8 − 5 = 3 satisfy its negation."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "negated-truth-count",
+        "expression": "p → (q ∧ r)",
+        "expected": 3
+      }
+    },
+    {
+      "id": "logic-017",
+      "topic": "Truth-table evaluation",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "For F = (p ∧ q) → r, which output column follows the input order FFF, FFT, FTF, FTT, TFF, TFT, TTF, TTT?",
+      "context": "p, q, r are propositions. → is material implication; ↔ is equivalence; ⊕ is exclusive OR. For parity XOR, associate left to right.",
+      "options": [
+        "FTTTTTFT",
+        "TTTTTTFF",
+        "TTTFTTFT",
+        "TTTTTTFT"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "For each row, evaluate parentheses first. An implication is false only when its antecedent is true and its consequent is false.",
+        "Track witness dependence in quantified statements; compare entire truth tables rather than a single row in propositional statements."
+      ],
+      "explanation": {
+        "learning_objective": "Apply truth-table evaluation with explicit justification.",
+        "correct_rationale": "Evaluate the connectives from the innermost parentheses. In order: (F, F, F): T; (F, F, T): T; (F, T, F): T; (F, T, T): T; (T, F, F): T; (T, F, T): T; (T, T, F): F; (T, T, T): T. Thus the column is TTTTTTFT.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This column changes a required row. The actual evaluation is (F, F, F): T; (F, F, T): T; (F, T, F): T; (F, T, T): T; (T, F, F): T; (T, F, T): T; (T, T, F): F; (T, T, T): T."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This column changes a required row. The actual evaluation is (F, F, F): T; (F, F, T): T; (F, T, F): T; (F, T, T): T; (T, F, F): T; (T, F, T): T; (T, T, F): F; (T, T, T): T."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This column changes a required row. The actual evaluation is (F, F, F): T; (F, F, T): T; (F, T, F): T; (F, T, T): T; (T, F, F): T; (T, F, T): T; (T, T, F): F; (T, T, T): T."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "truth-column",
+        "expression": "(p ∧ q) → r",
+        "expected": "TTTTTTFT"
+      }
+    },
+    {
+      "id": "logic-018",
+      "topic": "Satisfying valuations",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "How many assignments to p, q, r satisfy (p ∧ q) → r?",
+      "context": "p, q, r are propositions. → is material implication; ↔ is equivalence; ⊕ is exclusive OR. For parity XOR, associate left to right.",
+      "options": [
+        "8",
+        "1",
+        "7",
+        "4"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "List the eight assignments systematically; count only rows in which the entire formula is true.",
+        "Track witness dependence in quantified statements; compare entire truth tables rather than a single row in propositional statements."
+      ],
+      "explanation": {
+        "learning_objective": "Apply satisfying valuations with explicit justification.",
+        "correct_rationale": "There are 2³ = 8 assignments. The output column is TTTTTTFT; exactly 7 positions are T.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The proposed result 8 fails the required computation: There are 2³ = 8 assignments. The output column is TTTTTTFT; exactly 7 positions are T."
+          },
+          {
+            "option_index": 1,
+            "rationale": "The proposed result 1 fails the required computation: There are 2³ = 8 assignments. The output column is TTTTTTFT; exactly 7 positions are T."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The proposed result 4 fails the required computation: There are 2³ = 8 assignments. The output column is TTTTTTFT; exactly 7 positions are T."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "truth-count",
+        "expression": "(p ∧ q) → r",
+        "expected": 7
+      }
+    },
+    {
+      "id": "logic-019",
+      "topic": "Canonical disjunctive form",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "Which sum of minterms is equivalent to (p ∧ q) → r?",
+      "context": "p, q, r are propositions. → is material implication; ↔ is equivalence; ⊕ is exclusive OR. For parity XOR, associate left to right.",
+      "options": [
+        "p ∧ q ∧ r",
+        "(¬p ∧ ¬q ∧ ¬r) ∨ (¬p ∧ ¬q ∧ r) ∨ (¬p ∧ q ∧ ¬r) ∨ (¬p ∧ q ∧ r) ∨ (p ∧ ¬q ∧ ¬r) ∨ (p ∧ ¬q ∧ r) ∨ (p ∧ q ∧ r)",
+        "p ∧ ¬p",
+        "(p ∧ q ∧ ¬r)"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "A canonical disjunctive form includes one conjunction per true row, using a negated variable for a false input.",
+        "Track witness dependence in quantified statements; compare entire truth tables rather than a single row in propositional statements."
+      ],
+      "explanation": {
+        "learning_objective": "Apply canonical disjunctive form with explicit justification.",
+        "correct_rationale": "A minterm fixes all three truth values. Include precisely the true rows TTTTTTFT: (¬p ∧ ¬q ∧ ¬r) ∨ (¬p ∧ ¬q ∧ r) ∨ (¬p ∧ q ∧ ¬r) ∨ (¬p ∧ q ∧ r) ∨ (p ∧ ¬q ∧ ¬r) ∨ (p ∧ ¬q ∧ r) ∨ (p ∧ q ∧ r). Each included term is true on one row and no others.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This single minterm does not describe the full set of satisfying assignments."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This contradiction is always false, but the given formula has a true row."
+          },
+          {
+            "option_index": 3,
+            "rationale": "These minterms describe the false rows, so this is the negation of the formula."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "dnf-equivalence",
+        "expression": "(p ∧ q) → r"
+      }
+    },
+    {
+      "id": "logic-020",
+      "topic": "Negation and model counting",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "How many assignments make ¬((p ∧ q) → r) true?",
+      "context": "p, q, r are propositions. → is material implication; ↔ is equivalence; ⊕ is exclusive OR. For parity XOR, associate left to right.",
+      "options": [
+        "0",
+        "7",
+        "1",
+        "8"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "The truth sets of a proposition and its negation partition all assignments.",
+        "Track witness dependence in quantified statements; compare entire truth tables rather than a single row in propositional statements."
+      ],
+      "explanation": {
+        "learning_objective": "Apply negation and model counting with explicit justification.",
+        "correct_rationale": "Negation reverses every output of TTTTTTFT. Of eight assignments, 7 satisfy the original, so 8 − 7 = 1 satisfy its negation.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The proposed result 0 fails the required computation: Negation reverses every output of TTTTTTFT. Of eight assignments, 7 satisfy the original, so 8 − 7 = 1 satisfy its negation."
+          },
+          {
+            "option_index": 1,
+            "rationale": "The proposed result 7 fails the required computation: Negation reverses every output of TTTTTTFT. Of eight assignments, 7 satisfy the original, so 8 − 7 = 1 satisfy its negation."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The proposed result 8 fails the required computation: Negation reverses every output of TTTTTTFT. Of eight assignments, 7 satisfy the original, so 8 − 7 = 1 satisfy its negation."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "negated-truth-count",
+        "expression": "(p ∧ q) → r",
+        "expected": 1
+      }
+    },
+    {
+      "id": "logic-021",
+      "topic": "Truth-table evaluation",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "For F = p ↔ (q ∨ r), which output column follows the input order FFF, FFT, FTF, FTT, TFF, TFT, TTF, TTT?",
+      "context": "p, q, r are propositions. → is material implication; ↔ is equivalence; ⊕ is exclusive OR. For parity XOR, associate left to right.",
+      "options": [
+        "TFFFFTTF",
+        "TFFFFTTT",
+        "TFFTFTTT",
+        "FFFFFTTT"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "For each row, evaluate parentheses first. An implication is false only when its antecedent is true and its consequent is false.",
+        "Track witness dependence in quantified statements; compare entire truth tables rather than a single row in propositional statements."
+      ],
+      "explanation": {
+        "learning_objective": "Apply truth-table evaluation with explicit justification.",
+        "correct_rationale": "Evaluate the connectives from the innermost parentheses. In order: (F, F, F): T; (F, F, T): F; (F, T, F): F; (F, T, T): F; (T, F, F): F; (T, F, T): T; (T, T, F): T; (T, T, T): T. Thus the column is TFFFFTTT.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This column changes a required row. The actual evaluation is (F, F, F): T; (F, F, T): F; (F, T, F): F; (F, T, T): F; (T, F, F): F; (T, F, T): T; (T, T, F): T; (T, T, T): T."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This column changes a required row. The actual evaluation is (F, F, F): T; (F, F, T): F; (F, T, F): F; (F, T, T): F; (T, F, F): F; (T, F, T): T; (T, T, F): T; (T, T, T): T."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This column changes a required row. The actual evaluation is (F, F, F): T; (F, F, T): F; (F, T, F): F; (F, T, T): F; (T, F, F): F; (T, F, T): T; (T, T, F): T; (T, T, T): T."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "truth-column",
+        "expression": "p ↔ (q ∨ r)",
+        "expected": "TFFFFTTT"
+      }
+    },
+    {
+      "id": "logic-022",
+      "topic": "Satisfying valuations",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "How many assignments to p, q, r satisfy p ↔ (q ∨ r)?",
+      "context": "p, q, r are propositions. → is material implication; ↔ is equivalence; ⊕ is exclusive OR. For parity XOR, associate left to right.",
+      "options": [
+        "8",
+        "5",
+        "0",
+        "4"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "List the eight assignments systematically; count only rows in which the entire formula is true.",
+        "Track witness dependence in quantified statements; compare entire truth tables rather than a single row in propositional statements."
+      ],
+      "explanation": {
+        "learning_objective": "Apply satisfying valuations with explicit justification.",
+        "correct_rationale": "There are 2³ = 8 assignments. The output column is TFFFFTTT; exactly 4 positions are T.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The proposed result 8 fails the required computation: There are 2³ = 8 assignments. The output column is TFFFFTTT; exactly 4 positions are T."
+          },
+          {
+            "option_index": 1,
+            "rationale": "The proposed result 5 fails the required computation: There are 2³ = 8 assignments. The output column is TFFFFTTT; exactly 4 positions are T."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The proposed result 0 fails the required computation: There are 2³ = 8 assignments. The output column is TFFFFTTT; exactly 4 positions are T."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "truth-count",
+        "expression": "p ↔ (q ∨ r)",
+        "expected": 4
+      }
+    },
+    {
+      "id": "logic-023",
+      "topic": "Canonical disjunctive form",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "Which sum of minterms is equivalent to p ↔ (q ∨ r)?",
+      "context": "p, q, r are propositions. → is material implication; ↔ is equivalence; ⊕ is exclusive OR. For parity XOR, associate left to right.",
+      "options": [
+        "(¬p ∧ ¬q ∧ ¬r) ∨ (p ∧ ¬q ∧ r) ∨ (p ∧ q ∧ ¬r) ∨ (p ∧ q ∧ r)",
+        "(¬p ∧ ¬q ∧ r) ∨ (¬p ∧ q ∧ ¬r) ∨ (¬p ∧ q ∧ r) ∨ (p ∧ ¬q ∧ ¬r)",
+        "p ∧ q ∧ r",
+        "p ∧ ¬p"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "A canonical disjunctive form includes one conjunction per true row, using a negated variable for a false input.",
+        "Track witness dependence in quantified statements; compare entire truth tables rather than a single row in propositional statements."
+      ],
+      "explanation": {
+        "learning_objective": "Apply canonical disjunctive form with explicit justification.",
+        "correct_rationale": "A minterm fixes all three truth values. Include precisely the true rows TFFFFTTT: (¬p ∧ ¬q ∧ ¬r) ∨ (p ∧ ¬q ∧ r) ∨ (p ∧ q ∧ ¬r) ∨ (p ∧ q ∧ r). Each included term is true on one row and no others.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "These minterms describe the false rows, so this is the negation of the formula."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This single minterm does not describe the full set of satisfying assignments."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This contradiction is always false, but the given formula has a true row."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "dnf-equivalence",
+        "expression": "p ↔ (q ∨ r)"
+      }
+    },
+    {
+      "id": "logic-024",
+      "topic": "Negation and model counting",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "How many assignments make ¬(p ↔ (q ∨ r)) true?",
+      "context": "p, q, r are propositions. → is material implication; ↔ is equivalence; ⊕ is exclusive OR. For parity XOR, associate left to right.",
+      "options": [
+        "5",
+        "4",
+        "0",
+        "8"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "The truth sets of a proposition and its negation partition all assignments.",
+        "Track witness dependence in quantified statements; compare entire truth tables rather than a single row in propositional statements."
+      ],
+      "explanation": {
+        "learning_objective": "Apply negation and model counting with explicit justification.",
+        "correct_rationale": "Negation reverses every output of TFFFFTTT. Of eight assignments, 4 satisfy the original, so 8 − 4 = 4 satisfy its negation.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The proposed result 5 fails the required computation: Negation reverses every output of TFFFFTTT. Of eight assignments, 4 satisfy the original, so 8 − 4 = 4 satisfy its negation."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The proposed result 0 fails the required computation: Negation reverses every output of TFFFFTTT. Of eight assignments, 4 satisfy the original, so 8 − 4 = 4 satisfy its negation."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The proposed result 8 fails the required computation: Negation reverses every output of TFFFFTTT. Of eight assignments, 4 satisfy the original, so 8 − 4 = 4 satisfy its negation."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "negated-truth-count",
+        "expression": "p ↔ (q ∨ r)",
+        "expected": 4
+      }
+    },
+    {
+      "id": "logic-025",
+      "topic": "Truth-table evaluation",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "For F = p ⊕ (q ∧ r), which output column follows the input order FFF, FFT, FTF, FTT, TFF, TFT, TTF, TTT?",
+      "context": "p, q, r are propositions. → is material implication; ↔ is equivalence; ⊕ is exclusive OR. For parity XOR, associate left to right.",
+      "options": [
+        "FFFTTTTT",
+        "FFFFTTTF",
+        "FFFTTTTF",
+        "TFFTTTTF"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "For each row, evaluate parentheses first. An implication is false only when its antecedent is true and its consequent is false.",
+        "Track witness dependence in quantified statements; compare entire truth tables rather than a single row in propositional statements."
+      ],
+      "explanation": {
+        "learning_objective": "Apply truth-table evaluation with explicit justification.",
+        "correct_rationale": "Evaluate the connectives from the innermost parentheses. In order: (F, F, F): F; (F, F, T): F; (F, T, F): F; (F, T, T): T; (T, F, F): T; (T, F, T): T; (T, T, F): T; (T, T, T): F. Thus the column is FFFTTTTF.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This column changes a required row. The actual evaluation is (F, F, F): F; (F, F, T): F; (F, T, F): F; (F, T, T): T; (T, F, F): T; (T, F, T): T; (T, T, F): T; (T, T, T): F."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This column changes a required row. The actual evaluation is (F, F, F): F; (F, F, T): F; (F, T, F): F; (F, T, T): T; (T, F, F): T; (T, F, T): T; (T, T, F): T; (T, T, T): F."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This column changes a required row. The actual evaluation is (F, F, F): F; (F, F, T): F; (F, T, F): F; (F, T, T): T; (T, F, F): T; (T, F, T): T; (T, T, F): T; (T, T, T): F."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "truth-column",
+        "expression": "p ⊕ (q ∧ r)",
+        "expected": "FFFTTTTF"
+      }
+    },
+    {
+      "id": "logic-026",
+      "topic": "Satisfying valuations",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "How many assignments to p, q, r satisfy p ⊕ (q ∧ r)?",
+      "context": "p, q, r are propositions. → is material implication; ↔ is equivalence; ⊕ is exclusive OR. For parity XOR, associate left to right.",
+      "options": [
+        "8",
+        "4",
+        "0",
+        "5"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "List the eight assignments systematically; count only rows in which the entire formula is true.",
+        "Track witness dependence in quantified statements; compare entire truth tables rather than a single row in propositional statements."
+      ],
+      "explanation": {
+        "learning_objective": "Apply satisfying valuations with explicit justification.",
+        "correct_rationale": "There are 2³ = 8 assignments. The output column is FFFTTTTF; exactly 4 positions are T.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The proposed result 8 fails the required computation: There are 2³ = 8 assignments. The output column is FFFTTTTF; exactly 4 positions are T."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The proposed result 0 fails the required computation: There are 2³ = 8 assignments. The output column is FFFTTTTF; exactly 4 positions are T."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The proposed result 5 fails the required computation: There are 2³ = 8 assignments. The output column is FFFTTTTF; exactly 4 positions are T."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "truth-count",
+        "expression": "p ⊕ (q ∧ r)",
+        "expected": 4
+      }
+    },
+    {
+      "id": "logic-027",
+      "topic": "Canonical disjunctive form",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "Which sum of minterms is equivalent to p ⊕ (q ∧ r)?",
+      "context": "p, q, r are propositions. → is material implication; ↔ is equivalence; ⊕ is exclusive OR. For parity XOR, associate left to right.",
+      "options": [
+        "(¬p ∧ q ∧ r) ∨ (p ∧ ¬q ∧ ¬r) ∨ (p ∧ ¬q ∧ r) ∨ (p ∧ q ∧ ¬r)",
+        "p ∧ q ∧ r",
+        "p ∧ ¬p",
+        "(¬p ∧ ¬q ∧ ¬r) ∨ (¬p ∧ ¬q ∧ r) ∨ (¬p ∧ q ∧ ¬r) ∨ (p ∧ q ∧ r)"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "A canonical disjunctive form includes one conjunction per true row, using a negated variable for a false input.",
+        "Track witness dependence in quantified statements; compare entire truth tables rather than a single row in propositional statements."
+      ],
+      "explanation": {
+        "learning_objective": "Apply canonical disjunctive form with explicit justification.",
+        "correct_rationale": "A minterm fixes all three truth values. Include precisely the true rows FFFTTTTF: (¬p ∧ q ∧ r) ∨ (p ∧ ¬q ∧ ¬r) ∨ (p ∧ ¬q ∧ r) ∨ (p ∧ q ∧ ¬r). Each included term is true on one row and no others.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "This single minterm does not describe the full set of satisfying assignments."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This contradiction is always false, but the given formula has a true row."
+          },
+          {
+            "option_index": 3,
+            "rationale": "These minterms describe the false rows, so this is the negation of the formula."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "dnf-equivalence",
+        "expression": "p ⊕ (q ∧ r)"
+      }
+    },
+    {
+      "id": "logic-028",
+      "topic": "Negation and model counting",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "How many assignments make ¬(p ⊕ (q ∧ r)) true?",
+      "context": "p, q, r are propositions. → is material implication; ↔ is equivalence; ⊕ is exclusive OR. For parity XOR, associate left to right.",
+      "options": [
+        "4",
+        "8",
+        "5",
+        "0"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "The truth sets of a proposition and its negation partition all assignments.",
+        "Track witness dependence in quantified statements; compare entire truth tables rather than a single row in propositional statements."
+      ],
+      "explanation": {
+        "learning_objective": "Apply negation and model counting with explicit justification.",
+        "correct_rationale": "Negation reverses every output of FFFTTTTF. Of eight assignments, 4 satisfy the original, so 8 − 4 = 4 satisfy its negation.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "The proposed result 8 fails the required computation: Negation reverses every output of FFFTTTTF. Of eight assignments, 4 satisfy the original, so 8 − 4 = 4 satisfy its negation."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The proposed result 5 fails the required computation: Negation reverses every output of FFFTTTTF. Of eight assignments, 4 satisfy the original, so 8 − 4 = 4 satisfy its negation."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The proposed result 0 fails the required computation: Negation reverses every output of FFFTTTTF. Of eight assignments, 4 satisfy the original, so 8 − 4 = 4 satisfy its negation."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "negated-truth-count",
+        "expression": "p ⊕ (q ∧ r)",
+        "expected": 4
+      }
+    },
+    {
+      "id": "logic-029",
+      "topic": "Truth-table evaluation",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "For F = (p ↔ q) ∨ r, which output column follows the input order FFF, FFT, FTF, FTT, TFF, TFT, TTF, TTT?",
+      "context": "p, q, r are propositions. → is material implication; ↔ is equivalence; ⊕ is exclusive OR. For parity XOR, associate left to right.",
+      "options": [
+        "TTFTFTTF",
+        "FTFTFTTT",
+        "TTFTFTTT",
+        "TTFFFTTT"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "For each row, evaluate parentheses first. An implication is false only when its antecedent is true and its consequent is false.",
+        "Track witness dependence in quantified statements; compare entire truth tables rather than a single row in propositional statements."
+      ],
+      "explanation": {
+        "learning_objective": "Apply truth-table evaluation with explicit justification.",
+        "correct_rationale": "Evaluate the connectives from the innermost parentheses. In order: (F, F, F): T; (F, F, T): T; (F, T, F): F; (F, T, T): T; (T, F, F): F; (T, F, T): T; (T, T, F): T; (T, T, T): T. Thus the column is TTFTFTTT.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This column changes a required row. The actual evaluation is (F, F, F): T; (F, F, T): T; (F, T, F): F; (F, T, T): T; (T, F, F): F; (T, F, T): T; (T, T, F): T; (T, T, T): T."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This column changes a required row. The actual evaluation is (F, F, F): T; (F, F, T): T; (F, T, F): F; (F, T, T): T; (T, F, F): F; (T, F, T): T; (T, T, F): T; (T, T, T): T."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This column changes a required row. The actual evaluation is (F, F, F): T; (F, F, T): T; (F, T, F): F; (F, T, T): T; (T, F, F): F; (T, F, T): T; (T, T, F): T; (T, T, T): T."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "truth-column",
+        "expression": "(p ↔ q) ∨ r",
+        "expected": "TTFTFTTT"
+      }
+    },
+    {
+      "id": "logic-030",
+      "topic": "Satisfying valuations",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "How many assignments to p, q, r satisfy (p ↔ q) ∨ r?",
+      "context": "p, q, r are propositions. → is material implication; ↔ is equivalence; ⊕ is exclusive OR. For parity XOR, associate left to right.",
+      "options": [
+        "2",
+        "8",
+        "4",
+        "6"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "List the eight assignments systematically; count only rows in which the entire formula is true.",
+        "Track witness dependence in quantified statements; compare entire truth tables rather than a single row in propositional statements."
+      ],
+      "explanation": {
+        "learning_objective": "Apply satisfying valuations with explicit justification.",
+        "correct_rationale": "There are 2³ = 8 assignments. The output column is TTFTFTTT; exactly 6 positions are T.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The proposed result 2 fails the required computation: There are 2³ = 8 assignments. The output column is TTFTFTTT; exactly 6 positions are T."
+          },
+          {
+            "option_index": 1,
+            "rationale": "The proposed result 8 fails the required computation: There are 2³ = 8 assignments. The output column is TTFTFTTT; exactly 6 positions are T."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The proposed result 4 fails the required computation: There are 2³ = 8 assignments. The output column is TTFTFTTT; exactly 6 positions are T."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "truth-count",
+        "expression": "(p ↔ q) ∨ r",
+        "expected": 6
+      }
+    },
+    {
+      "id": "logic-031",
+      "topic": "Canonical disjunctive form",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "Which sum of minterms is equivalent to (p ↔ q) ∨ r?",
+      "context": "p, q, r are propositions. → is material implication; ↔ is equivalence; ⊕ is exclusive OR. For parity XOR, associate left to right.",
+      "options": [
+        "(¬p ∧ q ∧ ¬r) ∨ (p ∧ ¬q ∧ ¬r)",
+        "p ∧ q ∧ r",
+        "p ∧ ¬p",
+        "(¬p ∧ ¬q ∧ ¬r) ∨ (¬p ∧ ¬q ∧ r) ∨ (¬p ∧ q ∧ r) ∨ (p ∧ ¬q ∧ r) ∨ (p ∧ q ∧ ¬r) ∨ (p ∧ q ∧ r)"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "A canonical disjunctive form includes one conjunction per true row, using a negated variable for a false input.",
+        "Track witness dependence in quantified statements; compare entire truth tables rather than a single row in propositional statements."
+      ],
+      "explanation": {
+        "learning_objective": "Apply canonical disjunctive form with explicit justification.",
+        "correct_rationale": "A minterm fixes all three truth values. Include precisely the true rows TTFTFTTT: (¬p ∧ ¬q ∧ ¬r) ∨ (¬p ∧ ¬q ∧ r) ∨ (¬p ∧ q ∧ r) ∨ (p ∧ ¬q ∧ r) ∨ (p ∧ q ∧ ¬r) ∨ (p ∧ q ∧ r). Each included term is true on one row and no others.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "These minterms describe the false rows, so this is the negation of the formula."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This single minterm does not describe the full set of satisfying assignments."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This contradiction is always false, but the given formula has a true row."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "dnf-equivalence",
+        "expression": "(p ↔ q) ∨ r"
+      }
+    },
+    {
+      "id": "logic-032",
+      "topic": "Negation and model counting",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "How many assignments make ¬((p ↔ q) ∨ r) true?",
+      "context": "p, q, r are propositions. → is material implication; ↔ is equivalence; ⊕ is exclusive OR. For parity XOR, associate left to right.",
+      "options": [
+        "2",
+        "0",
+        "8",
+        "6"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "The truth sets of a proposition and its negation partition all assignments.",
+        "Track witness dependence in quantified statements; compare entire truth tables rather than a single row in propositional statements."
+      ],
+      "explanation": {
+        "learning_objective": "Apply negation and model counting with explicit justification.",
+        "correct_rationale": "Negation reverses every output of TTFTFTTT. Of eight assignments, 6 satisfy the original, so 8 − 6 = 2 satisfy its negation.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "The proposed result 0 fails the required computation: Negation reverses every output of TTFTFTTT. Of eight assignments, 6 satisfy the original, so 8 − 6 = 2 satisfy its negation."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The proposed result 8 fails the required computation: Negation reverses every output of TTFTFTTT. Of eight assignments, 6 satisfy the original, so 8 − 6 = 2 satisfy its negation."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The proposed result 6 fails the required computation: Negation reverses every output of TTFTFTTT. Of eight assignments, 6 satisfy the original, so 8 − 6 = 2 satisfy its negation."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "negated-truth-count",
+        "expression": "(p ↔ q) ∨ r",
+        "expected": 2
+      }
+    },
+    {
+      "id": "logic-033",
+      "topic": "Truth-table evaluation",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "For F = (p ⊕ q) ∧ ¬r, which output column follows the input order FFF, FFT, FTF, FTT, TFF, TFT, TTF, TTT?",
+      "context": "p, q, r are propositions. → is material implication; ↔ is equivalence; ⊕ is exclusive OR. For parity XOR, associate left to right.",
+      "options": [
+        "FFTFTFFF",
+        "FFTTTFFF",
+        "TFTFTFFF",
+        "FFTFTFFT"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "For each row, evaluate parentheses first. An implication is false only when its antecedent is true and its consequent is false.",
+        "Track witness dependence in quantified statements; compare entire truth tables rather than a single row in propositional statements."
+      ],
+      "explanation": {
+        "learning_objective": "Apply truth-table evaluation with explicit justification.",
+        "correct_rationale": "Evaluate the connectives from the innermost parentheses. In order: (F, F, F): F; (F, F, T): F; (F, T, F): T; (F, T, T): F; (T, F, F): T; (T, F, T): F; (T, T, F): F; (T, T, T): F. Thus the column is FFTFTFFF.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "This column changes a required row. The actual evaluation is (F, F, F): F; (F, F, T): F; (F, T, F): T; (F, T, T): F; (T, F, F): T; (T, F, T): F; (T, T, F): F; (T, T, T): F."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This column changes a required row. The actual evaluation is (F, F, F): F; (F, F, T): F; (F, T, F): T; (F, T, T): F; (T, F, F): T; (T, F, T): F; (T, T, F): F; (T, T, T): F."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This column changes a required row. The actual evaluation is (F, F, F): F; (F, F, T): F; (F, T, F): T; (F, T, T): F; (T, F, F): T; (T, F, T): F; (T, T, F): F; (T, T, T): F."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "truth-column",
+        "expression": "(p ⊕ q) ∧ ¬r",
+        "expected": "FFTFTFFF"
+      }
+    },
+    {
+      "id": "logic-034",
+      "topic": "Satisfying valuations",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "How many assignments to p, q, r satisfy (p ⊕ q) ∧ ¬r?",
+      "context": "p, q, r are propositions. → is material implication; ↔ is equivalence; ⊕ is exclusive OR. For parity XOR, associate left to right.",
+      "options": [
+        "6",
+        "8",
+        "4",
+        "2"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "List the eight assignments systematically; count only rows in which the entire formula is true.",
+        "Track witness dependence in quantified statements; compare entire truth tables rather than a single row in propositional statements."
+      ],
+      "explanation": {
+        "learning_objective": "Apply satisfying valuations with explicit justification.",
+        "correct_rationale": "There are 2³ = 8 assignments. The output column is FFTFTFFF; exactly 2 positions are T.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The proposed result 6 fails the required computation: There are 2³ = 8 assignments. The output column is FFTFTFFF; exactly 2 positions are T."
+          },
+          {
+            "option_index": 1,
+            "rationale": "The proposed result 8 fails the required computation: There are 2³ = 8 assignments. The output column is FFTFTFFF; exactly 2 positions are T."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The proposed result 4 fails the required computation: There are 2³ = 8 assignments. The output column is FFTFTFFF; exactly 2 positions are T."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "truth-count",
+        "expression": "(p ⊕ q) ∧ ¬r",
+        "expected": 2
+      }
+    },
+    {
+      "id": "logic-035",
+      "topic": "Canonical disjunctive form",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Which sum of minterms is equivalent to (p ⊕ q) ∧ ¬r?",
+      "context": "p, q, r are propositions. → is material implication; ↔ is equivalence; ⊕ is exclusive OR. For parity XOR, associate left to right.",
+      "options": [
+        "p ∧ ¬p",
+        "(¬p ∧ ¬q ∧ ¬r) ∨ (¬p ∧ ¬q ∧ r) ∨ (¬p ∧ q ∧ r) ∨ (p ∧ ¬q ∧ r) ∨ (p ∧ q ∧ ¬r) ∨ (p ∧ q ∧ r)",
+        "p ∧ q ∧ r",
+        "(¬p ∧ q ∧ ¬r) ∨ (p ∧ ¬q ∧ ¬r)"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "A canonical disjunctive form includes one conjunction per true row, using a negated variable for a false input.",
+        "Track witness dependence in quantified statements; compare entire truth tables rather than a single row in propositional statements."
+      ],
+      "explanation": {
+        "learning_objective": "Apply canonical disjunctive form with explicit justification.",
+        "correct_rationale": "A minterm fixes all three truth values. Include precisely the true rows FFTFTFFF: (¬p ∧ q ∧ ¬r) ∨ (p ∧ ¬q ∧ ¬r). Each included term is true on one row and no others.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This contradiction is always false, but the given formula has a true row."
+          },
+          {
+            "option_index": 1,
+            "rationale": "These minterms describe the false rows, so this is the negation of the formula."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This single minterm does not describe the full set of satisfying assignments."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "dnf-equivalence",
+        "expression": "(p ⊕ q) ∧ ¬r"
+      }
+    },
+    {
+      "id": "logic-036",
+      "topic": "Negation and model counting",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "How many assignments make ¬((p ⊕ q) ∧ ¬r) true?",
+      "context": "p, q, r are propositions. → is material implication; ↔ is equivalence; ⊕ is exclusive OR. For parity XOR, associate left to right.",
+      "options": [
+        "6",
+        "0",
+        "2",
+        "8"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "The truth sets of a proposition and its negation partition all assignments.",
+        "Track witness dependence in quantified statements; compare entire truth tables rather than a single row in propositional statements."
+      ],
+      "explanation": {
+        "learning_objective": "Apply negation and model counting with explicit justification.",
+        "correct_rationale": "Negation reverses every output of FFTFTFFF. Of eight assignments, 2 satisfy the original, so 8 − 2 = 6 satisfy its negation.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "The proposed result 0 fails the required computation: Negation reverses every output of FFTFTFFF. Of eight assignments, 2 satisfy the original, so 8 − 2 = 6 satisfy its negation."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The proposed result 2 fails the required computation: Negation reverses every output of FFTFTFFF. Of eight assignments, 2 satisfy the original, so 8 − 2 = 6 satisfy its negation."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The proposed result 8 fails the required computation: Negation reverses every output of FFTFTFFF. Of eight assignments, 2 satisfy the original, so 8 − 2 = 6 satisfy its negation."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "negated-truth-count",
+        "expression": "(p ⊕ q) ∧ ¬r",
+        "expected": 6
+      }
+    },
+    {
+      "id": "logic-037",
+      "topic": "Truth-table evaluation",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "For F = (p → q) ∧ (q → r), which output column follows the input order FFF, FFT, FTF, FTT, TFF, TFT, TTF, TTT?",
+      "context": "p, q, r are propositions. → is material implication; ↔ is equivalence; ⊕ is exclusive OR. For parity XOR, associate left to right.",
+      "options": [
+        "TTFFFFFT",
+        "TTFTFFFF",
+        "TTFTFFFT",
+        "FTFTFFFT"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "For each row, evaluate parentheses first. An implication is false only when its antecedent is true and its consequent is false.",
+        "Track witness dependence in quantified statements; compare entire truth tables rather than a single row in propositional statements."
+      ],
+      "explanation": {
+        "learning_objective": "Apply truth-table evaluation with explicit justification.",
+        "correct_rationale": "Evaluate the connectives from the innermost parentheses. In order: (F, F, F): T; (F, F, T): T; (F, T, F): F; (F, T, T): T; (T, F, F): F; (T, F, T): F; (T, T, F): F; (T, T, T): T. Thus the column is TTFTFFFT.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This column changes a required row. The actual evaluation is (F, F, F): T; (F, F, T): T; (F, T, F): F; (F, T, T): T; (T, F, F): F; (T, F, T): F; (T, T, F): F; (T, T, T): T."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This column changes a required row. The actual evaluation is (F, F, F): T; (F, F, T): T; (F, T, F): F; (F, T, T): T; (T, F, F): F; (T, F, T): F; (T, T, F): F; (T, T, T): T."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This column changes a required row. The actual evaluation is (F, F, F): T; (F, F, T): T; (F, T, F): F; (F, T, T): T; (T, F, F): F; (T, F, T): F; (T, T, F): F; (T, T, T): T."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "truth-column",
+        "expression": "(p → q) ∧ (q → r)",
+        "expected": "TTFTFFFT"
+      }
+    },
+    {
+      "id": "logic-038",
+      "topic": "Satisfying valuations",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "How many assignments to p, q, r satisfy (p → q) ∧ (q → r)?",
+      "context": "p, q, r are propositions. → is material implication; ↔ is equivalence; ⊕ is exclusive OR. For parity XOR, associate left to right.",
+      "options": [
+        "4",
+        "8",
+        "0",
+        "5"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "List the eight assignments systematically; count only rows in which the entire formula is true.",
+        "Track witness dependence in quantified statements; compare entire truth tables rather than a single row in propositional statements."
+      ],
+      "explanation": {
+        "learning_objective": "Apply satisfying valuations with explicit justification.",
+        "correct_rationale": "There are 2³ = 8 assignments. The output column is TTFTFFFT; exactly 4 positions are T.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "The proposed result 8 fails the required computation: There are 2³ = 8 assignments. The output column is TTFTFFFT; exactly 4 positions are T."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The proposed result 0 fails the required computation: There are 2³ = 8 assignments. The output column is TTFTFFFT; exactly 4 positions are T."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The proposed result 5 fails the required computation: There are 2³ = 8 assignments. The output column is TTFTFFFT; exactly 4 positions are T."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "truth-count",
+        "expression": "(p → q) ∧ (q → r)",
+        "expected": 4
+      }
+    },
+    {
+      "id": "logic-039",
+      "topic": "Canonical disjunctive form",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Which sum of minterms is equivalent to (p → q) ∧ (q → r)?",
+      "context": "p, q, r are propositions. → is material implication; ↔ is equivalence; ⊕ is exclusive OR. For parity XOR, associate left to right.",
+      "options": [
+        "p ∧ q ∧ r",
+        "(¬p ∧ q ∧ ¬r) ∨ (p ∧ ¬q ∧ ¬r) ∨ (p ∧ ¬q ∧ r) ∨ (p ∧ q ∧ ¬r)",
+        "p ∧ ¬p",
+        "(¬p ∧ ¬q ∧ ¬r) ∨ (¬p ∧ ¬q ∧ r) ∨ (¬p ∧ q ∧ r) ∨ (p ∧ q ∧ r)"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "A canonical disjunctive form includes one conjunction per true row, using a negated variable for a false input.",
+        "Track witness dependence in quantified statements; compare entire truth tables rather than a single row in propositional statements."
+      ],
+      "explanation": {
+        "learning_objective": "Apply canonical disjunctive form with explicit justification.",
+        "correct_rationale": "A minterm fixes all three truth values. Include precisely the true rows TTFTFFFT: (¬p ∧ ¬q ∧ ¬r) ∨ (¬p ∧ ¬q ∧ r) ∨ (¬p ∧ q ∧ r) ∨ (p ∧ q ∧ r). Each included term is true on one row and no others.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This single minterm does not describe the full set of satisfying assignments."
+          },
+          {
+            "option_index": 1,
+            "rationale": "These minterms describe the false rows, so this is the negation of the formula."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This contradiction is always false, but the given formula has a true row."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "dnf-equivalence",
+        "expression": "(p → q) ∧ (q → r)"
+      }
+    },
+    {
+      "id": "logic-040",
+      "topic": "Negation and model counting",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "How many assignments make ¬((p → q) ∧ (q → r)) true?",
+      "context": "p, q, r are propositions. → is material implication; ↔ is equivalence; ⊕ is exclusive OR. For parity XOR, associate left to right.",
+      "options": [
+        "5",
+        "8",
+        "4",
+        "0"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "The truth sets of a proposition and its negation partition all assignments.",
+        "Track witness dependence in quantified statements; compare entire truth tables rather than a single row in propositional statements."
+      ],
+      "explanation": {
+        "learning_objective": "Apply negation and model counting with explicit justification.",
+        "correct_rationale": "Negation reverses every output of TTFTFFFT. Of eight assignments, 4 satisfy the original, so 8 − 4 = 4 satisfy its negation.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The proposed result 5 fails the required computation: Negation reverses every output of TTFTFFFT. Of eight assignments, 4 satisfy the original, so 8 − 4 = 4 satisfy its negation."
+          },
+          {
+            "option_index": 1,
+            "rationale": "The proposed result 8 fails the required computation: Negation reverses every output of TTFTFFFT. Of eight assignments, 4 satisfy the original, so 8 − 4 = 4 satisfy its negation."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The proposed result 0 fails the required computation: Negation reverses every output of TTFTFFFT. Of eight assignments, 4 satisfy the original, so 8 − 4 = 4 satisfy its negation."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "negated-truth-count",
+        "expression": "(p → q) ∧ (q → r)",
+        "expected": 4
+      }
+    },
+    {
+      "id": "logic-041",
+      "topic": "Truth-table evaluation",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "For F = (p ∨ q) ∧ (¬p ∨ r), which output column follows the input order FFF, FFT, FTF, FTT, TFF, TFT, TTF, TTT?",
+      "context": "p, q, r are propositions. → is material implication; ↔ is equivalence; ⊕ is exclusive OR. For parity XOR, associate left to right.",
+      "options": [
+        "FFTTFTFF",
+        "FFTFFTFT",
+        "TFTTFTFT",
+        "FFTTFTFT"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "For each row, evaluate parentheses first. An implication is false only when its antecedent is true and its consequent is false.",
+        "Track witness dependence in quantified statements; compare entire truth tables rather than a single row in propositional statements."
+      ],
+      "explanation": {
+        "learning_objective": "Apply truth-table evaluation with explicit justification.",
+        "correct_rationale": "Evaluate the connectives from the innermost parentheses. In order: (F, F, F): F; (F, F, T): F; (F, T, F): T; (F, T, T): T; (T, F, F): F; (T, F, T): T; (T, T, F): F; (T, T, T): T. Thus the column is FFTTFTFT.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This column changes a required row. The actual evaluation is (F, F, F): F; (F, F, T): F; (F, T, F): T; (F, T, T): T; (T, F, F): F; (T, F, T): T; (T, T, F): F; (T, T, T): T."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This column changes a required row. The actual evaluation is (F, F, F): F; (F, F, T): F; (F, T, F): T; (F, T, T): T; (T, F, F): F; (T, F, T): T; (T, T, F): F; (T, T, T): T."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This column changes a required row. The actual evaluation is (F, F, F): F; (F, F, T): F; (F, T, F): T; (F, T, T): T; (T, F, F): F; (T, F, T): T; (T, T, F): F; (T, T, T): T."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "truth-column",
+        "expression": "(p ∨ q) ∧ (¬p ∨ r)",
+        "expected": "FFTTFTFT"
+      }
+    },
+    {
+      "id": "logic-042",
+      "topic": "Satisfying valuations",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "How many assignments to p, q, r satisfy (p ∨ q) ∧ (¬p ∨ r)?",
+      "context": "p, q, r are propositions. → is material implication; ↔ is equivalence; ⊕ is exclusive OR. For parity XOR, associate left to right.",
+      "options": [
+        "0",
+        "4",
+        "5",
+        "8"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "List the eight assignments systematically; count only rows in which the entire formula is true.",
+        "Track witness dependence in quantified statements; compare entire truth tables rather than a single row in propositional statements."
+      ],
+      "explanation": {
+        "learning_objective": "Apply satisfying valuations with explicit justification.",
+        "correct_rationale": "There are 2³ = 8 assignments. The output column is FFTTFTFT; exactly 4 positions are T.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The proposed result 0 fails the required computation: There are 2³ = 8 assignments. The output column is FFTTFTFT; exactly 4 positions are T."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The proposed result 5 fails the required computation: There are 2³ = 8 assignments. The output column is FFTTFTFT; exactly 4 positions are T."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The proposed result 8 fails the required computation: There are 2³ = 8 assignments. The output column is FFTTFTFT; exactly 4 positions are T."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "truth-count",
+        "expression": "(p ∨ q) ∧ (¬p ∨ r)",
+        "expected": 4
+      }
+    },
+    {
+      "id": "logic-043",
+      "topic": "Canonical disjunctive form",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Which sum of minterms is equivalent to (p ∨ q) ∧ (¬p ∨ r)?",
+      "context": "p, q, r are propositions. → is material implication; ↔ is equivalence; ⊕ is exclusive OR. For parity XOR, associate left to right.",
+      "options": [
+        "(¬p ∧ ¬q ∧ ¬r) ∨ (¬p ∧ ¬q ∧ r) ∨ (p ∧ ¬q ∧ ¬r) ∨ (p ∧ q ∧ ¬r)",
+        "p ∧ ¬p",
+        "(¬p ∧ q ∧ ¬r) ∨ (¬p ∧ q ∧ r) ∨ (p ∧ ¬q ∧ r) ∨ (p ∧ q ∧ r)",
+        "p ∧ q ∧ r"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "A canonical disjunctive form includes one conjunction per true row, using a negated variable for a false input.",
+        "Track witness dependence in quantified statements; compare entire truth tables rather than a single row in propositional statements."
+      ],
+      "explanation": {
+        "learning_objective": "Apply canonical disjunctive form with explicit justification.",
+        "correct_rationale": "A minterm fixes all three truth values. Include precisely the true rows FFTTFTFT: (¬p ∧ q ∧ ¬r) ∨ (¬p ∧ q ∧ r) ∨ (p ∧ ¬q ∧ r) ∨ (p ∧ q ∧ r). Each included term is true on one row and no others.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "These minterms describe the false rows, so this is the negation of the formula."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This contradiction is always false, but the given formula has a true row."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This single minterm does not describe the full set of satisfying assignments."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "dnf-equivalence",
+        "expression": "(p ∨ q) ∧ (¬p ∨ r)"
+      }
+    },
+    {
+      "id": "logic-044",
+      "topic": "Negation and model counting",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "How many assignments make ¬((p ∨ q) ∧ (¬p ∨ r)) true?",
+      "context": "p, q, r are propositions. → is material implication; ↔ is equivalence; ⊕ is exclusive OR. For parity XOR, associate left to right.",
+      "options": [
+        "4",
+        "5",
+        "0",
+        "8"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "The truth sets of a proposition and its negation partition all assignments.",
+        "Track witness dependence in quantified statements; compare entire truth tables rather than a single row in propositional statements."
+      ],
+      "explanation": {
+        "learning_objective": "Apply negation and model counting with explicit justification.",
+        "correct_rationale": "Negation reverses every output of FFTTFTFT. Of eight assignments, 4 satisfy the original, so 8 − 4 = 4 satisfy its negation.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "The proposed result 5 fails the required computation: Negation reverses every output of FFTTFTFT. Of eight assignments, 4 satisfy the original, so 8 − 4 = 4 satisfy its negation."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The proposed result 0 fails the required computation: Negation reverses every output of FFTTFTFT. Of eight assignments, 4 satisfy the original, so 8 − 4 = 4 satisfy its negation."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The proposed result 8 fails the required computation: Negation reverses every output of FFTTFTFT. Of eight assignments, 4 satisfy the original, so 8 − 4 = 4 satisfy its negation."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "negated-truth-count",
+        "expression": "(p ∨ q) ∧ (¬p ∨ r)",
+        "expected": 4
+      }
+    },
+    {
+      "id": "logic-045",
+      "topic": "Truth-table evaluation",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "For F = (p ∧ q) ∨ (¬p ∧ r), which output column follows the input order FFF, FFT, FTF, FTT, TFF, TFT, TTF, TTT?",
+      "context": "p, q, r are propositions. → is material implication; ↔ is equivalence; ⊕ is exclusive OR. For parity XOR, associate left to right.",
+      "options": [
+        "TTFTFFTT",
+        "FTFTFFTT",
+        "FTFFFFTT",
+        "FTFTFFTF"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "For each row, evaluate parentheses first. An implication is false only when its antecedent is true and its consequent is false.",
+        "Track witness dependence in quantified statements; compare entire truth tables rather than a single row in propositional statements."
+      ],
+      "explanation": {
+        "learning_objective": "Apply truth-table evaluation with explicit justification.",
+        "correct_rationale": "Evaluate the connectives from the innermost parentheses. In order: (F, F, F): F; (F, F, T): T; (F, T, F): F; (F, T, T): T; (T, F, F): F; (T, F, T): F; (T, T, F): T; (T, T, T): T. Thus the column is FTFTFFTT.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This column changes a required row. The actual evaluation is (F, F, F): F; (F, F, T): T; (F, T, F): F; (F, T, T): T; (T, F, F): F; (T, F, T): F; (T, T, F): T; (T, T, T): T."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This column changes a required row. The actual evaluation is (F, F, F): F; (F, F, T): T; (F, T, F): F; (F, T, T): T; (T, F, F): F; (T, F, T): F; (T, T, F): T; (T, T, T): T."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This column changes a required row. The actual evaluation is (F, F, F): F; (F, F, T): T; (F, T, F): F; (F, T, T): T; (T, F, F): F; (T, F, T): F; (T, T, F): T; (T, T, T): T."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "truth-column",
+        "expression": "(p ∧ q) ∨ (¬p ∧ r)",
+        "expected": "FTFTFFTT"
+      }
+    },
+    {
+      "id": "logic-046",
+      "topic": "Satisfying valuations",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "How many assignments to p, q, r satisfy (p ∧ q) ∨ (¬p ∧ r)?",
+      "context": "p, q, r are propositions. → is material implication; ↔ is equivalence; ⊕ is exclusive OR. For parity XOR, associate left to right.",
+      "options": [
+        "8",
+        "0",
+        "5",
+        "4"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "List the eight assignments systematically; count only rows in which the entire formula is true.",
+        "Track witness dependence in quantified statements; compare entire truth tables rather than a single row in propositional statements."
+      ],
+      "explanation": {
+        "learning_objective": "Apply satisfying valuations with explicit justification.",
+        "correct_rationale": "There are 2³ = 8 assignments. The output column is FTFTFFTT; exactly 4 positions are T.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The proposed result 8 fails the required computation: There are 2³ = 8 assignments. The output column is FTFTFFTT; exactly 4 positions are T."
+          },
+          {
+            "option_index": 1,
+            "rationale": "The proposed result 0 fails the required computation: There are 2³ = 8 assignments. The output column is FTFTFFTT; exactly 4 positions are T."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The proposed result 5 fails the required computation: There are 2³ = 8 assignments. The output column is FTFTFFTT; exactly 4 positions are T."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "truth-count",
+        "expression": "(p ∧ q) ∨ (¬p ∧ r)",
+        "expected": 4
+      }
+    },
+    {
+      "id": "logic-047",
+      "topic": "Canonical disjunctive form",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Which sum of minterms is equivalent to (p ∧ q) ∨ (¬p ∧ r)?",
+      "context": "p, q, r are propositions. → is material implication; ↔ is equivalence; ⊕ is exclusive OR. For parity XOR, associate left to right.",
+      "options": [
+        "p ∧ q ∧ r",
+        "(¬p ∧ ¬q ∧ ¬r) ∨ (¬p ∧ q ∧ ¬r) ∨ (p ∧ ¬q ∧ ¬r) ∨ (p ∧ ¬q ∧ r)",
+        "p ∧ ¬p",
+        "(¬p ∧ ¬q ∧ r) ∨ (¬p ∧ q ∧ r) ∨ (p ∧ q ∧ ¬r) ∨ (p ∧ q ∧ r)"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "A canonical disjunctive form includes one conjunction per true row, using a negated variable for a false input.",
+        "Track witness dependence in quantified statements; compare entire truth tables rather than a single row in propositional statements."
+      ],
+      "explanation": {
+        "learning_objective": "Apply canonical disjunctive form with explicit justification.",
+        "correct_rationale": "A minterm fixes all three truth values. Include precisely the true rows FTFTFFTT: (¬p ∧ ¬q ∧ r) ∨ (¬p ∧ q ∧ r) ∨ (p ∧ q ∧ ¬r) ∨ (p ∧ q ∧ r). Each included term is true on one row and no others.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This single minterm does not describe the full set of satisfying assignments."
+          },
+          {
+            "option_index": 1,
+            "rationale": "These minterms describe the false rows, so this is the negation of the formula."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This contradiction is always false, but the given formula has a true row."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "dnf-equivalence",
+        "expression": "(p ∧ q) ∨ (¬p ∧ r)"
+      }
+    },
+    {
+      "id": "logic-048",
+      "topic": "Negation and model counting",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "How many assignments make ¬((p ∧ q) ∨ (¬p ∧ r)) true?",
+      "context": "p, q, r are propositions. → is material implication; ↔ is equivalence; ⊕ is exclusive OR. For parity XOR, associate left to right.",
+      "options": [
+        "0",
+        "4",
+        "8",
+        "5"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "The truth sets of a proposition and its negation partition all assignments.",
+        "Track witness dependence in quantified statements; compare entire truth tables rather than a single row in propositional statements."
+      ],
+      "explanation": {
+        "learning_objective": "Apply negation and model counting with explicit justification.",
+        "correct_rationale": "Negation reverses every output of FTFTFFTT. Of eight assignments, 4 satisfy the original, so 8 − 4 = 4 satisfy its negation.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The proposed result 0 fails the required computation: Negation reverses every output of FTFTFFTT. Of eight assignments, 4 satisfy the original, so 8 − 4 = 4 satisfy its negation."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The proposed result 8 fails the required computation: Negation reverses every output of FTFTFFTT. Of eight assignments, 4 satisfy the original, so 8 − 4 = 4 satisfy its negation."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The proposed result 5 fails the required computation: Negation reverses every output of FTFTFFTT. Of eight assignments, 4 satisfy the original, so 8 − 4 = 4 satisfy its negation."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "negated-truth-count",
+        "expression": "(p ∧ q) ∨ (¬p ∧ r)",
+        "expected": 4
+      }
+    },
+    {
+      "id": "logic-049",
+      "topic": "Truth-table evaluation",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "For F = ¬(p ↔ q) ∨ ¬r, which output column follows the input order FFF, FFT, FTF, FTT, TFF, TFT, TTF, TTT?",
+      "context": "p, q, r are propositions. → is material implication; ↔ is equivalence; ⊕ is exclusive OR. For parity XOR, associate left to right.",
+      "options": [
+        "TFTTTTTF",
+        "TFTTTTTT",
+        "TFTFTTTF",
+        "FFTTTTTF"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "For each row, evaluate parentheses first. An implication is false only when its antecedent is true and its consequent is false.",
+        "Track witness dependence in quantified statements; compare entire truth tables rather than a single row in propositional statements."
+      ],
+      "explanation": {
+        "learning_objective": "Apply truth-table evaluation with explicit justification.",
+        "correct_rationale": "Evaluate the connectives from the innermost parentheses. In order: (F, F, F): T; (F, F, T): F; (F, T, F): T; (F, T, T): T; (T, F, F): T; (T, F, T): T; (T, T, F): T; (T, T, T): F. Thus the column is TFTTTTTF.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "This column changes a required row. The actual evaluation is (F, F, F): T; (F, F, T): F; (F, T, F): T; (F, T, T): T; (T, F, F): T; (T, F, T): T; (T, T, F): T; (T, T, T): F."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This column changes a required row. The actual evaluation is (F, F, F): T; (F, F, T): F; (F, T, F): T; (F, T, T): T; (T, F, F): T; (T, F, T): T; (T, T, F): T; (T, T, T): F."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This column changes a required row. The actual evaluation is (F, F, F): T; (F, F, T): F; (F, T, F): T; (F, T, T): T; (T, F, F): T; (T, F, T): T; (T, T, F): T; (T, T, T): F."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "truth-column",
+        "expression": "¬(p ↔ q) ∨ ¬r",
+        "expected": "TFTTTTTF"
+      }
+    },
+    {
+      "id": "logic-050",
+      "topic": "Satisfying valuations",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "How many assignments to p, q, r satisfy ¬(p ↔ q) ∨ ¬r?",
+      "context": "p, q, r are propositions. → is material implication; ↔ is equivalence; ⊕ is exclusive OR. For parity XOR, associate left to right.",
+      "options": [
+        "6",
+        "2",
+        "8",
+        "4"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "List the eight assignments systematically; count only rows in which the entire formula is true.",
+        "Track witness dependence in quantified statements; compare entire truth tables rather than a single row in propositional statements."
+      ],
+      "explanation": {
+        "learning_objective": "Apply satisfying valuations with explicit justification.",
+        "correct_rationale": "There are 2³ = 8 assignments. The output column is TFTTTTTF; exactly 6 positions are T.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "The proposed result 2 fails the required computation: There are 2³ = 8 assignments. The output column is TFTTTTTF; exactly 6 positions are T."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The proposed result 8 fails the required computation: There are 2³ = 8 assignments. The output column is TFTTTTTF; exactly 6 positions are T."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The proposed result 4 fails the required computation: There are 2³ = 8 assignments. The output column is TFTTTTTF; exactly 6 positions are T."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "truth-count",
+        "expression": "¬(p ↔ q) ∨ ¬r",
+        "expected": 6
+      }
+    }
+  ]
+}

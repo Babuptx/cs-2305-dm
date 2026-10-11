@@ -1,0 +1,2482 @@
+{
+  "schema_version": 1,
+  "block_id": "graphs-number-block-02",
+  "pillar_id": "graphs-number",
+  "block_title": "Graph theory and number theory · Block 2",
+  "questions": [
+    {
+      "id": "graphs-number-051",
+      "topic": "Euler trails",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Which statement about traversing every edge exactly once is correct?",
+      "context": "Petersen graph. A finite simple undirected graph has vertices 0,…,9 and exactly these edges: (0,1), (1,2), (2,3), (3,4), (4,0), (0,5), (1,6), (2,7), (3,8), (4,9), (5,7), (6,8), (7,9), (8,5), (9,6).",
+      "options": [
+        "An open Euler trail exists, but no closed one",
+        "Every simple graph automatically has a closed Euler trail",
+        "A closed Euler trail exists",
+        "No trail uses every edge exactly once"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Check connectivity among vertices incident to edges, then count odd degrees.",
+        "Check graph claims against the full edge list. Check arithmetic claims by substituting the proposed quotient, residue, divisor, or inverse."
+      ],
+      "explanation": {
+        "learning_objective": "Apply euler trails with explicit justification.",
+        "correct_rationale": "The odd-degree vertices are [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]; the edge-containing component count is 1. An Euler trail requires edge connectivity and zero or two odd vertices. Zero gives a closed trail; two gives an open one. Thus: no trail uses every edge exactly once.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The Euler conditions rule out this statement. The odd-degree vertices are [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]; the edge-containing component count is 1. An Euler trail requires edge connectivity and zero or two odd vertices. Zero gives a closed trail; two gives an open one. Thus: no trail uses every edge exactly once."
+          },
+          {
+            "option_index": 1,
+            "rationale": "The Euler conditions rule out this statement. The odd-degree vertices are [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]; the edge-containing component count is 1. An Euler trail requires edge connectivity and zero or two odd vertices. Zero gives a closed trail; two gives an open one. Thus: no trail uses every edge exactly once."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The Euler conditions rule out this statement. The odd-degree vertices are [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]; the edge-containing component count is 1. An Euler trail requires edge connectivity and zero or two odd vertices. Zero gives a closed trail; two gives an open one. Thus: no trail uses every edge exactly once."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "graph-euler",
+        "n": 10,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            8,
+            5
+          ],
+          [
+            9,
+            6
+          ]
+        ],
+        "expected": "No trail uses every edge exactly once"
+      }
+    },
+    {
+      "id": "graphs-number-052",
+      "topic": "Bipartite graphs",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Is this graph bipartite?",
+      "context": "Petersen graph. A finite simple undirected graph has vertices 0,…,9 and exactly these edges: (0,1), (1,2), (2,3), (3,4), (4,0), (0,5), (1,6), (2,7), (3,8), (4,9), (5,7), (6,8), (7,9), (8,5), (9,6).",
+      "options": [
+        "It depends on the order in which vertices are labeled",
+        "Yes: any graph with an even number of edges is bipartite",
+        "No: it contains an odd cycle",
+        "No: only disconnected graphs are bipartite"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Try alternating two colors along edges; a same-color edge witnesses a conflict.",
+        "Check graph claims against the full edge list. Check arithmetic claims by substituting the proposed quotient, residue, divisor, or inverse."
+      ],
+      "explanation": {
+        "learning_objective": "Apply bipartite graphs with explicit justification.",
+        "correct_rationale": "Two-color propagation produces the same color at endpoints (8, 6) of an edge. Equivalently, an odd cycle obstructs bipartiteness. The graph therefore is not bipartite.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "Bipartiteness is invariant under relabeling."
+          },
+          {
+            "option_index": 1,
+            "rationale": "Edge-count parity does not imply a two-coloring."
+          },
+          {
+            "option_index": 3,
+            "rationale": "Connected graphs such as paths can be bipartite."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "graph-bipartite",
+        "n": 10,
+        "edges": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            3
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            4,
+            0
+          ],
+          [
+            0,
+            5
+          ],
+          [
+            1,
+            6
+          ],
+          [
+            2,
+            7
+          ],
+          [
+            3,
+            8
+          ],
+          [
+            4,
+            9
+          ],
+          [
+            5,
+            7
+          ],
+          [
+            6,
+            8
+          ],
+          [
+            7,
+            9
+          ],
+          [
+            8,
+            5
+          ],
+          [
+            9,
+            6
+          ]
+        ],
+        "expected": false
+      }
+    },
+    {
+      "id": "graphs-number-053",
+      "topic": "Euclidean division",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What is the remainder when −17 is divided by 5?",
+      "context": "Use the convention a=mq+r with 0≤r<m and m>0.",
+      "options": [
+        "4",
+        "2",
+        "3",
+        "5"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Use integer witnesses, remainders, or the Euclidean algorithm; check any proposed solution by substitution.",
+        "Check graph claims against the full edge list. Check arithmetic claims by substituting the proposed quotient, residue, divisor, or inverse."
+      ],
+      "explanation": {
+        "learning_objective": "Apply euclidean division with explicit justification.",
+        "correct_rationale": "−17=5(−4)+3; the remainder is required to be nonnegative.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This proposed result fails the stated definition or arithmetic. −17=5(−4)+3; the remainder is required to be nonnegative."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This proposed result fails the stated definition or arithmetic. −17=5(−4)+3; the remainder is required to be nonnegative."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This proposed result fails the stated definition or arithmetic. −17=5(−4)+3; the remainder is required to be nonnegative."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "arithmetic-case",
+        "case": 0,
+        "query": 0
+      }
+    },
+    {
+      "id": "graphs-number-054",
+      "topic": "Euclidean division",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What is the quotient when −17 is divided by 5?",
+      "context": "Use the convention a=mq+r with 0≤r<m and m>0.",
+      "options": [
+        "3",
+        "−4",
+        "4",
+        "−3"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Use integer witnesses, remainders, or the Euclidean algorithm; check any proposed solution by substitution.",
+        "Check graph claims against the full edge list. Check arithmetic claims by substituting the proposed quotient, residue, divisor, or inverse."
+      ],
+      "explanation": {
+        "learning_objective": "Apply euclidean division with explicit justification.",
+        "correct_rationale": "The remainder 3 gives quotient −4, because −17=−20+3.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This proposed result fails the stated definition or arithmetic. The remainder 3 gives quotient −4, because −17=−20+3."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This proposed result fails the stated definition or arithmetic. The remainder 3 gives quotient −4, because −17=−20+3."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This proposed result fails the stated definition or arithmetic. The remainder 3 gives quotient −4, because −17=−20+3."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "arithmetic-case",
+        "case": 0,
+        "query": 1
+      }
+    },
+    {
+      "id": "graphs-number-055",
+      "topic": "Euclidean division",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Which pair (q,r) represents 29 divided by 6?",
+      "context": "Use the convention a=mq+r with 0≤r<m and m>0.",
+      "options": [
+        "(4,6)",
+        "(3,11)",
+        "(5,−1)",
+        "(4,5)"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Use integer witnesses, remainders, or the Euclidean algorithm; check any proposed solution by substitution.",
+        "Check graph claims against the full edge list. Check arithmetic claims by substituting the proposed quotient, residue, divisor, or inverse."
+      ],
+      "explanation": {
+        "learning_objective": "Apply euclidean division with explicit justification.",
+        "correct_rationale": "29=6·4+5, with 0≤5<6.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This proposed result fails the stated definition or arithmetic. 29=6·4+5, with 0≤5<6."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This proposed result fails the stated definition or arithmetic. 29=6·4+5, with 0≤5<6."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This proposed result fails the stated definition or arithmetic. 29=6·4+5, with 0≤5<6."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "arithmetic-case",
+        "case": 0,
+        "query": 2
+      }
+    },
+    {
+      "id": "graphs-number-056",
+      "topic": "Euclidean division",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Why is (q,r)=(5,−1) invalid for 29 divided by 6?",
+      "context": "Use the convention a=mq+r with 0≤r<m and m>0.",
+      "options": [
+        "The equation 29=6q+r fails",
+        "The remainder must be greater than the divisor",
+        "The remainder is outside 0≤r<6",
+        "The quotient must always be positive"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Use integer witnesses, remainders, or the Euclidean algorithm; check any proposed solution by substitution.",
+        "Check graph claims against the full edge list. Check arithmetic claims by substituting the proposed quotient, residue, divisor, or inverse."
+      ],
+      "explanation": {
+        "learning_objective": "Apply euclidean division with explicit justification.",
+        "correct_rationale": "It satisfies the equation but uses a negative remainder, violating the division convention.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This proposed result fails the stated definition or arithmetic. It satisfies the equation but uses a negative remainder, violating the division convention."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This proposed result fails the stated definition or arithmetic. It satisfies the equation but uses a negative remainder, violating the division convention."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This proposed result fails the stated definition or arithmetic. It satisfies the equation but uses a negative remainder, violating the division convention."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "arithmetic-case",
+        "case": 0,
+        "query": 3
+      }
+    },
+    {
+      "id": "graphs-number-057",
+      "topic": "Greatest common divisors",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What is gcd(84,30)?",
+      "context": "Consider a=84 and b=30.",
+      "options": [
+        "3",
+        "6",
+        "2",
+        "12"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Use integer witnesses, remainders, or the Euclidean algorithm; check any proposed solution by substitution.",
+        "Check graph claims against the full edge list. Check arithmetic claims by substituting the proposed quotient, residue, divisor, or inverse."
+      ],
+      "explanation": {
+        "learning_objective": "Apply greatest common divisors with explicit justification.",
+        "correct_rationale": "84=2·30+24; 30=24+6; 24=4·6, so the last nonzero remainder is 6.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This proposed result fails the stated definition or arithmetic. 84=2·30+24; 30=24+6; 24=4·6, so the last nonzero remainder is 6."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This proposed result fails the stated definition or arithmetic. 84=2·30+24; 30=24+6; 24=4·6, so the last nonzero remainder is 6."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This proposed result fails the stated definition or arithmetic. 84=2·30+24; 30=24+6; 24=4·6, so the last nonzero remainder is 6."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "arithmetic-case",
+        "case": 1,
+        "query": 0
+      }
+    },
+    {
+      "id": "graphs-number-058",
+      "topic": "Greatest common divisors",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Which Bézout identity is valid?",
+      "context": "Consider a=84 and b=30.",
+      "options": [
+        "6=84+30",
+        "6=84−2·30",
+        "6=3·30−84",
+        "6=2·84−5·30"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Use integer witnesses, remainders, or the Euclidean algorithm; check any proposed solution by substitution.",
+        "Check graph claims against the full edge list. Check arithmetic claims by substituting the proposed quotient, residue, divisor, or inverse."
+      ],
+      "explanation": {
+        "learning_objective": "Apply greatest common divisors with explicit justification.",
+        "correct_rationale": "3·30−84=90−84=6.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This proposed result fails the stated definition or arithmetic. 3·30−84=90−84=6."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This proposed result fails the stated definition or arithmetic. 3·30−84=90−84=6."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This proposed result fails the stated definition or arithmetic. 3·30−84=90−84=6."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "arithmetic-case",
+        "case": 1,
+        "query": 1
+      }
+    },
+    {
+      "id": "graphs-number-059",
+      "topic": "Greatest common divisors",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What is lcm(84,30)?",
+      "context": "Consider a=84 and b=30.",
+      "options": [
+        "2520",
+        "420",
+        "114",
+        "210"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Use integer witnesses, remainders, or the Euclidean algorithm; check any proposed solution by substitution.",
+        "Check graph claims against the full edge list. Check arithmetic claims by substituting the proposed quotient, residue, divisor, or inverse."
+      ],
+      "explanation": {
+        "learning_objective": "Apply greatest common divisors with explicit justification.",
+        "correct_rationale": "For positive integers, gcd·lcm=ab. Thus lcm=84·30/6=420.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This proposed result fails the stated definition or arithmetic. For positive integers, gcd·lcm=ab. Thus lcm=84·30/6=420."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This proposed result fails the stated definition or arithmetic. For positive integers, gcd·lcm=ab. Thus lcm=84·30/6=420."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This proposed result fails the stated definition or arithmetic. For positive integers, gcd·lcm=ab. Thus lcm=84·30/6=420."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "arithmetic-case",
+        "case": 1,
+        "query": 2
+      }
+    },
+    {
+      "id": "graphs-number-060",
+      "topic": "Greatest common divisors",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "How many positive common divisors do 84 and 30 have?",
+      "context": "Consider a=84 and b=30.",
+      "options": [
+        "3",
+        "4",
+        "2",
+        "5"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Use integer witnesses, remainders, or the Euclidean algorithm; check any proposed solution by substitution.",
+        "Check graph claims against the full edge list. Check arithmetic claims by substituting the proposed quotient, residue, divisor, or inverse."
+      ],
+      "explanation": {
+        "learning_objective": "Apply greatest common divisors with explicit justification.",
+        "correct_rationale": "Common divisors are divisors of gcd 6: 1,2,3,6.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This proposed result fails the stated definition or arithmetic. Common divisors are divisors of gcd 6: 1,2,3,6."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This proposed result fails the stated definition or arithmetic. Common divisors are divisors of gcd 6: 1,2,3,6."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This proposed result fails the stated definition or arithmetic. Common divisors are divisors of gcd 6: 1,2,3,6."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "arithmetic-case",
+        "case": 1,
+        "query": 3
+      }
+    },
+    {
+      "id": "graphs-number-061",
+      "topic": "Prime factorization",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "How many positive divisors does N have?",
+      "context": "Let N=2³·3²·5=360.",
+      "options": [
+        "36",
+        "24",
+        "12",
+        "6"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Use integer witnesses, remainders, or the Euclidean algorithm; check any proposed solution by substitution.",
+        "Check graph claims against the full edge list. Check arithmetic claims by substituting the proposed quotient, residue, divisor, or inverse."
+      ],
+      "explanation": {
+        "learning_objective": "Apply prime factorization with explicit justification.",
+        "correct_rationale": "Choose exponents 0..3 for 2, 0..2 for 3, and 0..1 for 5: 4·3·2=24.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This proposed result fails the stated definition or arithmetic. Choose exponents 0..3 for 2, 0..2 for 3, and 0..1 for 5: 4·3·2=24."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This proposed result fails the stated definition or arithmetic. Choose exponents 0..3 for 2, 0..2 for 3, and 0..1 for 5: 4·3·2=24."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This proposed result fails the stated definition or arithmetic. Choose exponents 0..3 for 2, 0..2 for 3, and 0..1 for 5: 4·3·2=24."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "arithmetic-case",
+        "case": 2,
+        "query": 0
+      }
+    },
+    {
+      "id": "graphs-number-062",
+      "topic": "Prime factorization",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "How many distinct prime divisors does N have?",
+      "context": "Let N=2³·3²·5=360.",
+      "options": [
+        "3",
+        "5",
+        "4",
+        "2"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Use integer witnesses, remainders, or the Euclidean algorithm; check any proposed solution by substitution.",
+        "Check graph claims against the full edge list. Check arithmetic claims by substituting the proposed quotient, residue, divisor, or inverse."
+      ],
+      "explanation": {
+        "learning_objective": "Apply prime factorization with explicit justification.",
+        "correct_rationale": "The distinct prime factors are 2,3,5.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "This proposed result fails the stated definition or arithmetic. The distinct prime factors are 2,3,5."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This proposed result fails the stated definition or arithmetic. The distinct prime factors are 2,3,5."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This proposed result fails the stated definition or arithmetic. The distinct prime factors are 2,3,5."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "arithmetic-case",
+        "case": 2,
+        "query": 1
+      }
+    },
+    {
+      "id": "graphs-number-063",
+      "topic": "Prime factorization",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Which is the largest square divisor of N?",
+      "context": "Let N=2³·3²·5=360.",
+      "options": [
+        "18",
+        "60",
+        "36",
+        "90"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Use integer witnesses, remainders, or the Euclidean algorithm; check any proposed solution by substitution.",
+        "Check graph claims against the full edge list. Check arithmetic claims by substituting the proposed quotient, residue, divisor, or inverse."
+      ],
+      "explanation": {
+        "learning_objective": "Apply prime factorization with explicit justification.",
+        "correct_rationale": "Use the largest even exponent for each prime: 2²·3²=36.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This proposed result fails the stated definition or arithmetic. Use the largest even exponent for each prime: 2²·3²=36."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This proposed result fails the stated definition or arithmetic. Use the largest even exponent for each prime: 2²·3²=36."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This proposed result fails the stated definition or arithmetic. Use the largest even exponent for each prime: 2²·3²=36."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "arithmetic-case",
+        "case": 2,
+        "query": 2
+      }
+    },
+    {
+      "id": "graphs-number-064",
+      "topic": "Prime factorization",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What is gcd(N,84)?",
+      "context": "Let N=2³·3²·5=360.",
+      "options": [
+        "12",
+        "6",
+        "24",
+        "84"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Use integer witnesses, remainders, or the Euclidean algorithm; check any proposed solution by substitution.",
+        "Check graph claims against the full edge list. Check arithmetic claims by substituting the proposed quotient, residue, divisor, or inverse."
+      ],
+      "explanation": {
+        "learning_objective": "Apply prime factorization with explicit justification.",
+        "correct_rationale": "84=2²·3·7. Take the smaller exponents of common primes: 2²·3=12.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "This proposed result fails the stated definition or arithmetic. 84=2²·3·7. Take the smaller exponents of common primes: 2²·3=12."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This proposed result fails the stated definition or arithmetic. 84=2²·3·7. Take the smaller exponents of common primes: 2²·3=12."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This proposed result fails the stated definition or arithmetic. 84=2²·3·7. Take the smaller exponents of common primes: 2²·3=12."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "arithmetic-case",
+        "case": 2,
+        "query": 3
+      }
+    },
+    {
+      "id": "graphs-number-065",
+      "topic": "Modular operations",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What is (19+25) mod 7?",
+      "context": "Use least nonnegative residues modulo 7.",
+      "options": [
+        "2",
+        "3",
+        "0",
+        "1"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Use integer witnesses, remainders, or the Euclidean algorithm; check any proposed solution by substitution.",
+        "Check graph claims against the full edge list. Check arithmetic claims by substituting the proposed quotient, residue, divisor, or inverse."
+      ],
+      "explanation": {
+        "learning_objective": "Apply modular operations with explicit justification.",
+        "correct_rationale": "19+25=44=6·7+2.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "This proposed result fails the stated definition or arithmetic. 19+25=44=6·7+2."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This proposed result fails the stated definition or arithmetic. 19+25=44=6·7+2."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This proposed result fails the stated definition or arithmetic. 19+25=44=6·7+2."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "arithmetic-case",
+        "case": 3,
+        "query": 0
+      }
+    },
+    {
+      "id": "graphs-number-066",
+      "topic": "Modular operations",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What is (19·25) mod 7?",
+      "context": "Use least nonnegative residues modulo 7.",
+      "options": [
+        "3",
+        "6",
+        "12",
+        "2"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Use integer witnesses, remainders, or the Euclidean algorithm; check any proposed solution by substitution.",
+        "Check graph claims against the full edge list. Check arithmetic claims by substituting the proposed quotient, residue, divisor, or inverse."
+      ],
+      "explanation": {
+        "learning_objective": "Apply modular operations with explicit justification.",
+        "correct_rationale": "19≡5 and 25≡4, so their product is 20≡6.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This proposed result fails the stated definition or arithmetic. 19≡5 and 25≡4, so their product is 20≡6."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This proposed result fails the stated definition or arithmetic. 19≡5 and 25≡4, so their product is 20≡6."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This proposed result fails the stated definition or arithmetic. 19≡5 and 25≡4, so their product is 20≡6."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "arithmetic-case",
+        "case": 3,
+        "query": 1
+      }
+    },
+    {
+      "id": "graphs-number-067",
+      "topic": "Modular operations",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What is (19−25) mod 7?",
+      "context": "Use least nonnegative residues modulo 7.",
+      "options": [
+        "7",
+        "1",
+        "0",
+        "2"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Use integer witnesses, remainders, or the Euclidean algorithm; check any proposed solution by substitution.",
+        "Check graph claims against the full edge list. Check arithmetic claims by substituting the proposed quotient, residue, divisor, or inverse."
+      ],
+      "explanation": {
+        "learning_objective": "Apply modular operations with explicit justification.",
+        "correct_rationale": "−6=−7+1, giving least nonnegative residue 1.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This proposed result fails the stated definition or arithmetic. −6=−7+1, giving least nonnegative residue 1."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This proposed result fails the stated definition or arithmetic. −6=−7+1, giving least nonnegative residue 1."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This proposed result fails the stated definition or arithmetic. −6=−7+1, giving least nonnegative residue 1."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "arithmetic-case",
+        "case": 3,
+        "query": 2
+      }
+    },
+    {
+      "id": "graphs-number-068",
+      "topic": "Modular operations",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Which integer is congruent to 19 modulo 7?",
+      "context": "Use least nonnegative residues modulo 7.",
+      "options": [
+        "0",
+        "−1",
+        "−2",
+        "2"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Use integer witnesses, remainders, or the Euclidean algorithm; check any proposed solution by substitution.",
+        "Check graph claims against the full edge list. Check arithmetic claims by substituting the proposed quotient, residue, divisor, or inverse."
+      ],
+      "explanation": {
+        "learning_objective": "Apply modular operations with explicit justification.",
+        "correct_rationale": "19−(−2)=21 is divisible by 7.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This proposed result fails the stated definition or arithmetic. 19−(−2)=21 is divisible by 7."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This proposed result fails the stated definition or arithmetic. 19−(−2)=21 is divisible by 7."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This proposed result fails the stated definition or arithmetic. 19−(−2)=21 is divisible by 7."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "arithmetic-case",
+        "case": 3,
+        "query": 3
+      }
+    },
+    {
+      "id": "graphs-number-069",
+      "topic": "Modular inverses",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What is the multiplicative inverse of 3?",
+      "context": "Work modulo 11.",
+      "options": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Use integer witnesses, remainders, or the Euclidean algorithm; check any proposed solution by substitution.",
+        "Check graph claims against the full edge list. Check arithmetic claims by substituting the proposed quotient, residue, divisor, or inverse."
+      ],
+      "explanation": {
+        "learning_objective": "Apply modular inverses with explicit justification.",
+        "correct_rationale": "3·4=12≡1 modulo 11.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This proposed result fails the stated definition or arithmetic. 3·4=12≡1 modulo 11."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This proposed result fails the stated definition or arithmetic. 3·4=12≡1 modulo 11."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This proposed result fails the stated definition or arithmetic. 3·4=12≡1 modulo 11."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "arithmetic-case",
+        "case": 4,
+        "query": 0
+      }
+    },
+    {
+      "id": "graphs-number-070",
+      "topic": "Modular inverses",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Solve 3x≡7 (mod 11), using 0≤x<11.",
+      "context": "Work modulo 11.",
+      "options": [
+        "6",
+        "3",
+        "12",
+        "2"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Use integer witnesses, remainders, or the Euclidean algorithm; check any proposed solution by substitution.",
+        "Check graph claims against the full edge list. Check arithmetic claims by substituting the proposed quotient, residue, divisor, or inverse."
+      ],
+      "explanation": {
+        "learning_objective": "Apply modular inverses with explicit justification.",
+        "correct_rationale": "Multiply by inverse 4: x≡28≡6.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "This proposed result fails the stated definition or arithmetic. Multiply by inverse 4: x≡28≡6."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This proposed result fails the stated definition or arithmetic. Multiply by inverse 4: x≡28≡6."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This proposed result fails the stated definition or arithmetic. Multiply by inverse 4: x≡28≡6."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "arithmetic-case",
+        "case": 4,
+        "query": 1
+      }
+    },
+    {
+      "id": "graphs-number-071",
+      "topic": "Modular inverses",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Why does 3 have an inverse modulo 11?",
+      "context": "Work modulo 11.",
+      "options": [
+        "Every nonzero residue is invertible for every modulus",
+        "3 is smaller than 11",
+        "gcd(3,11)=1",
+        "3 divides 11"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Use integer witnesses, remainders, or the Euclidean algorithm; check any proposed solution by substitution.",
+        "Check graph claims against the full edge list. Check arithmetic claims by substituting the proposed quotient, residue, divisor, or inverse."
+      ],
+      "explanation": {
+        "learning_objective": "Apply modular inverses with explicit justification.",
+        "correct_rationale": "An integer has an inverse modulo m exactly when it is coprime to m.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This proposed result fails the stated definition or arithmetic. An integer has an inverse modulo m exactly when it is coprime to m."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This proposed result fails the stated definition or arithmetic. An integer has an inverse modulo m exactly when it is coprime to m."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This proposed result fails the stated definition or arithmetic. An integer has an inverse modulo m exactly when it is coprime to m."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "arithmetic-case",
+        "case": 4,
+        "query": 2
+      }
+    },
+    {
+      "id": "graphs-number-072",
+      "topic": "Modular inverses",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What is the inverse of 10 modulo 11?",
+      "context": "Work modulo 11.",
+      "options": [
+        "10",
+        "9",
+        "1",
+        "0"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Use integer witnesses, remainders, or the Euclidean algorithm; check any proposed solution by substitution.",
+        "Check graph claims against the full edge list. Check arithmetic claims by substituting the proposed quotient, residue, divisor, or inverse."
+      ],
+      "explanation": {
+        "learning_objective": "Apply modular inverses with explicit justification.",
+        "correct_rationale": "10≡−1, and (−1)²≡1, so it is its own inverse.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "This proposed result fails the stated definition or arithmetic. 10≡−1, and (−1)²≡1, so it is its own inverse."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This proposed result fails the stated definition or arithmetic. 10≡−1, and (−1)²≡1, so it is its own inverse."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This proposed result fails the stated definition or arithmetic. 10≡−1, and (−1)²≡1, so it is its own inverse."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "arithmetic-case",
+        "case": 4,
+        "query": 3
+      }
+    },
+    {
+      "id": "graphs-number-073",
+      "topic": "Noninvertible congruences",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Which residues solve 2x≡4 (mod 8)?",
+      "context": "Work modulo 8.",
+      "options": [
+        "x≡1 or 5",
+        "x≡2 only",
+        "x≡4 only",
+        "x≡2 or 6"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Use integer witnesses, remainders, or the Euclidean algorithm; check any proposed solution by substitution.",
+        "Check graph claims against the full edge list. Check arithmetic claims by substituting the proposed quotient, residue, divisor, or inverse."
+      ],
+      "explanation": {
+        "learning_objective": "Apply noninvertible congruences with explicit justification.",
+        "correct_rationale": "The congruence reduces to x≡2 modulo 4, yielding two residues modulo 8.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This proposed result fails the stated definition or arithmetic. The congruence reduces to x≡2 modulo 4, yielding two residues modulo 8."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This proposed result fails the stated definition or arithmetic. The congruence reduces to x≡2 modulo 4, yielding two residues modulo 8."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This proposed result fails the stated definition or arithmetic. The congruence reduces to x≡2 modulo 4, yielding two residues modulo 8."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "arithmetic-case",
+        "case": 5,
+        "query": 0
+      }
+    },
+    {
+      "id": "graphs-number-074",
+      "topic": "Noninvertible congruences",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Why can 2x≡2y (mod 8) not imply x≡y (mod 8)?",
+      "context": "Work modulo 8.",
+      "options": [
+        "Every even residue is zero",
+        "Congruences never allow cancellation",
+        "2 has no inverse modulo 8",
+        "2 is larger than the modulus"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Use integer witnesses, remainders, or the Euclidean algorithm; check any proposed solution by substitution.",
+        "Check graph claims against the full edge list. Check arithmetic claims by substituting the proposed quotient, residue, divisor, or inverse."
+      ],
+      "explanation": {
+        "learning_objective": "Apply noninvertible congruences with explicit justification.",
+        "correct_rationale": "gcd(2,8)=2; x=0,y=4 have equal doubled residues but different residues.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This proposed result fails the stated definition or arithmetic. gcd(2,8)=2; x=0,y=4 have equal doubled residues but different residues."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This proposed result fails the stated definition or arithmetic. gcd(2,8)=2; x=0,y=4 have equal doubled residues but different residues."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This proposed result fails the stated definition or arithmetic. gcd(2,8)=2; x=0,y=4 have equal doubled residues but different residues."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "arithmetic-case",
+        "case": 5,
+        "query": 1
+      }
+    },
+    {
+      "id": "graphs-number-075",
+      "topic": "Noninvertible congruences",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "How many residues solve 2x≡3 (mod 8)?",
+      "context": "Work modulo 8.",
+      "options": [
+        "2",
+        "8",
+        "1",
+        "0"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Use integer witnesses, remainders, or the Euclidean algorithm; check any proposed solution by substitution.",
+        "Check graph claims against the full edge list. Check arithmetic claims by substituting the proposed quotient, residue, divisor, or inverse."
+      ],
+      "explanation": {
+        "learning_objective": "Apply noninvertible congruences with explicit justification.",
+        "correct_rationale": "The left side is even modulo 8; the right side is odd. Equivalently gcd(2,8) does not divide 3.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This proposed result fails the stated definition or arithmetic. The left side is even modulo 8; the right side is odd. Equivalently gcd(2,8) does not divide 3."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This proposed result fails the stated definition or arithmetic. The left side is even modulo 8; the right side is odd. Equivalently gcd(2,8) does not divide 3."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This proposed result fails the stated definition or arithmetic. The left side is even modulo 8; the right side is odd. Equivalently gcd(2,8) does not divide 3."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "arithmetic-case",
+        "case": 5,
+        "query": 2
+      }
+    },
+    {
+      "id": "graphs-number-076",
+      "topic": "Noninvertible congruences",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "How many residues solve 4x≡0 (mod 8)?",
+      "context": "Work modulo 8.",
+      "options": [
+        "2",
+        "5",
+        "3",
+        "4"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Use integer witnesses, remainders, or the Euclidean algorithm; check any proposed solution by substitution.",
+        "Check graph claims against the full edge list. Check arithmetic claims by substituting the proposed quotient, residue, divisor, or inverse."
+      ],
+      "explanation": {
+        "learning_objective": "Apply noninvertible congruences with explicit justification.",
+        "correct_rationale": "x must be even: 0,2,4,6 are the four solutions.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This proposed result fails the stated definition or arithmetic. x must be even: 0,2,4,6 are the four solutions."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This proposed result fails the stated definition or arithmetic. x must be even: 0,2,4,6 are the four solutions."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This proposed result fails the stated definition or arithmetic. x must be even: 0,2,4,6 are the four solutions."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "arithmetic-case",
+        "case": 5,
+        "query": 3
+      }
+    },
+    {
+      "id": "graphs-number-077",
+      "topic": "Modular powers",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "What is 2¹⁰ mod 5?",
+      "context": "Use arithmetic modulo 5.",
+      "options": [
+        "4",
+        "3",
+        "5",
+        "2"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Use integer witnesses, remainders, or the Euclidean algorithm; check any proposed solution by substitution.",
+        "Check graph claims against the full edge list. Check arithmetic claims by substituting the proposed quotient, residue, divisor, or inverse."
+      ],
+      "explanation": {
+        "learning_objective": "Apply modular powers with explicit justification.",
+        "correct_rationale": "Powers of 2 cycle 2,4,3,1 with period four; 10≡2 mod 4, so the residue is 4.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "This proposed result fails the stated definition or arithmetic. Powers of 2 cycle 2,4,3,1 with period four; 10≡2 mod 4, so the residue is 4."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This proposed result fails the stated definition or arithmetic. Powers of 2 cycle 2,4,3,1 with period four; 10≡2 mod 4, so the residue is 4."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This proposed result fails the stated definition or arithmetic. Powers of 2 cycle 2,4,3,1 with period four; 10≡2 mod 4, so the residue is 4."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "arithmetic-case",
+        "case": 6,
+        "query": 0
+      }
+    },
+    {
+      "id": "graphs-number-078",
+      "topic": "Modular powers",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "What is 3⁴ mod 5?",
+      "context": "Use arithmetic modulo 5.",
+      "options": [
+        "2",
+        "1",
+        "0",
+        "7"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Use integer witnesses, remainders, or the Euclidean algorithm; check any proposed solution by substitution.",
+        "Check graph claims against the full edge list. Check arithmetic claims by substituting the proposed quotient, residue, divisor, or inverse."
+      ],
+      "explanation": {
+        "learning_objective": "Apply modular powers with explicit justification.",
+        "correct_rationale": "3²≡4, so 3⁴≡4²=16≡1.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This proposed result fails the stated definition or arithmetic. 3²≡4, so 3⁴≡4²=16≡1."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This proposed result fails the stated definition or arithmetic. 3²≡4, so 3⁴≡4²=16≡1."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This proposed result fails the stated definition or arithmetic. 3²≡4, so 3⁴≡4²=16≡1."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "arithmetic-case",
+        "case": 6,
+        "query": 1
+      }
+    },
+    {
+      "id": "graphs-number-079",
+      "topic": "Modular powers",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "What is 4⁹ mod 5?",
+      "context": "Use arithmetic modulo 5.",
+      "options": [
+        "5",
+        "2",
+        "3",
+        "4"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Use integer witnesses, remainders, or the Euclidean algorithm; check any proposed solution by substitution.",
+        "Check graph claims against the full edge list. Check arithmetic claims by substituting the proposed quotient, residue, divisor, or inverse."
+      ],
+      "explanation": {
+        "learning_objective": "Apply modular powers with explicit justification.",
+        "correct_rationale": "4≡−1 and an odd power of −1 is −1≡4.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This proposed result fails the stated definition or arithmetic. 4≡−1 and an odd power of −1 is −1≡4."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This proposed result fails the stated definition or arithmetic. 4≡−1 and an odd power of −1 is −1≡4."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This proposed result fails the stated definition or arithmetic. 4≡−1 and an odd power of −1 is −1≡4."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "arithmetic-case",
+        "case": 6,
+        "query": 2
+      }
+    },
+    {
+      "id": "graphs-number-080",
+      "topic": "Modular powers",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "What is 5²⁰ mod 5?",
+      "context": "Use arithmetic modulo 5.",
+      "options": [
+        "0",
+        "2",
+        "1",
+        "8"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Use integer witnesses, remainders, or the Euclidean algorithm; check any proposed solution by substitution.",
+        "Check graph claims against the full edge list. Check arithmetic claims by substituting the proposed quotient, residue, divisor, or inverse."
+      ],
+      "explanation": {
+        "learning_objective": "Apply modular powers with explicit justification.",
+        "correct_rationale": "Any positive power of 5 is divisible by 5; coprime-base exponent reductions do not apply.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "This proposed result fails the stated definition or arithmetic. Any positive power of 5 is divisible by 5; coprime-base exponent reductions do not apply."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This proposed result fails the stated definition or arithmetic. Any positive power of 5 is divisible by 5; coprime-base exponent reductions do not apply."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This proposed result fails the stated definition or arithmetic. Any positive power of 5 is divisible by 5; coprime-base exponent reductions do not apply."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "arithmetic-case",
+        "case": 6,
+        "query": 3
+      }
+    },
+    {
+      "id": "graphs-number-081",
+      "topic": "Chinese remainder reasoning",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "What is the least nonnegative solution?",
+      "context": "Solve simultaneous congruences x≡2 (mod 3), x≡3 (mod 5).",
+      "options": [
+        "13",
+        "3",
+        "8",
+        "2"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Use integer witnesses, remainders, or the Euclidean algorithm; check any proposed solution by substitution.",
+        "Check graph claims against the full edge list. Check arithmetic claims by substituting the proposed quotient, residue, divisor, or inverse."
+      ],
+      "explanation": {
+        "learning_objective": "Apply chinese remainder reasoning with explicit justification.",
+        "correct_rationale": "Candidates congruent to 3 modulo 5 are 3,8,13; only 8 is 2 modulo 3.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This proposed result fails the stated definition or arithmetic. Candidates congruent to 3 modulo 5 are 3,8,13; only 8 is 2 modulo 3."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This proposed result fails the stated definition or arithmetic. Candidates congruent to 3 modulo 5 are 3,8,13; only 8 is 2 modulo 3."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This proposed result fails the stated definition or arithmetic. Candidates congruent to 3 modulo 5 are 3,8,13; only 8 is 2 modulo 3."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "arithmetic-case",
+        "case": 7,
+        "query": 0
+      }
+    },
+    {
+      "id": "graphs-number-082",
+      "topic": "Chinese remainder reasoning",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "What is the period of all solutions?",
+      "context": "Solve simultaneous congruences x≡2 (mod 3), x≡3 (mod 5).",
+      "options": [
+        "8",
+        "3",
+        "5",
+        "15"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Use integer witnesses, remainders, or the Euclidean algorithm; check any proposed solution by substitution.",
+        "Check graph claims against the full edge list. Check arithmetic claims by substituting the proposed quotient, residue, divisor, or inverse."
+      ],
+      "explanation": {
+        "learning_objective": "Apply chinese remainder reasoning with explicit justification.",
+        "correct_rationale": "The moduli 3 and 5 are coprime, so solutions form one residue class modulo their product 15.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This proposed result fails the stated definition or arithmetic. The moduli 3 and 5 are coprime, so solutions form one residue class modulo their product 15."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This proposed result fails the stated definition or arithmetic. The moduli 3 and 5 are coprime, so solutions form one residue class modulo their product 15."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This proposed result fails the stated definition or arithmetic. The moduli 3 and 5 are coprime, so solutions form one residue class modulo their product 15."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "arithmetic-case",
+        "case": 7,
+        "query": 1
+      }
+    },
+    {
+      "id": "graphs-number-083",
+      "topic": "Chinese remainder reasoning",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "Which solution follows immediately after 8?",
+      "context": "Solve simultaneous congruences x≡2 (mod 3), x≡3 (mod 5).",
+      "options": [
+        "18",
+        "16",
+        "23",
+        "13"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Use integer witnesses, remainders, or the Euclidean algorithm; check any proposed solution by substitution.",
+        "Check graph claims against the full edge list. Check arithmetic claims by substituting the proposed quotient, residue, divisor, or inverse."
+      ],
+      "explanation": {
+        "learning_objective": "Apply chinese remainder reasoning with explicit justification.",
+        "correct_rationale": "All solutions are 8+15k; the next is 23.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This proposed result fails the stated definition or arithmetic. All solutions are 8+15k; the next is 23."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This proposed result fails the stated definition or arithmetic. All solutions are 8+15k; the next is 23."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This proposed result fails the stated definition or arithmetic. All solutions are 8+15k; the next is 23."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "arithmetic-case",
+        "case": 7,
+        "query": 2
+      }
+    },
+    {
+      "id": "graphs-number-084",
+      "topic": "Chinese remainder reasoning",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "Why is x=3 not a solution?",
+      "context": "Solve simultaneous congruences x≡2 (mod 3), x≡3 (mod 5).",
+      "options": [
+        "It is excluded because solutions must be prime",
+        "It fails the modulo 3 condition",
+        "It fails the modulo 5 condition",
+        "It satisfies both conditions but is too small"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Use integer witnesses, remainders, or the Euclidean algorithm; check any proposed solution by substitution.",
+        "Check graph claims against the full edge list. Check arithmetic claims by substituting the proposed quotient, residue, divisor, or inverse."
+      ],
+      "explanation": {
+        "learning_objective": "Apply chinese remainder reasoning with explicit justification.",
+        "correct_rationale": "3≡0 modulo 3, whereas the required residue is 2.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This proposed result fails the stated definition or arithmetic. 3≡0 modulo 3, whereas the required residue is 2."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This proposed result fails the stated definition or arithmetic. 3≡0 modulo 3, whereas the required residue is 2."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This proposed result fails the stated definition or arithmetic. 3≡0 modulo 3, whereas the required residue is 2."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "arithmetic-case",
+        "case": 7,
+        "query": 3
+      }
+    },
+    {
+      "id": "graphs-number-085",
+      "topic": "Divisibility boundaries",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "Which statement is true?",
+      "context": "All variables below are integers; divisibility means b=ak for an integer k.",
+      "options": [
+        "7 divides 0",
+        "0 divides 7",
+        "7 divides every integer",
+        "7 divides 1"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Use integer witnesses, remainders, or the Euclidean algorithm; check any proposed solution by substitution.",
+        "Check graph claims against the full edge list. Check arithmetic claims by substituting the proposed quotient, residue, divisor, or inverse."
+      ],
+      "explanation": {
+        "learning_objective": "Apply divisibility boundaries with explicit justification.",
+        "correct_rationale": "0=7·0 supplies an integer witness.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "This proposed result fails the stated definition or arithmetic. 0=7·0 supplies an integer witness."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This proposed result fails the stated definition or arithmetic. 0=7·0 supplies an integer witness."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This proposed result fails the stated definition or arithmetic. 0=7·0 supplies an integer witness."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "arithmetic-case",
+        "case": 8,
+        "query": 0
+      }
+    },
+    {
+      "id": "graphs-number-086",
+      "topic": "Divisibility boundaries",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "Which statement about 0 dividing 5 is correct?",
+      "context": "All variables below are integers; divisibility means b=ak for an integer k.",
+      "options": [
+        "It is true because 0 is even",
+        "It is true with witness 5",
+        "It is false",
+        "It is true because every integer divides 0"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Use integer witnesses, remainders, or the Euclidean algorithm; check any proposed solution by substitution.",
+        "Check graph claims against the full edge list. Check arithmetic claims by substituting the proposed quotient, residue, divisor, or inverse."
+      ],
+      "explanation": {
+        "learning_objective": "Apply divisibility boundaries with explicit justification.",
+        "correct_rationale": "5=0·k has no integer solution.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This proposed result fails the stated definition or arithmetic. 5=0·k has no integer solution."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This proposed result fails the stated definition or arithmetic. 5=0·k has no integer solution."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This proposed result fails the stated definition or arithmetic. 5=0·k has no integer solution."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "arithmetic-case",
+        "case": 8,
+        "query": 1
+      }
+    },
+    {
+      "id": "graphs-number-087",
+      "topic": "Divisibility boundaries",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "Which implication is false?",
+      "context": "All variables below are integers; divisibility means b=ak for an integer k.",
+      "options": [
+        "a|bc implies a|b or a|c for arbitrary a",
+        "a|b implies a|2b",
+        "a|b and b|c imply a|c",
+        "a|b and a|c imply a|(b+c)"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Use integer witnesses, remainders, or the Euclidean algorithm; check any proposed solution by substitution.",
+        "Check graph claims against the full edge list. Check arithmetic claims by substituting the proposed quotient, residue, divisor, or inverse."
+      ],
+      "explanation": {
+        "learning_objective": "Apply divisibility boundaries with explicit justification.",
+        "correct_rationale": "For a=6,b=2,c=3, 6 divides bc but divides neither factor. The prime-divisor version needs a prime a.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "This proposed result fails the stated definition or arithmetic. For a=6,b=2,c=3, 6 divides bc but divides neither factor. The prime-divisor version needs a prime a."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This proposed result fails the stated definition or arithmetic. For a=6,b=2,c=3, 6 divides bc but divides neither factor. The prime-divisor version needs a prime a."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This proposed result fails the stated definition or arithmetic. For a=6,b=2,c=3, 6 divides bc but divides neither factor. The prime-divisor version needs a prime a."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "arithmetic-case",
+        "case": 8,
+        "query": 2
+      }
+    },
+    {
+      "id": "graphs-number-088",
+      "topic": "Divisibility boundaries",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "If 4|n, what must also hold?",
+      "context": "All variables below are integers; divisibility means b=ak for an integer k.",
+      "options": [
+        "8|n",
+        "3|n",
+        "n is odd",
+        "2|n"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Use integer witnesses, remainders, or the Euclidean algorithm; check any proposed solution by substitution.",
+        "Check graph claims against the full edge list. Check arithmetic claims by substituting the proposed quotient, residue, divisor, or inverse."
+      ],
+      "explanation": {
+        "learning_objective": "Apply divisibility boundaries with explicit justification.",
+        "correct_rationale": "Writing n=4k=2(2k) gives an integer witness for 2|n.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This proposed result fails the stated definition or arithmetic. Writing n=4k=2(2k) gives an integer witness for 2|n."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This proposed result fails the stated definition or arithmetic. Writing n=4k=2(2k) gives an integer witness for 2|n."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This proposed result fails the stated definition or arithmetic. Writing n=4k=2(2k) gives an integer witness for 2|n."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "arithmetic-case",
+        "case": 8,
+        "query": 3
+      }
+    },
+    {
+      "id": "graphs-number-089",
+      "topic": "Coprime integers",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "What is gcd(n,n+1) for integer n?",
+      "context": "Consider consecutive integers n and n+1.",
+      "options": [
+        "1",
+        "0",
+        "2",
+        "7"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Use integer witnesses, remainders, or the Euclidean algorithm; check any proposed solution by substitution.",
+        "Check graph claims against the full edge list. Check arithmetic claims by substituting the proposed quotient, residue, divisor, or inverse."
+      ],
+      "explanation": {
+        "learning_objective": "Apply coprime integers with explicit justification.",
+        "correct_rationale": "Any common divisor divides (n+1)−n=1, so the positive gcd is 1.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "This proposed result fails the stated definition or arithmetic. Any common divisor divides (n+1)−n=1, so the positive gcd is 1."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This proposed result fails the stated definition or arithmetic. Any common divisor divides (n+1)−n=1, so the positive gcd is 1."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This proposed result fails the stated definition or arithmetic. Any common divisor divides (n+1)−n=1, so the positive gcd is 1."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "arithmetic-case",
+        "case": 9,
+        "query": 0
+      }
+    },
+    {
+      "id": "graphs-number-090",
+      "topic": "Coprime integers",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "For n=14, what is lcm(14,15)?",
+      "context": "Consider consecutive integers n and n+1.",
+      "options": [
+        "420",
+        "210",
+        "105",
+        "29"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Use integer witnesses, remainders, or the Euclidean algorithm; check any proposed solution by substitution.",
+        "Check graph claims against the full edge list. Check arithmetic claims by substituting the proposed quotient, residue, divisor, or inverse."
+      ],
+      "explanation": {
+        "learning_objective": "Apply coprime integers with explicit justification.",
+        "correct_rationale": "They are coprime, so lcm is their product 14·15.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This proposed result fails the stated definition or arithmetic. They are coprime, so lcm is their product 14·15."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This proposed result fails the stated definition or arithmetic. They are coprime, so lcm is their product 14·15."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This proposed result fails the stated definition or arithmetic. They are coprime, so lcm is their product 14·15."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "arithmetic-case",
+        "case": 9,
+        "query": 1
+      }
+    },
+    {
+      "id": "graphs-number-091",
+      "topic": "Coprime integers",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "Which Bézout expression equals 1?",
+      "context": "Consider consecutive integers n and n+1.",
+      "options": [
+        "(n+1)−2n",
+        "(n+1)+n",
+        "(n+1)−n",
+        "n(n+1)"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Use integer witnesses, remainders, or the Euclidean algorithm; check any proposed solution by substitution.",
+        "Check graph claims against the full edge list. Check arithmetic claims by substituting the proposed quotient, residue, divisor, or inverse."
+      ],
+      "explanation": {
+        "learning_objective": "Apply coprime integers with explicit justification.",
+        "correct_rationale": "Use coefficients 1 and −1 to obtain 1 from the consecutive integers.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This proposed result fails the stated definition or arithmetic. Use coefficients 1 and −1 to obtain 1 from the consecutive integers."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This proposed result fails the stated definition or arithmetic. Use coefficients 1 and −1 to obtain 1 from the consecutive integers."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This proposed result fails the stated definition or arithmetic. Use coefficients 1 and −1 to obtain 1 from the consecutive integers."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "arithmetic-case",
+        "case": 9,
+        "query": 2
+      }
+    },
+    {
+      "id": "graphs-number-092",
+      "topic": "Coprime integers",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "What is always true of n(n+1)?",
+      "context": "Consider consecutive integers n and n+1.",
+      "options": [
+        "It is even",
+        "It is always prime",
+        "It is always divisible by 4",
+        "It is odd"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Use integer witnesses, remainders, or the Euclidean algorithm; check any proposed solution by substitution.",
+        "Check graph claims against the full edge list. Check arithmetic claims by substituting the proposed quotient, residue, divisor, or inverse."
+      ],
+      "explanation": {
+        "learning_objective": "Apply coprime integers with explicit justification.",
+        "correct_rationale": "One of two consecutive integers is even, so their product is even.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "This proposed result fails the stated definition or arithmetic. One of two consecutive integers is even, so their product is even."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This proposed result fails the stated definition or arithmetic. One of two consecutive integers is even, so their product is even."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This proposed result fails the stated definition or arithmetic. One of two consecutive integers is even, so their product is even."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "arithmetic-case",
+        "case": 9,
+        "query": 3
+      }
+    },
+    {
+      "id": "graphs-number-093",
+      "topic": "Primality tests",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "Which proper factor proves 91 composite?",
+      "context": "Consider the positive integer 91.",
+      "options": [
+        "2",
+        "7",
+        "3",
+        "5"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Use integer witnesses, remainders, or the Euclidean algorithm; check any proposed solution by substitution.",
+        "Check graph claims against the full edge list. Check arithmetic claims by substituting the proposed quotient, residue, divisor, or inverse."
+      ],
+      "explanation": {
+        "learning_objective": "Apply primality tests with explicit justification.",
+        "correct_rationale": "91=7·13, with both factors greater than 1.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This proposed result fails the stated definition or arithmetic. 91=7·13, with both factors greater than 1."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This proposed result fails the stated definition or arithmetic. 91=7·13, with both factors greater than 1."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This proposed result fails the stated definition or arithmetic. 91=7·13, with both factors greater than 1."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "arithmetic-case",
+        "case": 10,
+        "query": 0
+      }
+    },
+    {
+      "id": "graphs-number-094",
+      "topic": "Primality tests",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "To test primality by trial division, which upper bound suffices?",
+      "context": "Consider the positive integer 91.",
+      "options": [
+        "log₂91",
+        "91/2",
+        "91²",
+        "√91"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Use integer witnesses, remainders, or the Euclidean algorithm; check any proposed solution by substitution.",
+        "Check graph claims against the full edge list. Check arithmetic claims by substituting the proposed quotient, residue, divisor, or inverse."
+      ],
+      "explanation": {
+        "learning_objective": "Apply primality tests with explicit justification.",
+        "correct_rationale": "If 91 had a factorization with both factors above √91, the product would exceed 91.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This proposed result fails the stated definition or arithmetic. If 91 had a factorization with both factors above √91, the product would exceed 91."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This proposed result fails the stated definition or arithmetic. If 91 had a factorization with both factors above √91, the product would exceed 91."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This proposed result fails the stated definition or arithmetic. If 91 had a factorization with both factors above √91, the product would exceed 91."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "arithmetic-case",
+        "case": 10,
+        "query": 1
+      }
+    },
+    {
+      "id": "graphs-number-095",
+      "topic": "Primality tests",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "Which prime divisors need testing at or below √91?",
+      "context": "Consider the positive integer 91.",
+      "options": [
+        "2,3,5",
+        "2,3,5,7",
+        "1,2,3,5,7",
+        "2,3,5,7,11"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Use integer witnesses, remainders, or the Euclidean algorithm; check any proposed solution by substitution.",
+        "Check graph claims against the full edge list. Check arithmetic claims by substituting the proposed quotient, residue, divisor, or inverse."
+      ],
+      "explanation": {
+        "learning_objective": "Apply primality tests with explicit justification.",
+        "correct_rationale": "√91 is between 9 and 10; these are exactly the primes no greater than it.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This proposed result fails the stated definition or arithmetic. √91 is between 9 and 10; these are exactly the primes no greater than it."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This proposed result fails the stated definition or arithmetic. √91 is between 9 and 10; these are exactly the primes no greater than it."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This proposed result fails the stated definition or arithmetic. √91 is between 9 and 10; these are exactly the primes no greater than it."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "arithmetic-case",
+        "case": 10,
+        "query": 2
+      }
+    },
+    {
+      "id": "graphs-number-096",
+      "topic": "Primality tests",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "How many positive divisors does 91 have?",
+      "context": "Consider the positive integer 91.",
+      "options": [
+        "3",
+        "5",
+        "2",
+        "4"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Use integer witnesses, remainders, or the Euclidean algorithm; check any proposed solution by substitution.",
+        "Check graph claims against the full edge list. Check arithmetic claims by substituting the proposed quotient, residue, divisor, or inverse."
+      ],
+      "explanation": {
+        "learning_objective": "Apply primality tests with explicit justification.",
+        "correct_rationale": "91=7·13 has divisors 1,7,13,91, or (1+1)(1+1)=4 by exponents.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This proposed result fails the stated definition or arithmetic. 91=7·13 has divisors 1,7,13,91, or (1+1)(1+1)=4 by exponents."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This proposed result fails the stated definition or arithmetic. 91=7·13 has divisors 1,7,13,91, or (1+1)(1+1)=4 by exponents."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This proposed result fails the stated definition or arithmetic. 91=7·13 has divisors 1,7,13,91, or (1+1)(1+1)=4 by exponents."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "arithmetic-case",
+        "case": 10,
+        "query": 3
+      }
+    },
+    {
+      "id": "graphs-number-097",
+      "topic": "Gcd and cancellation",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "What is gcd(35,12)?",
+      "context": "Consider gcd(35,12) and congruences modulo 12.",
+      "options": [
+        "0",
+        "7",
+        "2",
+        "1"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Use integer witnesses, remainders, or the Euclidean algorithm; check any proposed solution by substitution.",
+        "Check graph claims against the full edge list. Check arithmetic claims by substituting the proposed quotient, residue, divisor, or inverse."
+      ],
+      "explanation": {
+        "learning_objective": "Apply gcd and cancellation with explicit justification.",
+        "correct_rationale": "35=2·12+11 and 12=11+1, so the last nonzero remainder is 1.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This proposed result fails the stated definition or arithmetic. 35=2·12+11 and 12=11+1, so the last nonzero remainder is 1."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This proposed result fails the stated definition or arithmetic. 35=2·12+11 and 12=11+1, so the last nonzero remainder is 1."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This proposed result fails the stated definition or arithmetic. 35=2·12+11 and 12=11+1, so the last nonzero remainder is 1."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "arithmetic-case",
+        "case": 11,
+        "query": 0
+      }
+    },
+    {
+      "id": "graphs-number-098",
+      "topic": "Gcd and cancellation",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "What is the inverse of 35 modulo 12?",
+      "context": "Consider gcd(35,12) and congruences modulo 12.",
+      "options": [
+        "11",
+        "5",
+        "7",
+        "1"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Use integer witnesses, remainders, or the Euclidean algorithm; check any proposed solution by substitution.",
+        "Check graph claims against the full edge list. Check arithmetic claims by substituting the proposed quotient, residue, divisor, or inverse."
+      ],
+      "explanation": {
+        "learning_objective": "Apply gcd and cancellation with explicit justification.",
+        "correct_rationale": "35≡11≡−1 mod 12, and 11²≡1.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "This proposed result fails the stated definition or arithmetic. 35≡11≡−1 mod 12, and 11²≡1."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This proposed result fails the stated definition or arithmetic. 35≡11≡−1 mod 12, and 11²≡1."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This proposed result fails the stated definition or arithmetic. 35≡11≡−1 mod 12, and 11²≡1."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "arithmetic-case",
+        "case": 11,
+        "query": 1
+      }
+    },
+    {
+      "id": "graphs-number-099",
+      "topic": "Gcd and cancellation",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "Which identity gives a Bézout witness for gcd=1?",
+      "context": "Consider gcd(35,12) and congruences modulo 12.",
+      "options": [
+        "1=35−2·12",
+        "1=2·35−6·12",
+        "1=35+12",
+        "1=3·12−35"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Use integer witnesses, remainders, or the Euclidean algorithm; check any proposed solution by substitution.",
+        "Check graph claims against the full edge list. Check arithmetic claims by substituting the proposed quotient, residue, divisor, or inverse."
+      ],
+      "explanation": {
+        "learning_objective": "Apply gcd and cancellation with explicit justification.",
+        "correct_rationale": "36−35=1; integer coefficients establish coprimality.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This proposed result fails the stated definition or arithmetic. 36−35=1; integer coefficients establish coprimality."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This proposed result fails the stated definition or arithmetic. 36−35=1; integer coefficients establish coprimality."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This proposed result fails the stated definition or arithmetic. 36−35=1; integer coefficients establish coprimality."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "arithmetic-case",
+        "case": 11,
+        "query": 2
+      }
+    },
+    {
+      "id": "graphs-number-100",
+      "topic": "Gcd and cancellation",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "If 35x≡35y (mod 12), what follows?",
+      "context": "Consider gcd(35,12) and congruences modulo 12.",
+      "options": [
+        "x=y as integers",
+        "x≡−y (mod 12)",
+        "x and y must both be even",
+        "x≡y (mod 12)"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Use integer witnesses, remainders, or the Euclidean algorithm; check any proposed solution by substitution.",
+        "Check graph claims against the full edge list. Check arithmetic claims by substituting the proposed quotient, residue, divisor, or inverse."
+      ],
+      "explanation": {
+        "learning_objective": "Apply gcd and cancellation with explicit justification.",
+        "correct_rationale": "35 is invertible modulo 12; multiplying by its inverse permits cancellation.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This proposed result fails the stated definition or arithmetic. 35 is invertible modulo 12; multiplying by its inverse permits cancellation."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This proposed result fails the stated definition or arithmetic. 35 is invertible modulo 12; multiplying by its inverse permits cancellation."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This proposed result fails the stated definition or arithmetic. 35 is invertible modulo 12; multiplying by its inverse permits cancellation."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "arithmetic-case",
+        "case": 11,
+        "query": 3
+      }
+    }
+  ]
+}

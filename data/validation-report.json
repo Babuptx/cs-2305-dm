@@ -1,0 +1,1218 @@
+{
+  "questions": 600,
+  "blocks": 12,
+  "pillars": 6,
+  "independent_oracle_items": 459,
+  "key_positions": [
+    150,
+    150,
+    150,
+    150
+  ],
+  "similar_context_prompt_pairs": [
+    {
+      "ids": [
+        "logic-001",
+        "logic-021"
+      ],
+      "similarity": 0.878
+    },
+    {
+      "ids": [
+        "logic-002",
+        "logic-022"
+      ],
+      "similarity": 0.842
+    },
+    {
+      "ids": [
+        "logic-003",
+        "logic-023"
+      ],
+      "similarity": 0.842
+    },
+    {
+      "ids": [
+        "logic-004",
+        "logic-024"
+      ],
+      "similarity": 0.846
+    },
+    {
+      "ids": [
+        "logic-005",
+        "logic-013"
+      ],
+      "similarity": 0.878
+    },
+    {
+      "ids": [
+        "logic-005",
+        "logic-025"
+      ],
+      "similarity": 0.878
+    },
+    {
+      "ids": [
+        "logic-006",
+        "logic-014"
+      ],
+      "similarity": 0.842
+    },
+    {
+      "ids": [
+        "logic-006",
+        "logic-026"
+      ],
+      "similarity": 0.842
+    },
+    {
+      "ids": [
+        "logic-007",
+        "logic-015"
+      ],
+      "similarity": 0.842
+    },
+    {
+      "ids": [
+        "logic-007",
+        "logic-027"
+      ],
+      "similarity": 0.842
+    },
+    {
+      "ids": [
+        "logic-008",
+        "logic-016"
+      ],
+      "similarity": 0.846
+    },
+    {
+      "ids": [
+        "logic-008",
+        "logic-028"
+      ],
+      "similarity": 0.846
+    },
+    {
+      "ids": [
+        "logic-009",
+        "logic-037"
+      ],
+      "similarity": 0.811
+    },
+    {
+      "ids": [
+        "logic-010",
+        "logic-038"
+      ],
+      "similarity": 0.85
+    },
+    {
+      "ids": [
+        "logic-010",
+        "logic-078"
+      ],
+      "similarity": 0.805
+    },
+    {
+      "ids": [
+        "logic-011",
+        "logic-039"
+      ],
+      "similarity": 0.85
+    },
+    {
+      "ids": [
+        "logic-011",
+        "logic-079"
+      ],
+      "similarity": 0.805
+    },
+    {
+      "ids": [
+        "logic-013",
+        "logic-025"
+      ],
+      "similarity": 0.878
+    },
+    {
+      "ids": [
+        "logic-014",
+        "logic-026"
+      ],
+      "similarity": 0.842
+    },
+    {
+      "ids": [
+        "logic-015",
+        "logic-027"
+      ],
+      "similarity": 0.842
+    },
+    {
+      "ids": [
+        "logic-016",
+        "logic-028"
+      ],
+      "similarity": 0.846
+    },
+    {
+      "ids": [
+        "logic-029",
+        "logic-049"
+      ],
+      "similarity": 0.808
+    },
+    {
+      "ids": [
+        "logic-030",
+        "logic-050"
+      ],
+      "similarity": 0.8
+    },
+    {
+      "ids": [
+        "logic-030",
+        "logic-070"
+      ],
+      "similarity": 0.805
+    },
+    {
+      "ids": [
+        "logic-031",
+        "logic-051"
+      ],
+      "similarity": 0.8
+    },
+    {
+      "ids": [
+        "logic-031",
+        "logic-071"
+      ],
+      "similarity": 0.805
+    },
+    {
+      "ids": [
+        "logic-037",
+        "logic-053"
+      ],
+      "similarity": 0.833
+    },
+    {
+      "ids": [
+        "logic-082",
+        "logic-090"
+      ],
+      "similarity": 0.839
+    },
+    {
+      "ids": [
+        "logic-082",
+        "logic-094"
+      ],
+      "similarity": 1
+    },
+    {
+      "ids": [
+        "logic-082",
+        "logic-098"
+      ],
+      "similarity": 1
+    },
+    {
+      "ids": [
+        "logic-083",
+        "logic-091"
+      ],
+      "similarity": 0.844
+    },
+    {
+      "ids": [
+        "logic-083",
+        "logic-095"
+      ],
+      "similarity": 1
+    },
+    {
+      "ids": [
+        "logic-083",
+        "logic-099"
+      ],
+      "similarity": 1
+    },
+    {
+      "ids": [
+        "logic-084",
+        "logic-092"
+      ],
+      "similarity": 0.833
+    },
+    {
+      "ids": [
+        "logic-084",
+        "logic-096"
+      ],
+      "similarity": 1
+    },
+    {
+      "ids": [
+        "logic-084",
+        "logic-100"
+      ],
+      "similarity": 1
+    },
+    {
+      "ids": [
+        "logic-090",
+        "logic-094"
+      ],
+      "similarity": 0.839
+    },
+    {
+      "ids": [
+        "logic-090",
+        "logic-098"
+      ],
+      "similarity": 0.839
+    },
+    {
+      "ids": [
+        "logic-091",
+        "logic-095"
+      ],
+      "similarity": 0.844
+    },
+    {
+      "ids": [
+        "logic-091",
+        "logic-099"
+      ],
+      "similarity": 0.844
+    },
+    {
+      "ids": [
+        "logic-092",
+        "logic-096"
+      ],
+      "similarity": 0.833
+    },
+    {
+      "ids": [
+        "logic-092",
+        "logic-100"
+      ],
+      "similarity": 0.833
+    },
+    {
+      "ids": [
+        "logic-094",
+        "logic-098"
+      ],
+      "similarity": 1
+    },
+    {
+      "ids": [
+        "logic-095",
+        "logic-099"
+      ],
+      "similarity": 1
+    },
+    {
+      "ids": [
+        "logic-096",
+        "logic-100"
+      ],
+      "similarity": 1
+    },
+    {
+      "ids": [
+        "sets-001",
+        "sets-002"
+      ],
+      "similarity": 1
+    },
+    {
+      "ids": [
+        "sets-001",
+        "sets-003"
+      ],
+      "similarity": 1
+    },
+    {
+      "ids": [
+        "sets-001",
+        "sets-004"
+      ],
+      "similarity": 1
+    },
+    {
+      "ids": [
+        "sets-002",
+        "sets-003"
+      ],
+      "similarity": 1
+    },
+    {
+      "ids": [
+        "sets-002",
+        "sets-004"
+      ],
+      "similarity": 1
+    },
+    {
+      "ids": [
+        "sets-003",
+        "sets-004"
+      ],
+      "similarity": 1
+    },
+    {
+      "ids": [
+        "sets-005",
+        "sets-006"
+      ],
+      "similarity": 1
+    },
+    {
+      "ids": [
+        "sets-005",
+        "sets-007"
+      ],
+      "similarity": 1
+    },
+    {
+      "ids": [
+        "sets-005",
+        "sets-008"
+      ],
+      "similarity": 1
+    },
+    {
+      "ids": [
+        "sets-006",
+        "sets-007"
+      ],
+      "similarity": 1
+    },
+    {
+      "ids": [
+        "sets-006",
+        "sets-008"
+      ],
+      "similarity": 1
+    },
+    {
+      "ids": [
+        "sets-007",
+        "sets-008"
+      ],
+      "similarity": 1
+    },
+    {
+      "ids": [
+        "sets-009",
+        "sets-010"
+      ],
+      "similarity": 1
+    },
+    {
+      "ids": [
+        "sets-009",
+        "sets-011"
+      ],
+      "similarity": 1
+    },
+    {
+      "ids": [
+        "sets-009",
+        "sets-012"
+      ],
+      "similarity": 1
+    },
+    {
+      "ids": [
+        "sets-010",
+        "sets-011"
+      ],
+      "similarity": 1
+    },
+    {
+      "ids": [
+        "sets-010",
+        "sets-012"
+      ],
+      "similarity": 1
+    },
+    {
+      "ids": [
+        "sets-011",
+        "sets-012"
+      ],
+      "similarity": 1
+    },
+    {
+      "ids": [
+        "sets-013",
+        "sets-014"
+      ],
+      "similarity": 1
+    },
+    {
+      "ids": [
+        "sets-013",
+        "sets-015"
+      ],
+      "similarity": 1
+    },
+    {
+      "ids": [
+        "sets-013",
+        "sets-016"
+      ],
+      "similarity": 1
+    },
+    {
+      "ids": [
+        "sets-014",
+        "sets-015"
+      ],
+      "similarity": 1
+    },
+    {
+      "ids": [
+        "sets-014",
+        "sets-016"
+      ],
+      "similarity": 1
+    },
+    {
+      "ids": [
+        "sets-015",
+        "sets-016"
+      ],
+      "similarity": 1
+    },
+    {
+      "ids": [
+        "sets-037",
+        "sets-038"
+      ],
+      "similarity": 0.926
+    },
+    {
+      "ids": [
+        "sets-037",
+        "sets-039"
+      ],
+      "similarity": 0.926
+    },
+    {
+      "ids": [
+        "sets-038",
+        "sets-039"
+      ],
+      "similarity": 0.926
+    },
+    {
+      "ids": [
+        "sets-041",
+        "sets-042"
+      ],
+      "similarity": 0.926
+    },
+    {
+      "ids": [
+        "sets-041",
+        "sets-043"
+      ],
+      "similarity": 0.926
+    },
+    {
+      "ids": [
+        "sets-041",
+        "sets-044"
+      ],
+      "similarity": 0.926
+    },
+    {
+      "ids": [
+        "sets-042",
+        "sets-043"
+      ],
+      "similarity": 0.926
+    },
+    {
+      "ids": [
+        "sets-042",
+        "sets-044"
+      ],
+      "similarity": 0.926
+    },
+    {
+      "ids": [
+        "sets-043",
+        "sets-044"
+      ],
+      "similarity": 0.926
+    },
+    {
+      "ids": [
+        "sets-045",
+        "sets-046"
+      ],
+      "similarity": 0.943
+    },
+    {
+      "ids": [
+        "sets-045",
+        "sets-047"
+      ],
+      "similarity": 0.943
+    },
+    {
+      "ids": [
+        "sets-045",
+        "sets-048"
+      ],
+      "similarity": 0.943
+    },
+    {
+      "ids": [
+        "sets-046",
+        "sets-047"
+      ],
+      "similarity": 0.943
+    },
+    {
+      "ids": [
+        "sets-046",
+        "sets-048"
+      ],
+      "similarity": 0.943
+    },
+    {
+      "ids": [
+        "sets-047",
+        "sets-048"
+      ],
+      "similarity": 0.943
+    },
+    {
+      "ids": [
+        "sets-049",
+        "sets-050"
+      ],
+      "similarity": 0.952
+    },
+    {
+      "ids": [
+        "sets-049",
+        "sets-051"
+      ],
+      "similarity": 0.952
+    },
+    {
+      "ids": [
+        "sets-050",
+        "sets-051"
+      ],
+      "similarity": 0.952
+    },
+    {
+      "ids": [
+        "sets-053",
+        "sets-054"
+      ],
+      "similarity": 0.933
+    },
+    {
+      "ids": [
+        "sets-053",
+        "sets-055"
+      ],
+      "similarity": 0.933
+    },
+    {
+      "ids": [
+        "sets-053",
+        "sets-056"
+      ],
+      "similarity": 0.933
+    },
+    {
+      "ids": [
+        "sets-054",
+        "sets-055"
+      ],
+      "similarity": 0.933
+    },
+    {
+      "ids": [
+        "sets-054",
+        "sets-056"
+      ],
+      "similarity": 0.933
+    },
+    {
+      "ids": [
+        "sets-055",
+        "sets-056"
+      ],
+      "similarity": 0.933
+    },
+    {
+      "ids": [
+        "sets-073",
+        "sets-074"
+      ],
+      "similarity": 0.826
+    },
+    {
+      "ids": [
+        "sets-077",
+        "sets-078"
+      ],
+      "similarity": 0.81
+    },
+    {
+      "ids": [
+        "sets-081",
+        "sets-082"
+      ],
+      "similarity": 0.852
+    },
+    {
+      "ids": [
+        "sets-081",
+        "sets-083"
+      ],
+      "similarity": 0.821
+    },
+    {
+      "ids": [
+        "sets-085",
+        "sets-086"
+      ],
+      "similarity": 0.857
+    },
+    {
+      "ids": [
+        "sets-093",
+        "sets-094"
+      ],
+      "similarity": 0.8
+    },
+    {
+      "ids": [
+        "counting-022",
+        "counting-023"
+      ],
+      "similarity": 0.895
+    },
+    {
+      "ids": [
+        "counting-034",
+        "counting-035"
+      ],
+      "similarity": 0.842
+    },
+    {
+      "ids": [
+        "counting-034",
+        "counting-036"
+      ],
+      "similarity": 0.85
+    },
+    {
+      "ids": [
+        "counting-041",
+        "counting-042"
+      ],
+      "similarity": 0.833
+    },
+    {
+      "ids": [
+        "counting-045",
+        "counting-046"
+      ],
+      "similarity": 0.806
+    },
+    {
+      "ids": [
+        "counting-045",
+        "counting-047"
+      ],
+      "similarity": 0.806
+    },
+    {
+      "ids": [
+        "counting-045",
+        "counting-048"
+      ],
+      "similarity": 0.938
+    },
+    {
+      "ids": [
+        "counting-046",
+        "counting-048"
+      ],
+      "similarity": 0.806
+    },
+    {
+      "ids": [
+        "counting-047",
+        "counting-048"
+      ],
+      "similarity": 0.806
+    },
+    {
+      "ids": [
+        "counting-085",
+        "counting-088"
+      ],
+      "similarity": 0.857
+    },
+    {
+      "ids": [
+        "graphs-number-013",
+        "graphs-number-033"
+      ],
+      "similarity": 0.8
+    },
+    {
+      "ids": [
+        "graphs-number-038",
+        "graphs-number-040"
+      ],
+      "similarity": 0.845
+    },
+    {
+      "ids": [
+        "graphs-number-049",
+        "graphs-number-052"
+      ],
+      "similarity": 0.813
+    },
+    {
+      "ids": [
+        "graphs-number-050",
+        "graphs-number-052"
+      ],
+      "similarity": 0.813
+    },
+    {
+      "ids": [
+        "graphs-number-051",
+        "graphs-number-052"
+      ],
+      "similarity": 0.823
+    },
+    {
+      "ids": [
+        "recurrences-017",
+        "recurrences-020"
+      ],
+      "similarity": 0.8
+    },
+    {
+      "ids": [
+        "recurrences-029",
+        "recurrences-031"
+      ],
+      "similarity": 0.8
+    },
+    {
+      "ids": [
+        "recurrences-033",
+        "recurrences-034"
+      ],
+      "similarity": 0.8
+    },
+    {
+      "ids": [
+        "recurrences-041",
+        "recurrences-044"
+      ],
+      "similarity": 0.8
+    },
+    {
+      "ids": [
+        "recurrences-049",
+        "recurrences-050"
+      ],
+      "similarity": 0.889
+    },
+    {
+      "ids": [
+        "recurrences-053",
+        "recurrences-054"
+      ],
+      "similarity": 0.882
+    },
+    {
+      "ids": [
+        "recurrences-055",
+        "recurrences-056"
+      ],
+      "similarity": 0.8
+    },
+    {
+      "ids": [
+        "recurrences-091",
+        "recurrences-092"
+      ],
+      "similarity": 0.833
+    }
+  ],
+  "repeated_option_sets": [
+    [
+      "logic-002",
+      "logic-006",
+      "logic-010",
+      "logic-014",
+      "logic-066"
+    ],
+    [
+      "logic-004",
+      "logic-008",
+      "logic-012",
+      "logic-016",
+      "logic-068"
+    ],
+    [
+      "logic-022",
+      "logic-024",
+      "logic-026",
+      "logic-028",
+      "logic-038",
+      "logic-040",
+      "logic-042",
+      "logic-044",
+      "logic-046",
+      "logic-048",
+      "logic-058",
+      "logic-060",
+      "logic-062",
+      "logic-064",
+      "logic-074",
+      "logic-076"
+    ],
+    [
+      "logic-029",
+      "logic-053"
+    ],
+    [
+      "logic-030",
+      "logic-034",
+      "logic-050",
+      "logic-054",
+      "logic-070"
+    ],
+    [
+      "logic-031",
+      "logic-035",
+      "logic-055"
+    ],
+    [
+      "logic-032",
+      "logic-036",
+      "logic-052",
+      "logic-056",
+      "logic-072"
+    ],
+    [
+      "logic-039",
+      "logic-075"
+    ],
+    [
+      "sets-001",
+      "sets-002",
+      "sets-003"
+    ],
+    [
+      "sets-005",
+      "sets-006",
+      "sets-007"
+    ],
+    [
+      "sets-009",
+      "sets-010",
+      "sets-011"
+    ],
+    [
+      "sets-013",
+      "sets-014",
+      "sets-015"
+    ],
+    [
+      "sets-017",
+      "sets-021",
+      "sets-025",
+      "sets-029",
+      "sets-033"
+    ],
+    [
+      "sets-023",
+      "sets-035"
+    ],
+    [
+      "sets-024",
+      "sets-028",
+      "sets-032",
+      "sets-036"
+    ],
+    [
+      "sets-026",
+      "sets-034"
+    ],
+    [
+      "sets-037",
+      "sets-045",
+      "sets-049"
+    ],
+    [
+      "sets-038",
+      "sets-050",
+      "sets-054"
+    ],
+    [
+      "sets-039",
+      "sets-043",
+      "sets-047",
+      "sets-051"
+    ],
+    [
+      "sets-041",
+      "sets-053"
+    ],
+    [
+      "sets-042",
+      "sets-046"
+    ],
+    [
+      "sets-044",
+      "sets-048"
+    ],
+    [
+      "sets-052",
+      "sets-066",
+      "sets-068",
+      "graphs-number-018",
+      "graphs-number-026",
+      "graphs-number-030",
+      "recurrences-003"
+    ],
+    [
+      "sets-057",
+      "sets-059"
+    ],
+    [
+      "sets-058",
+      "sets-070",
+      "counting-055",
+      "counting-063",
+      "counting-084",
+      "graphs-number-010",
+      "graphs-number-029",
+      "graphs-number-042",
+      "graphs-number-053",
+      "graphs-number-060",
+      "graphs-number-062",
+      "graphs-number-069",
+      "graphs-number-076",
+      "graphs-number-077",
+      "graphs-number-079",
+      "graphs-number-096"
+    ],
+    [
+      "sets-061",
+      "sets-062",
+      "sets-063",
+      "sets-065",
+      "sets-067",
+      "sets-082",
+      "graphs-number-022",
+      "graphs-number-046",
+      "graphs-number-065",
+      "recurrences-007",
+      "recurrences-030",
+      "recurrences-047"
+    ],
+    [
+      "sets-069",
+      "sets-071",
+      "counting-046",
+      "counting-059",
+      "graphs-number-001",
+      "graphs-number-002",
+      "graphs-number-005",
+      "graphs-number-006",
+      "graphs-number-014",
+      "graphs-number-021",
+      "graphs-number-025",
+      "graphs-number-038"
+    ],
+    [
+      "sets-073",
+      "counting-027"
+    ],
+    [
+      "sets-075",
+      "counting-026",
+      "graphs-number-034",
+      "graphs-number-037"
+    ],
+    [
+      "sets-077",
+      "sets-080"
+    ],
+    [
+      "sets-078",
+      "graphs-number-041"
+    ],
+    [
+      "sets-079",
+      "counting-035",
+      "counting-083",
+      "graphs-number-009",
+      "graphs-number-033",
+      "graphs-number-050"
+    ],
+    [
+      "counting-002",
+      "counting-030",
+      "counting-089"
+    ],
+    [
+      "counting-004",
+      "counting-076"
+    ],
+    [
+      "counting-011",
+      "counting-100"
+    ],
+    [
+      "counting-017",
+      "counting-080"
+    ],
+    [
+      "counting-028",
+      "counting-072"
+    ],
+    [
+      "counting-037",
+      "counting-081"
+    ],
+    [
+      "counting-040",
+      "counting-074",
+      "counting-099"
+    ],
+    [
+      "counting-047",
+      "counting-058",
+      "graphs-number-013",
+      "graphs-number-017"
+    ],
+    [
+      "counting-048",
+      "graphs-number-045"
+    ],
+    [
+      "counting-050",
+      "counting-086"
+    ],
+    [
+      "counting-053",
+      "counting-090"
+    ],
+    [
+      "counting-082",
+      "counting-097"
+    ],
+    [
+      "graphs-number-003",
+      "graphs-number-007",
+      "graphs-number-011",
+      "graphs-number-015",
+      "graphs-number-019",
+      "graphs-number-023",
+      "graphs-number-027",
+      "graphs-number-031",
+      "graphs-number-035",
+      "graphs-number-039",
+      "graphs-number-043",
+      "graphs-number-047",
+      "graphs-number-051"
+    ],
+    [
+      "graphs-number-012",
+      "graphs-number-016",
+      "graphs-number-028",
+      "graphs-number-036",
+      "graphs-number-040",
+      "graphs-number-048",
+      "graphs-number-052"
+    ],
+    [
+      "graphs-number-057",
+      "graphs-number-066",
+      "graphs-number-070"
+    ],
+    [
+      "graphs-number-067",
+      "graphs-number-078",
+      "graphs-number-089",
+      "graphs-number-097"
+    ],
+    [
+      "graphs-number-075",
+      "graphs-number-080"
+    ],
+    [
+      "recurrences-009",
+      "recurrences-013",
+      "recurrences-073",
+      "recurrences-085",
+      "recurrences-097"
+    ],
+    [
+      "recurrences-012",
+      "recurrences-045",
+      "recurrences-050",
+      "recurrences-057"
+    ],
+    [
+      "recurrences-015",
+      "recurrences-049",
+      "recurrences-068",
+      "recurrences-071"
+    ],
+    [
+      "recurrences-020",
+      "recurrences-044",
+      "recurrences-088",
+      "recurrences-096"
+    ],
+    [
+      "recurrences-025",
+      "recurrences-081"
+    ],
+    [
+      "recurrences-028",
+      "recurrences-083",
+      "recurrences-087",
+      "recurrences-094"
+    ],
+    [
+      "recurrences-037",
+      "recurrences-077"
+    ],
+    [
+      "recurrences-053",
+      "recurrences-054"
+    ]
+  ],
+  "editorial_note": "Four distinct tasks share each case context. Similarity and repeated option sets are inspection flags, not proof of duplication. Conceptual and proof explanations still need human subject-matter review."
+}

@@ -1,0 +1,121 @@
+{
+  "version": 1,
+  "title": "CS 2305 Discrete Mathematics for Computing I",
+  "total_questions": 600,
+  "pillars": [
+    {
+      "id": "logic",
+      "title": "Logic and mathematical reasoning",
+      "course_dependent": false,
+      "blocks": [
+        {
+          "id": "logic-block-01",
+          "title": "Block 1",
+          "path": "data/logic/block-01.json",
+          "count": 50
+        },
+        {
+          "id": "logic-block-02",
+          "title": "Block 2",
+          "path": "data/logic/block-02.json",
+          "count": 50
+        }
+      ]
+    },
+    {
+      "id": "proofs",
+      "title": "Proof techniques",
+      "course_dependent": true,
+      "blocks": [
+        {
+          "id": "proofs-block-01",
+          "title": "Block 1",
+          "path": "data/proofs/block-01.json",
+          "count": 50
+        },
+        {
+          "id": "proofs-block-02",
+          "title": "Block 2",
+          "path": "data/proofs/block-02.json",
+          "count": 50
+        }
+      ]
+    },
+    {
+      "id": "sets",
+      "title": "Sets, relations, and functions",
+      "course_dependent": false,
+      "blocks": [
+        {
+          "id": "sets-block-01",
+          "title": "Block 1",
+          "path": "data/sets/block-01.json",
+          "count": 50
+        },
+        {
+          "id": "sets-block-02",
+          "title": "Block 2",
+          "path": "data/sets/block-02.json",
+          "count": 50
+        }
+      ]
+    },
+    {
+      "id": "counting",
+      "title": "Counting and combinatorics",
+      "course_dependent": false,
+      "blocks": [
+        {
+          "id": "counting-block-01",
+          "title": "Block 1",
+          "path": "data/counting/block-01.json",
+          "count": 50
+        },
+        {
+          "id": "counting-block-02",
+          "title": "Block 2",
+          "path": "data/counting/block-02.json",
+          "count": 50
+        }
+      ]
+    },
+    {
+      "id": "graphs-number",
+      "title": "Graph theory and number theory",
+      "course_dependent": false,
+      "blocks": [
+        {
+          "id": "graphs-number-block-01",
+          "title": "Block 1",
+          "path": "data/graphs-number/block-01.json",
+          "count": 50
+        },
+        {
+          "id": "graphs-number-block-02",
+          "title": "Block 2",
+          "path": "data/graphs-number/block-02.json",
+          "count": 50
+        }
+      ]
+    },
+    {
+      "id": "recurrences",
+      "title": "Recurrence relations",
+      "course_dependent": true,
+      "blocks": [
+        {
+          "id": "recurrences-block-01",
+          "title": "Block 1",
+          "path": "data/recurrences/block-01.json",
+          "count": 50
+        },
+        {
+          "id": "recurrences-block-02",
+          "title": "Block 2",
+          "path": "data/recurrences/block-02.json",
+          "count": 50
+        }
+      ]
+    }
+  ]
+}

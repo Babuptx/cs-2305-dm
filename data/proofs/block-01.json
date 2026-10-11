@@ -1,0 +1,2108 @@
+{
+  "schema_version": 1,
+  "block_id": "proofs-block-01",
+  "pillar_id": "proofs",
+  "block_title": "Proof techniques · Block 1",
+  "questions": [
+    {
+      "id": "proofs-001",
+      "topic": "Parity: direct proof",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "Which representation correctly starts a direct proof?",
+      "context": "Proof workshop: The sum of two odd integers is even. Induction coverage may vary by course section.",
+      "options": [
+        "a = 2u, b = 2v",
+        "a = u+1, b = v+1",
+        "a = 2u+1, b = 2v",
+        "a = 2u+1, b = 2v+1 with u,v integers"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Start from the definition of an odd integer.",
+        "Check that each claimed step uses only hypotheses already established. For induction, distinguish the assumed case from the case being proved."
+      ],
+      "explanation": {
+        "learning_objective": "Apply parity: direct proof with explicit justification.",
+        "correct_rationale": "By the definition of oddness, each odd integer has the form 2k+1 for an integer k.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "These represent even, not odd integers."
+          },
+          {
+            "option_index": 1,
+            "rationale": "Adding one to an arbitrary integer does not specify parity."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The second integer is even."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "proofs-002",
+      "topic": "Parity: direct proof",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "Which calculation proves the conclusion?",
+      "context": "Proof workshop: The sum of two odd integers is even. Induction coverage may vary by course section.",
+      "options": [
+        "a+b = 2(u+v+1)",
+        "a+b = 2uv+2",
+        "a+b = u+v+2",
+        "a+b = 2(u+v)+1"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Expand the sum before factoring out 2.",
+        "Check that each claimed step uses only hypotheses already established. For induction, distinguish the assumed case from the case being proved."
+      ],
+      "explanation": {
+        "learning_objective": "Apply parity: direct proof with explicit justification.",
+        "correct_rationale": "Add (2u+1)+(2v+1)=2u+2v+2=2(u+v+1). The quantity inside parentheses is an integer.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "Addition of a and b does not produce a product uv."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The coefficients of u and v have been lost."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The two +1 terms add to 2, not 1."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "proofs-003",
+      "topic": "Parity: direct proof",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "Why does the factorization complete the proof?",
+      "context": "Proof workshop: The sum of two odd integers is even. Induction coverage may vary by course section.",
+      "options": [
+        "u+v+1 must be positive",
+        "u+v+1 must be odd",
+        "u+v+1 is an integer",
+        "u and v must be equal"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Which property of the factor is in the definition of evenness?",
+        "Check that each claimed step uses only hypotheses already established. For induction, distinguish the assumed case from the case being proved."
+      ],
+      "explanation": {
+        "learning_objective": "Apply parity: direct proof with explicit justification.",
+        "correct_rationale": "Even means equal to twice an integer. Closure of integers under addition gives the required integer witness.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "Negative even integers are also even."
+          },
+          {
+            "option_index": 1,
+            "rationale": "An even number is twice any integer, regardless of its parity."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The argument works for different u and v."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "proofs-004",
+      "topic": "Parity: direct proof",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "Which extension is false?",
+      "context": "Proof workshop: The sum of two odd integers is even. Induction coverage may vary by course section.",
+      "options": [
+        "The sum of an odd and an even integer is odd",
+        "The sum of three odd integers is even",
+        "The sum of two even integers is even",
+        "The sum of four odd integers is even"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Track the number of +1 terms modulo 2.",
+        "Check that each claimed step uses only hypotheses already established. For induction, distinguish the assumed case from the case being proved."
+      ],
+      "explanation": {
+        "learning_objective": "Apply parity: direct proof with explicit justification.",
+        "correct_rationale": "Three odd integers sum to 2(u+v+w+1)+1, which is odd; 1+1+1=3 is a counterexample.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "2u+1+2v=2(u+v)+1."
+          },
+          {
+            "option_index": 2,
+            "rationale": "2u+2v=2(u+v)."
+          },
+          {
+            "option_index": 3,
+            "rationale": "Pair the integers; each pair sums to an even integer."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "proofs-005",
+      "topic": "Parity: contraposition",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "Which statement is the contrapositive?",
+      "context": "Proof workshop: If n² is even, then n is even. Induction coverage may vary by course section.",
+      "options": [
+        "If n is odd, then n² is odd",
+        "If n is odd, then n² is even",
+        "If n² is odd, then n is odd",
+        "If n is even, then n² is even"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Reverse the implication and negate both parts.",
+        "Check that each claimed step uses only hypotheses already established. For induction, distinguish the assumed case from the case being proved."
+      ],
+      "explanation": {
+        "learning_objective": "Apply parity: contraposition with explicit justification.",
+        "correct_rationale": "For P→Q, the contrapositive is ¬Q→¬P. Here ¬Q means n is odd and ¬P means n² is odd.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "The consequent was not negated correctly."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This is the inverse of the original implication."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This is the converse, not the contrapositive."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "proofs-006",
+      "topic": "Parity: contraposition",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "For n=2k+1, which expansion is correct?",
+      "context": "Proof workshop: If n² is even, then n is even. Induction coverage may vary by course section.",
+      "options": [
+        "n² = 2(k²+k)",
+        "n² = 2(2k²+2k)+1",
+        "n² = 4k²+1",
+        "n² = 2k²+2k+1"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Include the cross term when squaring a sum.",
+        "Check that each claimed step uses only hypotheses already established. For induction, distinguish the assumed case from the case being proved."
+      ],
+      "explanation": {
+        "learning_objective": "Apply parity: contraposition with explicit justification.",
+        "correct_rationale": "(2k+1)²=4k²+4k+1=2(2k²+2k)+1.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The constant term has vanished, falsely suggesting an even square."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The cross term 4k is missing."
+          },
+          {
+            "option_index": 3,
+            "rationale": "Squaring 2k produces 4k²."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "proofs-007",
+      "topic": "Parity: contraposition",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "Which fact is needed to infer oddness from that expansion?",
+      "context": "Proof workshop: If n² is even, then n is even. Induction coverage may vary by course section.",
+      "options": [
+        "2k²+2k is an integer",
+        "k must be nonnegative",
+        "n must be prime",
+        "k² must be odd"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Check the integer witness in 2m+1.",
+        "Check that each claimed step uses only hypotheses already established. For induction, distinguish the assumed case from the case being proved."
+      ],
+      "explanation": {
+        "learning_objective": "Apply parity: contraposition with explicit justification.",
+        "correct_rationale": "The expression is 2m+1 with integer m=2k²+2k, exactly the definition of oddness.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "Oddness is defined for all integers."
+          },
+          {
+            "option_index": 2,
+            "rationale": "Primality has no role here."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The proof does not require that."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "proofs-008",
+      "topic": "Parity: contraposition",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "Which proposed analogous implication fails?",
+      "context": "Proof workshop: If n² is even, then n is even. Induction coverage may vary by course section.",
+      "options": [
+        "If n² is even, then n is even",
+        "If n is even, then n² is divisible by 4",
+        "If n² is odd, then n is odd",
+        "If n² is divisible by 4, then n is divisible by 4"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Look for the smallest integer satisfying the hypothesis but not the conclusion.",
+        "Check that each claimed step uses only hypotheses already established. For induction, distinguish the assumed case from the case being proved."
+      ],
+      "explanation": {
+        "learning_objective": "Apply parity: contraposition with explicit justification.",
+        "correct_rationale": "n=2 has square 4 divisible by 4, but 2 is not divisible by 4.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This is the theorem established by contraposition."
+          },
+          {
+            "option_index": 1,
+            "rationale": "n=2k gives n²=4k²."
+          },
+          {
+            "option_index": 2,
+            "rationale": "An even n would have an even square."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "proofs-009",
+      "topic": "Divisibility transitivity",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "Which witnesses express the hypotheses?",
+      "context": "Proof workshop: If a|b and b|c, then a|c (a,b,c integers). Induction coverage may vary by course section.",
+      "options": [
+        "b=ak and c=bℓ for integers k,ℓ",
+        "a=bk and b=cℓ",
+        "b=a+k and c=b+ℓ",
+        "k and ℓ may be arbitrary real numbers"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Separate the hypothesis, the exact target, and the definition or theorem that connects them.",
+        "Check that each claimed step uses only hypotheses already established. For induction, distinguish the assumed case from the case being proved."
+      ],
+      "explanation": {
+        "learning_objective": "Apply divisibility transitivity with explicit justification.",
+        "correct_rationale": "Divisibility uses integer multiplicative witnesses; its direction is b=ak, c=bℓ.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "This does not satisfy the stated proof obligation. Divisibility uses integer multiplicative witnesses; its direction is b=ak, c=bℓ."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This does not satisfy the stated proof obligation. Divisibility uses integer multiplicative witnesses; its direction is b=ak, c=bℓ."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This does not satisfy the stated proof obligation. Divisibility uses integer multiplicative witnesses; its direction is b=ak, c=bℓ."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "proofs-010",
+      "topic": "Divisibility transitivity",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "Which substitution proves a|c?",
+      "context": "Proof workshop: If a|b and b|c, then a|c (a,b,c integers). Induction coverage may vary by course section.",
+      "options": [
+        "c=a(kℓ)",
+        "c=a+kℓ",
+        "c=(a+k)ℓ",
+        "c=a(k+ℓ)"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Separate the hypothesis, the exact target, and the definition or theorem that connects them.",
+        "Check that each claimed step uses only hypotheses already established. For induction, distinguish the assumed case from the case being proved."
+      ],
+      "explanation": {
+        "learning_objective": "Apply divisibility transitivity with explicit justification.",
+        "correct_rationale": "Substitute b=ak into c=bℓ to get c=a(kℓ).",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "This does not satisfy the stated proof obligation. Substitute b=ak into c=bℓ to get c=a(kℓ)."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This does not satisfy the stated proof obligation. Substitute b=ak into c=bℓ to get c=a(kℓ)."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This does not satisfy the stated proof obligation. Substitute b=ak into c=bℓ to get c=a(kℓ)."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "proofs-011",
+      "topic": "Divisibility transitivity",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "Why is kℓ an acceptable witness?",
+      "context": "Proof workshop: If a|b and b|c, then a|c (a,b,c integers). Induction coverage may vary by course section.",
+      "options": [
+        "The product is always positive",
+        "The product is always prime",
+        "Integers are closed under multiplication",
+        "The product must equal 1"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Separate the hypothesis, the exact target, and the definition or theorem that connects them.",
+        "Check that each claimed step uses only hypotheses already established. For induction, distinguish the assumed case from the case being proved."
+      ],
+      "explanation": {
+        "learning_objective": "Apply divisibility transitivity with explicit justification.",
+        "correct_rationale": "k and ℓ are integers, so kℓ is an integer; its sign is irrelevant.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This does not satisfy the stated proof obligation. k and ℓ are integers, so kℓ is an integer; its sign is irrelevant."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This does not satisfy the stated proof obligation. k and ℓ are integers, so kℓ is an integer; its sign is irrelevant."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This does not satisfy the stated proof obligation. k and ℓ are integers, so kℓ is an integer; its sign is irrelevant."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "proofs-012",
+      "topic": "Divisibility transitivity",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "Which converse implication is false?",
+      "context": "Proof workshop: If a|b and b|c, then a|c (a,b,c integers). Induction coverage may vary by course section.",
+      "options": [
+        "a|c and b|c imply a|b",
+        "a|b and b|c imply a|c",
+        "a|b and a|c imply a|(b+c)",
+        "a|b implies a|2b"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Separate the hypothesis, the exact target, and the definition or theorem that connects them.",
+        "Check that each claimed step uses only hypotheses already established. For induction, distinguish the assumed case from the case being proved."
+      ],
+      "explanation": {
+        "learning_objective": "Apply divisibility transitivity with explicit justification.",
+        "correct_rationale": "Take a=2, b=3, c=6: both divide c, but 2 does not divide 3.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "This does not satisfy the stated proof obligation. Take a=2, b=3, c=6: both divide c, but 2 does not divide 3."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This does not satisfy the stated proof obligation. Take a=2, b=3, c=6: both divide c, but 2 does not divide 3."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This does not satisfy the stated proof obligation. Take a=2, b=3, c=6: both divide c, but 2 does not divide 3."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "proofs-013",
+      "topic": "Linear combinations",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "Which premise is essential?",
+      "context": "Proof workshop: If d|a and d|b, then d|(3a−2b). Induction coverage may vary by course section.",
+      "options": [
+        "Both multiplicative witnesses are integers",
+        "d must be prime",
+        "a and b must be equal",
+        "a and b must be positive"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Separate the hypothesis, the exact target, and the definition or theorem that connects them.",
+        "Check that each claimed step uses only hypotheses already established. For induction, distinguish the assumed case from the case being proved."
+      ],
+      "explanation": {
+        "learning_objective": "Apply linear combinations with explicit justification.",
+        "correct_rationale": "Divisibility requires a=du and b=dv for integers u and v.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "This does not satisfy the stated proof obligation. Divisibility requires a=du and b=dv for integers u and v."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This does not satisfy the stated proof obligation. Divisibility requires a=du and b=dv for integers u and v."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This does not satisfy the stated proof obligation. Divisibility requires a=du and b=dv for integers u and v."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "proofs-014",
+      "topic": "Linear combinations",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "Which factorization gives the witness?",
+      "context": "Proof workshop: If d|a and d|b, then d|(3a−2b). Induction coverage may vary by course section.",
+      "options": [
+        "3a−2b=d(u−v)",
+        "3a−2b=d(3u+2v)",
+        "3a−2b=d(3u−2v)",
+        "3a−2b=3du−2v"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Separate the hypothesis, the exact target, and the definition or theorem that connects them.",
+        "Check that each claimed step uses only hypotheses already established. For induction, distinguish the assumed case from the case being proved."
+      ],
+      "explanation": {
+        "learning_objective": "Apply linear combinations with explicit justification.",
+        "correct_rationale": "Substituting a=du and b=dv gives 3du−2dv=d(3u−2v).",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This does not satisfy the stated proof obligation. Substituting a=du and b=dv gives 3du−2dv=d(3u−2v)."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This does not satisfy the stated proof obligation. Substituting a=du and b=dv gives 3du−2dv=d(3u−2v)."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This does not satisfy the stated proof obligation. Substituting a=du and b=dv gives 3du−2dv=d(3u−2v)."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "proofs-015",
+      "topic": "Linear combinations",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "What closes the direct argument?",
+      "context": "Proof workshop: If d|a and d|b, then d|(3a−2b). Induction coverage may vary by course section.",
+      "options": [
+        "u/v is an integer",
+        "3u−2v is an integer",
+        "d is a common multiple",
+        "3u−2v is necessarily positive"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Separate the hypothesis, the exact target, and the definition or theorem that connects them.",
+        "Check that each claimed step uses only hypotheses already established. For induction, distinguish the assumed case from the case being proved."
+      ],
+      "explanation": {
+        "learning_objective": "Apply linear combinations with explicit justification.",
+        "correct_rationale": "Integer linear combinations remain integers, giving the required witness.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This does not satisfy the stated proof obligation. Integer linear combinations remain integers, giving the required witness."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This does not satisfy the stated proof obligation. Integer linear combinations remain integers, giving the required witness."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This does not satisfy the stated proof obligation. Integer linear combinations remain integers, giving the required witness."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "proofs-016",
+      "topic": "Linear combinations",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "Which coefficient change invalidates this general integer-witness argument?",
+      "context": "Proof workshop: If d|a and d|b, then d|(3a−2b). Induction coverage may vary by course section.",
+      "options": [
+        "Replace −2 by 7",
+        "Replace 3 by 1/2",
+        "Replace −2 by 0",
+        "Replace 3 by −3"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Separate the hypothesis, the exact target, and the definition or theorem that connects them.",
+        "Check that each claimed step uses only hypotheses already established. For induction, distinguish the assumed case from the case being proved."
+      ],
+      "explanation": {
+        "learning_objective": "Apply linear combinations with explicit justification.",
+        "correct_rationale": "With d=2,a=2,b=0, (1/2)a=1 is not divisible by 2. Integer coefficients are essential.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This does not satisfy the stated proof obligation. With d=2,a=2,b=0, (1/2)a=1 is not divisible by 2. Integer coefficients are essential."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This does not satisfy the stated proof obligation. With d=2,a=2,b=0, (1/2)a=1 is not divisible by 2. Integer coefficients are essential."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This does not satisfy the stated proof obligation. With d=2,a=2,b=0, (1/2)a=1 is not divisible by 2. Integer coefficients are essential."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "proofs-017",
+      "topic": "Rational closure",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "Which representations satisfy the definition?",
+      "context": "Proof workshop: The sum of two rational numbers is rational. Induction coverage may vary by course section.",
+      "options": [
+        "a/b with arbitrary real a,b and b≠0",
+        "a/b and c/d with integers a,b,c,d and b,d≠0",
+        "a and c must both be prime",
+        "a/0 and c/d"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Separate the hypothesis, the exact target, and the definition or theorem that connects them.",
+        "Check that each claimed step uses only hypotheses already established. For induction, distinguish the assumed case from the case being proved."
+      ],
+      "explanation": {
+        "learning_objective": "Apply rational closure with explicit justification.",
+        "correct_rationale": "Rational numbers are quotients of integers with nonzero denominator.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This does not satisfy the stated proof obligation. Rational numbers are quotients of integers with nonzero denominator."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This does not satisfy the stated proof obligation. Rational numbers are quotients of integers with nonzero denominator."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This does not satisfy the stated proof obligation. Rational numbers are quotients of integers with nonzero denominator."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "proofs-018",
+      "topic": "Rational closure",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "Which common-denominator expression is correct?",
+      "context": "Proof workshop: The sum of two rational numbers is rational. Induction coverage may vary by course section.",
+      "options": [
+        "(ab+cd)/(bd)",
+        "(ac)/(bd)",
+        "(a+c)/(b+d)",
+        "(ad+bc)/(bd)"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Separate the hypothesis, the exact target, and the definition or theorem that connects them.",
+        "Check that each claimed step uses only hypotheses already established. For induction, distinguish the assumed case from the case being proved."
+      ],
+      "explanation": {
+        "learning_objective": "Apply rational closure with explicit justification.",
+        "correct_rationale": "a/b+c/d=ad/(bd)+bc/(bd)=(ad+bc)/(bd).",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This does not satisfy the stated proof obligation. a/b+c/d=ad/(bd)+bc/(bd)=(ad+bc)/(bd)."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This does not satisfy the stated proof obligation. a/b+c/d=ad/(bd)+bc/(bd)=(ad+bc)/(bd)."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This does not satisfy the stated proof obligation. a/b+c/d=ad/(bd)+bc/(bd)=(ad+bc)/(bd)."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "proofs-019",
+      "topic": "Rational closure",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "Which denominator fact must be checked?",
+      "context": "Proof workshop: The sum of two rational numbers is rational. Induction coverage may vary by course section.",
+      "options": [
+        "bd≠0",
+        "bd must be prime",
+        "bd must be 1",
+        "b+d≠0"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Separate the hypothesis, the exact target, and the definition or theorem that connects them.",
+        "Check that each claimed step uses only hypotheses already established. For induction, distinguish the assumed case from the case being proved."
+      ],
+      "explanation": {
+        "learning_objective": "Apply rational closure with explicit justification.",
+        "correct_rationale": "A product of two nonzero integers is nonzero, so the quotient is defined.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "This does not satisfy the stated proof obligation. A product of two nonzero integers is nonzero, so the quotient is defined."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This does not satisfy the stated proof obligation. A product of two nonzero integers is nonzero, so the quotient is defined."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This does not satisfy the stated proof obligation. A product of two nonzero integers is nonzero, so the quotient is defined."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "proofs-020",
+      "topic": "Rational closure",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "Which related universal claim has a counterexample?",
+      "context": "Proof workshop: The sum of two rational numbers is rational. Induction coverage may vary by course section.",
+      "options": [
+        "The negative of a rational is rational",
+        "The product of two rationals is rational",
+        "The sum of two irrational numbers is irrational",
+        "The sum of two rationals is rational"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Separate the hypothesis, the exact target, and the definition or theorem that connects them.",
+        "Check that each claimed step uses only hypotheses already established. For induction, distinguish the assumed case from the case being proved."
+      ],
+      "explanation": {
+        "learning_objective": "Apply rational closure with explicit justification.",
+        "correct_rationale": "√2 and −√2 are irrational but their sum is 0, rational.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This does not satisfy the stated proof obligation. √2 and −√2 are irrational but their sum is 0, rational."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This does not satisfy the stated proof obligation. √2 and −√2 are irrational but their sum is 0, rational."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This does not satisfy the stated proof obligation. √2 and −√2 are irrational but their sum is 0, rational."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "proofs-021",
+      "topic": "Irrationality contradiction",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "What assumption starts a contradiction proof?",
+      "context": "Proof workshop: √2 is irrational. Induction coverage may vary by course section.",
+      "options": [
+        "a/b need not be rational",
+        "a and b are both even in lowest terms",
+        "√2=a/b in lowest terms, with positive integers a,b",
+        "√2 is already irrational"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Separate the hypothesis, the exact target, and the definition or theorem that connects them.",
+        "Check that each claimed step uses only hypotheses already established. For induction, distinguish the assumed case from the case being proved."
+      ],
+      "explanation": {
+        "learning_objective": "Apply irrationality contradiction with explicit justification.",
+        "correct_rationale": "Assume rationality and reduce the fraction so gcd(a,b)=1.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This does not satisfy the stated proof obligation. Assume rationality and reduce the fraction so gcd(a,b)=1."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This does not satisfy the stated proof obligation. Assume rationality and reduce the fraction so gcd(a,b)=1."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This does not satisfy the stated proof obligation. Assume rationality and reduce the fraction so gcd(a,b)=1."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "proofs-022",
+      "topic": "Irrationality contradiction",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "Which equation follows by squaring?",
+      "context": "Proof workshop: √2 is irrational. Induction coverage may vary by course section.",
+      "options": [
+        "2a²=b²",
+        "a²=b²/2",
+        "a²=2b²",
+        "a=2b"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Separate the hypothesis, the exact target, and the definition or theorem that connects them.",
+        "Check that each claimed step uses only hypotheses already established. For induction, distinguish the assumed case from the case being proved."
+      ],
+      "explanation": {
+        "learning_objective": "Apply irrationality contradiction with explicit justification.",
+        "correct_rationale": "Squaring √2=a/b gives 2=a²/b², hence a²=2b².",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This does not satisfy the stated proof obligation. Squaring √2=a/b gives 2=a²/b², hence a²=2b²."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This does not satisfy the stated proof obligation. Squaring √2=a/b gives 2=a²/b², hence a²=2b²."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This does not satisfy the stated proof obligation. Squaring √2=a/b gives 2=a²/b², hence a²=2b²."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "proofs-023",
+      "topic": "Irrationality contradiction",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "After a=2k is substituted, what follows?",
+      "context": "Proof workshop: √2 is irrational. Induction coverage may vary by course section.",
+      "options": [
+        "b²=2k², so b is even",
+        "b²=4k²",
+        "b is odd because a is even",
+        "a and b are necessarily equal"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Separate the hypothesis, the exact target, and the definition or theorem that connects them.",
+        "Check that each claimed step uses only hypotheses already established. For induction, distinguish the assumed case from the case being proved."
+      ],
+      "explanation": {
+        "learning_objective": "Apply irrationality contradiction with explicit justification.",
+        "correct_rationale": "4k²=2b² implies b²=2k². An even square has an even integer root.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "This does not satisfy the stated proof obligation. 4k²=2b² implies b²=2k². An even square has an even integer root."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This does not satisfy the stated proof obligation. 4k²=2b² implies b²=2k². An even square has an even integer root."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This does not satisfy the stated proof obligation. 4k²=2b² implies b²=2k². An even square has an even integer root."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "proofs-024",
+      "topic": "Irrationality contradiction",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "What is the actual contradiction?",
+      "context": "Proof workshop: √2 is irrational. Induction coverage may vary by course section.",
+      "options": [
+        "a and b share factor 2 despite being in lowest terms",
+        "An even integer cannot be squared",
+        "2 cannot be rational",
+        "a² and b² cannot both be positive"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Separate the hypothesis, the exact target, and the definition or theorem that connects them.",
+        "Check that each claimed step uses only hypotheses already established. For induction, distinguish the assumed case from the case being proved."
+      ],
+      "explanation": {
+        "learning_objective": "Apply irrationality contradiction with explicit justification.",
+        "correct_rationale": "The parity deductions force both a and b even, contradicting gcd(a,b)=1.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "This does not satisfy the stated proof obligation. The parity deductions force both a and b even, contradicting gcd(a,b)=1."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This does not satisfy the stated proof obligation. The parity deductions force both a and b even, contradicting gcd(a,b)=1."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This does not satisfy the stated proof obligation. The parity deductions force both a and b even, contradicting gcd(a,b)=1."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "proofs-025",
+      "topic": "Euclid: primes",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "Which temporary assumption is appropriate?",
+      "context": "Proof workshop: There are infinitely many primes. Induction coverage may vary by course section.",
+      "options": [
+        "Every integer is prime",
+        "All primes are a finite list p₁,…,pₖ",
+        "There is a largest integer",
+        "There are no integers"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Separate the hypothesis, the exact target, and the definition or theorem that connects them.",
+        "Check that each claimed step uses only hypotheses already established. For induction, distinguish the assumed case from the case being proved."
+      ],
+      "explanation": {
+        "learning_objective": "Apply euclid: primes with explicit justification.",
+        "correct_rationale": "Negate infinitude by supposing a complete finite list of primes.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This does not satisfy the stated proof obligation. Negate infinitude by supposing a complete finite list of primes."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This does not satisfy the stated proof obligation. Negate infinitude by supposing a complete finite list of primes."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This does not satisfy the stated proof obligation. Negate infinitude by supposing a complete finite list of primes."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "proofs-026",
+      "topic": "Euclid: primes",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "Which constructed integer is useful?",
+      "context": "Proof workshop: There are infinitely many primes. Induction coverage may vary by course section.",
+      "options": [
+        "N=1",
+        "N=p₁+p₂+⋯+pₖ",
+        "N=p₁p₂⋯pₖ",
+        "N=p₁p₂⋯pₖ+1"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Separate the hypothesis, the exact target, and the definition or theorem that connects them.",
+        "Check that each claimed step uses only hypotheses already established. For induction, distinguish the assumed case from the case being proved."
+      ],
+      "explanation": {
+        "learning_objective": "Apply euclid: primes with explicit justification.",
+        "correct_rationale": "The product plus one has remainder 1 upon division by each listed prime.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This does not satisfy the stated proof obligation. The product plus one has remainder 1 upon division by each listed prime."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This does not satisfy the stated proof obligation. The product plus one has remainder 1 upon division by each listed prime."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This does not satisfy the stated proof obligation. The product plus one has remainder 1 upon division by each listed prime."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "proofs-027",
+      "topic": "Euclid: primes",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "Which claim about N is actually justified?",
+      "context": "Proof workshop: There are infinitely many primes. Induction coverage may vary by course section.",
+      "options": [
+        "N is always a perfect square",
+        "N is always prime",
+        "N is always even",
+        "No listed prime divides N"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Separate the hypothesis, the exact target, and the definition or theorem that connects them.",
+        "Check that each claimed step uses only hypotheses already established. For induction, distinguish the assumed case from the case being proved."
+      ],
+      "explanation": {
+        "learning_objective": "Apply euclid: primes with explicit justification.",
+        "correct_rationale": "For each pᵢ, the product is 0 modulo pᵢ, so N is 1 modulo pᵢ. N need not itself be prime.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This does not satisfy the stated proof obligation. For each pᵢ, the product is 0 modulo pᵢ, so N is 1 modulo pᵢ. N need not itself be prime."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This does not satisfy the stated proof obligation. For each pᵢ, the product is 0 modulo pᵢ, so N is 1 modulo pᵢ. N need not itself be prime."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This does not satisfy the stated proof obligation. For each pᵢ, the product is 0 modulo pᵢ, so N is 1 modulo pᵢ. N need not itself be prime."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "proofs-028",
+      "topic": "Euclid: primes",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "How is the contradiction obtained even if N is composite?",
+      "context": "Proof workshop: There are infinitely many primes. Induction coverage may vary by course section.",
+      "options": [
+        "N must be on the list as an integer",
+        "Subtract 1 from N and stop",
+        "A prime divisor of N is absent from the list",
+        "Composite numbers have no prime divisors"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Separate the hypothesis, the exact target, and the definition or theorem that connects them.",
+        "Check that each claimed step uses only hypotheses already established. For induction, distinguish the assumed case from the case being proved."
+      ],
+      "explanation": {
+        "learning_objective": "Apply euclid: primes with explicit justification.",
+        "correct_rationale": "Since N>1, it has a prime divisor; no listed prime divides N, contradicting completeness of the list.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This does not satisfy the stated proof obligation. Since N>1, it has a prime divisor; no listed prime divides N, contradicting completeness of the list."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This does not satisfy the stated proof obligation. Since N>1, it has a prime divisor; no listed prime divides N, contradicting completeness of the list."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This does not satisfy the stated proof obligation. Since N>1, it has a prime divisor; no listed prime divides N, contradicting completeness of the list."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "proofs-029",
+      "topic": "Counterexample discipline",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "Which integer is a counterexample?",
+      "context": "Proof workshop: Evaluate the claim: every odd integer is prime. Induction coverage may vary by course section.",
+      "options": [
+        "2",
+        "9",
+        "−2",
+        "3"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Separate the hypothesis, the exact target, and the definition or theorem that connects them.",
+        "Check that each claimed step uses only hypotheses already established. For induction, distinguish the assumed case from the case being proved."
+      ],
+      "explanation": {
+        "learning_objective": "Apply counterexample discipline with explicit justification.",
+        "correct_rationale": "9 is odd and composite: 9=3·3. The other candidates either are not odd or are prime.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This does not satisfy the stated proof obligation. 9 is odd and composite: 9=3·3. The other candidates either are not odd or are prime."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This does not satisfy the stated proof obligation. 9 is odd and composite: 9=3·3. The other candidates either are not odd or are prime."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This does not satisfy the stated proof obligation. 9 is odd and composite: 9=3·3. The other candidates either are not odd or are prime."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "proofs-030",
+      "topic": "Counterexample discipline",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "Which logical condition must a counterexample meet?",
+      "context": "Proof workshop: Evaluate the claim: every odd integer is prime. Induction coverage may vary by course section.",
+      "options": [
+        "The conclusion is true",
+        "The hypothesis is false",
+        "Both hypothesis and conclusion are false",
+        "The hypothesis is true and the conclusion is false"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Separate the hypothesis, the exact target, and the definition or theorem that connects them.",
+        "Check that each claimed step uses only hypotheses already established. For induction, distinguish the assumed case from the case being proved."
+      ],
+      "explanation": {
+        "learning_objective": "Apply counterexample discipline with explicit justification.",
+        "correct_rationale": "To refute P→Q, exhibit P∧¬Q.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This does not satisfy the stated proof obligation. To refute P→Q, exhibit P∧¬Q."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This does not satisfy the stated proof obligation. To refute P→Q, exhibit P∧¬Q."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This does not satisfy the stated proof obligation. To refute P→Q, exhibit P∧¬Q."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "proofs-031",
+      "topic": "Counterexample discipline",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "What does checking 3,5,7 establish?",
+      "context": "Proof workshop: Evaluate the claim: every odd integer is prime. Induction coverage may vary by course section.",
+      "options": [
+        "Only those three instances satisfy the claim",
+        "The universal claim is proved",
+        "All odd integers are prime",
+        "The claim is false"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Separate the hypothesis, the exact target, and the definition or theorem that connects them.",
+        "Check that each claimed step uses only hypotheses already established. For induction, distinguish the assumed case from the case being proved."
+      ],
+      "explanation": {
+        "learning_objective": "Apply counterexample discipline with explicit justification.",
+        "correct_rationale": "Finitely many successful tests do not prove an unbounded universal statement.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "This does not satisfy the stated proof obligation. Finitely many successful tests do not prove an unbounded universal statement."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This does not satisfy the stated proof obligation. Finitely many successful tests do not prove an unbounded universal statement."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This does not satisfy the stated proof obligation. Finitely many successful tests do not prove an unbounded universal statement."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "proofs-032",
+      "topic": "Counterexample discipline",
+      "difficulty": "foundational",
+      "question_type": "single_choice",
+      "prompt": "Which corrected implication is true?",
+      "context": "Proof workshop: Evaluate the claim: every odd integer is prime. Induction coverage may vary by course section.",
+      "options": [
+        "Every odd integer greater than 2 is prime",
+        "Every composite integer is even",
+        "Every prime greater than 2 is odd",
+        "Every prime is odd"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Separate the hypothesis, the exact target, and the definition or theorem that connects them.",
+        "Check that each claimed step uses only hypotheses already established. For induction, distinguish the assumed case from the case being proved."
+      ],
+      "explanation": {
+        "learning_objective": "Apply counterexample discipline with explicit justification.",
+        "correct_rationale": "An even integer greater than 2 has divisor 2 and is not prime; 2 is the sole even prime.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This does not satisfy the stated proof obligation. An even integer greater than 2 has divisor 2 and is not prime; 2 is the sole even prime."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This does not satisfy the stated proof obligation. An even integer greater than 2 has divisor 2 and is not prime; 2 is the sole even prime."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This does not satisfy the stated proof obligation. An even integer greater than 2 has divisor 2 and is not prime; 2 is the sole even prime."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "proofs-033",
+      "topic": "Induction: triangular sum",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What is the base case n=1?",
+      "context": "Proof workshop: For n≥1, 1+⋯+n=n(n+1)/2. Induction coverage may vary by course section.",
+      "options": [
+        "1=1·2/2",
+        "1=1·1/2",
+        "2=1·2/2",
+        "0=1·2/2"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Separate the hypothesis, the exact target, and the definition or theorem that connects them.",
+        "Check that each claimed step uses only hypotheses already established. For induction, distinguish the assumed case from the case being proved."
+      ],
+      "explanation": {
+        "learning_objective": "Apply induction: triangular sum with explicit justification.",
+        "correct_rationale": "At n=1 the sum is 1 and the formula is 1·2/2=1.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "This does not satisfy the stated proof obligation. At n=1 the sum is 1 and the formula is 1·2/2=1."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This does not satisfy the stated proof obligation. At n=1 the sum is 1 and the formula is 1·2/2=1."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This does not satisfy the stated proof obligation. At n=1 the sum is 1 and the formula is 1·2/2=1."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "proofs-034",
+      "topic": "Induction: triangular sum",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Which induction hypothesis is correct?",
+      "context": "Proof workshop: For n≥1, 1+⋯+n=n(n+1)/2. Induction coverage may vary by course section.",
+      "options": [
+        "1+⋯+(k+1)=(k+1)(k+2)/2 by assumption",
+        "1+⋯+k=k(k+1)/2 for a fixed k≥1",
+        "The formula holds for all n by assumption",
+        "The sum equals k²"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Separate the hypothesis, the exact target, and the definition or theorem that connects them.",
+        "Check that each claimed step uses only hypotheses already established. For induction, distinguish the assumed case from the case being proved."
+      ],
+      "explanation": {
+        "learning_objective": "Apply induction: triangular sum with explicit justification.",
+        "correct_rationale": "Assume the claim at k, not at the target k+1 or for every n.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This does not satisfy the stated proof obligation. Assume the claim at k, not at the target k+1 or for every n."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This does not satisfy the stated proof obligation. Assume the claim at k, not at the target k+1 or for every n."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This does not satisfy the stated proof obligation. Assume the claim at k, not at the target k+1 or for every n."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "proofs-035",
+      "topic": "Induction: triangular sum",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Which algebra proves the next case?",
+      "context": "Proof workshop: For n≥1, 1+⋯+n=n(n+1)/2. Induction coverage may vary by course section.",
+      "options": [
+        "k(k+1)/2=(k+1)(k+2)/2",
+        "k(k+1)/2+k=(k+1)(k+2)/2",
+        "k(k+1)/2+1=(k+1)(k+2)/2",
+        "k(k+1)/2+(k+1)=(k+1)(k+2)/2"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Separate the hypothesis, the exact target, and the definition or theorem that connects them.",
+        "Check that each claimed step uses only hypotheses already established. For induction, distinguish the assumed case from the case being proved."
+      ],
+      "explanation": {
+        "learning_objective": "Apply induction: triangular sum with explicit justification.",
+        "correct_rationale": "Append the new term k+1, factor k+1, and combine k/2+1=(k+2)/2.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This does not satisfy the stated proof obligation. Append the new term k+1, factor k+1, and combine k/2+1=(k+2)/2."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This does not satisfy the stated proof obligation. Append the new term k+1, factor k+1, and combine k/2+1=(k+2)/2."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This does not satisfy the stated proof obligation. Append the new term k+1, factor k+1, and combine k/2+1=(k+2)/2."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "proofs-036",
+      "topic": "Induction: triangular sum",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Why does a verified step without a base case fail?",
+      "context": "Proof workshop: For n≥1, 1+⋯+n=n(n+1)/2. Induction coverage may vary by course section.",
+      "options": [
+        "The algebra becomes invalid",
+        "It gives no starting true instance",
+        "Induction needs every case checked separately",
+        "The integers are finite"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Separate the hypothesis, the exact target, and the definition or theorem that connects them.",
+        "Check that each claimed step uses only hypotheses already established. For induction, distinguish the assumed case from the case being proved."
+      ],
+      "explanation": {
+        "learning_objective": "Apply induction: triangular sum with explicit justification.",
+        "correct_rationale": "A chain of implications P(k)→P(k+1) needs an initial P(1) to establish subsequent cases.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This does not satisfy the stated proof obligation. A chain of implications P(k)→P(k+1) needs an initial P(1) to establish subsequent cases."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This does not satisfy the stated proof obligation. A chain of implications P(k)→P(k+1) needs an initial P(1) to establish subsequent cases."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This does not satisfy the stated proof obligation. A chain of implications P(k)→P(k+1) needs an initial P(1) to establish subsequent cases."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "proofs-037",
+      "topic": "Induction: odd sum",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Which term is appended at the induction step?",
+      "context": "Proof workshop: For n≥1, 1+3+⋯+(2n−1)=n². Induction coverage may vary by course section.",
+      "options": [
+        "2k−1",
+        "2k+2",
+        "k+1",
+        "2k+1"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Separate the hypothesis, the exact target, and the definition or theorem that connects them.",
+        "Check that each claimed step uses only hypotheses already established. For induction, distinguish the assumed case from the case being proved."
+      ],
+      "explanation": {
+        "learning_objective": "Apply induction: odd sum with explicit justification.",
+        "correct_rationale": "The (k+1)st odd number is 2(k+1)−1=2k+1.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This does not satisfy the stated proof obligation. The (k+1)st odd number is 2(k+1)−1=2k+1."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This does not satisfy the stated proof obligation. The (k+1)st odd number is 2(k+1)−1=2k+1."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This does not satisfy the stated proof obligation. The (k+1)st odd number is 2(k+1)−1=2k+1."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "proofs-038",
+      "topic": "Induction: odd sum",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Which expression uses the hypothesis?",
+      "context": "Proof workshop: For n≥1, 1+3+⋯+(2n−1)=n². Induction coverage may vary by course section.",
+      "options": [
+        "(k+1)²+(2k+1)",
+        "k²+1",
+        "k²+(2k−1)",
+        "k²+(2k+1)"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Separate the hypothesis, the exact target, and the definition or theorem that connects them.",
+        "Check that each claimed step uses only hypotheses already established. For induction, distinguish the assumed case from the case being proved."
+      ],
+      "explanation": {
+        "learning_objective": "Apply induction: odd sum with explicit justification.",
+        "correct_rationale": "Replace the sum of the first k odd numbers by k², then add the new odd term.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This does not satisfy the stated proof obligation. Replace the sum of the first k odd numbers by k², then add the new odd term."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This does not satisfy the stated proof obligation. Replace the sum of the first k odd numbers by k², then add the new odd term."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This does not satisfy the stated proof obligation. Replace the sum of the first k odd numbers by k², then add the new odd term."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "proofs-039",
+      "topic": "Induction: odd sum",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Which identity finishes the step?",
+      "context": "Proof workshop: For n≥1, 1+3+⋯+(2n−1)=n². Induction coverage may vary by course section.",
+      "options": [
+        "k²+1=(k+1)²",
+        "k²+2k−1=(k+1)²",
+        "2k²+1=(k+1)²",
+        "k²+2k+1=(k+1)²"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Separate the hypothesis, the exact target, and the definition or theorem that connects them.",
+        "Check that each claimed step uses only hypotheses already established. For induction, distinguish the assumed case from the case being proved."
+      ],
+      "explanation": {
+        "learning_objective": "Apply induction: odd sum with explicit justification.",
+        "correct_rationale": "Expand (k+1)²=k²+2k+1 to identify the target.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This does not satisfy the stated proof obligation. Expand (k+1)²=k²+2k+1 to identify the target."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This does not satisfy the stated proof obligation. Expand (k+1)²=k²+2k+1 to identify the target."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This does not satisfy the stated proof obligation. Expand (k+1)²=k²+2k+1 to identify the target."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "proofs-040",
+      "topic": "Induction: odd sum",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What is the base-case equality?",
+      "context": "Proof workshop: For n≥1, 1+3+⋯+(2n−1)=n². Induction coverage may vary by course section.",
+      "options": [
+        "3=1²",
+        "1=1²",
+        "1+3=1²",
+        "0=1²"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Separate the hypothesis, the exact target, and the definition or theorem that connects them.",
+        "Check that each claimed step uses only hypotheses already established. For induction, distinguish the assumed case from the case being proved."
+      ],
+      "explanation": {
+        "learning_objective": "Apply induction: odd sum with explicit justification.",
+        "correct_rationale": "At n=1 there is exactly one summand, 1, equal to 1².",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This does not satisfy the stated proof obligation. At n=1 there is exactly one summand, 1, equal to 1²."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This does not satisfy the stated proof obligation. At n=1 there is exactly one summand, 1, equal to 1²."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This does not satisfy the stated proof obligation. At n=1 there is exactly one summand, 1, equal to 1²."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "proofs-041",
+      "topic": "Induction: powers",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Which base case matches n≥0?",
+      "context": "Proof workshop: For n≥0, Σᵢ₌₀ⁿ 2ⁱ=2ⁿ⁺¹−1. Induction coverage may vary by course section.",
+      "options": [
+        "0=2⁰−1",
+        "1=2⁰−1",
+        "1=2¹−1",
+        "2=2¹−1"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Separate the hypothesis, the exact target, and the definition or theorem that connects them.",
+        "Check that each claimed step uses only hypotheses already established. For induction, distinguish the assumed case from the case being proved."
+      ],
+      "explanation": {
+        "learning_objective": "Apply induction: powers with explicit justification.",
+        "correct_rationale": "At n=0 the sole term is 2⁰=1 and the proposed right side is 2−1=1.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This does not satisfy the stated proof obligation. At n=0 the sole term is 2⁰=1 and the proposed right side is 2−1=1."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This does not satisfy the stated proof obligation. At n=0 the sole term is 2⁰=1 and the proposed right side is 2−1=1."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This does not satisfy the stated proof obligation. At n=0 the sole term is 2⁰=1 and the proposed right side is 2−1=1."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "proofs-042",
+      "topic": "Induction: powers",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What is added when moving from k to k+1?",
+      "context": "Proof workshop: For n≥0, Σᵢ₌₀ⁿ 2ⁱ=2ⁿ⁺¹−1. Induction coverage may vary by course section.",
+      "options": [
+        "k+1",
+        "2ᵏ",
+        "2ᵏ⁺²",
+        "2ᵏ⁺¹"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Separate the hypothesis, the exact target, and the definition or theorem that connects them.",
+        "Check that each claimed step uses only hypotheses already established. For induction, distinguish the assumed case from the case being proved."
+      ],
+      "explanation": {
+        "learning_objective": "Apply induction: powers with explicit justification.",
+        "correct_rationale": "The new index is k+1, so the new term is 2^(k+1).",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This does not satisfy the stated proof obligation. The new index is k+1, so the new term is 2^(k+1)."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This does not satisfy the stated proof obligation. The new index is k+1, so the new term is 2^(k+1)."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This does not satisfy the stated proof obligation. The new index is k+1, so the new term is 2^(k+1)."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "proofs-043",
+      "topic": "Induction: powers",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Which calculation completes the step?",
+      "context": "Proof workshop: For n≥0, Σᵢ₌₀ⁿ 2ⁱ=2ⁿ⁺¹−1. Induction coverage may vary by course section.",
+      "options": [
+        "(2ᵏ⁺¹−1)+2ᵏ=2ᵏ⁺²−1",
+        "2ᵏ⁺¹−1=2ᵏ⁺²−1",
+        "(2ᵏ⁺¹−1)+2ᵏ⁺¹=2ᵏ⁺²−1",
+        "2ᵏ⁺¹+1=2ᵏ⁺²−1"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Separate the hypothesis, the exact target, and the definition or theorem that connects them.",
+        "Check that each claimed step uses only hypotheses already established. For induction, distinguish the assumed case from the case being proved."
+      ],
+      "explanation": {
+        "learning_objective": "Apply induction: powers with explicit justification.",
+        "correct_rationale": "Two copies of 2^(k+1) equal 2^(k+2); preserve the −1.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This does not satisfy the stated proof obligation. Two copies of 2^(k+1) equal 2^(k+2); preserve the −1."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This does not satisfy the stated proof obligation. Two copies of 2^(k+1) equal 2^(k+2); preserve the −1."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This does not satisfy the stated proof obligation. Two copies of 2^(k+1) equal 2^(k+2); preserve the −1."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "proofs-044",
+      "topic": "Induction: powers",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "If the formula were stated only for n≥1, which base case would suffice?",
+      "context": "Proof workshop: For n≥0, Σᵢ₌₀ⁿ 2ⁱ=2ⁿ⁺¹−1. Induction coverage may vary by course section.",
+      "options": [
+        "n=0 alone without a step from 0",
+        "No base case",
+        "n=−1",
+        "n=1"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Separate the hypothesis, the exact target, and the definition or theorem that connects them.",
+        "Check that each claimed step uses only hypotheses already established. For induction, distinguish the assumed case from the case being proved."
+      ],
+      "explanation": {
+        "learning_objective": "Apply induction: powers with explicit justification.",
+        "correct_rationale": "For a claim starting at 1, prove P(1) and the transition for every k≥1.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This does not satisfy the stated proof obligation. For a claim starting at 1, prove P(1) and the transition for every k≥1."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This does not satisfy the stated proof obligation. For a claim starting at 1, prove P(1) and the transition for every k≥1."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This does not satisfy the stated proof obligation. For a claim starting at 1, prove P(1) and the transition for every k≥1."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "proofs-045",
+      "topic": "Induction: inequality",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Which step follows from 2ᵏ≥k+1?",
+      "context": "Proof workshop: For n≥1, 2ⁿ≥n+1. Induction coverage may vary by course section.",
+      "options": [
+        "2ᵏ⁺¹≤2k+2",
+        "2ᵏ⁺¹≥2k+2",
+        "2ᵏ⁺¹≥k",
+        "2ᵏ⁺¹=k+2"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Separate the hypothesis, the exact target, and the definition or theorem that connects them.",
+        "Check that each claimed step uses only hypotheses already established. For induction, distinguish the assumed case from the case being proved."
+      ],
+      "explanation": {
+        "learning_objective": "Apply induction: inequality with explicit justification.",
+        "correct_rationale": "Multiply both sides by positive 2, preserving the inequality.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This does not satisfy the stated proof obligation. Multiply both sides by positive 2, preserving the inequality."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This does not satisfy the stated proof obligation. Multiply both sides by positive 2, preserving the inequality."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This does not satisfy the stated proof obligation. Multiply both sides by positive 2, preserving the inequality."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "proofs-046",
+      "topic": "Induction: inequality",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Which comparison is needed next?",
+      "context": "Proof workshop: For n≥1, 2ⁿ≥n+1. Induction coverage may vary by course section.",
+      "options": [
+        "2k+2=k+2 for all k",
+        "2k+2≤k+2 for k≥1",
+        "2k+2≥k+2 for k≥0",
+        "k+1≥2k+2"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Separate the hypothesis, the exact target, and the definition or theorem that connects them.",
+        "Check that each claimed step uses only hypotheses already established. For induction, distinguish the assumed case from the case being proved."
+      ],
+      "explanation": {
+        "learning_objective": "Apply induction: inequality with explicit justification.",
+        "correct_rationale": "Subtracting k+2 leaves k≥0, so the lower bound implies the next target.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This does not satisfy the stated proof obligation. Subtracting k+2 leaves k≥0, so the lower bound implies the next target."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This does not satisfy the stated proof obligation. Subtracting k+2 leaves k≥0, so the lower bound implies the next target."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This does not satisfy the stated proof obligation. Subtracting k+2 leaves k≥0, so the lower bound implies the next target."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "proofs-047",
+      "topic": "Induction: inequality",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What is the target at k+1?",
+      "context": "Proof workshop: For n≥1, 2ⁿ≥n+1. Induction coverage may vary by course section.",
+      "options": [
+        "2ᵏ⁺²≥k+1",
+        "2ᵏ⁺¹≥k+2",
+        "2ᵏ⁺¹≥k+1 only",
+        "2ᵏ≥k+2"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Separate the hypothesis, the exact target, and the definition or theorem that connects them.",
+        "Check that each claimed step uses only hypotheses already established. For induction, distinguish the assumed case from the case being proved."
+      ],
+      "explanation": {
+        "learning_objective": "Apply induction: inequality with explicit justification.",
+        "correct_rationale": "Replace n by k+1 in 2^n≥n+1.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This does not satisfy the stated proof obligation. Replace n by k+1 in 2^n≥n+1."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This does not satisfy the stated proof obligation. Replace n by k+1 in 2^n≥n+1."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This does not satisfy the stated proof obligation. Replace n by k+1 in 2^n≥n+1."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "proofs-048",
+      "topic": "Induction: inequality",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Which careless inference is invalid?",
+      "context": "Proof workshop: For n≥1, 2ⁿ≥n+1. Induction coverage may vary by course section.",
+      "options": [
+        "A lower bound implies equality",
+        "k≥1 implies k≥0",
+        "2¹≥2",
+        "Multiplication by positive 2 preserves ≥"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Separate the hypothesis, the exact target, and the definition or theorem that connects them.",
+        "Check that each claimed step uses only hypotheses already established. For induction, distinguish the assumed case from the case being proved."
+      ],
+      "explanation": {
+        "learning_objective": "Apply induction: inequality with explicit justification.",
+        "correct_rationale": "Knowing x≥y does not imply x=y; the theorem is an inequality, not an identity.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "This does not satisfy the stated proof obligation. Knowing x≥y does not imply x=y; the theorem is an inequality, not an identity."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This does not satisfy the stated proof obligation. Knowing x≥y does not imply x=y; the theorem is an inequality, not an identity."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This does not satisfy the stated proof obligation. Knowing x≥y does not imply x=y; the theorem is an inequality, not an identity."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "proofs-049",
+      "topic": "Induction: factorial bound",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Which valid base case begins the proof?",
+      "context": "Proof workshop: For n≥4, n!>2ⁿ. Induction coverage may vary by course section.",
+      "options": [
+        "1!=1>2=2¹",
+        "3!=6>8=2³",
+        "4!=24>16=2⁴",
+        "2!=2>4=2²"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Separate the hypothesis, the exact target, and the definition or theorem that connects them.",
+        "Check that each claimed step uses only hypotheses already established. For induction, distinguish the assumed case from the case being proved."
+      ],
+      "explanation": {
+        "learning_objective": "Apply induction: factorial bound with explicit justification.",
+        "correct_rationale": "The bound first holds at 4 among these cases.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This does not satisfy the stated proof obligation. The bound first holds at 4 among these cases."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This does not satisfy the stated proof obligation. The bound first holds at 4 among these cases."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This does not satisfy the stated proof obligation. The bound first holds at 4 among these cases."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "proofs-050",
+      "topic": "Induction: factorial bound",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "What factor connects consecutive factorials?",
+      "context": "Proof workshop: For n≥4, n!>2ⁿ. Induction coverage may vary by course section.",
+      "options": [
+        "(k+1)!=k!+1",
+        "(k+1)!=(k+1)k!",
+        "(k+1)!=2k!",
+        "(k+1)!=kk!"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Separate the hypothesis, the exact target, and the definition or theorem that connects them.",
+        "Check that each claimed step uses only hypotheses already established. For induction, distinguish the assumed case from the case being proved."
+      ],
+      "explanation": {
+        "learning_objective": "Apply induction: factorial bound with explicit justification.",
+        "correct_rationale": "The factorial definition appends multiplication by k+1.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This does not satisfy the stated proof obligation. The factorial definition appends multiplication by k+1."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This does not satisfy the stated proof obligation. The factorial definition appends multiplication by k+1."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This does not satisfy the stated proof obligation. The factorial definition appends multiplication by k+1."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    }
+  ]
+}

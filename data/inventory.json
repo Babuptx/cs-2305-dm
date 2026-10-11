@@ -1,0 +1,128 @@
+{
+  "version": 1,
+  "requested_questions": 600,
+  "generated_questions": 600,
+  "validated_questions": 600,
+  "pillars": [
+    {
+      "id": "logic",
+      "planned": 100,
+      "generated": 100,
+      "validated": 100,
+      "blocks": [
+        {
+          "id": "logic-block-01",
+          "planned": 50,
+          "generated": 50,
+          "validated": 50
+        },
+        {
+          "id": "logic-block-02",
+          "planned": 50,
+          "generated": 50,
+          "validated": 50
+        }
+      ]
+    },
+    {
+      "id": "proofs",
+      "planned": 100,
+      "generated": 100,
+      "validated": 100,
+      "blocks": [
+        {
+          "id": "proofs-block-01",
+          "planned": 50,
+          "generated": 50,
+          "validated": 50
+        },
+        {
+          "id": "proofs-block-02",
+          "planned": 50,
+          "generated": 50,
+          "validated": 50
+        }
+      ]
+    },
+    {
+      "id": "sets",
+      "planned": 100,
+      "generated": 100,
+      "validated": 100,
+      "blocks": [
+        {
+          "id": "sets-block-01",
+          "planned": 50,
+          "generated": 50,
+          "validated": 50
+        },
+        {
+          "id": "sets-block-02",
+          "planned": 50,
+          "generated": 50,
+          "validated": 50
+        }
+      ]
+    },
+    {
+      "id": "counting",
+      "planned": 100,
+      "generated": 100,
+      "validated": 100,
+      "blocks": [
+        {
+          "id": "counting-block-01",
+          "planned": 50,
+          "generated": 50,
+          "validated": 50
+        },
+        {
+          "id": "counting-block-02",
+          "planned": 50,
+          "generated": 50,
+          "validated": 50
+        }
+      ]
+    },
+    {
+      "id": "graphs-number",
+      "planned": 100,
+      "generated": 100,
+      "validated": 100,
+      "blocks": [
+        {
+          "id": "graphs-number-block-01",
+          "planned": 50,
+          "generated": 50,
+          "validated": 50
+        },
+        {
+          "id": "graphs-number-block-02",
+          "planned": 50,
+          "generated": 50,
+          "validated": 50
+        }
+      ]
+    },
+    {
+      "id": "recurrences",
+      "planned": 100,
+      "generated": 100,
+      "validated": 100,
+      "blocks": [
+        {
+          "id": "recurrences-block-01",
+          "planned": 50,
+          "generated": 50,
+          "validated": 50
+        },
+        {
+          "id": "recurrences-block-02",
+          "planned": 50,
+          "generated": 50,
+          "validated": 50
+        }
+      ]
+    }
+  ]
+}

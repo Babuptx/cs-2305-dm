@@ -1,0 +1,2529 @@
+{
+  "schema_version": 1,
+  "block_id": "sets-block-02",
+  "pillar_id": "sets",
+  "block_title": "Sets, relations, and functions · Block 2",
+  "questions": [
+    {
+      "id": "sets-051",
+      "topic": "Same parity: transitive",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Is R transitive?",
+      "context": "U={0, 1, 2, 3}; R=[(0, 0), (0, 2), (1, 1), (1, 3), (2, 0), (2, 2), (3, 1), (3, 3)]. Ordered pairs specify the entire relation.",
+      "options": [
+        "Yes: every finite relation has this property",
+        "Yes: every two-step chain has its shortcut",
+        "It cannot be determined from the full pair list",
+        "No: nonempty relations never have this property"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Use the definition: Every two-step chain must have its shortcut.",
+        "Test set membership element by element. For a relation or function, look for a missing pair, collision, or unattained output."
+      ],
+      "explanation": {
+        "learning_objective": "Apply same parity: transitive with explicit justification.",
+        "correct_rationale": "Every two-step chain must have its shortcut. In this pair list, every two-step chain has its shortcut. Therefore the answer is yes.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "Finiteness alone implies none of the four standard relation properties."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The complete finite relation is given, so its defining property can be checked."
+          },
+          {
+            "option_index": 3,
+            "rationale": "Nonemptiness is not an obstruction to this property."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "relation-property",
+        "universe": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "pairs": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            3,
+            3
+          ]
+        ],
+        "property": "transitive",
+        "expected": true
+      }
+    },
+    {
+      "id": "sets-052",
+      "topic": "Equivalence classes",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "How many equivalence classes does this same-parity relation have?",
+      "context": "U={0, 1, 2, 3}; R=[(0, 0), (0, 2), (1, 1), (1, 3), (2, 0), (2, 2), (3, 1), (3, 3)]. Ordered pairs specify the entire relation.",
+      "options": [
+        "3",
+        "4",
+        "2",
+        "1"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Group elements that are related to each other; count the resulting disjoint groups.",
+        "Test set membership element by element. For a relation or function, look for a missing pair, collision, or unattained output."
+      ],
+      "explanation": {
+        "learning_objective": "Apply equivalence classes with explicit justification.",
+        "correct_rationale": "The classes are {0,2} and {1,3}. Each element is related exactly to the elements of its own parity, so these two disjoint classes partition U.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The proposed result 3 fails the required computation: The classes are {0,2} and {1,3}. Each element is related exactly to the elements of its own parity, so these two disjoint classes partition U."
+          },
+          {
+            "option_index": 1,
+            "rationale": "The proposed result 4 fails the required computation: The classes are {0,2} and {1,3}. Each element is related exactly to the elements of its own parity, so these two disjoint classes partition U."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The proposed result 1 fails the required computation: The classes are {0,2} and {1,3}. Each element is related exactly to the elements of its own parity, so these two disjoint classes partition U."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "relation-classes",
+        "universe": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "pairs": [
+          [
+            0,
+            0
+          ],
+          [
+            0,
+            2
+          ],
+          [
+            1,
+            1
+          ],
+          [
+            1,
+            3
+          ],
+          [
+            2,
+            0
+          ],
+          [
+            2,
+            2
+          ],
+          [
+            3,
+            1
+          ],
+          [
+            3,
+            3
+          ]
+        ],
+        "expected": 2
+      }
+    },
+    {
+      "id": "sets-053",
+      "topic": "Adjacency on a three-vertex path: reflexive",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Is R reflexive?",
+      "context": "U={0, 1, 2}; R=[(0, 1), (1, 0), (1, 2), (2, 1)]. Ordered pairs specify the entire relation.",
+      "options": [
+        "Yes: every finite relation has this property",
+        "No: nonempty relations never have this property",
+        "No: (0,0) is missing",
+        "It cannot be determined from the full pair list"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Use the definition: Every (x,x) must be present.",
+        "Test set membership element by element. For a relation or function, look for a missing pair, collision, or unattained output."
+      ],
+      "explanation": {
+        "learning_objective": "Apply adjacency on a three-vertex path: reflexive with explicit justification.",
+        "correct_rationale": "Every (x,x) must be present. In this pair list, (0,0) is missing. Therefore the answer is no.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "Finiteness alone implies none of the four standard relation properties."
+          },
+          {
+            "option_index": 1,
+            "rationale": "Nonemptiness is not an obstruction to this property."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The complete finite relation is given, so its defining property can be checked."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "relation-property",
+        "universe": [
+          0,
+          1,
+          2
+        ],
+        "pairs": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            1
+          ]
+        ],
+        "property": "reflexive",
+        "expected": false
+      }
+    },
+    {
+      "id": "sets-054",
+      "topic": "Adjacency on a three-vertex path: symmetric",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Is R symmetric?",
+      "context": "U={0, 1, 2}; R=[(0, 1), (1, 0), (1, 2), (2, 1)]. Ordered pairs specify the entire relation.",
+      "options": [
+        "Yes: every pair has its reverse",
+        "Yes: every finite relation has this property",
+        "It cannot be determined from the full pair list",
+        "No: nonempty relations never have this property"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Use the definition: Every pair must have its reversed pair.",
+        "Test set membership element by element. For a relation or function, look for a missing pair, collision, or unattained output."
+      ],
+      "explanation": {
+        "learning_objective": "Apply adjacency on a three-vertex path: symmetric with explicit justification.",
+        "correct_rationale": "Every pair must have its reversed pair. In this pair list, every pair has its reverse. Therefore the answer is yes.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "Finiteness alone implies none of the four standard relation properties."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The complete finite relation is given, so its defining property can be checked."
+          },
+          {
+            "option_index": 3,
+            "rationale": "Nonemptiness is not an obstruction to this property."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "relation-property",
+        "universe": [
+          0,
+          1,
+          2
+        ],
+        "pairs": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            1
+          ]
+        ],
+        "property": "symmetric",
+        "expected": true
+      }
+    },
+    {
+      "id": "sets-055",
+      "topic": "Adjacency on a three-vertex path: transitive",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Is R transitive?",
+      "context": "U={0, 1, 2}; R=[(0, 1), (1, 0), (1, 2), (2, 1)]. Ordered pairs specify the entire relation.",
+      "options": [
+        "Yes: every finite relation has this property",
+        "It cannot be determined from the full pair list",
+        "No: nonempty relations never have this property",
+        "No: (0,1) and (1,0) occur, but (0,0) is missing"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Use the definition: Every two-step chain must have its shortcut.",
+        "Test set membership element by element. For a relation or function, look for a missing pair, collision, or unattained output."
+      ],
+      "explanation": {
+        "learning_objective": "Apply adjacency on a three-vertex path: transitive with explicit justification.",
+        "correct_rationale": "Every two-step chain must have its shortcut. In this pair list, (0,1) and (1,0) occur, but (0,0) is missing. Therefore the answer is no.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "Finiteness alone implies none of the four standard relation properties."
+          },
+          {
+            "option_index": 1,
+            "rationale": "The complete finite relation is given, so its defining property can be checked."
+          },
+          {
+            "option_index": 2,
+            "rationale": "Nonemptiness is not an obstruction to this property."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "relation-property",
+        "universe": [
+          0,
+          1,
+          2
+        ],
+        "pairs": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            1
+          ]
+        ],
+        "property": "transitive",
+        "expected": false
+      }
+    },
+    {
+      "id": "sets-056",
+      "topic": "Adjacency on a three-vertex path: antisymmetric",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "Is R antisymmetric?",
+      "context": "U={0, 1, 2}; R=[(0, 1), (1, 0), (1, 2), (2, 1)]. Ordered pairs specify the entire relation.",
+      "options": [
+        "It cannot be determined from the full pair list",
+        "No: nonempty relations never have this property",
+        "Yes: every finite relation has this property",
+        "No: 0≠1 but both directions occur"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Use the definition: Two-way pairs between distinct elements are forbidden.",
+        "Test set membership element by element. For a relation or function, look for a missing pair, collision, or unattained output."
+      ],
+      "explanation": {
+        "learning_objective": "Apply adjacency on a three-vertex path: antisymmetric with explicit justification.",
+        "correct_rationale": "Two-way pairs between distinct elements are forbidden. In this pair list, 0≠1 but both directions occur. Therefore the answer is no.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The complete finite relation is given, so its defining property can be checked."
+          },
+          {
+            "option_index": 1,
+            "rationale": "Nonemptiness is not an obstruction to this property."
+          },
+          {
+            "option_index": 2,
+            "rationale": "Finiteness alone implies none of the four standard relation properties."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "relation-property",
+        "universe": [
+          0,
+          1,
+          2
+        ],
+        "pairs": [
+          [
+            0,
+            1
+          ],
+          [
+            1,
+            0
+          ],
+          [
+            1,
+            2
+          ],
+          [
+            2,
+            1
+          ]
+        ],
+        "property": "antisymmetric",
+        "expected": false
+      }
+    },
+    {
+      "id": "sets-057",
+      "topic": "Cartesian-product cardinality",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "How many ordered pairs belong to A×B?",
+      "context": "A={1,2}, B={a,b,c}",
+      "options": [
+        "5",
+        "6",
+        "8",
+        "9"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "A pair requires one element from each factor.",
+        "Test set membership element by element. For a relation or function, look for a missing pair, collision, or unattained output."
+      ],
+      "explanation": {
+        "learning_objective": "Apply cartesian-product cardinality with explicit justification.",
+        "correct_rationale": "Choose one of 2 first coordinates and one of 3 second coordinates: 2·3=6.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The proposed result 5 fails the required computation: Choose one of 2 first coordinates and one of 3 second coordinates: 2·3=6."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The proposed result 8 fails the required computation: Choose one of 2 first coordinates and one of 3 second coordinates: 2·3=6."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The proposed result 9 fails the required computation: Choose one of 2 first coordinates and one of 3 second coordinates: 2·3=6."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "cartesian-count",
+        "a": [
+          1,
+          2
+        ],
+        "b": [
+          "b",
+          "c",
+          "a"
+        ],
+        "expected": 6
+      }
+    },
+    {
+      "id": "sets-058",
+      "topic": "Power-set cardinality",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "How many subsets does A have?",
+      "context": "A={1,2}, B={a,b,c}",
+      "options": [
+        "4",
+        "3",
+        "5",
+        "2"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "For each element, decide in or out.",
+        "Test set membership element by element. For a relation or function, look for a missing pair, collision, or unattained output."
+      ],
+      "explanation": {
+        "learning_objective": "Apply power-set cardinality with explicit justification.",
+        "correct_rationale": "Each of 2 elements is either included or omitted independently, giving 2^2=4. The empty set is one subset.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "The proposed result 3 fails the required computation: Each of 2 elements is either included or omitted independently, giving 2^2=4. The empty set is one subset."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The proposed result 5 fails the required computation: Each of 2 elements is either included or omitted independently, giving 2^2=4. The empty set is one subset."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The proposed result 2 fails the required computation: Each of 2 elements is either included or omitted independently, giving 2^2=4. The empty set is one subset."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "power-set-count",
+        "n": 2,
+        "expected": 4
+      }
+    },
+    {
+      "id": "sets-059",
+      "topic": "Counting functions",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "How many functions A→B exist?",
+      "context": "A={1,2}, B={a,b,c}",
+      "options": [
+        "8",
+        "6",
+        "9",
+        "5"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Choices are made once per domain element, and outputs may repeat.",
+        "Test set membership element by element. For a relation or function, look for a missing pair, collision, or unattained output."
+      ],
+      "explanation": {
+        "learning_objective": "Apply counting functions with explicit justification.",
+        "correct_rationale": "For each of 2 inputs choose one of 3 outputs, giving 3^2=9. With no inputs there is one empty function.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The proposed result 8 fails the required computation: For each of 2 inputs choose one of 3 outputs, giving 3^2=9. With no inputs there is one empty function."
+          },
+          {
+            "option_index": 1,
+            "rationale": "The proposed result 6 fails the required computation: For each of 2 inputs choose one of 3 outputs, giving 3^2=9. With no inputs there is one empty function."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The proposed result 5 fails the required computation: For each of 2 inputs choose one of 3 outputs, giving 3^2=9. With no inputs there is one empty function."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "function-count",
+        "n": 2,
+        "m": 3,
+        "expected": 9
+      }
+    },
+    {
+      "id": "sets-060",
+      "topic": "Power set of a product",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "How many subsets of A×B exist?",
+      "context": "A={1,2}, B={a,b,c}",
+      "options": [
+        "12",
+        "32",
+        "64",
+        "6"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "First count pairs, then count subsets of the resulting set.",
+        "Test set membership element by element. For a relation or function, look for a missing pair, collision, or unattained output."
+      ],
+      "explanation": {
+        "learning_objective": "Apply power set of a product with explicit justification.",
+        "correct_rationale": "A×B has 6 ordered pairs, so its power set has 2^6=64 elements.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The proposed result 12 fails the required computation: A×B has 6 ordered pairs, so its power set has 2^6=64 elements."
+          },
+          {
+            "option_index": 1,
+            "rationale": "The proposed result 32 fails the required computation: A×B has 6 ordered pairs, so its power set has 2^6=64 elements."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The proposed result 6 fails the required computation: A×B has 6 ordered pairs, so its power set has 2^6=64 elements."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "power-product-count",
+        "n": 2,
+        "m": 3,
+        "expected": 64
+      }
+    },
+    {
+      "id": "sets-061",
+      "topic": "Cartesian-product cardinality",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "How many ordered pairs belong to A×B?",
+      "context": "A=∅, B={1,2}",
+      "options": [
+        "3",
+        "2",
+        "0",
+        "1"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "A pair requires one element from each factor.",
+        "Test set membership element by element. For a relation or function, look for a missing pair, collision, or unattained output."
+      ],
+      "explanation": {
+        "learning_objective": "Apply cartesian-product cardinality with explicit justification.",
+        "correct_rationale": "Choose one of 0 first coordinates and one of 2 second coordinates: 0·2=0.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The proposed result 3 fails the required computation: Choose one of 0 first coordinates and one of 2 second coordinates: 0·2=0."
+          },
+          {
+            "option_index": 1,
+            "rationale": "The proposed result 2 fails the required computation: Choose one of 0 first coordinates and one of 2 second coordinates: 0·2=0."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The proposed result 1 fails the required computation: Choose one of 0 first coordinates and one of 2 second coordinates: 0·2=0."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "cartesian-count",
+        "a": [],
+        "b": [
+          1,
+          2
+        ],
+        "expected": 0
+      }
+    },
+    {
+      "id": "sets-062",
+      "topic": "Power-set cardinality",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "How many subsets does A have?",
+      "context": "A=∅, B={1,2}",
+      "options": [
+        "1",
+        "0",
+        "2",
+        "3"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "For each element, decide in or out.",
+        "Test set membership element by element. For a relation or function, look for a missing pair, collision, or unattained output."
+      ],
+      "explanation": {
+        "learning_objective": "Apply power-set cardinality with explicit justification.",
+        "correct_rationale": "Each of 0 elements is either included or omitted independently, giving 2^0=1. The empty set is one subset.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "The proposed result 0 fails the required computation: Each of 0 elements is either included or omitted independently, giving 2^0=1. The empty set is one subset."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The proposed result 2 fails the required computation: Each of 0 elements is either included or omitted independently, giving 2^0=1. The empty set is one subset."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The proposed result 3 fails the required computation: Each of 0 elements is either included or omitted independently, giving 2^0=1. The empty set is one subset."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "power-set-count",
+        "n": 0,
+        "expected": 1
+      }
+    },
+    {
+      "id": "sets-063",
+      "topic": "Counting functions",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "How many functions A→B exist?",
+      "context": "A=∅, B={1,2}",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "0"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Choices are made once per domain element, and outputs may repeat.",
+        "Test set membership element by element. For a relation or function, look for a missing pair, collision, or unattained output."
+      ],
+      "explanation": {
+        "learning_objective": "Apply counting functions with explicit justification.",
+        "correct_rationale": "For each of 0 inputs choose one of 2 outputs, giving 2^0=1. With no inputs there is one empty function.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "The proposed result 2 fails the required computation: For each of 0 inputs choose one of 2 outputs, giving 2^0=1. With no inputs there is one empty function."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The proposed result 3 fails the required computation: For each of 0 inputs choose one of 2 outputs, giving 2^0=1. With no inputs there is one empty function."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The proposed result 0 fails the required computation: For each of 0 inputs choose one of 2 outputs, giving 2^0=1. With no inputs there is one empty function."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "function-count",
+        "n": 0,
+        "m": 2,
+        "expected": 1
+      }
+    },
+    {
+      "id": "sets-064",
+      "topic": "Power set of a product",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "How many subsets of A×B exist?",
+      "context": "A=∅, B={1,2}",
+      "options": [
+        "4",
+        "5",
+        "1",
+        "0"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "First count pairs, then count subsets of the resulting set.",
+        "Test set membership element by element. For a relation or function, look for a missing pair, collision, or unattained output."
+      ],
+      "explanation": {
+        "learning_objective": "Apply power set of a product with explicit justification.",
+        "correct_rationale": "A×B has 0 ordered pairs, so its power set has 2^0=1 elements.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The proposed result 4 fails the required computation: A×B has 0 ordered pairs, so its power set has 2^0=1 elements."
+          },
+          {
+            "option_index": 1,
+            "rationale": "The proposed result 5 fails the required computation: A×B has 0 ordered pairs, so its power set has 2^0=1 elements."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The proposed result 0 fails the required computation: A×B has 0 ordered pairs, so its power set has 2^0=1 elements."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "power-product-count",
+        "n": 0,
+        "m": 2,
+        "expected": 1
+      }
+    },
+    {
+      "id": "sets-065",
+      "topic": "Cartesian-product cardinality",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "How many ordered pairs belong to A×B?",
+      "context": "A={x}, B={y}, with x≠y",
+      "options": [
+        "1",
+        "2",
+        "0",
+        "3"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "A pair requires one element from each factor.",
+        "Test set membership element by element. For a relation or function, look for a missing pair, collision, or unattained output."
+      ],
+      "explanation": {
+        "learning_objective": "Apply cartesian-product cardinality with explicit justification.",
+        "correct_rationale": "Choose one of 1 first coordinates and one of 1 second coordinates: 1·1=1.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "The proposed result 2 fails the required computation: Choose one of 1 first coordinates and one of 1 second coordinates: 1·1=1."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The proposed result 0 fails the required computation: Choose one of 1 first coordinates and one of 1 second coordinates: 1·1=1."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The proposed result 3 fails the required computation: Choose one of 1 first coordinates and one of 1 second coordinates: 1·1=1."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "cartesian-count",
+        "a": [
+          "x"
+        ],
+        "b": [
+          "y"
+        ],
+        "expected": 1
+      }
+    },
+    {
+      "id": "sets-066",
+      "topic": "Power-set cardinality",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "How many subsets does A have?",
+      "context": "A={x}, B={y}, with x≠y",
+      "options": [
+        "4",
+        "1",
+        "2",
+        "3"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "For each element, decide in or out.",
+        "Test set membership element by element. For a relation or function, look for a missing pair, collision, or unattained output."
+      ],
+      "explanation": {
+        "learning_objective": "Apply power-set cardinality with explicit justification.",
+        "correct_rationale": "Each of 1 elements is either included or omitted independently, giving 2^1=2. The empty set is one subset.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The proposed result 4 fails the required computation: Each of 1 elements is either included or omitted independently, giving 2^1=2. The empty set is one subset."
+          },
+          {
+            "option_index": 1,
+            "rationale": "The proposed result 1 fails the required computation: Each of 1 elements is either included or omitted independently, giving 2^1=2. The empty set is one subset."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The proposed result 3 fails the required computation: Each of 1 elements is either included or omitted independently, giving 2^1=2. The empty set is one subset."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "power-set-count",
+        "n": 1,
+        "expected": 2
+      }
+    },
+    {
+      "id": "sets-067",
+      "topic": "Counting functions",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "How many functions A→B exist?",
+      "context": "A={x}, B={y}, with x≠y",
+      "options": [
+        "0",
+        "2",
+        "1",
+        "3"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Choices are made once per domain element, and outputs may repeat.",
+        "Test set membership element by element. For a relation or function, look for a missing pair, collision, or unattained output."
+      ],
+      "explanation": {
+        "learning_objective": "Apply counting functions with explicit justification.",
+        "correct_rationale": "For each of 1 inputs choose one of 1 outputs, giving 1^1=1. With no inputs there is one empty function.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The proposed result 0 fails the required computation: For each of 1 inputs choose one of 1 outputs, giving 1^1=1. With no inputs there is one empty function."
+          },
+          {
+            "option_index": 1,
+            "rationale": "The proposed result 2 fails the required computation: For each of 1 inputs choose one of 1 outputs, giving 1^1=1. With no inputs there is one empty function."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The proposed result 3 fails the required computation: For each of 1 inputs choose one of 1 outputs, giving 1^1=1. With no inputs there is one empty function."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "function-count",
+        "n": 1,
+        "m": 1,
+        "expected": 1
+      }
+    },
+    {
+      "id": "sets-068",
+      "topic": "Power set of a product",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "How many subsets of A×B exist?",
+      "context": "A={x}, B={y}, with x≠y",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "First count pairs, then count subsets of the resulting set.",
+        "Test set membership element by element. For a relation or function, look for a missing pair, collision, or unattained output."
+      ],
+      "explanation": {
+        "learning_objective": "Apply power set of a product with explicit justification.",
+        "correct_rationale": "A×B has 1 ordered pairs, so its power set has 2^1=2 elements.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The proposed result 1 fails the required computation: A×B has 1 ordered pairs, so its power set has 2^1=2 elements."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The proposed result 3 fails the required computation: A×B has 1 ordered pairs, so its power set has 2^1=2 elements."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The proposed result 4 fails the required computation: A×B has 1 ordered pairs, so its power set has 2^1=2 elements."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "power-product-count",
+        "n": 1,
+        "m": 1,
+        "expected": 2
+      }
+    },
+    {
+      "id": "sets-069",
+      "topic": "Cartesian-product cardinality",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "How many ordered pairs belong to A×B?",
+      "context": "A={∅,{0}}, B={0,1}; the two elements of A are sets",
+      "options": [
+        "5",
+        "3",
+        "6",
+        "4"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "A pair requires one element from each factor.",
+        "Test set membership element by element. For a relation or function, look for a missing pair, collision, or unattained output."
+      ],
+      "explanation": {
+        "learning_objective": "Apply cartesian-product cardinality with explicit justification.",
+        "correct_rationale": "Choose one of 2 first coordinates and one of 2 second coordinates: 2·2=4.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The proposed result 5 fails the required computation: Choose one of 2 first coordinates and one of 2 second coordinates: 2·2=4."
+          },
+          {
+            "option_index": 1,
+            "rationale": "The proposed result 3 fails the required computation: Choose one of 2 first coordinates and one of 2 second coordinates: 2·2=4."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The proposed result 6 fails the required computation: Choose one of 2 first coordinates and one of 2 second coordinates: 2·2=4."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "cartesian-count",
+        "a": [
+          "{0}",
+          "∅"
+        ],
+        "b": [
+          0,
+          1
+        ],
+        "expected": 4
+      }
+    },
+    {
+      "id": "sets-070",
+      "topic": "Power-set cardinality",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "How many subsets does A have?",
+      "context": "A={∅,{0}}, B={0,1}; the two elements of A are sets",
+      "options": [
+        "2",
+        "5",
+        "4",
+        "3"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "For each element, decide in or out.",
+        "Test set membership element by element. For a relation or function, look for a missing pair, collision, or unattained output."
+      ],
+      "explanation": {
+        "learning_objective": "Apply power-set cardinality with explicit justification.",
+        "correct_rationale": "Each of 2 elements is either included or omitted independently, giving 2^2=4. The empty set is one subset.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The proposed result 2 fails the required computation: Each of 2 elements is either included or omitted independently, giving 2^2=4. The empty set is one subset."
+          },
+          {
+            "option_index": 1,
+            "rationale": "The proposed result 5 fails the required computation: Each of 2 elements is either included or omitted independently, giving 2^2=4. The empty set is one subset."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The proposed result 3 fails the required computation: Each of 2 elements is either included or omitted independently, giving 2^2=4. The empty set is one subset."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "power-set-count",
+        "n": 2,
+        "expected": 4
+      }
+    },
+    {
+      "id": "sets-071",
+      "topic": "Counting functions",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "How many functions A→B exist?",
+      "context": "A={∅,{0}}, B={0,1}; the two elements of A are sets",
+      "options": [
+        "6",
+        "5",
+        "3",
+        "4"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Choices are made once per domain element, and outputs may repeat.",
+        "Test set membership element by element. For a relation or function, look for a missing pair, collision, or unattained output."
+      ],
+      "explanation": {
+        "learning_objective": "Apply counting functions with explicit justification.",
+        "correct_rationale": "For each of 2 inputs choose one of 2 outputs, giving 2^2=4. With no inputs there is one empty function.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The proposed result 6 fails the required computation: For each of 2 inputs choose one of 2 outputs, giving 2^2=4. With no inputs there is one empty function."
+          },
+          {
+            "option_index": 1,
+            "rationale": "The proposed result 5 fails the required computation: For each of 2 inputs choose one of 2 outputs, giving 2^2=4. With no inputs there is one empty function."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The proposed result 3 fails the required computation: For each of 2 inputs choose one of 2 outputs, giving 2^2=4. With no inputs there is one empty function."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "function-count",
+        "n": 2,
+        "m": 2,
+        "expected": 4
+      }
+    },
+    {
+      "id": "sets-072",
+      "topic": "Power set of a product",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "How many subsets of A×B exist?",
+      "context": "A={∅,{0}}, B={0,1}; the two elements of A are sets",
+      "options": [
+        "8",
+        "4",
+        "17",
+        "16"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "First count pairs, then count subsets of the resulting set.",
+        "Test set membership element by element. For a relation or function, look for a missing pair, collision, or unattained output."
+      ],
+      "explanation": {
+        "learning_objective": "Apply power set of a product with explicit justification.",
+        "correct_rationale": "A×B has 4 ordered pairs, so its power set has 2^4=16 elements.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The proposed result 8 fails the required computation: A×B has 4 ordered pairs, so its power set has 2^4=16 elements."
+          },
+          {
+            "option_index": 1,
+            "rationale": "The proposed result 4 fails the required computation: A×B has 4 ordered pairs, so its power set has 2^4=16 elements."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The proposed result 17 fails the required computation: A×B has 4 ordered pairs, so its power set has 2^4=16 elements."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "power-product-count",
+        "n": 2,
+        "m": 2,
+        "expected": 16
+      }
+    },
+    {
+      "id": "sets-073",
+      "topic": "Venn-region reasoning",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "How many are in A∪B?",
+      "context": "A student survey has 40 respondents, 22 studying logic, 17 studying graphs, and 9 studying both.",
+      "options": [
+        "30",
+        "32",
+        "31",
+        "29"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Sketch four disjoint regions: A only, B only, both, and neither.",
+        "Test set membership element by element. For a relation or function, look for a missing pair, collision, or unattained output."
+      ],
+      "explanation": {
+        "learning_objective": "Apply venn-region reasoning with explicit justification.",
+        "correct_rationale": "Inclusion–exclusion: 22+17−9=30.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "The proposed result 32 fails the required computation: Inclusion–exclusion: 22+17−9=30."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The proposed result 31 fails the required computation: Inclusion–exclusion: 22+17−9=30."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The proposed result 29 fails the required computation: Inclusion–exclusion: 22+17−9=30."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "venn-count",
+        "n": 40,
+        "a": 22,
+        "b": 17,
+        "overlap": 9,
+        "query": "How many are in A∪B?",
+        "expected": 30
+      }
+    },
+    {
+      "id": "sets-074",
+      "topic": "Venn-region reasoning",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "How many are in A but not B?",
+      "context": "A student survey has 40 respondents, 22 studying logic, 17 studying graphs, and 9 studying both.",
+      "options": [
+        "13",
+        "14",
+        "15",
+        "12"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Sketch four disjoint regions: A only, B only, both, and neither.",
+        "Test set membership element by element. For a relation or function, look for a missing pair, collision, or unattained output."
+      ],
+      "explanation": {
+        "learning_objective": "Apply venn-region reasoning with explicit justification.",
+        "correct_rationale": "Subtract the shared region from A: 22−9=13.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "The proposed result 14 fails the required computation: Subtract the shared region from A: 22−9=13."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The proposed result 15 fails the required computation: Subtract the shared region from A: 22−9=13."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The proposed result 12 fails the required computation: Subtract the shared region from A: 22−9=13."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "venn-count",
+        "n": 40,
+        "a": 22,
+        "b": 17,
+        "overlap": 9,
+        "query": "How many are in A but not B?",
+        "expected": 13
+      }
+    },
+    {
+      "id": "sets-075",
+      "topic": "Venn-region reasoning",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "How many are in neither A nor B?",
+      "context": "A student survey has 40 respondents, 22 studying logic, 17 studying graphs, and 9 studying both.",
+      "options": [
+        "9",
+        "10",
+        "11",
+        "12"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Sketch four disjoint regions: A only, B only, both, and neither.",
+        "Test set membership element by element. For a relation or function, look for a missing pair, collision, or unattained output."
+      ],
+      "explanation": {
+        "learning_objective": "Apply venn-region reasoning with explicit justification.",
+        "correct_rationale": "The union has 30; subtract it from 40 to get 10.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The proposed result 9 fails the required computation: The union has 30; subtract it from 40 to get 10."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The proposed result 11 fails the required computation: The union has 30; subtract it from 40 to get 10."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The proposed result 12 fails the required computation: The union has 30; subtract it from 40 to get 10."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "venn-count",
+        "n": 40,
+        "a": 22,
+        "b": 17,
+        "overlap": 9,
+        "query": "How many are in neither A nor B?",
+        "expected": 10
+      }
+    },
+    {
+      "id": "sets-076",
+      "topic": "Venn-region reasoning",
+      "difficulty": "intermediate",
+      "question_type": "single_choice",
+      "prompt": "How many are in exactly one of A,B?",
+      "context": "A student survey has 40 respondents, 22 studying logic, 17 studying graphs, and 9 studying both.",
+      "options": [
+        "23",
+        "22",
+        "20",
+        "21"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Sketch four disjoint regions: A only, B only, both, and neither.",
+        "Test set membership element by element. For a relation or function, look for a missing pair, collision, or unattained output."
+      ],
+      "explanation": {
+        "learning_objective": "Apply venn-region reasoning with explicit justification.",
+        "correct_rationale": "The two exclusive regions total (22−9)+(17−9)=21.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The proposed result 23 fails the required computation: The two exclusive regions total (22−9)+(17−9)=21."
+          },
+          {
+            "option_index": 1,
+            "rationale": "The proposed result 22 fails the required computation: The two exclusive regions total (22−9)+(17−9)=21."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The proposed result 20 fails the required computation: The two exclusive regions total (22−9)+(17−9)=21."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "venn-count",
+        "n": 40,
+        "a": 22,
+        "b": 17,
+        "overlap": 9,
+        "query": "How many are in exactly one of A,B?",
+        "expected": 21
+      }
+    },
+    {
+      "id": "sets-077",
+      "topic": "Venn-region reasoning",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "How many are in A∪B?",
+      "context": "There are 32 files: 12 are executable, 15 are images, and none is both.",
+      "options": [
+        "26",
+        "28",
+        "27",
+        "29"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Sketch four disjoint regions: A only, B only, both, and neither.",
+        "Test set membership element by element. For a relation or function, look for a missing pair, collision, or unattained output."
+      ],
+      "explanation": {
+        "learning_objective": "Apply venn-region reasoning with explicit justification.",
+        "correct_rationale": "Inclusion–exclusion: 12+15−0=27.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The proposed result 26 fails the required computation: Inclusion–exclusion: 12+15−0=27."
+          },
+          {
+            "option_index": 1,
+            "rationale": "The proposed result 28 fails the required computation: Inclusion–exclusion: 12+15−0=27."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The proposed result 29 fails the required computation: Inclusion–exclusion: 12+15−0=27."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "venn-count",
+        "n": 32,
+        "a": 12,
+        "b": 15,
+        "overlap": 0,
+        "query": "How many are in A∪B?",
+        "expected": 27
+      }
+    },
+    {
+      "id": "sets-078",
+      "topic": "Venn-region reasoning",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "How many are in A but not B?",
+      "context": "There are 32 files: 12 are executable, 15 are images, and none is both.",
+      "options": [
+        "11",
+        "13",
+        "14",
+        "12"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Sketch four disjoint regions: A only, B only, both, and neither.",
+        "Test set membership element by element. For a relation or function, look for a missing pair, collision, or unattained output."
+      ],
+      "explanation": {
+        "learning_objective": "Apply venn-region reasoning with explicit justification.",
+        "correct_rationale": "Subtract the shared region from A: 12−0=12.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The proposed result 11 fails the required computation: Subtract the shared region from A: 12−0=12."
+          },
+          {
+            "option_index": 1,
+            "rationale": "The proposed result 13 fails the required computation: Subtract the shared region from A: 12−0=12."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The proposed result 14 fails the required computation: Subtract the shared region from A: 12−0=12."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "venn-count",
+        "n": 32,
+        "a": 12,
+        "b": 15,
+        "overlap": 0,
+        "query": "How many are in A but not B?",
+        "expected": 12
+      }
+    },
+    {
+      "id": "sets-079",
+      "topic": "Venn-region reasoning",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "How many are in neither A nor B?",
+      "context": "There are 32 files: 12 are executable, 15 are images, and none is both.",
+      "options": [
+        "4",
+        "5",
+        "7",
+        "6"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Sketch four disjoint regions: A only, B only, both, and neither.",
+        "Test set membership element by element. For a relation or function, look for a missing pair, collision, or unattained output."
+      ],
+      "explanation": {
+        "learning_objective": "Apply venn-region reasoning with explicit justification.",
+        "correct_rationale": "The union has 27; subtract it from 32 to get 5.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The proposed result 4 fails the required computation: The union has 27; subtract it from 32 to get 5."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The proposed result 7 fails the required computation: The union has 27; subtract it from 32 to get 5."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The proposed result 6 fails the required computation: The union has 27; subtract it from 32 to get 5."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "venn-count",
+        "n": 32,
+        "a": 12,
+        "b": 15,
+        "overlap": 0,
+        "query": "How many are in neither A nor B?",
+        "expected": 5
+      }
+    },
+    {
+      "id": "sets-080",
+      "topic": "Venn-region reasoning",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "How many are in exactly one of A,B?",
+      "context": "There are 32 files: 12 are executable, 15 are images, and none is both.",
+      "options": [
+        "27",
+        "28",
+        "29",
+        "26"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Sketch four disjoint regions: A only, B only, both, and neither.",
+        "Test set membership element by element. For a relation or function, look for a missing pair, collision, or unattained output."
+      ],
+      "explanation": {
+        "learning_objective": "Apply venn-region reasoning with explicit justification.",
+        "correct_rationale": "The two exclusive regions total (12−0)+(15−0)=27.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "The proposed result 28 fails the required computation: The two exclusive regions total (12−0)+(15−0)=27."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The proposed result 29 fails the required computation: The two exclusive regions total (12−0)+(15−0)=27."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The proposed result 26 fails the required computation: The two exclusive regions total (12−0)+(15−0)=27."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "venn-count",
+        "n": 32,
+        "a": 12,
+        "b": 15,
+        "overlap": 0,
+        "query": "How many are in exactly one of A,B?",
+        "expected": 27
+      }
+    },
+    {
+      "id": "sets-081",
+      "topic": "Venn-region reasoning",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "How many are in A∪B?",
+      "context": "Among 25 devices, 8 are in A and 16 are in B; all 8 devices of A are also in B.",
+      "options": [
+        "16",
+        "15",
+        "18",
+        "17"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Sketch four disjoint regions: A only, B only, both, and neither.",
+        "Test set membership element by element. For a relation or function, look for a missing pair, collision, or unattained output."
+      ],
+      "explanation": {
+        "learning_objective": "Apply venn-region reasoning with explicit justification.",
+        "correct_rationale": "Inclusion–exclusion: 8+16−8=16.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "The proposed result 15 fails the required computation: Inclusion–exclusion: 8+16−8=16."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The proposed result 18 fails the required computation: Inclusion–exclusion: 8+16−8=16."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The proposed result 17 fails the required computation: Inclusion–exclusion: 8+16−8=16."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "venn-count",
+        "n": 25,
+        "a": 8,
+        "b": 16,
+        "overlap": 8,
+        "query": "How many are in A∪B?",
+        "expected": 16
+      }
+    },
+    {
+      "id": "sets-082",
+      "topic": "Venn-region reasoning",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "How many are in A but not B?",
+      "context": "Among 25 devices, 8 are in A and 16 are in B; all 8 devices of A are also in B.",
+      "options": [
+        "2",
+        "1",
+        "3",
+        "0"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Sketch four disjoint regions: A only, B only, both, and neither.",
+        "Test set membership element by element. For a relation or function, look for a missing pair, collision, or unattained output."
+      ],
+      "explanation": {
+        "learning_objective": "Apply venn-region reasoning with explicit justification.",
+        "correct_rationale": "Subtract the shared region from A: 8−8=0.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The proposed result 2 fails the required computation: Subtract the shared region from A: 8−8=0."
+          },
+          {
+            "option_index": 1,
+            "rationale": "The proposed result 1 fails the required computation: Subtract the shared region from A: 8−8=0."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The proposed result 3 fails the required computation: Subtract the shared region from A: 8−8=0."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "venn-count",
+        "n": 25,
+        "a": 8,
+        "b": 16,
+        "overlap": 8,
+        "query": "How many are in A but not B?",
+        "expected": 0
+      }
+    },
+    {
+      "id": "sets-083",
+      "topic": "Venn-region reasoning",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "How many are in neither A nor B?",
+      "context": "Among 25 devices, 8 are in A and 16 are in B; all 8 devices of A are also in B.",
+      "options": [
+        "8",
+        "9",
+        "11",
+        "10"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Sketch four disjoint regions: A only, B only, both, and neither.",
+        "Test set membership element by element. For a relation or function, look for a missing pair, collision, or unattained output."
+      ],
+      "explanation": {
+        "learning_objective": "Apply venn-region reasoning with explicit justification.",
+        "correct_rationale": "The union has 16; subtract it from 25 to get 9.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "The proposed result 8 fails the required computation: The union has 16; subtract it from 25 to get 9."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The proposed result 11 fails the required computation: The union has 16; subtract it from 25 to get 9."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The proposed result 10 fails the required computation: The union has 16; subtract it from 25 to get 9."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "venn-count",
+        "n": 25,
+        "a": 8,
+        "b": 16,
+        "overlap": 8,
+        "query": "How many are in neither A nor B?",
+        "expected": 9
+      }
+    },
+    {
+      "id": "sets-084",
+      "topic": "Venn-region reasoning",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "How many are in exactly one of A,B?",
+      "context": "Among 25 devices, 8 are in A and 16 are in B; all 8 devices of A are also in B.",
+      "options": [
+        "8",
+        "9",
+        "7",
+        "10"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Sketch four disjoint regions: A only, B only, both, and neither.",
+        "Test set membership element by element. For a relation or function, look for a missing pair, collision, or unattained output."
+      ],
+      "explanation": {
+        "learning_objective": "Apply venn-region reasoning with explicit justification.",
+        "correct_rationale": "The two exclusive regions total (8−8)+(16−8)=8.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "The proposed result 9 fails the required computation: The two exclusive regions total (8−8)+(16−8)=8."
+          },
+          {
+            "option_index": 2,
+            "rationale": "The proposed result 7 fails the required computation: The two exclusive regions total (8−8)+(16−8)=8."
+          },
+          {
+            "option_index": 3,
+            "rationale": "The proposed result 10 fails the required computation: The two exclusive regions total (8−8)+(16−8)=8."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": "",
+      "verification": {
+        "kind": "venn-count",
+        "n": 25,
+        "a": 8,
+        "b": 16,
+        "overlap": 8,
+        "query": "How many are in exactly one of A,B?",
+        "expected": 8
+      }
+    },
+    {
+      "id": "sets-085",
+      "topic": "Integer translation",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "Is f injective?",
+      "context": "f:ℤ→ℤ, f(n)=n+3",
+      "options": [
+        "No, all inputs collide",
+        "Only for positive inputs",
+        "Only for even inputs",
+        "Yes, a+3=b+3 implies a=b"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Check the domain, codomain, and equation for a preimage before drawing a conclusion.",
+        "Test set membership element by element. For a relation or function, look for a missing pair, collision, or unattained output."
+      ],
+      "explanation": {
+        "learning_objective": "Apply integer translation with explicit justification.",
+        "correct_rationale": "Subtract 3 from equal outputs; arbitrary integers a,b must be equal.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This conflicts with the specified domain or function. Subtract 3 from equal outputs; arbitrary integers a,b must be equal."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This conflicts with the specified domain or function. Subtract 3 from equal outputs; arbitrary integers a,b must be equal."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This conflicts with the specified domain or function. Subtract 3 from equal outputs; arbitrary integers a,b must be equal."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "sets-086",
+      "topic": "Integer translation",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "Is f surjective?",
+      "context": "f:ℤ→ℤ, f(n)=n+3",
+      "options": [
+        "No, 0 is unattained",
+        "Yes, y has preimage y−3",
+        "No, negative outputs are unattained",
+        "Only odd outputs are attained"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Check the domain, codomain, and equation for a preimage before drawing a conclusion.",
+        "Test set membership element by element. For a relation or function, look for a missing pair, collision, or unattained output."
+      ],
+      "explanation": {
+        "learning_objective": "Apply integer translation with explicit justification.",
+        "correct_rationale": "For any integer y, y−3 is an integer and f(y−3)=y.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This conflicts with the specified domain or function. For any integer y, y−3 is an integer and f(y−3)=y."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This conflicts with the specified domain or function. For any integer y, y−3 is an integer and f(y−3)=y."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This conflicts with the specified domain or function. For any integer y, y−3 is an integer and f(y−3)=y."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "sets-087",
+      "topic": "Integer translation",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "What is the inverse function?",
+      "context": "f:ℤ→ℤ, f(n)=n+3",
+      "options": [
+        "f⁻¹(y)=y/3",
+        "f⁻¹(y)=3−y",
+        "f⁻¹(y)=y+3",
+        "f⁻¹(y)=y−3"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Check the domain, codomain, and equation for a preimage before drawing a conclusion.",
+        "Test set membership element by element. For a relation or function, look for a missing pair, collision, or unattained output."
+      ],
+      "explanation": {
+        "learning_objective": "Apply integer translation with explicit justification.",
+        "correct_rationale": "Solving y=n+3 gives n=y−3; both compositions return the original input.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This conflicts with the specified domain or function. Solving y=n+3 gives n=y−3; both compositions return the original input."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This conflicts with the specified domain or function. Solving y=n+3 gives n=y−3; both compositions return the original input."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This conflicts with the specified domain or function. Solving y=n+3 gives n=y−3; both compositions return the original input."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "sets-088",
+      "topic": "Integer translation",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "What is f⁻¹({0,1}) as a set?",
+      "context": "f:ℤ→ℤ, f(n)=n+3",
+      "options": [
+        "{3,4}",
+        "{−3,−2}",
+        "{0,1}",
+        "∅"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Check the domain, codomain, and equation for a preimage before drawing a conclusion.",
+        "Test set membership element by element. For a relation or function, look for a missing pair, collision, or unattained output."
+      ],
+      "explanation": {
+        "learning_objective": "Apply integer translation with explicit justification.",
+        "correct_rationale": "The equations n+3=0 and n+3=1 give n=−3 and n=−2.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This conflicts with the specified domain or function. The equations n+3=0 and n+3=1 give n=−3 and n=−2."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This conflicts with the specified domain or function. The equations n+3=0 and n+3=1 give n=−3 and n=−2."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This conflicts with the specified domain or function. The equations n+3=0 and n+3=1 give n=−3 and n=−2."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "sets-089",
+      "topic": "Integer doubling",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "Is f injective?",
+      "context": "f:ℤ→ℤ, f(n)=2n",
+      "options": [
+        "No, 1 and 2 collide",
+        "Only on odd inputs",
+        "Only on nonnegative inputs",
+        "Yes, 2a=2b implies a=b"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Check the domain, codomain, and equation for a preimage before drawing a conclusion.",
+        "Test set membership element by element. For a relation or function, look for a missing pair, collision, or unattained output."
+      ],
+      "explanation": {
+        "learning_objective": "Apply integer doubling with explicit justification.",
+        "correct_rationale": "Division by the nonzero integer 2 in the integer equality yields a=b.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This conflicts with the specified domain or function. Division by the nonzero integer 2 in the integer equality yields a=b."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This conflicts with the specified domain or function. Division by the nonzero integer 2 in the integer equality yields a=b."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This conflicts with the specified domain or function. Division by the nonzero integer 2 in the integer equality yields a=b."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "sets-090",
+      "topic": "Integer doubling",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "What is the image?",
+      "context": "f:ℤ→ℤ, f(n)=2n",
+      "options": [
+        "Only positive even integers",
+        "All even integers",
+        "All odd integers",
+        "All integers"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Check the domain, codomain, and equation for a preimage before drawing a conclusion.",
+        "Test set membership element by element. For a relation or function, look for a missing pair, collision, or unattained output."
+      ],
+      "explanation": {
+        "learning_objective": "Apply integer doubling with explicit justification.",
+        "correct_rationale": "Every output is 2n, hence even; conversely every even integer is 2n for an integer n.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This conflicts with the specified domain or function. Every output is 2n, hence even; conversely every even integer is 2n for an integer n."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This conflicts with the specified domain or function. Every output is 2n, hence even; conversely every even integer is 2n for an integer n."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This conflicts with the specified domain or function. Every output is 2n, hence even; conversely every even integer is 2n for an integer n."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "sets-091",
+      "topic": "Integer doubling",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "Why is f not onto ℤ?",
+      "context": "f:ℤ→ℤ, f(n)=2n",
+      "options": [
+        "1 has no integer preimage",
+        "−2 has no preimage",
+        "0 has no preimage",
+        "2 has two preimages"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "Check the domain, codomain, and equation for a preimage before drawing a conclusion.",
+        "Test set membership element by element. For a relation or function, look for a missing pair, collision, or unattained output."
+      ],
+      "explanation": {
+        "learning_objective": "Apply integer doubling with explicit justification.",
+        "correct_rationale": "2n=1 requires n=1/2, outside the integer domain.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "This conflicts with the specified domain or function. 2n=1 requires n=1/2, outside the integer domain."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This conflicts with the specified domain or function. 2n=1 requires n=1/2, outside the integer domain."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This conflicts with the specified domain or function. 2n=1 requires n=1/2, outside the integer domain."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "sets-092",
+      "topic": "Integer doubling",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "Which codomain change makes f bijective?",
+      "context": "f:ℤ→ℤ, f(n)=2n",
+      "options": [
+        "Use only the odd integers",
+        "Use the even integers as codomain",
+        "Use positive integers without changing the domain",
+        "Keep ℤ and remove 0 from the domain"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Check the domain, codomain, and equation for a preimage before drawing a conclusion.",
+        "Test set membership element by element. For a relation or function, look for a missing pair, collision, or unattained output."
+      ],
+      "explanation": {
+        "learning_objective": "Apply integer doubling with explicit justification.",
+        "correct_rationale": "Restrict the codomain to the image; injectivity remains and every even output has a unique preimage.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This conflicts with the specified domain or function. Restrict the codomain to the image; injectivity remains and every even output has a unique preimage."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This conflicts with the specified domain or function. Restrict the codomain to the image; injectivity remains and every even output has a unique preimage."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This conflicts with the specified domain or function. Restrict the codomain to the image; injectivity remains and every even output has a unique preimage."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "sets-093",
+      "topic": "Squaring across domains",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "Why is g not injective?",
+      "context": "g:ℝ→ℝ, g(x)=x²",
+      "options": [
+        "Every square is nonnegative",
+        "g(1)=g(−1)",
+        "g(2)=4",
+        "g(0)=0"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Check the domain, codomain, and equation for a preimage before drawing a conclusion.",
+        "Test set membership element by element. For a relation or function, look for a missing pair, collision, or unattained output."
+      ],
+      "explanation": {
+        "learning_objective": "Apply squaring across domains with explicit justification.",
+        "correct_rationale": "Distinct inputs 1 and −1 have equal output, directly violating injectivity.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This conflicts with the specified domain or function. Distinct inputs 1 and −1 have equal output, directly violating injectivity."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This conflicts with the specified domain or function. Distinct inputs 1 and −1 have equal output, directly violating injectivity."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This conflicts with the specified domain or function. Distinct inputs 1 and −1 have equal output, directly violating injectivity."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "sets-094",
+      "topic": "Squaring across domains",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "Why is g not onto ℝ?",
+      "context": "g:ℝ→ℝ, g(x)=x²",
+      "options": [
+        "4 has two preimages",
+        "0 is not a square",
+        "−1 is not a square of a real number",
+        "1 has no preimage"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "Check the domain, codomain, and equation for a preimage before drawing a conclusion.",
+        "Test set membership element by element. For a relation or function, look for a missing pair, collision, or unattained output."
+      ],
+      "explanation": {
+        "learning_objective": "Apply squaring across domains with explicit justification.",
+        "correct_rationale": "A real square is nonnegative, so negative codomain elements are unattained.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This conflicts with the specified domain or function. A real square is nonnegative, so negative codomain elements are unattained."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This conflicts with the specified domain or function. A real square is nonnegative, so negative codomain elements are unattained."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This conflicts with the specified domain or function. A real square is nonnegative, so negative codomain elements are unattained."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "sets-095",
+      "topic": "Squaring across domains",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "Which domain and codomain make squaring bijective?",
+      "context": "g:ℝ→ℝ, g(x)=x²",
+      "options": [
+        "[0,∞)→ℝ",
+        "ℝ→ℝ",
+        "ℝ→[0,∞)",
+        "[0,∞)→[0,∞)"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "Check the domain, codomain, and equation for a preimage before drawing a conclusion.",
+        "Test set membership element by element. For a relation or function, look for a missing pair, collision, or unattained output."
+      ],
+      "explanation": {
+        "learning_objective": "Apply squaring across domains with explicit justification.",
+        "correct_rationale": "On nonnegative reals squaring is strictly increasing, and every nonnegative y has unique preimage √y.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This conflicts with the specified domain or function. On nonnegative reals squaring is strictly increasing, and every nonnegative y has unique preimage √y."
+          },
+          {
+            "option_index": 1,
+            "rationale": "This conflicts with the specified domain or function. On nonnegative reals squaring is strictly increasing, and every nonnegative y has unique preimage √y."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This conflicts with the specified domain or function. On nonnegative reals squaring is strictly increasing, and every nonnegative y has unique preimage √y."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "sets-096",
+      "topic": "Squaring across domains",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "What is g⁻¹({4}) as a preimage set on ℝ?",
+      "context": "g:ℝ→ℝ, g(x)=x²",
+      "options": [
+        "{2}",
+        "{−2,2}",
+        "{−4,4}",
+        "{16}"
+      ],
+      "correct_index": 1,
+      "hints": [
+        "Check the domain, codomain, and equation for a preimage before drawing a conclusion.",
+        "Test set membership element by element. For a relation or function, look for a missing pair, collision, or unattained output."
+      ],
+      "explanation": {
+        "learning_objective": "Apply squaring across domains with explicit justification.",
+        "correct_rationale": "Solve x²=4: both x=2 and x=−2 are allowed in the real domain.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "This conflicts with the specified domain or function. Solve x²=4: both x=2 and x=−2 are allowed in the real domain."
+          },
+          {
+            "option_index": 2,
+            "rationale": "This conflicts with the specified domain or function. Solve x²=4: both x=2 and x=−2 are allowed in the real domain."
+          },
+          {
+            "option_index": 3,
+            "rationale": "This conflicts with the specified domain or function. Solve x²=4: both x=2 and x=−2 are allowed in the real domain."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "sets-097",
+      "topic": "Empty sets and vacuous truth",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "Which statement is true?",
+      "context": "",
+      "options": [
+        "{∅}⊆∅",
+        "{∅}=∅",
+        "∅⊆{∅}",
+        "∅∈∅"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "An element of a set and a subset of a set are different notions.",
+        "Test set membership element by element. For a relation or function, look for a missing pair, collision, or unattained output."
+      ],
+      "explanation": {
+        "learning_objective": "Apply empty sets and vacuous truth with explicit justification.",
+        "correct_rationale": "Every element of ∅ belongs to {∅}, vacuously; the singleton {∅} has one element while ∅ has none.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "Keep membership separate from inclusion and count the outer set’s elements. Every element of ∅ belongs to {∅}, vacuously; the singleton {∅} has one element while ∅ has none."
+          },
+          {
+            "option_index": 1,
+            "rationale": "Keep membership separate from inclusion and count the outer set’s elements. Every element of ∅ belongs to {∅}, vacuously; the singleton {∅} has one element while ∅ has none."
+          },
+          {
+            "option_index": 3,
+            "rationale": "Keep membership separate from inclusion and count the outer set’s elements. Every element of ∅ belongs to {∅}, vacuously; the singleton {∅} has one element while ∅ has none."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "sets-098",
+      "topic": "Empty sets and vacuous truth",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "What is |{∅}|?",
+      "context": "",
+      "options": [
+        "Infinite",
+        "2",
+        "0",
+        "1"
+      ],
+      "correct_index": 3,
+      "hints": [
+        "An element of a set and a subset of a set are different notions.",
+        "Test set membership element by element. For a relation or function, look for a missing pair, collision, or unattained output."
+      ],
+      "explanation": {
+        "learning_objective": "Apply empty sets and vacuous truth with explicit justification.",
+        "correct_rationale": "The outer set contains exactly one element, namely the empty set.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "Keep membership separate from inclusion and count the outer set’s elements. The outer set contains exactly one element, namely the empty set."
+          },
+          {
+            "option_index": 1,
+            "rationale": "Keep membership separate from inclusion and count the outer set’s elements. The outer set contains exactly one element, namely the empty set."
+          },
+          {
+            "option_index": 2,
+            "rationale": "Keep membership separate from inclusion and count the outer set’s elements. The outer set contains exactly one element, namely the empty set."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "sets-099",
+      "topic": "Empty sets and vacuous truth",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "What is the power set of ∅?",
+      "context": "",
+      "options": [
+        "{{∅}}",
+        "∅",
+        "{∅}",
+        "{0}"
+      ],
+      "correct_index": 2,
+      "hints": [
+        "An element of a set and a subset of a set are different notions.",
+        "Test set membership element by element. For a relation or function, look for a missing pair, collision, or unattained output."
+      ],
+      "explanation": {
+        "learning_objective": "Apply empty sets and vacuous truth with explicit justification.",
+        "correct_rationale": "The only subset of ∅ is ∅ itself, so P(∅) is its singleton.",
+        "incorrect_rationales": [
+          {
+            "option_index": 0,
+            "rationale": "Keep membership separate from inclusion and count the outer set’s elements. The only subset of ∅ is ∅ itself, so P(∅) is its singleton."
+          },
+          {
+            "option_index": 1,
+            "rationale": "Keep membership separate from inclusion and count the outer set’s elements. The only subset of ∅ is ∅ itself, so P(∅) is its singleton."
+          },
+          {
+            "option_index": 3,
+            "rationale": "Keep membership separate from inclusion and count the outer set’s elements. The only subset of ∅ is ∅ itself, so P(∅) is its singleton."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    },
+    {
+      "id": "sets-100",
+      "topic": "Empty sets and vacuous truth",
+      "difficulty": "advanced",
+      "question_type": "single_choice",
+      "prompt": "Which function cannot exist?",
+      "context": "",
+      "options": [
+        "A function {0}→∅",
+        "A function ∅→∅",
+        "A function ∅→{0}",
+        "A function {0}→{0}"
+      ],
+      "correct_index": 0,
+      "hints": [
+        "An element of a set and a subset of a set are different notions.",
+        "Test set membership element by element. For a relation or function, look for a missing pair, collision, or unattained output."
+      ],
+      "explanation": {
+        "learning_objective": "Apply empty sets and vacuous truth with explicit justification.",
+        "correct_rationale": "The input 0 would need an output in an empty codomain, impossible. An empty domain has the empty function.",
+        "incorrect_rationales": [
+          {
+            "option_index": 1,
+            "rationale": "Keep membership separate from inclusion and count the outer set’s elements. The input 0 would need an output in an empty codomain, impossible. An empty domain has the empty function."
+          },
+          {
+            "option_index": 2,
+            "rationale": "Keep membership separate from inclusion and count the outer set’s elements. The input 0 would need an output in an empty codomain, impossible. An empty domain has the empty function."
+          },
+          {
+            "option_index": 3,
+            "rationale": "Keep membership separate from inclusion and count the outer set’s elements. The input 0 would need an output in an empty codomain, impossible. An empty domain has the empty function."
+          }
+        ]
+      },
+      "source_notes": [
+        "Original practice item. Rationale derived from the stated definitions; no claim of external expert review."
+      ],
+      "has_exhibit": false,
+      "exhibit_url": ""
+    }
+  ]
+}
