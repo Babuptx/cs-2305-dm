@@ -104,7 +104,20 @@ $('reset').onclick = () => {if (!confirm('Clear all saved attempts and active pr
 function setTheme(theme) {document.documentElement.dataset.theme = theme; $('theme').textContent = theme === 'dark' ? 'Light theme' : 'Dark theme'; try {storage?.setItem('dm:theme:v1',theme);} catch {}}
 let theme; try {theme = storage?.getItem('dm:theme:v1');} catch {} setTheme(['light','dark'].includes(theme) ? theme : matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
 $('theme').onclick = () => setTheme(document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark');
-$('reference').onclick = () => openReference($('pillar').value==='utd-fall-midterm'); $('close-reference').onclick = () => $('reference-dialog').close();
+function setReadingSize(size) {
+  const selected=['standard','large','extra-large'].includes(size)?size:'standard';
+  document.documentElement.dataset.readingSize=selected;
+  document.querySelectorAll('button[data-reading-size]').forEach(button=>{
+    button.setAttribute('aria-pressed',String(button.dataset.readingSize===selected));
+  });
+  try {storage?.setItem('dm:reading-size:v1',selected);} catch {}
+}
+let readingSize; try {readingSize=storage?.getItem('dm:reading-size:v1');} catch {}
+setReadingSize(readingSize);
+document.querySelectorAll('button[data-reading-size]').forEach(button=>{
+  button.onclick=()=>setReadingSize(button.dataset.readingSize);
+});
+$('reference').onclick = () => openReference(); $('close-reference').onclick = () => $('reference-dialog').close();
 setupFlashcards({isTimedQuizActive:()=>engine.state?.phase==='active'&&engine.state.deadline!==null});
 document.addEventListener('keydown', e => {if (!engine.state || e.target.closest('input,select,textarea,dialog,button') || e.altKey || e.ctrlKey || e.metaKey) return; if (e.key === 'ArrowLeft') {e.preventDefault();engine.move(-1);} if (e.key === 'ArrowRight') {e.preventDefault();engine.move(1);}});
 addEventListener('pagehide', () => engine.destroy());

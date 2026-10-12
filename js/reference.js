@@ -91,17 +91,9 @@ $('reference-midterm').innerHTML=`
 <ul><li>Prime versus composite excludes both 0 and 1; coprimality of two primes requires distinct primes.</li><li>Big-O and Big-Ω require a positive constant and a stated domain. Little-o uses a vanishing ratio, including for oscillating functions.</li><li>The GCD–LCM product uses |ab| for signed inputs; gcd(a,0)=|a| when a≠0.</li><li>Digit-count logarithms require n&gt;0. Two’s complement requires a fixed width and attention to overflow.</li><li>Nested-loop work depends on the actual bounds. Average-case cost needs a distribution; operation counts depend on the implementation.</li><li>Geometric and derivative series require convergence conditions; division and inverse arguments require their nonzero hypotheses.</li></ul>
 </details>`;
 
-const picker=$('reference-scope');
-function selectReference(scope){
-  picker.value=scope;
-  $('reference-general').hidden=scope!=='general';
-  $('reference-midterm').hidden=scope!=='midterm';
-  $('reference-scroll').scrollTop=0;
-}
-picker.addEventListener('change',()=>selectReference(picker.value));
-export function openReference(midterm=false){
-  selectReference(midterm?'midterm':'general');
+export function openReference(){
   $('reference-dialog').showModal();
+  $('reference-scroll').scrollTop=0;
 }
 // Scroll inside the dialog without changing the app URL or keyboard context.
 document.querySelectorAll('.reference-jumps a').forEach(a=>a.addEventListener('click',event=>{

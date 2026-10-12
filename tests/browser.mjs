@@ -71,8 +71,8 @@ try {
   for(const viewport of [{width:1440,height:1000},{width:390,height:844}]){
     await page.setViewportSize(viewport);
     await page.locator('#reference').click();
-    assert.equal(await page.locator('#reference-scope').inputValue(),'midterm');
-    assert.equal(await page.locator('#reference-general').isVisible(),false);
+    assert.equal(await page.locator('#reference-dialog select').count(),0);
+    assert.equal(await page.locator('#reference-general').isVisible(),true);
     assert.equal(await page.locator('#reference-midterm').isVisible(),true);
     assert.ok(await page.locator('#reference-scroll').evaluate(e=>e.scrollHeight>e.clientHeight),'Reference must scroll');
     assert.ok(await page.locator('#reference-scroll').evaluate(e=>e.scrollWidth<=e.clientWidth),'Reference horizontal overflow');
@@ -82,7 +82,7 @@ try {
     const primeBox=await page.locator('#ref-primes h3').boundingBox();
     assert.ok(primeBox.y>0&&primeBox.y<viewport.height,'Reference jump remains inside viewport');
     assert.match(await page.locator('#ref-primes').innerText(),/0 and 1 are neither prime nor composite/);
-    await page.locator('#reference-scope').selectOption('general');
+    await page.locator('.reference-jumps a[href="#reference-general"]').click();
     assert.equal(await page.locator('#reference-general').isVisible(),true);
     assert.match(await page.locator('#reference-general').innerText(),/Induction/);
     await page.keyboard.press('Escape');
@@ -149,6 +149,43 @@ try {
   await page.screenshot({path:'test-results/flashcards-mobile-alternate-theme.png'});
   await page.locator('#flashcard-close').click();
   await page.setViewportSize({width:1440,height:1000});
+  // Reading size changes presentation, preserves quiz state, and survives reload.
+  assert.equal(await page.locator('.compact-intro h1').innerText(),'Practice your discrete mathematics skills.');
+  assert.ok((await page.locator('.compact-intro').boundingBox()).height<80,'Compact introduction');
+  assert.equal(await page.locator('.compact-intro a').getAttribute('href'),'https://babuptx.github.io/cs-2305-dm-ex/');
+  await page.locator('input[name=answer]').first().check();
+  const readingState=await page.evaluate(()=>localStorage.getItem('dm:session:v1'));
+  for(const [size,pixels] of [['standard',18],['large',21],['extra-large',24]]){
+    await page.locator(`button[data-reading-size="${size}"]`).click();
+    assert.equal(await page.locator('#context').evaluate(e=>getComputedStyle(e).fontSize),`${pixels}px`);
+    assert.equal(await page.locator('.option').first().evaluate(e=>getComputedStyle(e).fontSize),`${pixels}px`);
+    assert.equal(await page.locator('.reading-size-control [aria-pressed=true]').count(),1);
+  }
+  assert.equal(await page.evaluate(()=>localStorage.getItem('dm:session:v1')),readingState);
+  await page.reload();await page.locator('#resume').waitFor();await page.locator('#resume').click();
+  await page.locator('input[name=answer]').first().waitFor();
+  assert.equal(await page.locator('html').getAttribute('data-reading-size'),'extra-large');
+  assert.equal(await page.locator('input[name=answer]').first().isChecked(),true);
+  const restoredReadingState=JSON.parse(await page.evaluate(()=>localStorage.getItem('dm:session:v1')));
+  assert.equal(restoredReadingState.state.deadline,JSON.parse(readingState).state.deadline);
+  await page.locator('#hint').click();await page.locator('#reveal').click();
+  assert.equal(await page.locator('#explanation').evaluate(e=>getComputedStyle(e).fontSize),'24px');
+  await page.screenshot({path:'test-results/reading-size-desktop.png',fullPage:true});
+  await page.setViewportSize({width:320,height:740});
+  assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),'Large text mobile overflow');
+  await page.screenshot({path:'test-results/reading-size-mobile.png',fullPage:true});
+  await page.locator('#reference').click();
+  assert.equal(await page.locator('#reference-general dd').first().evaluate(e=>getComputedStyle(e).fontSize),'24px');
+  assert.ok(await page.locator('#reference-scroll').evaluate(e=>e.scrollWidth<=e.clientWidth),'Large reference overflow');
+  await page.screenshot({path:'test-results/reading-size-reference.png'});
+  await page.keyboard.press('Escape');
+  await page.locator('#flashcards').selectOption(deckPath);await page.locator('#flashcard-face').waitFor();
+  await page.locator('#flashcard-flip').click();
+  assert.equal(await page.locator('#flashcard-example').evaluate(e=>getComputedStyle(e).fontSize),'24px');
+  assert.ok(await page.locator('#flashcard-scroll').evaluate(e=>e.scrollWidth<=e.clientWidth),'Large flashcard overflow');
+  await page.locator('#flashcard-close').click();
+  await page.locator('button[data-reading-size="standard"]').click();
+  await page.setViewportSize({width:1440,height:1000});
   await page.locator('#reset').click();await page.waitForFunction(()=>!document.getElementById('start').disabled);assert.equal(await page.evaluate(()=>localStorage.getItem('dm:stats:v1')),null);assert.equal(await page.evaluate(()=>localStorage.getItem('dm:session:v1')),null);
   // Reset reloads the page, clearing the in-memory flashcard cache.
   await page.route('**/data/flashcards/utd-midterm.json',route=>route.fulfill({status:200,contentType:'application/json',body:'{"cards":[]}'}));
@@ -161,5 +198,5 @@ try {
   await page.locator('#flashcard-close').click();
   await page.route('**/data/logic/block-01.json',route=>route.fulfill({status:200,contentType:'application/json',body:'{"questions":[]}'}));await page.locator('#start').click();await page.waitForFunction(()=>document.getElementById('status').classList.contains('error'));assert.equal(await page.locator('#choices input').count(),0);await page.unroute('**/data/logic/block-01.json');
   await page.route('**/data/logic/block-01.json',route=>route.fulfill({status:404,body:'missing'}));await page.locator('#start').click();await page.waitForFunction(()=>document.getElementById('status').textContent.includes('404'));assert.equal(await page.locator('#finish').isDisabled(),true);
-  assert.deepEqual(errors,[]);console.log('Browser checks passed: study/exam, all 20 blocks, 90-minute timer, persistence/reset, desktop/mobile references and flashcards, keyboard controls, source notes, malformed data and fetch errors.');
+  assert.deepEqual(errors,[]);console.log('Browser checks passed: study/exam, all 20 blocks, 90-minute timer, persistence/reset, unified reference, reading sizes and persistence, desktop/mobile flashcards, keyboard controls, source notes, malformed data and fetch errors.');
 } catch (e) {console.error('Browser failure:',e.message,'Page errors:',errors,'Status:',await page.locator('#status').textContent().catch(()=>'(unavailable)'));await page.screenshot({path:'test-results/failure.png',fullPage:true}).catch(()=>{});throw e;} finally {await browser.close();}
