@@ -12,7 +12,7 @@ import random
 
 ROOT = Path(__file__).resolve().parents[1]
 SLUG = 'utd-fall-midterm'
-TITLE = 'UTD 2026 Fall Midterm'
+TITLE = 'Fall Semester Midterm Practice'
 BANK = []
 BLOCKS = []
 CURRENT = {}

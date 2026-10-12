@@ -103,7 +103,7 @@ try {
   const deckPath='data/flashcards/utd-midterm.json';
   await page.locator('#flashcards').selectOption(deckPath);
   await page.locator('#flashcard-face').waitFor();
-  assert.equal(await page.locator('#flashcard-title').innerText(),'UTD Midterm Flashcards');
+  assert.equal(await page.locator('#flashcard-title').innerText(),'Fall Semester Midterm Flashcards');
   assert.equal(await page.locator('#flashcard-progress').innerText(),'Card 1 of 40');
   assert.equal(await page.locator('#flashcard-previous').isDisabled(),true);
   assert.equal(await page.locator('#flashcard-timer-note').isVisible(),true);

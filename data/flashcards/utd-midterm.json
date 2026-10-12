@@ -1,7 +1,7 @@
 {
   "version": 1,
   "id": "utd-midterm",
-  "title": "UTD Midterm Flashcards",
+  "title": "Fall Semester Midterm Flashcards",
   "description": "Recall the concept, then flip for an explanation and worked example. Topics follow the midterm classroom scope.",
   "cards": [
     {"id":"midterm-fc-01","topic":"Material implication","section":"1.1","prompt":"When is p → q false, and why does a false premise not refute it?","concept":"An implication is false only when p is true and q is false. It is equivalent to ¬p ∨ q.","example":"Let p mean ‘n is divisible by 4’ and q mean ‘n is even.’ At n=6, p is false and q is true, so p→q is true. To refute the universal implication, we would need a multiple of 4 that is not even.","takeaway":"A counterexample to an implication must satisfy its hypothesis and violate its conclusion."},

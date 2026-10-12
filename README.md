@@ -2,7 +2,7 @@
 
 An original supplementary practice lab for computer science students. Static HTML/CSS/JavaScript with separate UTF-8 JSON banks, worked reasoning, and explanations for every distractor. No runtime dependencies or account required.
 
-**Not affiliated with or endorsed by UT Dallas.** The first six pillars provide general course practice; their induction, advanced graph examples, and recurrence-solving topics may vary by section. Pillar 7 is scoped to the supplied Fall 2026 classroom materials and matching textbook content. This AI-assisted bank has automated checks and author review, but no independent human subject-matter review. Report suspected errors before relying on an item.
+**Independent supplementary practice.** The first six pillars provide general course practice; their induction, advanced graph examples, and recurrence-solving topics may vary by section. Pillar 7 is scoped to the supplied fall-semester classroom materials and matching textbook content. This AI-assisted bank has automated checks and author review, but no independent human subject-matter review. Report suspected errors before relying on an item.
 
 Live site: https://Babuptx.github.io/cs-2305-dm/
 
@@ -16,18 +16,18 @@ Live site: https://Babuptx.github.io/cs-2305-dm/
 | Counting and combinatorics | Product/sum rules, permutations, combinations, inclusion–exclusion, stars and bars, pigeonhole principle | 2 × 50 | 100 |
 | Graph theory and number theory | Paths, connectivity, degree sums, Euler trails, bipartiteness, divisibility, gcd, modular arithmetic | 2 × 50 | 100 |
 | Recurrence relations | Recursive definitions, unrolling, closed forms, characteristic roots, nonlinear transformations, introductory algorithm analysis | 2 × 50 | 100 |
-| UTD 2026 Fall Midterm | Slide-scoped logic/proofs, sets/functions, sequences/countability/matrices, algorithms/complexity, and number theory through GCDs | 8 × 50 | 400 |
+| Fall Semester Midterm Practice | Slide-scoped logic/proofs, sets/functions, sequences/countability/matrices, algorithms/complexity, and number theory through GCDs | 8 × 50 | 400 |
 | **Total** | | **20 blocks** | **1,000** |
 
 The original six pillars each have 25 case workshops with four tasks per case. Pillar 7 has 80 workshops with five tasks each: 240 intermediate and 160 advanced items. Related items share context while testing different reasoning obligations. Difficulty labels are author judgments, not empirically calibrated exam scores.
 
-## UTD 2026 Fall Midterm
+## Fall Semester Midterm Practice
 
 The uploaded classroom materials govern topic selection; the supplied Rosen eighth-edition textbook supplies related exercises by subject. The mapping covers §§1.1, 1.3–1.8, 2.1–2.6, 3.1–3.3, and 4.1–4.3. Odd-exercise numbers shown after answer reveal are **related study pointers**, not claims that the original practice item reproduces the exercise or predicts the professor's exam. Refer to the book for its exact wording. No instructor endorsement is claimed.
 
 The eight blocks are logic/equivalence; quantifiers/inference; proof construction; sets/functions; sequences/sums/countability; matrices/algorithms; growth/operation counts; and number theory. Elementary recurrences belong to the sequence material, but this pillar does not import the other pillars' induction, advanced recurrence solving, graph theory, or later counting units. `data/utd-fall-midterm/coverage.json` records the distribution.
 
-Working reference now offers the existing **All-course essentials** and a separate scrollable **UTD 2026 Fall Midterm** collection with topic navigation. The latter corrects mathematical conditions in the supplied cheat sheet, including prime/composite definitions, signed GCD identities, positive asymptotic constants, little-o, fixed-width representations, and operation-count assumptions. Additional sheet topics are labeled separately. This full reference is not formatted as a permitted one-page exam aid.
+Working reference now offers the existing **All-course essentials** and a separate scrollable **Fall Semester Midterm Reference** collection with topic navigation. The latter corrects mathematical conditions in the supplied cheat sheet, including prime/composite definitions, signed GCD identities, positive asymptotic constants, little-o, fixed-width representations, and operation-count assumptions. Additional sheet topics are labeled separately. This full reference is not formatted as a permitted one-page exam aid.
 
 All supplied PDFs and extracted analysis stay under ignored `/refer/`. The build copies only `index.html`, `styles.css`, `js/`, and `data/`; no local course source material is deployed.
 
@@ -55,7 +55,7 @@ $quizNode = (Get-ChildItem -LiteralPath "$env:LOCALAPPDATA\CodexQuizTools" -Filt
 
 ## Workflow and scoring
 
-The fifth dropdown opens **UTD Midterm Flashcards**: 40 original concept cards spanning the 19 midterm sections. Recall the front-side prompt, then click/tap the card or use Enter/Space to reveal an explanation, worked example, and takeaway. Previous/Next, arrow keys, and Shuffle deck support review. The viewer scrolls on small screens, preserves quiz progress, and leaves any active quiz timer running. Flashcards are separate from scored question totals.
+The fifth dropdown opens **Fall Semester Midterm Flashcards**: 40 original concept cards spanning the 19 midterm sections. Recall the front-side prompt, then click/tap the card or use Enter/Space to reveal an explanation, worked example, and takeaway. Previous/Next, arrow keys, and Shuffle deck support review. The viewer scrolls on small screens, preserves quiz progress, and leaves any active quiz timer running. Flashcards are separate from scored question totals.
 
 Select a pillar/block, study or exam mode, and an optional 30/50/75/90-minute limit. Answer/change selections, flag questions, and use the block map or Previous/Next. Left/Right keys navigate when focus is outside an interactive control. Shuffle preserves responses by stable question ID. A 50-question block is a practice grouping, not a claim about the real exam's question count.
 

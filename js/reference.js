@@ -2,7 +2,7 @@
 // This module contains no embedded PDFs, scans, or classroom slide excerpts.
 const $=id=>document.getElementById(id);
 $('reference-midterm').innerHTML=`
-<p class="eyebrow">PILLAR 7 · UTD 2026 FALL MIDTERM</p>
+<p class="eyebrow">PILLAR 7 · FALL SEMESTER MIDTERM PRACTICE</p>
 <h3>Midterm working reference</h3>
 <p>Use these notes while working the practice questions. Definitions include the domain restrictions needed for correct reasoning. Work proofs and calculations on paper before revealing an answer. This scrollable reference is not a one-page exam cheat sheet.</p>
 <nav class="reference-jumps" aria-label="Midterm reference topics">
