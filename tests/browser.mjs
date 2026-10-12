@@ -150,9 +150,10 @@ try {
   await page.locator('#flashcard-close').click();
   await page.setViewportSize({width:1440,height:1000});
   // Reading size changes presentation, preserves quiz state, and survives reload.
-  assert.equal(await page.locator('.compact-intro h1').innerText(),'Practice your discrete mathematics skills.');
-  assert.ok((await page.locator('.compact-intro').boundingBox()).height<80,'Compact introduction');
-  assert.equal(await page.locator('.compact-intro a').getAttribute('href'),'https://babuptx.github.io/cs-2305-dm-ex/');
+  assert.equal(await page.locator('header .brand').innerText(),'Discrete Mathematics Quiz');
+  assert.equal(await page.locator('.intro').count(),0);
+  assert.ok((await page.locator('header').boundingBox()).height<100,'Compact desktop header');
+  assert.equal(await page.locator('header .companion-link').getAttribute('href'),'https://babuptx.github.io/cs-2305-dm-ex/');
   await page.locator('input[name=answer]').first().check();
   const readingState=await page.evaluate(()=>localStorage.getItem('dm:session:v1'));
   for(const [size,pixels] of [['standard',18],['large',21],['extra-large',24]]){

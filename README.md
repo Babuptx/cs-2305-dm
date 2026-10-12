@@ -29,7 +29,7 @@ The eight blocks are logic/equivalence; quantifiers/inference; proof constructio
 
 Working reference combines **All-course essentials** and detailed **Fall Semester Midterm** notes in one scrollable page with jump links and no collection dropdown. The detailed notes correct mathematical conditions in the supplied cheat sheet, including prime/composite definitions, signed GCD identities, positive asymptotic constants, little-o, fixed-width representations, and operation-count assumptions. Additional sheet topics are labeled separately. This full reference is not formatted as a permitted one-page exam aid.
 
-All supplied PDFs and extracted analysis stay under ignored `/refer/`. The build copies only `index.html`, `styles.css`, `js/`, and `data/`; no local course source material is deployed.
+All supplied PDFs and extracted analysis stay under ignored `/refer/`. The build publishes only the homepage, versioned interface assets, and `data/`; no local course source material is deployed.
 
 ## Run locally
 
@@ -61,7 +61,7 @@ Select a pillar/block, study or exam mode, and an optional 30/50/75/90-minute li
 
 Study mode offers two hints and deliberate answer reveal. Revealing locks the selected response. Hints do not reduce scores. An unanswered reveal stays unanswered and scores zero. Exam mode withholds hints, keys, explanations, and source notes from its display until submission. Finish asks for confirmation; timer expiry submits once. Review shows score, correct/incorrect/unanswered counts, elapsed time, the correct option, your response, and every rationale.
 
-The compact homepage links to the learning companion. Header controls offer light/dark themes and three reading sizes: Standard (18 px), Large (21 px), and Extra large (24 px). Reading size applies to question text, choices, hints, explanations, references, and flashcards while keeping navigation compact.
+The compact top bar contains the quiz name and learning-companion link; there is no separate introductory heading. Header controls offer light/dark themes and three reading sizes: Standard (18 px), Large (21 px), and Extra large (24 px). Reading size applies to question text, choices, hints, explanations, references, and flashcards while keeping navigation compact.
 
 Versioned, validated browser storage holds the latest session, cumulative attempts, theme, and reading-size preference. Resume restores order, responses, flags, hints, locks, and the original deadline. Timed blocks use wall-clock time even while closed. Completed resumes are not counted again. Repeated attempts contribute to aggregate totals, rather than being treated as unique question mastery. Reset asks before clearing progress. Storage failures leave the current quiz usable but may prevent persistence. No names or sensitive information are collected.
 
@@ -75,15 +75,17 @@ npm run validate
 npm test
 npx playwright install chromium
 # Keep npm start running in another terminal:
-npm run test:browser
 npm run build
+$env:QUIZ_URL = "http://127.0.0.1:8080/dist/index.html"
+npm run test:browser
+node tests/deployment.mjs
 ```
 
 Validation checks inventory totals, IDs, runtime schema, manifest paths, key indexes, exact distractor-index coverage, UTF-8 text, placeholders, local exhibits, hints, duplicate items, similar prompts, repeated option sets, and balanced answer positions. `data/question.schema.json` documents the interchange schema; runtime validation adds cross-field constraints such as indexes bounded by choices. `data/inventory.json` records planned/generated/validated counts; `data/validation-report.json` records the actual results.
 
 Independent JavaScript oracles check computed answers using truth parsing, arithmetic, finite set/graph computations, sequences, matrices, loop simulations, modular arithmetic, and base conversions. Python generation and JavaScript checking use separate implementations. The report gives current checked-item counts; conceptual proofs are author-reviewed rather than machine-proved. The midterm tests deliberately corrupt each computational answer key and verify that the independent checker rejects it. Similarity flags remain available for editorial inspection: distinct objectives can share a case, and reused numerical option sets need not indicate repeated questions.
 
-Engine tests cover locks, ID-based shuffle grading, exam display restrictions, exactly-once grading, timer switching/expiry, resume, malformed persistence, fetch races/errors, and unavailable storage. Playwright exercises both modes, all twenty blocks, hints, flags, review, shuffle, saved preferences/progress, reset, expired-session recovery, the 90-minute option, the unified reference and its jump links, reading-size changes and persistence, keyboard dismissal, source notes, malformed banks, fetch failures, and desktop/mobile layout. Screenshots go to ignored `test-results/`.
+Engine tests cover locks, ID-based shuffle grading, exam display restrictions, exactly-once grading, timer switching/expiry, resume, malformed persistence, fetch races/errors, and unavailable storage. Playwright exercises both modes, all twenty blocks, hints, flags, review, shuffle, saved preferences/progress, reset, expired-session recovery, the 90-minute option, the unified reference and its jump links, reading-size changes and persistence, keyboard dismissal, source notes, malformed banks, fetch failures, and desktop/mobile layout. The deployment regression warms a browser cache with retired CSS and JavaScript, then verifies that the new build loads coherent assets, all seven pillars, reading controls, and the unified reference. Screenshots go to ignored `test-results/`.
 
 ## Structure and adding content
 
@@ -109,7 +111,7 @@ Add schema-compatible JSON with unique IDs, then register its path, ID, title, a
 
 ## Deployment, corrections, and source policy
 
-Develop on `sandbox`, validate, and merge normally into `main`. The workflow checks both branches and deploys only `main`. `npm run build` copies the site/content to `dist/`, excluding Git metadata and development tooling. Relative asset paths support `/cs-2305-dm/` hosting.
+Develop on `sandbox`, validate, and merge normally into `main`. The workflow checks both branches and deploys only `main`. `npm run build` recreates `dist/`, excluding Git metadata and development tooling. CSS and all JavaScript modules share a content-hashed asset directory, so updated HTML cannot accidentally mix new code with cached files from an older release. CI tests the built site before deployment. Relative asset paths support `/cs-2305-dm/` hosting.
 
 Pages settings should be **Settings → Pages → Build and deployment → Source → GitHub Actions**. If necessary, enable that source, then run **Actions → Validate and deploy quiz → Run workflow** on `main`. Official action versions follow [GitHub's Pages workflow guide](https://docs.github.com/en/pages/getting-started-with-github-pages/using-custom-workflows-with-github-pages).
 
